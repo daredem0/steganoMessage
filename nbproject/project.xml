@@ -3,13 +3,16 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Template_C++_GTKv3</name>
+            <name>steganoMessage</name>
             <c-extensions/>
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>header</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>Debug</name>

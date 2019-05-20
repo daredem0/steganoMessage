@@ -48,6 +48,9 @@
 MKDIR=mkdir
 CP=cp
 CCADMIN=CCadmin
+LC_ALL=C
+LANG=C
+LC_MESSAGES=C
 
 
 # build

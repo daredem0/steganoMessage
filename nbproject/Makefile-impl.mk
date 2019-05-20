@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Template_C++_GTKv3
+PROJECTNAME=steganoMessage
 
 # Active Configuration
 DEFAULTCONF=Debug
