@@ -1,4 +1,4 @@
-PROJECT_NAME          = "Network Analyzer a_001"
+PROJECT_NAME          = "steganoMessage"
 RECURSIVE             = YES
 SOURCE_BROWSER        = YES
 OUTPUT_DIRECTORY      = doc
