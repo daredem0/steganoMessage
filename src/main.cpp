@@ -13,6 +13,7 @@ const int errUnknown = 0;
 const int errSwitch = 1;
 const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
+const std::string NOSWITCH = "";
 
 
 using namespace std;
@@ -21,10 +22,9 @@ int ui(string argv, SteganoMessage *steg);
 
 int main(int argc, char *argv[]) { 
     SteganoMessage *steg = new SteganoMessage();
-    
     cout << "argc: " << argc << endl;
-    cout << "argv: " << argv[1] << endl;
-    ui((string)argv[1], steg);
+    cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl;
+    ui(argv[1] == NULL ? NOSWITCH : (string)argv[1], steg);
     if(steg != NULL)
         delete steg;
     return 0;
@@ -38,8 +38,10 @@ int ui(string argv, SteganoMessage *steg){
                 cout << "Found encrypt" << endl;
         else if(argv == DECRYPT)
             cout << "Found decrypt" << endl;
-        else
+        else{
+            cout << "No switch" << endl;
             throw errSwitch;
+        }
     }
     catch (int i){
         steg->getErrHandle()->printError(i);

@@ -21,8 +21,8 @@ SteganoMessage::SteganoMessage(const SteganoMessage& orig) {
 }
 
 SteganoMessage::~SteganoMessage() {
-    //if(err != NULL)
-        //delete err;
+    if(err != NULL)
+        delete err;
 }
 
 

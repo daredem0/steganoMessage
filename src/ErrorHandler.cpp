@@ -26,7 +26,7 @@ ErrorHandler::~ErrorHandler() {
 }
 
 void ErrorHandler::printError(int err){
-    std::cout << "bla" << std::endl;
+    std::cout << "not yet implemented" << std::endl;
 }
 
 void ErrorHandler::printAllErrors(void){
