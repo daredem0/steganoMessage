@@ -8,3 +8,4 @@ HAVE_DOT              = NO
 CALL_GRAPH            = YES
 CALLER_GRAPH          = YES
 UML_LOOK              = YES
+GENERATE_RTF	      = YES

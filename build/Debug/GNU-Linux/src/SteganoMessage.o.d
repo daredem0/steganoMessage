@@ -1,6 +1,13 @@
 build/Debug/GNU-Linux/src/SteganoMessage.o: src/SteganoMessage.cpp \
- src/SteganoMessage.h src/ErrorHandler.h
+ src/../header/SteganoMessage.h src/../header/ErrorHandler.h \
+ src/../header/constants.h src/../header/Message.h src/../header/Image.h
 
-src/SteganoMessage.h:
+src/../header/SteganoMessage.h:
 
-src/ErrorHandler.h:
+src/../header/ErrorHandler.h:
+
+src/../header/constants.h:
+
+src/../header/Message.h:
+
+src/../header/Image.h:
