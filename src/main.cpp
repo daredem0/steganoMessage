@@ -2,7 +2,7 @@
  * @file main.cpp
  * @author Florian Leuze (3308288) <st155013@stud.uni-stuttgart.de>
  * @date 05.02.2019
- * @brief Main Function network analyzer. Mainly ochestrates the init and gui creation
+ * @brief Main Function of steganoMessage. Mainly ochestrates the init and gui creation
  */
 
 #include <iostream>
@@ -40,7 +40,15 @@ int errTerminate(SteganoMessage *steg);
 * @param char *argv[] - Array containing the arguments
 * @return int standard linux error codes
 */
+
+
 int main(int argc, char *argv[]) { 
+    //For edbugging
+    argc = 3;
+    argv[0] = (char*)'3';
+    argv[1] = (char*)"-encrypt";
+    //argv[1] = (char*)"-decrypt";
+    argv[2] = (char*)"./test.bmp";
     int returnValue = 0;
     SteganoMessage *steg = new SteganoMessage();
     cout << "argc: " << argc << endl;  //just for debugging

@@ -21,7 +21,6 @@ const int errPath = 2;
 const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
 const std::string NOSWITCH = "";
-
 const std::string NOPATH = "";
 
 const std::string HELP = "-h";
