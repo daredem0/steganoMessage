@@ -14,9 +14,19 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-const int errUnknown = 0;
-const int errSwitch = 1;
-const int errPath = 2;
+const int errNoError = 0;
+const int errUnknown = 1;
+const int errSwitch = 2;
+const int errPath = 3;
+const int errPathWrong = 4;
+const int errPathExist = 5;
+
+const std::string ERRNOERROR = "No Error Occured";
+const std::string ERRUNKNOWN = "Unknown Error";
+const std::string ERRSWITCH = "Wrong/No switch set";
+const std::string ERRPATH = "No path set";
+const std::string ERRPATHWRONG = "Not a valid path entered";
+const std::string ERRPATHEXIST = "Path does not exist";
 
 const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";

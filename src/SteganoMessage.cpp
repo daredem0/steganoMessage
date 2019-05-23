@@ -15,7 +15,10 @@
 
 SteganoMessage::SteganoMessage() {
     std::cout << "Creating new SteganoMessage object" << std::endl;
-    err = new ErrorHandler();}
+    err = new ErrorHandler();
+    modeSet = false;
+    path = false;
+}
 
 SteganoMessage::SteganoMessage(const SteganoMessage& orig) {
 }
@@ -43,4 +46,45 @@ int SteganoMessage::buildImage(std::string path){
 
 Image* SteganoMessage::getImage(){
     return img;
+}
+
+int SteganoMessage::setMode(std::string m){
+    if(modeSet == false){
+        mode = m;
+        modeSet = true;
+        return 0;
+    }
+    else
+        return 1;
+}
+
+std::string SteganoMessage::getMode(){
+    if(modeSet == false)
+        return "";
+    return mode;
+}
+
+void SteganoMessage::printValues(){
+    std::cout << "Mode: " << mode << std::endl;
+    std::cout << "Path: " << img->getPath() << std::endl;
+}
+
+
+int SteganoMessage::checkPath(std::string path){
+    int returnValue = 0;
+    if(path[0] != '.' && path[0] != '/')
+        returnValue = 4;
+    if(exists(path) == false)
+        returnValue = 5;
+    path = true;
+    return returnValue;
+}
+
+bool SteganoMessage::exists(std::string p){
+    std::ifstream img(p.c_str());
+    return img.good();
+}
+
+bool SteganoMessage::getPathVerified(){
+    return path;
 }

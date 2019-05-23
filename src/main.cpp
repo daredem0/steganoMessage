@@ -41,6 +41,8 @@ int errTerminate(SteganoMessage *steg);
 * @return int standard linux error codes
 */
 
+void debuggingStuff(SteganoMessage *steg);
+
 
 int main(int argc, char *argv[]) { 
     //For edbugging
@@ -48,7 +50,7 @@ int main(int argc, char *argv[]) {
     argv[0] = (char*)'3';
     argv[1] = (char*)"-encrypt";
     //argv[1] = (char*)"-decrypt";
-    argv[2] = (char*)"./test.bmp";
+    argv[2] = (char*)"./misc/examples/swirl_effect.txt";
     int returnValue = 0;
     SteganoMessage *steg = new SteganoMessage();
     cout << "argc: " << argc << endl;  //just for debugging
@@ -75,6 +77,9 @@ int main(int argc, char *argv[]) {
         steg->getErrHandle()->printError(errUnknown);
         exit(errTerminate(steg));
     }
+        if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
+            exit(errTerminate(steg));
+        debuggingStuff(steg);
     if(steg != NULL)
         delete steg;
     return 0;
@@ -86,10 +91,14 @@ int ui(string argv, SteganoMessage *steg){
     int returnValue = 0;
     try{
         cout << "Found switch: " << argv << endl;
-        if(argv == ENCRYPT)
+        if(argv == ENCRYPT){
                 cout << "Found encrypt" << endl;
-        else if(argv == DECRYPT)
+                steg->setMode(ENCRYPT); 
+        }
+        else if(argv == DECRYPT){
             cout << "Found decrypt" << endl;
+            steg->setMode(DECRYPT);
+        }
         else if (argv == HELP)
             returnValue = printHelp();
         else{
@@ -130,6 +139,12 @@ int errTerminate(SteganoMessage *steg){
     if(steg != NULL)
         delete steg;
     return 1;
+}
+
+void debuggingStuff(SteganoMessage *steg){
+    steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath()));
+    steg->printValues();
+    //steg->getImage()->printTextFile(steg->getImage()->getPath());
 }
 
 

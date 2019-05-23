@@ -15,6 +15,8 @@
 #define IMAGE_H
 
 #include <string>
+#include <fstream>
+#include <iostream>
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -50,6 +52,8 @@ public:
      * @param std::string p - Path to the image file.
      */
     void setPath(std::string p);
+    
+    void printTextFile(std::string p);
 private:
     std::string path; /**< Imagepath*/
 

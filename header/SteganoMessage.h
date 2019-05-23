@@ -18,6 +18,7 @@
 #include "constants.h"
 #include "Message.h"
 #include "Image.h"
+#include <fstream>
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 
@@ -49,10 +50,21 @@ public:
     Message *getMessage();
     int buildImage(std::string path);
     Image *getImage();
+    int setMode(std::string m);
+    std::string getMode();
+    void printValues();
+    bool getPathVerified();
+    
+    static int checkPath(std::string path);
+    static bool exists(std::string p);
+    
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     Message *mess;
     Image *img;
+    std::string mode;
+    bool modeSet;
+    bool path;
 };
 
 #endif /* STEGANOMESSAGE_H */

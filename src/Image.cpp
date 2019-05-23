@@ -37,3 +37,10 @@ void Image::setPath(std::string p){
     path = p;
 }
 
+void Image::printTextFile(std::string p){
+    std::ifstream file(p.c_str());
+    std::string out;
+    while (getline(file,out)) {
+        std::cout << out << std::endl ;
+    }
+}

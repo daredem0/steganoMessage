@@ -18,7 +18,7 @@
 #include <iterator> 
 #include <iostream>
 #include <string>
-
+#include "constants.h"
 
 /**
  *@brief ErrorHandler Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr
@@ -44,7 +44,7 @@ public:
      * @brief Prints a single Error corresponding to the 
      * @param int err - expects a integer value between 0 and x that specifies the error received
      */
-    void printError(int err);
+    int printError(int err);
     /**
      * @brief Prints all available errors (mainly for debugging)
      */

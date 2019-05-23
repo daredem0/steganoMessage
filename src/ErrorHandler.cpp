@@ -15,9 +15,12 @@
 
 ErrorHandler::ErrorHandler() {
     std::cout << "Creating new ErrorHandler Object" << std::endl;
-    errorOut.assign(1, "Unknown Error");
-    errorOut.push_back("Wrong/No switch set");
-    errorOut.push_back("No path set");
+    errorOut.assign(1, "No Error Occured");
+    errorOut.push_back(ERRUNKNOWN);
+    errorOut.push_back(ERRSWITCH);
+    errorOut.push_back(ERRPATH);
+    errorOut.push_back(ERRPATHWRONG);
+    errorOut.push_back(ERRPATHEXIST);
 }
 
 ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
@@ -26,10 +29,11 @@ ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
 ErrorHandler::~ErrorHandler() {
 }
 
-void ErrorHandler::printError(int err){
+int ErrorHandler::printError(int err){
     std::list<std::string>::iterator it = errorOut.begin();
     std::advance(it, err);
     std::cout << *it << std::endl;
+    return err;
 }
 
 void ErrorHandler::printAllErrors(void){
