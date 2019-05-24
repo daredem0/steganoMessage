@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['setmessage',['setMessage',['../classMessage.html#aa1e4c60f94308a9367ad3106c34b28f3',1,'Message']]],
-  ['setpath',['setPath',['../classImage.html#aabb8cec47c25c0e3a36ba2a455c2aa6c',1,'Image']]],
-  ['steganomessage',['SteganoMessage',['../classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697',1,'SteganoMessage::SteganoMessage()'],['../classSteganoMessage.html#a67a8a4a8aae12db32bb758e6cd44b16a',1,'SteganoMessage::SteganoMessage(const SteganoMessage &amp;orig)']]]
+  ['image',['Image',['../classImage.html#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()'],['../classImage.html#a68ad10640a0b06d29c315cfff1ce5623',1,'Image::Image(std::string p)'],['../classImage.html#abda271aa11b907dda8c8c8176684227d',1,'Image::Image(const Image &amp;orig)']]]
 ];

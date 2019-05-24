@@ -9,3 +9,4 @@ CALL_GRAPH            = YES
 CALLER_GRAPH          = YES
 UML_LOOK              = YES
 GENERATE_RTF	      = YES
+EXTRACT_PRIVATE       = YES

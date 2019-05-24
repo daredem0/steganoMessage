@@ -45,3 +45,21 @@ void Image::printTextFile(std::string p){
     }
     file.close();
 }
+
+void Image::writeTextFile(std::string t, std::string n){
+    std::string path = "./"+n;
+    std::ofstream file(path.c_str());
+    file << t << std::endl;
+    file.close();
+}
+
+int Image::readImage(){
+    if(path == "")
+        return 3;
+    header = new BitmapHeader(path);
+    return 0;
+}
+
+BitmapHeader *Image::getBitmapHeader(){
+    return header;
+}

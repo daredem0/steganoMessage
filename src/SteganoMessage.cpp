@@ -34,6 +34,7 @@ ErrorHandler* SteganoMessage::getErrHandle(){
 
 int SteganoMessage::buildMessage(std::string m){
     mess = new Message(m);
+    return 0;
 }
 
 Message* SteganoMessage::getMessage(){
@@ -42,6 +43,7 @@ Message* SteganoMessage::getMessage(){
 
 int SteganoMessage::buildImage(std::string path){
     img = new Image(path);
+    return 0;
 }
 
 Image* SteganoMessage::getImage(){

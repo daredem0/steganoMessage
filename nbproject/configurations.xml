@@ -2,6 +2,8 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="header" displayName="header" projectFiles="true">
+      <itemPath>header/BitmapArray.h</itemPath>
+      <itemPath>header/BitmapHeader.h</itemPath>
       <itemPath>header/ErrorHandler.h</itemPath>
       <itemPath>header/Image.h</itemPath>
       <itemPath>header/Message.h</itemPath>
@@ -12,6 +14,8 @@
       <itemPath>help.txt</itemPath>
     </logicalFolder>
     <logicalFolder name="src" displayName="src" projectFiles="true">
+      <itemPath>src/BitmapArray.cpp</itemPath>
+      <itemPath>src/BitmapHeader.cpp</itemPath>
       <itemPath>src/ErrorHandler.cpp</itemPath>
       <itemPath>src/Image.cpp</itemPath>
       <itemPath>src/Message.cpp</itemPath>
@@ -99,6 +103,10 @@
           <commandLine>-export-dynamic -lgtkmm-3.0 -latkmm-1.6 -lgdkmm-3.0 -lgiomm-2.4 -lpangomm-1.4 -lglibmm-2.4 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lgio-2.0 -lcairomm-1.0 -lcairo -lsigc-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0</commandLine>
         </linkerTool>
       </compileType>
+      <item path="header/BitmapArray.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header/BitmapHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="header/ErrorHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/Image.h" ex="false" tool="3" flavor2="0">
@@ -110,6 +118,10 @@
       <item path="header/constants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="help.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/BitmapArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/BitmapHeader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ErrorHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -142,6 +154,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="header/BitmapArray.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header/BitmapHeader.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="header/ErrorHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/Image.h" ex="false" tool="3" flavor2="0">
@@ -153,6 +169,10 @@
       <item path="header/constants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="help.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/BitmapArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/BitmapHeader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ErrorHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>

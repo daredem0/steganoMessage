@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/src/BitmapArray.o \
+	${OBJECTDIR}/src/BitmapHeader.o \
 	${OBJECTDIR}/src/ErrorHandler.o \
 	${OBJECTDIR}/src/Image.o \
 	${OBJECTDIR}/src/Message.o \
@@ -65,6 +67,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/steganomessage: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/steganomessage ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/src/BitmapArray.o: src/BitmapArray.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/BitmapArray.o src/BitmapArray.cpp
+
+${OBJECTDIR}/src/BitmapHeader.o: src/BitmapHeader.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/BitmapHeader.o src/BitmapHeader.cpp
 
 ${OBJECTDIR}/src/ErrorHandler.o: src/ErrorHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

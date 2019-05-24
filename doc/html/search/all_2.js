@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['image',['Image',['../classImage.html',1,'Image'],['../classImage.html#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()'],['../classImage.html#a68ad10640a0b06d29c315cfff1ce5623',1,'Image::Image(std::string p)'],['../classImage.html#abda271aa11b907dda8c8c8176684227d',1,'Image::Image(const Image &amp;orig)']]]
+  ['err',['err',['../classSteganoMessage.html#a26b631e00716be7a89cbcf22cf0b7291',1,'SteganoMessage']]],
+  ['errorhandler',['ErrorHandler',['../classErrorHandler.html',1,'ErrorHandler'],['../classErrorHandler.html#a7e5f379bd231442b898cef94556b2107',1,'ErrorHandler::ErrorHandler()'],['../classErrorHandler.html#add20b373ee276ee2ef040f6dd913a86b',1,'ErrorHandler::ErrorHandler(const ErrorHandler &amp;orig)']]],
+  ['errorout',['errorOut',['../classErrorHandler.html#aeb3bff116fcb83a58defbef8e8111f0e',1,'ErrorHandler']]],
+  ['errterminate',['errTerminate',['../main_8cpp.html#a8b14b9f3865042b7e6a83d3080e96e4c',1,'main.cpp']]],
+  ['exists',['exists',['../classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b',1,'SteganoMessage']]]
 ];

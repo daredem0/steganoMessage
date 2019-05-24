@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classImage-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Image Class Reference</div>  </div>
@@ -94,11 +95,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aabb8cec47c25c0e3a36ba2a455c2aa6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aabb8cec47c25c0e3a36ba2a455c2aa6c">setPath</a> (std::string p)</td></tr>
 <tr class="memdesc:aabb8cec47c25c0e3a36ba2a455c2aa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores path in this.  <a href="#aabb8cec47c25c0e3a36ba2a455c2aa6c">More...</a><br /></td></tr>
 <tr class="separator:aabb8cec47c25c0e3a36ba2a455c2aa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0aa1f41cb368d87b20dd38839218d93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93">readImage</a> ()</td></tr>
+<tr class="memdesc:ac0aa1f41cb368d87b20dd38839218d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Constructors for BitMapHeader and BitMapArray and reads information from image.  <a href="#ac0aa1f41cb368d87b20dd38839218d93">More...</a><br /></td></tr>
+<tr class="separator:ac0aa1f41cb368d87b20dd38839218d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bde1df035fc794c268aab430bbafde0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a3bde1df035fc794c268aab430bbafde0">printTextFile</a> (std::string p)</td></tr>
+<tr class="memdesc:a3bde1df035fc794c268aab430bbafde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints text file to terminal (just for convenience and to check if ifstream works.  <a href="#a3bde1df035fc794c268aab430bbafde0">More...</a><br /></td></tr>
+<tr class="separator:a3bde1df035fc794c268aab430bbafde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa024e3ee7ec4a5e81130cc13b3570ee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aa024e3ee7ec4a5e81130cc13b3570ee4">writeTextFile</a> (std::string t, std::string p)</td></tr>
+<tr class="memdesc:aa024e3ee7ec4a5e81130cc13b3570ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes information to a text file !!Not debugged!! !!No Error Handling implemented!! !!Dont use!!  <a href="#aa024e3ee7ec4a5e81130cc13b3570ee4">More...</a><br /></td></tr>
+<tr class="separator:aa024e3ee7ec4a5e81130cc13b3570ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c824ffac0c866a94752a2c1047932af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBitmapHeader.html">BitmapHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a8c824ffac0c866a94752a2c1047932af">getBitmapHeader</a> ()</td></tr>
+<tr class="memdesc:a8c824ffac0c866a94752a2c1047932af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for bitmapHeader.  <a href="#a8c824ffac0c866a94752a2c1047932af">More...</a><br /></td></tr>
+<tr class="separator:a8c824ffac0c866a94752a2c1047932af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aec8a33f176362d146da8c058798ebbff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aec8a33f176362d146da8c058798ebbff">path</a></td></tr>
+<tr class="separator:aec8a33f176362d146da8c058798ebbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf72c2df8979eafb4031dc0384dc49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBitmapHeader.html">BitmapHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#adaf72c2df8979eafb4031dc0384dc49f">header</a></td></tr>
+<tr class="separator:adaf72c2df8979eafb4031dc0384dc49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00022">22</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00025">25</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a68ad10640a0b06d29c315cfff1ce5623"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68ad10640a0b06d29c315cfff1ce5623">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/2]</span></h2>
@@ -185,6 +205,28 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8c824ffac0c866a94752a2c1047932af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c824ffac0c866a94752a2c1047932af">&#9670;&nbsp;</a></span>getBitmapHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBitmapHeader.html">BitmapHeader</a> * Image::getBitmapHeader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for bitmapHeader. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> type pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00063">63</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a885989eb723cb0a1fc0555c7e8de817e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a885989eb723cb0a1fc0555c7e8de817e">&#9670;&nbsp;</a></span>getPath()</h2>
 
@@ -204,6 +246,56 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>std::string including stored path. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00029">29</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3bde1df035fc794c268aab430bbafde0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bde1df035fc794c268aab430bbafde0">&#9670;&nbsp;</a></span>printTextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::printTextFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints text file to terminal (just for convenience and to check if ifstream works. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>containing path to text file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00040">40</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac0aa1f41cb368d87b20dd38839218d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aa1f41cb368d87b20dd38839218d93">&#9670;&nbsp;</a></span>readImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Image::readImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls Constructors for BitMapHeader and BitMapArray and reads information from image. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00056">56</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -232,6 +324,96 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00036">36</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa024e3ee7ec4a5e81130cc13b3570ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa024e3ee7ec4a5e81130cc13b3570ee4">&#9670;&nbsp;</a></span>writeTextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::writeTextFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes information to a text file !!Not debugged!! !!No Error Handling implemented!! !!Dont use!! </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>t - contains text that is to be written </td></tr>
+    <tr><td class="paramname">std::string</td><td>p - contains path to text file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00049">49</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adaf72c2df8979eafb4031dc0384dc49f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf72c2df8979eafb4031dc0384dc49f">&#9670;&nbsp;</a></span>header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBitmapHeader.html">BitmapHeader</a>* Image::header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> object containing header information </p>
+
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00079">79</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+
+</div>
+</div>
+<a id="aec8a33f176362d146da8c058798ebbff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8a33f176362d146da8c058798ebbff">&#9670;&nbsp;</a></span>path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Image::path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Imagepath </p>
+
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00078">78</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>

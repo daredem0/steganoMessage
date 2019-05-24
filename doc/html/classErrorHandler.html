@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classErrorHandler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ErrorHandler Class Reference</div>  </div>
@@ -85,13 +86,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:add20b373ee276ee2ef040f6dd913a86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c7e690b864697e507aaeb537b3c3e5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a73c7e690b864697e507aaeb537b3c3e5">~ErrorHandler</a> ()</td></tr>
 <tr class="separator:a73c7e690b864697e507aaeb537b3c3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a024a601b0dc79da81d221bab38ec87c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a024a601b0dc79da81d221bab38ec87c4">printError</a> (int err)</td></tr>
-<tr class="memdesc:a024a601b0dc79da81d221bab38ec87c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a single Error corresponding to the.  <a href="#a024a601b0dc79da81d221bab38ec87c4">More...</a><br /></td></tr>
-<tr class="separator:a024a601b0dc79da81d221bab38ec87c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90b8248f24e3129df69d224585956dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd">printError</a> (int err)</td></tr>
+<tr class="memdesc:ab90b8248f24e3129df69d224585956dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a single Error corresponding to the.  <a href="#ab90b8248f24e3129df69d224585956dd">More...</a><br /></td></tr>
+<tr class="separator:ab90b8248f24e3129df69d224585956dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1108324c221544c928a2de3a2cf9ba98"><td class="memItemLeft" align="right" valign="top"><a id="a1108324c221544c928a2de3a2cf9ba98"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a1108324c221544c928a2de3a2cf9ba98">printAllErrors</a> (void)</td></tr>
 <tr class="memdesc:a1108324c221544c928a2de3a2cf9ba98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all available errors (mainly for debugging) <br /></td></tr>
 <tr class="separator:a1108324c221544c928a2de3a2cf9ba98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aeb3bff116fcb83a58defbef8e8111f0e"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#aeb3bff116fcb83a58defbef8e8111f0e">errorOut</a></td></tr>
+<tr class="separator:aeb3bff116fcb83a58defbef8e8111f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr. </p>
@@ -122,7 +128,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00023">23</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00026">26</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -150,19 +156,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 <p>Standard deconstructor. Deletes the generated list !!not yet implementede!! </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00026">26</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00029">29</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a024a601b0dc79da81d221bab38ec87c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a024a601b0dc79da81d221bab38ec87c4">&#9670;&nbsp;</a></span>printError()</h2>
+<a id="ab90b8248f24e3129df69d224585956dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90b8248f24e3129df69d224585956dd">&#9670;&nbsp;</a></span>printError()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ErrorHandler::printError </td>
+          <td class="memname">int ErrorHandler::printError </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>err</em></td><td>)</td>
@@ -179,7 +185,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00029">29</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00032">32</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aeb3bff116fcb83a58defbef8e8111f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3bff116fcb83a58defbef8e8111f0e">&#9670;&nbsp;</a></span>errorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;std::string&gt; ErrorHandler::errorOut</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>std::list that stores every standard error message as a std::string. </p>
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00053">53</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['errorhandler',['ErrorHandler',['../classErrorHandler.html',1,'']]]
+  ['bitmaparray',['BitmapArray',['../classBitmapArray.html',1,'']]],
+  ['bitmapheader',['BitmapHeader',['../classBitmapHeader.html',1,'']]]
 ];

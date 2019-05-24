@@ -17,6 +17,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include "../header/BitmapHeader.h"
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -52,10 +53,30 @@ public:
      * @param std::string p - Path to the image file.
      */
     void setPath(std::string p);
-    
+    /**
+     * @brief Calls Constructors for BitMapHeader and BitMapArray and reads information from image
+     * @return returns integer containing error code
+     */
+    int readImage();
+    /**
+     * @brief Prints text file to terminal (just for convenience and to check if ifstream works
+     * @param std::string containing path to text file
+     */
     void printTextFile(std::string p);
+    /**
+     * @brief Writes information to a text file !!Not debugged!! !!No Error Handling implemented!! !!Dont use!!
+     * @param std::string t - contains text that is to be written
+     * @param std::string p - contains path to text file
+     */
+    void writeTextFile(std::string t, std::string p);
+    /**
+     * @brief Getter for bitmapHeader
+     * @return BitmapHeader type pointer to BitmapHeader
+     */
+    BitmapHeader *getBitmapHeader();
 private:
     std::string path; /**< Imagepath*/
+    BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
 
 };
 

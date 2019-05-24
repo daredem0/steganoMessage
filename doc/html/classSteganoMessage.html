@@ -63,6 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSteganoMessage-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SteganoMessage Class Reference</div>  </div>
@@ -88,23 +90,60 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0134757a8c79caa9dca9bcce0686d1ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classErrorHandler.html">ErrorHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef">getErrHandle</a> ()</td></tr>
 <tr class="memdesc:a0134757a8c79caa9dca9bcce0686d1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives pointer to the <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> object stored in the <a class="el" href="classSteganoMessage.html" title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes...">SteganoMessage</a> type object.  <a href="#a0134757a8c79caa9dca9bcce0686d1ef">More...</a><br /></td></tr>
 <tr class="separator:a0134757a8c79caa9dca9bcce0686d1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a7d1579509a4004a86ad70dad10f65"><td class="memItemLeft" align="right" valign="top"><a id="a43a7d1579509a4004a86ad70dad10f65"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>buildMessage</b> (std::string m)</td></tr>
+<tr class="memitem:a43a7d1579509a4004a86ad70dad10f65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65">buildMessage</a> (std::string m)</td></tr>
+<tr class="memdesc:a43a7d1579509a4004a86ad70dad10f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds new <a class="el" href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ...">Message</a> type object.  <a href="#a43a7d1579509a4004a86ad70dad10f65">More...</a><br /></td></tr>
 <tr class="separator:a43a7d1579509a4004a86ad70dad10f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad29978e925056ad70dc5c45b1e1681eb"><td class="memItemLeft" align="right" valign="top"><a id="ad29978e925056ad70dc5c45b1e1681eb"></a>
-<a class="el" href="classMessage.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMessage</b> ()</td></tr>
+<tr class="memitem:ad29978e925056ad70dc5c45b1e1681eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMessage.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb">getMessage</a> ()</td></tr>
+<tr class="memdesc:ad29978e925056ad70dc5c45b1e1681eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for pointer to message object.  <a href="#ad29978e925056ad70dc5c45b1e1681eb">More...</a><br /></td></tr>
 <tr class="separator:ad29978e925056ad70dc5c45b1e1681eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad90a4cf8cf03febfb4c3df955ccab13d"><td class="memItemLeft" align="right" valign="top"><a id="ad90a4cf8cf03febfb4c3df955ccab13d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>buildImage</b> (std::string path)</td></tr>
+<tr class="memitem:ad90a4cf8cf03febfb4c3df955ccab13d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d">buildImage</a> (std::string <a class="el" href="classSteganoMessage.html#a399f4c181d3b7b15ccdb5c925a7a1f51">path</a>)</td></tr>
+<tr class="memdesc:ad90a4cf8cf03febfb4c3df955ccab13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds new <a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> type object.  <a href="#ad90a4cf8cf03febfb4c3df955ccab13d">More...</a><br /></td></tr>
 <tr class="separator:ad90a4cf8cf03febfb4c3df955ccab13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3ad705a0219edfd2150f3f7931979c"><td class="memItemLeft" align="right" valign="top"><a id="a2e3ad705a0219edfd2150f3f7931979c"></a>
-<a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getImage</b> ()</td></tr>
+<tr class="memitem:a2e3ad705a0219edfd2150f3f7931979c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c">getImage</a> ()</td></tr>
+<tr class="memdesc:a2e3ad705a0219edfd2150f3f7931979c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for image object.  <a href="#a2e3ad705a0219edfd2150f3f7931979c">More...</a><br /></td></tr>
 <tr class="separator:a2e3ad705a0219edfd2150f3f7931979c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e06a73baa5744b5eb9152f4ae65f458"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458">setMode</a> (std::string m)</td></tr>
+<tr class="memdesc:a3e06a73baa5744b5eb9152f4ae65f458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores mode command in member, sets flag for modeset.  <a href="#a3e06a73baa5744b5eb9152f4ae65f458">More...</a><br /></td></tr>
+<tr class="separator:a3e06a73baa5744b5eb9152f4ae65f458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc660e6d2c8f162636f789cfedde67e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a7dc660e6d2c8f162636f789cfedde67e">getMode</a> ()</td></tr>
+<tr class="memdesc:a7dc660e6d2c8f162636f789cfedde67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for stored mode.  <a href="#a7dc660e6d2c8f162636f789cfedde67e">More...</a><br /></td></tr>
+<tr class="separator:a7dc660e6d2c8f162636f789cfedde67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea3f5ff720bf56d33f168d47e2897b0"><td class="memItemLeft" align="right" valign="top"><a id="a3ea3f5ff720bf56d33f168d47e2897b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0">printValues</a> ()</td></tr>
+<tr class="memdesc:a3ea3f5ff720bf56d33f168d47e2897b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints values stored for mode and path. <br /></td></tr>
+<tr class="separator:a3ea3f5ff720bf56d33f168d47e2897b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace172144e49a4da69b890958b3b8089b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#ace172144e49a4da69b890958b3b8089b">getPathVerified</a> ()</td></tr>
+<tr class="memdesc:ace172144e49a4da69b890958b3b8089b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for path verified flag.  <a href="#ace172144e49a4da69b890958b3b8089b">More...</a><br /></td></tr>
+<tr class="separator:ace172144e49a4da69b890958b3b8089b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8db1a0d299220a5d85d010b03054081f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a8db1a0d299220a5d85d010b03054081f">checkPath</a> (std::string <a class="el" href="classSteganoMessage.html#a399f4c181d3b7b15ccdb5c925a7a1f51">path</a>)</td></tr>
+<tr class="memdesc:a8db1a0d299220a5d85d010b03054081f"><td class="mdescLeft">&#160;</td><td class="mdescRight">static method to quickly check if a path possibly makes sense  <a href="#a8db1a0d299220a5d85d010b03054081f">More...</a><br /></td></tr>
+<tr class="separator:a8db1a0d299220a5d85d010b03054081f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b">exists</a> (std::string p)</td></tr>
+<tr class="memdesc:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a path exists.  <a href="#acc5a49a35b46d8bf4c40cca8b8c5a52b">More...</a><br /></td></tr>
+<tr class="separator:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a26b631e00716be7a89cbcf22cf0b7291"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classErrorHandler.html">ErrorHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a26b631e00716be7a89cbcf22cf0b7291">err</a></td></tr>
+<tr class="separator:a26b631e00716be7a89cbcf22cf0b7291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f70bbacb0662cebe764316658da35d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMessage.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a64f70bbacb0662cebe764316658da35d">mess</a></td></tr>
+<tr class="separator:a64f70bbacb0662cebe764316658da35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7dba217d5df515d93ddf814734ecf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#acd7dba217d5df515d93ddf814734ecf4">img</a></td></tr>
+<tr class="separator:acd7dba217d5df515d93ddf814734ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8772194b7823da730648f8d4c06334a8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a8772194b7823da730648f8d4c06334a8">mode</a></td></tr>
+<tr class="separator:a8772194b7823da730648f8d4c06334a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1da17c621a8db71fa4eb3b148a82ceb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#ae1da17c621a8db71fa4eb3b148a82ceb">modeSet</a></td></tr>
+<tr class="separator:ae1da17c621a8db71fa4eb3b148a82ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399f4c181d3b7b15ccdb5c925a7a1f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a399f4c181d3b7b15ccdb5c925a7a1f51">path</a></td></tr>
+<tr class="separator:a399f4c181d3b7b15ccdb5c925a7a1f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classSteganoMessage.html" title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes...">SteganoMessage</a> class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). It shall be constructed in the beginning and terminated in the very end of the runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00026">26</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00027">27</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a67a8a4a8aae12db32bb758e6cd44b16a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67a8a4a8aae12db32bb758e6cd44b16a">&#9670;&nbsp;</a></span>SteganoMessage()</h2>
@@ -130,7 +169,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buildImage</b> (std::s
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00020">20</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00023">23</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
 
 </div>
 </div>
@@ -158,11 +197,143 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buildImage</b> (std::s
 </div><div class="memdoc">
 <p>Standard deconstructor. Frees space allocated for int *err </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00023">23</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00026">26</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad90a4cf8cf03febfb4c3df955ccab13d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90a4cf8cf03febfb4c3df955ccab13d">&#9670;&nbsp;</a></span>buildImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::buildImage </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds new <a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> type object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>containing path to image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00044">44</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a43a7d1579509a4004a86ad70dad10f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a7d1579509a4004a86ad70dad10f65">&#9670;&nbsp;</a></span>buildMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::buildMessage </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds new <a class="el" href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ...">Message</a> type object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::sring</td><td>containing message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00035">35</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8db1a0d299220a5d85d010b03054081f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db1a0d299220a5d85d010b03054081f">&#9670;&nbsp;</a></span>checkPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::checkPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>static method to quickly check if a path possibly makes sense </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>containing the path that shall be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00075">75</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acc5a49a35b46d8bf4c40cca8b8c5a52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5a49a35b46d8bf4c40cca8b8c5a52b">&#9670;&nbsp;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SteganoMessage::exists </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a path exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>containing the path that shall be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00085">85</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a0134757a8c79caa9dca9bcce0686d1ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0134757a8c79caa9dca9bcce0686d1ef">&#9670;&nbsp;</a></span>getErrHandle()</h2>
 
@@ -181,7 +352,276 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>buildImage</b> (std::s
 <p>Gives pointer to the <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> object stored in the <a class="el" href="classSteganoMessage.html" title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes...">SteganoMessage</a> type object. </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00028">28</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00031">31</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2e3ad705a0219edfd2150f3f7931979c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3ad705a0219edfd2150f3f7931979c">&#9670;&nbsp;</a></span>getImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImage.html">Image</a> * SteganoMessage::getImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for image object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00049">49</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad29978e925056ad70dc5c45b1e1681eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29978e925056ad70dc5c45b1e1681eb">&#9670;&nbsp;</a></span>getMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMessage.html">Message</a> * SteganoMessage::getMessage </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for pointer to message object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ...">Message</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00040">40</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7dc660e6d2c8f162636f789cfedde67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc660e6d2c8f162636f789cfedde67e">&#9670;&nbsp;</a></span>getMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SteganoMessage::getMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for stored mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string containing mode command or "" </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00063">63</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ace172144e49a4da69b890958b3b8089b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace172144e49a4da69b890958b3b8089b">&#9670;&nbsp;</a></span>getPathVerified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SteganoMessage::getPathVerified </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for path verified flag. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool - true for verified, false for not verified. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00092">92</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e06a73baa5744b5eb9152f4ae65f458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e06a73baa5744b5eb9152f4ae65f458">&#9670;&nbsp;</a></span>setMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::setMode </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores mode command in member, sets flag for modeset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>containing mode command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00053">53</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a26b631e00716be7a89cbcf22cf0b7291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b631e00716be7a89cbcf22cf0b7291">&#9670;&nbsp;</a></span>err</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classErrorHandler.html">ErrorHandler</a>* SteganoMessage::err</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00106">106</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+
+</div>
+</div>
+<a id="acd7dba217d5df515d93ddf814734ecf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7dba217d5df515d93ddf814734ecf4">&#9670;&nbsp;</a></span>img</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImage.html">Image</a>* SteganoMessage::img</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> type object containing path, header and image data </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00108">108</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+
+</div>
+</div>
+<a id="a64f70bbacb0662cebe764316658da35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f70bbacb0662cebe764316658da35d">&#9670;&nbsp;</a></span>mess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMessage.html">Message</a>* SteganoMessage::mess</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ...">Message</a> type objec to store message </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00107">107</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+
+</div>
+</div>
+<a id="a8772194b7823da730648f8d4c06334a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8772194b7823da730648f8d4c06334a8">&#9670;&nbsp;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SteganoMessage::mode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>-encrypt or -decryptl, if not set "" </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00109">109</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1da17c621a8db71fa4eb3b148a82ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1da17c621a8db71fa4eb3b148a82ceb">&#9670;&nbsp;</a></span>modeSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SteganoMessage::modeSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>flag to check if mode is set </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00110">110</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+
+</div>
+</div>
+<a id="a399f4c181d3b7b15ccdb5c925a7a1f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a399f4c181d3b7b15ccdb5c925a7a1f51">&#9670;&nbsp;</a></span>path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SteganoMessage::path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>flag to check if path is verified </p>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00111">111</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>

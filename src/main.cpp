@@ -33,15 +33,13 @@ int terminate(SteganoMessage *steg);
 * @return always returns 1
 */
 int errTerminate(SteganoMessage *steg);
-
+void debuggingStuff(SteganoMessage *steg);
 /**
 * @brief Main Function orchestrating the program
 * @param int argc - Number of parameters we got from the terminal
 * @param char *argv[] - Array containing the arguments
 * @return int standard linux error codes
 */
-
-void debuggingStuff(SteganoMessage *steg);
 
 
 int main(int argc, char *argv[]) { 
@@ -50,7 +48,7 @@ int main(int argc, char *argv[]) {
     argv[0] = (char*)'3';
     argv[1] = (char*)"-encrypt";
     //argv[1] = (char*)"-decrypt";
-    argv[2] = (char*)"./misc/examples/swirl_effect.txt";
+    argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
     int returnValue = 0;
     SteganoMessage *steg = new SteganoMessage();
     cout << "argc: " << argc << endl;  //just for debugging
@@ -68,6 +66,8 @@ int main(int argc, char *argv[]) {
             cout << "Found Path: " << tempPath << endl;
             steg->buildImage(tempPath);
             cout << "Built path: " << steg->getImage()->getPath() << endl;
+            steg->getImage()->readImage();
+            steg->getImage()->getBitmapHeader()->printHeader();
         }
     catch (int i){ //catch errPath and send it to printError
         steg->getErrHandle()->printError(i);
@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
     }
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
             exit(errTerminate(steg));
-        debuggingStuff(steg);
+        //debuggingStuff(steg);
     if(steg != NULL)
         delete steg;
     return 0;
