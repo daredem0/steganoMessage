@@ -43,4 +43,5 @@ void Image::printTextFile(std::string p){
     while (getline(file,out)) {
         std::cout << out << std::endl ;
     }
+    file.close();
 }

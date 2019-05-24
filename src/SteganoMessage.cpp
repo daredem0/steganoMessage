@@ -82,7 +82,9 @@ int SteganoMessage::checkPath(std::string path){
 
 bool SteganoMessage::exists(std::string p){
     std::ifstream img(p.c_str());
-    return img.good();
+    bool returnValue = img.good();
+    img.close();
+    return returnValue;
 }
 
 bool SteganoMessage::getPathVerified(){
