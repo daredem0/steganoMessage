@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=latex 2019.4.30)  27 MAY 2019 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.4.30)  27 MAY 2019 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -84,10 +84,10 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 (/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
@@ -96,6 +96,7 @@ Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
 )
 \rownum=\count93
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -234,7 +235,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
@@ -247,10 +248,10 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@lly=\dimen128
 \tc@urx=\dimen129
 \tc@ury=\dimen130
-Package trimclip Info: Using driver 'tc-dvips.def'.
+Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/share/texmf-dist/tex/latex/adjustbox/tc-dvips.def
-File: tc-dvips.def 2019/01/04 v2.2 Clipping driver for dvips
+(/usr/share/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen131
 \adjbox@Height=\dimen132
@@ -686,7 +687,7 @@ Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -762,22 +763,14 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Item=\count140
 \c@Hfootnote=\count141
 )
-Package hyperref Info: Driver: hdvips.
+Package hyperref Info: Driver: hpdftex.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2018/11/30 v6.88e Hyperref driver for dvips
-
-(/usr/share/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2018/11/30 v6.88e Hyperref definitions for pdfmark specials
-\pdf@docset=\toks32
-\pdf@box=\box76
-\pdf@toks=\toks33
-\pdf@defaulttoks=\toks34
-\HyField@AnnotCount=\count142
-\Fld@listcount=\count143
-\c@bookmark@seq@number=\count144
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count142
+\c@bookmark@seq@number=\count143
 \Hy@SectionHShift=\skip120
-))
+)
 Package hyperref Info: Option `colorlinks' set `true' on input line 123.
 Package hyperref Info: Option `unicode' set `true' on input line 123.
 
@@ -800,8 +793,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen168
 \caption@hangindent=\dimen169
 )
-\c@caption@flags=\count145
-\c@ContinuedFloat=\count146
+\c@caption@flags=\count144
+\c@ContinuedFloat=\count145
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -811,11 +804,11 @@ Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 ))
 (/usr/share/texmf-dist/tex/latex/etoc/etoc.sty
 Package: etoc 2018/07/04 v1.08p Completely customisable TOCs (JFB)
-\Etoc@toctoks=\toks35
-\c@etoc@tocid=\count147
-\c@etoc@tocdepth=\count148
-\etoc@framed@titlebox=\box77
-\etoc@framed@contentsbox=\box78
+\Etoc@toctoks=\toks32
+\c@etoc@tocid=\count146
+\c@etoc@tocdepth=\count147
+\etoc@framed@titlebox=\box76
+\etoc@framed@contentsbox=\box77
 ) (./refman.aux)
 \openout1 = `refman.aux'.
 
@@ -851,10 +844,40 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 138.
 
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count148
+\scratchdimen=\dimen170
+\scratchbox=\box78
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen171
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks34
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
-*geometry* detected driver: dvips
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: dvips
+* driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -894,7 +917,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count154
 )
 LaTeX Info: Redefining \ref on input line 138.
 LaTeX Info: Redefining \pageref on input line 138.
@@ -902,10 +925,6 @@ LaTeX Info: Redefining \nameref on input line 138.
  (./refman.out) (./refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -919,7 +938,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 149.
 LaTeX Font Info:    Try loading font information for U+msa on input line 149.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 149.
@@ -937,7 +956,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
  [1
 
 
-] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
 \tf@toc=\write6
@@ -987,17 +1006,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
-
-
-LaTeX Warning: Reference `classBitmapHeader' on page 3 undefined on input line 
-4.
-
-
-LaTeX Warning: Reference `classErrorHandler' on page 3 undefined on input line 
-5.
-
-
-LaTeX Warning: Reference `classImage' on page 3 undefined on input line 6.
 
 
 LaTeX Warning: Reference `classMessage' on page 3 undefined on input line 7.
@@ -1105,21 +1113,17 @@ Chapter 4.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+) <./classBitmapArray__coll__graph.pdf
 
-! LaTeX Error: File `classBitmapArray__coll__graph' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 ...idth=328pt]{classBitmapArray__coll__graph}
-                                                  
-I could not locate the file with any of these extensions:
-.eps,.ps,.eps.gz,.ps.gz,.eps.Z,.mps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray__coll__graph.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+>
+<classBitmapArray__coll__graph.pdf, id=458, 329.23pt x 398.48875pt>
+File: classBitmapArray__coll__graph.pdf Graphic file (type pdf)
+<use classBitmapArray__coll__graph.pdf>
+Package pdftex.def Info: classBitmapArray__coll__graph.pdf  used on input line 
+19.
+(pdftex.def)             Requested size: 328.0pt x 397.01022pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
@@ -1127,13 +1131,14 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 10.79993pt on input line 22.
 LaTeX Font Info:    Try loading font information for TS1+phv on input line 25.
-(/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 25.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 26.
+ [7]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
@@ -1142,7 +1147,6 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 28.
- [7]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
@@ -1156,916 +1160,521 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 79.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 93.
-! Missing } inserted.
-<inserted text> 
-                }
-l.111 \end{DoxyParams}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[8] <./classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph.pdf
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.111 \end{DoxyParams}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray_ae080c605889bcde457f
+82c0b8917749d_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>
+<classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph.pdf, id=520, 689.576
+25pt x 100.375pt>
+File: classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph.pdf Graphic fil
+e (type pdf)
+<use classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph.pdf>
+Package pdftex.def Info: classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgr
+aph.pdf  used on input line 110.
+(pdftex.def)             Requested size: 350.0pt x 50.9455pt.
+ [9] <./classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph.pdf>
+<classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph.pdf, id=538, 689.57
+625pt x 100.375pt>
+File: classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icg
+raph.pdf  used on input line 163.
+(pdftex.def)             Requested size: 350.0pt x 50.9455pt.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.111 \end{DoxyParams}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
 
-! Missing \cr inserted.
+ <./classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray_a66bd389c357de601df9
+24569a0b38429_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph.pdf, id=546, 456.70
+625pt x 100.375pt>
+File: classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a66bd389c357de601df924569a0b38429_icg
+raph.pdf  used on input line 188.
+(pdftex.def)             Requested size: 350.0pt x 76.92598pt.
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+[10] <./classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph.pdf>
+<classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph.pdf, id=562, 338.263
+75pt x 100.375pt>
+File: classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph.pdf Graphic fil
+e (type pdf)
+<use classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgr
+aph.pdf  used on input line 257.
+(pdftex.def)             Requested size: 337.0pt x 100.00255pt.
+ <./classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray_a3a5834d03cd095769b4
+22d4d66b9435f_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph.pdf, id=570, 538.01
+pt x 100.375pt>
+File: classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icg
+raph.pdf  used on input line 265.
+(pdftex.def)             Requested size: 350.0pt x 65.2981pt.
+ [11]
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+ <./classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray_a4ce4b5acc896040075b
+e63a559799e7e_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>
+<classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph.pdf, id=583, 506.893
+75pt x 100.375pt>
+File: classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph.pdf Graphic fil
+e (type pdf)
+<use classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgr
+aph.pdf  used on input line 290.
+(pdftex.def)             Requested size: 350.0pt x 69.30782pt.
+ <./classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapArray_a4ce4b5acc896040075b
+e63a559799e7e_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph.pdf, id=591, 395.47
+75pt x 100.375pt>
+File: classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph.pdf>
+Package pdftex.def Info: classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icg
+raph.pdf  used on input line 298.
+(pdftex.def)             Requested size: 350.0pt x 88.83415pt.
+ [12] [13]) (./classBitmapHeader.tex <./classBitmapHeader__coll__graph.pdf>
+<classBitmapHeader__coll__graph.pdf, id=616, 412.54124pt x 553.06625pt>
+File: classBitmapHeader__coll__graph.pdf Graphic file (type pdf)
+<use classBitmapHeader__coll__graph.pdf>
+Package pdftex.def Info: classBitmapHeader__coll__graph.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 350.0pt x 469.23087pt.
+
+[14] [15] [16] <./classBitmapHeader_a47ccc09b3e744ecc81588b034718e21a_cgraph.pd
+f
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a47ccc09b3e744ecc81
+588b034718e21a_cgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapHeader_a47ccc09b3e744ecc81588b034718e21a_cgraph.pdf, id=720, 747.79
+375pt x 100.375pt>
+File: classBitmapHeader_a47ccc09b3e744ecc81588b034718e21a_cgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapHeader_a47ccc09b3e744ecc81588b034718e21a_cgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a47ccc09b3e744ecc81588b034718e21a_cg
+raph.pdf  used on input line 148.
+(pdftex.def)             Requested size: 350.0pt x 46.9802pt.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 155.
+ [17]
+Underfull \hbox (badness 10000) detected at line 202
+[][][]
+ []
+
+ <./classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph.pdf>
+<classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph.pdf, id=736, 547.0
+4375pt x 100.375pt>
+File: classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_ic
+graph.pdf  used on input line 214.
+(pdftex.def)             Requested size: 350.0pt x 64.22139pt.
+ [18]
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 244
+[][][]
+ []
+
+ <./classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a2660782990f1d9547e
+0aef501f666969_icgraph.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>
+<classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.pdf, id=748, 477.7
+85pt x 138.5175pt>
+File: classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a2660782990f1d9547e0aef501f666969_ic
+graph.pdf  used on input line 256.
+(pdftex.def)             Requested size: 350.0pt x 101.4699pt.
+ [19]
+Underfull \hbox (badness 10000) detected at line 269
+[][][]
+ []
+
+ <./classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph.pdf>
+<classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph.pdf, id=763, 470.7
+5874pt x 100.375pt>
+File: classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_ic
+graph.pdf  used on input line 281.
+(pdftex.def)             Requested size: 350.0pt x 74.62706pt.
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+ <./classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a106f72d6c256327342
+029edf8e18bde1_icgraph.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>
+<classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.pdf, id=771, 441.6
+5pt x 100.375pt>
+File: classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a106f72d6c256327342029edf8e18bde1_ic
+graph.pdf  used on input line 306.
+(pdftex.def)             Requested size: 350.0pt x 79.5496pt.
+
+Underfull \hbox (badness 10000) detected at line 319
+[][][]
+ []
+
+ <./classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a70702e4d8aba2a3502
+f776f73bfecde8_icgraph.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>
+<classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph.pdf, id=780, 469.7
+55pt x 138.5175pt>
+File: classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_ic
+graph.pdf  used on input line 331.
+(pdftex.def)             Requested size: 350.0pt x 103.20515pt.
+ [20]
+Underfull \hbox (badness 10000) detected at line 344
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 361
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 378
+[][][]
+ []
+
+ <./classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.pdf>
+<classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.pdf, id=795, 437.6
+35pt x 100.375pt>
+File: classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_ic
+graph.pdf  used on input line 390.
+(pdftex.def)             Requested size: 350.0pt x 80.27559pt.
+ [21] <./classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph.pdf>
+<classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph.pdf, id=809, 451.6
+875pt x 100.375pt>
+File: classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_ic
+graph.pdf  used on input line 412.
+(pdftex.def)             Requested size: 350.0pt x 77.78215pt.
+
+Underfull \hbox (badness 10000) detected at line 425
+[][][]
+ []
+
+ <./classBitmapHeader_a6f91559c339074535445780e99e5f717_cgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a6f91559c3390745354
+45780e99e5f717_cgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapHeader_a6f91559c339074535445780e99e5f717_cgraph.pdf, id=817, 360.34
+625pt x 100.375pt>
+File: classBitmapHeader_a6f91559c339074535445780e99e5f717_cgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapHeader_a6f91559c339074535445780e99e5f717_cgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a6f91559c339074535445780e99e5f717_cg
+raph.pdf  used on input line 437.
+(pdftex.def)             Requested size: 350.0pt x 97.49226pt.
+ [22] <./classBitmapHeader_a6f91559c339074535445780e99e5f717_icgraph.pdf>
+<classBitmapHeader_a6f91559c339074535445780e99e5f717_icgraph.pdf, id=832, 382.4
+2876pt x 100.375pt>
+File: classBitmapHeader_a6f91559c339074535445780e99e5f717_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a6f91559c339074535445780e99e5f717_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a6f91559c339074535445780e99e5f717_ic
+graph.pdf  used on input line 445.
+(pdftex.def)             Requested size: 350.0pt x 91.86824pt.
+ <./classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a2de360d5111136167f
+5885bed561bc8c_cgraph.pdf): PDF inclusion: multiple pdfs with page group includ
+ed in a single page
+>
+<classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph.pdf, id=840, 547.04
+375pt x 100.375pt>
+File: classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cg
+raph.pdf  used on input line 468.
+(pdftex.def)             Requested size: 350.0pt x 64.22139pt.
+ [23]
+Underfull \hbox (badness 10000) detected at line 481
+[][][]
+ []
+
+ <./classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cgraph.pdf>
+<classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cgraph.pdf, id=857, 547.04
+375pt x 100.375pt>
+File: classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cgraph.pdf Graphic fi
+le (type pdf)
+<use classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cg
+raph.pdf  used on input line 493.
+(pdftex.def)             Requested size: 350.0pt x 64.22139pt.
+ <./classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classBitmapHeader_a66adc11592dc1d18ed
+bd46bade1db242_icgraph.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>
+<classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_icgraph.pdf, id=865, 431.6
+125pt x 100.375pt>
+File: classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_icgraph.pdf Graphic f
+ile (type pdf)
+<use classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_icgraph.pdf>
+Package pdftex.def Info: classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_ic
+graph.pdf  used on input line 501.
+(pdftex.def)             Requested size: 350.0pt x 81.39824pt.
+ [24] [25] [26] [27]) (./classErrorHandler.tex <./classErrorHandler__coll__grap
+h.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classErrorHandler__coll__graph.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>
+<classErrorHandler__coll__graph.pdf, id=896, 185.69376pt x 288.07625pt>
+File: classErrorHandler__coll__graph.pdf Graphic file (type pdf)
+<use classErrorHandler__coll__graph.pdf>
+Package pdftex.def Info: classErrorHandler__coll__graph.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 185.0pt x 287.00737pt.
+ [28] [29] <./classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./classErrorHandler_ab90b8248f24e3129df
+69d224585956dd_icgraph.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>
+<classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.pdf, id=933, 415.5
+525pt x 157.58875pt>
+File: classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.pdf Graphic f
+ile (type pdf)
+<use classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.pdf>
+Package pdftex.def Info: classErrorHandler_ab90b8248f24e3129df69d224585956dd_ic
+graph.pdf  used on input line 125.
+(pdftex.def)             Requested size: 350.0pt x 132.73431pt.
+) (./classImage.tex [30] <./classImage__coll__graph.pdf>
+<classImage__coll__graph.pdf, id=950, 667.49374pt x 779.91376pt>
+File: classImage__coll__graph.pdf Graphic file (type pdf)
+<use classImage__coll__graph.pdf>
+Package pdftex.def Info: classImage__coll__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 408.96104pt.
+ [31])
+Runaway argument?
+ \multicolumn {2}{l}{\hspace {-6pt}\bfseries \fontseries {bc}\selectfont \ETC.
+! File ended while scanning use of \tabu@collectbody.
 <inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
+                \par 
+l.174 \input{classImage}
+                        ^^M
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+(./classMessage.tex
+! Misplaced \noalign.
+\nopagebreak ->\noalign 
+                        {\ifnum `}=0\fi \@testopt \LT@no@pgbk 4
+l.15 \nopagebreak
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+ <./classMessage__coll__graph.pdf> [32]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{DoxyCompactList}
+                            \small\item\em Standard constructor. \end{DoxyCo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{DoxyCompactList}\small\item\em
+                                           Standard constructor. \end{DoxyCo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{DoxyCompactList}\small\item\em
+                                           Standard constructor. \end{DoxyCo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \begin{DoxyCompactList}\small\item\em
+                                           Standard constructor. \end{DoxyCo...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...tandard constructor. \end{DoxyCompactList}
+                                                  \item
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[33]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \item
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \item
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \item
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \end{DoxyCompactItemize}
+                             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 ! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.69 ...oxyParamCaption}\item[{std\+::string}]{m }
+                                                  \end{DoxyParamCaption})}
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-I'm guessing that you meant to end an alignment here.
-
-! Misplaced \cr.
-<inserted text> \cr 
-                    
-l.111 \end{DoxyParams}
-                      
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.111 \end{DoxyParams}
-                      
-(That makes 100 errors; please try again.) 
+! TeX capacity exceeded, sorry [input stack size=5000].
+<to be read again> 
+                   {
+l.76 \begin{DoxyParams}{Parameters}
+                                   
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
 Here is how much of TeX's memory you used:
- 16014 strings out of 492617
- 227995 string characters out of 6135203
- 344653 words of memory out of 5000000
- 19678 multiletter control sequences out of 15000+600000
- 52555 words of font info for 70 fonts, out of 8000000 for 9000
+ 16984 strings out of 492616
+ 254326 string characters out of 6135177
+ 359388 words of memory out of 5000000
+ 20324 multiletter control sequences out of 15000+600000
+ 66205 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,15n,92p,942b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on refman.dvi (9 pages, 43900 bytes).
+ 5000i,16n,9989p,942b,707s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
