@@ -19,6 +19,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <unistd.h>
 #include "../header/BitmapHeader.h"
 #include "../header/BitmapArray.h"
 
@@ -78,11 +79,15 @@ public:
      */
     BitmapHeader *getBitmapHeader();
     
+    /**
+     * @brief Generates new bitmap file
+     * @return returns integer containing error code
+     */
     int generateBitmap();
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
-    BitmapArray *array;
+    BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
 };
 
 #endif /* IMAGE_H */

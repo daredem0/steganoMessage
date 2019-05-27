@@ -1,4 +1,4 @@
 <map id="BitmapArray::readArray" name="BitmapArray::readArray">
-<area shape="rect" id="node1" title=" " alt="" coords="248,5,424,32"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node1" title="Opens original bitmap file and calls private read function." alt="" coords="248,5,424,32"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="BitmapArray::read" name="BitmapArray::read">
+<area shape="rect" id="node1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="195,5,348,32"/>
+</map>

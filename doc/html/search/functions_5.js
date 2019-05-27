@@ -3,7 +3,6 @@ var searchData=
   ['generatebitmap',['generateBitmap',['../classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1',1,'Image']]],
   ['genint',['genInt',['../classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0',1,'BitmapArray']]],
   ['getbdata',['getBData',['../classBitmapArray.html#a66bd389c357de601df924569a0b38429',1,'BitmapArray']]],
-  ['getbdatastream',['getBDataStream',['../classBitmapArray.html#ac2a4b2a8ee245f19438dc25fd10ea13c',1,'BitmapArray']]],
   ['getbisize',['getBiSize',['../classBitmapHeader.html#acce4b6292e2aaf5dbd4bc10687c4fb65',1,'BitmapHeader']]],
   ['getbitcount',['getBitCount',['../classBitmapHeader.html#a2660782990f1d9547e0aef501f666969',1,'BitmapHeader']]],
   ['getbitmapheader',['getBitmapHeader',['../classImage.html#a8c824ffac0c866a94752a2c1047932af',1,'Image']]],

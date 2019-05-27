@@ -29,6 +29,15 @@ public:
     * @brief Standard constructor.
     */
     BitmapArray();
+    //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
+    /**
+    * @brief Non-Standard constructor.
+     * @param std::string p - Path to original file
+     * @param uint32_t b - Offset of fileheader
+     * @param uint32_t w - width of bitmap
+     * @param uint32_t h - height of bitmap
+     * @param uint32_t bit - color depth of bitmap
+    */
     BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit);
     /**
      * @brief Copy Constructor. 
@@ -39,21 +48,52 @@ public:
      * Standard deconstructor.
      */
     virtual ~BitmapArray();
+    /**
+     * @brief Opens original bitmap file and calls private read function. 
+     * @return Integer containing error codes
+     */
     int readArray();
+    /**
+     * @brief Prints all image data
+     */
     void printArray();
+    /**
+     * @brief Returns the 2D std::vector containing image information.
+     * @return std::vector<std::vector<uint32_t>> containing image data
+     */
     std::vector<std::vector<uint32_t>> getBData();
-    std::ofstream getBDataStream();
+    /**
+     * @brief ***
+     * @return std::string ***
+     */
     std::string infuse(std::string message);
     
 private:
-    std::vector<std::vector<uint32_t>> bData; 
-    std::string path;
-    uint32_t width;
-    uint32_t height;   
-    uint32_t bitOffset;
-    uint32_t bitCount;
-    void read(std::ifstream& f);
+    std::vector<std::vector<uint32_t>> bData; /**< 2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. */
+    std::string path; /**< path to original file*/
+    uint32_t width; /**< width of original file*/
+    uint32_t height;    /**< height of original file*/
+    uint32_t bitOffset; /**< Headeroffest of original file*/
+    uint32_t bitCount; /**< Color Depth of original file*/
+    
+    /**
+     * @brief Loads and decrypts the image data to the 2D std::vector member 
+     * @param std::ifstream& f - to inputstream of original image
+     * @return Integer containing error codes
+     */
+    int read(std::ifstream& f);
+    /**
+     * @brief Generates an uint32_t value from up to 4 Bytes
+     * @param char* c - pointer to array containing up to 4 bytes
+     * @param size_t s - size of array
+     * @return uint32_t generated value
+     */
     uint32_t genInt(char* c, size_t s);
+    /**
+     * @brief Loads and decrypts the image data to the 2D std::vector member 
+     * @param char* c - pointer to array containing up to 4 bytes
+     * @param size_t s - size of array
+     */
     void printArray(char* c, size_t s);
 };
 

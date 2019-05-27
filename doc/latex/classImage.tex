@@ -1,0 +1,336 @@
+\hypertarget{classImage}{}\section{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+\mbox{\hyperlink{classImage}{Image}} Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+
+
+Collaboration diagram for Image\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a68ad10640a0b06d29c315cfff1ce5623}{Image}} (std\+::string p)
+\begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. Initializes the object with a path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_abda271aa11b907dda8c8c8176684227d}{Image}} (const \mbox{\hyperlink{classImage}{Image}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+\item 
+std\+::string \mbox{\hyperlink{classImage_a885989eb723cb0a1fc0555c7e8de817e}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Returns the path of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}{set\+Path}} (std\+::string p)
+\begin{DoxyCompactList}\small\item\em Stores path in this. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_ac0aa1f41cb368d87b20dd38839218d93}{read\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Calls Constructors for Bit\+Map\+Header and Bit\+Map\+Array and reads information from image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_a3bde1df035fc794c268aab430bbafde0}{print\+Text\+File}} (std\+::string p)
+\begin{DoxyCompactList}\small\item\em Prints text file to terminal (just for convenience and to check if ifstream works. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}{write\+Text\+File}} (std\+::string t, std\+::string p)
+\begin{DoxyCompactList}\small\item\em Writes information to a text file !!\+Not debugged!! !!\+No Error Handling implemented!! !!\+Dont use!! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_a8c824ffac0c866a94752a2c1047932af}{get\+Bitmap\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Getter for bitmap\+Header. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}{generate\+Bitmap}} ()
+\begin{DoxyCompactList}\small\item\em Generates new bitmap file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classImage_aec8a33f176362d146da8c058798ebbff}{path}}
+\item 
+\mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_adaf72c2df8979eafb4031dc0384dc49f}{header}}
+\item 
+\mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} $\ast$ \mbox{\hyperlink{classImage_a1c18dd7d9eda416d44e7eb408d5b3c38}{array}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classImage}{Image}} Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. 
+
+Definition at line 29 of file Image.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Standard constructor. 
+
+
+
+Definition at line 16 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_a68ad10640a0b06d29c315cfff1ce5623}\label{classImage_a68ad10640a0b06d29c315cfff1ce5623}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+
+
+
+Non-\/\+Standard constructor. Initializes the object with a path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & p -\/ path that is to be stored in the object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_abda271aa11b907dda8c8c8176684227d}\label{classImage_abda271aa11b907dda8c8c8176684227d}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImage}{Image}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Image-\/type object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
+\index{Image@{Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Standard deconstructor. 
+
+Definition at line 26 of file Image.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}\label{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}} 
+\index{Image@{Image}!generateBitmap@{generateBitmap}}
+\index{generateBitmap@{generateBitmap}!Image@{Image}}
+\subsubsection{\texorpdfstring{generateBitmap()}{generateBitmap()}}
+{\footnotesize\ttfamily int Image\+::generate\+Bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates new bitmap file. 
+
+\begin{DoxyReturn}{Returns}
+returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Image.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_a8c824ffac0c866a94752a2c1047932af}\label{classImage_a8c824ffac0c866a94752a2c1047932af}} 
+\index{Image@{Image}!getBitmapHeader@{getBitmapHeader}}
+\index{getBitmapHeader@{getBitmapHeader}!Image@{Image}}
+\subsubsection{\texorpdfstring{getBitmapHeader()}{getBitmapHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ Image\+::get\+Bitmap\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for bitmap\+Header. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} type pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_a885989eb723cb0a1fc0555c7e8de817e}\label{classImage_a885989eb723cb0a1fc0555c7e8de817e}} 
+\index{Image@{Image}!getPath@{getPath}}
+\index{getPath@{getPath}!Image@{Image}}
+\subsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily std\+::string Image\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the path of the image. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string including stored path. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_a3bde1df035fc794c268aab430bbafde0}\label{classImage_a3bde1df035fc794c268aab430bbafde0}} 
+\index{Image@{Image}!printTextFile@{printTextFile}}
+\index{printTextFile@{printTextFile}!Image@{Image}}
+\subsubsection{\texorpdfstring{printTextFile()}{printTextFile()}}
+{\footnotesize\ttfamily void Image\+::print\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+
+
+
+Prints text file to terminal (just for convenience and to check if ifstream works. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & containing path to text file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_ac0aa1f41cb368d87b20dd38839218d93}\label{classImage_ac0aa1f41cb368d87b20dd38839218d93}} 
+\index{Image@{Image}!readImage@{readImage}}
+\index{readImage@{readImage}!Image@{Image}}
+\subsubsection{\texorpdfstring{readImage()}{readImage()}}
+{\footnotesize\ttfamily int Image\+::read\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls Constructors for Bit\+Map\+Header and Bit\+Map\+Array and reads information from image. 
+
+\begin{DoxyReturn}{Returns}
+returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Image.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}\label{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}} 
+\index{Image@{Image}!setPath@{setPath}}
+\index{setPath@{setPath}!Image@{Image}}
+\subsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Image\+::set\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+
+
+
+Stores path in this. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & p -\/ Path to the image file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Image.\+cpp.
+
+\mbox{\Hypertarget{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}\label{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}} 
+\index{Image@{Image}!writeTextFile@{writeTextFile}}
+\index{writeTextFile@{writeTextFile}!Image@{Image}}
+\subsubsection{\texorpdfstring{writeTextFile()}{writeTextFile()}}
+{\footnotesize\ttfamily void Image\+::write\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{t,  }\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+
+
+
+Writes information to a text file !!\+Not debugged!! !!\+No Error Handling implemented!! !!\+Dont use!! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & t -\/ contains text that is to be written \\
+\hline
+{\em std\+::string} & p -\/ contains path to text file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Image.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classImage_a1c18dd7d9eda416d44e7eb408d5b3c38}\label{classImage_a1c18dd7d9eda416d44e7eb408d5b3c38}} 
+\index{Image@{Image}!array@{array}}
+\index{array@{array}!Image@{Image}}
+\subsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}}$\ast$ Image\+::array\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} object containing imagedata 
+
+Definition at line 90 of file Image.\+h.
+
+\mbox{\Hypertarget{classImage_adaf72c2df8979eafb4031dc0384dc49f}\label{classImage_adaf72c2df8979eafb4031dc0384dc49f}} 
+\index{Image@{Image}!header@{header}}
+\index{header@{header}!Image@{Image}}
+\subsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}}$\ast$ Image\+::header\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} object containing header information 
+
+Definition at line 89 of file Image.\+h.
+
+\mbox{\Hypertarget{classImage_aec8a33f176362d146da8c058798ebbff}\label{classImage_aec8a33f176362d146da8c058798ebbff}} 
+\index{Image@{Image}!path@{path}}
+\index{path@{path}!Image@{Image}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily std\+::string Image\+::path\hspace{0.3cm}{\ttfamily [private]}}
+
+Imagepath 
+
+Definition at line 88 of file Image.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/\mbox{\hyperlink{Image_8h}{Image.\+h}}\item 
+src/\mbox{\hyperlink{Image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

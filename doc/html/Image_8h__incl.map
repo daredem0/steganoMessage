@@ -1,10 +1,11 @@
 <map id="header/Image.h" name="header/Image.h">
-<area shape="rect" id="node1" title=" " alt="" coords="301,5,425,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,487,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="195,155,269,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="323,155,403,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="474,155,545,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="611,155,674,181"/>
-<area shape="rect" id="node7" href="$BitmapHeader_8h.html" title=" " alt="" coords="139,80,325,107"/>
-<area shape="rect" id="node8" href="$BitmapArray_8h.html" title=" " alt="" coords="401,80,575,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="701,80,776,107"/>
+<area shape="rect" id="node8" href="$BitmapHeader_8h.html" title=" " alt="" coords="139,80,325,107"/>
+<area shape="rect" id="node9" href="$BitmapArray_8h.html" title=" " alt="" coords="401,80,575,107"/>
 </map>

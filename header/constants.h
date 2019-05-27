@@ -13,7 +13,9 @@
 
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
-
+/**
+ *@brief Containing some globally used constants
+ */
 const int errNoError = 0;
 const int errUnknown = 1;
 const int errSwitch = 2;

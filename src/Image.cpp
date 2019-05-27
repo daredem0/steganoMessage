@@ -66,13 +66,21 @@ BitmapHeader *Image::getBitmapHeader(){return header;}
 
 int Image::generateBitmap(){
     std::cout << "opening ofstream" << std::endl;
-    std::ofstream file("test.bmp", std::ios::binary | std::ios::trunc);
+    char* wD;
+    
+    //get current working dir and generate path
+    wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+    std::string sWD(wD);
+    free(wD);//free malloced storage from get_current_dir_name()
+    sWD += "/output.bmp";
+    std::cout << "Output-Path: " << sWD << std::endl;
+    std::ofstream file(sWD, std::ios::binary | std::ios::trunc);
     std::cout << "writing header" << std::endl;
     file.write(header->getHeader(), header->getOffBits());
     std::cout << "header written and closing stream" << std::endl;
     file.close();
     std::cout << "opening ofstream" << std::endl;
-    file.open("test.bmp", std::ios::binary | std::ios::app);
+    file.open(sWD, std::ios::binary | std::ios::app);
     std::cout << "reopened ofstream" << std::endl;
     long i = 0;
     std::vector<std::vector<uint32_t>> temp = array->getBData();

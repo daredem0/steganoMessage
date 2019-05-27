@@ -1,0 +1,155 @@
+\hypertarget{classErrorHandler}{}\section{Error\+Handler Class Reference}
+\label{classErrorHandler}\index{ErrorHandler@{ErrorHandler}}
+
+
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr.  
+
+
+
+
+{\ttfamily \#include $<$Error\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for Error\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classErrorHandler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classErrorHandler_a7e5f379bd231442b898cef94556b2107}{Error\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. Also fills std\+::list$<$std\+::string$>$ with standard error values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classErrorHandler_add20b373ee276ee2ef040f6dd913a86b}{Error\+Handler}} (const \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}{$\sim$\+Error\+Handler}} ()
+\item 
+int \mbox{\hyperlink{classErrorHandler_ab90b8248f24e3129df69d224585956dd}{print\+Error}} (int err)
+\begin{DoxyCompactList}\small\item\em Prints a single Error corresponding to the. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}{print\+All\+Errors}} (void)
+\begin{DoxyCompactList}\small\item\em Prints all available errors (mainly for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{classErrorHandler_aeb3bff116fcb83a58defbef8e8111f0e}{error\+Out}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr. 
+
+Definition at line 26 of file Error\+Handler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classErrorHandler_a7e5f379bd231442b898cef94556b2107}\label{classErrorHandler_a7e5f379bd231442b898cef94556b2107}} 
+\index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
+\index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{ErrorHandler()}{ErrorHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Error\+Handler\+::\+Error\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Standard constructor. Also fills std\+::list$<$std\+::string$>$ with standard error values. 
+
+
+
+Definition at line 16 of file Error\+Handler.\+cpp.
+
+\mbox{\Hypertarget{classErrorHandler_add20b373ee276ee2ef040f6dd913a86b}\label{classErrorHandler_add20b373ee276ee2ef040f6dd913a86b}} 
+\index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
+\index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{ErrorHandler()}{ErrorHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Error\+Handler\+::\+Error\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Error\+Handler-\/type object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Error\+Handler.\+cpp.
+
+\mbox{\Hypertarget{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}\label{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}} 
+\index{ErrorHandler@{ErrorHandler}!````~ErrorHandler@{$\sim$ErrorHandler}}
+\index{````~ErrorHandler@{$\sim$ErrorHandler}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{$\sim$ErrorHandler()}{~ErrorHandler()}}
+{\footnotesize\ttfamily Error\+Handler\+::$\sim$\+Error\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Standard deconstructor. Deletes the generated list !!not yet implementede!! 
+
+Definition at line 29 of file Error\+Handler.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}\label{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}} 
+\index{ErrorHandler@{ErrorHandler}!printAllErrors@{printAllErrors}}
+\index{printAllErrors@{printAllErrors}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{printAllErrors()}{printAllErrors()}}
+{\footnotesize\ttfamily void Error\+Handler\+::print\+All\+Errors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prints all available errors (mainly for debugging) 
+
+
+
+Definition at line 39 of file Error\+Handler.\+cpp.
+
+\mbox{\Hypertarget{classErrorHandler_ab90b8248f24e3129df69d224585956dd}\label{classErrorHandler_ab90b8248f24e3129df69d224585956dd}} 
+\index{ErrorHandler@{ErrorHandler}!printError@{printError}}
+\index{printError@{printError}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{printError()}{printError()}}
+{\footnotesize\ttfamily int Error\+Handler\+::print\+Error (\begin{DoxyParamCaption}\item[{int}]{err }\end{DoxyParamCaption})}
+
+
+
+Prints a single Error corresponding to the. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & err -\/ expects a integer value between 0 and x that specifies the error received \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Error\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classErrorHandler_aeb3bff116fcb83a58defbef8e8111f0e}\label{classErrorHandler_aeb3bff116fcb83a58defbef8e8111f0e}} 
+\index{ErrorHandler@{ErrorHandler}!errorOut@{errorOut}}
+\index{errorOut@{errorOut}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{errorOut}{errorOut}}
+{\footnotesize\ttfamily std\+::list$<$std\+::string$>$ Error\+Handler\+::error\+Out\hspace{0.3cm}{\ttfamily [private]}}
+
+std\+::list that stores every standard error message as a std\+::string. 
+
+Definition at line 53 of file Error\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/\mbox{\hyperlink{ErrorHandler_8h}{Error\+Handler.\+h}}\item 
+src/\mbox{\hyperlink{ErrorHandler_8cpp}{Error\+Handler.\+cpp}}\end{DoxyCompactItemize}

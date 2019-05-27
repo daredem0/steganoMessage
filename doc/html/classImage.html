@@ -80,9 +80,9 @@ Collaboration diagram for Image:</div>
 <div class="center"><img src="classImage__coll__graph.png" border="0" usemap="#Image_coll__map" alt="Collaboration graph"/></div>
 <map name="Image_coll__map" id="Image_coll__map">
 <area shape="rect"  title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="372,711,535,935"/>
-<area shape="rect"  href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="128,365,283,589"/>
+<area shape="rect"  href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="135,365,275,589"/>
 <area shape="rect"  title=" " alt="" coords="5,5,152,97"/>
-<area shape="rect"  title=" " alt="" coords="229,13,304,90"/>
+<area shape="rect"  title=" " alt="" coords="231,13,305,90"/>
 <area shape="rect"  href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="516,307,668,648"/>
 <area shape="rect"  title=" " alt="" coords="424,13,483,90"/>
 <area shape="rect"  title=" " alt="" coords="668,13,719,90"/>
@@ -122,6 +122,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8c824ffac0c866a94752a2c1047932af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for bitmapHeader.  <a href="#a8c824ffac0c866a94752a2c1047932af">More...</a><br /></td></tr>
 <tr class="separator:a8c824ffac0c866a94752a2c1047932af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1">generateBitmap</a> ()</td></tr>
+<tr class="memdesc:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates new bitmap file.  <a href="#a3ca1ae6c1eb2846bfba066b01e6020e1">More...</a><br /></td></tr>
 <tr class="separator:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -136,7 +137,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00028">28</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00029">29</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58edd1c45b4faeb5f789b0d036d02313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/3]</span></h2>
@@ -259,17 +260,20 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generates new bitmap file. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00067">67</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph.png" border="0" usemap="#classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph" alt=""/></div>
 <map name="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph" id="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,81,181,108"/>
-<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title=" " alt="" coords="234,5,426,32"/>
-<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title=" " alt="" coords="235,56,425,83"/>
-<area shape="rect"  href="classBitmapArray.html#a66bd389c357de601df924569a0b38429" title=" " alt="" coords="243,107,417,133"/>
-<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title=" " alt="" coords="229,157,431,184"/>
+<area shape="rect"  title="Generates new bitmap file." alt="" coords="5,81,181,108"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="234,5,426,32"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="235,56,425,83"/>
+<area shape="rect"  href="classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="243,107,417,133"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="229,157,431,184"/>
 </map>
 </div>
 <div class="dynheader">
@@ -277,7 +281,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph.png" border="0" usemap="#classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph" alt=""/></div>
 <map name="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph" id="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph">
-<area shape="rect"  title=" " alt="" coords="108,5,284,32"/>
+<area shape="rect"  title="Generates new bitmap file." alt="" coords="108,5,284,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -303,15 +307,6 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> type pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00065">65</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classImage_a8c824ffac0c866a94752a2c1047932af_icgraph.png" border="0" usemap="#classImage_a8c824ffac0c866a94752a2c1047932af_icgraph" alt=""/></div>
-<map name="classImage_a8c824ffac0c866a94752a2c1047932af_icgraph" id="classImage_a8c824ffac0c866a94752a2c1047932af_icgraph">
-<area shape="rect"  title="Getter for bitmapHeader." alt="" coords="108,5,295,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -402,10 +397,10 @@ Here is the call graph for this function:</div>
 <map name="classImage_ac0aa1f41cb368d87b20dd38839218d93_cgraph" id="classImage_ac0aa1f41cb368d87b20dd38839218d93_cgraph">
 <area shape="rect"  title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="5,107,147,133"/>
 <area shape="rect"  href="classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="195,5,396,32"/>
-<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title=" " alt="" coords="200,56,391,83"/>
-<area shape="rect"  href="classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title=" " alt="" coords="204,107,387,133"/>
-<area shape="rect"  href="classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title=" " alt="" coords="201,157,389,184"/>
-<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title=" " alt="" coords="195,208,396,235"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="200,56,391,83"/>
+<area shape="rect"  href="classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="204,107,387,133"/>
+<area shape="rect"  href="classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="201,157,389,184"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="195,208,396,235"/>
 </map>
 </div>
 <div class="dynheader">
@@ -507,8 +502,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointer to <a class="el" href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file.">BitmapArray</a> object containing imagedata </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00085">85</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00090">90</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +529,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> object containing header information </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00084">84</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00089">89</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +554,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Imagepath </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00083">83</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00088">88</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 <map id="BitmapArray::readArray" name="BitmapArray::readArray">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html#a63a5c2d724d5e3d2c587288020d2a930" title=" " alt="" coords="229,5,371,32"/>
-<area shape="rect" id="node3" href="$classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title=" " alt="" coords="419,5,572,32"/>
+<area shape="rect" id="node1" title="Opens original bitmap file and calls private read function." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="229,5,371,32"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="419,5,572,32"/>
 </map>

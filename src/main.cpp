@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
             steg->buildImage(tempPath);
             cout << "Built path: " << steg->getImage()->getPath() << endl;
             steg->getImage()->readImage();
-            steg->getImage()->getBitmapHeader()->printHeader();
+            //steg->getImage()->getBitmapHeader()->printHeader();
         }
     catch (int i){ //catch errPath and send it to printError
         steg->getErrHandle()->printError(i);
@@ -119,15 +119,6 @@ int ui(string argv, SteganoMessage *steg){
 
 int printHelp(){
     cout << HELPFILE << endl;
-    /*ifstream help("../help.txt");
-    string buffer;
-    while(getline(help, buffer)){
-        cout << buffer << endl;
-    }
-    help.close();*/ //maybe later
-    //int temp;
-    //cin >> temp;
-    return -1;
 }
 
 int terminate(SteganoMessage *steg){

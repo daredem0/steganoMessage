@@ -108,9 +108,6 @@ char* BitmapHeader::getHeader(){
     
     file.seekg(0, std::ios::beg);
     file.read(headerStream, (size_t)bfOffBits);
-    //for(int i = 0; i <= bfOffBits; ++i){
-       // std::cout << std::hex << (uint16_t)headerStream[i] << std::dec << std::endl;
-    //}
     file.close();
     //following two lines to make 32 bit standard (easier for us) <- not working, brings incompatibility with compression rates
     //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)) =  ;

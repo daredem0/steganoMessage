@@ -36,38 +36,37 @@ BitmapArray::~BitmapArray() {
 }
 
 int BitmapArray::readArray(){
-    std::cout << "Now opening the stream" << std::endl;
+    std::cout << "Opening the stream" << std::endl;
     std::ifstream file(path);
     if(!file.good())
         return 3;
     read(file);
     std::cout << "Finished reading" << std::endl;
     file.close();
-    std::cout << "Stream closed, waiting for input" << std::endl;
-    //printArray();
-    std::cout << "Finishhed printing" << std::endl;
 }
 
-void BitmapArray::read(std::ifstream& f){
+int BitmapArray::read(std::ifstream& f){
     std::cout << "And now reading the data" << std::endl;
     f.seekg(bitOffset);
     for(int i = 0; i < height; ++i){
         std::vector<uint32_t> temp;
         temp.clear();
-        char s, t, u, v;
-        //std::cout << "Outer Nr.: " << i << std::endl;
+        int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
         for(int j = 0; j <width; ++j){
             switch(bitCount){
                 case 8:
-                    std::cout << "case 8" << std::endl;
-                    std::cout << "Inner Nr.: " << j << " / ";
+                    char s;
                     f.read((char*) &s, sizeof(char));
-                    std::cout << "Found this: " << (uint16_t)s << std::endl;
                     temp.push_back(s);
                     break;
                 case 16:
                     break;
-                case 24:
+                case 24:{
+                    char *tempo = new char[bitCount/8];
+                    f.read(tempo, (size_t)(bitCount/8));
+                    temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                }
+                break;
                 case 32:{
                     char *tempo = new char[bitCount/8];
                     f.read(tempo, sizeof(uint32_t));
@@ -75,14 +74,22 @@ void BitmapArray::read(std::ifstream& f){
                 }
                     break;
                 default:
-                    exit(-1);
+                    return -1;
             }
            
         }
+        if(bitCount == 24 && padding != 0)
+        {
+            char *tempo = new char[padding];
+            for(int i = 0; i < padding; ++i){
+                *(tempo+i) = 0;
+            }
+            temp.push_back(genInt(tempo, (size_t)(padding)));
+        }
         bData.push_back(temp);
-        std::cout << "Finished " << i << std::endl;
         temp.clear();
    }
+    return 0;
 }
 
 void BitmapArray::printArray(char* c, size_t s){
@@ -122,52 +129,6 @@ std::vector<std::vector<uint32_t>> BitmapArray::getBData(){
     return bData;
 }
 
-std::ofstream BitmapArray::getBDataStream(){
-    std::ofstream temp;
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            switch(bitCount){
-                case 8:
-                    temp << (uint8_t)*itInner;
-                    break;
-                case 16:
-                    temp << (uint16_t)*itInner;
-                    break;
-                case 24:
-                    uint16_t a;
-                    uint8_t b;
-                    a = (uint16_t)*itInner;
-                    b = (uint8_t) (*itInner >> 16);
-                    temp << a << b;
-                    break;
-                case 32:
-                    temp << (uint32_t)*itInner;
-                    break;
-                default:
-                    exit(-1);
-                
-            }
-        }
-    }
-    return temp;
-}
-/*
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            
-        }
-    }
- */
-
-/*
-  f.seekg(0, std::ios::beg);
-    //File Header
-    f.read((char*) &bfType, sizeof(bfType));
-    fixType();
-    f.read((char*) &bfSize, sizeof(bfSize));
-    f.read((char*) &bfReserved, sizeof(bfReserved));
-    f.read((char*) &bfOffBits, sizeof(bfOffBits));*/
-
 std::string BitmapArray::infuse(std::string message){
     
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
@@ -178,7 +139,7 @@ std::string BitmapArray::infuse(std::string message){
     
     
     
-    return "Successfully infused bitmap with message"
+    return "Successfully infused bitmap with message";
 }
 
 

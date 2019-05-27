@@ -80,7 +80,7 @@ Collaboration diagram for BitmapArray:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray__coll__graph.png" border="0" usemap="#BitmapArray_coll__map" alt="Collaboration graph"/></div>
 <map name="BitmapArray_coll__map" id="BitmapArray_coll__map">
-<area shape="rect"  title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="136,204,291,428"/>
+<area shape="rect"  title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="143,204,283,428"/>
 <area shape="rect"  title=" " alt="" coords="5,5,152,97"/>
 <area shape="rect"  title=" " alt="" coords="176,13,251,90"/>
 <area shape="rect"  title=" " alt="" coords="277,13,336,90"/>
@@ -93,6 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a582e5e54ec078d30fde87ae7b4540f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard constructor.  <a href="#a582e5e54ec078d30fde87ae7b4540f32">More...</a><br /></td></tr>
 <tr class="separator:a582e5e54ec078d30fde87ae7b4540f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae080c605889bcde457f82c0b8917749d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d">BitmapArray</a> (std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit)</td></tr>
+<tr class="memdesc:ae080c605889bcde457f82c0b8917749d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-Standard constructor.  <a href="#ae080c605889bcde457f82c0b8917749d">More...</a><br /></td></tr>
 <tr class="separator:ae080c605889bcde457f82c0b8917749d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ce0273af824a8deff592ef1a43d7e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a07ce0273af824a8deff592ef1a43d7e5">BitmapArray</a> (const <a class="el" href="classBitmapArray.html">BitmapArray</a> &amp;orig)</td></tr>
 <tr class="memdesc:a07ce0273af824a8deff592ef1a43d7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy Constructor.  <a href="#a07ce0273af824a8deff592ef1a43d7e5">More...</a><br /></td></tr>
@@ -100,21 +101,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc21c3148de08fb85d2939821f9f2cf0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#acc21c3148de08fb85d2939821f9f2cf0">~BitmapArray</a> ()</td></tr>
 <tr class="separator:acc21c3148de08fb85d2939821f9f2cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ce4b5acc896040075be63a559799e7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e">readArray</a> ()</td></tr>
+<tr class="memdesc:a4ce4b5acc896040075be63a559799e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens original bitmap file and calls private read function.  <a href="#a4ce4b5acc896040075be63a559799e7e">More...</a><br /></td></tr>
 <tr class="separator:a4ce4b5acc896040075be63a559799e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0580ddeedca7f59fd8d43ec92e6bb4a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1">printArray</a> ()</td></tr>
+<tr class="memdesc:a0580ddeedca7f59fd8d43ec92e6bb4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all image data.  <a href="#a0580ddeedca7f59fd8d43ec92e6bb4a1">More...</a><br /></td></tr>
 <tr class="separator:a0580ddeedca7f59fd8d43ec92e6bb4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66bd389c357de601df924569a0b38429"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; uint32_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a66bd389c357de601df924569a0b38429">getBData</a> ()</td></tr>
+<tr class="memdesc:a66bd389c357de601df924569a0b38429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 2D std::vector containing image information.  <a href="#a66bd389c357de601df924569a0b38429">More...</a><br /></td></tr>
 <tr class="separator:a66bd389c357de601df924569a0b38429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2a4b2a8ee245f19438dc25fd10ea13c"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#ac2a4b2a8ee245f19438dc25fd10ea13c">getBDataStream</a> ()</td></tr>
-<tr class="separator:ac2a4b2a8ee245f19438dc25fd10ea13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60edd8332724d4eb1ca37c91f0fefdc8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a60edd8332724d4eb1ca37c91f0fefdc8">infuse</a> (std::string message)</td></tr>
+<tr class="memdesc:a60edd8332724d4eb1ca37c91f0fefdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">***  <a href="#a60edd8332724d4eb1ca37c91f0fefdc8">More...</a><br /></td></tr>
+<tr class="separator:a60edd8332724d4eb1ca37c91f0fefdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a63a5c2d724d5e3d2c587288020d2a930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a63a5c2d724d5e3d2c587288020d2a930">read</a> (std::ifstream &amp;f)</td></tr>
-<tr class="separator:a63a5c2d724d5e3d2c587288020d2a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5834d03cd095769b422d4d66b9435f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f">read</a> (std::ifstream &amp;f)</td></tr>
+<tr class="memdesc:a3a5834d03cd095769b422d4d66b9435f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and decrypts the image data to the 2D std::vector member.  <a href="#a3a5834d03cd095769b422d4d66b9435f">More...</a><br /></td></tr>
+<tr class="separator:a3a5834d03cd095769b422d4d66b9435f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158fbbaa026332a732f644a8c368a2f0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0">genInt</a> (char *c, size_t s)</td></tr>
+<tr class="memdesc:a158fbbaa026332a732f644a8c368a2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates an uint32_t value from up to 4 Bytes.  <a href="#a158fbbaa026332a732f644a8c368a2f0">More...</a><br /></td></tr>
 <tr class="separator:a158fbbaa026332a732f644a8c368a2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a8a164e51e29407f24dab4752232c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1">printArray</a> (char *c, size_t s)</td></tr>
+<tr class="memdesc:a99a8a164e51e29407f24dab4752232c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and decrypts the image data to the 2D std::vector member.  <a href="#a99a8a164e51e29407f24dab4752232c1">More...</a><br /></td></tr>
 <tr class="separator:a99a8a164e51e29407f24dab4752232c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -202,16 +210,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Non-Standard constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>p - Path to original file </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>b - Offset of fileheader </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>w - width of bitmap </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>h - height of bitmap </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>bit - color depth of bitmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00023">23</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph.png" border="0" usemap="#classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph" alt=""/></div>
 <map name="classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph" id="classBitmapArray_ae080c605889bcde457f82c0b8917749d_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,200,32"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title=" " alt="" coords="248,5,424,32"/>
-<area shape="rect"  href="classBitmapArray.html#a63a5c2d724d5e3d2c587288020d2a930" title=" " alt="" coords="472,5,613,32"/>
-<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title=" " alt="" coords="661,5,815,32"/>
+<area shape="rect"  title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,5,424,32"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,5,613,32"/>
+<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="661,5,815,32"/>
 </map>
 </div>
 
@@ -308,16 +328,26 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00097">97</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>Generates an uint32_t value from up to 4 Bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char*</td><td>c - pointer to array containing up to 4 bytes </td></tr>
+    <tr><td class="paramname">size_t</td><td>s - size of array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t generated value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00104">104</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph.png" border="0" usemap="#classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph" alt=""/></div>
 <map name="classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph" id="classBitmapArray_a158fbbaa026332a732f644a8c368a2f0_icgraph">
-<area shape="rect"  title=" " alt="" coords="661,5,815,32"/>
-<area shape="rect"  href="classBitmapArray.html#a63a5c2d724d5e3d2c587288020d2a930" title=" " alt="" coords="472,5,613,32"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title=" " alt="" coords="248,5,424,32"/>
-<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect"  title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="661,5,815,32"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,5,613,32"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,5,424,32"/>
+<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
 </map>
 </div>
 
@@ -338,36 +368,43 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00121">121</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>Returns the 2D std::vector containing image information. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::vector&lt;uint32_t&gt;&gt; containing image data </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00128">128</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph.png" border="0" usemap="#classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph" alt=""/></div>
 <map name="classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph" id="classBitmapArray_a66bd389c357de601df924569a0b38429_icgraph">
-<area shape="rect"  title=" " alt="" coords="332,5,505,32"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title=" " alt="" coords="108,5,284,32"/>
+<area shape="rect"  title="Returns the 2D std::vector containing image information." alt="" coords="332,5,505,32"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="108,5,284,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ac2a4b2a8ee245f19438dc25fd10ea13c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2a4b2a8ee245f19438dc25fd10ea13c">&#9670;&nbsp;</a></span>getBDataStream()</h2>
+<a id="a60edd8332724d4eb1ca37c91f0fefdc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60edd8332724d4eb1ca37c91f0fefdc8">&#9670;&nbsp;</a></span>infuse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::ofstream BitmapArray::getBDataStream </td>
+          <td class="memname">std::string BitmapArray::infuse </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00125">125</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>*** </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string *** </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00132">132</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +423,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00106">106</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>Prints all image data. </p>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00113">113</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 
 </div>
 </div>
@@ -424,12 +463,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00088">88</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>Loads and decrypts the image data to the 2D std::vector member. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char*</td><td>c - pointer to array containing up to 4 bytes </td></tr>
+    <tr><td class="paramname">size_t</td><td>s - size of array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00095">95</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a63a5c2d724d5e3d2c587288020d2a930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63a5c2d724d5e3d2c587288020d2a930">&#9670;&nbsp;</a></span>read()</h2>
+<a id="a3a5834d03cd095769b422d4d66b9435f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5834d03cd095769b422d4d66b9435f">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -438,7 +486,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void BitmapArray::read </td>
+          <td class="memname">int BitmapArray::read </td>
           <td>(</td>
           <td class="paramtype">std::ifstream &amp;&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -452,24 +500,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00051">51</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
+<p>Loads and decrypts the image data to the 2D std::vector member. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::ifstream&amp;</td><td>f - to inputstream of original image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00048">48</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_cgraph.png" border="0" usemap="#classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_cgraph" alt=""/></div>
-<map name="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_cgraph" id="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,147,32"/>
-<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title=" " alt="" coords="195,5,348,32"/>
+<div class="center"><img src="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph.png" border="0" usemap="#classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph" alt=""/></div>
+<map name="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph" id="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph">
+<area shape="rect"  title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="5,5,147,32"/>
+<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="195,5,348,32"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_icgraph.png" border="0" usemap="#classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_icgraph" alt=""/></div>
-<map name="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_icgraph" id="classBitmapArray_a63a5c2d724d5e3d2c587288020d2a930_icgraph">
-<area shape="rect"  title=" " alt="" coords="472,5,613,32"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title=" " alt="" coords="248,5,424,32"/>
-<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title=" " alt="" coords="5,5,200,32"/>
+<div class="center"><img src="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph.png" border="0" usemap="#classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph" alt=""/></div>
+<map name="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph" id="classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_icgraph">
+<area shape="rect"  title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,5,613,32"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,5,424,32"/>
+<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
 </map>
 </div>
 
@@ -490,15 +547,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Opens original bitmap file and calls private read function. </p>
+<dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="BitmapArray_8cpp_source.html#l00038">38</a> of file <a class="el" href="BitmapArray_8cpp_source.html">BitmapArray.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph.png" border="0" usemap="#classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph" alt=""/></div>
 <map name="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph" id="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect"  href="classBitmapArray.html#a63a5c2d724d5e3d2c587288020d2a930" title=" " alt="" coords="229,5,371,32"/>
-<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title=" " alt="" coords="419,5,572,32"/>
+<area shape="rect"  title="Opens original bitmap file and calls private read function." alt="" coords="5,5,181,32"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="229,5,371,32"/>
+<area shape="rect"  href="classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="419,5,572,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -506,8 +566,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph.png" border="0" usemap="#classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph" alt=""/></div>
 <map name="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph" id="classBitmapArray_a4ce4b5acc896040075be63a559799e7e_icgraph">
-<area shape="rect"  title=" " alt="" coords="248,5,424,32"/>
-<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect"  title="Opens original bitmap file and calls private read function." alt="" coords="248,5,424,32"/>
+<area shape="rect"  href="classBitmapArray.html#ae080c605889bcde457f82c0b8917749d" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
 </map>
 </div>
 
@@ -533,8 +593,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00048">48</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00072">72</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>
@@ -557,8 +618,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Color Depth of original file </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00053">53</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00077">77</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>
@@ -581,8 +643,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Headeroffest of original file </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00052">52</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00076">76</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>
@@ -605,8 +668,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>height of original file </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00051">51</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00075">75</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>
@@ -629,8 +693,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>path to original file </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00049">49</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00073">73</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>
@@ -653,8 +718,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>width of original file </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00050">50</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapArray_8h_source.html#l00074">74</a> of file <a class="el" href="BitmapArray_8h_source.html">BitmapArray.h</a>.</p>
 
 </div>
 </div>

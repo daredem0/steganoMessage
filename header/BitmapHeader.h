@@ -61,14 +61,46 @@ public:
      */
     void printHeader();
     
+    /**
+     * @brief Returns pointer to char array containing the complete fileheader extracted from original file
+     * @return char* pointer to char
+     */
     char* getHeader();
     
+    /**
+     * @brief Getter for bfSize
+     * @return uint32_t bfSize
+     */
     uint32_t getSize();
+    /**
+     * @brief Getter for bfOffBits
+     * @return uint32_t bfOffBits
+     */
     uint32_t getOffBits();
+    /**
+     * @brief Getter for BiSize
+     * @return uint32_t BiSize
+     */
     uint32_t getBiSize();
+    /**
+     * @brief Getter for BiWidth
+     * @return uint32_t BiWidth
+     */
     uint32_t getWidth();
+    /**
+     * @brief Getter for BiHeight
+     * @return uint32_t BiHeight
+     */
     uint32_t getHeight();
+    /**
+     * @brief Getter for BiSizeImage
+     * @return uint32_t BiSizeImage
+     */
     uint32_t getSizeImage();
+    /**
+     * @brief Getter for BiBitCount
+     * @return uint32_t BiBitCount
+     */
     uint32_t getBitCount();
 private:
     //file header
@@ -91,7 +123,7 @@ private:
     uint32_t biClrUsed;/**< biClrUsed*/
     uint32_t biClrImportant;/**< biClrImportant*/
     
-    char *headerStream;
+    char *headerStream; /**< Pointer to char array containing the complete header */
     
     std::string path;/**< Imagepath*/
     

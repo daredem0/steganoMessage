@@ -1,0 +1,476 @@
+\hypertarget{classSteganoMessage}{}\section{Stegano\+Message Class Reference}
+\label{classSteganoMessage}\index{SteganoMessage@{SteganoMessage}}
+
+
+\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} class ist implemented to store values that are needed to be shared between all classes (for example error\+Handler). It shall be constructed in the beginning and terminated in the very end of the runtime.  
+
+
+
+
+{\ttfamily \#include $<$Stegano\+Message.\+h$>$}
+
+
+
+Collaboration diagram for Stegano\+Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSteganoMessage_a7a14cbd03ebca6764f8b234f8dcd1697}{Stegano\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. Also creates new \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSteganoMessage_a67a8a4a8aae12db32bb758e6cd44b16a}{Stegano\+Message}} (const \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}{$\sim$\+Stegano\+Message}} ()
+\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef}{get\+Err\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em Gives pointer to the \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object stored in the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}{build\+Message}} (std\+::string m)
+\begin{DoxyCompactList}\small\item\em Builds new \mbox{\hyperlink{classMessage}{Message}} type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMessage}{Message}} $\ast$ \mbox{\hyperlink{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}{get\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Getter for pointer to message object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d}{build\+Image}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{path}})
+\begin{DoxyCompactList}\small\item\em Builds new \mbox{\hyperlink{classImage}{Image}} type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c}{get\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Getter for image object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}{set\+Mode}} (std\+::string m)
+\begin{DoxyCompactList}\small\item\em Stores mode command in member, sets flag for modeset. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}{get\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Getter for stored mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}{print\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Prints values stored for mode and path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}{get\+Path\+Verified}} ()
+\begin{DoxyCompactList}\small\item\em Getter for path verified flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}{check\+Path}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{path}})
+\begin{DoxyCompactList}\small\item\em static method to quickly check if a path possibly makes sense \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}{exists}} (std\+::string p)
+\begin{DoxyCompactList}\small\item\em Checks if a path exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a26b631e00716be7a89cbcf22cf0b7291}{err}}
+\item 
+\mbox{\hyperlink{classMessage}{Message}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}{mess}}
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}{img}}
+\item 
+std\+::string \mbox{\hyperlink{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}{mode}}
+\item 
+bool \mbox{\hyperlink{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}{mode\+Set}}
+\item 
+bool \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{path}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} class ist implemented to store values that are needed to be shared between all classes (for example error\+Handler). It shall be constructed in the beginning and terminated in the very end of the runtime. 
+
+Definition at line 27 of file Stegano\+Message.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSteganoMessage_a7a14cbd03ebca6764f8b234f8dcd1697}\label{classSteganoMessage_a7a14cbd03ebca6764f8b234f8dcd1697}} 
+\index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
+\index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{SteganoMessage()}{SteganoMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Stegano\+Message\+::\+Stegano\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Standard constructor. Also creates new \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object. 
+
+
+
+Definition at line 16 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_a67a8a4a8aae12db32bb758e6cd44b16a}\label{classSteganoMessage_a67a8a4a8aae12db32bb758e6cd44b16a}} 
+\index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
+\index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{SteganoMessage()}{SteganoMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Stegano\+Message\+::\+Stegano\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Stegano\+Message-\/type object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}\label{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}} 
+\index{SteganoMessage@{SteganoMessage}!````~SteganoMessage@{$\sim$SteganoMessage}}
+\index{````~SteganoMessage@{$\sim$SteganoMessage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{$\sim$SteganoMessage()}{~SteganoMessage()}}
+{\footnotesize\ttfamily Stegano\+Message\+::$\sim$\+Stegano\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Standard deconstructor. Frees space allocated for int $\ast$err 
+
+Definition at line 26 of file Stegano\+Message.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d}\label{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d}} 
+\index{SteganoMessage@{SteganoMessage}!buildImage@{buildImage}}
+\index{buildImage@{buildImage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{buildImage()}{buildImage()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::build\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Builds new \mbox{\hyperlink{classImage}{Image}} type object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & containing path to image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}\label{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}} 
+\index{SteganoMessage@{SteganoMessage}!buildMessage@{buildMessage}}
+\index{buildMessage@{buildMessage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{buildMessage()}{buildMessage()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::build\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{m }\end{DoxyParamCaption})}
+
+
+
+Builds new \mbox{\hyperlink{classMessage}{Message}} type object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::sring} & containing message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}\label{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}} 
+\index{SteganoMessage@{SteganoMessage}!checkPath@{checkPath}}
+\index{checkPath@{checkPath}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{checkPath()}{checkPath()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::check\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+static method to quickly check if a path possibly makes sense 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & containing the path that shall be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}\label{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}} 
+\index{SteganoMessage@{SteganoMessage}!exists@{exists}}
+\index{exists@{exists}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::exists (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a path exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & containing the path that shall be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef}\label{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef}} 
+\index{SteganoMessage@{SteganoMessage}!getErrHandle@{getErrHandle}}
+\index{getErrHandle@{getErrHandle}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getErrHandle()}{getErrHandle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ Stegano\+Message\+::get\+Err\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gives pointer to the \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object stored in the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object. 
+
+\begin{DoxyReturn}{Returns}
+pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c}\label{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c}} 
+\index{SteganoMessage@{SteganoMessage}!getImage@{getImage}}
+\index{getImage@{getImage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Stegano\+Message\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for image object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \mbox{\hyperlink{classImage}{Image}} 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}\label{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}} 
+\index{SteganoMessage@{SteganoMessage}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}} $\ast$ Stegano\+Message\+::get\+Message (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Getter for pointer to message object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \mbox{\hyperlink{classMessage}{Message}} 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}\label{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}} 
+\index{SteganoMessage@{SteganoMessage}!getMode@{getMode}}
+\index{getMode@{getMode}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily std\+::string Stegano\+Message\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for stored mode. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string containing mode command or \char`\"{}\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}\label{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}} 
+\index{SteganoMessage@{SteganoMessage}!getPathVerified@{getPathVerified}}
+\index{getPathVerified@{getPathVerified}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getPathVerified()}{getPathVerified()}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::get\+Path\+Verified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for path verified flag. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true for verified, false for not verified. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Stegano\+Message.\+cpp.
+
+\mbox{\Hypertarget{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}\label{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}} 
+\index{SteganoMessage@{SteganoMessage}!printValues@{printValues}}
+\index{printValues@{printValues}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{printValues()}{printValues()}}
+{\footnotesize\ttfamily void Stegano\+Message\+::print\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints values stored for mode and path. 
+
+
+
+Definition at line 69 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}\label{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}} 
+\index{SteganoMessage@{SteganoMessage}!setMode@{setMode}}
+\index{setMode@{setMode}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::set\+Mode (\begin{DoxyParamCaption}\item[{std\+::string}]{m }\end{DoxyParamCaption})}
+
+
+
+Stores mode command in member, sets flag for modeset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & containing mode command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classSteganoMessage_a26b631e00716be7a89cbcf22cf0b7291}\label{classSteganoMessage_a26b631e00716be7a89cbcf22cf0b7291}} 
+\index{SteganoMessage@{SteganoMessage}!err@{err}}
+\index{err@{err}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}$\ast$ Stegano\+Message\+::err\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
+
+Definition at line 106 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}\label{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}} 
+\index{SteganoMessage@{SteganoMessage}!img@{img}}
+\index{img@{img}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{img}{img}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}}$\ast$ Stegano\+Message\+::img\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classImage}{Image}} type object containing path, header and image data 
+
+Definition at line 108 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}\label{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}} 
+\index{SteganoMessage@{SteganoMessage}!mess@{mess}}
+\index{mess@{mess}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{mess}{mess}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMessage}{Message}}$\ast$ Stegano\+Message\+::mess\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classMessage}{Message}} type objec to store message 
+
+Definition at line 107 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}\label{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}} 
+\index{SteganoMessage@{SteganoMessage}!mode@{mode}}
+\index{mode@{mode}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily std\+::string Stegano\+Message\+::mode\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/encrypt or -\/decryptl, if not set \char`\"{}\char`\"{} 
+
+Definition at line 109 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}\label{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}} 
+\index{SteganoMessage@{SteganoMessage}!modeSet@{modeSet}}
+\index{modeSet@{modeSet}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{modeSet}{modeSet}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::mode\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+flag to check if mode is set 
+
+Definition at line 110 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}\label{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}} 
+\index{SteganoMessage@{SteganoMessage}!path@{path}}
+\index{path@{path}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::path\hspace{0.3cm}{\ttfamily [private]}}
+
+flag to check if path is verified 
+
+Definition at line 111 of file Stegano\+Message.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/\mbox{\hyperlink{SteganoMessage_8h}{Stegano\+Message.\+h}}\item 
+src/\mbox{\hyperlink{SteganoMessage_8cpp}{Stegano\+Message.\+cpp}}\end{DoxyCompactItemize}
