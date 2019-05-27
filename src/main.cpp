@@ -60,14 +60,14 @@ int main(int argc, char *argv[]) {
         try{
             cout << "Trying to get path" << endl;
             string tempPath;
-            argv[2] == NULL ? tempPath = NOPATH : tempPath = (string)argv[2];
+            argv[2] == NULL ? tempPath = NOPATH : tempPath = (string)argv[2]; //if there was a path given store it in tempPath
             if(tempPath == NOPATH)
-                throw errPath;
-            cout << "Found Path: " << tempPath << endl;
-            steg->buildImage(tempPath);
+                throw errPath; //throw error if we didnt get a path
+            cout << "Found Path: " << tempPath << endl; 
+            steg->buildImage(tempPath); //Call constructor for image type object and set path
             cout << "Built path: " << steg->getImage()->getPath() << endl;
-            steg->getImage()->readImage();
-            //steg->getImage()->getBitmapHeader()->printHeader();
+            steg->getImage()->readImage(); //extract the image information
+            //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
         }
     catch (int i){ //catch errPath and send it to printError
         steg->getErrHandle()->printError(i);
@@ -80,7 +80,19 @@ int main(int argc, char *argv[]) {
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
             exit(errTerminate(steg));
         //debuggingStuff(steg);
-        steg->getImage()->generateBitmap();
+        if(steg->getMode() == ENCRYPT){
+            std::cout << "Please enter your message" << std::endl;
+            std::string mess;
+            std::getline(std::cin, mess);
+            steg->buildMessage(mess);
+            //check if message was read properly:
+            std::cout << "I found: " << steg->getMessage()->getMessage() << std::endl;
+            //call infusion stuff ********************TOBI********************
+            steg->getImage()->generateBitmap(); 
+        }
+        else if(steg->getMode() == DECRYPT){
+            //do some decryption, print message to std::out, be nasty and destroy the image file 
+        }
     if(steg != NULL)
         delete steg;
     return 0;
