@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['header',['header',['../classImage.html#adaf72c2df8979eafb4031dc0384dc49f',1,'Image']]]
+  ['fixtype',['fixType',['../classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b',1,'BitmapHeader']]]
 ];

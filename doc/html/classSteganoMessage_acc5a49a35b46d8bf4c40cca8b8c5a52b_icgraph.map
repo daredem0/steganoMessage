@@ -1,0 +1,6 @@
+<map id="SteganoMessage::exists" name="SteganoMessage::exists">
+<area shape="rect" id="node1" title="Checks if a path exists." alt="" coords="429,31,608,57"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a8db1a0d299220a5d85d010b03054081f" title="static method to quickly check if a path possibly makes sense" alt="" coords="175,31,381,57"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,5,93,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,56,127,83"/>
+</map>

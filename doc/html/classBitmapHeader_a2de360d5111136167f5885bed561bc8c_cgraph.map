@@ -1,0 +1,5 @@
+<map id="BitmapHeader::readHeader" name="BitmapHeader::readHeader">
+<area shape="rect" id="node1" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node2" href="$classBitmapHeader.html#a6f91559c339074535445780e99e5f717" title="reads header information from ifstream" alt="" coords="253,5,407,32"/>
+<area shape="rect" id="node3" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="455,5,625,32"/>
+</map>

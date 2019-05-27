@@ -1,0 +1,6 @@
+<map id="BitmapHeader::BitmapHeader" name="BitmapHeader::BitmapHeader">
+<area shape="rect" id="node1" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="5,5,224,32"/>
+<area shape="rect" id="node2" href="$classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="272,5,472,32"/>
+<area shape="rect" id="node3" href="$classBitmapHeader.html#a6f91559c339074535445780e99e5f717" title="reads header information from ifstream" alt="" coords="520,5,673,32"/>
+<area shape="rect" id="node4" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="721,5,892,32"/>
+</map>

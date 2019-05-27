@@ -1,0 +1,5 @@
+<map id="BitmapHeader::printHeader" name="BitmapHeader::printHeader">
+<area shape="rect" id="node1" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="297,31,499,57"/>
+<area shape="rect" id="node2" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="108,5,249,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
+</map>
