@@ -178,7 +178,7 @@ std::string BitmapArray::infuse(std::string message){
     
     
     
-    return "Successfully infused bitmap with message"
+    return "Successfully infused bitmap with message";
 }
 
 
