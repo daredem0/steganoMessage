@@ -132,3 +132,18 @@ std::ofstream BitmapArray::getBDataStream(){
     f.read((char*) &bfSize, sizeof(bfSize));
     f.read((char*) &bfReserved, sizeof(bfReserved));
     f.read((char*) &bfOffBits, sizeof(bfOffBits));*/
+
+std::string BitmapArray::infuse(std::string message){
+    
+    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
+        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+            *itInner |= 0x3;
+        }
+    }
+    
+    
+    
+    return "Successfully infused bitmap with message"
+}
+
+

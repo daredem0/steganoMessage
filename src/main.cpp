@@ -43,7 +43,7 @@ void debuggingStuff(SteganoMessage *steg);
 
 
 int main(int argc, char *argv[]) { 
-    //For edbugging
+    //For debugging
     //argc = 3;
     //argv[0] = (char*)'3';
     //argv[1] = (char*)"-encrypt";

@@ -43,6 +43,7 @@ public:
     void printArray();
     std::vector<std::vector<uint32_t>> getBData();
     std::ofstream getBDataStream();
+    std::string infuse(std::string message);
     
 private:
     std::vector<std::vector<uint32_t>> bData; 
