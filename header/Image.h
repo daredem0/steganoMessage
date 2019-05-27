@@ -17,7 +17,10 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <iterator>
+#include <vector>
 #include "../header/BitmapHeader.h"
+#include "../header/BitmapArray.h"
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -74,10 +77,12 @@ public:
      * @return BitmapHeader type pointer to BitmapHeader
      */
     BitmapHeader *getBitmapHeader();
+    
+    int generateBitmap();
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
-
+    BitmapArray *array;
 };
 
 #endif /* IMAGE_H */

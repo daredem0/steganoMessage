@@ -99,3 +99,36 @@ void BitmapHeader::printHeader(){
     std::cout << "biClrUsed: " << biClrUsed << std::endl;
     std::cout << "biClrImportant: " << biClrImportant << std::endl;
 }
+
+char* BitmapHeader::getHeader(){
+    headerStream = new char[bfOffBits];
+    std::ifstream file(path);
+    if(!file.good())
+        exit(-1);
+    
+    file.seekg(0, std::ios::beg);
+    file.read(headerStream, (size_t)bfOffBits);
+    //for(int i = 0; i <= bfOffBits; ++i){
+       // std::cout << std::hex << (uint16_t)headerStream[i] << std::dec << std::endl;
+    //}
+    file.close();
+    //following two lines to make 32 bit standard (easier for us)
+    //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)) =  ;
+    //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)+1) =  0;
+    
+    return headerStream;
+}
+
+uint32_t BitmapHeader::getSize(){return bfSize;}
+
+uint32_t BitmapHeader::getOffBits(){return bfOffBits;}
+
+uint32_t BitmapHeader::getBiSize(){return biSize;}
+
+uint32_t BitmapHeader::getWidth(){return biWidth;}
+
+uint32_t BitmapHeader::getHeight(){return biHeight;}
+
+uint32_t BitmapHeader::getSizeImage(){return biSizeImage;}
+
+uint32_t BitmapHeader::getBitCount(){return biBitCount;}

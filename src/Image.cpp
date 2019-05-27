@@ -57,9 +57,57 @@ int Image::readImage(){
     if(path == "")
         return 3;
     header = new BitmapHeader(path);
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount());
     return 0;
 }
 
-BitmapHeader *Image::getBitmapHeader(){
-    return header;
+BitmapHeader *Image::getBitmapHeader(){return header;}
+
+int Image::generateBitmap(){
+    std::cout << "opening ofstream" << std::endl;
+    std::ofstream file("test.bmp", std::ios::binary | std::ios::trunc);
+    std::cout << "writing header" << std::endl;
+    file.write(header->getHeader(), header->getOffBits());
+    std::cout << "header written and closing stream" << std::endl;
+    file.close();
+    std::cout << "opening ofstream" << std::endl;
+    file.open("test.bmp", std::ios::binary | std::ios::app);
+    std::cout << "reopened ofstream" << std::endl;
+    //std::cout << "How its supposed to look: " << std::endl;
+    //array->printArray();
+   // std::cout << "How it really is: " << std::endl;
+    long i = 0;
+    std::vector<std::vector<uint32_t>> temp = array->getBData();
+   // std::cout << "Height: " << temp.size() << std::endl;
+    //std::cout << "Width: " << temp[0].size() << std::endl;
+    for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
+        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+            //std::cout << (uint16_t)*itInner << std::endl;
+            switch(header->getBitCount()){
+                case 8:
+            file  << (uint8_t) *itInner;
+                    break;
+                case 16:
+                    file  << (uint16_t) *itInner;
+                    break;
+                case 24:
+                    file  << (uint32_t) *itInner;
+                    break;
+                case 32:
+                    file  << (uint32_t) *itInner;
+                    break;
+                default:
+                    exit(-1);
+            }
+        }
+    }
+    file.close();
+    std::cout << "Finished writing" << std::endl;
+    /*for(auto itOuter = array->getBData().begin(); itOuter != array->getBData().end(); ++itOuter){
+        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+            std::cout << std::dec << i << ": " << (uint32_t)*itInner << std::endl;
+                    file << (uint32_t)*itInner;
+            ++i;
+        }
+    }*/
 }

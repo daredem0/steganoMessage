@@ -60,6 +60,16 @@ public:
      * @brief Prints all stored values, attention, values not initialized, should be fixed in constructor
      */
     void printHeader();
+    
+    char* getHeader();
+    
+    uint32_t getSize();
+    uint32_t getOffBits();
+    uint32_t getBiSize();
+    uint32_t getWidth();
+    uint32_t getHeight();
+    uint32_t getSizeImage();
+    uint32_t getBitCount();
 private:
     //file header
     uint16_t bfType;/**< ASCII COde, usually contains BM*/
@@ -80,6 +90,8 @@ private:
     uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
     uint32_t biClrUsed;/**< biClrUsed*/
     uint32_t biClrImportant;/**< biClrImportant*/
+    
+    char *headerStream;
     
     std::string path;/**< Imagepath*/
     

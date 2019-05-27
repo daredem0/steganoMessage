@@ -14,6 +14,11 @@
 #ifndef BITMAPARRAY_H
 #define BITMAPARRAY_H
 
+#include <vector>
+#include <fstream>
+#include <iterator>
+#include <iostream>
+
 /**
  *@brief BitmapArray Class is supposed to contain image data of the bitmap file
  */
@@ -24,6 +29,7 @@ public:
     * @brief Standard constructor.
     */
     BitmapArray();
+    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit);
     /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original BitmapArray-type object
@@ -33,8 +39,19 @@ public:
      * Standard deconstructor.
      */
     virtual ~BitmapArray();
+    int readArray();
+    void printArray();
+    std::vector<std::vector<uint32_t>> getBData();
+    std::ofstream getBDataStream();
     
 private:
+    std::vector<std::vector<uint32_t>> bData; 
+    std::string path;
+    uint32_t width;
+    uint32_t height;   
+    uint32_t bitOffset;
+    uint32_t bitCount;
+    void read(std::ifstream& f);
 };
 
 #endif /* BITMAPARRAY_H */

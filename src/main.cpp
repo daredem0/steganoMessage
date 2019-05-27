@@ -44,11 +44,11 @@ void debuggingStuff(SteganoMessage *steg);
 
 int main(int argc, char *argv[]) { 
     //For edbugging
-    argc = 3;
-    argv[0] = (char*)'3';
-    argv[1] = (char*)"-encrypt";
+    //argc = 3;
+    //argv[0] = (char*)'3';
+    //argv[1] = (char*)"-encrypt";
     //argv[1] = (char*)"-decrypt";
-    argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
+    //argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
     int returnValue = 0;
     SteganoMessage *steg = new SteganoMessage();
     cout << "argc: " << argc << endl;  //just for debugging
@@ -80,6 +80,7 @@ int main(int argc, char *argv[]) {
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
             exit(errTerminate(steg));
         //debuggingStuff(steg);
+        steg->getImage()->generateBitmap();
     if(steg != NULL)
         delete steg;
     return 0;
