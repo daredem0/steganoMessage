@@ -53,6 +53,8 @@ private:
     uint32_t bitOffset;
     uint32_t bitCount;
     void read(std::ifstream& f);
+    uint32_t genInt(char* c, size_t s);
+    void printArray(char* c, size_t s);
 };
 
 #endif /* BITMAPARRAY_H */

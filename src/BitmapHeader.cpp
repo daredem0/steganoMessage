@@ -112,7 +112,7 @@ char* BitmapHeader::getHeader(){
        // std::cout << std::hex << (uint16_t)headerStream[i] << std::dec << std::endl;
     //}
     file.close();
-    //following two lines to make 32 bit standard (easier for us)
+    //following two lines to make 32 bit standard (easier for us) <- not working, brings incompatibility with compression rates
     //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)) =  ;
     //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)+1) =  0;
     

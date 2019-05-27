@@ -1,0 +1,8 @@
+<map id="Image::readImage" name="Image::readImage">
+<area shape="rect" id="node1" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="5,107,147,133"/>
+<area shape="rect" id="node2" href="$classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="195,5,396,32"/>
+<area shape="rect" id="node3" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title=" " alt="" coords="200,56,391,83"/>
+<area shape="rect" id="node4" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" id="node5" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title=" " alt="" coords="201,157,389,184"/>
+<area shape="rect" id="node6" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title=" " alt="" coords="195,208,396,235"/>
+</map>

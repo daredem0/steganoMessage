@@ -50,22 +50,57 @@ int BitmapArray::readArray(){
 
 void BitmapArray::read(std::ifstream& f){
     std::cout << "And now reading the data" << std::endl;
-    f.seekg(bitOffset-1);
+    f.seekg(bitOffset);
     for(int i = 0; i < height; ++i){
         std::vector<uint32_t> temp;
         temp.clear();
-        uint32_t s;
+        char s, t, u, v;
         //std::cout << "Outer Nr.: " << i << std::endl;
         for(int j = 0; j <width; ++j){
-            std::cout << "Inner Nr.: " << j << " / ";
-            f.read((char*) &s, sizeof(char));
-            std::cout << "Found this: " << (uint16_t)s << std::endl;
-            temp.push_back(s);
+            switch(bitCount){
+                case 8:
+                    std::cout << "case 8" << std::endl;
+                    std::cout << "Inner Nr.: " << j << " / ";
+                    f.read((char*) &s, sizeof(char));
+                    std::cout << "Found this: " << (uint16_t)s << std::endl;
+                    temp.push_back(s);
+                    break;
+                case 16:
+                    break;
+                case 24:
+                case 32:{
+                    char *tempo = new char[bitCount/8];
+                    f.read(tempo, sizeof(uint32_t));
+                    temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                }
+                    break;
+                default:
+                    exit(-1);
+            }
+           
         }
         bData.push_back(temp);
         std::cout << "Finished " << i << std::endl;
         temp.clear();
    }
+}
+
+void BitmapArray::printArray(char* c, size_t s){
+    std::cout << "Found this :" ;
+    for(int i = 0; i<s; ++i){ 
+        std::cout << +((uint8_t)(*(c+s-1-i))) << " / ";
+    }
+    std::cout << std::endl;
+}
+
+
+uint32_t BitmapArray::genInt(char* c, size_t s){
+    uint32_t returnValue = 0;
+    for(int i = 0; i<s; ++i){
+        returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
+        //returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+    }
+    return returnValue;
 }
 
 void BitmapArray::printArray(){
