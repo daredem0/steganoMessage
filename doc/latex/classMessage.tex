@@ -16,14 +16,15 @@ Collaboration diagram for Message\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=174pt]{classMessage__coll__graph}
+\includegraphics[width=252pt]{classMessage__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
 \mbox{\hyperlink{classMessage_a4fc4f717b634e66070366cb7722d7761}{Message}} ()
 \begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMessage_ad8d8236fe10ad63103a26f84c68bcea6}{Message}} (std\+::string m)
+\mbox{\hyperlink{classMessage_a77d26df352bf5aaaba85ccf940238257}{Message}} (std\+::string m, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$h)
 \begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. Initializes the object with a message. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMessage_afc0cbea76e5ed74d86af6b6646fd8642}{Message}} (const \mbox{\hyperlink{classMessage}{Message}} \&orig)
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
@@ -36,14 +37,16 @@ std\+::string \mbox{\hyperlink{classMessage_a8d2e67a8732ecaeca309df6ac5dda156}{g
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{classMessage_a71af4fd1655feab5f4986782f9c1bc92}{mess}}
+std\+::string \mbox{\hyperlink{classMessage_a71af4fd1655feab5f4986782f9c1bc92}{mess}}
+\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classMessage_a1052f94ece434575f0f783bc8ed3269e}{err\+Handle}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \mbox{\hyperlink{classMessage}{Message}} class is supposed to contain the message that the user enters via terminal and wants to hide in the image file. 
 
-Definition at line 23 of file Message.\+h.
+Definition at line 25 of file Message.\+h.
 
 
 
@@ -62,11 +65,11 @@ Standard constructor.
 
 Definition at line 16 of file Message.\+cpp.
 
-\mbox{\Hypertarget{classMessage_ad8d8236fe10ad63103a26f84c68bcea6}\label{classMessage_ad8d8236fe10ad63103a26f84c68bcea6}} 
+\mbox{\Hypertarget{classMessage_a77d26df352bf5aaaba85ccf940238257}\label{classMessage_a77d26df352bf5aaaba85ccf940238257}} 
 \index{Message@{Message}!Message@{Message}}
 \index{Message@{Message}!Message@{Message}}
 \subsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{m,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{h }\end{DoxyParamCaption})}
 
 
 
@@ -75,6 +78,8 @@ Non-\/\+Standard constructor. Initializes the object with a message.
 
 \begin{DoxyParams}{Parameters}
 {\em std\+::string} & m -\/ \mbox{\hyperlink{classMessage}{Message}} that is to be stored in the object. \\
+\hline
+{\em \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}} & $\ast$errH -\/ Errorhandler \\
 \hline
 \end{DoxyParams}
 
@@ -128,8 +133,16 @@ std\+::string mess
 \end{DoxyReturn}
 
 
-Definition at line 34 of file Message.\+cpp.
+Definition at line 36 of file Message.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classMessage_a8d2e67a8732ecaeca309df6ac5dda156_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classMessage_aa1e4c60f94308a9367ad3106c34b28f3}\label{classMessage_aa1e4c60f94308a9367ad3106c34b28f3}} 
 \index{Message@{Message}!setMessage@{setMessage}}
 \index{setMessage@{setMessage}!Message@{Message}}
@@ -155,6 +168,16 @@ Definition at line 29 of file Message.\+cpp.
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMessage_a1052f94ece434575f0f783bc8ed3269e}\label{classMessage_a1052f94ece434575f0f783bc8ed3269e}} 
+\index{Message@{Message}!errHandle@{errHandle}}
+\index{errHandle@{errHandle}!Message@{Message}}
+\subsubsection{\texorpdfstring{errHandle}{errHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}$\ast$ Message\+::err\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 61 of file Message.\+h.
+
 \mbox{\Hypertarget{classMessage_a71af4fd1655feab5f4986782f9c1bc92}\label{classMessage_a71af4fd1655feab5f4986782f9c1bc92}} 
 \index{Message@{Message}!mess@{mess}}
 \index{mess@{mess}!Message@{Message}}
@@ -163,7 +186,7 @@ Definition at line 29 of file Message.\+cpp.
 
 Stores the message extracted from terminal. 
 
-Definition at line 57 of file Message.\+h.
+Definition at line 60 of file Message.\+h.
 
 
 

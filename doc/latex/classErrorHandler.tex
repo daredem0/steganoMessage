@@ -16,7 +16,7 @@ Collaboration diagram for Error\+Handler\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=185pt]{classErrorHandler__coll__graph}
+\includegraphics[width=189pt]{classErrorHandler__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -31,7 +31,21 @@ virtual \mbox{\hyperlink{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}{$\
 int \mbox{\hyperlink{classErrorHandler_ab90b8248f24e3129df69d224585956dd}{print\+Error}} (int err)
 \begin{DoxyCompactList}\small\item\em Prints a single Error corresponding to the. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}{print\+All\+Errors}} (void)
-\begin{DoxyCompactList}\small\item\em Prints all available errors (mainly for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints all available errors (mainly for debugging) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}{print\+Error\+Std\+Ex}} (const std\+::exception \&e)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classErrorHandler_adefe2e5f3401006300884dd85a7c88ce}{print\+Log}} (std\+::string log)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1}{fill\+List}} (std\+::string s, int am)
+\item 
+void \mbox{\hyperlink{classErrorHandler_a4edd505cdb0ae60da6f9e26b0fb90f68}{fill\+List}} (int am)
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,7 +56,7 @@ std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{classErrorHandler_aeb3bff116fc
 \subsection{Detailed Description}
 \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr. 
 
-Definition at line 26 of file Error\+Handler.\+h.
+Definition at line 27 of file Error\+Handler.\+h.
 
 
 
@@ -61,6 +75,14 @@ Standard constructor. Also fills std\+::list$<$std\+::string$>$ with standard er
 
 Definition at line 16 of file Error\+Handler.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classErrorHandler_add20b373ee276ee2ef040f6dd913a86b}\label{classErrorHandler_add20b373ee276ee2ef040f6dd913a86b}} 
 \index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
 \index{ErrorHandler@{ErrorHandler}!ErrorHandler@{ErrorHandler}}
@@ -72,8 +94,13 @@ Definition at line 16 of file Error\+Handler.\+cpp.
 Copy Constructor. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Error\+Handler-\/type object \\
+\hline
+\end{DoxyParams}
 
-Definition at line 26 of file Error\+Handler.\+cpp.
+
+Definition at line 63 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}\label{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}} 
 \index{ErrorHandler@{ErrorHandler}!````~ErrorHandler@{$\sim$ErrorHandler}}
@@ -83,11 +110,39 @@ Definition at line 26 of file Error\+Handler.\+cpp.
 
 Standard deconstructor. Deletes the generated list !!not yet implementede!! 
 
-Definition at line 29 of file Error\+Handler.\+cpp.
+Definition at line 66 of file Error\+Handler.\+cpp.
 
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1}\label{classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1}} 
+\index{ErrorHandler@{ErrorHandler}!fillList@{fillList}}
+\index{fillList@{fillList}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{fillList()}{fillList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Error\+Handler\+::fill\+List (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{int}]{am }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 51 of file Error\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classErrorHandler_a4edd505cdb0ae60da6f9e26b0fb90f68}\label{classErrorHandler_a4edd505cdb0ae60da6f9e26b0fb90f68}} 
+\index{ErrorHandler@{ErrorHandler}!fillList@{fillList}}
+\index{fillList@{fillList}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{fillList()}{fillList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Error\+Handler\+::fill\+List (\begin{DoxyParamCaption}\item[{int}]{am }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 57 of file Error\+Handler.\+cpp.
+
 \mbox{\Hypertarget{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}\label{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}} 
 \index{ErrorHandler@{ErrorHandler}!printAllErrors@{printAllErrors}}
 \index{printAllErrors@{printAllErrors}!ErrorHandler@{ErrorHandler}}
@@ -100,7 +155,7 @@ Prints all available errors (mainly for debugging)
 
 
 
-Definition at line 39 of file Error\+Handler.\+cpp.
+Definition at line 80 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_ab90b8248f24e3129df69d224585956dd}\label{classErrorHandler_ab90b8248f24e3129df69d224585956dd}} 
 \index{ErrorHandler@{ErrorHandler}!printError@{printError}}
@@ -113,9 +168,13 @@ Definition at line 39 of file Error\+Handler.\+cpp.
 Prints a single Error corresponding to the. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em int} & err -\/ expects a integer value between 0 and x that specifies the error received \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 32 of file Error\+Handler.\+cpp.
+Definition at line 69 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -123,6 +182,42 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}\label{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}} 
+\index{ErrorHandler@{ErrorHandler}!printErrorStdEx@{printErrorStdEx}}
+\index{printErrorStdEx@{printErrorStdEx}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{printErrorStdEx()}{printErrorStdEx()}}
+{\footnotesize\ttfamily void Error\+Handler\+::print\+Error\+Std\+Ex (\begin{DoxyParamCaption}\item[{const std\+::exception \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Error\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classErrorHandler_adefe2e5f3401006300884dd85a7c88ce}\label{classErrorHandler_adefe2e5f3401006300884dd85a7c88ce}} 
+\index{ErrorHandler@{ErrorHandler}!printLog@{printLog}}
+\index{printLog@{printLog}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{printLog()}{printLog()}}
+{\footnotesize\ttfamily void Error\+Handler\+::print\+Log (\begin{DoxyParamCaption}\item[{std\+::string}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 87 of file Error\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph}
 \end{center}
 \end{figure}
 
@@ -136,7 +231,7 @@ Here is the caller graph for this function\+:
 
 std\+::list that stores every standard error message as a std\+::string. 
 
-Definition at line 53 of file Error\+Handler.\+h.
+Definition at line 58 of file Error\+Handler.\+h.
 
 
 

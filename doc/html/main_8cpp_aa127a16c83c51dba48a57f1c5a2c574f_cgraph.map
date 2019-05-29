@@ -1,10 +1,11 @@
 <map id="debuggingStuff" name="debuggingStuff">
 <area shape="rect" id="node1" title=" " alt="" coords="5,132,127,159"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="175,5,400,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="201,56,374,83"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#a8db1a0d299220a5d85d010b03054081f" title="static method to quickly check if a path possibly makes sense" alt="" coords="184,107,391,133"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="186,157,389,184"/>
-<area shape="rect" id="node7" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="477,233,598,260"/>
-<area shape="rect" id="node8" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="181,259,393,285"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="448,107,627,133"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="675,107,848,133"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="184,259,391,285"/>
+<area shape="rect" id="node7" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="186,157,389,184"/>
+<area shape="rect" id="node8" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="477,169,598,196"/>
+<area shape="rect" id="node9" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="181,107,393,133"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="448,245,627,272"/>
+<area shape="rect" id="node6" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="675,238,848,279"/>
 </map>

@@ -1,16 +1,17 @@
 <map id="header/SteganoMessage.h" name="header/SteganoMessage.h">
-<area shape="rect" id="node1" title=" " alt="" coords="229,5,423,32"/>
-<area shape="rect" id="node2" href="$ErrorHandler_8h.html" title=" " alt="" coords="142,80,257,107"/>
-<area shape="rect" id="node7" href="$constants_8h.html" title=" " alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node8" href="$Message_8h.html" title=" " alt="" coords="281,80,371,107"/>
-<area shape="rect" id="node9" href="$Image_8h.html" title=" " alt="" coords="530,80,605,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="901,229,975,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="178,155,221,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="356,229,427,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="490,229,570,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="295,155,354,181"/>
-<area shape="rect" id="node11" title=" " alt="" coords="628,229,691,256"/>
-<area shape="rect" id="node12" title=" " alt="" coords="941,155,1015,181"/>
-<area shape="rect" id="node13" href="$BitmapHeader_8h.html" title=" " alt="" coords="730,155,917,181"/>
-<area shape="rect" id="node14" href="$BitmapArray_8h.html" title=" " alt="" coords="480,155,655,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="55,5,249,32"/>
+<area shape="rect" id="node2" href="$ErrorHandler_8h.html" title=" " alt="" coords="201,229,316,256"/>
+<area shape="rect" id="node8" href="$constants_8h.html" title=" " alt="" coords="10,304,107,331"/>
+<area shape="rect" id="node9" href="$Message_8h.html" title=" " alt="" coords="24,155,115,181"/>
+<area shape="rect" id="node10" href="$Image_8h.html" title=" " alt="" coords="355,80,429,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="801,229,874,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="327,304,369,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="394,304,465,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="625,304,705,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="132,304,191,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="215,304,302,331"/>
+<area shape="rect" id="node12" title=" " alt="" coords="427,229,490,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="392,155,467,181"/>
+<area shape="rect" id="node14" href="$BitmapHeader_8h.html" title=" " alt="" coords="691,155,877,181"/>
+<area shape="rect" id="node15" href="$BitmapArray_8h.html" title=" " alt="" coords="491,155,666,181"/>
 </map>

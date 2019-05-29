@@ -1,6 +1,8 @@
 <map id="BitmapArray" name="BitmapArray">
-<area shape="rect" id="node1" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="143,204,283,428"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,152,97"/>
-<area shape="rect" id="node3" title=" " alt="" coords="176,13,251,90"/>
-<area shape="rect" id="node4" title=" " alt="" coords="277,13,336,90"/>
+<area shape="rect" id="node1" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="261,447,401,671"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,197,152,289"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="177,145,322,340"/>
+<area shape="rect" id="node4" title=" " alt="" coords="181,5,318,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="347,204,421,281"/>
+<area shape="rect" id="node6" title=" " alt="" coords="447,204,505,281"/>
 </map>

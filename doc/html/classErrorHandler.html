@@ -63,6 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classErrorHandler-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,8 +81,8 @@ Collaboration diagram for ErrorHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler__coll__graph.png" border="0" usemap="#ErrorHandler_coll__map" alt="Collaboration graph"/></div>
 <map name="ErrorHandler_coll__map" id="ErrorHandler_coll__map">
-<area shape="rect"  title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,145,281"/>
-<area shape="rect"  title=" " alt="" coords="7,5,144,83"/>
+<area shape="rect"  title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,151,340"/>
+<area shape="rect"  title=" " alt="" coords="9,5,147,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -100,6 +102,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1108324c221544c928a2de3a2cf9ba98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a1108324c221544c928a2de3a2cf9ba98">printAllErrors</a> (void)</td></tr>
 <tr class="memdesc:a1108324c221544c928a2de3a2cf9ba98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all available errors (mainly for debugging)  <a href="#a1108324c221544c928a2de3a2cf9ba98">More...</a><br /></td></tr>
 <tr class="separator:a1108324c221544c928a2de3a2cf9ba98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36e4dd6e488718e7e07b2d03adf9f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37">printErrorStdEx</a> (const std::exception &amp;e)</td></tr>
+<tr class="separator:ac36e4dd6e488718e7e07b2d03adf9f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adefe2e5f3401006300884dd85a7c88ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce">printLog</a> (std::string log)</td></tr>
+<tr class="separator:adefe2e5f3401006300884dd85a7c88ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3036b8ff4299ac0505b6b2ca6fab11a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a3036b8ff4299ac0505b6b2ca6fab11a1">fillList</a> (std::string s, int am)</td></tr>
+<tr class="separator:a3036b8ff4299ac0505b6b2ca6fab11a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edd505cdb0ae60da6f9e26b0fb90f68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a4edd505cdb0ae60da6f9e26b0fb90f68">fillList</a> (int am)</td></tr>
+<tr class="separator:a4edd505cdb0ae60da6f9e26b0fb90f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -109,7 +125,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> Class is implemented to store a list of standard errors and offer a interface between standard errors and stderr. </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00026">26</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00027">27</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e5f379bd231442b898cef94556b2107"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e5f379bd231442b898cef94556b2107">&#9670;&nbsp;</a></span>ErrorHandler() <span class="overload">[1/2]</span></h2>
@@ -129,6 +145,15 @@ Private Attributes</h2></td></tr>
 <p>Standard constructor. Also fills std::list&lt;std::string&gt; with standard error values. </p>
 
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00016">16</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph.png" border="0" usemap="#classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph" alt=""/></div>
+<map name="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph" id="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph">
+<area shape="rect"  title="Standard constructor. Also fills std::list&lt;std::string&gt; with standard error values." alt="" coords="5,5,200,32"/>
+<area shape="rect"  href="classErrorHandler.html#a3036b8ff4299ac0505b6b2ca6fab11a1" title=" " alt="" coords="248,5,400,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -156,7 +181,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00026">26</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00063">63</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -184,11 +209,86 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Standard deconstructor. Deletes the generated list !!not yet implementede!! </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00029">29</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00066">66</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3036b8ff4299ac0505b6b2ca6fab11a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3036b8ff4299ac0505b6b2ca6fab11a1">&#9670;&nbsp;</a></span>fillList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ErrorHandler::fillList </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>am</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00051">51</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph.png" border="0" usemap="#classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph" alt=""/></div>
+<map name="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph" id="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph">
+<area shape="rect"  title=" " alt="" coords="248,5,400,32"/>
+<area shape="rect"  href="classErrorHandler.html#a7e5f379bd231442b898cef94556b2107" title="Standard constructor. Also fills std::list&lt;std::string&gt; with standard error values." alt="" coords="5,5,200,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4edd505cdb0ae60da6f9e26b0fb90f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4edd505cdb0ae60da6f9e26b0fb90f68">&#9670;&nbsp;</a></span>fillList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ErrorHandler::fillList </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>am</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00057">57</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a1108324c221544c928a2de3a2cf9ba98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1108324c221544c928a2de3a2cf9ba98">&#9670;&nbsp;</a></span>printAllErrors()</h2>
 
@@ -207,7 +307,7 @@ Private Attributes</h2></td></tr>
 
 <p>Prints all available errors (mainly for debugging) </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00039">39</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00080">80</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,16 +335,113 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00032">32</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00069">69</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.png" border="0" usemap="#classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" alt=""/></div>
 <map name="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" id="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph">
-<area shape="rect"  title="Prints a single Error corresponding to the." alt="" coords="277,31,451,57"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
-<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="149,31,188,57"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="108,81,229,108"/>
+<area shape="rect"  title="Prints a single Error corresponding to the." alt="" coords="763,309,936,336"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="269,31,445,57"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="544,5,685,32"/>
+<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="515,107,715,133"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="538,157,691,184"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="519,259,711,285"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="269,259,445,285"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,360,130,387"/>
+<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="539,360,690,387"/>
+<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="537,411,692,437"/>
+<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="338,411,377,437"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="42,563,163,589"/>
+<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="251,613,463,640"/>
+<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="525,512,704,539"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,31,200,57"/>
+<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="248,107,467,133"/>
+<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="257,157,457,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="254,512,461,539"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac36e4dd6e488718e7e07b2d03adf9f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36e4dd6e488718e7e07b2d03adf9f37">&#9670;&nbsp;</a></span>printErrorStdEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ErrorHandler::printErrorStdEx </td>
+          <td>(</td>
+          <td class="paramtype">const std::exception &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00076">76</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph.png" border="0" usemap="#classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph" alt=""/></div>
+<map name="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph" id="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph">
+<area shape="rect"  title=" " alt="" coords="763,194,936,235"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="269,24,445,50"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="544,49,685,76"/>
+<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="515,100,715,126"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="538,150,691,177"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="519,201,711,228"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="269,252,445,278"/>
+<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="539,302,690,329"/>
+<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="537,353,692,380"/>
+<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="525,404,704,430"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,24,200,50"/>
+<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="248,100,467,126"/>
+<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="257,150,457,177"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,277,130,304"/>
+<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="254,353,461,380"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="42,353,163,380"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adefe2e5f3401006300884dd85a7c88ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefe2e5f3401006300884dd85a7c88ce">&#9670;&nbsp;</a></span>printLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ErrorHandler::printLog </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>log</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00087">87</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph.png" border="0" usemap="#classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph" alt=""/></div>
+<map name="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph" id="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph">
+<area shape="rect"  title=" " alt="" coords="697,56,863,83"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,31,424,57"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="490,81,631,108"/>
+<area shape="rect"  href="classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,132,649,159"/>
 </map>
 </div>
 
@@ -272,7 +469,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>std::list that stores every standard error message as a std::string. </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00053">53</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00058">58</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>

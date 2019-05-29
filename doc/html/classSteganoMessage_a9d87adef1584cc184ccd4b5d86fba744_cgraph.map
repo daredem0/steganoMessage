@@ -1,0 +1,6 @@
+<map id="SteganoMessage::checkPath" name="SteganoMessage::checkPath">
+<area shape="rect" id="node1" title="static method to quickly check if a path possibly makes sense" alt="" coords="5,42,212,69"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="260,42,439,69"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="487,5,660,47"/>
+<area shape="rect" id="node4" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="487,71,660,98"/>
+</map>

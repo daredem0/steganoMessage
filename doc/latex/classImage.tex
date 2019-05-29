@@ -24,7 +24,7 @@ Collaboration diagram for Image\+:
 \item 
 \mbox{\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image}} ()
 \begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classImage_a68ad10640a0b06d29c315cfff1ce5623}{Image}} (std\+::string p)
+\mbox{\hyperlink{classImage_ae17a70dac9941346eab9e5abef1c03c7}{Image}} (std\+::string p, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$errH)
 \begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. Initializes the object with a path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classImage_abda271aa11b907dda8c8c8176684227d}{Image}} (const \mbox{\hyperlink{classImage}{Image}} \&orig)
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
@@ -36,9 +36,9 @@ void \mbox{\hyperlink{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}{set\+Path}} 
 \begin{DoxyCompactList}\small\item\em Stores path in this. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classImage_ac0aa1f41cb368d87b20dd38839218d93}{read\+Image}} ()
 \begin{DoxyCompactList}\small\item\em Calls Constructors for Bit\+Map\+Header and Bit\+Map\+Array and reads information from image. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classImage_a3bde1df035fc794c268aab430bbafde0}{print\+Text\+File}} (std\+::string p)
+int \mbox{\hyperlink{classImage_ae5daf791502caefeae1b15360d354513}{print\+Text\+File}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em Prints text file to terminal (just for convenience and to check if ifstream works. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}{write\+Text\+File}} (std\+::string t, std\+::string p)
+int \mbox{\hyperlink{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c}{write\+Text\+File}} (std\+::string t, std\+::string p)
 \begin{DoxyCompactList}\small\item\em Writes information to a text file !!\+Not debugged!! !!\+No Error Handling implemented!! !!\+Dont use!! \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_a8c824ffac0c866a94752a2c1047932af}{get\+Bitmap\+Header}} ()
 \begin{DoxyCompactList}\small\item\em Getter for bitmap\+Header. \end{DoxyCompactList}\item 
@@ -52,13 +52,15 @@ std\+::string \mbox{\hyperlink{classImage_aec8a33f176362d146da8c058798ebbff}{pat
 \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_adaf72c2df8979eafb4031dc0384dc49f}{header}}
 \item 
 \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} $\ast$ \mbox{\hyperlink{classImage_a1c18dd7d9eda416d44e7eb408d5b3c38}{array}}
+\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classImage_a560753c20e67a544be57bba971021375}{err\+Handle}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \mbox{\hyperlink{classImage}{Image}} Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. 
 
-Definition at line 29 of file Image.\+h.
+Definition at line 30 of file Image.\+h.
 
 
 
@@ -77,11 +79,11 @@ Standard constructor.
 
 Definition at line 16 of file Image.\+cpp.
 
-\mbox{\Hypertarget{classImage_a68ad10640a0b06d29c315cfff1ce5623}\label{classImage_a68ad10640a0b06d29c315cfff1ce5623}} 
+\mbox{\Hypertarget{classImage_ae17a70dac9941346eab9e5abef1c03c7}\label{classImage_ae17a70dac9941346eab9e5abef1c03c7}} 
 \index{Image@{Image}!Image@{Image}}
 \index{Image@{Image}!Image@{Image}}
 \subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{errH }\end{DoxyParamCaption})}
 
 
 
@@ -89,12 +91,14 @@ Non-\/\+Standard constructor. Initializes the object with a path.
 
 
 \begin{DoxyParams}{Parameters}
-{\em string & p -\/ path that is to be stored in the object. \\
+{\em std\+::string} & p -\/ path that is to be stored in the object. \\
+\hline
+{\em \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}} & $\ast$errH -\/ Errorhandler \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 20 of file Image.\+cpp.
+Definition at line 22 of file Image.\+cpp.
 
 \mbox{\Hypertarget{classImage_abda271aa11b907dda8c8c8176684227d}\label{classImage_abda271aa11b907dda8c8c8176684227d}} 
 \index{Image@{Image}!Image@{Image}}
@@ -113,7 +117,7 @@ Copy Constructor.
 \end{DoxyParams}
 
 
-Definition at line 23 of file Image.\+cpp.
+Definition at line 27 of file Image.\+cpp.
 
 \mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
 \index{Image@{Image}!````~Image@{$\sim$Image}}
@@ -123,7 +127,7 @@ Definition at line 23 of file Image.\+cpp.
 
 Standard deconstructor. 
 
-Definition at line 26 of file Image.\+cpp.
+Definition at line 30 of file Image.\+cpp.
 
 
 
@@ -143,7 +147,7 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 67 of file Image.\+cpp.
+Definition at line 95 of file Image.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -176,7 +180,7 @@ Getter for bitmap\+Header.
 \end{DoxyReturn}
 
 
-Definition at line 65 of file Image.\+cpp.
+Definition at line 93 of file Image.\+cpp.
 
 \mbox{\Hypertarget{classImage_a885989eb723cb0a1fc0555c7e8de817e}\label{classImage_a885989eb723cb0a1fc0555c7e8de817e}} 
 \index{Image@{Image}!getPath@{getPath}}
@@ -193,7 +197,7 @@ std\+::string including stored path.
 \end{DoxyReturn}
 
 
-Definition at line 29 of file Image.\+cpp.
+Definition at line 37 of file Image.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -203,11 +207,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classImage_a3bde1df035fc794c268aab430bbafde0}\label{classImage_a3bde1df035fc794c268aab430bbafde0}} 
+\mbox{\Hypertarget{classImage_ae5daf791502caefeae1b15360d354513}\label{classImage_ae5daf791502caefeae1b15360d354513}} 
 \index{Image@{Image}!printTextFile@{printTextFile}}
 \index{printTextFile@{printTextFile}!Image@{Image}}
 \subsubsection{\texorpdfstring{printTextFile()}{printTextFile()}}
-{\footnotesize\ttfamily void Image\+::print\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Image\+::print\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -220,8 +224,16 @@ Prints text file to terminal (just for convenience and to check if ifstream work
 \end{DoxyParams}
 
 
-Definition at line 40 of file Image.\+cpp.
+Definition at line 45 of file Image.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_ae5daf791502caefeae1b15360d354513_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classImage_ac0aa1f41cb368d87b20dd38839218d93}\label{classImage_ac0aa1f41cb368d87b20dd38839218d93}} 
 \index{Image@{Image}!readImage@{readImage}}
 \index{readImage@{readImage}!Image@{Image}}
@@ -237,7 +249,7 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 56 of file Image.\+cpp.
+Definition at line 84 of file Image.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -272,13 +284,13 @@ Stores path in this.
 \end{DoxyParams}
 
 
-Definition at line 36 of file Image.\+cpp.
+Definition at line 41 of file Image.\+cpp.
 
-\mbox{\Hypertarget{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}\label{classImage_aa024e3ee7ec4a5e81130cc13b3570ee4}} 
+\mbox{\Hypertarget{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c}\label{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c}} 
 \index{Image@{Image}!writeTextFile@{writeTextFile}}
 \index{writeTextFile@{writeTextFile}!Image@{Image}}
 \subsubsection{\texorpdfstring{writeTextFile()}{writeTextFile()}}
-{\footnotesize\ttfamily void Image\+::write\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{t,  }\item[{std\+::string}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Image\+::write\+Text\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{t,  }\item[{std\+::string}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -293,8 +305,16 @@ Writes information to a text file !!\+Not debugged!! !!\+No Error Handling imple
 \end{DoxyParams}
 
 
-Definition at line 49 of file Image.\+cpp.
+Definition at line 66 of file Image.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c_cgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Member Data Documentation}
@@ -306,7 +326,17 @@ Definition at line 49 of file Image.\+cpp.
 
 Pointer to \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} object containing imagedata 
 
-Definition at line 90 of file Image.\+h.
+Definition at line 92 of file Image.\+h.
+
+\mbox{\Hypertarget{classImage_a560753c20e67a544be57bba971021375}\label{classImage_a560753c20e67a544be57bba971021375}} 
+\index{Image@{Image}!errHandle@{errHandle}}
+\index{errHandle@{errHandle}!Image@{Image}}
+\subsubsection{\texorpdfstring{errHandle}{errHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}$\ast$ Image\+::err\+Handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 93 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_adaf72c2df8979eafb4031dc0384dc49f}\label{classImage_adaf72c2df8979eafb4031dc0384dc49f}} 
 \index{Image@{Image}!header@{header}}
@@ -316,7 +346,7 @@ Definition at line 90 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} object containing header information 
 
-Definition at line 89 of file Image.\+h.
+Definition at line 91 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_aec8a33f176362d146da8c058798ebbff}\label{classImage_aec8a33f176362d146da8c058798ebbff}} 
 \index{Image@{Image}!path@{path}}
@@ -326,7 +356,7 @@ Definition at line 89 of file Image.\+h.
 
 Imagepath 
 
-Definition at line 88 of file Image.\+h.
+Definition at line 90 of file Image.\+h.
 
 
 

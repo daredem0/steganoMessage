@@ -45,13 +45,10 @@ std\+::string \mbox{\hyperlink{classSteganoMessage_a7dc660e6d2c8f162636f789cfedd
 void \mbox{\hyperlink{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}{print\+Values}} ()
 \begin{DoxyCompactList}\small\item\em Prints values stored for mode and path. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}{get\+Path\+Verified}} ()
-\begin{DoxyCompactList}\small\item\em Getter for path verified flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static int \mbox{\hyperlink{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}{check\+Path}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{path}})
+\begin{DoxyCompactList}\small\item\em Getter for path verified flag. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}{check\+Path}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em static method to quickly check if a path possibly makes sense \end{DoxyCompactList}\item 
-static bool \mbox{\hyperlink{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}{exists}} (std\+::string p)
+bool \mbox{\hyperlink{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}{exists}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em Checks if a path exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -109,7 +106,7 @@ Copy Constructor.
 \end{DoxyParams}
 
 
-Definition at line 23 of file Stegano\+Message.\+cpp.
+Definition at line 26 of file Stegano\+Message.\+cpp.
 
 \mbox{\Hypertarget{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}\label{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}} 
 \index{SteganoMessage@{SteganoMessage}!````~SteganoMessage@{$\sim$SteganoMessage}}
@@ -119,7 +116,7 @@ Definition at line 23 of file Stegano\+Message.\+cpp.
 
 Standard deconstructor. Frees space allocated for int $\ast$err 
 
-Definition at line 26 of file Stegano\+Message.\+cpp.
+Definition at line 30 of file Stegano\+Message.\+cpp.
 
 
 
@@ -144,10 +141,9 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 44 of file Stegano\+Message.\+cpp.
+Definition at line 56 of file Stegano\+Message.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,13 +170,21 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 35 of file Stegano\+Message.\+cpp.
+Definition at line 44 of file Stegano\+Message.\+cpp.
 
-\mbox{\Hypertarget{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}\label{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}\label{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}} 
 \index{SteganoMessage@{SteganoMessage}!checkPath@{checkPath}}
 \index{checkPath@{checkPath}!SteganoMessage@{SteganoMessage}}
 \subsubsection{\texorpdfstring{checkPath()}{checkPath()}}
-{\footnotesize\ttfamily int Stegano\+Message\+::check\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily int Stegano\+Message\+::check\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -196,14 +200,14 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 75 of file Stegano\+Message.\+cpp.
+Definition at line 95 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f_cgraph}
+\includegraphics[width=350pt]{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -211,14 +215,14 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a8db1a0d299220a5d85d010b03054081f_icgraph}
+\includegraphics[width=350pt]{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}\label{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}} 
 \index{SteganoMessage@{SteganoMessage}!exists@{exists}}
 \index{exists@{exists}!SteganoMessage@{SteganoMessage}}
 \subsubsection{\texorpdfstring{exists()}{exists()}}
-{\footnotesize\ttfamily bool Stegano\+Message\+::exists (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::exists (\begin{DoxyParamCaption}\item[{std\+::string}]{p }\end{DoxyParamCaption})}
 
 
 
@@ -234,8 +238,16 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 85 of file Stegano\+Message.\+cpp.
+Definition at line 105 of file Stegano\+Message.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -259,7 +271,7 @@ pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}
 \end{DoxyReturn}
 
 
-Definition at line 31 of file Stegano\+Message.\+cpp.
+Definition at line 39 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -284,7 +296,7 @@ Pointer to \mbox{\hyperlink{classImage}{Image}}
 \end{DoxyReturn}
 
 
-Definition at line 49 of file Stegano\+Message.\+cpp.
+Definition at line 64 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -309,8 +321,16 @@ Pointer to \mbox{\hyperlink{classMessage}{Message}}
 \end{DoxyReturn}
 
 
-Definition at line 40 of file Stegano\+Message.\+cpp.
+Definition at line 52 of file Stegano\+Message.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}\label{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}} 
 \index{SteganoMessage@{SteganoMessage}!getMode@{getMode}}
 \index{getMode@{getMode}!SteganoMessage@{SteganoMessage}}
@@ -326,8 +346,16 @@ std\+::string containing mode command or \char`\"{}\char`\"{}
 \end{DoxyReturn}
 
 
-Definition at line 63 of file Stegano\+Message.\+cpp.
+Definition at line 78 of file Stegano\+Message.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}\label{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}} 
 \index{SteganoMessage@{SteganoMessage}!getPathVerified@{getPathVerified}}
 \index{getPathVerified@{getPathVerified}!SteganoMessage@{SteganoMessage}}
@@ -343,7 +371,7 @@ bool -\/ true for verified, false for not verified.
 \end{DoxyReturn}
 
 
-Definition at line 92 of file Stegano\+Message.\+cpp.
+Definition at line 123 of file Stegano\+Message.\+cpp.
 
 \mbox{\Hypertarget{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}\label{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}} 
 \index{SteganoMessage@{SteganoMessage}!printValues@{printValues}}
@@ -357,7 +385,7 @@ Prints values stored for mode and path.
 
 
 
-Definition at line 69 of file Stegano\+Message.\+cpp.
+Definition at line 84 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -395,7 +423,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 53 of file Stegano\+Message.\+cpp.
+Definition at line 68 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
