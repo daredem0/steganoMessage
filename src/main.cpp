@@ -130,6 +130,7 @@ int ui(string argv, SteganoMessage *steg){
 
 int printHelp(){
     cout << HELPFILE << endl;
+	return -1;
 }
 
 int terminate(SteganoMessage *steg){
