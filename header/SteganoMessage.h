@@ -94,13 +94,13 @@ public:
      * @param std::string containing the path that shall be checked
      * @return integer with error code
      */
-    static int checkPath(std::string path);
+    int checkPath(std::string p);
     /**
      * @brief Checks if a path exists
      * @param std::string containing the path that shall be checked
      * @return integer with error code
      */
-    static bool exists(std::string p);
+    bool exists(std::string p);
     
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
@@ -112,4 +112,3 @@ private:
 };
 
 #endif /* STEGANOMESSAGE_H */
-

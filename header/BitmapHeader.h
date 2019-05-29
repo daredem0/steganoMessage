@@ -16,6 +16,7 @@
 
 #include <fstream>
 #include <iostream>
+#include "./ErrorHandler.h"
 
 /**
  *@brief BitmapHeader Class contains header information extracted from bitmap file
@@ -29,17 +30,13 @@ public:
     BitmapHeader();
     /**
     * @brief Non-Standard Constructor, stores p in path member and calls readHeader with p as argument
+    * @param ErrorHandler *errH - Errorhandler 
     */
-    BitmapHeader(std::string p);
+    BitmapHeader(std::string p, ErrorHandler *errH);
     /**
     * @brief Non-Standard Constructor, takes arguments for all members and stores them. Outdated, not used
+    * @param ErrorHandler *errH - Errorhandler 
     */
-    BitmapHeader(uint16_t fType, uint32_t fSize, uint32_t fReserved, uint32_t fOffBits, uint32_t size, uint32_t width, uint32_t height,
-            uint16_t planes, uint16_t bitCount, uint32_t compression, uint32_t sizeImage, uint32_t xPelsPerMeter, uint32_t yPelsPerMeter, uint32_t clrUsed, uint32_t clrImportant);
-    /**
-     * @brief Copy Constructor. 
-     * @param orig - Reference to original BitmapHeader-type object
-     */
     BitmapHeader(const BitmapHeader& orig);
     /**
      * Standard deconstructor.
@@ -127,11 +124,13 @@ private:
     
     std::string path;/**< Imagepath*/
     
+    ErrorHandler *errHandle;
+    
     /**
      * @brief reads header information from ifstream
      * @return Not yet implemented, should try catch for error handling + return error codes
      */
-    void read(std::ifstream& f);
+    int read(std::ifstream& f);
     /**
      * @brief Small helper to extrac characters of bfType 
     * @return Integer containing error codes
@@ -140,4 +139,3 @@ private:
 };
 
 #endif /* BITMAPHEADER_H */
-

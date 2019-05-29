@@ -17,7 +17,7 @@ Message::Message() {
     mess = "";
 }
 
-Message::Message(std::string m):mess(m) {
+Message::Message(std::string m, ErrorHandler *errH):mess(m), errHandle(errH){
 }
 
 Message::Message(const Message& orig) {
@@ -27,11 +27,12 @@ Message::~Message() {
 }
 
 int Message::setMessage(std::string m){
+    if(mess != "")
+        return errMessExist;
     mess = m;
-    return 0;
+    return errNoError;
 }
 
 std::string Message::getMessage(void){
     return mess;
 }
-

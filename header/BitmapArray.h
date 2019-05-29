@@ -18,6 +18,7 @@
 #include <fstream>
 #include <iterator>
 #include <iostream>
+#include "./ErrorHandler.h"
 
 /**
  *@brief BitmapArray Class is supposed to contain image data of the bitmap file
@@ -37,8 +38,9 @@ public:
      * @param uint32_t w - width of bitmap
      * @param uint32_t h - height of bitmap
      * @param uint32_t bit - color depth of bitmap
-    */
-    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit);
+     * @param ErrorHandler *errH - Errorhandler 
+     */
+    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH);
     /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original BitmapArray-type object
@@ -76,6 +78,8 @@ private:
     uint32_t bitOffset; /**< Headeroffest of original file*/
     uint32_t bitCount; /**< Color Depth of original file*/
     
+    ErrorHandler *errHandle;
+    
     /**
      * @brief Loads and decrypts the image data to the 2D std::vector member 
      * @param std::ifstream& f - to inputstream of original image
@@ -98,4 +102,3 @@ private:
 };
 
 #endif /* BITMAPARRAY_H */
-

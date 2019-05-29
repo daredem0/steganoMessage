@@ -18,6 +18,7 @@
 #include <iterator> 
 #include <iostream>
 #include <string>
+#include <exception>
 #include "constants.h"
 
 /**
@@ -49,9 +50,15 @@ public:
      * @brief Prints all available errors (mainly for debugging)
      */
     void printAllErrors(void);
+    
+    void printErrorStdEx(const std::exception& e);
+    
+    static void printLog(std::string log);
 private:
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
+    
+    void fillList(std::string s, int am);
+    void fillList(int am);
 };
 
 #endif /* ERRORHANDLER_H */
-

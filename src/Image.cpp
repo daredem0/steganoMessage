@@ -15,50 +15,78 @@
 
 Image::Image() {
     path == "";
+    header = NULL;
+    array = NULL;
 }
 
-Image::Image(std::string p):path(p){
+Image::Image(std::string p, ErrorHandler *errH):path(p), errHandle(errH){
+    header = NULL;
+    array = NULL;
 }
 
 Image::Image(const Image& orig) {
 }
 
 Image::~Image() {
+    if(header != NULL)
+        delete header;
+    if(array != NULL)
+        delete array;
 }
 
 std::string Image::getPath(){
-    if(path == "")
-        return NULL;
-    else
-        return path;
+    return path;
 }
 
 void Image::setPath(std::string p){
     path = p;
 }
 
-void Image::printTextFile(std::string p){
-    std::ifstream file(p.c_str());
-    std::string out;
-    while (getline(file,out)) {
-        std::cout << out << std::endl ;
+int Image::printTextFile(std::string p){
+    try{
+        std::ifstream file(p.c_str());
+        std::string out;
+        while (getline(file,out)) {
+            std::cout << out << std::endl ;
+        }
+        file.close();
+        return errNoError;
     }
-    file.close();
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
 }
 
-void Image::writeTextFile(std::string t, std::string n){
-    std::string path = "./"+n;
-    std::ofstream file(path.c_str());
-    file << t << std::endl;
-    file.close();
+int Image::writeTextFile(std::string t, std::string n){
+    try{
+        std::string path = "./"+n;
+        std::ofstream file(path.c_str());
+        file << t << std::endl;
+        file.close();
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
 }
 
 int Image::readImage(){
     if(path == "")
         return 3;
-    header = new BitmapHeader(path);
+    header = new BitmapHeader(path, errHandle);
     header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount());
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle);
     return 0;
 }
 
@@ -66,46 +94,84 @@ BitmapHeader *Image::getBitmapHeader(){return header;}
 
 int Image::generateBitmap(){
     std::cout << "opening ofstream" << std::endl;
-    char* wD;
-    
-    //get current working dir and generate path
-    wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
-    std::string sWD(wD);
-    free(wD);//free malloced storage from get_current_dir_name()
-    sWD += "/output.bmp";
-    std::cout << "Output-Path: " << sWD << std::endl;
-    std::ofstream file(sWD, std::ios::binary | std::ios::trunc);
-    std::cout << "writing header" << std::endl;
-    file.write(header->getHeader(), header->getOffBits());
-    std::cout << "header written and closing stream" << std::endl;
-    file.close();
-    std::cout << "opening ofstream" << std::endl;
-    file.open(sWD, std::ios::binary | std::ios::app);
-    std::cout << "reopened ofstream" << std::endl;
-    long i = 0;
-    std::vector<std::vector<uint32_t>> temp = array->getBData();
-    for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            switch(header->getBitCount()){
-                case 8:
-                    file  << (uint8_t) *itInner;
-                    break;
-                case 16:
-                    file  << (uint16_t) *itInner;
-                    break;
-                case 24:
-                case 32:
-                    for(int i = 0; i < (header->getBitCount()/8); ++i){
-                        //file << (uint8_t)((*itInner)>>((i+(header->getBitCount()/8)-1-i)*8)); //this will make greytone output file
-                        file << (uint8_t)((*itInner)>>((i*8))); //this will make colorful output file
-                    }
-                    break;
-                default:
-                    return -1;
+    std::string sWD;
+    std::ofstream file;
+    try{
+        char* wD;
+        //get current working dir and generate path
+        wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+        sWD = wD;
+        free(wD);//free malloced storage from get_current_dir_name()
+        sWD += "/output.bmp";
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errImgWD);
+        return errImgWD;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errImgWD);
+        return errImgWD;
+    }
+    try{
+        std::cout << "Output-Path: " << sWD << std::endl;
+        file.open(sWD, std::ios::binary | std::ios::trunc);
+        std::cout << "writing header" << std::endl;
+        file.write(header->getHeader(), header->getOffBits());
+        std::cout << "header written and closing stream" << std::endl;
+        file.close();
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errImgWrHead);
+        return errImgWrHead;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errImgWrHead);
+        return errImgWrHead;
+    }
+    try{
+        std::cout << "opening ofstream" << std::endl;
+        file.open(sWD, std::ios::binary | std::ios::app);
+        std::cout << "reopened ofstream" << std::endl;
+        long i = 0;
+        std::vector<std::vector<uint32_t>> temp = array->getBData();
+        for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
+            for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+                switch(header->getBitCount()){
+                    case 8:
+                        file  << (uint8_t) *itInner;
+                        break;
+                    case 16:
+                        file  << (uint16_t) *itInner;
+                        break;
+                    case 24:
+                    case 32:
+                        for(int i = 0; i < (header->getBitCount()/8); ++i){
+                            //file << (uint8_t)((*itInner)>>((i+(header->getBitCount()/8)-1-i)*8)); //this will make greytone output file
+                            file << (uint8_t)((*itInner)>>((i*8))); //this will make colorful output file
+                        }
+                        break;
+                    default:
+                        return -1;
+                }
             }
         }
+        file.close();
+        std::cout << "Finished writing" << std::endl;
+        return 0;
     }
-    file.close();
-    std::cout << "Finished writing" << std::endl;
-    return 0;
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errImgWrData);
+        return errImgWrData;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errImgWrData);
+        return errImgWrData;
+    }
+    return errNoError;
 }

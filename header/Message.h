@@ -16,6 +16,8 @@
 
 
 #include <string>
+#include "./ErrorHandler.h"
+#include "./constants.h"
 
 /**
  *@brief Message class is supposed to contain the message that the user enters via terminal and wants to hide in the image file.
@@ -30,8 +32,9 @@ public:
     /**
     * @brief Non-Standard constructor. Initializes the object with a message.
     * @param std::string m - Message that is to be stored in the object.
+    * @param ErrorHandler *errH - Errorhandler 
     */
-    Message(std::string m);
+    Message(std::string m, ErrorHandler *h);
     /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original Message-type object
@@ -55,7 +58,7 @@ public:
     std::string getMessage(void);
 private:
     std::string mess; /**< Stores the message extracted from terminal.*/
+    ErrorHandler *errHandle;
 };
 
 #endif /* MESSAGE_H */
-

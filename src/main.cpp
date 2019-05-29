@@ -34,14 +34,13 @@ int terminate(SteganoMessage *steg);
 */
 int errTerminate(SteganoMessage *steg);
 void debuggingStuff(SteganoMessage *steg);
+
 /**
 * @brief Main Function orchestrating the program
 * @param int argc - Number of parameters we got from the terminal
 * @param char *argv[] - Array containing the arguments
 * @return int standard linux error codes
 */
-
-
 int main(int argc, char *argv[]) { 
     //For debugging
     //argc = 3;
@@ -150,5 +149,3 @@ void debuggingStuff(SteganoMessage *steg){
     steg->printValues();
     //steg->getImage()->printTextFile(steg->getImage()->getPath());
 }
-
-

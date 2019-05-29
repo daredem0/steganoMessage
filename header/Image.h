@@ -22,6 +22,7 @@
 #include <unistd.h>
 #include "../header/BitmapHeader.h"
 #include "../header/BitmapArray.h"
+#include "./ErrorHandler.h"
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -36,8 +37,9 @@ public:
     /**
     * @brief Non-Standard constructor. Initializes the object with a path.
     * @param std::string p - path that is to be stored in the object.
+     * @param ErrorHandler *errH - Errorhandler 
     */
-    Image(std::string p);
+    Image(std::string p, ErrorHandler *errH);
     /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original Image-type object
@@ -66,13 +68,13 @@ public:
      * @brief Prints text file to terminal (just for convenience and to check if ifstream works
      * @param std::string containing path to text file
      */
-    void printTextFile(std::string p);
+    int printTextFile(std::string p);
     /**
      * @brief Writes information to a text file !!Not debugged!! !!No Error Handling implemented!! !!Dont use!!
      * @param std::string t - contains text that is to be written
      * @param std::string p - contains path to text file
      */
-    void writeTextFile(std::string t, std::string p);
+    int writeTextFile(std::string t, std::string p);
     /**
      * @brief Getter for bitmapHeader
      * @return BitmapHeader type pointer to BitmapHeader
@@ -88,7 +90,7 @@ private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
+    ErrorHandler *errHandle;
 };
 
 #endif /* IMAGE_H */
-

@@ -22,13 +22,54 @@ const int errSwitch = 2;
 const int errPath = 3;
 const int errPathWrong = 4;
 const int errPathExist = 5;
+const int errMode = 6;
+const int errBitCount = 7;
+const int errStdExcept = 9;
+
+const int errMess = 10;
+const int errMessExist = 11;
+
+const int errImg = 20;
+const int errImgExist = 21;
+const int errImgWD = 22;
+const int errImgWrHead = 23;
+const int errImgWrData = 23;
+
+const int errBmHead = 30;
+const int errBmHeadRead = 31;
+const int errBmHeadReadHead = 32;
+
+const int errBmData = 40;
+const int errBmDataRead = 41;
+
+const std::string ERRRESERVED = "";
 
 const std::string ERRNOERROR = "No Error Occured";
-const std::string ERRUNKNOWN = "Unknown Error";
-const std::string ERRSWITCH = "Wrong/No switch set";
-const std::string ERRPATH = "No path set";
-const std::string ERRPATHWRONG = "Not a valid path entered";
-const std::string ERRPATHEXIST = "Path does not exist";
+const std::string ERRUNKNOWN = "Error: Unknown Error";
+const std::string ERRSWITCH = "Error: Wrong/No switch set";
+const std::string ERRPATH = "Error: No path set";
+const std::string ERRPATHWRONG = "Error: Not a valid path entered";
+const std::string ERRPATHEXIST = "Error: Path does not exist";
+const std::string ERRMODE = "Error: Mode Error";
+const std::string ERRBITCOUNT = "Error: Bit Count Error";
+const std::string ERRSTDEXCEPT = "Error: Exception";
+
+const std::string ERRMESS = "Error: Message Error";
+const std::string ERRMESSEXIST = "Error: Message exists already";
+
+const std::string ERRIMG = "Error: Image Error";
+const std::string ERRIMGEXIST = "Error: Image exists already";
+const std::string ERRIMGWD = "Error: Can't get working directory";
+const std::string ERRIMGWRHEAD = "Error: Can't write header";
+const std::string ERRIMGWRDATA = "Error: Can't write image data";
+
+const std::string ERRBMHEAD = "Error: Bitmap Header Error";
+const std::string ERRBMHEADREAD = "Error: Can't read bitmap header";
+
+const std::string ERRBMDATA = "Error: Bitmap Data Error";
+const std::string ERRBMDATAREAD = "Error: Can't read bitmap data";
+
+
 
 const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
@@ -53,4 +94,3 @@ const std::string HELPFILE =
     "This will return the information contained in this help file. \n";
 
 #endif /* CONSTANTS_H */
-
