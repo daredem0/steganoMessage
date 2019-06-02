@@ -197,6 +197,7 @@ int Image::bmpToTxt(){
 
         //write header
         int count;
+        outFile << "Header Information:\n";
         std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
         for(count = 0; count<= header->getOffBits()-1; ++count){
             std::cout << byteToHex(*(head+count)) << " ";
@@ -210,6 +211,8 @@ int Image::bmpToTxt(){
         }
 
         //write data
+        outFile << "\nImage Data:\n";
+        count = 0;
         for(int i = 0; i <= ((header->getHeight()*header->getWidth())*header->getBitCount()/8)-1; ++i){
             std::cout << byteToHex(*(data+i)) << " ";
             outFile << byteToHex(*(data + i));
