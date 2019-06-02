@@ -88,6 +88,7 @@ int main(int argc, char *argv[]) {
             std::cout << "I found: " << steg->getMessage()->getMessage() << std::endl;
             //call infusion stuff ********************TOBI********************
             steg->getImage()->generateBitmap(); 
+            steg->getImage()->bmpToTxt();
         }
         else if(steg->getMode() == DECRYPT){
             //do some decryption, print message to std::out, be nasty and destroy the image file 

@@ -93,7 +93,7 @@ int Image::readImage(){
 BitmapHeader *Image::getBitmapHeader(){return header;}
 
 int Image::generateBitmap(){
-    std::cout << "opening ofstream" << std::endl;
+    errHandle->printLog("Opening ofstream\n");
     std::string sWD;
     std::ofstream file;
     try{
@@ -115,11 +115,11 @@ int Image::generateBitmap(){
         return errImgWD;
     }
     try{
-        std::cout << "Output-Path: " << sWD << std::endl;
+        errHandle->printLog("Output-path" + sWD + "\n");
         file.open(sWD, std::ios::binary | std::ios::trunc);
-        std::cout << "writing header" << std::endl;
+        errHandle->printLog("Writing header\n");
         file.write(header->getHeader(), header->getOffBits());
-        std::cout << "header written and closing stream" << std::endl;
+        errHandle->printLog("Header written and closing stream\n");
         file.close();
     }
     catch(const std::exception& e){
@@ -133,9 +133,9 @@ int Image::generateBitmap(){
         return errImgWrHead;
     }
     try{
-        std::cout << "opening ofstream" << std::endl;
+        errHandle->printLog("Openning ofstream\n");
         file.open(sWD, std::ios::binary | std::ios::app);
-        std::cout << "reopened ofstream" << std::endl;
+        errHandle->printLog("reopened ofstream\n");
         long i = 0;
         std::vector<std::vector<uint32_t>> temp = array->getBData();
         for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
@@ -160,7 +160,7 @@ int Image::generateBitmap(){
             }
         }
         file.close();
-        std::cout << "Finished writing" << std::endl;
+        errHandle->printLog("Finished writing\n");
         return 0;
     }
     catch(const std::exception& e){
@@ -174,4 +174,107 @@ int Image::generateBitmap(){
         return errImgWrData;
     }
     return errNoError;
+}
+
+int Image::bmpToTxt(){
+    try{
+        errHandle->printLog("Generate textfile\n");
+        std::ifstream inFile(path);
+
+        //buffer header
+        char *head = new char[header->getOffBits()-1];
+        if(!inFile.good())
+            return 3;
+        inFile.seekg(0, std::ios::beg);
+        inFile.read(head, header->getOffBits()-1);
+
+        //buffer data
+        char *data = new char[header->getHeight()+header->getWidth()];
+        
+        std::string path = "./txtOutput.txt";
+        std::ofstream outFile(path.c_str(), std::ios::trunc);
+
+        //write header
+        int count;
+        for(count = 0; count<= header->getOffBits()-1; ++count){
+            std::cout << byteToHex(*(head+count)) << " ";
+            outFile << byteToHex(*(head+count));
+                if(count != 0 && count%16 == 0){
+                    outFile << std::endl;
+                    std::cout << std::endl;
+                }
+                else 
+                    outFile << " ";
+        }
+
+        //write data
+        for(int i = 0; i <= (header->getHeight() + header->getWidth()); ++i){
+           // outFile << byteToHex(*(data + i));
+            //if(count != 0 && count%16 == 0)
+                //outFile << std::endl;
+            //else
+               // outFile << " ";
+            ++count;
+        }
+
+        //clean up
+        delete(head);
+        delete(data);
+        inFile.close();
+        outFile.close();
+        errHandle->printLog("Generation successfull\n");
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
+}
+
+
+std::string Image::byteToHex(uint8_t v){
+    std::string hex;
+    for(int i = 0; i <= sizeof(v); ++i){
+        if(i == 0)
+            hex += "0x";
+        //hex += std::to_string(+((v >> ((sizeof(v)-i)*4))&0x0F));
+        hex += decToHex(v >> ((sizeof(v)-i)*4));
+        //std::cout << "Hex: " << hex << std::endl;
+    }
+   return hex;    
+}
+
+std::string Image::decToHex(uint8_t v){
+    //std::cout << "genHex: " << +(v&0x0F) << std::endl;
+    switch(+(v & 0x0F)){
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5: 
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            return std::to_string(+(v & 0x0F));
+        case 10:
+            return "A";
+        case 11:
+            return "B";
+        case 12:
+            return "C";
+        case 13:
+            return "D";
+        case 14:
+            return "E";
+        case 15:
+            return "F";
+        default:
+            return std::to_string(errUnknown);
+    }
 }
