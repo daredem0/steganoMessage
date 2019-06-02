@@ -1,4 +1,4 @@
 <map id="BitmapArray::printArray" name="BitmapArray::printArray">
 <area shape="rect" id="node1" title="Prints all image data." alt="" coords="5,5,183,32"/>
-<area shape="rect" id="node2" href="$classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title=" " alt="" coords="231,5,396,32"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="231,5,396,32"/>
 </map>

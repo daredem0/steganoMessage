@@ -1,5 +1,7 @@
 <map id="SteganoMessage::getImage" name="SteganoMessage::getImage">
-<area shape="rect" id="node1" title="Getter for image object." alt="" coords="175,31,377,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,5,93,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node1" title="Getter for image object." alt="" coords="384,63,587,90"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,88,60,115"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,38,283,64"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,88,320,115"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,139,336,166"/>
 </map>

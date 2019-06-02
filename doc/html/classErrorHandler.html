@@ -103,18 +103,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1108324c221544c928a2de3a2cf9ba98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all available errors (mainly for debugging)  <a href="#a1108324c221544c928a2de3a2cf9ba98">More...</a><br /></td></tr>
 <tr class="separator:a1108324c221544c928a2de3a2cf9ba98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac36e4dd6e488718e7e07b2d03adf9f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37">printErrorStdEx</a> (const std::exception &amp;e)</td></tr>
+<tr class="memdesc:ac36e4dd6e488718e7e07b2d03adf9f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints error from a std::exception.  <a href="#ac36e4dd6e488718e7e07b2d03adf9f37">More...</a><br /></td></tr>
 <tr class="separator:ac36e4dd6e488718e7e07b2d03adf9f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adefe2e5f3401006300884dd85a7c88ce"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce">printLog</a> (std::string log)</td></tr>
+<tr class="memdesc:adefe2e5f3401006300884dd85a7c88ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints param to stdout or logfile.  <a href="#adefe2e5f3401006300884dd85a7c88ce">More...</a><br /></td></tr>
 <tr class="separator:adefe2e5f3401006300884dd85a7c88ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3036b8ff4299ac0505b6b2ca6fab11a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a3036b8ff4299ac0505b6b2ca6fab11a1">fillList</a> (std::string s, int am)</td></tr>
+<tr class="memdesc:a3036b8ff4299ac0505b6b2ca6fab11a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills list with a specified amount of a specified message. Uses push_back, no push_front version implemented.  <a href="#a3036b8ff4299ac0505b6b2ca6fab11a1">More...</a><br /></td></tr>
 <tr class="separator:a3036b8ff4299ac0505b6b2ca6fab11a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4edd505cdb0ae60da6f9e26b0fb90f68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a4edd505cdb0ae60da6f9e26b0fb90f68">fillList</a> (int am)</td></tr>
+<tr class="memdesc:a4edd505cdb0ae60da6f9e26b0fb90f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills list with RESERVED constant std::string for a specified amount of slots.  <a href="#a4edd505cdb0ae60da6f9e26b0fb90f68">More...</a><br /></td></tr>
 <tr class="separator:a4edd505cdb0ae60da6f9e26b0fb90f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -151,7 +155,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph.png" border="0" usemap="#classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph" alt=""/></div>
 <map name="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph" id="classErrorHandler_a7e5f379bd231442b898cef94556b2107_cgraph">
 <area shape="rect"  title="Standard constructor. Also fills std::list&lt;std::string&gt; with standard error values." alt="" coords="5,5,200,32"/>
-<area shape="rect"  href="classErrorHandler.html#a3036b8ff4299ac0505b6b2ca6fab11a1" title=" " alt="" coords="248,5,400,32"/>
+<area shape="rect"  href="classErrorHandler.html#a3036b8ff4299ac0505b6b2ca6fab11a1" title="Fills list with a specified amount of a specified message. Uses push_back, no push_front version impl..." alt="" coords="248,5,400,32"/>
 </map>
 </div>
 
@@ -248,13 +252,22 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Fills list with a specified amount of a specified message. Uses push_back, no push_front version implemented. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>s - Specified message </td></tr>
+    <tr><td class="paramname">int</td><td>am - Amount of positions to be filled </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00051">51</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph.png" border="0" usemap="#classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph" alt=""/></div>
 <map name="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph" id="classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1_icgraph">
-<area shape="rect"  title=" " alt="" coords="248,5,400,32"/>
+<area shape="rect"  title="Fills list with a specified amount of a specified message. Uses push_back, no push_front version impl..." alt="" coords="248,5,400,32"/>
 <area shape="rect"  href="classErrorHandler.html#a7e5f379bd231442b898cef94556b2107" title="Standard constructor. Also fills std::list&lt;std::string&gt; with standard error values." alt="" coords="5,5,200,32"/>
 </map>
 </div>
@@ -284,6 +297,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Fills list with RESERVED constant std::string for a specified amount of slots. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>am - Amount of positions to be filled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00057">57</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
@@ -341,24 +362,27 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.png" border="0" usemap="#classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" alt=""/></div>
 <map name="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" id="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph">
-<area shape="rect"  title="Prints a single Error corresponding to the." alt="" coords="763,309,936,336"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="269,31,445,57"/>
-<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="544,5,685,32"/>
-<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="515,107,715,133"/>
-<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="538,157,691,184"/>
-<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="519,259,711,285"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="269,259,445,285"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,360,130,387"/>
-<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="539,360,690,387"/>
-<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="537,411,692,437"/>
-<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="338,411,377,437"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="42,563,163,589"/>
-<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="251,613,463,640"/>
-<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="525,512,704,539"/>
-<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,31,200,57"/>
-<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="248,107,467,133"/>
-<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="257,157,457,184"/>
-<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="254,512,461,539"/>
+<area shape="rect"  title="Prints a single Error corresponding to the." alt="" coords="899,360,1072,387"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="405,31,581,57"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="680,5,821,32"/>
+<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="651,107,851,133"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="674,157,827,184"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="655,259,847,285"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="405,284,581,311"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,411,60,437"/>
+<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="675,664,826,691"/>
+<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="673,715,828,741"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="426,208,561,235"/>
+<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,360,241,387"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,563,283,589"/>
+<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="387,563,599,589"/>
+<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="661,461,840,488"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,411,320,437"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="125,31,319,57"/>
+<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="384,107,603,133"/>
+<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="393,157,593,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,284,336,311"/>
+<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="390,461,597,488"/>
 </map>
 </div>
 
@@ -380,28 +404,39 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Prints error from a std::exception. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">const</td><td>std::exception&amp; e- reference to the std::exception </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00076">76</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph.png" border="0" usemap="#classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph" alt=""/></div>
 <map name="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph" id="classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37_icgraph">
-<area shape="rect"  title=" " alt="" coords="763,194,936,235"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="269,24,445,50"/>
-<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="544,49,685,76"/>
-<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="515,100,715,126"/>
-<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="538,150,691,177"/>
-<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="519,201,711,228"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="269,252,445,278"/>
-<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="539,302,690,329"/>
-<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="537,353,692,380"/>
-<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="525,404,704,430"/>
-<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,24,200,50"/>
-<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="248,100,467,126"/>
-<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="257,150,457,177"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,277,130,304"/>
-<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="254,353,461,380"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="42,353,163,380"/>
+<area shape="rect"  title="Prints error from a std::exception." alt="" coords="899,248,1072,289"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="405,27,581,54"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="680,53,821,79"/>
+<area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="651,103,851,130"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="674,154,827,181"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="655,205,847,231"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="405,255,581,282"/>
+<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="675,306,826,333"/>
+<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="673,357,828,383"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="426,382,561,409"/>
+<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="661,458,840,485"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,509,320,535"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="125,27,319,54"/>
+<area shape="rect"  href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="384,103,603,130"/>
+<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="393,154,593,181"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,357,336,383"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,407,60,434"/>
+<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="390,458,597,485"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,458,283,485"/>
 </map>
 </div>
 
@@ -431,17 +466,30 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Prints param to stdout or logfile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">std::string</td><td>log - logmessage </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00087">87</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph.png" border="0" usemap="#classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph" alt=""/></div>
 <map name="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph" id="classErrorHandler_adefe2e5f3401006300884dd85a7c88ce_icgraph">
-<area shape="rect"  title=" " alt="" coords="697,56,863,83"/>
-<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,5,200,32"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,31,424,57"/>
-<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="490,81,631,108"/>
-<area shape="rect"  href="classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,132,649,159"/>
+<area shape="rect"  title="Prints param to stdout or logfile." alt="" coords="749,150,915,177"/>
+<area shape="rect"  href="classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,24,200,50"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,49,450,76"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="542,100,683,126"/>
+<area shape="rect"  href="classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="524,150,701,177"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="525,201,701,228"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="545,252,680,278"/>
+<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,302,381,329"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,252,476,278"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,277,130,304"/>
 </map>
 </div>
 
@@ -469,7 +517,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>std::list that stores every standard error message as a std::string. </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00058">58</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00064">64</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>

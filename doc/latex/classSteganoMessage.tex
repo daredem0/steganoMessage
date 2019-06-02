@@ -49,7 +49,11 @@ bool \mbox{\hyperlink{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}{get
 int \mbox{\hyperlink{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}{check\+Path}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em static method to quickly check if a path possibly makes sense \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}{exists}} (std\+::string p)
-\begin{DoxyCompactList}\small\item\em Checks if a path exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if a path exists. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}{initialize}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fully initializes the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object into a operatable state to ensure that other methods can be called safely. This N\+E\+E\+DS to be called before everything else. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a2649e515941e730520b759282d00dcd6}{mode\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -143,11 +147,12 @@ integer with error code
 
 Definition at line 56 of file Stegano\+Message.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=317pt]{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph}
+\includegraphics[width=350pt]{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}\label{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}} 
@@ -177,7 +182,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=329pt]{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph}
+\includegraphics[width=350pt]{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}\label{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}} 
@@ -328,7 +333,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph}
+\includegraphics[width=350pt]{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}\label{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}} 
@@ -353,7 +358,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=304pt]{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph}
+\includegraphics[width=350pt]{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}\label{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}} 
@@ -373,6 +378,79 @@ bool -\/ true for verified, false for not verified.
 
 Definition at line 123 of file Stegano\+Message.\+cpp.
 
+\mbox{\Hypertarget{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}\label{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}} 
+\index{SteganoMessage@{SteganoMessage}!initialize@{initialize}}
+\index{initialize@{initialize}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::initialize (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fully initializes the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object into a operatable state to ensure that other methods can be called safely. This N\+E\+E\+DS to be called before everything else. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & -\/ argc from terminal (amount of sent arguments including argc) \\
+\hline
+{\em $\ast$argv\mbox{[}$\,$\mbox{]}} & -\/ $\ast$argv\mbox{[}\mbox{]} from terminal (sent arguments including argc in \mbox{[}0\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a2649e515941e730520b759282d00dcd6}\label{classSteganoMessage_a2649e515941e730520b759282d00dcd6}} 
+\index{SteganoMessage@{SteganoMessage}!modeHandler@{modeHandler}}
+\index{modeHandler@{modeHandler}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{modeHandler()}{modeHandler()}}
+{\footnotesize\ttfamily int Stegano\+Message\+::mode\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode. 
+
+\begin{DoxyReturn}{Returns}
+integer with error code 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a2649e515941e730520b759282d00dcd6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classSteganoMessage_a2649e515941e730520b759282d00dcd6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}\label{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}} 
 \index{SteganoMessage@{SteganoMessage}!printValues@{printValues}}
 \index{printValues@{printValues}!SteganoMessage@{SteganoMessage}}
@@ -444,7 +522,7 @@ Here is the caller graph for this function\+:
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 106 of file Stegano\+Message.\+h.
+Definition at line 118 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}\label{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}} 
 \index{SteganoMessage@{SteganoMessage}!img@{img}}
@@ -454,7 +532,7 @@ Definition at line 106 of file Stegano\+Message.\+h.
 
 \mbox{\hyperlink{classImage}{Image}} type object containing path, header and image data 
 
-Definition at line 108 of file Stegano\+Message.\+h.
+Definition at line 120 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}\label{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}} 
 \index{SteganoMessage@{SteganoMessage}!mess@{mess}}
@@ -464,7 +542,7 @@ Definition at line 108 of file Stegano\+Message.\+h.
 
 \mbox{\hyperlink{classMessage}{Message}} type objec to store message 
 
-Definition at line 107 of file Stegano\+Message.\+h.
+Definition at line 119 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}\label{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}} 
 \index{SteganoMessage@{SteganoMessage}!mode@{mode}}
@@ -474,7 +552,7 @@ Definition at line 107 of file Stegano\+Message.\+h.
 
 -\/encrypt or -\/decryptl, if not set \char`\"{}\char`\"{} 
 
-Definition at line 109 of file Stegano\+Message.\+h.
+Definition at line 121 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}\label{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}} 
 \index{SteganoMessage@{SteganoMessage}!modeSet@{modeSet}}
@@ -484,7 +562,7 @@ Definition at line 109 of file Stegano\+Message.\+h.
 
 flag to check if mode is set 
 
-Definition at line 110 of file Stegano\+Message.\+h.
+Definition at line 122 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}\label{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}} 
 \index{SteganoMessage@{SteganoMessage}!path@{path}}
@@ -494,7 +572,7 @@ Definition at line 110 of file Stegano\+Message.\+h.
 
 flag to check if path is verified 
 
-Definition at line 111 of file Stegano\+Message.\+h.
+Definition at line 123 of file Stegano\+Message.\+h.
 
 
 

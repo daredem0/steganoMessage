@@ -1,5 +1,8 @@
 <map id="BitmapHeader::getHeight" name="BitmapHeader::getHeight">
-<area shape="rect" id="node1" title="Getter for BiHeight." alt="" coords="297,5,485,32"/>
-<area shape="rect" id="node2" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="108,5,249,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Getter for BiHeight." alt="" coords="573,31,761,57"/>
+<area shape="rect" id="node2" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="384,5,525,32"/>
+<area shape="rect" id="node5" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="387,56,522,83"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,5,320,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
 </map>

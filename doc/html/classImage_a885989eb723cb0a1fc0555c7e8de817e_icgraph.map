@@ -1,6 +1,7 @@
 <map id="Image::getPath" name="Image::getPath">
-<area shape="rect" id="node1" title="Returns the path of the image." alt="" coords="435,56,556,83"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="253,5,308,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,81,127,108"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="175,107,387,133"/>
+<area shape="rect" id="node1" title="Returns the path of the image." alt="" coords="435,54,556,81"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,17,93,44"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,93,127,120"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="175,130,387,157"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="183,29,379,56"/>
 </map>

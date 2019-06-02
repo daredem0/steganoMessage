@@ -28,6 +28,8 @@ var searchData=
   ['biwidth',['biWidth',['../classBitmapHeader.html#a6058b8b953cfe11ccb6992077e0353d0',1,'BitmapHeader']]],
   ['bixpelspermeter',['biXPelsPerMeter',['../classBitmapHeader.html#a1569e156f59c8a939c9d4b668ae41bcd',1,'BitmapHeader']]],
   ['biypelspermeter',['biYPelsPerMeter',['../classBitmapHeader.html#a9f029a3b36773c4da51c18e0453213c7',1,'BitmapHeader']]],
+  ['bmptotxt',['bmpToTxt',['../classImage.html#aa16c9acd068079c676dec4186262b1b7',1,'Image::bmpToTxt()'],['../constants_8h.html#ae9e16ed0d9b2603a4628fae0f1aa86eb',1,'BMPTOTXT():&#160;constants.h']]],
   ['buildimage',['buildImage',['../classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d',1,'SteganoMessage']]],
-  ['buildmessage',['buildMessage',['../classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65',1,'SteganoMessage']]]
+  ['buildmessage',['buildMessage',['../classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65',1,'SteganoMessage']]],
+  ['bytetohex',['byteToHex',['../classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb',1,'Image']]]
 ];

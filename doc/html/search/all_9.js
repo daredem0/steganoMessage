@@ -9,5 +9,6 @@ var searchData=
   ['message_2eh',['Message.h',['../Message_8h.html',1,'']]],
   ['message_2eo_2ed',['Message.o.d',['../Message_8o_8d.html',1,'']]],
   ['mode',['mode',['../classSteganoMessage.html#a8772194b7823da730648f8d4c06334a8',1,'SteganoMessage']]],
+  ['modehandler',['modeHandler',['../classSteganoMessage.html#a2649e515941e730520b759282d00dcd6',1,'SteganoMessage']]],
   ['modeset',['modeSet',['../classSteganoMessage.html#ae1da17c621a8db71fa4eb3b148a82ceb',1,'SteganoMessage']]]
 ];

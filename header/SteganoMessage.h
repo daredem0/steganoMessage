@@ -101,6 +101,18 @@ public:
      * @return integer with error code
      */
     bool exists(std::string p);
+    /**
+     * @brief Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods can be called safely. This NEEDS to be called before everything else
+     * @param argc - argc from terminal (amount of sent arguments including argc)
+     * @param *argv[] - *argv[] from terminal (sent arguments including argc in [0]
+     * @return integer with error code
+     */
+    int initialize(int argc, char *argv[]);
+    /**
+     * @brief Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode
+     * @return integer with error code
+     */
+    int modeHandler();
     
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/

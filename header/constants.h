@@ -74,6 +74,7 @@ const std::string ERRBMDATAREAD = "Error: Can't read bitmap data";
 
 const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
+const std::string BMPTOTXT = "-convert_txt";
 const std::string NOSWITCH = "";
 const std::string NOPATH = "";
 
@@ -92,6 +93,8 @@ const std::string HELPFILE =
 "    This will start the routine to decrypt your message from example.bmp\n"
 "\n"
 "./steganoMessage -h\n"
-    "This will return the information contained in this help file. \n";
+    "This will return the information contained in this help file. \n"
+"./steganoMessage -convert_txt\n"
+    "This will convert the bitmap file into a readbale text file containing all information as hex values.";
 
 #endif /* CONSTANTS_H */

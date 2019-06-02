@@ -166,5 +166,6 @@ std::string BitmapArray::infuse(std::string message){
     //dunkel wars der Mond schien helle...
     
     
-    return "Successfully infused bitmap with message";
+    return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
+    stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }

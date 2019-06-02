@@ -11,8 +11,7 @@
 
 
 
-Collaboration diagram for Error\+Handler\+:
-\nopagebreak
+Collaboration diagram for Error\+Handler\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,19 +32,19 @@ int \mbox{\hyperlink{classErrorHandler_ab90b8248f24e3129df69d224585956dd}{print\
 void \mbox{\hyperlink{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}{print\+All\+Errors}} (void)
 \begin{DoxyCompactList}\small\item\em Prints all available errors (mainly for debugging) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}{print\+Error\+Std\+Ex}} (const std\+::exception \&e)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints error from a std\+::exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classErrorHandler_adefe2e5f3401006300884dd85a7c88ce}{print\+Log}} (std\+::string log)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints param to stdout or logfile. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classErrorHandler_a3036b8ff4299ac0505b6b2ca6fab11a1}{fill\+List}} (std\+::string s, int am)
-\item 
+\begin{DoxyCompactList}\small\item\em Fills list with a specified amount of a specified message. Uses push\+\_\+back, no push\+\_\+front version implemented. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classErrorHandler_a4edd505cdb0ae60da6f9e26b0fb90f68}{fill\+List}} (int am)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fills list with R\+E\+S\+E\+R\+V\+ED constant std\+::string for a specified amount of slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -123,6 +122,17 @@ Definition at line 66 of file Error\+Handler.\+cpp.
 
 
 
+Fills list with a specified amount of a specified message. Uses push\+\_\+back, no push\+\_\+front version implemented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & s -\/ Specified message \\
+\hline
+{\em int} & am -\/ Amount of positions to be filled \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 51 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:
@@ -139,6 +149,15 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{fillList()}{fillList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Error\+Handler\+::fill\+List (\begin{DoxyParamCaption}\item[{int}]{am }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Fills list with R\+E\+S\+E\+R\+V\+ED constant std\+::string for a specified amount of slots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & am -\/ Amount of positions to be filled \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 57 of file Error\+Handler.\+cpp.
@@ -192,6 +211,15 @@ Here is the caller graph for this function\+:
 
 
 
+Prints error from a std\+::exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::exception\& e-\/ reference to the std\+::exception \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 76 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:
@@ -208,6 +236,15 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{printLog()}{printLog()}}
 {\footnotesize\ttfamily void Error\+Handler\+::print\+Log (\begin{DoxyParamCaption}\item[{std\+::string}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Prints param to stdout or logfile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & log -\/ logmessage \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line 87 of file Error\+Handler.\+cpp.
@@ -231,7 +268,7 @@ Here is the caller graph for this function\+:
 
 std\+::list that stores every standard error message as a std\+::string. 
 
-Definition at line 58 of file Error\+Handler.\+h.
+Definition at line 64 of file Error\+Handler.\+h.
 
 
 

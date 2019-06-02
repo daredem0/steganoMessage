@@ -79,19 +79,19 @@ Collaboration diagram for SteganoMessage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage__coll__graph.png" border="0" usemap="#SteganoMessage_coll__map" alt="Collaboration graph"/></div>
 <map name="SteganoMessage_coll__map" id="SteganoMessage_coll__map">
-<area shape="rect"  title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes..." alt="" coords="170,1240,338,1508"/>
-<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="232,145,377,340"/>
-<area shape="rect"  href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="366,939,528,1163"/>
-<area shape="rect"  href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="506,601,646,825"/>
-<area shape="rect"  href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="792,549,944,876"/>
-<area shape="rect"  href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ..." alt="" coords="96,637,222,788"/>
-<area shape="rect"  title=" " alt="" coords="236,5,373,83"/>
-<area shape="rect"  title=" " alt="" coords="484,197,631,289"/>
-<area shape="rect"  title=" " alt="" coords="784,204,859,281"/>
-<area shape="rect"  title=" " alt="" coords="402,204,460,281"/>
-<area shape="rect"  title=" " alt="" coords="1128,204,1179,281"/>
-<area shape="rect"  title=" " alt="" coords="1008,204,1083,281"/>
-<area shape="rect"  title=" " alt="" coords="291,1012,342,1089"/>
+<area shape="rect"  title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes..." alt="" coords="175,1284,343,1581"/>
+<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="237,145,382,340"/>
+<area shape="rect"  href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="371,939,534,1207"/>
+<area shape="rect"  href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="512,601,652,825"/>
+<area shape="rect"  href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="798,549,950,876"/>
+<area shape="rect"  href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ..." alt="" coords="102,637,227,788"/>
+<area shape="rect"  title=" " alt="" coords="241,5,378,83"/>
+<area shape="rect"  title=" " alt="" coords="490,197,636,289"/>
+<area shape="rect"  title=" " alt="" coords="790,204,864,281"/>
+<area shape="rect"  title=" " alt="" coords="407,204,466,281"/>
+<area shape="rect"  title=" " alt="" coords="1134,204,1184,281"/>
+<area shape="rect"  title=" " alt="" coords="1014,204,1088,281"/>
+<area shape="rect"  title=" " alt="" coords="296,1034,347,1111"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -138,6 +138,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b">exists</a> (std::string p)</td></tr>
 <tr class="memdesc:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a path exists.  <a href="#acc5a49a35b46d8bf4c40cca8b8c5a52b">More...</a><br /></td></tr>
 <tr class="separator:acc5a49a35b46d8bf4c40cca8b8c5a52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4d2b69498c148508e2ca70194679cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc">initialize</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:aeb4d2b69498c148508e2ca70194679cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fully initializes the <a class="el" href="classSteganoMessage.html" title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes...">SteganoMessage</a> type object into a operatable state to ensure that other methods can be called safely. This NEEDS to be called before everything else.  <a href="#aeb4d2b69498c148508e2ca70194679cc">More...</a><br /></td></tr>
+<tr class="separator:aeb4d2b69498c148508e2ca70194679cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2649e515941e730520b759282d00dcd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6">modeHandler</a> ()</td></tr>
+<tr class="memdesc:a2649e515941e730520b759282d00dcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode.  <a href="#a2649e515941e730520b759282d00dcd6">More...</a><br /></td></tr>
+<tr class="separator:a2649e515941e730520b759282d00dcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -268,7 +274,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph.png" border="0" usemap="#classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph" alt=""/></div>
 <map name="classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph" id="classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_icgraph">
-<area shape="rect"  title="Builds new Image type object." alt="" coords="108,5,321,32"/>
+<area shape="rect"  title="Builds new Image type object." alt="" coords="352,5,565,32"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -306,7 +313,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph.png" border="0" usemap="#classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph" alt=""/></div>
 <map name="classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph" id="classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65_icgraph">
-<area shape="rect"  title="Builds new Message type object." alt="" coords="108,5,337,32"/>
+<area shape="rect"  title="Builds new Message type object." alt="" coords="384,5,613,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -346,7 +354,7 @@ Here is the call graph for this function:</div>
 <map name="classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744_cgraph" id="classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744_cgraph">
 <area shape="rect"  title="static method to quickly check if a path possibly makes sense" alt="" coords="5,42,212,69"/>
 <area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="260,42,439,69"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="487,5,660,47"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="487,5,660,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="487,71,660,98"/>
 </map>
 </div>
@@ -395,7 +403,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_cgraph.png" border="0" usemap="#classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_cgraph" alt=""/></div>
 <map name="classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_cgraph" id="classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b_cgraph">
 <area shape="rect"  title="Checks if a path exists." alt="" coords="5,42,184,69"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="232,5,405,47"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="232,5,405,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="232,71,405,98"/>
 </map>
 </div>
@@ -470,9 +478,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph.png" border="0" usemap="#classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph" alt=""/></div>
 <map name="classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph" id="classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph">
-<area shape="rect"  title="Getter for image object." alt="" coords="175,31,377,57"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,5,93,32"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,56,127,83"/>
+<area shape="rect"  title="Getter for image object." alt="" coords="384,63,587,90"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,88,60,115"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,38,283,64"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,88,320,115"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,139,336,166"/>
 </map>
 </div>
 
@@ -503,7 +513,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph.png" border="0" usemap="#classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph" alt=""/></div>
 <map name="classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph" id="classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb_icgraph">
-<area shape="rect"  title="Getter for pointer to message object." alt="" coords="108,5,327,32"/>
+<area shape="rect"  title="Getter for pointer to message object." alt="" coords="384,5,603,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -534,7 +545,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph.png" border="0" usemap="#classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph" alt=""/></div>
 <map name="classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph" id="classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e_icgraph">
-<area shape="rect"  title="Getter for stored mode." alt="" coords="108,5,304,32"/>
+<area shape="rect"  title="Getter for stored mode." alt="" coords="384,5,580,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -560,6 +572,131 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>bool - true for verified, false for not verified. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00123">123</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeb4d2b69498c148508e2ca70194679cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb4d2b69498c148508e2ca70194679cc">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::initialize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fully initializes the <a class="el" href="classSteganoMessage.html" title="SteganoMessage class ist implemented to store values that are needed to be shared between all classes...">SteganoMessage</a> type object into a operatable state to ensure that other methods can be called safely. This NEEDS to be called before everything else. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>- argc from terminal (amount of sent arguments including argc) </td></tr>
+    <tr><td class="paramname">*argv[]</td><td>- *argv[] from terminal (sent arguments including argc in [0] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00127">127</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_cgraph.png" border="0" usemap="#classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_cgraph" alt=""/></div>
+<map name="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_cgraph" id="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_cgraph">
+<area shape="rect"  title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="5,132,201,159"/>
+<area shape="rect"  href="classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="249,5,463,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="255,56,457,83"/>
+<area shape="rect"  href="classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="295,107,417,133"/>
+<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="285,157,427,184"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="269,208,443,235"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="269,259,443,301"/>
+<area shape="rect"  href="classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="511,56,712,83"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="516,107,707,133"/>
+<area shape="rect"  href="classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="520,157,703,184"/>
+<area shape="rect"  href="classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="517,208,705,235"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="511,259,712,285"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph.png" border="0" usemap="#classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph" alt=""/></div>
+<map name="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph" id="classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph">
+<area shape="rect"  title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2649e515941e730520b759282d00dcd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2649e515941e730520b759282d00dcd6">&#9670;&nbsp;</a></span>modeHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SteganoMessage::modeHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode. </p>
+<dl class="section return"><dt>Returns</dt><dd>integer with error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8cpp_source.html#l00156">156</a> of file <a class="el" href="SteganoMessage_8cpp_source.html">SteganoMessage.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSteganoMessage_a2649e515941e730520b759282d00dcd6_cgraph.png" border="0" usemap="#classSteganoMessage_a2649e515941e730520b759282d00dcd6_cgraph" alt=""/></div>
+<map name="classSteganoMessage_a2649e515941e730520b759282d00dcd6_cgraph" id="classSteganoMessage_a2649e515941e730520b759282d00dcd6_cgraph">
+<area shape="rect"  title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="5,157,233,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a7dc660e6d2c8f162636f789cfedde67e" title="Getter for stored mode." alt="" coords="298,5,494,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65" title="Builds new Message type object." alt="" coords="281,56,511,83"/>
+<area shape="rect"  href="classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb" title="Getter for pointer to message object." alt="" coords="287,107,505,133"/>
+<area shape="rect"  href="classMessage.html#a8d2e67a8732ecaeca309df6ac5dda156" title="getter for std::string mess" alt="" coords="313,157,479,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="295,208,497,235"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="308,259,484,285"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="329,436,463,463"/>
+<area shape="rect"  href="classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="577,385,742,412"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="808,171,981,213"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="808,237,981,264"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="563,183,755,209"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="564,284,755,311"/>
+<area shape="rect"  href="classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="573,132,746,159"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="559,335,760,361"/>
+<area shape="rect"  href="classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="565,537,753,564"/>
+<area shape="rect"  href="classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="568,588,751,615"/>
+<area shape="rect"  href="classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="589,639,729,665"/>
+<area shape="rect"  href="classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="827,639,962,665"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSteganoMessage_a2649e515941e730520b759282d00dcd6_icgraph.png" border="0" usemap="#classSteganoMessage_a2649e515941e730520b759282d00dcd6_icgraph" alt=""/></div>
+<map name="classSteganoMessage_a2649e515941e730520b759282d00dcd6_icgraph" id="classSteganoMessage_a2649e515941e730520b759282d00dcd6_icgraph">
+<area shape="rect"  title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -664,7 +801,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00106">106</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00118">118</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>
@@ -689,7 +826,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p><a class="el" href="classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of...">Image</a> type object containing path, header and image data </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00108">108</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00120">120</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>
@@ -714,7 +851,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p><a class="el" href="classMessage.html" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ...">Message</a> type objec to store message </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00107">107</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00119">119</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>
@@ -739,7 +876,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>-encrypt or -decryptl, if not set "" </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00109">109</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00121">121</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>
@@ -764,7 +901,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>flag to check if mode is set </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00110">110</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00122">122</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>
@@ -789,7 +926,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>flag to check if path is verified </p>
 
-<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00111">111</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SteganoMessage_8h_source.html#l00123">123</a> of file <a class="el" href="SteganoMessage_8h_source.html">SteganoMessage.h</a>.</p>
 
 </div>
 </div>

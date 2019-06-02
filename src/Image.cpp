@@ -182,24 +182,26 @@ int Image::bmpToTxt(){
         std::ifstream inFile(path);
 
         //buffer header
-        char *head = new char[header->getOffBits()-1];
+        char *head = new char[header->getOffBits()];
         if(!inFile.good())
             return 3;
         inFile.seekg(0, std::ios::beg);
-        inFile.read(head, header->getOffBits()-1);
+        inFile.read(head, header->getOffBits());
 
         //buffer data
-        char *data = new char[header->getHeight()+header->getWidth()];
+        char *data = new char[(header->getHeight()*header->getWidth())*header->getBitCount()/8];
+        inFile.read(data, (header->getHeight()*header->getWidth())*header->getBitCount()/8);
         
         std::string path = "./txtOutput.txt";
         std::ofstream outFile(path.c_str(), std::ios::trunc);
 
         //write header
         int count;
+        std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
         for(count = 0; count<= header->getOffBits()-1; ++count){
             std::cout << byteToHex(*(head+count)) << " ";
             outFile << byteToHex(*(head+count));
-                if(count != 0 && count%16 == 0){
+                if(count != 0 && (count+1)%16 == 0){
                     outFile << std::endl;
                     std::cout << std::endl;
                 }
@@ -208,12 +210,15 @@ int Image::bmpToTxt(){
         }
 
         //write data
-        for(int i = 0; i <= (header->getHeight() + header->getWidth()); ++i){
-           // outFile << byteToHex(*(data + i));
-            //if(count != 0 && count%16 == 0)
-                //outFile << std::endl;
-            //else
-               // outFile << " ";
+        for(int i = 0; i <= ((header->getHeight()*header->getWidth())*header->getBitCount()/8)-1; ++i){
+            std::cout << byteToHex(*(data+i)) << " ";
+            outFile << byteToHex(*(data + i));
+            if(count != 0 && (count+1)%16 == 0){
+                outFile << std::endl;
+                    std::cout << std::endl;
+            }
+            else
+                outFile << " ";
             ++count;
         }
 

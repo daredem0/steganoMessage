@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="5,71,224,98"/>
 <area shape="rect" id="node2" href="$classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="272,71,472,98"/>
 <area shape="rect" id="node3" href="$classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="520,71,673,98"/>
-<area shape="rect" id="node5" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="721,5,895,47"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="721,5,895,47"/>
 <area shape="rect" id="node6" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="721,122,895,149"/>
 <area shape="rect" id="node4" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="723,71,893,98"/>
 </map>

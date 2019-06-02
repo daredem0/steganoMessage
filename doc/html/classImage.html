@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classImage-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,7 +80,7 @@ Collaboration diagram for Image:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage__coll__graph.png" border="0" usemap="#Image_coll__map" alt="Collaboration graph"/></div>
 <map name="Image_coll__map" id="Image_coll__map">
-<area shape="rect"  title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="347,939,510,1163"/>
+<area shape="rect"  title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="347,939,510,1207"/>
 <area shape="rect"  href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="236,601,376,825"/>
 <area shape="rect"  title=" " alt="" coords="175,197,322,289"/>
 <area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,151,340"/>
@@ -126,6 +127,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1">generateBitmap</a> ()</td></tr>
 <tr class="memdesc:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates new bitmap file.  <a href="#a3ca1ae6c1eb2846bfba066b01e6020e1">More...</a><br /></td></tr>
 <tr class="separator:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16c9acd068079c676dec4186262b1b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aa16c9acd068079c676dec4186262b1b7">bmpToTxt</a> ()</td></tr>
+<tr class="memdesc:aa16c9acd068079c676dec4186262b1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates txt file containing bitmap information as hex values.  <a href="#aa16c9acd068079c676dec4186262b1b7">More...</a><br /></td></tr>
+<tr class="separator:aa16c9acd068079c676dec4186262b1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac1c14eba8a20f8bb71c3c21eaba90ecb"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb">byteToHex</a> (uint8_t v)</td></tr>
+<tr class="memdesc:ac1c14eba8a20f8bb71c3c21eaba90ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a byte to hex string.  <a href="#ac1c14eba8a20f8bb71c3c21eaba90ecb">More...</a><br /></td></tr>
+<tr class="separator:ac1c14eba8a20f8bb71c3c21eaba90ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f7e0b2649e2529df7e7aea46f2da4a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a">decToHex</a> (uint8_t v)</td></tr>
+<tr class="memdesc:a26f7e0b2649e2529df7e7aea46f2da4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A-F.  <a href="#a26f7e0b2649e2529df7e7aea46f2da4a">More...</a><br /></td></tr>
+<tr class="separator:a26f7e0b2649e2529df7e7aea46f2da4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -260,6 +273,149 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa16c9acd068079c676dec4186262b1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16c9acd068079c676dec4186262b1b7">&#9670;&nbsp;</a></span>bmpToTxt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Image::bmpToTxt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates txt file containing bitmap information as hex values. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00179">179</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage_aa16c9acd068079c676dec4186262b1b7_cgraph.png" border="0" usemap="#classImage_aa16c9acd068079c676dec4186262b1b7_cgraph" alt=""/></div>
+<map name="classImage_aa16c9acd068079c676dec4186262b1b7_cgraph" id="classImage_aa16c9acd068079c676dec4186262b1b7_cgraph">
+<area shape="rect"  title="Generates txt file containing bitmap information as hex values." alt="" coords="5,183,140,209"/>
+<area shape="rect"  href="classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="206,5,371,32"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="193,56,384,83"/>
+<area shape="rect"  href="classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="195,107,383,133"/>
+<area shape="rect"  href="classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="197,157,380,184"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="188,208,389,235"/>
+<area shape="rect"  href="classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="219,259,359,285"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="202,310,375,351"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="202,376,375,403"/>
+<area shape="rect"  href="classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="437,259,572,285"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage_aa16c9acd068079c676dec4186262b1b7_icgraph.png" border="0" usemap="#classImage_aa16c9acd068079c676dec4186262b1b7_icgraph" alt=""/></div>
+<map name="classImage_aa16c9acd068079c676dec4186262b1b7_icgraph" id="classImage_aa16c9acd068079c676dec4186262b1b7_icgraph">
+<area shape="rect"  title="Generates txt file containing bitmap information as hex values." alt="" coords="384,5,519,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac1c14eba8a20f8bb71c3c21eaba90ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c14eba8a20f8bb71c3c21eaba90ecb">&#9670;&nbsp;</a></span>byteToHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Image::byteToHex </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a byte to hex string. </p>
+<dl class="section return"><dt>Returns</dt><dd>std:string containing hex value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00244">244</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph.png" border="0" usemap="#classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph" alt=""/></div>
+<map name="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph" id="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph">
+<area shape="rect"  title="Converts a byte to hex string." alt="" coords="5,5,145,32"/>
+<area shape="rect"  href="classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="193,5,328,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_icgraph.png" border="0" usemap="#classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_icgraph" alt=""/></div>
+<map name="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_icgraph" id="classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_icgraph">
+<area shape="rect"  title="Converts a byte to hex string." alt="" coords="567,5,707,32"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="384,5,519,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26f7e0b2649e2529df7e7aea46f2da4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f7e0b2649e2529df7e7aea46f2da4a">&#9670;&nbsp;</a></span>decToHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Image::decToHex </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A-F. </p>
+<dl class="section return"><dt>Returns</dt><dd>std:string containing hex value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00256">256</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph.png" border="0" usemap="#classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph" alt=""/></div>
+<map name="classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph" id="classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph">
+<area shape="rect"  title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="755,5,889,32"/>
+<area shape="rect"  href="classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="567,5,707,32"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="384,5,519,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3ca1ae6c1eb2846bfba066b01e6020e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ca1ae6c1eb2846bfba066b01e6020e1">&#9670;&nbsp;</a></span>generateBitmap()</h2>
 
@@ -284,13 +440,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph.png" border="0" usemap="#classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph" alt=""/></div>
 <map name="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph" id="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph">
-<area shape="rect"  title="Generates new bitmap file." alt="" coords="5,129,181,155"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="479,5,652,47"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="479,82,652,109"/>
-<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="234,53,426,79"/>
-<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="235,154,425,181"/>
-<area shape="rect"  href="classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="243,205,417,231"/>
-<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="229,255,431,282"/>
+<area shape="rect"  title="Generates new bitmap file." alt="" coords="5,157,181,184"/>
+<area shape="rect"  href="classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="247,5,413,32"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="479,59,652,101"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="479,136,652,163"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="234,107,426,133"/>
+<area shape="rect"  href="classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="235,208,425,235"/>
+<area shape="rect"  href="classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="243,259,417,285"/>
+<area shape="rect"  href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="229,309,431,336"/>
 </map>
 </div>
 <div class="dynheader">
@@ -298,7 +455,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph.png" border="0" usemap="#classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph" alt=""/></div>
 <map name="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph" id="classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph">
-<area shape="rect"  title="Generates new bitmap file." alt="" coords="108,5,284,32"/>
+<area shape="rect"  title="Generates new bitmap file." alt="" coords="384,5,560,32"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -351,10 +509,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph.png" border="0" usemap="#classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph" alt=""/></div>
 <map name="classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph" id="classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph">
-<area shape="rect"  title="Returns the path of the image." alt="" coords="435,56,556,83"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="253,5,308,32"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,81,127,108"/>
-<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="175,107,387,133"/>
+<area shape="rect"  title="Returns the path of the image." alt="" coords="435,54,556,81"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,17,93,44"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,93,127,120"/>
+<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="175,130,387,157"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="183,29,379,56"/>
 </map>
 </div>
 
@@ -391,7 +550,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classImage_ae5daf791502caefeae1b15360d354513_cgraph.png" border="0" usemap="#classImage_ae5daf791502caefeae1b15360d354513_cgraph" alt=""/></div>
 <map name="classImage_ae5daf791502caefeae1b15360d354513_cgraph" id="classImage_ae5daf791502caefeae1b15360d354513_cgraph">
 <area shape="rect"  title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="5,42,156,69"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="204,5,377,47"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="204,5,377,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="204,71,377,98"/>
 </map>
 </div>
@@ -435,7 +594,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph.png" border="0" usemap="#classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph" alt=""/></div>
 <map name="classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph" id="classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph">
-<area shape="rect"  title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="108,5,249,32"/>
+<area shape="rect"  title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="352,5,493,32"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
@@ -512,7 +672,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c_cgraph.png" border="0" usemap="#classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c_cgraph" alt=""/></div>
 <map name="classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c_cgraph" id="classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c_cgraph">
 <area shape="rect"  title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="5,42,160,69"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="208,5,381,47"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="208,5,381,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="208,71,381,98"/>
 </map>
 </div>
@@ -541,7 +701,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file.">BitmapArray</a> object containing imagedata </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00092">92</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00107">107</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -564,8 +724,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00093">93</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00108">108</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -590,7 +751,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> object containing header information </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00091">91</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00106">106</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -615,7 +776,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Imagepath </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00090">90</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00105">105</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>

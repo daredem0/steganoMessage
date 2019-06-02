@@ -1,20 +1,23 @@
 <map id="ErrorHandler::printError" name="ErrorHandler::printError">
-<area shape="rect" id="node1" title="Prints a single Error corresponding to the." alt="" coords="763,309,936,336"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="269,31,445,57"/>
-<area shape="rect" id="node4" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="544,5,685,32"/>
-<area shape="rect" id="node5" href="$classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="515,107,715,133"/>
-<area shape="rect" id="node7" href="$classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="538,157,691,184"/>
-<area shape="rect" id="node9" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="519,259,711,285"/>
-<area shape="rect" id="node10" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="269,259,445,285"/>
-<area shape="rect" id="node11" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,360,130,387"/>
-<area shape="rect" id="node12" href="$classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="539,360,690,387"/>
-<area shape="rect" id="node13" href="$classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="537,411,692,437"/>
-<area shape="rect" id="node14" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="338,411,377,437"/>
-<area shape="rect" id="node15" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="42,563,163,589"/>
-<area shape="rect" id="node16" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="251,613,463,640"/>
-<area shape="rect" id="node17" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="525,512,704,539"/>
-<area shape="rect" id="node3" href="$classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="5,31,200,57"/>
-<area shape="rect" id="node6" href="$classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="248,107,467,133"/>
-<area shape="rect" id="node8" href="$classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="257,157,457,184"/>
-<area shape="rect" id="node18" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="254,512,461,539"/>
+<area shape="rect" id="node1" title="Prints a single Error corresponding to the." alt="" coords="899,360,1072,387"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="405,31,581,57"/>
+<area shape="rect" id="node4" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="680,5,821,32"/>
+<area shape="rect" id="node5" href="$classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="651,107,851,133"/>
+<area shape="rect" id="node7" href="$classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="674,157,827,184"/>
+<area shape="rect" id="node9" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="655,259,847,285"/>
+<area shape="rect" id="node10" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="405,284,581,311"/>
+<area shape="rect" id="node12" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,411,60,437"/>
+<area shape="rect" id="node13" href="$classImage.html#ae5daf791502caefeae1b15360d354513" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="675,664,826,691"/>
+<area shape="rect" id="node14" href="$classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="673,715,828,741"/>
+<area shape="rect" id="node15" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="426,208,561,235"/>
+<area shape="rect" id="node16" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,360,241,387"/>
+<area shape="rect" id="node17" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,563,283,589"/>
+<area shape="rect" id="node18" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="387,563,599,589"/>
+<area shape="rect" id="node19" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="661,461,840,488"/>
+<area shape="rect" id="node21" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,411,320,437"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="125,31,319,57"/>
+<area shape="rect" id="node6" href="$classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="384,107,603,133"/>
+<area shape="rect" id="node8" href="$classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="393,157,593,184"/>
+<area shape="rect" id="node11" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,284,336,311"/>
+<area shape="rect" id="node20" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="390,461,597,488"/>
 </map>

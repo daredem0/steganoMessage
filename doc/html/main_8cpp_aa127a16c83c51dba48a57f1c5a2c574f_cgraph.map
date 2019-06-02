@@ -7,5 +7,5 @@
 <area shape="rect" id="node8" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="477,169,598,196"/>
 <area shape="rect" id="node9" href="$classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="181,107,393,133"/>
 <area shape="rect" id="node5" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="448,245,627,272"/>
-<area shape="rect" id="node6" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title=" " alt="" coords="675,238,848,279"/>
+<area shape="rect" id="node6" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="675,238,848,279"/>
 </map>

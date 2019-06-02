@@ -123,3 +123,51 @@ bool SteganoMessage::exists(std::string p){
 bool SteganoMessage::getPathVerified(){
     return path;
 }
+
+int SteganoMessage::initialize(int argc, char *argv[]){
+    try{
+        //initialization stuff, especially read the header info, else everything will go horribly wrong in all possible ways
+        std::cout << "Trying to get path" << std::endl;
+        std::string tempPath;
+            argv[2] == NULL ? tempPath = NOPATH : tempPath = (std::string)argv[2]; //if there was a path given store it in tempPath
+            if(tempPath == NOPATH)
+                throw errPath; //throw error if we didnt get a path
+            std::cout << "Found Path: " << tempPath << std::endl; 
+            this->buildImage(tempPath); //Call constructor for image type object and set path
+            std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
+            this->getImage()->readImage(); //extract the image information
+            //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
+            return 0;
+    }
+    catch(int i){
+        err->printError(i);
+        return errPath;
+    }
+    catch(const std::exception& e){
+        err->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        err->printError(errUnknown);
+        return errUnknown;
+    }
+}
+
+int SteganoMessage::modeHandler(){
+    if(this->getMode() == ENCRYPT){
+        std::cout << "Please enter your message" << std::endl;
+        std::string mess;
+        std::getline(std::cin, mess);
+        this->buildMessage(mess);
+        //check if message was read properly:
+        std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
+        //call infusion stuff ********************TOBI********************
+        this->getImage()->generateBitmap(); 
+    }
+    else if(this->getMode() == DECRYPT){
+        //do some decryption, print message to std::out, be nasty and destroy the image file 
+    }
+    else if(this->getMode() == BMPTOTXT){
+        this->getImage()->bmpToTxt();
+    }
+}

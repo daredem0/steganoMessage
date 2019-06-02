@@ -86,15 +86,26 @@ public:
      * @return returns integer containing error code
      */
     int generateBitmap();
-    
+    /**
+     * @brief Generates txt file containing bitmap information as hex values
+     * @return returns integer containing error code
+     */
     int bmpToTxt();
+    /**
+     * @brief Converts a byte to hex string
+     * @return std:string containing hex value
+     */
     static std::string byteToHex(uint8_t v);
+    /**
+     * @brief Helps bmpToTxt to do the conversion. Responsible to converting x > 9 into A-F
+     * @return std:string containing hex value
+     */
     static std::string decToHex(uint8_t v);
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
-    ErrorHandler *errHandle;
+    ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
 };
 
 #endif /* IMAGE_H */

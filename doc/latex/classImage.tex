@@ -43,7 +43,16 @@ int \mbox{\hyperlink{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c}{write\+Text\+
 \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_a8c824ffac0c866a94752a2c1047932af}{get\+Bitmap\+Header}} ()
 \begin{DoxyCompactList}\small\item\em Getter for bitmap\+Header. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}{generate\+Bitmap}} ()
-\begin{DoxyCompactList}\small\item\em Generates new bitmap file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates new bitmap file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_aa16c9acd068079c676dec4186262b1b7}{bmp\+To\+Txt}} ()
+\begin{DoxyCompactList}\small\item\em Generates txt file containing bitmap information as hex values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb}{byte\+To\+Hex}} (uint8\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em Converts a byte to hex string. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classImage_a26f7e0b2649e2529df7e7aea46f2da4a}{dec\+To\+Hex}} (uint8\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em Helps bmp\+To\+Txt to do the conversion. Responsible to converting x $>$ 9 into A-\/F. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -132,6 +141,97 @@ Definition at line 30 of file Image.\+cpp.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_aa16c9acd068079c676dec4186262b1b7}\label{classImage_aa16c9acd068079c676dec4186262b1b7}} 
+\index{Image@{Image}!bmpToTxt@{bmpToTxt}}
+\index{bmpToTxt@{bmpToTxt}!Image@{Image}}
+\subsubsection{\texorpdfstring{bmpToTxt()}{bmpToTxt()}}
+{\footnotesize\ttfamily int Image\+::bmp\+To\+Txt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates txt file containing bitmap information as hex values. 
+
+\begin{DoxyReturn}{Returns}
+returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file Image.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_aa16c9acd068079c676dec4186262b1b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_aa16c9acd068079c676dec4186262b1b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb}\label{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb}} 
+\index{Image@{Image}!byteToHex@{byteToHex}}
+\index{byteToHex@{byteToHex}!Image@{Image}}
+\subsubsection{\texorpdfstring{byteToHex()}{byteToHex()}}
+{\footnotesize\ttfamily std\+::string Image\+::byte\+To\+Hex (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a byte to hex string. 
+
+\begin{DoxyReturn}{Returns}
+std\+:string containing hex value 
+\end{DoxyReturn}
+
+
+Definition at line 244 of file Image.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_a26f7e0b2649e2529df7e7aea46f2da4a}\label{classImage_a26f7e0b2649e2529df7e7aea46f2da4a}} 
+\index{Image@{Image}!decToHex@{decToHex}}
+\index{decToHex@{decToHex}!Image@{Image}}
+\subsubsection{\texorpdfstring{decToHex()}{decToHex()}}
+{\footnotesize\ttfamily std\+::string Image\+::dec\+To\+Hex (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helps bmp\+To\+Txt to do the conversion. Responsible to converting x $>$ 9 into A-\/F. 
+
+\begin{DoxyReturn}{Returns}
+std\+:string containing hex value 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}\label{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}} 
 \index{Image@{Image}!generateBitmap@{generateBitmap}}
 \index{generateBitmap@{generateBitmap}!Image@{Image}}
@@ -162,7 +262,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=289pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph}
+\includegraphics[width=350pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classImage_a8c824ffac0c866a94752a2c1047932af}\label{classImage_a8c824ffac0c866a94752a2c1047932af}} 
@@ -264,7 +364,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=263pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph}
+\includegraphics[width=350pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}\label{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}} 
@@ -326,7 +426,7 @@ Here is the call graph for this function\+:
 
 Pointer to \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} object containing imagedata 
 
-Definition at line 92 of file Image.\+h.
+Definition at line 107 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a560753c20e67a544be57bba971021375}\label{classImage_a560753c20e67a544be57bba971021375}} 
 \index{Image@{Image}!errHandle@{errHandle}}
@@ -334,9 +434,9 @@ Definition at line 92 of file Image.\+h.
 \subsubsection{\texorpdfstring{errHandle}{errHandle}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}$\ast$ Image\+::err\+Handle\hspace{0.3cm}{\ttfamily [private]}}
 
+Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-
-Definition at line 93 of file Image.\+h.
+Definition at line 108 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_adaf72c2df8979eafb4031dc0384dc49f}\label{classImage_adaf72c2df8979eafb4031dc0384dc49f}} 
 \index{Image@{Image}!header@{header}}
@@ -346,7 +446,7 @@ Definition at line 93 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} object containing header information 
 
-Definition at line 91 of file Image.\+h.
+Definition at line 106 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_aec8a33f176362d146da8c058798ebbff}\label{classImage_aec8a33f176362d146da8c058798ebbff}} 
 \index{Image@{Image}!path@{path}}
@@ -356,7 +456,7 @@ Definition at line 91 of file Image.\+h.
 
 Imagepath 
 
-Definition at line 90 of file Image.\+h.
+Definition at line 105 of file Image.\+h.
 
 
 

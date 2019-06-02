@@ -50,14 +50,29 @@ public:
      * @brief Prints all available errors (mainly for debugging)
      */
     void printAllErrors(void);
-    
+     /**
+     * @brief Prints error from a std::exception
+     * @param const std::exception& e- reference to the std::exception
+     */
     void printErrorStdEx(const std::exception& e);
-    
+     /**
+     * @brief Prints param to stdout or logfile
+     * @param std::string log - logmessage
+     */
     static void printLog(std::string log);
 private:
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     
+     /**
+     * @brief Fills list with a specified amount of a specified message. Uses push_back, no push_front version implemented
+     * @param std::string s - Specified message
+     * @param int am - Amount of positions to be filled 
+     */
     void fillList(std::string s, int am);
+     /**
+     * @brief Fills list with RESERVED constant std::string for a specified amount of slots
+     * @param int am - Amount of positions to be filled 
+     */
     void fillList(int am);
 };
 

@@ -1,0 +1,4 @@
+<map id="Image::byteToHex" name="Image::byteToHex">
+<area shape="rect" id="node1" title="Converts a byte to hex string." alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="$classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="193,5,328,32"/>
+</map>

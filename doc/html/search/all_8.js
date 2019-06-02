@@ -5,5 +5,6 @@ var searchData=
   ['image_2eh',['Image.h',['../Image_8h.html',1,'']]],
   ['image_2eo_2ed',['Image.o.d',['../Image_8o_8d.html',1,'']]],
   ['img',['img',['../classSteganoMessage.html#acd7dba217d5df515d93ddf814734ecf4',1,'SteganoMessage']]],
-  ['infuse',['infuse',['../classBitmapArray.html#a60edd8332724d4eb1ca37c91f0fefdc8',1,'BitmapArray']]]
+  ['infuse',['infuse',['../classBitmapArray.html#a60edd8332724d4eb1ca37c91f0fefdc8',1,'BitmapArray']]],
+  ['initialize',['initialize',['../classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc',1,'SteganoMessage']]]
 ];

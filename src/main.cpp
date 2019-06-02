@@ -57,19 +57,11 @@ int main(int argc, char *argv[]) {
         return terminate(steg);
     else{
         try{
-            cout << "Trying to get path" << endl;
-            string tempPath;
-            argv[2] == NULL ? tempPath = NOPATH : tempPath = (string)argv[2]; //if there was a path given store it in tempPath
-            if(tempPath == NOPATH)
-                throw errPath; //throw error if we didnt get a path
-            cout << "Found Path: " << tempPath << endl; 
-            steg->buildImage(tempPath); //Call constructor for image type object and set path
-            cout << "Built path: " << steg->getImage()->getPath() << endl;
-            steg->getImage()->readImage(); //extract the image information
-            //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
+            int errTemp = steg->initialize(argc, argv);
+            if(errTemp != 0)
+                throw errTemp; 
         }
     catch (int i){ //catch errPath and send it to printError
-        steg->getErrHandle()->printError(i);
         exit(errTerminate(steg));
     }
     catch (...){ //catch everything weird
@@ -79,20 +71,10 @@ int main(int argc, char *argv[]) {
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
             exit(errTerminate(steg));
         //debuggingStuff(steg);
-        if(steg->getMode() == ENCRYPT){
-            std::cout << "Please enter your message" << std::endl;
-            std::string mess;
-            std::getline(std::cin, mess);
-            steg->buildMessage(mess);
-            //check if message was read properly:
-            std::cout << "I found: " << steg->getMessage()->getMessage() << std::endl;
-            //call infusion stuff ********************TOBI********************
-            steg->getImage()->generateBitmap(); 
-            steg->getImage()->bmpToTxt();
-        }
-        else if(steg->getMode() == DECRYPT){
-            //do some decryption, print message to std::out, be nasty and destroy the image file 
-        }
+        
+        //modestuff here
+        steg->modeHandler();
+        
     if(steg != NULL)
         delete steg;
     return 0;
@@ -105,17 +87,21 @@ int ui(string argv, SteganoMessage *steg){
     try{
         cout << "Found switch: " << argv << endl;
         if(argv == ENCRYPT){
-                cout << "Found encrypt" << endl;
+            steg->getErrHandle()->printLog("Found " + ENCRYPT + "\n");
                 steg->setMode(ENCRYPT); 
         }
         else if(argv == DECRYPT){
-            cout << "Found decrypt" << endl;
+            steg->getErrHandle()->printLog("Found " + DECRYPT + "\n");
             steg->setMode(DECRYPT);
+        }
+        else if(argv == BMPTOTXT){
+            steg->getErrHandle()->printLog("Found " + BMPTOTXT + "\n");
+            steg->setMode(BMPTOTXT);
         }
         else if (argv == HELP)
             returnValue = printHelp();
         else{
-            cout << "No switch" << endl;
+            steg->getErrHandle()->printLog("Found " + NOSWITCH + "\n");
             throw errSwitch;
         }
     }
