@@ -163,7 +163,7 @@ std::string BitmapArray::infuse(std::string message){
             *itInner |= 0x3;
         }
     }
-    
+    //dunkel wars der Mond schien helle...
     
     
     return "Successfully infused bitmap with message";

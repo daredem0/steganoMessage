@@ -86,6 +86,10 @@ public:
      * @return returns integer containing error code
      */
     int generateBitmap();
+    
+    int bmpToTxt();
+    static std::string byteToHex(uint8_t v);
+    static std::string decToHex(uint8_t v);
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
