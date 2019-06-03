@@ -53,6 +53,7 @@ int main(int argc, char *argv[]) {
     cout << "argc: " << argc << endl;  //just for debugging
     cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
     returnValue = ui(argv[1] == NULL ? NOSWITCH : (string)argv[1], steg); //if there was no switch on terminal send NOSWITCH, otherwise send the switch from terminal
+    std::cout << "Set Filter" << std::endl;
     if(returnValue == -1)
         return terminate(steg);
     else{
@@ -71,6 +72,7 @@ int main(int argc, char *argv[]) {
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
             exit(errTerminate(steg));
         //debuggingStuff(steg);
+        
         
         //modestuff here
         steg->modeHandler();
@@ -93,6 +95,10 @@ int ui(string argv, SteganoMessage *steg){
         else if(argv == DECRYPT){
             steg->getErrHandle()->printLog("Found " + DECRYPT + "\n");
             steg->setMode(DECRYPT);
+        }
+        else if(argv == FILTER){
+            steg->getErrHandle()->printLog("Found " + FILTER + "\n");
+            steg->setMode(FILTER);
         }
         else if(argv == BMPTOTXT){
             steg->getErrHandle()->printLog("Found " + BMPTOTXT + "\n");

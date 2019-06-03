@@ -40,7 +40,7 @@ public:
      * @param uint32_t bit - color depth of bitmap
      * @param ErrorHandler *errH - Errorhandler 
      */
-    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH);
+    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm);
     /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original BitmapArray-type object
@@ -69,6 +69,7 @@ public:
      * @return std::string ***
      */
     std::string infuse(std::string message);
+    int setFilter(std::string fm);
     
 private:
     std::vector<std::vector<uint32_t>> bData; /**< 2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. */
@@ -77,6 +78,7 @@ private:
     uint32_t height;    /**< height of original file*/
     uint32_t bitOffset; /**< Headeroffest of original file*/
     uint32_t bitCount; /**< Color Depth of original file*/
+    std::string filterMode;
     
     ErrorHandler *errHandle;
     

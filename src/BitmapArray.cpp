@@ -20,7 +20,8 @@ BitmapArray::BitmapArray() {
     bData.clear();
 }
 
-BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH) : path(p), bitOffset(b), width(w), height(h), bitCount(bit), errHandle(errH){
+BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm) : path(p), bitOffset(b), width(w), 
+        height(h), bitCount(bit), errHandle(errH), filterMode(fm){
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
         itOuter->clear();
     }
@@ -130,9 +131,12 @@ void BitmapArray::printArray(char* c, size_t s){
 
 uint32_t BitmapArray::genInt(char* c, size_t s){
     uint32_t returnValue = 0;
+    //std::cout << filterMode << std::endl;
     for(int i = 0; i<s; ++i){
-        returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
-        //returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+        if(filterMode == COLORA || filterMode == COLORB)
+           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+        else
+            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
     }
     return returnValue;
 }
@@ -168,4 +172,8 @@ std::string BitmapArray::infuse(std::string message){
     
     return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
+}
+
+int BitmapArray::setFilter(std::string fm){
+    filterMode = fm;
 }

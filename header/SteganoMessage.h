@@ -114,6 +114,10 @@ public:
      */
     int modeHandler();
     
+    int setFilterMode(std::string mode);
+    
+    static int parseFilterMode(std::string m);
+    
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     Message *mess; /**<Message type objec to store message */
@@ -121,6 +125,8 @@ private:
     std::string mode; /**< -encrypt or -decryptl, if not set ""*/
     bool modeSet; /**< flag to check if mode is set*/
     bool path; /**< flag to check if path is verified*/
+    
+    
 };
 
 #endif /* STEGANOMESSAGE_H */

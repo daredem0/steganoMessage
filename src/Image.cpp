@@ -86,11 +86,12 @@ int Image::readImage(){
         return 3;
     header = new BitmapHeader(path, errHandle);
     header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle);
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
     return 0;
 }
 
 BitmapHeader *Image::getBitmapHeader(){return header;}
+BitmapArray *Image::getBitmapArray(){return array;}
 
 int Image::generateBitmap(){
     errHandle->printLog("Opening ofstream\n");
@@ -150,8 +151,10 @@ int Image::generateBitmap(){
                     case 24:
                     case 32:
                         for(int i = 0; i < (header->getBitCount()/8); ++i){
-                            //file << (uint8_t)((*itInner)>>((i+(header->getBitCount()/8)-1-i)*8)); //this will make greytone output file
-                            file << (uint8_t)((*itInner)>>((i*8))); //this will make colorful output file
+                            if(filterModeGrey == GREY)
+                                file << (uint8_t)((*itInner)>>((i+(header->getBitCount()/8)-1-i)*8)); //this will make greytone output file
+                            else
+                                file << (uint8_t)((*itInner)>>((i*8))); //this will make colorful output file
                         }
                         break;
                     default:
@@ -249,15 +252,12 @@ std::string Image::byteToHex(uint8_t v){
     for(int i = 0; i <= sizeof(v); ++i){
         if(i == 0)
             hex += "0x";
-        //hex += std::to_string(+((v >> ((sizeof(v)-i)*4))&0x0F));
         hex += decToHex(v >> ((sizeof(v)-i)*4));
-        //std::cout << "Hex: " << hex << std::endl;
     }
    return hex;    
 }
 
 std::string Image::decToHex(uint8_t v){
-    //std::cout << "genHex: " << +(v&0x0F) << std::endl;
     switch(+(v & 0x0F)){
         case 0:
         case 1:
@@ -285,4 +285,9 @@ std::string Image::decToHex(uint8_t v){
         default:
             return std::to_string(errUnknown);
     }
+}
+
+int Image::setFilter(std::string gr, std::string col){
+    filterModeGrey = gr;
+    filterModeCol = col;
 }

@@ -126,6 +126,7 @@ bool SteganoMessage::getPathVerified(){
 
 int SteganoMessage::initialize(int argc, char *argv[]){
     try{
+    
         //initialization stuff, especially read the header info, else everything will go horribly wrong in all possible ways
         std::cout << "Trying to get path" << std::endl;
         std::string tempPath;
@@ -135,6 +136,14 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             std::cout << "Found Path: " << tempPath << std::endl; 
             this->buildImage(tempPath); //Call constructor for image type object and set path
             std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
+            
+            //set filters if activated
+            if(argc > 3){
+                if(argv[3] == FILTER)
+                    this->setFilterMode(argv[4]);
+            }
+            else
+                this->setFilterMode("");
             this->getImage()->readImage(); //extract the image information
             //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
             return 0;
@@ -170,4 +179,43 @@ int SteganoMessage::modeHandler(){
     else if(this->getMode() == BMPTOTXT){
         this->getImage()->bmpToTxt();
     }
+    else if(this->getMode() == FILTER){
+        this->getImage()->generateBitmap(); 
+    }
+}
+
+
+int SteganoMessage::setFilterMode(std::string mode){
+    switch(parseFilterMode(mode)){
+        case noFilter:
+            this->getImage()->setFilter("", "");
+            break;
+        case grey:
+            this->getImage()->setFilter(GREY, "");
+            break;
+        case colorA:
+            this->getImage()->setFilter("", COLORA);
+            break;
+        case colorB:
+            this->getImage()->setFilter(GREY, COLORB);
+            break;
+        default:
+            return errUnknown;
+    }
+    return errNoError;
+}
+
+int SteganoMessage::parseFilterMode(std::string m){
+    Filter ret;
+    if (m == "")
+        ret = noFilter;
+    else if(m == GREY)
+        ret = grey;
+    else if(m == COLORA)
+        ret = colorA;
+    else if(m == COLORB)
+        ret = colorB;
+    else
+        ret = noFilter;
+    return ret;
 }

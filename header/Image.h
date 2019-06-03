@@ -81,6 +81,8 @@ public:
      */
     BitmapHeader *getBitmapHeader();
     
+    BitmapArray *getBitmapArray();
+    
     /**
      * @brief Generates new bitmap file
      * @return returns integer containing error code
@@ -101,11 +103,14 @@ public:
      * @return std:string containing hex value
      */
     static std::string decToHex(uint8_t v);
+    int setFilter(std::string gr, std::string col);
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
+    std::string filterModeGrey;
+    std::string filterModeCol;
 };
 
 #endif /* IMAGE_H */
