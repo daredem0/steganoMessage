@@ -64,6 +64,7 @@ public:
      * @return std::vector<std::vector<uint32_t>> containing image data
      */
     std::vector<std::vector<uint32_t>> getBData();
+    std::vector<std::vector<uint32_t>> *getBDataPointer();
     /**
      * @brief ***
      * @return std::string ***

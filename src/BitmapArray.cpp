@@ -177,3 +177,6 @@ std::string BitmapArray::infuse(std::string message){
 int BitmapArray::setFilter(std::string fm){
     filterMode = fm;
 }
+
+
+std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}

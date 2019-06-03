@@ -19,6 +19,7 @@
 #include "Message.h"
 #include "Image.h"
 #include <fstream>
+#include <cmath>
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 
@@ -118,6 +119,10 @@ public:
     
     static int parseFilterMode(std::string m);
     
+    std::string getFilter();
+    
+    int applyFilter();
+    
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     Message *mess; /**<Message type objec to store message */
@@ -125,8 +130,18 @@ private:
     std::string mode; /**< -encrypt or -decryptl, if not set ""*/
     bool modeSet; /**< flag to check if mode is set*/
     bool path; /**< flag to check if path is verified*/
+    std::string filter;
     
+    uint32_t revertUint(uint32_t d, size_t s);
+    static uint32_t invert(uint8_t w);
+    static uint32_t swapBytes(uint32_t d, size_t s);
+    static uint32_t swapOctets(uint32_t d, size_t s);
     
+    int filterInvertBits(std::vector<std::vector<uint32_t>> *d);
+    int filterSwapBytes(std::vector<std::vector<uint32_t>> *d);
+    int filterSwapOctets(std::vector<std::vector<uint32_t>> *d);
+    int filterSwapBytesOctets(std::vector<std::vector<uint32_t>> *d);
+    int filterSwapBytesOctetsBits(std::vector<std::vector<uint32_t>> *d);
 };
 
 #endif /* STEGANOMESSAGE_H */

@@ -59,6 +59,7 @@ int main(int argc, char *argv[]) {
     else{
         try{
             int errTemp = steg->initialize(argc, argv);
+            steg->applyFilter();
             if(errTemp != 0)
                 throw errTemp; 
         }
