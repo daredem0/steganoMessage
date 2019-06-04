@@ -76,11 +76,16 @@ const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
 const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
-enum Filter {noFilter = 0, grey = 1, colorA = 2, colorB = 3, color = 4};
+enum Filter {noFilter = 0, grey = 1, colorA = 2, colorB = 3, color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, swapByteOctetBit = 9};
 const std::string GREY = "grey";
 const std::string COLORA = "color_a";
 const std::string COLORB = "color_b";
 const std::string COLORDUMMY = "color";
+const std::string INVERTBIT = "inv_b";
+const std::string SWAPBYTE = "swap_by";
+const std::string SWAPOCTET = "swap_oc";
+const std::string SWAPBYOC = "swap_by_oc";
+const std::string SWAPBYOCBI = "swap_by_oc_bi";
 const std::string NOSWITCH = "";
 const std::string NOPATH = "";
 
