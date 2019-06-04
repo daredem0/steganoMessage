@@ -104,17 +104,28 @@ public:
      * @return std:string containing hex value
      */
     static std::string decToHex(uint8_t v);
+    /**
+     * @brief Sets flags for while reading/writing filters
+     * @return returns integer containing error code
+     */
     int setFilter(std::string gr, std::string col);
-    
+    /**
+     * @brief Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png
+     * @return returns integer containing error code
+     */
     static std::string identifyFileFormat(std::string path);
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
-    std::string filterModeGrey;
-    std::string filterModeCol;
+    std::string filterModeGrey;/**<Flag for while reading/writing filters*/
+    std::string filterModeCol;/**<Flag for while reading/writing filters*/
     
+    /**
+     * @brief Checks if a file already exists
+     * @return boolean value - true for exists already, false for not
+     */
     bool exists(const std::string& name);
 };
 

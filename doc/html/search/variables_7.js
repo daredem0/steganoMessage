@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['nopath',['NOPATH',['../constants_8h.html#a5135817df1c10dffea1a65d3b53bc95f',1,'constants.h']]],
-  ['noswitch',['NOSWITCH',['../constants_8h.html#a2a1db6ce40609283a560501ec5279802',1,'constants.h']]]
+  ['header',['header',['../classImage.html#adaf72c2df8979eafb4031dc0384dc49f',1,'Image']]],
+  ['headerstream',['headerStream',['../classBitmapHeader.html#a9109a897251733f77942008318482426',1,'BitmapHeader']]],
+  ['height',['height',['../classBitmapArray.html#adb8d1a8fcc55c3884ad3eea71c6042be',1,'BitmapArray']]],
+  ['help',['HELP',['../constants_8h.html#a44bc41b3869f7d1b6eb3f1e052befcdc',1,'constants.h']]],
+  ['helpfile',['HELPFILE',['../constants_8h.html#ae4cc63b23b293f8a994080c451b47301',1,'constants.h']]]
 ];

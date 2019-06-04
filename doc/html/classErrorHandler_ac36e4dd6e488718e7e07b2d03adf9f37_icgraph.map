@@ -11,7 +11,7 @@
 <area shape="rect" id="node15" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="426,382,561,409"/>
 <area shape="rect" id="node16" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="661,458,840,485"/>
 <area shape="rect" id="node19" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,509,320,535"/>
-<area shape="rect" id="node3" href="$classBitmapArray.html#acc897a70d058b238ad9efceb7731959e" title="Non&#45;Standard constructor." alt="" coords="125,27,319,54"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="125,27,319,54"/>
 <area shape="rect" id="node6" href="$classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5" title="Non&#45;Standard Constructor, stores p in path member and calls readHeader with p as argument." alt="" coords="384,103,603,130"/>
 <area shape="rect" id="node8" href="$classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="393,154,593,181"/>
 <area shape="rect" id="node11" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,357,336,383"/>

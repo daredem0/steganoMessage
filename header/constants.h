@@ -81,10 +81,12 @@ const std::string DECRYPT = "-decrypt";
 const std::string ENCRYPT = "-encrypt";
 const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
+const std::string CRFILTER = "-filter_cr";
     
 enum Filter {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
 color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, 
-swapByteOctetBit = 9, swapByteBit = 10};
+swapByteOctetBit = 9, swapByteBit = 10, swapBtG = 11, swapBtR = 12, swapGtR = 13, substBl = 14, substRd = 15, substGr = 16};
+
 const std::string GREY = "grey";
 const std::string COLORA = "color_a";
 const std::string COLORB = "color_b";
@@ -95,6 +97,12 @@ const std::string SWAPOCTET = "swap_oc";
 const std::string SWAPBYOC = "swap_by_oc";
 const std::string SWAPBYBI = "swap_by_bi";
 const std::string SWAPBYOCBI = "swap_by_oc_bi";
+const std::string SWAPBG = "swap_bg";
+const std::string SWAPBR = "swap_br";
+const std::string SWAPGR = "swap_gr";
+const std::string SUBSTB = "subst_bl";
+const std::string SUBSTR = "subst_rd";
+const std::string SUBSTG = "subst_gr";
 const std::string NOSWITCH = "";
 const std::string NOPATH = "";
 
@@ -107,16 +115,24 @@ const std::string HELPFILE =
 "\n"
 "example:\n"
 "\n"
-"./steganoMessage -encrypt ./example.bmp\n"
+"./steganoMessage -encrypt <path>\n"
 "    This will start the routine to encrypt your message into example.bmp\n"
-"./steganoMessage -decrypt ./example.bmp\n"
+"./steganoMessage -decrypt <path>\n"
 "    This will start the routine to decrypt your message from example.bmp\n"
 "\n"
 "./steganoMessage -h\n"
-    "This will return the information contained in this help file. \n"
-"./steganoMessage -convert_txt\n"
-    "This will convert the bitmap file into a readbale text file containing all information as hex values."
+"   This will return the information contained in this help file. \n"
+"./steganoMessage -convert_txt <path>\n"
+"   This will convert the bitmap file into a readable text file containing all information as hex values."
 "./steganoMessage -filter <path> -filter <type>\n"
-    "Applies filter, possible values: grey/color_a/color_b";
+"   Applies filter, possible values: grey/color_a/color_b <- Filters that are going to be applied while reading/writing\n"
+"color <- Dummy filter\n"
+"inv_n/swap_by/swap_oc/swap_by_oc/swap_by_bi/swap_by_oc_bi/swap_bg/swap_br/swap_gr/subst_bl/subst_rd/subst_gr <- Filters that will be applied after reading before writing.\n"
+"./steganoMessage -filter_cr <path> -filter <type>\n"
+"   Activates crazy mode for filters. Same filter codes, automatically shifts the color."
+"   Sorry, no time yet to describe the filter effects. Just try.\n"
+"\n"
+"Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\n"
+"./steganoMessage -decrypt/-encrypt <path> -filter <type>";
 
 #endif /* CONSTANTS_H */

@@ -1,0 +1,4 @@
+<map id="SteganoMessage::revertUint" name="SteganoMessage::revertUint">
+<area shape="rect" id="node1" title="Turns the whole bit&#45;pattern around." alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#af46fa3a09a19fc73c146e22d6a32657a" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="260,5,439,32"/>
+</map>

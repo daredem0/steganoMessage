@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['errorhandler',['ErrorHandler',['../classErrorHandler.html#a7e5f379bd231442b898cef94556b2107',1,'ErrorHandler::ErrorHandler()'],['../classErrorHandler.html#add20b373ee276ee2ef040f6dd913a86b',1,'ErrorHandler::ErrorHandler(const ErrorHandler &amp;orig)']]],
-  ['errterminate',['errTerminate',['../main_8cpp.html#a8b14b9f3865042b7e6a83d3080e96e4c',1,'main.cpp']]],
-  ['exists',['exists',['../classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b',1,'SteganoMessage']]]
+  ['debuggingstuff',['debuggingStuff',['../main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f',1,'main.cpp']]],
+  ['dectohex',['decToHex',['../classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a',1,'Image']]],
+  ['displayprogress',['displayProgress',['../classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5',1,'SteganoMessage::displayProgress(int &amp;c, int p)'],['../classSteganoMessage.html#aa6e24f6ed5afcf38dcba28fb91a74d21',1,'SteganoMessage::displayProgress(int p)']]],
+  ['dummyfilter',['dummyFilter',['../classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7',1,'SteganoMessage']]]
 ];

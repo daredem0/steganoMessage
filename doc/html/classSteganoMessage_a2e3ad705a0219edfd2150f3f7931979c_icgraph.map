@@ -1,7 +1,12 @@
 <map id="SteganoMessage::getImage" name="SteganoMessage::getImage">
-<area shape="rect" id="node1" title="Getter for image object." alt="" coords="384,63,587,90"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,88,60,115"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,38,283,64"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,88,320,115"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,139,336,166"/>
+<area shape="rect" id="node1" title="Getter for image object." alt="" coords="1163,183,1365,210"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,183,60,210"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="940,57,1061,83"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="642,158,838,185"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="365,209,593,235"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#a5c3ef910b17f4bbe32a73a33be9d7586" title="Sets the mode for the after reading filter." alt="" coords="887,158,1115,185"/>
+<area shape="rect" id="node7" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,285,317,311"/>
+<area shape="rect" id="node8" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="641,335,839,362"/>
+<area shape="rect" id="node10" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="904,361,1097,387"/>
+<area shape="rect" id="node9" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="368,361,591,387"/>
 </map>

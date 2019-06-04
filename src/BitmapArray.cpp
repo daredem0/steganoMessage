@@ -128,19 +128,6 @@ void BitmapArray::printArray(char* c, size_t s){
     errHandle->printLog("\n");
 }
 
-
-uint32_t BitmapArray::genInt(char* c, size_t s){
-    uint32_t returnValue = 0;
-    //std::cout << filterMode << std::endl;
-    for(int i = 0; i<s; ++i){
-        if(filterMode == COLORA || filterMode == COLORB)
-           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
-        else
-            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
-    }
-    return returnValue;
-}
-
 void BitmapArray::printArray(){
     int i = 0;
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
@@ -156,9 +143,24 @@ void BitmapArray::printArray(){
     }
 }
 
-std::vector<std::vector<uint32_t>> BitmapArray::getBData(){
-    return bData;
+
+uint32_t BitmapArray::genInt(char* c, size_t s){
+    uint32_t returnValue = 0;
+    //std::cout << filterMode << std::endl;
+    for(int i = 0; i<s; ++i){
+        if(filterMode == COLORA || filterMode == COLORB)
+           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+        else
+            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
+    }
+    return returnValue;
 }
+
+std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
+
+std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
+
+int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
 std::string BitmapArray::infuse(std::string message){
     
@@ -174,9 +176,3 @@ std::string BitmapArray::infuse(std::string message){
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
 
-int BitmapArray::setFilter(std::string fm){
-    filterMode = fm;
-}
-
-
-std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}

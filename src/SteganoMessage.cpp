@@ -142,8 +142,14 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
             //set filters if activated
             if(argc > 3){
-                if(argv[3] == FILTER)
+                if(argv[3] == FILTER){
                     this->setFilterMode(argv[4]);
+                    crazy = false;
+                }
+                else if(argv[3] == CRFILTER){
+                    this->setFilterMode(argv[4]);
+                    crazy = true;
+                }
             }
             else
                 this->setFilterMode("");
@@ -219,13 +225,23 @@ int SteganoMessage::setFilterMode(std::string mode){
         stegFilter = swapByteOctetBit;
     else if(mode == SWAPBYBI)
         stegFilter = swapByteBit;
+    else if(mode == SWAPBG)
+        stegFilter = swapBtG;
+    else if(mode == SWAPBR)
+        stegFilter = swapBtR;
+    else if(mode == SWAPGR)
+        stegFilter = swapGtR;
+    else if(mode == SUBSTB)
+        stegFilter = substBl;
+    else if(mode == SUBSTR)
+        stegFilter = substRd;
+    else if(mode == SUBSTG)
+        stegFilter = substGr;
     else
         stegFilter = noFilter;
     
     return errNoError;
 }
-
-std::string SteganoMessage::getFilter(){return filter;}
 
 int SteganoMessage::applyFilter(){
     std::cout << "Successfully filter application initialized" << std::endl;
@@ -260,14 +276,27 @@ int SteganoMessage::applyFilter(){
         case swapByteBit:
             genFilter(data, swapBytesBits);
             return errNoError;
+        case swapBtG:
+            genFilter(data, swapBG);
+            return errNoError;
+        case swapBtR:
+            genFilter(data, swapBR);
+            return errNoError;
+        case swapGtR:
+            genFilter(data, swapGR);
+            return errNoError;
+        case substBl:
+            genFilter(data, substB);
+            return errNoError;
+        case substRd:
+            genFilter(data, substR);
+            return errNoError;
+        case substGr:
+            genFilter(data, substG);
+            return errNoError;
         default:
             return errUnknown;
     }
-    //genFilter(data, revertUint);
-    //genFilter(data, swapBytes);
-    //genFilter(data, swapOctets);
-    //genFilter(data, swapBytesOctets);
-    //genFilter(data, swapBytesOctetsBits);
 }
 
 void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
@@ -275,7 +304,10 @@ void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (
     int pixel = getPixel();
     for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
         for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = f(*itInner, sizeof(*itInner));
+            if(crazy == true)
+                *itInner = f(*itInner, sizeof(*itInner));
+            else
+                *itInner = f(*itInner, this->getImage()->getBitmapHeader()->getBitCount()/8);
             displayProgress(count, pixel);
         }
     }
@@ -283,7 +315,48 @@ void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (
 }
 
 void SteganoMessage::dummyFilter(std::vector<std::vector<uint32_t>> *d){
-    //...
+    std::cout << "In dummy filter" << std::endl;
+    
+    genFilter(d, substB);
+}
+
+uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+        case 4:
+            return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
+    }
+}
+
+uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+        case 4:
+            return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
+    }
+}
+
+uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+        case 4:
+            return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
+    }
 }
 
 uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
@@ -312,16 +385,51 @@ uint32_t SteganoMessage::swapBytes(uint32_t d, size_t s){
             return ((d & 0xFF000000) >> 24 | (d & 0x000000FF) << 24) | ((d & 0xFF0000) >> 8 | (d & 0xFF00) << 8);
     }
 }
-uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){
-    return swapBytes(swapOctets(d, s), s);    
+
+uint32_t SteganoMessage::substB(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d -(d & 0xFF0000)) | ((d & 0x00FF00) - (d & 0xFF0000 >> 8)) | ((d & 0x0000FF) - (d & 0xFF0000 >> 16)); 
+        case 4:
+            return (d -(d & 0xFF000000)) | ((d & 0x00FF0000) - (d & 0xFF000000 >> 8)) | ((d & 0x0000FF00) - (d & 0xFF000000 >> 16)) | (d & 0xFF); 
+    }
 }
 
-uint32_t SteganoMessage::swapBytesOctetsBits(uint32_t d, size_t s){
-    return revertUint(swapBytes(swapOctets(d, s), s),s);    
+uint32_t SteganoMessage::substR(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d -(d & 0x0000FF)) | ((d & 0x00FF00) - (d & 0x0000FF << 8)) | ((d & 0xFF0000) - (d & 0x0000FF << 16)); 
+        case 4:
+            return (d -(d & 0x0000FF00)) | ((d & 0x00FF0000) - (d & 0x0000FF00 << 8)) | ((d & 0xFF000000) - (d & 0x0000FF00 << 16)) | (d & 0xFF); 
+    }
 }
 
-uint32_t SteganoMessage::swapBytesBits(uint32_t d, size_t s){
-    return revertUint(swapBytes(d,s),s);
+uint32_t SteganoMessage::substG(uint32_t d, size_t s){
+    switch(s){
+        case 1:
+            return d;
+        case 2:
+            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+        case 3:
+            return (d -(d & 0x00FF00)) | ((d & 0xFF0000) - (d & 0x00FF00 << 8)) | ((d & 0x0000FF) - (d & 0x00FF00 >> 8)); 
+        case 4:
+            return (d -(d & 0x00FF0000)) | ((d & 0xFF000000) - (d & 0x00FF0000 << 8)) | ((d & 0x0000FF00) - (d & 0x00FF0000 >> 8)) | (d & 0xFF); 
+    }
+}
+
+uint32_t SteganoMessage::invert(uint8_t w){
+   w = (w & 0xF0) >> 4 | (w & 0x0F) << 4;
+   w = (w & 0xCC) >> 2 | (w & 0x33) << 2;
+   w = (w & 0xAA) >> 1 | (w & 0x55) << 1;
+   return w;
 }
 
 uint32_t SteganoMessage::revertUint(uint32_t d, size_t s){
@@ -332,11 +440,16 @@ uint32_t SteganoMessage::revertUint(uint32_t d, size_t s){
     return out;
 }
 
-uint32_t SteganoMessage::invert(uint8_t w){
-   w = (w & 0xF0) >> 4 | (w & 0x0F) << 4;
-   w = (w & 0xCC) >> 2 | (w & 0x33) << 2;
-   w = (w & 0xAA) >> 1 | (w & 0x55) << 1;
-   return w;
+uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){
+    return swapBytes(swapOctets(d, s), s);    
+}
+
+uint32_t SteganoMessage::swapBytesOctetsBits(uint32_t d, size_t s){
+    return revertUint(swapBytes(swapOctets(d, s), s),s);    
+}
+
+uint32_t SteganoMessage::swapBytesBits(uint32_t d, size_t s){
+    return revertUint(swapBytes(d,s),s);
 }
 
 void SteganoMessage::displayProgress(int& c, int p){
@@ -356,77 +469,3 @@ void SteganoMessage::displayProgress(int p){
 int SteganoMessage::getPixel(){
    return this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
 }
-
-//Ungeneric old stuff. Propably not needed anymore but scared to delete
-/* 
- int SteganoMessage::filterSwapBytesOctets(std::vector<std::vector<uint32_t>> *d){ //noisy and heave shift into yellowish
-    int count = 0;
-    int pixle = this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = swapBytes(swapOctets(*itInner, sizeof(*itInner)), sizeof(*itInner));
-            if((uint32_t)(((double)count/pixle)*100) - (uint32_t)(((double)(++count)/pixle)*100) > 1){
-                std::cout << ((double)count/pixle)*100 << "% done"  << '\r' << std::flush;
-                //std::cout << "\033[2J\033[1;1H"; //ANSI Code to clear terminal
-            }
-        }
-    }
-    std::cout << 100.000 << "% done" << std::endl;
-}
-
-int SteganoMessage::filterSwapBytesOctetsBits(std::vector<std::vector<uint32_t>> *d){
-    int count = 0;
-    int pixel = getPixel();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = revertUint(swapBytes(swapOctets(*itInner, sizeof(*itInner)), sizeof(*itInner)),sizeof(*itInner));
-            displayProgress(count, pixel);
-        }
-    }
-    displayProgress(0);
-}
-
-int SteganoMessage::filterSwapOctets(std::vector<std::vector<uint32_t>> *d){ //super strong noice and psychodelic color effect
-    int count = 0;
-    int pixle = this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = swapOctets(*itInner, sizeof(*itInner));
-            if((uint32_t)(((double)count/pixle)*100) - (uint32_t)(((double)(++count)/pixle)*100) > 1){
-                std::cout << ((double)count/pixle)*100 << "% done" << '\r' << std::flush;
-                //std::cout << "\033[2J\033[1;1H"; //ANSI Code to clear terminal
-            }
-        }
-    }
-    std::cout << 100.000 << "% done" << std::endl;
-}
-
-int SteganoMessage::filterSwapBytes(std::vector<std::vector<uint32_t>> *d){ //strong color shift into yellowish
-    int count = 0;
-    int pixle = this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = swapBytes(*itInner, sizeof(*itInner));
-            if((uint32_t)(((double)count/pixle)*100) - (uint32_t)(((double)(++count)/pixle)*100) > 1){
-                std::cout << ((double)count/pixle)*100 << "% done" << '\r' << std::flush;
-                //std::cout << "\033[2J\033[1;1H"; //ANSI Code to clear terminal
-            }
-        }
-    }
-    std::cout << 100.000 << "% done" << std::endl;
-}
-
-int SteganoMessage::filterInvertBits(std::vector<std::vector<uint32_t>> *d){ //adds strong noise and shifts the color
-    int count = 0;
-    int pixle = this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner = revertUint(*itInner, sizeof(*itInner));
-            if((uint32_t)(((double)count/pixle)*100) - (uint32_t)(((double)(++count)/pixle)*100) > 1){
-                std::cout << ((double)count/pixle)*100 << "% done" << '\r' << std::flush;
-                //std::cout << "\033[2J\033[1;1H"; //ANSI Code to clear terminal
-            }
-        }
-    }
-    std::cout << 100.000 << "% done" << std::endl;
-}*/

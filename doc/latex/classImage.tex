@@ -42,17 +42,28 @@ int \mbox{\hyperlink{classImage_a2dc30c9d6280b8c0edd2f4f0ab474a5c}{write\+Text\+
 \begin{DoxyCompactList}\small\item\em Writes information to a text file !!\+Not debugged!! !!\+No Error Handling implemented!! !!\+Dont use!! \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} $\ast$ \mbox{\hyperlink{classImage_a8c824ffac0c866a94752a2c1047932af}{get\+Bitmap\+Header}} ()
 \begin{DoxyCompactList}\small\item\em Getter for bitmap\+Header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} $\ast$ \mbox{\hyperlink{classImage_a75b5051c6cc39a5e3f86d287f5cc7f9c}{get\+Bitmap\+Array}} ()
+\item 
 int \mbox{\hyperlink{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}{generate\+Bitmap}} ()
 \begin{DoxyCompactList}\small\item\em Generates new bitmap file. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classImage_aa16c9acd068079c676dec4186262b1b7}{bmp\+To\+Txt}} ()
-\begin{DoxyCompactList}\small\item\em Generates txt file containing bitmap information as hex values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates txt file containing bitmap information as hex values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_ac81078a3d6c364aada9afc3c8a668ef8}{set\+Filter}} (std\+::string gr, std\+::string col)
+\begin{DoxyCompactList}\small\item\em Sets flags for while reading/writing filters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::string \mbox{\hyperlink{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb}{byte\+To\+Hex}} (uint8\+\_\+t v)
 \begin{DoxyCompactList}\small\item\em Converts a byte to hex string. \end{DoxyCompactList}\item 
 static std\+::string \mbox{\hyperlink{classImage_a26f7e0b2649e2529df7e7aea46f2da4a}{dec\+To\+Hex}} (uint8\+\_\+t v)
-\begin{DoxyCompactList}\small\item\em Helps bmp\+To\+Txt to do the conversion. Responsible to converting x $>$ 9 into A-\/F. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Helps bmp\+To\+Txt to do the conversion. Responsible to converting x $>$ 9 into A-\/F. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classImage_ac4e8db14cfd60a6a7085e6fcb83488a4}{identify\+File\+Format}} (std\+::string \mbox{\hyperlink{classImage_aec8a33f176362d146da8c058798ebbff}{path}})
+\begin{DoxyCompactList}\small\item\em Identifies the file format of the loaded image. Possible so far\+: .bmp; .jpg,; .gif; .png. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classImage_a83d7183bfcd632649c36504d9ab07e36}{exists}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Checks if a file already exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,13 +74,17 @@ std\+::string \mbox{\hyperlink{classImage_aec8a33f176362d146da8c058798ebbff}{pat
 \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} $\ast$ \mbox{\hyperlink{classImage_a1c18dd7d9eda416d44e7eb408d5b3c38}{array}}
 \item 
 \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classImage_a560753c20e67a544be57bba971021375}{err\+Handle}}
+\item 
+std\+::string \mbox{\hyperlink{classImage_aa05610d5ebee3b0fce0463d2a0b1323f}{filter\+Mode\+Grey}}
+\item 
+std\+::string \mbox{\hyperlink{classImage_a0b4e4d5994ff72c9f3c99913037c627f}{filter\+Mode\+Col}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \mbox{\hyperlink{classImage}{Image}} Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. 
 
-Definition at line 30 of file Image.\+h.
+Definition at line 31 of file Image.\+h.
 
 
 
@@ -156,18 +171,16 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 179 of file Image.\+cpp.
+Definition at line 191 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_aa16c9acd068079c676dec4186262b1b7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -189,18 +202,16 @@ std\+:string containing hex value
 \end{DoxyReturn}
 
 
-Definition at line 244 of file Image.\+cpp.
+Definition at line 259 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=322pt]{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -222,14 +233,38 @@ std\+:string containing hex value
 \end{DoxyReturn}
 
 
-Definition at line 256 of file Image.\+cpp.
+Definition at line 269 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_a83d7183bfcd632649c36504d9ab07e36}\label{classImage_a83d7183bfcd632649c36504d9ab07e36}} 
+\index{Image@{Image}!exists@{exists}}
+\index{exists@{exists}!Image@{Image}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Image\+::exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if a file already exists. 
+
+\begin{DoxyReturn}{Returns}
+boolean value -\/ true for exists already, false for not 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Image.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classImage_a26f7e0b2649e2529df7e7aea46f2da4a_icgraph}
+\includegraphics[width=350pt]{classImage_a83d7183bfcd632649c36504d9ab07e36_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}\label{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}} 
@@ -247,7 +282,7 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 95 of file Image.\+cpp.
+Definition at line 101 of file Image.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -263,6 +298,24 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_a75b5051c6cc39a5e3f86d287f5cc7f9c}\label{classImage_a75b5051c6cc39a5e3f86d287f5cc7f9c}} 
+\index{Image@{Image}!getBitmapArray@{getBitmapArray}}
+\index{getBitmapArray@{getBitmapArray}!Image@{Image}}
+\subsubsection{\texorpdfstring{getBitmapArray()}{getBitmapArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} $\ast$ Image\+::get\+Bitmap\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a75b5051c6cc39a5e3f86d287f5cc7f9c_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classImage_a8c824ffac0c866a94752a2c1047932af}\label{classImage_a8c824ffac0c866a94752a2c1047932af}} 
@@ -282,6 +335,14 @@ Getter for bitmap\+Header.
 
 Definition at line 93 of file Image.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_a8c824ffac0c866a94752a2c1047932af_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classImage_a885989eb723cb0a1fc0555c7e8de817e}\label{classImage_a885989eb723cb0a1fc0555c7e8de817e}} 
 \index{Image@{Image}!getPath@{getPath}}
 \index{getPath@{getPath}!Image@{Image}}
@@ -305,6 +366,31 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_a885989eb723cb0a1fc0555c7e8de817e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classImage_ac4e8db14cfd60a6a7085e6fcb83488a4}\label{classImage_ac4e8db14cfd60a6a7085e6fcb83488a4}} 
+\index{Image@{Image}!identifyFileFormat@{identifyFileFormat}}
+\index{identifyFileFormat@{identifyFileFormat}!Image@{Image}}
+\subsubsection{\texorpdfstring{identifyFileFormat()}{identifyFileFormat()}}
+{\footnotesize\ttfamily std\+::string Image\+::identify\+File\+Format (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Identifies the file format of the loaded image. Possible so far\+: .bmp; .jpg,; .gif; .png. 
+
+\begin{DoxyReturn}{Returns}
+returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 304 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_ac4e8db14cfd60a6a7085e6fcb83488a4_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classImage_ae5daf791502caefeae1b15360d354513}\label{classImage_ae5daf791502caefeae1b15360d354513}} 
@@ -367,6 +453,31 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classImage_ac81078a3d6c364aada9afc3c8a668ef8}\label{classImage_ac81078a3d6c364aada9afc3c8a668ef8}} 
+\index{Image@{Image}!setFilter@{setFilter}}
+\index{setFilter@{setFilter}!Image@{Image}}
+\subsubsection{\texorpdfstring{setFilter()}{setFilter()}}
+{\footnotesize\ttfamily int Image\+::set\+Filter (\begin{DoxyParamCaption}\item[{std\+::string}]{gr,  }\item[{std\+::string}]{col }\end{DoxyParamCaption})}
+
+
+
+Sets flags for while reading/writing filters. 
+
+\begin{DoxyReturn}{Returns}
+returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file Image.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classImage_ac81078a3d6c364aada9afc3c8a668ef8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}\label{classImage_aabb8cec47c25c0e3a36ba2a455c2aa6c}} 
 \index{Image@{Image}!setPath@{setPath}}
 \index{setPath@{setPath}!Image@{Image}}
@@ -426,7 +537,7 @@ Here is the call graph for this function\+:
 
 Pointer to \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} object containing imagedata 
 
-Definition at line 107 of file Image.\+h.
+Definition at line 120 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a560753c20e67a544be57bba971021375}\label{classImage_a560753c20e67a544be57bba971021375}} 
 \index{Image@{Image}!errHandle@{errHandle}}
@@ -436,7 +547,27 @@ Definition at line 107 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 108 of file Image.\+h.
+Definition at line 121 of file Image.\+h.
+
+\mbox{\Hypertarget{classImage_a0b4e4d5994ff72c9f3c99913037c627f}\label{classImage_a0b4e4d5994ff72c9f3c99913037c627f}} 
+\index{Image@{Image}!filterModeCol@{filterModeCol}}
+\index{filterModeCol@{filterModeCol}!Image@{Image}}
+\subsubsection{\texorpdfstring{filterModeCol}{filterModeCol}}
+{\footnotesize\ttfamily std\+::string Image\+::filter\+Mode\+Col\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag for while reading/writing filters 
+
+Definition at line 123 of file Image.\+h.
+
+\mbox{\Hypertarget{classImage_aa05610d5ebee3b0fce0463d2a0b1323f}\label{classImage_aa05610d5ebee3b0fce0463d2a0b1323f}} 
+\index{Image@{Image}!filterModeGrey@{filterModeGrey}}
+\index{filterModeGrey@{filterModeGrey}!Image@{Image}}
+\subsubsection{\texorpdfstring{filterModeGrey}{filterModeGrey}}
+{\footnotesize\ttfamily std\+::string Image\+::filter\+Mode\+Grey\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag for while reading/writing filters 
+
+Definition at line 122 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_adaf72c2df8979eafb4031dc0384dc49f}\label{classImage_adaf72c2df8979eafb4031dc0384dc49f}} 
 \index{Image@{Image}!header@{header}}
@@ -446,7 +577,7 @@ Definition at line 108 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} object containing header information 
 
-Definition at line 106 of file Image.\+h.
+Definition at line 119 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_aec8a33f176362d146da8c058798ebbff}\label{classImage_aec8a33f176362d146da8c058798ebbff}} 
 \index{Image@{Image}!path@{path}}
@@ -456,7 +587,7 @@ Definition at line 106 of file Image.\+h.
 
 Imagepath 
 
-Definition at line 105 of file Image.\+h.
+Definition at line 118 of file Image.\+h.
 
 
 
