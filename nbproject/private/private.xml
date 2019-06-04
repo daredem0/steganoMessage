@@ -11,13 +11,9 @@
             <file>file:/home/florian/git/steganoMessage/header/Image.h</file>
             <file>file:/home/florian/git/steganoMessage/src/Image.cpp</file>
             <file>file:/home/florian/git/steganoMessage/src/BitmapArray.cpp</file>
-            <file>file:/home/florian/git/steganoMessage/header/ErrorHandler.h</file>
-            <file>file:/home/florian/git/steganoMessage/header/constants.h</file>
+            <file>file:/home/florian/git/steganoMessage/src/BitmapHeader.cpp</file>
             <file>file:/home/florian/git/steganoMessage/header/SteganoMessage.h</file>
-            <file>file:/home/florian/git/steganoMessage/src/ErrorHandler.cpp</file>
-            <file>file:/home/florian/git/steganoMessage/header/BitmapHeader.h</file>
             <file>file:/home/florian/git/steganoMessage/src/SteganoMessage.cpp</file>
-            <file>file:/home/florian/git/steganoMessage/header/BitmapArray.h</file>
         </group>
     </open-files>
 </project-private>

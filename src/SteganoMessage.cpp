@@ -202,6 +202,21 @@ int SteganoMessage::setFilterMode(std::string mode){
         case color:
             filter = COLORDUMMY;
             break;
+        case invertBit:
+            filter = INVERTBIT;
+            break;
+        case swapByte:
+            filter = SWAPBYTE;
+            break;
+        case swapOctet:
+            filter = SWAPOCTET;
+            break;
+        case swapByteOctet:
+            filter = SWAPBYOC;
+            break;
+        case swapByteOctetBit:
+            filter = SWAPBYOCBI;
+            break;
         default:
             return errUnknown;
     }
@@ -218,9 +233,16 @@ int SteganoMessage::parseFilterMode(std::string m){
         ret = colorA;
     else if(m == COLORB)
         ret = colorB;
-    else if(m == COLORDUMMY){
+    else if(m == COLORDUMMY)
         ret = color;
-    }
+    else if(m == SWAPBYTE)
+        ret = swapByte;
+    else if(m == SWAPOCTET)
+        ret = swapOctet;
+    else if(m == SWAPBYOC)
+        ret = swapByteOctet;
+    else if(m == SWAPBYOCBI)
+        ret = swapByteOctetBit;
     else
         ret = noFilter;
     return ret;
