@@ -164,14 +164,46 @@ int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
 std::string BitmapArray::infuse(std::string message){
     
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner |= 0x3;
+    std::string:iterator chariterator = message.begin();
+    auto itOuter = bData.begin();
+    auto itInner = itOuter->begin();
+    int charcounter = 0;
+    
+    for(itOuter; itOuter != bData.end(); ++itOuter){
+        for(itInner; itInner != itOuter->end(); ++itInner){
+            for(chariterator; chariterator != message.end(); ++chariterator){
+                *itInner |= 0x3;
+                char character = *chariterator;
+                char infusechar = 0xFF;
+                switch (charcounter) {
+                    case 0:
+                        charcounter += 1;
+                        break;
+                        
+                    case 1:
+                        character = << << character;
+                        charcounter += 1;
+                        break;
+                        
+                    case 2:
+                        character = << << << << character;
+                        charcounter += 1;
+                        break;
+                        
+                    case 3:
+                        character = << << << << << << character;
+                        charcounter = 0;
+                        break;
+                        
+                    default:
+                        break;
+                }
+                infusechar << << character;
+                *itInner &= infusechar;
+            }
         }
     }
-    //dunkel wars der Mond schien helle...
-    
-    
+
     return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
