@@ -1,0 +1,9 @@
+<map id="SteganoMessage::genFilter" name="SteganoMessage::genFilter">
+<area shape="rect" id="node1" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="5,56,203,83"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="275,56,469,83"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="541,5,744,32"/>
+<area shape="rect" id="node7" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="251,107,493,133"/>
+<area shape="rect" id="node4" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="549,56,736,83"/>
+<area shape="rect" id="node5" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="549,107,737,133"/>
+<area shape="rect" id="node6" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="551,157,734,184"/>
+</map>

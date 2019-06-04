@@ -1,0 +1,7 @@
+<map id="SteganoMessage::getPixel" name="SteganoMessage::getPixel">
+<area shape="rect" id="node1" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="5,81,199,108"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="247,5,449,32"/>
+<area shape="rect" id="node3" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="255,56,441,83"/>
+<area shape="rect" id="node4" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="254,107,442,133"/>
+<area shape="rect" id="node5" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="257,157,439,184"/>
+</map>

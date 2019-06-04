@@ -59,6 +59,7 @@ int main(int argc, char *argv[]) {
     else{
         try{
             int errTemp = steg->initialize(argc, argv);
+            steg->applyFilter();
             if(errTemp != 0)
                 throw errTemp; 
         }
@@ -100,6 +101,10 @@ int ui(string argv, SteganoMessage *steg){
             steg->getErrHandle()->printLog("Found " + FILTER + "\n");
             steg->setMode(FILTER);
         }
+        else if(argv == CRFILTER){
+            steg->getErrHandle()->printLog("Found " + CRFILTER + "\n");
+            steg->setMode(CRFILTER);
+        }
         else if(argv == BMPTOTXT){
             steg->getErrHandle()->printLog("Found " + BMPTOTXT + "\n");
             steg->setMode(BMPTOTXT);
@@ -108,7 +113,7 @@ int ui(string argv, SteganoMessage *steg){
             returnValue = printHelp();
         else{
             steg->getErrHandle()->printLog("Found " + NOSWITCH + "\n");
-            throw errSwitch;
+            returnValue = printHelp();
         }
     }
     catch (int i){ //catch errSwitch and send it to printError

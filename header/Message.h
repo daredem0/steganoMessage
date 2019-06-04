@@ -58,7 +58,7 @@ public:
     std::string getMessage(void);
 private:
     std::string mess; /**< Stores the message extracted from terminal.*/
-    ErrorHandler *errHandle;
+    ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
 };
 
 #endif /* MESSAGE_H */

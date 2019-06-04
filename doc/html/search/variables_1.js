@@ -16,6 +16,7 @@ var searchData=
   ['bisize',['biSize',['../classBitmapHeader.html#ad9bbbb6a668069bd7e6cd16adedce38f',1,'BitmapHeader']]],
   ['bisizeimage',['biSizeImage',['../classBitmapHeader.html#a4ca96d50917d71818b503ebbe854503f',1,'BitmapHeader']]],
   ['bitcount',['bitCount',['../classBitmapArray.html#a18127e27d4b1477fd46ef0c0b3dbc110',1,'BitmapArray']]],
+  ['bitmap',['BITMAP',['../constants_8h.html#a7dae3cdc3c61adbc5d9583a7434feab8',1,'constants.h']]],
   ['bitoffset',['bitOffset',['../classBitmapArray.html#abcab200a1eb84331f7c79702e9199694',1,'BitmapArray']]],
   ['biwidth',['biWidth',['../classBitmapHeader.html#a6058b8b953cfe11ccb6992077e0353d0',1,'BitmapHeader']]],
   ['bixpelspermeter',['biXPelsPerMeter',['../classBitmapHeader.html#a1569e156f59c8a939c9d4b668ae41bcd',1,'BitmapHeader']]],

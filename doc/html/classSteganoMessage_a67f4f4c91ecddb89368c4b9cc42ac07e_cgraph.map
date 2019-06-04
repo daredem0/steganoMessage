@@ -1,0 +1,6 @@
+<map id="SteganoMessage::swapBytesBits" name="SteganoMessage::swapBytesBits">
+<area shape="rect" id="node1" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="5,31,241,57"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a28fdc9b9da4cbbffed718d351da65fd3" title="Turns the whole bit&#45;pattern around." alt="" coords="291,5,498,32"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#af80189e6fb64aa4ae6cc48f92eaec147" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="289,56,500,83"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#af46fa3a09a19fc73c146e22d6a32657a" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="548,5,727,32"/>
+</map>

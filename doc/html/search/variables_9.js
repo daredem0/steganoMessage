@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../classBitmapArray.html#a44f51b2c1ecde3f9aa504df25d65b6c9',1,'BitmapArray']]]
+  ['jpeg',['JPEG',['../constants_8h.html#a74580bdd2c417b31ee283ded89601478',1,'constants.h']]]
 ];

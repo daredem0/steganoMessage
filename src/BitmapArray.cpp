@@ -128,19 +128,6 @@ void BitmapArray::printArray(char* c, size_t s){
     errHandle->printLog("\n");
 }
 
-
-uint32_t BitmapArray::genInt(char* c, size_t s){
-    uint32_t returnValue = 0;
-    //std::cout << filterMode << std::endl;
-    for(int i = 0; i<s; ++i){
-        if(filterMode == COLORA || filterMode == COLORB)
-           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
-        else
-            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
-    }
-    return returnValue;
-}
-
 void BitmapArray::printArray(){
     int i = 0;
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
@@ -156,24 +143,68 @@ void BitmapArray::printArray(){
     }
 }
 
-std::vector<std::vector<uint32_t>> BitmapArray::getBData(){
-    return bData;
+
+uint32_t BitmapArray::genInt(char* c, size_t s){
+    uint32_t returnValue = 0;
+    //std::cout << filterMode << std::endl;
+    for(int i = 0; i<s; ++i){
+        if(filterMode == COLORA || filterMode == COLORB)
+           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+        else
+            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
+    }
+    return returnValue;
 }
+
+std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
+
+std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
+
+int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
 std::string BitmapArray::infuse(std::string message){
     
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            *itInner |= 0x3;
+    std::string:iterator chariterator = message.begin();
+    auto itOuter = bData.begin();
+    auto itInner = itOuter->begin();
+    int charcounter = 0;
+    
+    for(itOuter; itOuter != bData.end(); ++itOuter){
+        for(itInner; itInner != itOuter->end(); ++itInner){
+            for(chariterator; chariterator != message.end(); ++chariterator){
+                *itInner |= 0x3;
+                char character = *chariterator;
+                char infusechar = 0xFF;
+                switch (charcounter) {
+                    case 0:
+                        charcounter += 1;
+                        break;
+                        
+                    case 1:
+                        character = << << character;
+                        charcounter += 1;
+                        break;
+                        
+                    case 2:
+                        character = << << << << character;
+                        charcounter += 1;
+                        break;
+                        
+                    case 3:
+                        character = << << << << << << character;
+                        charcounter = 0;
+                        break;
+                        
+                    default:
+                        break;
+                }
+                infusechar << << character;
+                *itInner &= infusechar;
+            }
         }
     }
-    //dunkel wars der Mond schien helle...
-    
-    
+
     return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
 
-int BitmapArray::setFilter(std::string fm){
-    filterMode = fm;
-}

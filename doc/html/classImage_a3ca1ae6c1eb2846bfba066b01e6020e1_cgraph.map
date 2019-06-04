@@ -1,10 +1,11 @@
 <map id="Image::generateBitmap" name="Image::generateBitmap">
-<area shape="rect" id="node1" title="Generates new bitmap file." alt="" coords="5,157,181,184"/>
+<area shape="rect" id="node1" title="Generates new bitmap file." alt="" coords="5,183,181,209"/>
 <area shape="rect" id="node2" href="$classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="247,5,413,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="479,59,652,101"/>
-<area shape="rect" id="node4" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="479,136,652,163"/>
-<area shape="rect" id="node5" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="234,107,426,133"/>
-<area shape="rect" id="node6" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="235,208,425,235"/>
-<area shape="rect" id="node7" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="243,259,417,285"/>
-<area shape="rect" id="node8" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="229,309,431,336"/>
+<area shape="rect" id="node3" href="$classImage.html#a83d7183bfcd632649c36504d9ab07e36" title="Checks if a file already exists." alt="" coords="275,56,385,83"/>
+<area shape="rect" id="node4" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="479,110,652,151"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="479,187,652,213"/>
+<area shape="rect" id="node6" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="234,157,426,184"/>
+<area shape="rect" id="node7" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="235,259,425,285"/>
+<area shape="rect" id="node8" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="243,309,417,336"/>
+<area shape="rect" id="node9" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="229,360,431,387"/>
 </map>

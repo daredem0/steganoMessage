@@ -65,10 +65,19 @@ public:
      */
     std::vector<std::vector<uint32_t>> getBData();
     /**
+     * @brief Returns a pointer to the 2D std::vector containing image information.
+     * @return std::vector<std::vector<uint32_t>>* Pointer image data
+     */
+    std::vector<std::vector<uint32_t>> *getBDataPointer();
+    /**
      * @brief ***
      * @return std::string ***
      */
     std::string infuse(std::string message);
+    /**
+     * @brief Sets filter mode for the application of filters that needs to be applied while reading the data
+     * @return Integer containing error codes
+     */
     int setFilter(std::string fm);
     
 private:
@@ -78,9 +87,9 @@ private:
     uint32_t height;    /**< height of original file*/
     uint32_t bitOffset; /**< Headeroffest of original file*/
     uint32_t bitCount; /**< Color Depth of original file*/
-    std::string filterMode;
+    std::string filterMode;/**< Mode for while reading filter application*/
     
-    ErrorHandler *errHandle;
+    ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     
     /**
      * @brief Loads and decrypts the image data to the 2D std::vector member 
