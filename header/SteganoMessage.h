@@ -20,6 +20,7 @@
 #include "Image.h"
 #include <fstream>
 #include <cmath>
+#include <iomanip>
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 
@@ -132,16 +133,28 @@ private:
     bool path; /**< flag to check if path is verified*/
     std::string filter;
     
-    uint32_t revertUint(uint32_t d, size_t s);
+    void displayProgress(int& c, int p);
+    void displayProgress(int p);
+    int getPixel();
+    
+    Filter stegFilter;
+    
+    static uint32_t revertUint(uint32_t d, size_t s);
     static uint32_t invert(uint8_t w);
     static uint32_t swapBytes(uint32_t d, size_t s);
     static uint32_t swapOctets(uint32_t d, size_t s);
+    static uint32_t swapBytesOctets(uint32_t d, size_t s);
+    static uint32_t swapBytesBits(uint32_t d, size_t s);
+    static uint32_t swapBytesOctetsBits(uint32_t d, size_t s);
     
-    int filterInvertBits(std::vector<std::vector<uint32_t>> *d);
+    void genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t));
+    void dummyFilter(std::vector<std::vector<uint32_t>> *d);
+    
+    /*int filterInvertBits(std::vector<std::vector<uint32_t>> *d);
     int filterSwapBytes(std::vector<std::vector<uint32_t>> *d);
     int filterSwapOctets(std::vector<std::vector<uint32_t>> *d);
     int filterSwapBytesOctets(std::vector<std::vector<uint32_t>> *d);
-    int filterSwapBytesOctetsBits(std::vector<std::vector<uint32_t>> *d);
+    int filterSwapBytesOctetsBits(std::vector<std::vector<uint32_t>> *d);*/
 };
 
 #endif /* STEGANOMESSAGE_H */

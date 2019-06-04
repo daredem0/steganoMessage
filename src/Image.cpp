@@ -93,6 +93,11 @@ int Image::readImage(){
 BitmapHeader *Image::getBitmapHeader(){return header;}
 BitmapArray *Image::getBitmapArray(){return array;}
 
+bool Image::exists(const std::string& name){
+    std::ifstream f(name.c_str()); 
+    return f.good();
+}
+
 int Image::generateBitmap(){
     errHandle->printLog("Opening ofstream\n");
     std::string sWD;
@@ -103,7 +108,11 @@ int Image::generateBitmap(){
         wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
         sWD = wD;
         free(wD);//free malloced storage from get_current_dir_name()
-        sWD += "/output.bmp";
+        int i = 0;
+        while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
+            ++i;
+        }
+        sWD += "/output" + std::to_string(i) + ".bmp";
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
@@ -290,4 +299,33 @@ std::string Image::decToHex(uint8_t v){
 int Image::setFilter(std::string gr, std::string col){
     filterModeGrey = gr;
     filterModeCol = col;
+}
+
+std::string Image::identifyFileFormat(std::string p){
+    std::ifstream file(p);
+    std::stringstream ss;
+    std::string returnValue;
+    if(!file.good())
+        return ERRUNKNOWN;
+    file.seekg(0, std::ios::beg);
+    unsigned char type[10];
+    std::fill(type, type + sizeof(type), 0);
+    file.read((char*)type, sizeof(type));
+    //check for bitmap
+    if(type[0] == 0x42 && type[1] == 0x4D)
+         ss << type[0] << type[1];
+    
+    //check for jpeg
+    if(type[0] == 0xFF && type[1] == 0xD8)
+        ss << JPEG;
+    //check for gif
+    if(type[0] == 0x47 && type[1] == 0x49 && type[2] == 0x46)
+        ss << type[0] << type[1] << type[2];
+    //check for png
+    if(type[0] == 0x89 && type[1] == 0x50 && type[2] == 0x4E && type[3] == 0x47 && type[4] == 0x0D && type[5] == 0x0A && type[6] == 0x1A && type[7] == 0x0A)
+        ss << PNG;
+    ss >> returnValue;
+    std::cout << returnValue << std::endl;
+    file.close();
+    return returnValue;
 }

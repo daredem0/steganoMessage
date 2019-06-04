@@ -23,6 +23,7 @@
 #include "../header/BitmapHeader.h"
 #include "../header/BitmapArray.h"
 #include "./ErrorHandler.h"
+#include <sstream>
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -104,6 +105,8 @@ public:
      */
     static std::string decToHex(uint8_t v);
     int setFilter(std::string gr, std::string col);
+    
+    static std::string identifyFileFormat(std::string path);
 private:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
@@ -111,6 +114,8 @@ private:
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     std::string filterModeGrey;
     std::string filterModeCol;
+    
+    bool exists(const std::string& name);
 };
 
 #endif /* IMAGE_H */
