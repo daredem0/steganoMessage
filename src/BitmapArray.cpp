@@ -164,7 +164,86 @@ int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
 std::string BitmapArray::infuse(std::string message){
     
-    std::string:iterator chariterator = message.begin();
+    //Function to evaluate what the size of the Bitmap ist
+    //Different functions for different bit depths 
+    //Iterate through message string only copying 2 bits at a time
+    //Iterate through Bitmap masking each pixle 
+    
+    const int mask32bit = 0x3030303;    //Masks for Bitmap Bits
+    const int mask24bit = 0x30303;
+    const int mask16bit = 0x303;
+    const int mask8bit = 0x3;
+    
+    auto itOuter = bData.begin();                           //Outer iterator of 2D Array
+    auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
+    std::string::iterator chariterator = message.begin();   //Characteriterator for messagestring
+    int flag = 0;                                           //Flag when reaching message end
+    bool encoded = false;
+    
+    int messcharcounter = 1;            //Counter for each character in messagestring
+    
+    
+    
+    switch(bitCount){
+        case 8:
+            for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
+                for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
+                    *itInner |= mask8bit;
+                    
+                    if(messcharcounter<=4 && chariterator != message.end()){
+                        *itInner &= *chariterator >> 2*(4-messcharcounter) & mask8bit;
+                        messcharcounter++;
+                    }
+                    
+                    else if (messcharcounter>4 && chariterator != message.end()){
+                        messcharcounter = 1;
+                        chariterator++;
+                    }
+                    
+                    else if (messcharcounter<=4 && chariterator = message.end()){
+                        *itInner &= *chariterator >> 2*(4-messcharcounter) & mask8bit;
+                        messcharcounter++;
+                    }
+                    
+                    else{
+                        encoded = true;   
+                    }
+                }
+            }
+            break;
+            
+        case 16:
+            for(itOuter; itOuter != bData.end(); ++itOuter){
+                for(itInner; itInner != itOuter->end(); ++itInner){
+                    *itInner |= mask16bit;
+                }
+            }
+            break;
+        
+        case 24:
+            for(itOuter; itOuter != bData.end(); ++itOuter){
+                for(itInner; itInner != itOuter->end(); ++itInner){
+                    *itInner |= mask24bit;
+                }
+            }
+            break;
+        
+        case 32:
+            for(itOuter; itOuter != bData.end(); ++itOuter){
+                for(itInner; itInner != itOuter->end(); ++itInner){
+                    *itInner |= mask32bit;
+                }
+            }
+            break;
+    }
+    
+    
+    
+    
+ /*  
+  * This is SHIT... Will get deleted soon
+  *   
+    std::string::iterator chariterator = message.begin();
     auto itOuter = bData.begin();
     auto itInner = itOuter->begin();
     int charcounter = 0;
@@ -203,7 +282,7 @@ std::string BitmapArray::infuse(std::string message){
             }
         }
     }
-
+*/
     return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
