@@ -200,7 +200,8 @@ std::string BitmapArray::infuse(std::string message){
                         chariterator++;
                     }
                     
-                    else if (messcharcounter<=4 && chariterator = message.end()){
+                    //else if (messcharcounter<=4 && chariterator = message.end()){ // = propably unintended, won't build like this. Fixed it for you:
+                    else if (messcharcounter<=4 && chariterator == message.end()){
                         *itInner &= *chariterator >> 2*(4-messcharcounter) & mask8bit;
                         messcharcounter++;
                     }

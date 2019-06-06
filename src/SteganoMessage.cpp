@@ -325,11 +325,11 @@ uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
         case 1:
             return d;
         case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+            return (d & 0xFF00) >> 8 ??! (d & 0x00FF) << 8;
         case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+            return (d & 0xFF0000) >> 16 ??! (d & 0x0000FF) << 16;
         case 4:
-            return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
+            return (d & 0x00FF00FF) ??! ((d & 0xFF000000) >> 16 ??! (d & 0x0000FF00) << 16);
     }
 }
 
@@ -338,11 +338,11 @@ uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
         case 1:
             return d;
         case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+            return (d & 0xFF00) >> 8 ??! (d & 0x00FF) << 8;
         case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+            return (d & 0xFF0000) >> 16 ??! (d & 0x0000FF) << 16;
         case 4:
-            return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
+            return (d & 0x0000FFFF) ??! ((d & 0xFF000000) >> 8 ??! (d & 0x00FF0000) << 8);
     }
 }
 
@@ -351,25 +351,25 @@ uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
         case 1:
             return d;
         case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
+            return (d & 0xFF00) >> 8 ??! (d & 0x00FF) << 8;
         case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
+            return (d & 0xFF0000) >> 16 ??! (d & 0x0000FF) << 16;
         case 4:
-            return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
+            return (d & 0xFF0000FF) ??! ((d & 0x00FF0000) >> 8 ??! (d & 0x0000FF00) << 8);
     }
 }
 
 uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
     switch(s){
         case 1:
-            return (d & 0xF0) >> 4 | (d & 0x0F) << 4;
+            return (d & 0xF0) >> 4 ??! (d & 0x0F) << 4;
         case 2:
-            return ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
+            return ((d & 0xF000) >> 4 ??! (d & 0x0F00) << 4) ??! ((d & 0xF0) >> 4 ??! (d & 0x0F) << 4);
         case 3:
-            return ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
+            return ((d & 0xF00000) >> 4 ??! (d & 0x0F0000) << 4) ??! ((d & 0xF000) >> 4 ??! (d & 0x0F00) << 4) ??! ((d & 0xF0) >> 4 ??! (d & 0x0F) << 4);
         case 4:
-            return ((d & 0xFF000000) >> 4  | (d & 0x0F000000) << 4) | ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) 
-                    | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
+            return ((d & 0xFF000000) >> 4  ??! (d & 0x0F000000) << 4) ??! ((d & 0xF00000) >> 4 ??! (d & 0x0F0000) << 4) 
+                    ??! ((d & 0xF000) >> 4 ??! (d & 0x0F00) << 4) ??! ((d & 0xF0) >> 4 ??! (d & 0x0F) << 4);
     }
 }
 
