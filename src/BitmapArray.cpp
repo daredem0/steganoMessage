@@ -162,55 +162,54 @@ std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData
 
 int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
-std::string BitmapArray::infuse(std::string message){
+int BitmapArray::infuse(std::string message){
     
-    //Function to evaluate what the size of the Bitmap ist
-    //Different functions for different bit depths 
-    //Iterate through message string only copying 2 bits at a time
-    //Iterate through Bitmap masking each pixle 
+    const uint32_t charmask32bit = 0x3030303;               //Masks for Character Bits
+    const uint32_t charmask24bit = 0x30303;
+    const uint32_t charmask16bit = 0x303;
+    const uint32_t charmask8bit = 0x3;
     
-    const int mask32bit = 0x3030303;    //Masks for Bitmap Bits
-    const int mask24bit = 0x30303;
-    const int mask16bit = 0x303;
-    const int mask8bit = 0x3;
-    const int mask8bit_n = 0xFC;
+    const uint32_t pixelmask32bit = 0xFCFCFCFC;             //Masks for Pixel Bits
+    const uint32_t pixelmask24bit = 0xFCFCFC;
+    const uint32_t pixelmask16bit = 0xFCFC;
+    const uint32_t pixelmask8bit = 0xFC;
     
     auto itOuter = bData.begin();                           //Outer iterator of 2D Array
     auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
     std::string::iterator chariterator = message.begin();   //Characteriterator for messagestring
-    int flag = 0;                                           //Flag when reaching message end
-    bool encoded = false;
+
+    bool encoded = false;                                   //Flag to terminate for-loop
     
-    int messcharcounter = 1;            //Counter for each character in messagestring
+    int messcharcounter = 1;                                //Counter for each character in messagestring
     
     
     
     switch(bitCount){
+            
         case 8:
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
                     std::cout << "Old value: " << (*itInner&0x03) << std::endl;
-                    *itInner &= mask8bit_n;
+                    *itInner &= pixelmask8bit;
                     
                     if(messcharcounter<=4 && chariterator != message.end()){
-                        std::cout << "Ended in infuse <=4" << std::endl;
-                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & mask8bit; 
+                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
                         messcharcounter++;
                         std::cout << "New value: " << *itInner << std::endl;
+                        std::cout << "Ended in infuse <=4" << std::endl;
+                        
+                        if (messcharcounter>4) {
+                            messcharcounter = 1;
+                            std::cout << "Infused character" << *chariterator << std::endl;
+                            chariterator++;
+                        }
                     }
-                    
-                    else if (messcharcounter>4 && chariterator != message.end()){
-                        std::cout << "Ended in infuse >4" << std::endl;
-                        messcharcounter = 1;
-                        chariterator++;
-                        --itInner; //ugly as shit
-                    }
-                    
-                    //else if (messcharcounter<=4 && chariterator = message.end()){ // = propably unintended, won't build like this. Fixed it for you:
+                
                     else if (messcharcounter<=4 && chariterator == message.end()){
-                        std::cout << "Ended in infuse <=4 & end" << std::endl;
-                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & mask8bit;
+                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
                         messcharcounter++;
+                        std::cout << "New value: " << *itInner << std::endl;
+                        std::cout << "Ended in infuse <=4 & end" << std::endl;
                     }
                     
                     else{
@@ -290,8 +289,8 @@ std::string BitmapArray::infuse(std::string message){
         }
     }
 */
-    return ""
-            "\nSuccessfully infused bitmap with message\n"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
+    return 12;
+            /*"\nSuccessfully infused bitmap with message\n"; you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
 
