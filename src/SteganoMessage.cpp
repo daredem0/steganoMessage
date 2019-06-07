@@ -213,10 +213,9 @@ int SteganoMessage::modeHandler(){
         this->buildMessage(mess);
         //check if message was read properly:
         std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
-        //call infusion stuff ********************TOBI********************
-        this->getImage()->getBitmapArray()->infuse("AAA");
+     
+        this->getImage()->getBitmapArray()->infuse(/*this->getMessage()->getMessage()*/"TEST");
         
-        //*end Tobi************************************
         this->getImage()->generateBitmap(); 
     }
     else if(this->getMode() == DECRYPT){
