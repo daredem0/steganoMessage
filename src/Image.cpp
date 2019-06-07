@@ -104,7 +104,7 @@ int Image::generateBitmap(){
     std::ofstream file;
     try{
         char* wD;
-        get current working dir and generate path
+        //get current working dir and generate path
         wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
         sWD = wD;
         free(wD);//free malloced storage from get_current_dir_name()
