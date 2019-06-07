@@ -235,7 +235,7 @@ int BitmapArray::infuse(std::string message){
                     std::cout << "Pixel value: " << *itInner << std::endl;
                     std::cout << "Old value: " << (*itInner&0x3030303) << std::endl;
                     *itInner &= pixelmask32bit;
-                    charmask32bit = 0x0;
+                    charmask32bit = 0x0; // is this intentional? 
                     
                     if(chariterator != message.end()){
                         for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
