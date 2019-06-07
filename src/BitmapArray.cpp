@@ -223,7 +223,8 @@ int BitmapArray::infuse(std::string message){
         case 16:
             for(itOuter; itOuter != bData.end(); ++itOuter){
                 for(itInner; itInner != itOuter->end(); ++itInner){
-                    *itInner |= mask16bit;
+                    //*itInner |= mask16bit; /*fixed this for you, assume you wanted charmaskxxbit*/
+                    *itInner |= charmask16bit;
                 }
             }
             break;
@@ -231,7 +232,8 @@ int BitmapArray::infuse(std::string message){
         case 24:
             for(itOuter; itOuter != bData.end(); ++itOuter){
                 for(itInner; itInner != itOuter->end(); ++itInner){
-                    *itInner |= mask24bit;
+                    //*itInner |= mask24bit; /*fixed this for you, assume you wanted charmaskxxbit*/
+                    *itInner |= charmask24bit;
                 }
             }
             break;
@@ -239,7 +241,8 @@ int BitmapArray::infuse(std::string message){
         case 32:
             for(itOuter; itOuter != bData.end(); ++itOuter){
                 for(itInner; itInner != itOuter->end(); ++itInner){
-                    *itInner |= mask32bit;
+                    //*itInner |= mask32bit; /*fixed this for you, assume you wanted charmaskxxbit*/
+                    *itInner |= charmask32bit;
                 }
             }
             break;

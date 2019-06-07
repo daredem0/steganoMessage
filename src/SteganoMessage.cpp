@@ -107,7 +107,12 @@ int SteganoMessage::buildImage(std::string path){
 ErrorHandler* SteganoMessage::getErrHandle(){return err;}
 Message* SteganoMessage::getMessage(){return mess;}
 Image* SteganoMessage::getImage(){return img;}
-std::string SteganoMessage::getMode(){modeSet == false ? "" : mode;}
+std::string SteganoMessage::getMode(){
+    if(modeSet == false)
+        return "";
+    return mode;
+}
+
 bool SteganoMessage::getPathVerified(){return path;}
 
 //SETTERS/************************************************************/

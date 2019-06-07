@@ -73,7 +73,8 @@ public:
      * @brief ***
      * @return std::string ***
      */
-    std::string infuse(std::string message);
+    //std::string infuse(std::string message);
+    int infuse(std::string message); /*Fixed this for you, guess you forgot it*/
     /**
      * @brief Sets filter mode for the application of filters that needs to be applied while reading the data
      * @return Integer containing error codes
