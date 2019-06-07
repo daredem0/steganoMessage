@@ -245,9 +245,7 @@ std::string BitmapArray::infuse(std::string message){
             }
             break;
     }
-    
-    
-    
+        
     
  /*  
    This is SHIT... Will get deleted soon
