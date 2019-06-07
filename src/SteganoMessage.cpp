@@ -214,7 +214,7 @@ int SteganoMessage::modeHandler(){
         //check if message was read properly:
         std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
      
-        this->getImage()->getBitmapArray()->infuse("TEST");                     /*this->getMessage()->getMessage()*/
+        this->getImage()->getBitmapArray()->infuse("ABCD");                     /*this->getMessage()->getMessage()*/
         
         
         this->getImage()->generateBitmap(); 
