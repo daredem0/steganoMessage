@@ -9,14 +9,6 @@
 #include <fstream>
 #include "../header/SteganoMessage.h"
 
-#if defined (__linux__)
-    #define LINUX 1;
-    #define MAC 0;
-#elif defined (__linux__)
-    #define MAC 1;
-    #define LINUX 0;
-#endif
-
 using namespace std;
 
 /**

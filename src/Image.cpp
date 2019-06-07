@@ -13,6 +13,15 @@
 
 #include "../header/Image.h"
 
+
+#if defined (__linux__)
+    #define LINUX 1
+    #define MAC 0
+#elif defined (__linux__)
+    #define MAC 1
+    #define LINUX 0
+#endif
+
 Image::Image() {
     path == "";
     header = NULL;
@@ -103,17 +112,26 @@ int Image::generateBitmap(){
     std::string sWD;
     std::ofstream file;
     try{
-        char* wD;
-        //get current working dir and generate path
-        wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
-        sWD = wD;
-        free(wD);//free malloced storage from get_current_dir_name()
-        int i = 0;
-        while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
-            ++i;
+        if(LINUX == 1 && MAC == 0)
+        {
+            char* wD;
+            //get current working dir and generate path
+            wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+            sWD = wD;
+            free(wD);//free malloced storage from get_current_dir_name()
+            int i = 0;
+            while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
+                ++i;
+            }
+            sWD = "./";
+            sWD += "/output" + std::to_string(i) + ".bmp";
         }
-        sWD = "./";
-        sWD += "/output" + std::to_string(i) + ".bmp";
+        else
+        {
+            std::cout << "Not yet implemented, exiting" << std::endl;
+            /*************TOBI HIER ***************/
+            exit(1);
+        }
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
