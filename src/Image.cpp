@@ -105,13 +105,14 @@ int Image::generateBitmap(){
     try{
         char* wD;
         //get current working dir and generate path
-        wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
-        sWD = wD;
-        free(wD);//free malloced storage from get_current_dir_name()
+        //wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+        //sWD = wD;
+        //free(wD);//free malloced storage from get_current_dir_name()
         int i = 0;
-        while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
-            ++i;
-        }
+       // while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
+         //   ++i;
+       // }
+        sWD = "./";
         sWD += "/output" + std::to_string(i) + ".bmp";
     }
     catch(const std::exception& e){
