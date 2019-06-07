@@ -180,6 +180,9 @@ int SteganoMessage::modeHandler(){
         //check if message was read properly:
         std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
         //call infusion stuff ********************TOBI********************
+        this->getImage()->getBitmapArray()->infuse("AAA");
+        
+        //*end Tobi************************************
         this->getImage()->generateBitmap(); 
     }
     else if(this->getMode() == DECRYPT){

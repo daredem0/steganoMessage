@@ -82,6 +82,11 @@ public:
      */
     BitmapHeader *getBitmapHeader();
     
+    /**
+     * @brief Getter for bitmapArray
+     * @return BitmapArray type pointer to BitmapArray
+     */
+    
     BitmapArray *getBitmapArray();
     
     /**

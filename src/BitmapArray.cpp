@@ -173,6 +173,7 @@ std::string BitmapArray::infuse(std::string message){
     const int mask24bit = 0x30303;
     const int mask16bit = 0x303;
     const int mask8bit = 0x3;
+    const int mask8bit_n = 0xFC;
     
     auto itOuter = bData.begin();                           //Outer iterator of 2D Array
     auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
@@ -188,25 +189,32 @@ std::string BitmapArray::infuse(std::string message){
         case 8:
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
-                    *itInner |= mask8bit;
+                    std::cout << "Old value: " << (*itInner&0x03) << std::endl;
+                    *itInner &= mask8bit_n;
                     
                     if(messcharcounter<=4 && chariterator != message.end()){
-                        *itInner &= *chariterator >> 2*(4-messcharcounter) & mask8bit;
+                        std::cout << "Ended in infuse <=4" << std::endl;
+                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & mask8bit; 
                         messcharcounter++;
+                        std::cout << "New value: " << *itInner << std::endl;
                     }
                     
                     else if (messcharcounter>4 && chariterator != message.end()){
+                        std::cout << "Ended in infuse >4" << std::endl;
                         messcharcounter = 1;
                         chariterator++;
+                        --itInner; //ugly as shit
                     }
                     
                     //else if (messcharcounter<=4 && chariterator = message.end()){ // = propably unintended, won't build like this. Fixed it for you:
                     else if (messcharcounter<=4 && chariterator == message.end()){
-                        *itInner &= *chariterator >> 2*(4-messcharcounter) & mask8bit;
+                        std::cout << "Ended in infuse <=4 & end" << std::endl;
+                        *itInner |= (*chariterator >> (2*(4-messcharcounter))) & mask8bit;
                         messcharcounter++;
                     }
                     
                     else{
+                        std::cout << "Ended in infuse encoded = true" << std::endl;
                         encoded = true;   
                     }
                 }
@@ -242,8 +250,8 @@ std::string BitmapArray::infuse(std::string message){
     
     
  /*  
-  * This is SHIT... Will get deleted soon
-  *   
+   This is SHIT... Will get deleted soon
+     
     std::string::iterator chariterator = message.begin();
     auto itOuter = bData.begin();
     auto itInner = itOuter->begin();
@@ -284,7 +292,8 @@ std::string BitmapArray::infuse(std::string message){
         }
     }
 */
-    return "Successfully infused bitmap with message"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
+    return ""
+            "\nSuccessfully infused bitmap with message\n"; /*you can send this to stdout inside here already. Ideally using errHandle->printLog(std::string whatever) to easily change from
     stdout to logfile in final build. Recommended to use integer as return value to send error code. Possible create constant in constant.h like - errInfuse which you could return here*/
 }
 
