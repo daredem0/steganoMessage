@@ -21,6 +21,27 @@
 /**
  *@brief BitmapHeader Class contains header information extracted from bitmap file
  */
+struct Header{
+    uint16_t bfType;/**< ASCII COde, usually contains BM*/
+    char bfTypeA;/**< bfType first hex value*/
+    char bfTypeB;/**< bfType second hex value*/
+    uint32_t bfSize;/**< size of the file*/
+    uint32_t bfReserved;/**< Reserved, software dependend*/
+    uint32_t bfOffBits;/**< Offset between image data and begin of file*/ //we need this one
+    //information header
+    uint32_t biSize;/**< size of information header*/
+    uint32_t biWidth;/**< width in pixel*/
+    uint32_t biHeight;/**< height in pixel*/
+    uint16_t biPlanes;/**< oputdated*/
+    uint16_t biBitCount;/**< Color Depth in bit*/
+    uint32_t biCompression;/**< Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded*/
+    uint32_t biSizeImage;/**< biSizeImage*/
+    uint32_t biXPelsPerMeter;/**< biXPelsPerMeter*/
+    uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
+    uint32_t biClrUsed;/**< biClrUsed*/
+    uint32_t biClrImportant;/**< biClrImportant*/
+};
+    
 class BitmapHeader {
 public:
     //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
@@ -99,26 +120,13 @@ public:
      * @return uint32_t BiBitCount
      */
     uint32_t getBitCount();
+    
+    Header* getHeaderStruct();
+    int fixType();
+    
 private:
     //file header
-    uint16_t bfType;/**< ASCII COde, usually contains BM*/
-    char bfTypeA;/**< bfType first hex value*/
-    char bfTypeB;/**< bfType second hex value*/
-    uint32_t bfSize;/**< size of the file*/
-    uint32_t bfReserved;/**< Reserved, software dependend*/
-    uint32_t bfOffBits;/**< Offset between image data and begin of file*/ //we need this one
-    //information header
-    uint32_t biSize;/**< size of information header*/
-    uint32_t biWidth;/**< width in pixel*/
-    uint32_t biHeight;/**< height in pixel*/
-    uint16_t biPlanes;/**< oputdated*/
-    uint16_t biBitCount;/**< Color Depth in bit*/
-    uint32_t biCompression;/**< Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded*/
-    uint32_t biSizeImage;/**< biSizeImage*/
-    uint32_t biXPelsPerMeter;/**< biXPelsPerMeter*/
-    uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
-    uint32_t biClrUsed;/**< biClrUsed*/
-    uint32_t biClrImportant;/**< biClrImportant*/
+    Header header;
     
     char *headerStream; /**< Pointer to char array containing the complete header */
     
@@ -135,7 +143,6 @@ private:
      * @brief Small helper to extrac characters of bfType 
     * @return Integer containing error codes
      */
-    int fixType();
 };
 
 #endif /* BITMAPHEADER_H */

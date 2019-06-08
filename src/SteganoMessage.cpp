@@ -48,12 +48,8 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             if(tempPath == NOPATH)
                 throw errPath; //throw error if we didnt get a path
             std::cout << "Found Path: " << tempPath << std::endl; 
-            if(Image::identifyFileFormat(tempPath) != BITMAP){
-                std::cout << "shit" << std::endl;
-                exit(1);
-            }
-            int i;
             this->buildImage(tempPath); //Call constructor for image type object and set path
+            int i;
             std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
             //set filters if activated
             if(argc > 3){
@@ -68,7 +64,10 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             }
             else
                 this->setFilterMode("");
-            this->getImage()->readImage(); //extract the image information
+            if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
+                this->getImage()->readImage(); //extract the image information
+            else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
+                ((Jpeg*)(img))->readImage();
             //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
             return 0;
     }
@@ -96,11 +95,22 @@ int SteganoMessage::buildMessage(std::string m){
 }
 
 int SteganoMessage::buildImage(std::string path){
-    if(img == NULL){
+    if(img != NULL)
+        return errImgExist;
+    if(Image::identifyFileFormat(path) == BITMAP){
+        std::cout << "Building bitmap" << std::endl;
         img = new Image(path, err);
         return errNoError;
+    }    
+    else if(Image::identifyFileFormat(path) == JPEG){
+        std::cout << "Building jpeg" << std::endl;
+        img = new Jpeg(path, err);
+        return errNoError;
+    }         
+    else{
+        std::cout << "shit" << std::endl;
+        exit(1);
     }
-    return errImgExist;
 }
 
 //GETTERS/************************************************************/

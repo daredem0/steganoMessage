@@ -116,10 +116,10 @@ public:
     int setFilter(std::string gr, std::string col);
     /**
      * @brief Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png
-     * @return returns integer containing error code
+     * @return std::string containing format information (JPEG/BITMAP/PNG/GIF)
      */
     static std::string identifyFileFormat(std::string path);
-private:
+protected:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/

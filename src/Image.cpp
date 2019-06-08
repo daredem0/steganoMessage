@@ -91,6 +91,7 @@ int Image::writeTextFile(std::string t, std::string n){
 }
 
 int Image::readImage(){
+    std::cout << "In bitmap read image" << std::endl;
     if(path == "")
         return 3;
     header = new BitmapHeader(path, errHandle);

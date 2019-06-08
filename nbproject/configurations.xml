@@ -6,6 +6,7 @@
       <itemPath>header/BitmapHeader.h</itemPath>
       <itemPath>header/ErrorHandler.h</itemPath>
       <itemPath>header/Image.h</itemPath>
+      <itemPath>header/Jpeg.h</itemPath>
       <itemPath>header/Message.h</itemPath>
       <itemPath>header/SteganoMessage.h</itemPath>
       <itemPath>header/constants.h</itemPath>
@@ -18,6 +19,7 @@
       <itemPath>src/BitmapHeader.cpp</itemPath>
       <itemPath>src/ErrorHandler.cpp</itemPath>
       <itemPath>src/Image.cpp</itemPath>
+      <itemPath>src/Jpeg.cpp</itemPath>
       <itemPath>src/Message.cpp</itemPath>
       <itemPath>src/SteganoMessage.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
@@ -38,6 +40,7 @@
   <sourceRootList>
     <Elem>src</Elem>
     <Elem>header</Elem>
+    <Elem>LibJpeg</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -100,7 +103,7 @@
             <linkerLibLibItem>gtk-3</linkerLibLibItem>
             <linkerLibLibItem>gtkmm-3.0</linkerLibLibItem>
           </linkerLibItems>
-          <commandLine>-export-dynamic -lgtkmm-3.0 -latkmm-1.6 -lgdkmm-3.0 -lgiomm-2.4 -lpangomm-1.4 -lglibmm-2.4 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lgio-2.0 -lcairomm-1.0 -lcairo -lsigc-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0</commandLine>
+          <commandLine>-export-dynamic -lgtkmm-3.0 -latkmm-1.6 -lgdkmm-3.0 -lgiomm-2.4 -lpangomm-1.4 -lglibmm-2.4 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lgio-2.0 -lcairomm-1.0 -lcairo -lsigc-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -ljpeg</commandLine>
         </linkerTool>
       </compileType>
       <item path="header/BitmapArray.h" ex="false" tool="3" flavor2="0">
@@ -110,6 +113,8 @@
       <item path="header/ErrorHandler.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/Image.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header/Jpeg.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/Message.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -126,6 +131,8 @@
       <item path="src/ErrorHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Jpeg.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Message.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -162,6 +169,8 @@
       </item>
       <item path="header/Image.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="header/Jpeg.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="header/Message.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/SteganoMessage.h" ex="false" tool="3" flavor2="0">
@@ -177,6 +186,8 @@
       <item path="src/ErrorHandler.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Jpeg.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Message.cpp" ex="false" tool="1" flavor2="0">
       </item>
