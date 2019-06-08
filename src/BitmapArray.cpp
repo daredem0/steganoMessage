@@ -164,7 +164,7 @@ int BitmapArray::setFilter(std::string fm){filterMode = fm;}
 
 int BitmapArray::infuse(std::string message){
     
-    uint32_t charmask32bit = 0x0;               //Masks for Character Bits
+    uint32_t charmask32bit = 0x0;                           //Masks for Character Bits
     uint32_t charmask24bit = 0x0;
     uint32_t charmask16bit = 0x0;
     const uint32_t charmask8bit  = 0x3;
@@ -190,18 +190,21 @@ int BitmapArray::infuse(std::string message){
             std::cout << "8bit Bitmap to infuse with message" << std::endl;
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
-                    //std::cout << "Old value: " << (*itInner&0x03) << std::endl;
+                    //std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
                     *itInner &= pixelmask8bit;
+                    //std::cout << "Pixel value after mask: " << *itInner << std::endl;
                     
                     if(messcharcounter<=4 && chariterator != message.end()){
+                        //std::cout << "This is the charmask: " << (*chariterator >> (2*(4-messcharcounter))) & charmask8bit << std::endl; 
                         *itInner |= (*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
                         messcharcounter++;
-                        //std::cout << "New value: " << *itInner << std::endl;
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
                         //std::cout << "Ended in infuse <=4" << std::endl;
                         
                         if (messcharcounter>4) {
                             messcharcounter = 1;
-                            //std::cout << "Infused character " << *chariterator << std::endl;
+                            //std::cout << "Infused character: " << *chariterator << std::endl;
+                            //std::cout << "------------------------------------" << std::endl;
                             chariterator++;
                         }
                     }
@@ -209,13 +212,13 @@ int BitmapArray::infuse(std::string message){
                     else if (messcharcounter<=4 && chariterator == message.end()){
                         *itInner |= (*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
                         messcharcounter++;
-                        //std::cout << "New value: " << *itInner << std::endl;
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
                         //std::cout << "Ended in infuse <=4 & end" << std::endl;
                     }
                     
                     else{
                         //std::cout << "Infused character " << *chariterator << std::endl;
-                        std::cout << "Ended in infuse encoded = true" << std::endl;
+                        //std::cout << "Ended in infuse encoded = true" << std::endl;
                         encoded = true;   
                     }
                 }
@@ -223,6 +226,46 @@ int BitmapArray::infuse(std::string message){
             break;
             
         case 16:
+            std::cout << "16bit Bitmap to infuse with message" << std::endl;
+            for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
+                for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
+                    std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
+                    *itInner &= pixelmask16bit;
+                    std::cout << "Pixel value after mask: " << *itInner << std::endl;
+//---------------------------------------------Work In Progress---------------------------------------------------------
+                    if(chariterator != message.end()){
+                        for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
+                            charmask32bit |= ((uint32_t)*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
+                            if(messcharcounter != 4){
+                                charmask32bit <<= 8;   
+                            }
+                            //std::cout << "This is the charmask: " << charmask32bit << std::endl; 
+                        }
+                        *itInner |= charmask32bit;
+                        charmask32bit = 0x0; 
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
+                        //std::cout << "Infused character: " << *chariterator << std::endl;
+                        //std::cout << "------------------------------------" << std::endl;
+                        chariterator++;
+                    }
+                    
+                    else{
+                        for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
+                            charmask32bit |= ((uint32_t)*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
+                            if(messcharcounter != 4){
+                                charmask32bit <<= 8;   
+                            }
+                        }
+                        //std::cout << "This is the charmask: " << charmask32bit << std::endl;
+                        *itInner |= charmask32bit;
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
+                        //std::cout << "Infused character: " << *chariterator << std::endl;
+                        //std::cout << "Ended in infuse encoded = true" << std::endl;
+                        encoded = true; 
+                    }
+                }
+            }
+//---------------------------------------------Work In Progress---------------------------------------------------------
             break;
         
         case 24:
@@ -232,33 +275,38 @@ int BitmapArray::infuse(std::string message){
             std::cout << "32bit Bitmap to infuse with message" << std::endl;
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
-                    std::cout << "Pixel value: " << *itInner << std::endl;
-                    std::cout << "Old value: " << (*itInner&0x3030303) << std::endl;
+                    //std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
                     *itInner &= pixelmask32bit;
-                    charmask32bit = 0x0; // is this intentional? 
+                    //std::cout << "Pixel value after mask: " << *itInner << std::endl;
                     
                     if(chariterator != message.end()){
                         for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
                             charmask32bit |= ((uint32_t)*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
-                            charmask32bit <<= 8;
+                            if(messcharcounter != 4){
+                                charmask32bit <<= 8;   
+                            }
+                            //std::cout << "This is the charmask: " << charmask32bit << std::endl; 
                         }
-                        std::cout << "This is the charmask " << charmask32bit << std::endl; 
                         *itInner |= charmask32bit;
-                        std::cout << "New value: " << *itInner << std::endl;
-                        std::cout << "Infused character " << *chariterator << std::endl;
+                        charmask32bit = 0x0; 
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
+                        //std::cout << "Infused character: " << *chariterator << std::endl;
+                        //std::cout << "------------------------------------" << std::endl;
                         chariterator++;
                     }
                     
                     else{
                         for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
                             charmask32bit |= ((uint32_t)*chariterator >> (2*(4-messcharcounter))) & charmask8bit;
-                            charmask32bit <<= 8;
+                            if(messcharcounter != 4){
+                                charmask32bit <<= 8;   
+                            }
                         }
-                        std::cout << "This is the charmask " << charmask32bit << std::endl;
+                        //std::cout << "This is the charmask: " << charmask32bit << std::endl;
                         *itInner |= charmask32bit;
-                        std::cout << "New value: " << *itInner << std::endl;
-                        std::cout << "Infused character " << *chariterator << std::endl;
-                        std::cout << "Ended in infuse encoded = true" << std::endl;
+                        //std::cout << "New pixel value: " << *itInner << std::endl;
+                        //std::cout << "Infused character: " << *chariterator << std::endl;
+                        //std::cout << "Ended in infuse encoded = true" << std::endl;
                         encoded = true; 
                     }
                 }
