@@ -318,6 +318,7 @@ std::string Image::decToHex(uint8_t v){
 int Image::setFilter(std::string gr, std::string col){
     filterModeGrey = gr;
     filterModeCol = col;
+    return 0;
 }
 
 std::string Image::identifyFileFormat(std::string p){

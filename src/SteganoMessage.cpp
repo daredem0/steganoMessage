@@ -228,6 +228,7 @@ int SteganoMessage::modeHandler(){
     else if(this->getMode() == FILTER){
         this->getImage()->generateBitmap(); 
     }
+    return 0;
 }
 
 int SteganoMessage::applyFilter(){
@@ -344,6 +345,7 @@ uint32_t SteganoMessage::swapBytes(uint32_t d, size_t s){
         case 4:
             return ((d & 0xFF000000) >> 24 | (d & 0x000000FF) << 24) | ((d & 0xFF0000) >> 8 | (d & 0xFF00) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
@@ -358,6 +360,7 @@ uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
             return ((d & 0xFF000000) >> 4  | (d & 0x0F000000) << 4) | ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) 
                     | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){return swapBytes(swapOctets(d, s), s);}
@@ -379,6 +382,7 @@ uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
         case 4:
             return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
@@ -392,6 +396,7 @@ uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
         case 4:
             return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
@@ -405,6 +410,7 @@ uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
         case 4:
             return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substB(uint32_t d, size_t s){
@@ -418,6 +424,7 @@ uint32_t SteganoMessage::substB(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0xFF000000)) | ((d & 0x00FF0000) - (d & 0xFF000000 >> 8)) | ((d & 0x0000FF00) - (d & 0xFF000000 >> 16)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substR(uint32_t d, size_t s){
@@ -431,6 +438,7 @@ uint32_t SteganoMessage::substR(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0x0000FF00)) | ((d & 0x00FF0000) - (d & 0x0000FF00 << 8)) | ((d & 0xFF000000) - (d & 0x0000FF00 << 16)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substG(uint32_t d, size_t s){
@@ -444,6 +452,7 @@ uint32_t SteganoMessage::substG(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0x00FF0000)) | ((d & 0xFF000000) - (d & 0x00FF0000 << 8)) | ((d & 0x0000FF00) - (d & 0x00FF0000 >> 8)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
