@@ -30,6 +30,7 @@ const int errStdExcept = 9;
 
 const int errMess = 10;
 const int errMessExist = 11;
+const int errInfused = 12;
 
 const int errImg = 20;
 const int errImgExist = 21;
