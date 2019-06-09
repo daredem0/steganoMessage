@@ -330,7 +330,7 @@ int BitmapArray::infuse(std::string message){
             }
             break;
     }
-    errHandle->printLog(bitCount"bit Bitmap successfully infused with Message")
-    return errInfuse;
+    errHandle->printLog("Bitmap successfully infused with Message");
+    return errInfused;
 }
 
