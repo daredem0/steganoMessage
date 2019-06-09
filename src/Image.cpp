@@ -17,9 +17,11 @@
 #if defined (__linux__)
     #define LINUX 1
     #define MAC 0
+    #define PATHLINUX get_current_dir_name()
 #elif defined (__APPLE__)
     #define MAC 1
     #define LINUX 0
+    //#define PATHMAC /*your job*/
 #endif
 
 Image::Image() {
@@ -117,7 +119,7 @@ int Image::generateBitmap(){
         {
             char* wD;
             //get current working dir and generate path
-            wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+            wD = PATHLINUX; //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
             sWD = wD;
             free(wD);//free malloced storage from get_current_dir_name()
             int i = 0;
