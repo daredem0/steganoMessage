@@ -16,7 +16,7 @@
 
 
 #include <stdio.h>
-#include "jpeglib.h"
+#include "jpeglib.h"   //For MacOS -> "/usr/local/Cellar/jpeg/9c/include/jpeglib.h"
 #include <setjmp.h>
 #include <stdint.h>
 #include "Image.h"
