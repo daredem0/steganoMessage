@@ -1,0 +1,260 @@
+\hypertarget{jcmaster_8c}{}\section{Lib\+Jpeg/jcmaster.c File Reference}
+\label{jcmaster_8c}\index{LibJpeg/jcmaster.c@{LibJpeg/jcmaster.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+Include dependency graph for jcmaster.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmy__comp__master}{my\+\_\+comp\+\_\+master}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jcmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jcmaster_8c_a678fbb87a59d9e194aed8c0d54025937}{M\+A\+X\+\_\+\+A\+H\+\_\+\+AL}}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmy__comp__master}{my\+\_\+comp\+\_\+master}} $\ast$ \mbox{\hyperlink{jcmaster_8c_a28fa61319994feba0a71a1210e46b42a}{my\+\_\+master\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5}{c\+\_\+pass\+\_\+type}} \{ \mbox{\hyperlink{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5aa6c2aa8f57542669ee896b560461833f}{main\+\_\+pass}}, 
+\mbox{\hyperlink{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a3c06a1513b4034772a21c933a5ea81b7}{huff\+\_\+opt\+\_\+pass}}, 
+\mbox{\hyperlink{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a0c1dc47dea339bf26c9a97bdfd103451}{output\+\_\+pass}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jcmaster_8c_ade8134ba6c9854560ad234017b1d1adf}{jpeg\+\_\+calc\+\_\+jpeg\+\_\+dimensions}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a4153ad942e383980b6f4f2308f202d88}{jpeg\+\_\+calc\+\_\+trans\+\_\+dimensions}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a09b58a08887213b998b54f94c020cef5}{initial\+\_\+setup}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{jpegint_8h_a5ccf354db2a2e4a0e103fd2daa675084}{transcode\+\_\+only}})
+\item 
+\mbox{\hyperlink{jcmaster_8c_a93e3d1823947d2204352c77b61b6e465}{validate\+\_\+script}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a78fc8c0007716b0d12d4b3fd7a88ef65}{reduce\+\_\+script}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_aab568aac0ff0ad142e3df2f2b99c4224}{select\+\_\+scan\+\_\+parameters}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a4a7cf51fe0757cd82e68cc96cc61428d}{per\+\_\+scan\+\_\+setup}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a811c02b8de42399196fc3e0eb08c40a5}{prepare\+\_\+for\+\_\+pass}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a41d1d2da456f1cd859c69823965becbc}{pass\+\_\+startup}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_aa75548e6f785499773df767d41ce076a}{finish\+\_\+pass\+\_\+master}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcmaster_8c_a7865042efd21561fa5b499d9c6391f23}{jinit\+\_\+c\+\_\+master\+\_\+control}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{jpegint_8h_a5ccf354db2a2e4a0e103fd2daa675084}{transcode\+\_\+only}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jcmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jcmaster_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jcmaster.c@{jcmaster.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 15 of file jcmaster.\+c.
+
+\mbox{\Hypertarget{jcmaster_8c_a678fbb87a59d9e194aed8c0d54025937}\label{jcmaster_8c_a678fbb87a59d9e194aed8c0d54025937}} 
+\index{jcmaster.c@{jcmaster.c}!MAX\_AH\_AL@{MAX\_AH\_AL}}
+\index{MAX\_AH\_AL@{MAX\_AH\_AL}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{MAX\_AH\_AL}{MAX\_AH\_AL}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+A\+H\+\_\+\+AL~10}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{jcmaster_8c_a28fa61319994feba0a71a1210e46b42a}\label{jcmaster_8c_a28fa61319994feba0a71a1210e46b42a}} 
+\index{jcmaster.c@{jcmaster.c}!my\_master\_ptr@{my\_master\_ptr}}
+\index{my\_master\_ptr@{my\_master\_ptr}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{my\_master\_ptr}{my\_master\_ptr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmy__comp__master}{my\+\_\+comp\+\_\+master}}$\ast$ \mbox{\hyperlink{jcmaster_8c_a28fa61319994feba0a71a1210e46b42a}{my\+\_\+master\+\_\+ptr}}}
+
+
+
+Definition at line 39 of file jcmaster.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5}\label{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5}} 
+\index{jcmaster.c@{jcmaster.c}!c\_pass\_type@{c\_pass\_type}}
+\index{c\_pass\_type@{c\_pass\_type}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{c\_pass\_type}{c\_pass\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5}{c\+\_\+pass\+\_\+type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{main\_pass@{main\_pass}!jcmaster.c@{jcmaster.c}}\index{jcmaster.c@{jcmaster.c}!main\_pass@{main\_pass}}}\mbox{\Hypertarget{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5aa6c2aa8f57542669ee896b560461833f}\label{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5aa6c2aa8f57542669ee896b560461833f}} 
+main\+\_\+pass&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{huff\_opt\_pass@{huff\_opt\_pass}!jcmaster.c@{jcmaster.c}}\index{jcmaster.c@{jcmaster.c}!huff\_opt\_pass@{huff\_opt\_pass}}}\mbox{\Hypertarget{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a3c06a1513b4034772a21c933a5ea81b7}\label{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a3c06a1513b4034772a21c933a5ea81b7}} 
+huff\+\_\+opt\+\_\+pass&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{output\_pass@{output\_pass}!jcmaster.c@{jcmaster.c}}\index{jcmaster.c@{jcmaster.c}!output\_pass@{output\_pass}}}\mbox{\Hypertarget{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a0c1dc47dea339bf26c9a97bdfd103451}\label{jcmaster_8c_af81b2e4b6a71dd23a30397fe937b84d5a0c1dc47dea339bf26c9a97bdfd103451}} 
+output\+\_\+pass&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 22 of file jcmaster.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jcmaster_8c_aa75548e6f785499773df767d41ce076a}\label{jcmaster_8c_aa75548e6f785499773df767d41ce076a}} 
+\index{jcmaster.c@{jcmaster.c}!finish\_pass\_master@{finish\_pass\_master}}
+\index{finish\_pass\_master@{finish\_pass\_master}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{finish\_pass\_master()}{finish\_pass\_master()}}
+{\footnotesize\ttfamily finish\+\_\+pass\+\_\+master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 767 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jcmaster_8c_a09b58a08887213b998b54f94c020cef5}\label{jcmaster_8c_a09b58a08887213b998b54f94c020cef5}} 
+\index{jcmaster.c@{jcmaster.c}!initial\_setup@{initial\_setup}}
+\index{initial\_setup@{initial\_setup}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{initial\_setup()}{initial\_setup()}}
+{\footnotesize\ttfamily initial\+\_\+setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}}]{transcode\+\_\+only }\end{DoxyParamCaption})}
+
+
+
+Definition at line 220 of file jcmaster.\+c.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{jcmaster_8c_a7865042efd21561fa5b499d9c6391f23}\label{jcmaster_8c_a7865042efd21561fa5b499d9c6391f23}} 
+\index{jcmaster.c@{jcmaster.c}!jinit\_c\_master\_control@{jinit\_c\_master\_control}}
+\index{jinit\_c\_master\_control@{jinit\_c\_master\_control}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{jinit\_c\_master\_control()}{jinit\_c\_master\_control()}}
+{\footnotesize\ttfamily jinit\+\_\+c\+\_\+master\+\_\+control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}}]{transcode\+\_\+only }\end{DoxyParamCaption})}
+
+
+
+Definition at line 807 of file jcmaster.\+c.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{jcmaster_8c_ade8134ba6c9854560ad234017b1d1adf}\label{jcmaster_8c_ade8134ba6c9854560ad234017b1d1adf}} 
+\index{jcmaster.c@{jcmaster.c}!jpeg\_calc\_jpeg\_dimensions@{jpeg\_calc\_jpeg\_dimensions}}
+\index{jpeg\_calc\_jpeg\_dimensions@{jpeg\_calc\_jpeg\_dimensions}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{jpeg\_calc\_jpeg\_dimensions()}{jpeg\_calc\_jpeg\_dimensions()}}
+{\footnotesize\ttfamily jpeg\+\_\+calc\+\_\+jpeg\+\_\+dimensions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 53 of file jcmaster.\+c.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{jcmaster_8c_a4153ad942e383980b6f4f2308f202d88}\label{jcmaster_8c_a4153ad942e383980b6f4f2308f202d88}} 
+\index{jcmaster.c@{jcmaster.c}!jpeg\_calc\_trans\_dimensions@{jpeg\_calc\_trans\_dimensions}}
+\index{jpeg\_calc\_trans\_dimensions@{jpeg\_calc\_trans\_dimensions}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{jpeg\_calc\_trans\_dimensions()}{jpeg\_calc\_trans\_dimensions()}}
+{\footnotesize\ttfamily jpeg\+\_\+calc\+\_\+trans\+\_\+dimensions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 209 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{jcmaster_8c_a41d1d2da456f1cd859c69823965becbc}\label{jcmaster_8c_a41d1d2da456f1cd859c69823965becbc}} 
+\index{jcmaster.c@{jcmaster.c}!pass\_startup@{pass\_startup}}
+\index{pass\_startup@{pass\_startup}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{pass\_startup()}{pass\_startup()}}
+{\footnotesize\ttfamily pass\+\_\+startup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 753 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{jcmaster_8c_a4a7cf51fe0757cd82e68cc96cc61428d}\label{jcmaster_8c_a4a7cf51fe0757cd82e68cc96cc61428d}} 
+\index{jcmaster.c@{jcmaster.c}!per\_scan\_setup@{per\_scan\_setup}}
+\index{per\_scan\_setup@{per\_scan\_setup}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{per\_scan\_setup()}{per\_scan\_setup()}}
+{\footnotesize\ttfamily per\+\_\+scan\+\_\+setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 572 of file jcmaster.\+c.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{jcmaster_8c_a811c02b8de42399196fc3e0eb08c40a5}\label{jcmaster_8c_a811c02b8de42399196fc3e0eb08c40a5}} 
+\index{jcmaster.c@{jcmaster.c}!prepare\_for\_pass@{prepare\_for\_pass}}
+\index{prepare\_for\_pass@{prepare\_for\_pass}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{prepare\_for\_pass()}{prepare\_for\_pass()}}
+{\footnotesize\ttfamily prepare\+\_\+for\+\_\+pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 665 of file jcmaster.\+c.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{jcmaster_8c_a78fc8c0007716b0d12d4b3fd7a88ef65}\label{jcmaster_8c_a78fc8c0007716b0d12d4b3fd7a88ef65}} 
+\index{jcmaster.c@{jcmaster.c}!reduce\_script@{reduce\_script}}
+\index{reduce\_script@{reduce\_script}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{reduce\_script()}{reduce\_script()}}
+{\footnotesize\ttfamily reduce\+\_\+script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 493 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{jcmaster_8c_aab568aac0ff0ad142e3df2f2b99c4224}\label{jcmaster_8c_aab568aac0ff0ad142e3df2f2b99c4224}} 
+\index{jcmaster.c@{jcmaster.c}!select\_scan\_parameters@{select\_scan\_parameters}}
+\index{select\_scan\_parameters@{select\_scan\_parameters}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{select\_scan\_parameters()}{select\_scan\_parameters()}}
+{\footnotesize\ttfamily select\+\_\+scan\+\_\+parameters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 528 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{jcmaster_8c_a93e3d1823947d2204352c77b61b6e465}\label{jcmaster_8c_a93e3d1823947d2204352c77b61b6e465}} 
+\index{jcmaster.c@{jcmaster.c}!validate\_script@{validate\_script}}
+\index{validate\_script@{validate\_script}!jcmaster.c@{jcmaster.c}}
+\subsubsection{\texorpdfstring{validate\_script()}{validate\_script()}}
+{\footnotesize\ttfamily validate\+\_\+script (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file jcmaster.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 16

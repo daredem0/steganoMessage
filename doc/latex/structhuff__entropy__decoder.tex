@@ -1,0 +1,168 @@
+\hypertarget{structhuff__entropy__decoder}{}\section{huff\+\_\+entropy\+\_\+decoder Struct Reference}
+\label{structhuff__entropy__decoder}\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+
+
+Collaboration diagram for huff\+\_\+entropy\+\_\+decoder\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjpeg__entropy__decoder}{jpeg\+\_\+entropy\+\_\+decoder}} \mbox{\hyperlink{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}{pub}}
+\item 
+\mbox{\hyperlink{structbitread__perm__state}{bitread\+\_\+perm\+\_\+state}} \mbox{\hyperlink{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}{bitstate}}
+\item 
+\mbox{\hyperlink{structsavable__state}{savable\+\_\+state}} \mbox{\hyperlink{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}{saved}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}{insufficient\+\_\+data}}
+\item 
+unsigned int \mbox{\hyperlink{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}{restarts\+\_\+to\+\_\+go}}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}{derived\+\_\+tbls}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}{ac\+\_\+derived\+\_\+tbl}}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}{dc\+\_\+derived\+\_\+tbls}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}{ac\+\_\+derived\+\_\+tbls}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}{dc\+\_\+cur\+\_\+tbls}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}
+\item 
+\mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}} $\ast$ \mbox{\hyperlink{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}{ac\+\_\+cur\+\_\+tbls}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}{coef\+\_\+limit}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 222 of file jdhuff.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}\label{structhuff__entropy__decoder_af9d82cc6c9c90aa6bc3d5fc324967d7c}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!ac\_cur\_tbls@{ac\_cur\_tbls}}
+\index{ac\_cur\_tbls@{ac\_cur\_tbls}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{ac\_cur\_tbls}{ac\_cur\_tbls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+cur\+\_\+tbls\mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}}
+
+
+
+Definition at line 252 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}\label{structhuff__entropy__decoder_adbbf18c6aa3065d9bcf6bf33079733e0}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!ac\_derived\_tbl@{ac\_derived\_tbl}}
+\index{ac\_derived\_tbl@{ac\_derived\_tbl}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{ac\_derived\_tbl}{ac\_derived\_tbl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+derived\+\_\+tbl}
+
+
+
+Definition at line 240 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}\label{structhuff__entropy__decoder_a19edd8c7e80bfe34c21e6fe35ef90cce}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!ac\_derived\_tbls@{ac\_derived\_tbls}}
+\index{ac\_derived\_tbls@{ac\_derived\_tbls}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{ac\_derived\_tbls}{ac\_derived\_tbls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::ac\+\_\+derived\+\_\+tbls\mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 246 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}\label{structhuff__entropy__decoder_a06e5f8944ccb6057c6f72b3df2441223}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!bitstate@{bitstate}}
+\index{bitstate@{bitstate}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{bitstate}{bitstate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbitread__perm__state}{bitread\+\_\+perm\+\_\+state}} huff\+\_\+entropy\+\_\+decoder\+::bitstate}
+
+
+
+Definition at line 228 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}\label{structhuff__entropy__decoder_a28830ac6bc49fafca8325b1ec0472a33}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!coef\_limit@{coef\_limit}}
+\index{coef\_limit@{coef\_limit}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{coef\_limit}{coef\_limit}}
+{\footnotesize\ttfamily int huff\+\_\+entropy\+\_\+decoder\+::coef\+\_\+limit\mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}}
+
+
+
+Definition at line 254 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}\label{structhuff__entropy__decoder_a63725587525df86501d2a632152c01c0}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!dc\_cur\_tbls@{dc\_cur\_tbls}}
+\index{dc\_cur\_tbls@{dc\_cur\_tbls}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{dc\_cur\_tbls}{dc\_cur\_tbls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::dc\+\_\+cur\+\_\+tbls\mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}}
+
+
+
+Definition at line 251 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}\label{structhuff__entropy__decoder_a277328a6f93b55616bd86b0056098c65}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!dc\_derived\_tbls@{dc\_derived\_tbls}}
+\index{dc\_derived\_tbls@{dc\_derived\_tbls}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{dc\_derived\_tbls}{dc\_derived\_tbls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::dc\+\_\+derived\+\_\+tbls\mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 245 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}\label{structhuff__entropy__decoder_a615d2735aebeee55b9820f09700677be}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!derived\_tbls@{derived\_tbls}}
+\index{derived\_tbls@{derived\_tbls}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{derived\_tbls}{derived\_tbls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structd__derived__tbl}{d\+\_\+derived\+\_\+tbl}}$\ast$ huff\+\_\+entropy\+\_\+decoder\+::derived\+\_\+tbls\mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 238 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}\label{structhuff__entropy__decoder_a412a9c88d74ed51774d25757b602b7ae}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!insufficient\_data@{insufficient\_data}}
+\index{insufficient\_data@{insufficient\_data}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{insufficient\_data}{insufficient\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} huff\+\_\+entropy\+\_\+decoder\+::insufficient\+\_\+data}
+
+
+
+Definition at line 232 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}\label{structhuff__entropy__decoder_a85f304c89441e96be66e49685cf24c3d}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!pub@{pub}}
+\index{pub@{pub}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__entropy__decoder}{jpeg\+\_\+entropy\+\_\+decoder}} huff\+\_\+entropy\+\_\+decoder\+::pub}
+
+
+
+Definition at line 223 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}\label{structhuff__entropy__decoder_af6005b639dada949c62767bed24daa1a}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!restarts\_to\_go@{restarts\_to\_go}}
+\index{restarts\_to\_go@{restarts\_to\_go}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{restarts\_to\_go}{restarts\_to\_go}}
+{\footnotesize\ttfamily unsigned int huff\+\_\+entropy\+\_\+decoder\+::restarts\+\_\+to\+\_\+go}
+
+
+
+Definition at line 233 of file jdhuff.\+c.
+
+\mbox{\Hypertarget{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}\label{structhuff__entropy__decoder_a0e0efb55a8a5b01e1e49aa9c3fb8dfe6}} 
+\index{huff\_entropy\_decoder@{huff\_entropy\_decoder}!saved@{saved}}
+\index{saved@{saved}!huff\_entropy\_decoder@{huff\_entropy\_decoder}}
+\subsubsection{\texorpdfstring{saved}{saved}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsavable__state}{savable\+\_\+state}} huff\+\_\+entropy\+\_\+decoder\+::saved}
+
+
+
+Definition at line 229 of file jdhuff.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib\+Jpeg/\mbox{\hyperlink{jdhuff_8c}{jdhuff.\+c}}\end{DoxyCompactItemize}

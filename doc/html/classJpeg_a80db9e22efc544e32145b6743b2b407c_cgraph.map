@@ -1,0 +1,6 @@
+<map id="Jpeg::readImage" name="Jpeg::readImage">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,133,83"/>
+<area shape="rect" id="node2" href="$classBitmapHeader.html#a7ac69b70fce7b54c9cd3134a0e68ea58" title=" " alt="" coords="181,5,412,32"/>
+<area shape="rect" id="node3" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title=" " alt="" coords="211,56,382,83"/>
+<area shape="rect" id="node4" href="$classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="196,107,397,133"/>
+</map>

@@ -1,0 +1,204 @@
+\hypertarget{structjpeg__error__mgr}{}\section{jpeg\+\_\+error\+\_\+mgr Struct Reference}
+\label{structjpeg__error__mgr}\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+
+
+{\ttfamily \#include $<$jpeglib.\+h$>$}
+
+
+
+Collaboration diagram for jpeg\+\_\+error\+\_\+mgr\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structjpeg__error__mgr_a72c40bceda2e6cb78046165e6892ac3a}{J\+M\+E\+T\+H\+OD}} (\mbox{\hyperlink{jmorecfg_8h_abaffdc8256e7ef5c7565ca45e6d3e628}{noreturn\+\_\+t}}, \mbox{\hyperlink{jerror_8c_ac6efeb7cb80ae59d9ccdf1a16e20b2ff}{error\+\_\+exit}},(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo))
+\item 
+\mbox{\hyperlink{structjpeg__error__mgr_a73c0a027b6e6cb8ff2b7b0fc42f756f9}{J\+M\+E\+T\+H\+OD}} (void, \mbox{\hyperlink{jerror_8c_a0f5ad91b180dbac82fb322091d5b390a}{emit\+\_\+message}},(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, int msg\+\_\+level))
+\item 
+\mbox{\hyperlink{structjpeg__error__mgr_ac2989f8ef34acdd78ce26a9110a1c094}{J\+M\+E\+T\+H\+OD}} (void, \mbox{\hyperlink{jerror_8c_ac726e73416c0b5394af1a4275dd61346}{output\+\_\+message}},(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo))
+\item 
+\mbox{\hyperlink{structjpeg__error__mgr_a5f1dfb51c337c36ae1bc5fae7f84528f}{J\+M\+E\+T\+H\+OD}} (void, \mbox{\hyperlink{jerror_8c_a67e2834aaaecd3d95b274bf47f96cd2a}{format\+\_\+message}},(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, char $\ast$buffer))
+\item 
+\mbox{\hyperlink{structjpeg__error__mgr_ac676478083167b3731995d7901bd4b6c}{J\+M\+E\+T\+H\+OD}} (void, \mbox{\hyperlink{jerror_8c_acd2c85048aefc02e56fc620974c5564b}{reset\+\_\+error\+\_\+mgr}},(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structjpeg__error__mgr_a27fcf9391530acf9075836c5d11fff00}{msg\+\_\+code}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int \mbox{\hyperlink{structjpeg__error__mgr_a9b91e1ea3b7e8af8d37cb712a72f4597}{i}} \mbox{[}8\mbox{]}\\
+\>char \mbox{\hyperlink{structjpeg__error__mgr_a0b335f0919d328a95f02440a4ec2216b}{s}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_abda041041041cc3985c7bb1a32e8b0be}{JMSG\_STR\_PARM\_MAX}}\mbox{]}\\
+\} \mbox{\hyperlink{structjpeg__error__mgr_a9366d979c371cc8267be50571e163c30}{msg\_parm}}\\
+
+\end{tabbing}\item 
+int \mbox{\hyperlink{structjpeg__error__mgr_a77328bf266cc3c3c4d9741fc27a4ef9b}{trace\+\_\+level}}
+\item 
+long \mbox{\hyperlink{structjpeg__error__mgr_a6d74f34ca06fd61c9cc2b5818d317255}{num\+\_\+warnings}}
+\item 
+const char $\ast$const  $\ast$ \mbox{\hyperlink{structjpeg__error__mgr_aeaa5c5dc26052bd7e367ceb35f670beb}{jpeg\+\_\+message\+\_\+table}}
+\item 
+int \mbox{\hyperlink{structjpeg__error__mgr_a01d4d8f17f2d2ad49e5bd981c01296b9}{last\+\_\+jpeg\+\_\+message}}
+\item 
+const char $\ast$const  $\ast$ \mbox{\hyperlink{structjpeg__error__mgr_af327179ad6b8d663a173e25615257e33}{addon\+\_\+message\+\_\+table}}
+\item 
+int \mbox{\hyperlink{structjpeg__error__mgr_a35a1536b1171bb13510b5156ffa0af05}{first\+\_\+addon\+\_\+message}}
+\item 
+int \mbox{\hyperlink{structjpeg__error__mgr_a67531ea98e366e64d5b348446d50e806}{last\+\_\+addon\+\_\+message}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 695 of file jpeglib.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structjpeg__error__mgr_a72c40bceda2e6cb78046165e6892ac3a}\label{structjpeg__error__mgr_a72c40bceda2e6cb78046165e6892ac3a}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily jpeg\+\_\+error\+\_\+mgr\+::\+J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jmorecfg_8h_abaffdc8256e7ef5c7565ca45e6d3e628}{noreturn\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{jerror_8c_ac6efeb7cb80ae59d9ccdf1a16e20b2ff}{error\+\_\+exit}}}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a73c0a027b6e6cb8ff2b7b0fc42f756f9}\label{structjpeg__error__mgr_a73c0a027b6e6cb8ff2b7b0fc42f756f9}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily jpeg\+\_\+error\+\_\+mgr\+::\+J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{void}]{,  }\item[{\mbox{\hyperlink{jerror_8c_a0f5ad91b180dbac82fb322091d5b390a}{emit\+\_\+message}}}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, int msg\+\_\+level)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structjpeg__error__mgr_ac2989f8ef34acdd78ce26a9110a1c094}\label{structjpeg__error__mgr_ac2989f8ef34acdd78ce26a9110a1c094}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily jpeg\+\_\+error\+\_\+mgr\+::\+J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{void}]{,  }\item[{\mbox{\hyperlink{jerror_8c_ac726e73416c0b5394af1a4275dd61346}{output\+\_\+message}}}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a5f1dfb51c337c36ae1bc5fae7f84528f}\label{structjpeg__error__mgr_a5f1dfb51c337c36ae1bc5fae7f84528f}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily jpeg\+\_\+error\+\_\+mgr\+::\+J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{void}]{,  }\item[{\mbox{\hyperlink{jerror_8c_a67e2834aaaecd3d95b274bf47f96cd2a}{format\+\_\+message}}}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, char $\ast$buffer)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structjpeg__error__mgr_ac676478083167b3731995d7901bd4b6c}\label{structjpeg__error__mgr_ac676478083167b3731995d7901bd4b6c}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily jpeg\+\_\+error\+\_\+mgr\+::\+J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{void}]{,  }\item[{\mbox{\hyperlink{jerror_8c_acd2c85048aefc02e56fc620974c5564b}{reset\+\_\+error\+\_\+mgr}}}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo)}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structjpeg__error__mgr_af327179ad6b8d663a173e25615257e33}\label{structjpeg__error__mgr_af327179ad6b8d663a173e25615257e33}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!addon\_message\_table@{addon\_message\_table}}
+\index{addon\_message\_table@{addon\_message\_table}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{addon\_message\_table}{addon\_message\_table}}
+{\footnotesize\ttfamily const char$\ast$ const$\ast$ jpeg\+\_\+error\+\_\+mgr\+::addon\+\_\+message\+\_\+table}
+
+
+
+Definition at line 745 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a35a1536b1171bb13510b5156ffa0af05}\label{structjpeg__error__mgr_a35a1536b1171bb13510b5156ffa0af05}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!first\_addon\_message@{first\_addon\_message}}
+\index{first\_addon\_message@{first\_addon\_message}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{first\_addon\_message}{first\_addon\_message}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::first\+\_\+addon\+\_\+message}
+
+
+
+Definition at line 746 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a9b91e1ea3b7e8af8d37cb712a72f4597}\label{structjpeg__error__mgr_a9b91e1ea3b7e8af8d37cb712a72f4597}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!i@{i}}
+\index{i@{i}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::i\mbox{[}8\mbox{]}}
+
+
+
+Definition at line 714 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_aeaa5c5dc26052bd7e367ceb35f670beb}\label{structjpeg__error__mgr_aeaa5c5dc26052bd7e367ceb35f670beb}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!jpeg\_message\_table@{jpeg\_message\_table}}
+\index{jpeg\_message\_table@{jpeg\_message\_table}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{jpeg\_message\_table}{jpeg\_message\_table}}
+{\footnotesize\ttfamily const char$\ast$ const$\ast$ jpeg\+\_\+error\+\_\+mgr\+::jpeg\+\_\+message\+\_\+table}
+
+
+
+Definition at line 740 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a67531ea98e366e64d5b348446d50e806}\label{structjpeg__error__mgr_a67531ea98e366e64d5b348446d50e806}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!last\_addon\_message@{last\_addon\_message}}
+\index{last\_addon\_message@{last\_addon\_message}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{last\_addon\_message}{last\_addon\_message}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::last\+\_\+addon\+\_\+message}
+
+
+
+Definition at line 747 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a01d4d8f17f2d2ad49e5bd981c01296b9}\label{structjpeg__error__mgr_a01d4d8f17f2d2ad49e5bd981c01296b9}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!last\_jpeg\_message@{last\_jpeg\_message}}
+\index{last\_jpeg\_message@{last\_jpeg\_message}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{last\_jpeg\_message}{last\_jpeg\_message}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::last\+\_\+jpeg\+\_\+message}
+
+
+
+Definition at line 741 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a27fcf9391530acf9075836c5d11fff00}\label{structjpeg__error__mgr_a27fcf9391530acf9075836c5d11fff00}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!msg\_code@{msg\_code}}
+\index{msg\_code@{msg\_code}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{msg\_code}{msg\_code}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::msg\+\_\+code}
+
+
+
+Definition at line 711 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a9366d979c371cc8267be50571e163c30}\label{structjpeg__error__mgr_a9366d979c371cc8267be50571e163c30}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!msg\_parm@{msg\_parm}}
+\index{msg\_parm@{msg\_parm}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{msg\_parm}{msg\_parm}}
+{\footnotesize\ttfamily union \{ ... \}   jpeg\+\_\+error\+\_\+mgr\+::msg\+\_\+parm}
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a6d74f34ca06fd61c9cc2b5818d317255}\label{structjpeg__error__mgr_a6d74f34ca06fd61c9cc2b5818d317255}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!num\_warnings@{num\_warnings}}
+\index{num\_warnings@{num\_warnings}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{num\_warnings}{num\_warnings}}
+{\footnotesize\ttfamily long jpeg\+\_\+error\+\_\+mgr\+::num\+\_\+warnings}
+
+
+
+Definition at line 728 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a0b335f0919d328a95f02440a4ec2216b}\label{structjpeg__error__mgr_a0b335f0919d328a95f02440a4ec2216b}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!s@{s}}
+\index{s@{s}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily char jpeg\+\_\+error\+\_\+mgr\+::s\mbox{[}\mbox{\hyperlink{jpeglib_8h_abda041041041cc3985c7bb1a32e8b0be}{J\+M\+S\+G\+\_\+\+S\+T\+R\+\_\+\+P\+A\+R\+M\+\_\+\+M\+AX}}\mbox{]}}
+
+
+
+Definition at line 715 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__error__mgr_a77328bf266cc3c3c4d9741fc27a4ef9b}\label{structjpeg__error__mgr_a77328bf266cc3c3c4d9741fc27a4ef9b}} 
+\index{jpeg\_error\_mgr@{jpeg\_error\_mgr}!trace\_level@{trace\_level}}
+\index{trace\_level@{trace\_level}!jpeg\_error\_mgr@{jpeg\_error\_mgr}}
+\subsubsection{\texorpdfstring{trace\_level}{trace\_level}}
+{\footnotesize\ttfamily int jpeg\+\_\+error\+\_\+mgr\+::trace\+\_\+level}
+
+
+
+Definition at line 720 of file jpeglib.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib\+Jpeg/\mbox{\hyperlink{jpeglib_8h}{jpeglib.\+h}}\end{DoxyCompactItemize}

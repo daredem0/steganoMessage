@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['c0_5fscale',['C0_SCALE',['../jquant2_8c.html#a9261312f10d9913073ca2856ee7d3559',1,'jquant2.c']]],
+  ['c0_5fshift',['C0_SHIFT',['../jquant2_8c.html#abb45a7805564ae603ab2a584e8c7671d',1,'jquant2.c']]],
+  ['c1_5fscale',['C1_SCALE',['../jquant2_8c.html#a7835ca4884818972a0c10d97df21b6d5',1,'jquant2.c']]],
+  ['c1_5fshift',['C1_SHIFT',['../jquant2_8c.html#aa96e92eed49a8e46d504bef8236b09af',1,'jquant2.c']]],
+  ['c2_5fscale',['C2_SCALE',['../jquant2_8c.html#a2a816dba3e6c1ead25235c2f7551547b',1,'jquant2.c']]],
+  ['c2_5fshift',['C2_SHIFT',['../jquant2_8c.html#ab90003ce6b8afd20acebfa0bd9bdcd5a',1,'jquant2.c']]],
+  ['c_5fmax_5fblocks_5fin_5fmcu',['C_MAX_BLOCKS_IN_MCU',['../jpeglib_8h.html#a4f270f4efb3fc0bb09f0d5ffa51ca327',1,'jpeglib.h']]],
+  ['cbcr_5foffset',['CBCR_OFFSET',['../jccolor_8c.html#a6d068520c3e2956e085d142b3c86a951',1,'jccolor.c']]],
+  ['centerjsample',['CENTERJSAMPLE',['../jmorecfg_8h.html#ae719b006fc65f4dc86451b9d24eb56e5',1,'jmorecfg.h']]],
+  ['check_5fbit_5fbuffer',['CHECK_BIT_BUFFER',['../jdhuff_8c.html#af6bdea3084471f67f52a9c3bd330fe5a',1,'jdhuff.c']]],
+  ['const_5fbits',['CONST_BITS',['../jcdctmgr_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jcdctmgr.c'],['../jddctmgr_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jddctmgr.c'],['../jfdctfst_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jfdctfst.c'],['../jfdctint_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jfdctint.c'],['../jidctfst_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jidctfst.c'],['../jidctint_8c.html#a60551099e0e59afa6bcdb5f8afc32230',1,'CONST_BITS():&#160;jidctint.c']]],
+  ['const_5fscale',['CONST_SCALE',['../jdct_8h.html#a7d9123295c88fc45a1b20cbaef894cd4',1,'jdct.h']]],
+  ['context_5frows_5fsupported',['CONTEXT_ROWS_SUPPORTED',['../jcprepct_8c.html#a2629c7c7d7c56b8c813bfa4c141203b4',1,'jcprepct.c']]],
+  ['cstate_5fraw_5fok',['CSTATE_RAW_OK',['../jpegint_8h.html#a1237b7006d409f24d576b18545778b8c',1,'jpegint.h']]],
+  ['cstate_5fscanning',['CSTATE_SCANNING',['../jpegint_8h.html#acac7e11327de2ffceba73d7e194a1292',1,'jpegint.h']]],
+  ['cstate_5fstart',['CSTATE_START',['../jpegint_8h.html#a91399be27c6e355ce9d0e72bb44014e6',1,'jpegint.h']]],
+  ['cstate_5fwrcoefs',['CSTATE_WRCOEFS',['../jpegint_8h.html#a38d3dd3267d194cf01297394995c1a9e',1,'jpegint.h']]],
+  ['ctx_5fpostponed_5frow',['CTX_POSTPONED_ROW',['../jdmainct_8c.html#ae97dd41d81f8053ac761642c64501411',1,'jdmainct.c']]],
+  ['ctx_5fprepare_5ffor_5fimcu',['CTX_PREPARE_FOR_IMCU',['../jdmainct_8c.html#aa8d5d29516b77e54e26f55d3cf655192',1,'jdmainct.c']]],
+  ['ctx_5fprocess_5fimcu',['CTX_PROCESS_IMCU',['../jdmainct_8c.html#ae33dff6a25df359392a05ee0d5839348',1,'jdmainct.c']]]
+];

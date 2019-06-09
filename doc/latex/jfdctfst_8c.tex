@@ -1,0 +1,129 @@
+\hypertarget{jfdctfst_8c}{}\section{Lib\+Jpeg/jfdctfst.c File Reference}
+\label{jfdctfst_8c}\index{LibJpeg/jfdctfst.c@{LibJpeg/jfdctfst.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jdct.\+h\char`\"{}}\newline
+Include dependency graph for jfdctfst.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_a60551099e0e59afa6bcdb5f8afc32230}{C\+O\+N\+S\+T\+\_\+\+B\+I\+TS}}~8
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_a7def159e2c22e37385dba8b6a0ffc6ff}{F\+I\+X\+\_\+0\+\_\+382683433}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})   98)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+382683433) $\ast$/
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_a69e116dc293f6d30c469d5f6b1cc7e25}{F\+I\+X\+\_\+0\+\_\+541196100}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  139)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+541196100) $\ast$/
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_a12d988acb953a145b8fbff960f925af0}{F\+I\+X\+\_\+0\+\_\+707106781}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  181)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+707106781) $\ast$/
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_ace1e332371c1b2f9aa9ebc6aa5320727}{F\+I\+X\+\_\+1\+\_\+306562965}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  334)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(1.\+306562965) $\ast$/
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_affd087378f3038026c7395cd02d2ac86}{D\+E\+S\+C\+A\+LE}}(x,  n)~\mbox{\hyperlink{jpegint_8h_ad45c45ba0d42abd22b4a095dd972a4ba}{R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT}}(x, n)
+\item 
+\#define \mbox{\hyperlink{jfdctfst_8c_ab5fe7e28e1bb22ae813bda41d217618b}{M\+U\+L\+T\+I\+P\+LY}}(var,  const)~((\mbox{\hyperlink{jdct_8h_a00460e5dc80a70f254891b5a8abe739f}{D\+C\+T\+E\+L\+EM}}) \mbox{\hyperlink{jidctfst_8c_affd087378f3038026c7395cd02d2ac86}{D\+E\+S\+C\+A\+LE}}((var) $\ast$ (const), \mbox{\hyperlink{jidctint_8c_a60551099e0e59afa6bcdb5f8afc32230}{C\+O\+N\+S\+T\+\_\+\+B\+I\+TS}}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jfdctfst_8c_a6e0a35f86e6f3d70904ccf4d294fe38c}{jpeg\+\_\+fdct\+\_\+ifast}} (\mbox{\hyperlink{jdct_8h_a00460e5dc80a70f254891b5a8abe739f}{D\+C\+T\+E\+L\+EM}} $\ast$\mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} \mbox{\hyperlink{jdct_8h_af14c5698ddc28d54e751cc292162e2bc}{sample\+\_\+data}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jdct_8h_aaabf07e7a969434d87d4784307b487c4}{start\+\_\+col}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jfdctfst_8c_a60551099e0e59afa6bcdb5f8afc32230}\label{jfdctfst_8c_a60551099e0e59afa6bcdb5f8afc32230}} 
+\index{jfdctfst.c@{jfdctfst.c}!CONST\_BITS@{CONST\_BITS}}
+\index{CONST\_BITS@{CONST\_BITS}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{CONST\_BITS}{CONST\_BITS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+T\+\_\+\+B\+I\+TS~8}
+
+
+
+Definition at line 69 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_affd087378f3038026c7395cd02d2ac86}\label{jfdctfst_8c_affd087378f3038026c7395cd02d2ac86}} 
+\index{jfdctfst.c@{jfdctfst.c}!DESCALE@{DESCALE}}
+\index{DESCALE@{DESCALE}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{DESCALE}{DESCALE}}
+{\footnotesize\ttfamily \#define D\+E\+S\+C\+A\+LE(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{n }\end{DoxyParamCaption})~\mbox{\hyperlink{jpegint_8h_ad45c45ba0d42abd22b4a095dd972a4ba}{R\+I\+G\+H\+T\+\_\+\+S\+H\+I\+FT}}(x, n)}
+
+
+
+Definition at line 99 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_a7def159e2c22e37385dba8b6a0ffc6ff}\label{jfdctfst_8c_a7def159e2c22e37385dba8b6a0ffc6ff}} 
+\index{jfdctfst.c@{jfdctfst.c}!FIX\_0\_382683433@{FIX\_0\_382683433}}
+\index{FIX\_0\_382683433@{FIX\_0\_382683433}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{FIX\_0\_382683433}{FIX\_0\_382683433}}
+{\footnotesize\ttfamily \#define F\+I\+X\+\_\+0\+\_\+382683433~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})   98)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+382683433) $\ast$/}
+
+
+
+Definition at line 80 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_a69e116dc293f6d30c469d5f6b1cc7e25}\label{jfdctfst_8c_a69e116dc293f6d30c469d5f6b1cc7e25}} 
+\index{jfdctfst.c@{jfdctfst.c}!FIX\_0\_541196100@{FIX\_0\_541196100}}
+\index{FIX\_0\_541196100@{FIX\_0\_541196100}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{FIX\_0\_541196100}{FIX\_0\_541196100}}
+{\footnotesize\ttfamily \#define F\+I\+X\+\_\+0\+\_\+541196100~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  139)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+541196100) $\ast$/}
+
+
+
+Definition at line 81 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_a12d988acb953a145b8fbff960f925af0}\label{jfdctfst_8c_a12d988acb953a145b8fbff960f925af0}} 
+\index{jfdctfst.c@{jfdctfst.c}!FIX\_0\_707106781@{FIX\_0\_707106781}}
+\index{FIX\_0\_707106781@{FIX\_0\_707106781}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{FIX\_0\_707106781}{FIX\_0\_707106781}}
+{\footnotesize\ttfamily \#define F\+I\+X\+\_\+0\+\_\+707106781~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  181)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(0.\+707106781) $\ast$/}
+
+
+
+Definition at line 82 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_ace1e332371c1b2f9aa9ebc6aa5320727}\label{jfdctfst_8c_ace1e332371c1b2f9aa9ebc6aa5320727}} 
+\index{jfdctfst.c@{jfdctfst.c}!FIX\_1\_306562965@{FIX\_1\_306562965}}
+\index{FIX\_1\_306562965@{FIX\_1\_306562965}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{FIX\_1\_306562965}{FIX\_1\_306562965}}
+{\footnotesize\ttfamily \#define F\+I\+X\+\_\+1\+\_\+306562965~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}})  334)		/$\ast$ \mbox{\hyperlink{jdmerge_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(1.\+306562965) $\ast$/}
+
+
+
+Definition at line 83 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jfdctfst_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jfdctfst.c@{jfdctfst.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 34 of file jfdctfst.\+c.
+
+\mbox{\Hypertarget{jfdctfst_8c_ab5fe7e28e1bb22ae813bda41d217618b}\label{jfdctfst_8c_ab5fe7e28e1bb22ae813bda41d217618b}} 
+\index{jfdctfst.c@{jfdctfst.c}!MULTIPLY@{MULTIPLY}}
+\index{MULTIPLY@{MULTIPLY}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{MULTIPLY}{MULTIPLY}}
+{\footnotesize\ttfamily \#define M\+U\+L\+T\+I\+P\+LY(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{const }\end{DoxyParamCaption})~((\mbox{\hyperlink{jdct_8h_a00460e5dc80a70f254891b5a8abe739f}{D\+C\+T\+E\+L\+EM}}) \mbox{\hyperlink{jidctfst_8c_affd087378f3038026c7395cd02d2ac86}{D\+E\+S\+C\+A\+LE}}((var) $\ast$ (const), \mbox{\hyperlink{jidctint_8c_a60551099e0e59afa6bcdb5f8afc32230}{C\+O\+N\+S\+T\+\_\+\+B\+I\+TS}}))}
+
+
+
+Definition at line 107 of file jfdctfst.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jfdctfst_8c_a6e0a35f86e6f3d70904ccf4d294fe38c}\label{jfdctfst_8c_a6e0a35f86e6f3d70904ccf4d294fe38c}} 
+\index{jfdctfst.c@{jfdctfst.c}!jpeg\_fdct\_ifast@{jpeg\_fdct\_ifast}}
+\index{jpeg\_fdct\_ifast@{jpeg\_fdct\_ifast}!jfdctfst.c@{jfdctfst.c}}
+\subsubsection{\texorpdfstring{jpeg\_fdct\_ifast()}{jpeg\_fdct\_ifast()}}
+{\footnotesize\ttfamily jpeg\+\_\+fdct\+\_\+ifast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jdct_8h_a00460e5dc80a70f254891b5a8abe739f}{D\+C\+T\+E\+L\+EM}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{sample\+\_\+data,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{start\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file jfdctfst.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1

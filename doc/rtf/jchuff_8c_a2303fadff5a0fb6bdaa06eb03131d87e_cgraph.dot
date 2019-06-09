@@ -1,0 +1,28 @@
+digraph "encode_mcu_DC_first"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node145 [label="encode_mcu_DC_first",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node145 -> Node146 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node146 [label="emit_restart_e",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a7888c7247d6425c291c2045cf3b84413",tooltip=" "];
+  Node146 -> Node147 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node147 [label="emit_eobrun",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#abc3f63e0a0443dabc0b9a520f8e50292",tooltip=" "];
+  Node147 -> Node148 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node148 [label="emit_ac_symbol",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a07823ab39ef8578973b1bd8e09384350",tooltip=" "];
+  Node148 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node149 [label="emit_bits_e",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a944ee3875180fbb90badf7c2be7f369d",tooltip=" "];
+  Node147 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node147 -> Node150 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node150 [label="emit_buffered_bits",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#ab4ebe43b6d989c78ef8f216f31c03abf",tooltip=" "];
+  Node150 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node146 -> Node151 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node151 [label="flush_bits_e",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#abdbb7e0ce2efb140d6616e2d75d81fa8",tooltip=" "];
+  Node151 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node145 -> Node152 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node152 [label="emit_dc_symbol",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#aa484dfda1354fdf7945cf110dbf8e7ef",tooltip=" "];
+  Node152 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node145 -> Node149 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

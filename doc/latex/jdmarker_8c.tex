@@ -1,0 +1,1115 @@
+\hypertarget{jdmarker_8c}{}\section{Lib\+Jpeg/jdmarker.c File Reference}
+\label{jdmarker_8c}\index{LibJpeg/jdmarker.c@{LibJpeg/jdmarker.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+Include dependency graph for jdmarker.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmy__marker__reader}{my\+\_\+marker\+\_\+reader}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_a7228ca7f1eedc647929a660a84ab6f33}{I\+N\+P\+U\+T\+\_\+\+V\+A\+RS}}(cinfo)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_aa5b8cf133c3c91aef3be0b43bcea6d99}{I\+N\+P\+U\+T\+\_\+\+S\+Y\+NC}}(cinfo)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_ac61ffb88e11785e64e8462b75bcdee20}{I\+N\+P\+U\+T\+\_\+\+R\+E\+L\+O\+AD}}(cinfo)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_af8a96f9aeb7d05ccfea64e3212ce4624}{M\+A\+K\+E\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+V\+A\+IL}}(cinfo,  action)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_a0649a313fee23b70a6917f5d5b7c2a31}{I\+N\+P\+U\+T\+\_\+\+B\+Y\+TE}}(cinfo,  \mbox{\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}},  action)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_a6f19e95415e04b3d449a551482dc91f4}{I\+N\+P\+U\+T\+\_\+2\+B\+Y\+T\+ES}}(cinfo,  \mbox{\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}},  action)
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_a057ff05e93a2de52ac7a09328201a9b4}{A\+P\+P0\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN}}~14	/$\ast$ Length of interesting \mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}} in A\+P\+P0 $\ast$/
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_ad1da2c3492da196965c8665710a82557}{A\+P\+P14\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN}}~12	/$\ast$ Length of interesting \mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}} in A\+P\+P14 $\ast$/
+\item 
+\#define \mbox{\hyperlink{jdmarker_8c_ad7fa496a90483fe179ef2466b056a63a}{A\+P\+P\+N\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN}}~14	/$\ast$ Must be the largest of the above!! $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmy__marker__reader}{my\+\_\+marker\+\_\+reader}} $\ast$ \mbox{\hyperlink{jdmarker_8c_a7c8170841a144001b1dadfc8894e34e2}{my\+\_\+marker\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758e}{J\+P\+E\+G\+\_\+\+M\+A\+R\+K\+ER}} \{ \newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}{M\+\_\+\+S\+O\+F0}} = 0xc0, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}{M\+\_\+\+S\+O\+F1}} = 0xc1, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}{M\+\_\+\+S\+O\+F2}} = 0xc2, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}{M\+\_\+\+S\+O\+F3}} = 0xc3, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}{M\+\_\+\+S\+O\+F5}} = 0xc5, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}{M\+\_\+\+S\+O\+F6}} = 0xc6, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}{M\+\_\+\+S\+O\+F7}} = 0xc7, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}{M\+\_\+\+J\+PG}} = 0xc8, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}{M\+\_\+\+S\+O\+F9}} = 0xc9, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}{M\+\_\+\+S\+O\+F10}} = 0xca, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}{M\+\_\+\+S\+O\+F11}} = 0xcb, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}{M\+\_\+\+S\+O\+F13}} = 0xcd, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}{M\+\_\+\+S\+O\+F14}} = 0xce, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}{M\+\_\+\+S\+O\+F15}} = 0xcf, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}{M\+\_\+\+D\+HT}} = 0xc4, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}{M\+\_\+\+D\+AC}} = 0xcc, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}{M\+\_\+\+R\+S\+T0}} = 0xd0, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}{M\+\_\+\+R\+S\+T1}} = 0xd1, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}{M\+\_\+\+R\+S\+T2}} = 0xd2, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}{M\+\_\+\+R\+S\+T3}} = 0xd3, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}{M\+\_\+\+R\+S\+T4}} = 0xd4, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}{M\+\_\+\+R\+S\+T5}} = 0xd5, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}{M\+\_\+\+R\+S\+T6}} = 0xd6, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}{M\+\_\+\+R\+S\+T7}} = 0xd7, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}{M\+\_\+\+S\+OI}} = 0xd8, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}{M\+\_\+\+E\+OI}} = 0xd9, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}{M\+\_\+\+S\+OS}} = 0xda, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}{M\+\_\+\+D\+QT}} = 0xdb, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}{M\+\_\+\+D\+NL}} = 0xdc, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}{M\+\_\+\+D\+RI}} = 0xdd, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}{M\+\_\+\+D\+HP}} = 0xde, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}{M\+\_\+\+E\+XP}} = 0xdf, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}{M\+\_\+\+A\+P\+P0}} = 0xe0, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}{M\+\_\+\+A\+P\+P1}} = 0xe1, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}{M\+\_\+\+A\+P\+P2}} = 0xe2, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}{M\+\_\+\+A\+P\+P3}} = 0xe3, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}{M\+\_\+\+A\+P\+P4}} = 0xe4, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}{M\+\_\+\+A\+P\+P5}} = 0xe5, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}{M\+\_\+\+A\+P\+P6}} = 0xe6, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}{M\+\_\+\+A\+P\+P7}} = 0xe7, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}{M\+\_\+\+A\+P\+P8}} = 0xe8, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}{M\+\_\+\+A\+P\+P9}} = 0xe9, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}{M\+\_\+\+A\+P\+P10}} = 0xea, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}{M\+\_\+\+A\+P\+P11}} = 0xeb, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}{M\+\_\+\+A\+P\+P12}} = 0xec, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}{M\+\_\+\+A\+P\+P13}} = 0xed, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}{M\+\_\+\+A\+P\+P14}} = 0xee, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}{M\+\_\+\+A\+P\+P15}} = 0xef, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}{M\+\_\+\+J\+P\+G0}} = 0xf0, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}{M\+\_\+\+J\+P\+G8}} = 0xf8, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}{M\+\_\+\+J\+P\+G13}} = 0xfd, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}{M\+\_\+\+C\+OM}} = 0xfe, 
+\newline
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}{M\+\_\+\+T\+EM}} = 0x01, 
+\mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}{M\+\_\+\+E\+R\+R\+OR}} = 0x100, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}{M\+\_\+\+S\+O\+F0}} = 0xc0, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}{M\+\_\+\+S\+O\+F1}} = 0xc1, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}{M\+\_\+\+S\+O\+F2}} = 0xc2, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}{M\+\_\+\+S\+O\+F3}} = 0xc3, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}{M\+\_\+\+S\+O\+F5}} = 0xc5, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}{M\+\_\+\+S\+O\+F6}} = 0xc6, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}{M\+\_\+\+S\+O\+F7}} = 0xc7, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}{M\+\_\+\+J\+PG}} = 0xc8, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}{M\+\_\+\+S\+O\+F9}} = 0xc9, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}{M\+\_\+\+S\+O\+F10}} = 0xca, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}{M\+\_\+\+S\+O\+F11}} = 0xcb, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}{M\+\_\+\+S\+O\+F13}} = 0xcd, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}{M\+\_\+\+S\+O\+F14}} = 0xce, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}{M\+\_\+\+S\+O\+F15}} = 0xcf, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}{M\+\_\+\+D\+HT}} = 0xc4, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}{M\+\_\+\+D\+AC}} = 0xcc, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}{M\+\_\+\+R\+S\+T0}} = 0xd0, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}{M\+\_\+\+R\+S\+T1}} = 0xd1, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}{M\+\_\+\+R\+S\+T2}} = 0xd2, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}{M\+\_\+\+R\+S\+T3}} = 0xd3, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}{M\+\_\+\+R\+S\+T4}} = 0xd4, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}{M\+\_\+\+R\+S\+T5}} = 0xd5, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}{M\+\_\+\+R\+S\+T6}} = 0xd6, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}{M\+\_\+\+R\+S\+T7}} = 0xd7, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}{M\+\_\+\+S\+OI}} = 0xd8, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}{M\+\_\+\+E\+OI}} = 0xd9, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}{M\+\_\+\+S\+OS}} = 0xda, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}{M\+\_\+\+D\+QT}} = 0xdb, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}{M\+\_\+\+D\+NL}} = 0xdc, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}{M\+\_\+\+D\+RI}} = 0xdd, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}{M\+\_\+\+D\+HP}} = 0xde, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}{M\+\_\+\+E\+XP}} = 0xdf, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}{M\+\_\+\+A\+P\+P0}} = 0xe0, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}{M\+\_\+\+A\+P\+P1}} = 0xe1, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}{M\+\_\+\+A\+P\+P2}} = 0xe2, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}{M\+\_\+\+A\+P\+P3}} = 0xe3, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}{M\+\_\+\+A\+P\+P4}} = 0xe4, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}{M\+\_\+\+A\+P\+P5}} = 0xe5, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}{M\+\_\+\+A\+P\+P6}} = 0xe6, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}{M\+\_\+\+A\+P\+P7}} = 0xe7, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}{M\+\_\+\+A\+P\+P8}} = 0xe8, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}{M\+\_\+\+A\+P\+P9}} = 0xe9, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}{M\+\_\+\+A\+P\+P10}} = 0xea, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}{M\+\_\+\+A\+P\+P11}} = 0xeb, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}{M\+\_\+\+A\+P\+P12}} = 0xec, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}{M\+\_\+\+A\+P\+P13}} = 0xed, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}{M\+\_\+\+A\+P\+P14}} = 0xee, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}{M\+\_\+\+A\+P\+P15}} = 0xef, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}{M\+\_\+\+J\+P\+G0}} = 0xf0, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}{M\+\_\+\+J\+P\+G8}} = 0xf8, 
+\newline
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}{M\+\_\+\+J\+P\+G13}} = 0xfd, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}{M\+\_\+\+C\+OM}} = 0xfe, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}{M\+\_\+\+T\+EM}} = 0x01, 
+\mbox{\hyperlink{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}{M\+\_\+\+E\+R\+R\+OR}} = 0x100
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jdmarker_8c_afdd1d684e02317cbcd4034508275a0df}{get\+\_\+soi}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a00b567999ea5c09aab86756f5ef19219}{get\+\_\+sof}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} is\+\_\+baseline, \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} is\+\_\+prog, \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} is\+\_\+arith)
+\item 
+\mbox{\hyperlink{jdmarker_8c_aec23916e5e625b771e766d41f457bb18}{get\+\_\+sos}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a3bb0bfa69f4961efecdf334c4582ca99}{get\+\_\+dac}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_ad09ef619b094cb03fb9c10df65c6ccd2}{get\+\_\+dht}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_ae8cd99feb65fb3bf3e1aca7ea5aa1087}{get\+\_\+dqt}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_aa9a14e7eb5b230749c084f655693a114}{get\+\_\+dri}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a7146cbc98c33e7bdd8beccfe9be7d8d8}{get\+\_\+lse}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a95585da4af8c67557d1b243176a1cc2f}{examine\+\_\+app0}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmorecfg_8h_a356ad249f20e691b520da439f92cccbc}{J\+O\+C\+T\+ET}} \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$\mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}}, unsigned int \mbox{\hyperlink{jpeglib_8h_a37893c863bbe3ef78feca71570de3017}{datalen}}, \mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}} remaining)
+\item 
+\mbox{\hyperlink{jdmarker_8c_ad97698848844246d3361765025172931}{examine\+\_\+app14}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmorecfg_8h_a356ad249f20e691b520da439f92cccbc}{J\+O\+C\+T\+ET}} \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$\mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}}, unsigned int \mbox{\hyperlink{jpeglib_8h_a37893c863bbe3ef78feca71570de3017}{datalen}}, \mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}} remaining)
+\item 
+\mbox{\hyperlink{jdmarker_8c_ad82019ab15e06b65c6119bbbce254b8f}{get\+\_\+interesting\+\_\+appn}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_acba4eaea087c7946c5d51b3f15eb72a2}{save\+\_\+marker}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a3e27a348c35d6008c19ace382ec756d0}{skip\+\_\+variable}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_ac22171f29bb541cfcb932f0903102c45}{next\+\_\+marker}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a19b70465fd94f29d414d4ce11d2656ee}{first\+\_\+marker}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a8ff81a078a99e98efe6051366512c5f6}{read\+\_\+markers}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a44129320cf7ea5968113cdbd07bdd992}{read\+\_\+restart\+\_\+marker}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a037c6ada9f7d2310ca67765c98c86995}{jpeg\+\_\+resync\+\_\+to\+\_\+restart}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, int \mbox{\hyperlink{jpeglib_8h_a3450f7500f843178b4517d0e7ef2b537}{desired}})
+\item 
+\mbox{\hyperlink{jdmarker_8c_a1c08f1ba460e1a19d2dbc877b47c8b5f}{reset\+\_\+marker\+\_\+reader}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a8fa54cb03525a09cd2a6121496895072}{jinit\+\_\+marker\+\_\+reader}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jdmarker_8c_a5bb5f27bfd0bab5538de0aec18d2273a}{jpeg\+\_\+save\+\_\+markers}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, int \mbox{\hyperlink{jpeglib_8h_a4385fc8b02cb43f7ef69c950465bab51}{marker\+\_\+code}}, unsigned int \mbox{\hyperlink{jpeglib_8h_a55915d96c9b813f512b251db6be18089}{length\+\_\+limit}})
+\item 
+\mbox{\hyperlink{jdmarker_8c_a9612d9c5268a42e596a2bd8acdafd156}{jpeg\+\_\+set\+\_\+marker\+\_\+processor}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, int \mbox{\hyperlink{jpeglib_8h_a4385fc8b02cb43f7ef69c950465bab51}{marker\+\_\+code}}, jpeg\+\_\+marker\+\_\+parser\+\_\+method \mbox{\hyperlink{jpeglib_8h_a93cb4f27f735546be9aa745e14ed9050}{routine}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jdmarker_8c_a057ff05e93a2de52ac7a09328201a9b4}\label{jdmarker_8c_a057ff05e93a2de52ac7a09328201a9b4}} 
+\index{jdmarker.c@{jdmarker.c}!APP0\_DATA\_LEN@{APP0\_DATA\_LEN}}
+\index{APP0\_DATA\_LEN@{APP0\_DATA\_LEN}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{APP0\_DATA\_LEN}{APP0\_DATA\_LEN}}
+{\footnotesize\ttfamily \#define A\+P\+P0\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN~14	/$\ast$ Length of interesting \mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}} in A\+P\+P0 $\ast$/}
+
+
+
+Definition at line 709 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_ad1da2c3492da196965c8665710a82557}\label{jdmarker_8c_ad1da2c3492da196965c8665710a82557}} 
+\index{jdmarker.c@{jdmarker.c}!APP14\_DATA\_LEN@{APP14\_DATA\_LEN}}
+\index{APP14\_DATA\_LEN@{APP14\_DATA\_LEN}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{APP14\_DATA\_LEN}{APP14\_DATA\_LEN}}
+{\footnotesize\ttfamily \#define A\+P\+P14\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN~12	/$\ast$ Length of interesting \mbox{\hyperlink{jpeglib_8h_aa379dc8ae39e55ae0c431a61a7d2f2bc}{data}} in A\+P\+P14 $\ast$/}
+
+
+
+Definition at line 710 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_ad7fa496a90483fe179ef2466b056a63a}\label{jdmarker_8c_ad7fa496a90483fe179ef2466b056a63a}} 
+\index{jdmarker.c@{jdmarker.c}!APPN\_DATA\_LEN@{APPN\_DATA\_LEN}}
+\index{APPN\_DATA\_LEN@{APPN\_DATA\_LEN}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{APPN\_DATA\_LEN}{APPN\_DATA\_LEN}}
+{\footnotesize\ttfamily \#define A\+P\+P\+N\+\_\+\+D\+A\+T\+A\+\_\+\+L\+EN~14	/$\ast$ Must be the largest of the above!! $\ast$/}
+
+
+
+Definition at line 711 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_a6f19e95415e04b3d449a551482dc91f4}\label{jdmarker_8c_a6f19e95415e04b3d449a551482dc91f4}} 
+\index{jdmarker.c@{jdmarker.c}!INPUT\_2BYTES@{INPUT\_2BYTES}}
+\index{INPUT\_2BYTES@{INPUT\_2BYTES}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{INPUT\_2BYTES}{INPUT\_2BYTES}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+2\+B\+Y\+T\+ES(\begin{DoxyParamCaption}\item[{}]{cinfo,  }\item[{}]{\mbox{\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}},  }\item[{}]{action }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{jerror_8h_aea33aff140a248c4e0bb2ade581277f4}{MAKESTMT}}( \mbox{\hyperlink{jdmarker_8c_af8a96f9aeb7d05ccfea64e3212ce4624}{MAKE\_BYTE\_AVAIL}}(cinfo,action); \(\backslash\)}
+\DoxyCodeLine{          bytes\_in\_buffer--; \(\backslash\)}
+\DoxyCodeLine{          V = ((\textcolor{keywordtype}{unsigned} int) \mbox{\hyperlink{jmorecfg_8h_ac8c0d5e71e91d75fa14a8bf073f17cb3}{GETJOCTET}}(*next\_input\_byte++)) << 8; \(\backslash\)}
+\DoxyCodeLine{          MAKE\_BYTE\_AVAIL(cinfo,action); \(\backslash\)}
+\DoxyCodeLine{          bytes\_in\_buffer--; \(\backslash\)}
+\DoxyCodeLine{          V += \mbox{\hyperlink{jmorecfg_8h_ac8c0d5e71e91d75fa14a8bf073f17cb3}{GETJOCTET}}(*next\_input\_byte++); )}
+
+\end{DoxyCode}
+
+
+Definition at line 158 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_a0649a313fee23b70a6917f5d5b7c2a31}\label{jdmarker_8c_a0649a313fee23b70a6917f5d5b7c2a31}} 
+\index{jdmarker.c@{jdmarker.c}!INPUT\_BYTE@{INPUT\_BYTE}}
+\index{INPUT\_BYTE@{INPUT\_BYTE}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{INPUT\_BYTE}{INPUT\_BYTE}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{cinfo,  }\item[{}]{\mbox{\hyperlink{jaricom_8c_af20c591dd6cbdf45ad772686aa4b9f30}{V}},  }\item[{}]{action }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{jerror_8h_aea33aff140a248c4e0bb2ade581277f4}{MAKESTMT}}( \mbox{\hyperlink{jdmarker_8c_af8a96f9aeb7d05ccfea64e3212ce4624}{MAKE\_BYTE\_AVAIL}}(cinfo,action); \(\backslash\)}
+\DoxyCodeLine{          bytes\_in\_buffer--; \(\backslash\)}
+\DoxyCodeLine{          V = \mbox{\hyperlink{jmorecfg_8h_ac8c0d5e71e91d75fa14a8bf073f17cb3}{GETJOCTET}}(*next\_input\_byte++); )}
+
+\end{DoxyCode}
+
+
+Definition at line 150 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_ac61ffb88e11785e64e8462b75bcdee20}\label{jdmarker_8c_ac61ffb88e11785e64e8462b75bcdee20}} 
+\index{jdmarker.c@{jdmarker.c}!INPUT\_RELOAD@{INPUT\_RELOAD}}
+\index{INPUT\_RELOAD@{INPUT\_RELOAD}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{INPUT\_RELOAD}{INPUT\_RELOAD}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+R\+E\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{cinfo }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{( next\_input\_byte = datasrc->next\_input\_byte,  \(\backslash\)}
+\DoxyCodeLine{      bytes\_in\_buffer = datasrc->bytes\_in\_buffer )}
+
+\end{DoxyCode}
+
+
+Definition at line 132 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_aa5b8cf133c3c91aef3be0b43bcea6d99}\label{jdmarker_8c_aa5b8cf133c3c91aef3be0b43bcea6d99}} 
+\index{jdmarker.c@{jdmarker.c}!INPUT\_SYNC@{INPUT\_SYNC}}
+\index{INPUT\_SYNC@{INPUT\_SYNC}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{INPUT\_SYNC}{INPUT\_SYNC}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+S\+Y\+NC(\begin{DoxyParamCaption}\item[{}]{cinfo }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{( datasrc->next\_input\_byte = next\_input\_byte,  \(\backslash\)}
+\DoxyCodeLine{      datasrc->bytes\_in\_buffer = bytes\_in\_buffer )}
+
+\end{DoxyCode}
+
+
+Definition at line 127 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_a7228ca7f1eedc647929a660a84ab6f33}\label{jdmarker_8c_a7228ca7f1eedc647929a660a84ab6f33}} 
+\index{jdmarker.c@{jdmarker.c}!INPUT\_VARS@{INPUT\_VARS}}
+\index{INPUT\_VARS@{INPUT\_VARS}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{INPUT\_VARS}{INPUT\_VARS}}
+{\footnotesize\ttfamily \#define I\+N\+P\+U\+T\+\_\+\+V\+A\+RS(\begin{DoxyParamCaption}\item[{}]{cinfo }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct }\mbox{\hyperlink{structjpeg__source__mgr}{jpeg\_source\_mgr}} * datasrc = (cinfo)->src;  \(\backslash\)}
+\DoxyCodeLine{    const \mbox{\hyperlink{jmorecfg_8h_a356ad249f20e691b520da439f92cccbc}{JOCTET}} * \mbox{\hyperlink{structjpeg__source__mgr_aad884e7f4ba7496ab0f56c942c7585c1}{next\_input\_byte}} = datasrc->\mbox{\hyperlink{structjpeg__source__mgr_aad884e7f4ba7496ab0f56c942c7585c1}{next\_input\_byte}};  \(\backslash\)}
+\DoxyCodeLine{    size\_t \mbox{\hyperlink{structjpeg__source__mgr_a8ecb72557c1c9666d77fffea074282a4}{bytes\_in\_buffer}} = datasrc->\mbox{\hyperlink{structjpeg__source__mgr_a8ecb72557c1c9666d77fffea074282a4}{bytes\_in\_buffer}}}
+
+\end{DoxyCode}
+
+
+Definition at line 121 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jdmarker_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jdmarker.c@{jdmarker.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 16 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_af8a96f9aeb7d05ccfea64e3212ce4624}\label{jdmarker_8c_af8a96f9aeb7d05ccfea64e3212ce4624}} 
+\index{jdmarker.c@{jdmarker.c}!MAKE\_BYTE\_AVAIL@{MAKE\_BYTE\_AVAIL}}
+\index{MAKE\_BYTE\_AVAIL@{MAKE\_BYTE\_AVAIL}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{MAKE\_BYTE\_AVAIL}{MAKE\_BYTE\_AVAIL}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+B\+Y\+T\+E\+\_\+\+A\+V\+A\+IL(\begin{DoxyParamCaption}\item[{}]{cinfo,  }\item[{}]{action }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (\mbox{\hyperlink{structjpeg__source__mgr_a8ecb72557c1c9666d77fffea074282a4}{bytes\_in\_buffer}} == 0) \{  \(\backslash\)}
+\DoxyCodeLine{      if (! (*datasrc->fill\_input\_buffer) (cinfo))  \(\backslash\)}
+\DoxyCodeLine{        \{ action; \}  \(\backslash\)}
+\DoxyCodeLine{      INPUT\_RELOAD(cinfo);  \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line 140 of file jdmarker.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{jdmarker_8c_a7c8170841a144001b1dadfc8894e34e2}\label{jdmarker_8c_a7c8170841a144001b1dadfc8894e34e2}} 
+\index{jdmarker.c@{jdmarker.c}!my\_marker\_ptr@{my\_marker\_ptr}}
+\index{my\_marker\_ptr@{my\_marker\_ptr}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{my\_marker\_ptr}{my\_marker\_ptr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmy__marker__reader}{my\+\_\+marker\+\_\+reader}}$\ast$ \mbox{\hyperlink{jcmarker_8c_a10592246118021c933dac745fe4344c5}{my\+\_\+marker\+\_\+ptr}}}
+
+
+
+Definition at line 109 of file jdmarker.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758e}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758e}} 
+\index{jdmarker.c@{jdmarker.c}!JPEG\_MARKER@{JPEG\_MARKER}}
+\index{JPEG\_MARKER@{JPEG\_MARKER}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{JPEG\_MARKER}{JPEG\_MARKER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{jcmarker_8c_af8679a604c2f6538ef502df1dafb758e}{J\+P\+E\+G\+\_\+\+M\+A\+R\+K\+ER}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF0@{M\_SOF0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF0@{M\_SOF0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}} 
+M\+\_\+\+S\+O\+F0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF1@{M\_SOF1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF1@{M\_SOF1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}} 
+M\+\_\+\+S\+O\+F1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF2@{M\_SOF2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF2@{M\_SOF2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}} 
+M\+\_\+\+S\+O\+F2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF3@{M\_SOF3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF3@{M\_SOF3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}} 
+M\+\_\+\+S\+O\+F3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF5@{M\_SOF5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF5@{M\_SOF5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}} 
+M\+\_\+\+S\+O\+F5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF6@{M\_SOF6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF6@{M\_SOF6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}} 
+M\+\_\+\+S\+O\+F6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF7@{M\_SOF7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF7@{M\_SOF7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}} 
+M\+\_\+\+S\+O\+F7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG@{M\_JPG}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG@{M\_JPG}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}} 
+M\+\_\+\+J\+PG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF9@{M\_SOF9}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF9@{M\_SOF9}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}} 
+M\+\_\+\+S\+O\+F9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF10@{M\_SOF10}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF10@{M\_SOF10}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}} 
+M\+\_\+\+S\+O\+F10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF11@{M\_SOF11}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF11@{M\_SOF11}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}} 
+M\+\_\+\+S\+O\+F11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF13@{M\_SOF13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF13@{M\_SOF13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}} 
+M\+\_\+\+S\+O\+F13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF14@{M\_SOF14}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF14@{M\_SOF14}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}} 
+M\+\_\+\+S\+O\+F14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF15@{M\_SOF15}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF15@{M\_SOF15}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}} 
+M\+\_\+\+S\+O\+F15&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DHT@{M\_DHT}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DHT@{M\_DHT}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}} 
+M\+\_\+\+D\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DAC@{M\_DAC}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DAC@{M\_DAC}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}} 
+M\+\_\+\+D\+AC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST0@{M\_RST0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST0@{M\_RST0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}} 
+M\+\_\+\+R\+S\+T0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST1@{M\_RST1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST1@{M\_RST1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}} 
+M\+\_\+\+R\+S\+T1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST2@{M\_RST2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST2@{M\_RST2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}} 
+M\+\_\+\+R\+S\+T2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST3@{M\_RST3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST3@{M\_RST3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}} 
+M\+\_\+\+R\+S\+T3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST4@{M\_RST4}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST4@{M\_RST4}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}} 
+M\+\_\+\+R\+S\+T4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST5@{M\_RST5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST5@{M\_RST5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}} 
+M\+\_\+\+R\+S\+T5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST6@{M\_RST6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST6@{M\_RST6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}} 
+M\+\_\+\+R\+S\+T6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST7@{M\_RST7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST7@{M\_RST7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}} 
+M\+\_\+\+R\+S\+T7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOI@{M\_SOI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOI@{M\_SOI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}} 
+M\+\_\+\+S\+OI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_EOI@{M\_EOI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_EOI@{M\_EOI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}} 
+M\+\_\+\+E\+OI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOS@{M\_SOS}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOS@{M\_SOS}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}} 
+M\+\_\+\+S\+OS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DQT@{M\_DQT}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DQT@{M\_DQT}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}} 
+M\+\_\+\+D\+QT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DNL@{M\_DNL}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DNL@{M\_DNL}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}} 
+M\+\_\+\+D\+NL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DRI@{M\_DRI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DRI@{M\_DRI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}} 
+M\+\_\+\+D\+RI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DHP@{M\_DHP}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DHP@{M\_DHP}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}} 
+M\+\_\+\+D\+HP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_EXP@{M\_EXP}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_EXP@{M\_EXP}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}} 
+M\+\_\+\+E\+XP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP0@{M\_APP0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP0@{M\_APP0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}} 
+M\+\_\+\+A\+P\+P0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP1@{M\_APP1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP1@{M\_APP1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}} 
+M\+\_\+\+A\+P\+P1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP2@{M\_APP2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP2@{M\_APP2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}} 
+M\+\_\+\+A\+P\+P2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP3@{M\_APP3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP3@{M\_APP3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}} 
+M\+\_\+\+A\+P\+P3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP4@{M\_APP4}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP4@{M\_APP4}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}} 
+M\+\_\+\+A\+P\+P4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP5@{M\_APP5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP5@{M\_APP5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}} 
+M\+\_\+\+A\+P\+P5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP6@{M\_APP6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP6@{M\_APP6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}} 
+M\+\_\+\+A\+P\+P6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP7@{M\_APP7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP7@{M\_APP7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}} 
+M\+\_\+\+A\+P\+P7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP8@{M\_APP8}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP8@{M\_APP8}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}} 
+M\+\_\+\+A\+P\+P8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP9@{M\_APP9}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP9@{M\_APP9}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}} 
+M\+\_\+\+A\+P\+P9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP10@{M\_APP10}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP10@{M\_APP10}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}} 
+M\+\_\+\+A\+P\+P10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP11@{M\_APP11}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP11@{M\_APP11}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}} 
+M\+\_\+\+A\+P\+P11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP12@{M\_APP12}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP12@{M\_APP12}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}} 
+M\+\_\+\+A\+P\+P12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP13@{M\_APP13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP13@{M\_APP13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}} 
+M\+\_\+\+A\+P\+P13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP14@{M\_APP14}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP14@{M\_APP14}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}} 
+M\+\_\+\+A\+P\+P14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP15@{M\_APP15}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP15@{M\_APP15}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}} 
+M\+\_\+\+A\+P\+P15&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG0@{M\_JPG0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG0@{M\_JPG0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}} 
+M\+\_\+\+J\+P\+G0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG8@{M\_JPG8}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG8@{M\_JPG8}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}} 
+M\+\_\+\+J\+P\+G8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG13@{M\_JPG13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG13@{M\_JPG13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}} 
+M\+\_\+\+J\+P\+G13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_COM@{M\_COM}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_COM@{M\_COM}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}} 
+M\+\_\+\+C\+OM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_TEM@{M\_TEM}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_TEM@{M\_TEM}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}} 
+M\+\_\+\+T\+EM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_ERROR@{M\_ERROR}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_ERROR@{M\_ERROR}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}} 
+M\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF0@{M\_SOF0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF0@{M\_SOF0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae378ea5accc324b1971661045a4310b6}} 
+M\+\_\+\+S\+O\+F0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF1@{M\_SOF1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF1@{M\_SOF1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eadce732cdecfcc87caa8131dcbd1ce8f2}} 
+M\+\_\+\+S\+O\+F1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF2@{M\_SOF2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF2@{M\_SOF2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea596fcf9241af0520cd9320e26500967f}} 
+M\+\_\+\+S\+O\+F2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF3@{M\_SOF3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF3@{M\_SOF3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5788f5676ea22070ce8b0a4d347bdf3d}} 
+M\+\_\+\+S\+O\+F3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF5@{M\_SOF5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF5@{M\_SOF5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf58aa5a7c0fc59e3924b1ddcbbbc8cf9}} 
+M\+\_\+\+S\+O\+F5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF6@{M\_SOF6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF6@{M\_SOF6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea62db0a63d44ddd02930c5940bc875ea8}} 
+M\+\_\+\+S\+O\+F6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF7@{M\_SOF7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF7@{M\_SOF7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea133a046cfa34c60d7404af2d5cf7cf89}} 
+M\+\_\+\+S\+O\+F7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG@{M\_JPG}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG@{M\_JPG}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7831272d3f1adf39cc435b929f4356c9}} 
+M\+\_\+\+J\+PG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF9@{M\_SOF9}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF9@{M\_SOF9}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea76298c41c8b7ca8a78f2d8fe9b4142c2}} 
+M\+\_\+\+S\+O\+F9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF10@{M\_SOF10}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF10@{M\_SOF10}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9e5c338b4fd5511088fa86bb20e64f3a}} 
+M\+\_\+\+S\+O\+F10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF11@{M\_SOF11}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF11@{M\_SOF11}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea9ec3e5a2e5e70c7709e34f4bd326beb4}} 
+M\+\_\+\+S\+O\+F11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF13@{M\_SOF13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF13@{M\_SOF13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eab6ab62ee271a4e525d18ac4dcaecc650}} 
+M\+\_\+\+S\+O\+F13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF14@{M\_SOF14}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF14@{M\_SOF14}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0e88fd11779e652bdcf14283fd66e147}} 
+M\+\_\+\+S\+O\+F14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOF15@{M\_SOF15}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOF15@{M\_SOF15}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6e80f3fe9060cc5edffcb05f3ed87519}} 
+M\+\_\+\+S\+O\+F15&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DHT@{M\_DHT}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DHT@{M\_DHT}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea4d8c861e2af15fd3788eca8d9d6658ee}} 
+M\+\_\+\+D\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DAC@{M\_DAC}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DAC@{M\_DAC}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5c8f3cf42e49f762cd03593677b99ef5}} 
+M\+\_\+\+D\+AC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST0@{M\_RST0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST0@{M\_RST0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6738992105ae7dcdbd213fc29bb999e6}} 
+M\+\_\+\+R\+S\+T0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST1@{M\_RST1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST1@{M\_RST1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf7926723c3ebd7589e6c1843b22d1397}} 
+M\+\_\+\+R\+S\+T1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST2@{M\_RST2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST2@{M\_RST2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf579fb1733121b059b53c5f97fae1354}} 
+M\+\_\+\+R\+S\+T2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST3@{M\_RST3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST3@{M\_RST3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea3fefaaf0b42355ed215b21aa873ba7d1}} 
+M\+\_\+\+R\+S\+T3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST4@{M\_RST4}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST4@{M\_RST4}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea05200469090691bf26b5f14012b89dbd}} 
+M\+\_\+\+R\+S\+T4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST5@{M\_RST5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST5@{M\_RST5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09e61cc3f4bdc5d2396b8c7c47a51d6c}} 
+M\+\_\+\+R\+S\+T5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST6@{M\_RST6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST6@{M\_RST6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac46c1f3019d56391f103924232c32ef6}} 
+M\+\_\+\+R\+S\+T6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_RST7@{M\_RST7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_RST7@{M\_RST7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea74e769cba5338cc23330b0e33dfd0953}} 
+M\+\_\+\+R\+S\+T7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOI@{M\_SOI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOI@{M\_SOI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea71e9d6e2c20cb73325471cc87de62c2c}} 
+M\+\_\+\+S\+OI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_EOI@{M\_EOI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_EOI@{M\_EOI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea18a46268847e1e9821cffd21a43c89b2}} 
+M\+\_\+\+E\+OI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_SOS@{M\_SOS}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_SOS@{M\_SOS}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaddd23503953e352503564f0114539a7d}} 
+M\+\_\+\+S\+OS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DQT@{M\_DQT}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DQT@{M\_DQT}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea472e58da7490c1ba6a0513da4075b2fa}} 
+M\+\_\+\+D\+QT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DNL@{M\_DNL}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DNL@{M\_DNL}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea0bcbe4809c59685e3b73afa8d251b203}} 
+M\+\_\+\+D\+NL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DRI@{M\_DRI}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DRI@{M\_DRI}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea7509a5fd2ccebcb19d9cb3f94ba3fdb7}} 
+M\+\_\+\+D\+RI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_DHP@{M\_DHP}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_DHP@{M\_DHP}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaff74511621baa1a87f6865d5606d29df}} 
+M\+\_\+\+D\+HP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_EXP@{M\_EXP}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_EXP@{M\_EXP}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaaec89324e4df4ef51e8b19fee9e58c1c}} 
+M\+\_\+\+E\+XP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP0@{M\_APP0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP0@{M\_APP0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaea560025fd60b4714deb1f4808383bc9}} 
+M\+\_\+\+A\+P\+P0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP1@{M\_APP1}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP1@{M\_APP1}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea253489a90d92cae281bc03692010cdec}} 
+M\+\_\+\+A\+P\+P1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP2@{M\_APP2}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP2@{M\_APP2}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea353dd92719799115f3549070ebca08b8}} 
+M\+\_\+\+A\+P\+P2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP3@{M\_APP3}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP3@{M\_APP3}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1189a3e703577a8bebfa5ef7cac7f0ed}} 
+M\+\_\+\+A\+P\+P3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP4@{M\_APP4}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP4@{M\_APP4}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaca4f5b634273f13f183d43d686d0c977}} 
+M\+\_\+\+A\+P\+P4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP5@{M\_APP5}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP5@{M\_APP5}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ead26d76b05df1877e1282b9888d58ca65}} 
+M\+\_\+\+A\+P\+P5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP6@{M\_APP6}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP6@{M\_APP6}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea630e5d313e9d121f392a08b112ff911a}} 
+M\+\_\+\+A\+P\+P6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP7@{M\_APP7}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP7@{M\_APP7}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eae0c1d764a503bda79303fd354d3e0687}} 
+M\+\_\+\+A\+P\+P7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP8@{M\_APP8}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP8@{M\_APP8}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea6976be93d708d35e4c15902251cfe9a3}} 
+M\+\_\+\+A\+P\+P8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP9@{M\_APP9}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP9@{M\_APP9}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea407252f5a0ebd992929a30c53f2eaeb4}} 
+M\+\_\+\+A\+P\+P9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP10@{M\_APP10}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP10@{M\_APP10}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea94d76f68b62989522f5abd6ec8dbb637}} 
+M\+\_\+\+A\+P\+P10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP11@{M\_APP11}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP11@{M\_APP11}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea191faf6bcfd41ec8cb09e9d906c3454b}} 
+M\+\_\+\+A\+P\+P11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP12@{M\_APP12}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP12@{M\_APP12}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea2d1429ea7bc7101f5db1b763a8002bcc}} 
+M\+\_\+\+A\+P\+P12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP13@{M\_APP13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP13@{M\_APP13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea388b96c4e201109bfeaf766da8e71348}} 
+M\+\_\+\+A\+P\+P13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP14@{M\_APP14}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP14@{M\_APP14}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea5a37889b83b67a6e8d21e0091dfee430}} 
+M\+\_\+\+A\+P\+P14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_APP15@{M\_APP15}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_APP15@{M\_APP15}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf352dfefbde3708396055c619ab890ee}} 
+M\+\_\+\+A\+P\+P15&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG0@{M\_JPG0}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG0@{M\_JPG0}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eac432b338a2bf281c5ac02637c421ce4a}} 
+M\+\_\+\+J\+P\+G0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG8@{M\_JPG8}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG8@{M\_JPG8}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea1fb2924ca88abf34d3b614574ce64965}} 
+M\+\_\+\+J\+P\+G8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_JPG13@{M\_JPG13}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_JPG13@{M\_JPG13}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaf8f7b277c7acaf5f9fe36268916be7b9}} 
+M\+\_\+\+J\+P\+G13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_COM@{M\_COM}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_COM@{M\_COM}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758ea09270895cfe821542b21666dc22034c8}} 
+M\+\_\+\+C\+OM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_TEM@{M\_TEM}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_TEM@{M\_TEM}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eaa759203dfe581c36f2c860b8b9d3a50a}} 
+M\+\_\+\+T\+EM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\_ERROR@{M\_ERROR}!jdmarker.c@{jdmarker.c}}\index{jdmarker.c@{jdmarker.c}!M\_ERROR@{M\_ERROR}}}\mbox{\Hypertarget{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}\label{jdmarker_8c_af8679a604c2f6538ef502df1dafb758eafa0d07653af7b463ed1a339193cb12b7}} 
+M\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 21 of file jdmarker.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jdmarker_8c_a95585da4af8c67557d1b243176a1cc2f}\label{jdmarker_8c_a95585da4af8c67557d1b243176a1cc2f}} 
+\index{jdmarker.c@{jdmarker.c}!examine\_app0@{examine\_app0}}
+\index{examine\_app0@{examine\_app0}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{examine\_app0()}{examine\_app0()}}
+{\footnotesize\ttfamily examine\+\_\+app0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a356ad249f20e691b520da439f92cccbc}{J\+O\+C\+T\+ET}} \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$}]{data,  }\item[{unsigned int}]{datalen,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}}]{remaining }\end{DoxyParamCaption})}
+
+
+
+Definition at line 715 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jdmarker_8c_ad97698848844246d3361765025172931}\label{jdmarker_8c_ad97698848844246d3361765025172931}} 
+\index{jdmarker.c@{jdmarker.c}!examine\_app14@{examine\_app14}}
+\index{examine\_app14@{examine\_app14}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{examine\_app14()}{examine\_app14()}}
+{\footnotesize\ttfamily examine\+\_\+app14 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a356ad249f20e691b520da439f92cccbc}{J\+O\+C\+T\+ET}} \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$}]{data,  }\item[{unsigned int}]{datalen,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}}]{remaining }\end{DoxyParamCaption})}
+
+
+
+Definition at line 791 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{jdmarker_8c_a19b70465fd94f29d414d4ce11d2656ee}\label{jdmarker_8c_a19b70465fd94f29d414d4ce11d2656ee}} 
+\index{jdmarker.c@{jdmarker.c}!first\_marker@{first\_marker}}
+\index{first\_marker@{first\_marker}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{first\_marker()}{first\_marker()}}
+{\footnotesize\ttfamily first\+\_\+marker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1052 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{jdmarker_8c_a3bb0bfa69f4961efecdf334c4582ca99}\label{jdmarker_8c_a3bb0bfa69f4961efecdf334c4582ca99}} 
+\index{jdmarker.c@{jdmarker.c}!get\_dac@{get\_dac}}
+\index{get\_dac@{get\_dac}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_dac()}{get\_dac()}}
+{\footnotesize\ttfamily get\+\_\+dac (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 410 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{jdmarker_8c_ad09ef619b094cb03fb9c10df65c6ccd2}\label{jdmarker_8c_ad09ef619b094cb03fb9c10df65c6ccd2}} 
+\index{jdmarker.c@{jdmarker.c}!get\_dht@{get\_dht}}
+\index{get\_dht@{get\_dht}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_dht()}{get\_dht()}}
+{\footnotesize\ttfamily get\+\_\+dht (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 456 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{jdmarker_8c_ae8cd99feb65fb3bf3e1aca7ea5aa1087}\label{jdmarker_8c_ae8cd99feb65fb3bf3e1aca7ea5aa1087}} 
+\index{jdmarker.c@{jdmarker.c}!get\_dqt@{get\_dqt}}
+\index{get\_dqt@{get\_dqt}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_dqt()}{get\_dqt()}}
+{\footnotesize\ttfamily get\+\_\+dqt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 527 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{jdmarker_8c_aa9a14e7eb5b230749c084f655693a114}\label{jdmarker_8c_aa9a14e7eb5b230749c084f655693a114}} 
+\index{jdmarker.c@{jdmarker.c}!get\_dri@{get\_dri}}
+\index{get\_dri@{get\_dri}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_dri()}{get\_dri()}}
+{\footnotesize\ttfamily get\+\_\+dri (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 617 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{jdmarker_8c_ad82019ab15e06b65c6119bbbce254b8f}\label{jdmarker_8c_ad82019ab15e06b65c6119bbbce254b8f}} 
+\index{jdmarker.c@{jdmarker.c}!get\_interesting\_appn@{get\_interesting\_appn}}
+\index{get\_interesting\_appn@{get\_interesting\_appn}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_interesting\_appn()}{get\_interesting\_appn()}}
+{\footnotesize\ttfamily get\+\_\+interesting\+\_\+appn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 822 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{jdmarker_8c_a7146cbc98c33e7bdd8beccfe9be7d8d8}\label{jdmarker_8c_a7146cbc98c33e7bdd8beccfe9be7d8d8}} 
+\index{jdmarker.c@{jdmarker.c}!get\_lse@{get\_lse}}
+\index{get\_lse@{get\_lse}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_lse()}{get\_lse()}}
+{\footnotesize\ttfamily get\+\_\+lse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 641 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{jdmarker_8c_a00b567999ea5c09aab86756f5ef19219}\label{jdmarker_8c_a00b567999ea5c09aab86756f5ef19219}} 
+\index{jdmarker.c@{jdmarker.c}!get\_sof@{get\_sof}}
+\index{get\_sof@{get\_sof}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_sof()}{get\_sof()}}
+{\footnotesize\ttfamily get\+\_\+sof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}}]{is\+\_\+baseline,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}}]{is\+\_\+prog,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}}]{is\+\_\+arith }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{jdmarker_8c_afdd1d684e02317cbcd4034508275a0df}\label{jdmarker_8c_afdd1d684e02317cbcd4034508275a0df}} 
+\index{jdmarker.c@{jdmarker.c}!get\_soi@{get\_soi}}
+\index{get\_soi@{get\_soi}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_soi()}{get\_soi()}}
+{\footnotesize\ttfamily get\+\_\+soi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{jdmarker_8c_aec23916e5e625b771e766d41f457bb18}\label{jdmarker_8c_aec23916e5e625b771e766d41f457bb18}} 
+\index{jdmarker.c@{jdmarker.c}!get\_sos@{get\_sos}}
+\index{get\_sos@{get\_sos}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{get\_sos()}{get\_sos()}}
+{\footnotesize\ttfamily get\+\_\+sos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 322 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{jdmarker_8c_a8fa54cb03525a09cd2a6121496895072}\label{jdmarker_8c_a8fa54cb03525a09cd2a6121496895072}} 
+\index{jdmarker.c@{jdmarker.c}!jinit\_marker\_reader@{jinit\_marker\_reader}}
+\index{jinit\_marker\_reader@{jinit\_marker\_reader}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{jinit\_marker\_reader()}{jinit\_marker\_reader()}}
+{\footnotesize\ttfamily jinit\+\_\+marker\+\_\+reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1407 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{jdmarker_8c_a037c6ada9f7d2310ca67765c98c86995}\label{jdmarker_8c_a037c6ada9f7d2310ca67765c98c86995}} 
+\index{jdmarker.c@{jdmarker.c}!jpeg\_resync\_to\_restart@{jpeg\_resync\_to\_restart}}
+\index{jpeg\_resync\_to\_restart@{jpeg\_resync\_to\_restart}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{jpeg\_resync\_to\_restart()}{jpeg\_resync\_to\_restart()}}
+{\footnotesize\ttfamily jpeg\+\_\+resync\+\_\+to\+\_\+restart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{int}]{desired }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1337 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{jdmarker_8c_a5bb5f27bfd0bab5538de0aec18d2273a}\label{jdmarker_8c_a5bb5f27bfd0bab5538de0aec18d2273a}} 
+\index{jdmarker.c@{jdmarker.c}!jpeg\_save\_markers@{jpeg\_save\_markers}}
+\index{jpeg\_save\_markers@{jpeg\_save\_markers}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{jpeg\_save\_markers()}{jpeg\_save\_markers()}}
+{\footnotesize\ttfamily jpeg\+\_\+save\+\_\+markers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{int}]{marker\+\_\+code,  }\item[{unsigned int}]{length\+\_\+limit }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1445 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{jdmarker_8c_a9612d9c5268a42e596a2bd8acdafd156}\label{jdmarker_8c_a9612d9c5268a42e596a2bd8acdafd156}} 
+\index{jdmarker.c@{jdmarker.c}!jpeg\_set\_marker\_processor@{jpeg\_set\_marker\_processor}}
+\index{jpeg\_set\_marker\_processor@{jpeg\_set\_marker\_processor}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{jpeg\_set\_marker\_processor()}{jpeg\_set\_marker\_processor()}}
+{\footnotesize\ttfamily jpeg\+\_\+set\+\_\+marker\+\_\+processor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{int}]{marker\+\_\+code,  }\item[{jpeg\+\_\+marker\+\_\+parser\+\_\+method}]{routine }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1494 of file jdmarker.\+c.
+
+\mbox{\Hypertarget{jdmarker_8c_ac22171f29bb541cfcb932f0903102c45}\label{jdmarker_8c_ac22171f29bb541cfcb932f0903102c45}} 
+\index{jdmarker.c@{jdmarker.c}!next\_marker@{next\_marker}}
+\index{next\_marker@{next\_marker}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{next\_marker()}{next\_marker()}}
+{\footnotesize\ttfamily next\+\_\+marker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1005 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{jdmarker_8c_a8ff81a078a99e98efe6051366512c5f6}\label{jdmarker_8c_a8ff81a078a99e98efe6051366512c5f6}} 
+\index{jdmarker.c@{jdmarker.c}!read\_markers@{read\_markers}}
+\index{read\_markers@{read\_markers}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{read\_markers()}{read\_markers()}}
+{\footnotesize\ttfamily read\+\_\+markers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1088 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{jdmarker_8c_a44129320cf7ea5968113cdbd07bdd992}\label{jdmarker_8c_a44129320cf7ea5968113cdbd07bdd992}} 
+\index{jdmarker.c@{jdmarker.c}!read\_restart\_marker@{read\_restart\_marker}}
+\index{read\_restart\_marker@{read\_restart\_marker}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{read\_restart\_marker()}{read\_restart\_marker()}}
+{\footnotesize\ttfamily read\+\_\+restart\+\_\+marker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1258 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{jdmarker_8c_a1c08f1ba460e1a19d2dbc877b47c8b5f}\label{jdmarker_8c_a1c08f1ba460e1a19d2dbc877b47c8b5f}} 
+\index{jdmarker.c@{jdmarker.c}!reset\_marker\_reader@{reset\_marker\_reader}}
+\index{reset\_marker\_reader@{reset\_marker\_reader}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{reset\_marker\_reader()}{reset\_marker\_reader()}}
+{\footnotesize\ttfamily reset\+\_\+marker\+\_\+reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1387 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{jdmarker_8c_acba4eaea087c7946c5d51b3f15eb72a2}\label{jdmarker_8c_acba4eaea087c7946c5d51b3f15eb72a2}} 
+\index{jdmarker.c@{jdmarker.c}!save\_marker@{save\_marker}}
+\index{save\_marker@{save\_marker}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{save\_marker()}{save\_marker()}}
+{\footnotesize\ttfamily save\+\_\+marker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 870 of file jdmarker.\+c.
+
+Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{jdmarker_8c_a3e27a348c35d6008c19ace382ec756d0}\label{jdmarker_8c_a3e27a348c35d6008c19ace382ec756d0}} 
+\index{jdmarker.c@{jdmarker.c}!skip\_variable@{skip\_variable}}
+\index{skip\_variable@{skip\_variable}!jdmarker.c@{jdmarker.c}}
+\subsubsection{\texorpdfstring{skip\_variable()}{skip\_variable()}}
+{\footnotesize\ttfamily skip\+\_\+variable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 976 of file jdmarker.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 29

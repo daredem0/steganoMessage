@@ -1,0 +1,38 @@
+<map id="jinit_inverse_dct" name="jinit_inverse_dct">
+<area shape="rect" id="node1" title=" " alt="" coords="5,841,135,868"/>
+<area shape="rect" id="node2" href="$jddctmgr_8c.html#a1964f006adb8fb80f57e455f6452aec1" title=" " alt="" coords="183,841,272,868"/>
+<area shape="rect" id="node3" href="$jidctint_8c.html#af9a63c07412baa2e94f4d39166ef6e3a" title=" " alt="" coords="328,5,440,32"/>
+<area shape="rect" id="node4" href="$jidctint_8c.html#a5b1d86f9a273e76c234cf68d21c1dc3d" title=" " alt="" coords="328,56,440,83"/>
+<area shape="rect" id="node5" href="$jidctint_8c.html#adef0e9f7803636f44d683fbe4e243a78" title=" " alt="" coords="328,107,440,133"/>
+<area shape="rect" id="node6" href="$jidctint_8c.html#a8fa3fcc5db2609416230cde10a9423d3" title=" " alt="" coords="328,157,440,184"/>
+<area shape="rect" id="node7" href="$jidctint_8c.html#a5c4727fe6b90a5d1ab047dc2d339fd59" title=" " alt="" coords="328,208,440,235"/>
+<area shape="rect" id="node8" href="$jidctint_8c.html#a7cd697c58de0b29bd830a1ae44ddacbb" title=" " alt="" coords="328,259,440,285"/>
+<area shape="rect" id="node9" href="$jidctint_8c.html#a09595563f29f5a7b4000521b53b3eb54" title=" " alt="" coords="328,309,440,336"/>
+<area shape="rect" id="node10" href="$jidctint_8c.html#a7b14bfe71bdee9e6451dd59375d2d0ca" title=" " alt="" coords="328,360,440,387"/>
+<area shape="rect" id="node11" href="$jidctint_8c.html#a960c8c676a4973b83d00cd920ae7882b" title=" " alt="" coords="320,411,448,437"/>
+<area shape="rect" id="node12" href="$jidctint_8c.html#a6da1348e92f995dfd23ca95c8ebc3178" title=" " alt="" coords="320,461,448,488"/>
+<area shape="rect" id="node13" href="$jidctint_8c.html#ac41005594866cfe25de4fb444de5e3b9" title=" " alt="" coords="320,512,448,539"/>
+<area shape="rect" id="node14" href="$jidctint_8c.html#af095e803e9b67e9d63d2d74f3388bcaa" title=" " alt="" coords="320,563,448,589"/>
+<area shape="rect" id="node15" href="$jidctint_8c.html#a37782f51f33c9a56c8d028bd3f6f0520" title=" " alt="" coords="320,613,448,640"/>
+<area shape="rect" id="node16" href="$jidctint_8c.html#ad19631562a83bb02ccb294c9a6e8b326" title=" " alt="" coords="320,664,448,691"/>
+<area shape="rect" id="node17" href="$jidctint_8c.html#ab56e97e1538d345e4871267f3d6e8590" title=" " alt="" coords="320,715,448,741"/>
+<area shape="rect" id="node18" href="$jidctint_8c.html#adf541a1dc2199d7cd66e8c32a61210f0" title=" " alt="" coords="324,765,444,792"/>
+<area shape="rect" id="node19" href="$jidctint_8c.html#a0d16345034a36c703e38828456815ccd" title=" " alt="" coords="324,816,444,843"/>
+<area shape="rect" id="node20" href="$jidctint_8c.html#a8bf7209e5e781992e74f654e7ea0473f" title=" " alt="" coords="324,867,444,893"/>
+<area shape="rect" id="node21" href="$jidctint_8c.html#ab57c9406ad80af22fa7116b2030f6843" title=" " alt="" coords="324,917,444,944"/>
+<area shape="rect" id="node22" href="$jidctint_8c.html#a5f483d1f8b4bfe19c0f5534d0bd4bf9f" title=" " alt="" coords="328,968,440,995"/>
+<area shape="rect" id="node23" href="$jidctint_8c.html#ac15da9cee838eb352535f4079fee9417" title=" " alt="" coords="328,1019,440,1045"/>
+<area shape="rect" id="node24" href="$jidctint_8c.html#a16f8d86b2de229af8a9b033e611a65dd" title=" " alt="" coords="328,1069,440,1096"/>
+<area shape="rect" id="node25" href="$jidctint_8c.html#af79a4d077b02f81593794829a13e1efb" title=" " alt="" coords="328,1120,440,1147"/>
+<area shape="rect" id="node26" href="$jidctint_8c.html#a9d001a856aa89a4983fe82df349c2a10" title=" " alt="" coords="324,1171,444,1197"/>
+<area shape="rect" id="node27" href="$jidctint_8c.html#a4910ad4abb00bb92a1ddd7a63e8e9702" title=" " alt="" coords="324,1221,444,1248"/>
+<area shape="rect" id="node28" href="$jidctint_8c.html#a59ffa274caa7d5898fd98870a4d121d5" title=" " alt="" coords="324,1272,444,1299"/>
+<area shape="rect" id="node29" href="$jidctint_8c.html#a31ed74386c71125a0a37891ca79d6f9b" title=" " alt="" coords="324,1323,444,1349"/>
+<area shape="rect" id="node30" href="$jidctint_8c.html#a26ea115f895e54bcd825c2522f83aa01" title=" " alt="" coords="328,1373,440,1400"/>
+<area shape="rect" id="node31" href="$jidctint_8c.html#ab42b2d7c3a0da1be92897a54627266c0" title=" " alt="" coords="328,1424,440,1451"/>
+<area shape="rect" id="node32" href="$jidctint_8c.html#a7a503c65f047804c55841c549b5e0c37" title=" " alt="" coords="328,1475,440,1501"/>
+<area shape="rect" id="node33" href="$jidctint_8c.html#ad911fb37f1e7c14abd8847b4cc35f4de" title=" " alt="" coords="328,1525,440,1552"/>
+<area shape="rect" id="node34" href="$jidctint_8c.html#a744cd9ce29e044d436c454996bf1f6b6" title=" " alt="" coords="323,1576,445,1603"/>
+<area shape="rect" id="node35" href="$jidctfst_8c.html#a07c33cfab3e6e41831ecbcd883a38998" title=" " alt="" coords="325,1627,443,1653"/>
+<area shape="rect" id="node36" href="$jidctflt_8c.html#a38adfd755f3c9aa80b84fe0f62306229" title=" " alt="" coords="325,1677,443,1704"/>
+</map>

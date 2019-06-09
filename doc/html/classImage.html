@@ -64,8 +64,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classImage-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Image Class Reference</div>  </div>
@@ -76,6 +76,15 @@ $(function() {
  <a href="classImage.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Image_8h_source.html">Image.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Image:</div>
+<div class="dyncontent">
+<div class="center"><img src="classImage__inherit__graph.png" border="0" usemap="#Image_inherit__map" alt="Inheritance graph"/></div>
+<map name="Image_inherit__map" id="Image_inherit__map">
+<area shape="rect"  title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="5,5,172,405"/>
+<area shape="rect"  href="classJpeg.html" title=" " alt="" coords="30,453,147,604"/>
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for Image:</div>
 <div class="dyncontent">
@@ -126,6 +135,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8c824ffac0c866a94752a2c1047932af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for bitmapHeader.  <a href="#a8c824ffac0c866a94752a2c1047932af">More...</a><br /></td></tr>
 <tr class="separator:a8c824ffac0c866a94752a2c1047932af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b5051c6cc39a5e3f86d287f5cc7f9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBitmapArray.html">BitmapArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c">getBitmapArray</a> ()</td></tr>
+<tr class="memdesc:a75b5051c6cc39a5e3f86d287f5cc7f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for bitmapArray.  <a href="#a75b5051c6cc39a5e3f86d287f5cc7f9c">More...</a><br /></td></tr>
 <tr class="separator:a75b5051c6cc39a5e3f86d287f5cc7f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1">generateBitmap</a> ()</td></tr>
 <tr class="memdesc:a3ca1ae6c1eb2846bfba066b01e6020e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates new bitmap file.  <a href="#a3ca1ae6c1eb2846bfba066b01e6020e1">More...</a><br /></td></tr>
@@ -149,14 +159,14 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac4e8db14cfd60a6a7085e6fcb83488a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png.  <a href="#ac4e8db14cfd60a6a7085e6fcb83488a4">More...</a><br /></td></tr>
 <tr class="separator:ac4e8db14cfd60a6a7085e6fcb83488a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr class="memitem:a83d7183bfcd632649c36504d9ab07e36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a83d7183bfcd632649c36504d9ab07e36">exists</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a83d7183bfcd632649c36504d9ab07e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a file already exists.  <a href="#a83d7183bfcd632649c36504d9ab07e36">More...</a><br /></td></tr>
 <tr class="separator:a83d7183bfcd632649c36504d9ab07e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:aec8a33f176362d146da8c058798ebbff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aec8a33f176362d146da8c058798ebbff">path</a></td></tr>
 <tr class="separator:aec8a33f176362d146da8c058798ebbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaf72c2df8979eafb4031dc0384dc49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBitmapHeader.html">BitmapHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#adaf72c2df8979eafb4031dc0384dc49f">header</a></td></tr>
@@ -192,7 +202,7 @@ Private Attributes</h2></td></tr>
 
 <p>Standard constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00016">16</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00027">27</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -231,7 +241,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00022">22</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00033">33</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +269,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00027">27</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00038">38</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +297,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Standard deconstructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00030">30</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00041">41</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +320,7 @@ Private Attributes</h2></td></tr>
 <p>Generates txt file containing bitmap information as hex values. </p>
 <dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00191">191</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00213">213</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -368,7 +378,7 @@ Here is the caller graph for this function:</div>
 <p>Converts a byte to hex string. </p>
 <dl class="section return"><dt>Returns</dt><dd>std:string containing hex value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00259">259</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00281">281</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -419,7 +429,7 @@ Here is the caller graph for this function:</div>
 <p>Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A-F. </p>
 <dl class="section return"><dt>Returns</dt><dd>std:string containing hex value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00269">269</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00291">291</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -454,7 +464,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -462,7 +472,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if a file already exists. </p>
 <dl class="section return"><dt>Returns</dt><dd>boolean value - true for exists already, false for not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00096">96</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00108">108</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -495,7 +505,7 @@ Here is the caller graph for this function:</div>
 <p>Generates new bitmap file. </p>
 <dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00101">101</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00113">113</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,7 +550,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00094">94</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p>Getter for bitmapArray. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file.">BitmapArray</a> type pointer to <a class="el" href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file.">BitmapArray</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00106">106</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -570,9 +583,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Getter for bitmapHeader. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> type pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classBitmapHeader.html">BitmapHeader</a> type pointer to <a class="el" href="classBitmapHeader.html">BitmapHeader</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00093">93</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00105">105</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -607,7 +620,7 @@ Here is the caller graph for this function:</div>
 <p>Returns the path of the image. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string including stored path. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00037">37</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00048">48</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -648,9 +661,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png. </p>
-<dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string containing format information (JPEG/BITMAP/PNG/GIF) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00304">304</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00327">327</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -688,7 +701,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00045">45</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00056">56</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -720,7 +733,7 @@ Here is the call graph for this function:</div>
 <p>Calls Constructors for BitMapHeader and BitMapArray and reads information from image. </p>
 <dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00084">84</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00095">95</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,7 +789,7 @@ Here is the caller graph for this function:</div>
 <p>Sets flags for while reading/writing filters. </p>
 <dl class="section return"><dt>Returns</dt><dd>returns integer containing error code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00299">299</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00321">321</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -815,7 +828,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00041">41</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00052">52</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +867,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00066">66</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8cpp_source.html#l00077">77</a> of file <a class="el" href="Image_8cpp_source.html">Image.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -884,13 +897,13 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file.">BitmapArray</a> object containing imagedata </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00120">120</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00125">125</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -909,13 +922,13 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00121">121</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00126">126</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -934,13 +947,13 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Flag for while reading/writing filters </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00123">123</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00128">128</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -959,13 +972,13 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Flag for while reading/writing filters </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00122">122</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00127">127</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -984,13 +997,13 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pointer to <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> object containing header information </p>
+<p>Pointer to <a class="el" href="classBitmapHeader.html">BitmapHeader</a> object containing header information </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00119">119</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00124">124</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
@@ -1009,19 +1022,20 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Imagepath </p>
 
-<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00118">118</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Image_8h_source.html#l00123">123</a> of file <a class="el" href="Image_8h_source.html">Image.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>header/<a class="el" href="Image_8h_source.html">Image.h</a></li>
 <li>src/<a class="el" href="Image_8cpp_source.html">Image.cpp</a></li>
+<li>src/<a class="el" href="Image__MacOS_8cpp_source.html">Image_MacOS.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,11 @@
+digraph "jpeg_destroy_decompress"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node71 [label="jpeg_destroy_decompress",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node71 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="jpeg_destroy",height=0.2,width=0.4,color="black",URL="$jcomapi_8c.html#a589fdc47a17366b2ad85ee80031c6193",tooltip=" "];
+}

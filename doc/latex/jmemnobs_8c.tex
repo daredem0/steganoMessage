@@ -1,0 +1,143 @@
+\hypertarget{jmemnobs_8c}{}\section{Lib\+Jpeg/jmemnobs.c File Reference}
+\label{jmemnobs_8c}\index{LibJpeg/jmemnobs.c@{LibJpeg/jmemnobs.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jmemsys.\+h\char`\"{}}\newline
+Include dependency graph for jmemnobs.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}{jpeg\+\_\+get\+\_\+small}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, size\+\_\+t \mbox{\hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}{jpeg\+\_\+free\+\_\+small}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, void $\ast$\mbox{\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}}, size\+\_\+t \mbox{\hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}{jpeg\+\_\+get\+\_\+large}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, size\+\_\+t \mbox{\hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}{jpeg\+\_\+free\+\_\+large}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$\mbox{\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}}, size\+\_\+t \mbox{\hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}{jpeg\+\_\+mem\+\_\+available}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, long \mbox{\hyperlink{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}{min\+\_\+bytes\+\_\+needed}}, long \mbox{\hyperlink{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}{max\+\_\+bytes\+\_\+needed}}, long \mbox{\hyperlink{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}{already\+\_\+allocated}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}{jpeg\+\_\+open\+\_\+backing\+\_\+store}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo, \mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}} \mbox{\hyperlink{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}{info}}, long \mbox{\hyperlink{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}{total\+\_\+bytes\+\_\+needed}})
+\item 
+\mbox{\hyperlink{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}{jpeg\+\_\+mem\+\_\+init}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}{jpeg\+\_\+mem\+\_\+term}} (\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jmemnobs_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jmemnobs.c@{jmemnobs.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 18 of file jmemnobs.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}\label{jmemnobs_8c_a4d83eb0bade7588390b123a98d087dc9}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_free\_large@{jpeg\_free\_large}}
+\index{jpeg\_free\_large@{jpeg\_free\_large}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_free\_large()}{jpeg\_free\_large()}}
+{\footnotesize\ttfamily jpeg\+\_\+free\+\_\+large (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$}]{object,  }\item[{size\+\_\+t}]{sizeofobject }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}\label{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_free\_small@{jpeg\_free\_small}}
+\index{jpeg\_free\_small@{jpeg\_free\_small}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_free\_small()}{jpeg\_free\_small()}}
+{\footnotesize\ttfamily jpeg\+\_\+free\+\_\+small (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{void $\ast$}]{object,  }\item[{size\+\_\+t}]{sizeofobject }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}\label{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_get\_large@{jpeg\_get\_large}}
+\index{jpeg\_get\_large@{jpeg\_get\_large}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_get\_large()}{jpeg\_get\_large()}}
+{\footnotesize\ttfamily jpeg\+\_\+get\+\_\+large (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{size\+\_\+t}]{sizeofobject }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}\label{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_get\_small@{jpeg\_get\_small}}
+\index{jpeg\_get\_small@{jpeg\_get\_small}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_get\_small()}{jpeg\_get\_small()}}
+{\footnotesize\ttfamily jpeg\+\_\+get\+\_\+small (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{size\+\_\+t}]{sizeofobject }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}\label{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_mem\_available@{jpeg\_mem\_available}}
+\index{jpeg\_mem\_available@{jpeg\_mem\_available}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_mem\_available()}{jpeg\_mem\_available()}}
+{\footnotesize\ttfamily jpeg\+\_\+mem\+\_\+available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{long}]{min\+\_\+bytes\+\_\+needed,  }\item[{long}]{max\+\_\+bytes\+\_\+needed,  }\item[{long}]{already\+\_\+allocated }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}\label{jmemnobs_8c_af4c86e1e04ad0eb37ccee0615bd9e744}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_mem\_init@{jpeg\_mem\_init}}
+\index{jpeg\_mem\_init@{jpeg\_mem\_init}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_mem\_init()}{jpeg\_mem\_init()}}
+{\footnotesize\ttfamily jpeg\+\_\+mem\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}\label{jmemnobs_8c_a82a37a902eddf2062ac83788c377a663}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_mem\_term@{jpeg\_mem\_term}}
+\index{jpeg\_mem\_term@{jpeg\_mem\_term}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_mem\_term()}{jpeg\_mem\_term()}}
+{\footnotesize\ttfamily jpeg\+\_\+mem\+\_\+term (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 106 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}\label{jmemnobs_8c_acc92d6d55a74dc317b12140885f82fae}} 
+\index{jmemnobs.c@{jmemnobs.c}!jpeg\_open\_backing\_store@{jpeg\_open\_backing\_store}}
+\index{jpeg\_open\_backing\_store@{jpeg\_open\_backing\_store}!jmemnobs.c@{jmemnobs.c}}
+\subsubsection{\texorpdfstring{jpeg\_open\_backing\_store()}{jpeg\_open\_backing\_store()}}
+{\footnotesize\ttfamily jpeg\+\_\+open\+\_\+backing\+\_\+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}}}]{info,  }\item[{long}]{total\+\_\+bytes\+\_\+needed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file jmemnobs.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 8

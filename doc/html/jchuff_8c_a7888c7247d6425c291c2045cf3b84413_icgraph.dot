@@ -1,0 +1,30 @@
+digraph "emit_restart_e"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node99 [label="emit_restart_e",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node99 -> Node100 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="encode_mcu_DC_first",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a2303fadff5a0fb6bdaa06eb03131d87e",tooltip=" "];
+  Node100 -> Node101 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="start_pass_huff",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#ae80a7c97813173a2069266702346eb9f",tooltip=" "];
+  Node101 -> Node102 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="jinit_huff_encoder",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a77341cca2feceb164c104fdf8b79756b",tooltip=" "];
+  Node102 -> Node103 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="jinit_compress_master",height=0.2,width=0.4,color="black",URL="$jcinit_8c.html#a9b434908559c6849283fcac944250b3b",tooltip=" "];
+  Node103 -> Node104 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="jpeg_start_compress",height=0.2,width=0.4,color="black",URL="$jcapistd_8c.html#aacff7627af44bc9457601ba15577162d",tooltip=" "];
+  Node102 -> Node105 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="transencode_master\l_selection",height=0.2,width=0.4,color="black",URL="$jctrans_8c.html#ae87fac6bd08f4b513d2f7f5629586733",tooltip=" "];
+  Node99 -> Node106 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="encode_mcu_AC_first",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a16f93bf9ad174d1e43f92a6844ba56f5",tooltip=" "];
+  Node106 -> Node101 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 -> Node107 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="encode_mcu_DC_refine",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a668250087105455338e97ba0f612c700",tooltip=" "];
+  Node107 -> Node101 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 -> Node108 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="encode_mcu_AC_refine",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#af22cdbc60163714d02c04ed18d0fcc75",tooltip=" "];
+  Node108 -> Node101 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

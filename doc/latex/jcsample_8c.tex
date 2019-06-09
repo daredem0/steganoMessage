@@ -1,0 +1,215 @@
+\hypertarget{jcsample_8c}{}\section{Lib\+Jpeg/jcsample.c File Reference}
+\label{jcsample_8c}\index{LibJpeg/jcsample.c@{LibJpeg/jcsample.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+Include dependency graph for jcsample.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmy__downsampler}{my\+\_\+downsampler}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jcsample_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmy__downsampler}{my\+\_\+downsampler}} $\ast$ \mbox{\hyperlink{jcsample_8c_add3b66ecd01f3a81a38458f6eb4e3d64}{my\+\_\+downsample\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{jcsample_8c_afb22a39e76c4158d72e396dc31fc8c26}{J\+M\+E\+T\+H\+OD}} (void, downsample1\+\_\+ptr,(\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data))
+\item 
+\mbox{\hyperlink{jcsample_8c_a65fe6b060ccae970044d3e3658c760c7}{start\+\_\+pass\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jcsample_8c_a760ac73e66df2ca443f7995d4c8d0779}{expand\+\_\+right\+\_\+edge}} (\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} image\+\_\+data, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} input\+\_\+cols, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} output\+\_\+cols)
+\item 
+\mbox{\hyperlink{jcsample_8c_ae92f930ddc9c6d858d461d2881761357}{sep\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} input\+\_\+buf, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} in\+\_\+row\+\_\+index, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} out\+\_\+row\+\_\+group\+\_\+index)
+\item 
+\mbox{\hyperlink{jcsample_8c_abcaed4190a914a973cc23e9252286568}{int\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_a403382e37f9545c3fee2f9b61056e9b9}{fullsize\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_aa5f0a29460e6093f4b032a9b7eb8a361}{h2v1\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_a67ec6619cac4448039ebc83d0e3d7e6a}{h2v2\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_a3ba9f2710ff679a8f0f19093ab917a9c}{h2v2\+\_\+smooth\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_a65ee046ead2ba7525e75981993323c7b}{fullsize\+\_\+smooth\+\_\+downsample}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)
+\item 
+\mbox{\hyperlink{jcsample_8c_a70c17f06dccf0d8179062455c5af3f0d}{jinit\+\_\+downsampler}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jcsample_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jcsample_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jcsample.c@{jcsample.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 48 of file jcsample.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{jcsample_8c_add3b66ecd01f3a81a38458f6eb4e3d64}\label{jcsample_8c_add3b66ecd01f3a81a38458f6eb4e3d64}} 
+\index{jcsample.c@{jcsample.c}!my\_downsample\_ptr@{my\_downsample\_ptr}}
+\index{my\_downsample\_ptr@{my\_downsample\_ptr}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{my\_downsample\_ptr}{my\_downsample\_ptr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmy__downsampler}{my\+\_\+downsampler}}$\ast$ \mbox{\hyperlink{jcsample_8c_add3b66ecd01f3a81a38458f6eb4e3d64}{my\+\_\+downsample\+\_\+ptr}}}
+
+
+
+Definition at line 76 of file jcsample.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jcsample_8c_a760ac73e66df2ca443f7995d4c8d0779}\label{jcsample_8c_a760ac73e66df2ca443f7995d4c8d0779}} 
+\index{jcsample.c@{jcsample.c}!expand\_right\_edge@{expand\_right\_edge}}
+\index{expand\_right\_edge@{expand\_right\_edge}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{expand\_right\_edge()}{expand\_right\_edge()}}
+{\footnotesize\ttfamily expand\+\_\+right\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{image\+\_\+data,  }\item[{int}]{num\+\_\+rows,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{input\+\_\+cols,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+cols }\end{DoxyParamCaption})}
+
+
+
+Definition at line 96 of file jcsample.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jcsample_8c_a403382e37f9545c3fee2f9b61056e9b9}\label{jcsample_8c_a403382e37f9545c3fee2f9b61056e9b9}} 
+\index{jcsample.c@{jcsample.c}!fullsize\_downsample@{fullsize\_downsample}}
+\index{fullsize\_downsample@{fullsize\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{fullsize\_downsample()}{fullsize\_downsample()}}
+{\footnotesize\ttfamily fullsize\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{jcsample_8c_a65ee046ead2ba7525e75981993323c7b}\label{jcsample_8c_a65ee046ead2ba7525e75981993323c7b}} 
+\index{jcsample.c@{jcsample.c}!fullsize\_smooth\_downsample@{fullsize\_smooth\_downsample}}
+\index{fullsize\_smooth\_downsample@{fullsize\_smooth\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{fullsize\_smooth\_downsample()}{fullsize\_smooth\_downsample()}}
+{\footnotesize\ttfamily fullsize\+\_\+smooth\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 406 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{jcsample_8c_aa5f0a29460e6093f4b032a9b7eb8a361}\label{jcsample_8c_aa5f0a29460e6093f4b032a9b7eb8a361}} 
+\index{jcsample.c@{jcsample.c}!h2v1\_downsample@{h2v1\_downsample}}
+\index{h2v1\_downsample@{h2v1\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{h2v1\_downsample()}{h2v1\_downsample()}}
+{\footnotesize\ttfamily h2v1\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 224 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{jcsample_8c_a67ec6619cac4448039ebc83d0e3d7e6a}\label{jcsample_8c_a67ec6619cac4448039ebc83d0e3d7e6a}} 
+\index{jcsample.c@{jcsample.c}!h2v2\_downsample@{h2v2\_downsample}}
+\index{h2v2\_downsample@{h2v2\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{h2v2\_downsample()}{h2v2\_downsample()}}
+{\footnotesize\ttfamily h2v2\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 261 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{jcsample_8c_a3ba9f2710ff679a8f0f19093ab917a9c}\label{jcsample_8c_a3ba9f2710ff679a8f0f19093ab917a9c}} 
+\index{jcsample.c@{jcsample.c}!h2v2\_smooth\_downsample@{h2v2\_smooth\_downsample}}
+\index{h2v2\_smooth\_downsample@{h2v2\_smooth\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{h2v2\_smooth\_downsample()}{h2v2\_smooth\_downsample()}}
+{\footnotesize\ttfamily h2v2\+\_\+smooth\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{jcsample_8c_abcaed4190a914a973cc23e9252286568}\label{jcsample_8c_abcaed4190a914a973cc23e9252286568}} 
+\index{jcsample.c@{jcsample.c}!int\_downsample@{int\_downsample}}
+\index{int\_downsample@{int\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{int\_downsample()}{int\_downsample()}}
+{\footnotesize\ttfamily int\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+data,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{jcsample_8c_a70c17f06dccf0d8179062455c5af3f0d}\label{jcsample_8c_a70c17f06dccf0d8179062455c5af3f0d}} 
+\index{jcsample.c@{jcsample.c}!jinit\_downsampler@{jinit\_downsampler}}
+\index{jinit\_downsampler@{jinit\_downsampler}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{jinit\_downsampler()}{jinit\_downsampler()}}
+{\footnotesize\ttfamily jinit\+\_\+downsampler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 478 of file jcsample.\+c.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{jcsample_8c_afb22a39e76c4158d72e396dc31fc8c26}\label{jcsample_8c_afb22a39e76c4158d72e396dc31fc8c26}} 
+\index{jcsample.c@{jcsample.c}!JMETHOD@{JMETHOD}}
+\index{JMETHOD@{JMETHOD}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{JMETHOD()}{JMETHOD()}}
+{\footnotesize\ttfamily typedef J\+M\+E\+T\+H\+OD (\begin{DoxyParamCaption}\item[{void}]{,  }\item[{downsample1\+\_\+ptr}]{,  }\item[{(\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+data, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} output\+\_\+data)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jcsample_8c_ae92f930ddc9c6d858d461d2881761357}\label{jcsample_8c_ae92f930ddc9c6d858d461d2881761357}} 
+\index{jcsample.c@{jcsample.c}!sep\_downsample@{sep\_downsample}}
+\index{sep\_downsample@{sep\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{sep\_downsample()}{sep\_downsample()}}
+{\footnotesize\ttfamily sep\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{in\+\_\+row\+\_\+index,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{out\+\_\+row\+\_\+group\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file jcsample.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{jcsample_8c_a65fe6b060ccae970044d3e3658c760c7}\label{jcsample_8c_a65fe6b060ccae970044d3e3658c760c7}} 
+\index{jcsample.c@{jcsample.c}!start\_pass\_downsample@{start\_pass\_downsample}}
+\index{start\_pass\_downsample@{start\_pass\_downsample}!jcsample.c@{jcsample.c}}
+\subsubsection{\texorpdfstring{start\_pass\_downsample()}{start\_pass\_downsample()}}
+{\footnotesize\ttfamily start\+\_\+pass\+\_\+downsample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file jcsample.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 17

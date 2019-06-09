@@ -1,0 +1,15 @@
+digraph "jpeg_std_error"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node26 [label="jpeg_std_error",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node26 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="JpegLoader::Load",height=0.2,width=0.4,color="black",URL="$classJpegLoader.html#a094609a59107dfbd1cca84fa2467c926",tooltip=" "];
+  Node27 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="main",height=0.2,width=0.4,color="black",URL="$misc_2Libjpeg_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node26 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="Jpeg::readImage",height=0.2,width=0.4,color="black",URL="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c",tooltip=" "];
+}

@@ -1,0 +1,1096 @@
+\hypertarget{structjpeg__decompress__struct}{}\section{jpeg\+\_\+decompress\+\_\+struct Struct Reference}
+\label{structjpeg__decompress__struct}\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+
+
+{\ttfamily \#include $<$jpeglib.\+h$>$}
+
+
+
+Collaboration diagram for jpeg\+\_\+decompress\+\_\+struct\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structjpeg__decompress__struct_a62d872add9f188d06908d327da2a24fd}{jpeg\+\_\+common\+\_\+fields}}
+\item 
+struct \mbox{\hyperlink{structjpeg__source__mgr}{jpeg\+\_\+source\+\_\+mgr}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_aa0f9a673100231cfd81f17b789784785}{src}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a433c0a54f42dfd3d2977ea967b9a21ee}{image\+\_\+width}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_ad711fae8063a3e75e3c0cccd8512bedf}{image\+\_\+height}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a15d5e8c34e5c66983eda5c0070f0be95}{num\+\_\+components}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+CE}} \mbox{\hyperlink{structjpeg__decompress__struct_a980b92cd751cbc72cc7edd1f9ef2c3e4}{jpeg\+\_\+color\+\_\+space}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+CE}} \mbox{\hyperlink{structjpeg__decompress__struct_a4e69e870df7b81671043374d01efc14f}{out\+\_\+color\+\_\+space}}
+\item 
+unsigned int \mbox{\hyperlink{structjpeg__decompress__struct_a6c87b02686e69267d26e28c5d3775469}{scale\+\_\+num}}
+\item 
+unsigned int \mbox{\hyperlink{structjpeg__decompress__struct_ab2621a1694c2b2ea6cfb8618639e5995}{scale\+\_\+denom}}
+\item 
+double \mbox{\hyperlink{structjpeg__decompress__struct_a51cf33a1189952f9e2e8afd9d3b03f31}{output\+\_\+gamma}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a9f8fd3b4420adae55f5ed83462ee1a59}{buffered\+\_\+image}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a5f2c59e52598e7ef8dd2cd76dd99f9cf}{raw\+\_\+data\+\_\+out}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_ae4245c819e9217a321fb23f1a106d563}{J\+\_\+\+D\+C\+T\+\_\+\+M\+E\+T\+H\+OD}} \mbox{\hyperlink{structjpeg__decompress__struct_af0aba13aeea0482b7881d35c5b8e0805}{dct\+\_\+method}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a40d8902de27f5c64846fabf035372ca3}{do\+\_\+fancy\+\_\+upsampling}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a4a78a03478c9296b9f5d4b390b952b6b}{do\+\_\+block\+\_\+smoothing}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a2eeeeb3b3dafd9aeaafd8fe6709763c8}{quantize\+\_\+colors}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_a23ab65fc4cdbe8bb0ac7a8ca76d29653}{J\+\_\+\+D\+I\+T\+H\+E\+R\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{structjpeg__decompress__struct_aba971605eafdb9c84ed2c4182a957200}{dither\+\_\+mode}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a0e1f895273de22a3ef9ab5d0de92a0d8}{two\+\_\+pass\+\_\+quantize}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_aa79defbb6b6e8799548086cd85f166d2}{desired\+\_\+number\+\_\+of\+\_\+colors}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a9a879ce46d9ec6463367f88f8bc27785}{enable\+\_\+1pass\+\_\+quant}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_aac4a69c22e40b580f6890639a4f656a3}{enable\+\_\+external\+\_\+quant}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a93a36ee821e6ddc5cddcde0067e5c566}{enable\+\_\+2pass\+\_\+quant}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a9a297d905de58707af17f12d05e392fb}{output\+\_\+width}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a08cec87658d1eb0f9f2d313cc4e56816}{output\+\_\+height}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a49f88d9a18339713870a0b82e577f565}{out\+\_\+color\+\_\+components}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a14c48e241334198e627418ed69a205ac}{output\+\_\+components}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a52eb371c52e4dc30e27f399c8ed01740}{rec\+\_\+outbuf\+\_\+height}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a7949dd3e32058bca5a81fce5caf0b75c}{actual\+\_\+number\+\_\+of\+\_\+colors}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} \mbox{\hyperlink{structjpeg__decompress__struct_a29fac0bebc292e40b83631b9861c7ab8}{colormap}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_abbf81679b1802936032f618dd90f8291}{output\+\_\+scanline}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a43a1013bf1f6c45afb959f48fd40c66f}{input\+\_\+scan\+\_\+number}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a6c9d014952341bcfc521ad5b7bce500f}{input\+\_\+i\+M\+C\+U\+\_\+row}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_abd7d01c79e679a8c8203bc494bc43fb4}{output\+\_\+scan\+\_\+number}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a8bc74336c804741b32fea874f8410c88}{output\+\_\+i\+M\+C\+U\+\_\+row}}
+\item 
+int($\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a61c024a1b3f2bc0b32ff7c3145ac7f2c}{coef\+\_\+bits}} )\mbox{[}\mbox{\hyperlink{jpeglib_8h_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}}\mbox{]}
+\item 
+\mbox{\hyperlink{structJQUANT__TBL}{J\+Q\+U\+A\+N\+T\+\_\+\+T\+BL}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a42be2e7197a38cf83e6cebbaac006ca6}{quant\+\_\+tbl\+\_\+ptrs}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_ab3254a23612ea48615001fffc0c9f691}{N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+BL}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a805ecdbfbc59d66a6879de06dc4c35e0}{dc\+\_\+huff\+\_\+tbl\+\_\+ptrs}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+BL}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a8d6e49569f3edc0ad43ffa5d6a95bb48}{ac\+\_\+huff\+\_\+tbl\+\_\+ptrs}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_ad55d8fc56faa42d05d1a80ad84ce3e9c}{data\+\_\+precision}}
+\item 
+\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_afb7ab593b5699842965eccb64e6e200a}{comp\+\_\+info}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a7ba5fd9c43f0bd3161f1fc618aa39e37}{is\+\_\+baseline}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a6e2f9fd1cba287dc632070f3c8390d1c}{progressive\+\_\+mode}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_aa59d02c7dfa58e22321c1f5fa154b151}{arith\+\_\+code}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_a746b5ecfe0401a1ffe423191d4b929b0}{arith\+\_\+dc\+\_\+L}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_af181cece11c6bb960cb97f648f0e67aa}{arith\+\_\+dc\+\_\+U}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_a9c54eeff8fd2af185c34be22e5c21420}{arith\+\_\+ac\+\_\+K}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{structjpeg__decompress__struct_a7b3dea6fc8f77278bafd041059ecd16c}{restart\+\_\+interval}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a1420a33f2921426c798d85104527fd85}{saw\+\_\+\+J\+F\+I\+F\+\_\+marker}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_ac5d65b5439fbcde7b0738e41b27de928}{J\+F\+I\+F\+\_\+major\+\_\+version}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_a75a27a410717002a2ec2f339a9142824}{J\+F\+I\+F\+\_\+minor\+\_\+version}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_a8d4afa82a43e8a7452b5e4f8276bbdb7}{density\+\_\+unit}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16}} \mbox{\hyperlink{structjpeg__decompress__struct_a69f0da1031f16c621438d123921ba745}{X\+\_\+density}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16}} \mbox{\hyperlink{structjpeg__decompress__struct_a2bfa78f638ae718f6601fd64a3b9f7aa}{Y\+\_\+density}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_aa117f97eb92feac14f6f91b599f1928c}{saw\+\_\+\+Adobe\+\_\+marker}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} \mbox{\hyperlink{structjpeg__decompress__struct_aebe0766b99c4fbe0e8b2a78e5e91d107}{Adobe\+\_\+transform}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_a26af503ae521188ce89abc2c7adee7f0}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}} \mbox{\hyperlink{structjpeg__decompress__struct_a976c199570f66a35853ad08dac014bc3}{color\+\_\+transform}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \mbox{\hyperlink{structjpeg__decompress__struct_a57c63b368b579dc76944fe6dba1ecc96}{C\+C\+I\+R601\+\_\+sampling}}
+\item 
+\mbox{\hyperlink{jpeglib_8h_a2efb5205b3e81589f2dc133f1a412bb0}{jpeg\+\_\+saved\+\_\+marker\+\_\+ptr}} \mbox{\hyperlink{structjpeg__decompress__struct_a28761988a8f06e80619169e09412b27a}{marker\+\_\+list}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a3c7351d6faa7604cfc60ce3346aa64fa}{max\+\_\+h\+\_\+samp\+\_\+factor}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_ac502831dd72cbe2663eb06f98cf0a489}{max\+\_\+v\+\_\+samp\+\_\+factor}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a8a89345d171d3f17315c9778cb634e6e}{min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a91ac3f0ca9c554b1690a0d18bc351762}{min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_ab210038772e2c74c35b6c0a36db9c6a9}{total\+\_\+i\+M\+C\+U\+\_\+rows}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a552ee7787d3fd8b5f5f5cc3e2145a647}{J\+S\+A\+M\+P\+LE}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a7208357f11ec6db26e55d7b01d8c7a1b}{sample\+\_\+range\+\_\+limit}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a2a28db865b9d49bfa9bc6335abf331c3}{comps\+\_\+in\+\_\+scan}}
+\item 
+\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_ab640afe8fb70108caed0c2520aab0c2a}{cur\+\_\+comp\+\_\+info}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_adc7013da016c19051dc623fb3d8b35b4}{M\+A\+X\+\_\+\+C\+O\+M\+P\+S\+\_\+\+I\+N\+\_\+\+S\+C\+AN}}\mbox{]}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_aafebfaa0046cc8b449ce2401c174697f}{M\+C\+Us\+\_\+per\+\_\+row}}
+\item 
+\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{structjpeg__decompress__struct_a6d1110064a4f2fbc46a8831fd148bca6}{M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a76d2872b589796cb8d66428e660e37fb}{blocks\+\_\+in\+\_\+\+M\+CU}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_abcd46ef2fd7c068bdbdcde43efbd786e}{M\+C\+U\+\_\+membership}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a61133b3e8959b3ab4ead2b6e12761176}{Ss}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a978242a8eb6c75dbb86e8382470b2290}{Se}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a2df559c55319d0c785b91e95960bea55}{Ah}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a1dfbdcc8449dbc329a352a75d4046154}{Al}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a18f5caeead3dbaf5dfebf7aa08e3ee3f}{block\+\_\+size}}
+\item 
+const int $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a45b7a03343d61800942cee3001f73bdb}{natural\+\_\+order}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_acd2e6ff14b5a6109ae04baf754dd5965}{lim\+\_\+\+Se}}
+\item 
+int \mbox{\hyperlink{structjpeg__decompress__struct_a9a030e86e1bfd0a72c520e1d18b5eef9}{unread\+\_\+marker}}
+\item 
+struct \mbox{\hyperlink{structjpeg__decomp__master}{jpeg\+\_\+decomp\+\_\+master}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_ace69c5c5534a5de5b54d9c4dcd224fe6}{master}}
+\item 
+struct \mbox{\hyperlink{structjpeg__d__main__controller}{jpeg\+\_\+d\+\_\+main\+\_\+controller}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_aab13271d039318135ee5ca434e96c34d}{main}}
+\item 
+struct \mbox{\hyperlink{structjpeg__d__coef__controller}{jpeg\+\_\+d\+\_\+coef\+\_\+controller}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a25ff493a838c250917bf874a70bdb6f2}{coef}}
+\item 
+struct \mbox{\hyperlink{structjpeg__d__post__controller}{jpeg\+\_\+d\+\_\+post\+\_\+controller}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_aa23ccd90094cf7cf11f8f688eb28988e}{post}}
+\item 
+struct \mbox{\hyperlink{structjpeg__input__controller}{jpeg\+\_\+input\+\_\+controller}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_aba60d9f35b5b2357fd7d9b28809cb087}{inputctl}}
+\item 
+struct \mbox{\hyperlink{structjpeg__marker__reader}{jpeg\+\_\+marker\+\_\+reader}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a59a6ada58d57b412fe89e1a531323b50}{marker}}
+\item 
+struct \mbox{\hyperlink{structjpeg__entropy__decoder}{jpeg\+\_\+entropy\+\_\+decoder}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_ac53f055b3d8103caa6c7ba4b4975eb5b}{entropy}}
+\item 
+struct \mbox{\hyperlink{structjpeg__inverse__dct}{jpeg\+\_\+inverse\+\_\+dct}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a2ef67a2829f8ecebb1af0ed440bff8bf}{idct}}
+\item 
+struct \mbox{\hyperlink{structjpeg__upsampler}{jpeg\+\_\+upsampler}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a80ad7e1c14488a065697b09679479c5d}{upsample}}
+\item 
+struct \mbox{\hyperlink{structjpeg__color__deconverter}{jpeg\+\_\+color\+\_\+deconverter}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_a1f88347e58f8f9d93954aa885f3497fb}{cconvert}}
+\item 
+struct \mbox{\hyperlink{structjpeg__color__quantizer}{jpeg\+\_\+color\+\_\+quantizer}} $\ast$ \mbox{\hyperlink{structjpeg__decompress__struct_ace3f4f51b8cf7bd24428ae9d10f5ddf1}{cquantize}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 452 of file jpeglib.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structjpeg__decompress__struct_a8d6e49569f3edc0ad43ffa5d6a95bb48}\label{structjpeg__decompress__struct_a8d6e49569f3edc0ad43ffa5d6a95bb48}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!ac\_huff\_tbl\_ptrs@{ac\_huff\_tbl\_ptrs}}
+\index{ac\_huff\_tbl\_ptrs@{ac\_huff\_tbl\_ptrs}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{ac\_huff\_tbl\_ptrs}{ac\_huff\_tbl\_ptrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+BL}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::ac\+\_\+huff\+\_\+tbl\+\_\+ptrs\mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 567 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a7949dd3e32058bca5a81fce5caf0b75c}\label{structjpeg__decompress__struct_a7949dd3e32058bca5a81fce5caf0b75c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!actual\_number\_of\_colors@{actual\_number\_of\_colors}}
+\index{actual\_number\_of\_colors@{actual\_number\_of\_colors}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{actual\_number\_of\_colors}{actual\_number\_of\_colors}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::actual\+\_\+number\+\_\+of\+\_\+colors}
+
+
+
+Definition at line 519 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aebe0766b99c4fbe0e8b2a78e5e91d107}\label{structjpeg__decompress__struct_aebe0766b99c4fbe0e8b2a78e5e91d107}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Adobe\_transform@{Adobe\_transform}}
+\index{Adobe\_transform@{Adobe\_transform}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Adobe\_transform}{Adobe\_transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::\+Adobe\+\_\+transform}
+
+
+
+Definition at line 600 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a2df559c55319d0c785b91e95960bea55}\label{structjpeg__decompress__struct_a2df559c55319d0c785b91e95960bea55}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Ah@{Ah}}
+\index{Ah@{Ah}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Ah}{Ah}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::\+Ah}
+
+
+
+Definition at line 654 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a1dfbdcc8449dbc329a352a75d4046154}\label{structjpeg__decompress__struct_a1dfbdcc8449dbc329a352a75d4046154}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Al@{Al}}
+\index{Al@{Al}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Al}{Al}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::\+Al}
+
+
+
+Definition at line 654 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a9c54eeff8fd2af185c34be22e5c21420}\label{structjpeg__decompress__struct_a9c54eeff8fd2af185c34be22e5c21420}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!arith\_ac\_K@{arith\_ac\_K}}
+\index{arith\_ac\_K@{arith\_ac\_K}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{arith\_ac\_K}{arith\_ac\_K}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::arith\+\_\+ac\+\_\+K\mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 585 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aa59d02c7dfa58e22321c1f5fa154b151}\label{structjpeg__decompress__struct_aa59d02c7dfa58e22321c1f5fa154b151}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!arith\_code@{arith\_code}}
+\index{arith\_code@{arith\_code}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{arith\_code}{arith\_code}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::arith\+\_\+code}
+
+
+
+Definition at line 581 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a746b5ecfe0401a1ffe423191d4b929b0}\label{structjpeg__decompress__struct_a746b5ecfe0401a1ffe423191d4b929b0}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!arith\_dc\_L@{arith\_dc\_L}}
+\index{arith\_dc\_L@{arith\_dc\_L}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{arith\_dc\_L}{arith\_dc\_L}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::arith\+\_\+dc\+\_\+L\mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 583 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_af181cece11c6bb960cb97f648f0e67aa}\label{structjpeg__decompress__struct_af181cece11c6bb960cb97f648f0e67aa}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!arith\_dc\_U@{arith\_dc\_U}}
+\index{arith\_dc\_U@{arith\_dc\_U}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{arith\_dc\_U}{arith\_dc\_U}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::arith\+\_\+dc\+\_\+U\mbox{[}\mbox{\hyperlink{jpeglib_8h_a4efb0fccc8d9db72ca18f32a26fad6ab}{N\+U\+M\+\_\+\+A\+R\+I\+T\+H\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 584 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a18f5caeead3dbaf5dfebf7aa08e3ee3f}\label{structjpeg__decompress__struct_a18f5caeead3dbaf5dfebf7aa08e3ee3f}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!block\_size@{block\_size}}
+\index{block\_size@{block\_size}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{block\_size}{block\_size}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::block\+\_\+size}
+
+
+
+Definition at line 658 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a76d2872b589796cb8d66428e660e37fb}\label{structjpeg__decompress__struct_a76d2872b589796cb8d66428e660e37fb}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!blocks\_in\_MCU@{blocks\_in\_MCU}}
+\index{blocks\_in\_MCU@{blocks\_in\_MCU}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{blocks\_in\_MCU}{blocks\_in\_MCU}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::blocks\+\_\+in\+\_\+\+M\+CU}
+
+
+
+Definition at line 649 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a9f8fd3b4420adae55f5ed83462ee1a59}\label{structjpeg__decompress__struct_a9f8fd3b4420adae55f5ed83462ee1a59}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!buffered\_image@{buffered\_image}}
+\index{buffered\_image@{buffered\_image}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{buffered\_image}{buffered\_image}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::buffered\+\_\+image}
+
+
+
+Definition at line 477 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a57c63b368b579dc76944fe6dba1ecc96}\label{structjpeg__decompress__struct_a57c63b368b579dc76944fe6dba1ecc96}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!CCIR601\_sampling@{CCIR601\_sampling}}
+\index{CCIR601\_sampling@{CCIR601\_sampling}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{CCIR601\_sampling}{CCIR601\_sampling}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::\+C\+C\+I\+R601\+\_\+sampling}
+
+
+
+Definition at line 605 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a1f88347e58f8f9d93954aa885f3497fb}\label{structjpeg__decompress__struct_a1f88347e58f8f9d93954aa885f3497fb}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!cconvert@{cconvert}}
+\index{cconvert@{cconvert}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{cconvert}{cconvert}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__color__deconverter}{jpeg\+\_\+color\+\_\+deconverter}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::cconvert}
+
+
+
+Definition at line 680 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a25ff493a838c250917bf874a70bdb6f2}\label{structjpeg__decompress__struct_a25ff493a838c250917bf874a70bdb6f2}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!coef@{coef}}
+\index{coef@{coef}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{coef}{coef}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__d__coef__controller}{jpeg\+\_\+d\+\_\+coef\+\_\+controller}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::coef}
+
+
+
+Definition at line 673 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a61c024a1b3f2bc0b32ff7c3145ac7f2c}\label{structjpeg__decompress__struct_a61c024a1b3f2bc0b32ff7c3145ac7f2c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!coef\_bits@{coef\_bits}}
+\index{coef\_bits@{coef\_bits}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{coef\_bits}{coef\_bits}}
+{\footnotesize\ttfamily int($\ast$ jpeg\+\_\+decompress\+\_\+struct\+::coef\+\_\+bits)\mbox{[}\mbox{\hyperlink{jpeglib_8h_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}}\mbox{]}}
+
+
+
+Definition at line 552 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a976c199570f66a35853ad08dac014bc3}\label{structjpeg__decompress__struct_a976c199570f66a35853ad08dac014bc3}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!color\_transform@{color\_transform}}
+\index{color\_transform@{color\_transform}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{color\_transform}{color\_transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_a26af503ae521188ce89abc2c7adee7f0}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}} jpeg\+\_\+decompress\+\_\+struct\+::color\+\_\+transform}
+
+
+
+Definition at line 602 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a29fac0bebc292e40b83631b9861c7ab8}\label{structjpeg__decompress__struct_a29fac0bebc292e40b83631b9861c7ab8}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!colormap@{colormap}}
+\index{colormap@{colormap}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{colormap}{colormap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} jpeg\+\_\+decompress\+\_\+struct\+::colormap}
+
+
+
+Definition at line 520 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_afb7ab593b5699842965eccb64e6e200a}\label{structjpeg__decompress__struct_afb7ab593b5699842965eccb64e6e200a}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!comp\_info@{comp\_info}}
+\index{comp\_info@{comp\_info}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{comp\_info}{comp\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::comp\+\_\+info}
+
+
+
+Definition at line 576 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a2a28db865b9d49bfa9bc6335abf331c3}\label{structjpeg__decompress__struct_a2a28db865b9d49bfa9bc6335abf331c3}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!comps\_in\_scan@{comps\_in\_scan}}
+\index{comps\_in\_scan@{comps\_in\_scan}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{comps\_in\_scan}{comps\_in\_scan}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::comps\+\_\+in\+\_\+scan}
+
+
+
+Definition at line 642 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ace3f4f51b8cf7bd24428ae9d10f5ddf1}\label{structjpeg__decompress__struct_ace3f4f51b8cf7bd24428ae9d10f5ddf1}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!cquantize@{cquantize}}
+\index{cquantize@{cquantize}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{cquantize}{cquantize}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__color__quantizer}{jpeg\+\_\+color\+\_\+quantizer}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::cquantize}
+
+
+
+Definition at line 681 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ab640afe8fb70108caed0c2520aab0c2a}\label{structjpeg__decompress__struct_ab640afe8fb70108caed0c2520aab0c2a}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!cur\_comp\_info@{cur\_comp\_info}}
+\index{cur\_comp\_info@{cur\_comp\_info}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{cur\_comp\_info}{cur\_comp\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::cur\+\_\+comp\+\_\+info\mbox{[}\mbox{\hyperlink{jpeglib_8h_adc7013da016c19051dc623fb3d8b35b4}{M\+A\+X\+\_\+\+C\+O\+M\+P\+S\+\_\+\+I\+N\+\_\+\+S\+C\+AN}}\mbox{]}}
+
+
+
+Definition at line 643 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ad55d8fc56faa42d05d1a80ad84ce3e9c}\label{structjpeg__decompress__struct_ad55d8fc56faa42d05d1a80ad84ce3e9c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!data\_precision@{data\_precision}}
+\index{data\_precision@{data\_precision}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{data\_precision}{data\_precision}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::data\+\_\+precision}
+
+
+
+Definition at line 574 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a805ecdbfbc59d66a6879de06dc4c35e0}\label{structjpeg__decompress__struct_a805ecdbfbc59d66a6879de06dc4c35e0}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!dc\_huff\_tbl\_ptrs@{dc\_huff\_tbl\_ptrs}}
+\index{dc\_huff\_tbl\_ptrs@{dc\_huff\_tbl\_ptrs}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{dc\_huff\_tbl\_ptrs}{dc\_huff\_tbl\_ptrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJHUFF__TBL}{J\+H\+U\+F\+F\+\_\+\+T\+BL}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::dc\+\_\+huff\+\_\+tbl\+\_\+ptrs\mbox{[}\mbox{\hyperlink{jpeglib_8h_a6b12985705944e0623b671f29dc5722e}{N\+U\+M\+\_\+\+H\+U\+F\+F\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 566 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_af0aba13aeea0482b7881d35c5b8e0805}\label{structjpeg__decompress__struct_af0aba13aeea0482b7881d35c5b8e0805}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!dct\_method@{dct\_method}}
+\index{dct\_method@{dct\_method}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{dct\_method}{dct\_method}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_ae4245c819e9217a321fb23f1a106d563}{J\+\_\+\+D\+C\+T\+\_\+\+M\+E\+T\+H\+OD}} jpeg\+\_\+decompress\+\_\+struct\+::dct\+\_\+method}
+
+
+
+Definition at line 480 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a8d4afa82a43e8a7452b5e4f8276bbdb7}\label{structjpeg__decompress__struct_a8d4afa82a43e8a7452b5e4f8276bbdb7}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!density\_unit@{density\_unit}}
+\index{density\_unit@{density\_unit}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{density\_unit}{density\_unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::density\+\_\+unit}
+
+
+
+Definition at line 596 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aa79defbb6b6e8799548086cd85f166d2}\label{structjpeg__decompress__struct_aa79defbb6b6e8799548086cd85f166d2}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!desired\_number\_of\_colors@{desired\_number\_of\_colors}}
+\index{desired\_number\_of\_colors@{desired\_number\_of\_colors}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{desired\_number\_of\_colors}{desired\_number\_of\_colors}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::desired\+\_\+number\+\_\+of\+\_\+colors}
+
+
+
+Definition at line 488 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aba971605eafdb9c84ed2c4182a957200}\label{structjpeg__decompress__struct_aba971605eafdb9c84ed2c4182a957200}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!dither\_mode@{dither\_mode}}
+\index{dither\_mode@{dither\_mode}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{dither\_mode}{dither\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_a23ab65fc4cdbe8bb0ac7a8ca76d29653}{J\+\_\+\+D\+I\+T\+H\+E\+R\+\_\+\+M\+O\+DE}} jpeg\+\_\+decompress\+\_\+struct\+::dither\+\_\+mode}
+
+
+
+Definition at line 486 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a4a78a03478c9296b9f5d4b390b952b6b}\label{structjpeg__decompress__struct_a4a78a03478c9296b9f5d4b390b952b6b}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!do\_block\_smoothing@{do\_block\_smoothing}}
+\index{do\_block\_smoothing@{do\_block\_smoothing}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{do\_block\_smoothing}{do\_block\_smoothing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::do\+\_\+block\+\_\+smoothing}
+
+
+
+Definition at line 482 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a40d8902de27f5c64846fabf035372ca3}\label{structjpeg__decompress__struct_a40d8902de27f5c64846fabf035372ca3}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!do\_fancy\_upsampling@{do\_fancy\_upsampling}}
+\index{do\_fancy\_upsampling@{do\_fancy\_upsampling}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{do\_fancy\_upsampling}{do\_fancy\_upsampling}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::do\+\_\+fancy\+\_\+upsampling}
+
+
+
+Definition at line 481 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a9a879ce46d9ec6463367f88f8bc27785}\label{structjpeg__decompress__struct_a9a879ce46d9ec6463367f88f8bc27785}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!enable\_1pass\_quant@{enable\_1pass\_quant}}
+\index{enable\_1pass\_quant@{enable\_1pass\_quant}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{enable\_1pass\_quant}{enable\_1pass\_quant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::enable\+\_\+1pass\+\_\+quant}
+
+
+
+Definition at line 490 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a93a36ee821e6ddc5cddcde0067e5c566}\label{structjpeg__decompress__struct_a93a36ee821e6ddc5cddcde0067e5c566}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!enable\_2pass\_quant@{enable\_2pass\_quant}}
+\index{enable\_2pass\_quant@{enable\_2pass\_quant}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{enable\_2pass\_quant}{enable\_2pass\_quant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::enable\+\_\+2pass\+\_\+quant}
+
+
+
+Definition at line 492 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aac4a69c22e40b580f6890639a4f656a3}\label{structjpeg__decompress__struct_aac4a69c22e40b580f6890639a4f656a3}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!enable\_external\_quant@{enable\_external\_quant}}
+\index{enable\_external\_quant@{enable\_external\_quant}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{enable\_external\_quant}{enable\_external\_quant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::enable\+\_\+external\+\_\+quant}
+
+
+
+Definition at line 491 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ac53f055b3d8103caa6c7ba4b4975eb5b}\label{structjpeg__decompress__struct_ac53f055b3d8103caa6c7ba4b4975eb5b}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!entropy@{entropy}}
+\index{entropy@{entropy}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{entropy}{entropy}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__entropy__decoder}{jpeg\+\_\+entropy\+\_\+decoder}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::entropy}
+
+
+
+Definition at line 677 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a2ef67a2829f8ecebb1af0ed440bff8bf}\label{structjpeg__decompress__struct_a2ef67a2829f8ecebb1af0ed440bff8bf}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!idct@{idct}}
+\index{idct@{idct}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{idct}{idct}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__inverse__dct}{jpeg\+\_\+inverse\+\_\+dct}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::idct}
+
+
+
+Definition at line 678 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ad711fae8063a3e75e3c0cccd8512bedf}\label{structjpeg__decompress__struct_ad711fae8063a3e75e3c0cccd8512bedf}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!image\_height@{image\_height}}
+\index{image\_height@{image\_height}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{image\_height}{image\_height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::image\+\_\+height}
+
+
+
+Definition at line 462 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a433c0a54f42dfd3d2977ea967b9a21ee}\label{structjpeg__decompress__struct_a433c0a54f42dfd3d2977ea967b9a21ee}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!image\_width@{image\_width}}
+\index{image\_width@{image\_width}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{image\_width}{image\_width}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::image\+\_\+width}
+
+
+
+Definition at line 461 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a6c9d014952341bcfc521ad5b7bce500f}\label{structjpeg__decompress__struct_a6c9d014952341bcfc521ad5b7bce500f}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!input\_iMCU\_row@{input\_iMCU\_row}}
+\index{input\_iMCU\_row@{input\_iMCU\_row}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{input\_iMCU\_row}{input\_iMCU\_row}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::input\+\_\+i\+M\+C\+U\+\_\+row}
+
+
+
+Definition at line 536 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a43a1013bf1f6c45afb959f48fd40c66f}\label{structjpeg__decompress__struct_a43a1013bf1f6c45afb959f48fd40c66f}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!input\_scan\_number@{input\_scan\_number}}
+\index{input\_scan\_number@{input\_scan\_number}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{input\_scan\_number}{input\_scan\_number}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::input\+\_\+scan\+\_\+number}
+
+
+
+Definition at line 535 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aba60d9f35b5b2357fd7d9b28809cb087}\label{structjpeg__decompress__struct_aba60d9f35b5b2357fd7d9b28809cb087}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!inputctl@{inputctl}}
+\index{inputctl@{inputctl}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{inputctl}{inputctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__input__controller}{jpeg\+\_\+input\+\_\+controller}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::inputctl}
+
+
+
+Definition at line 675 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a7ba5fd9c43f0bd3161f1fc618aa39e37}\label{structjpeg__decompress__struct_a7ba5fd9c43f0bd3161f1fc618aa39e37}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!is\_baseline@{is\_baseline}}
+\index{is\_baseline@{is\_baseline}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{is\_baseline}{is\_baseline}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::is\+\_\+baseline}
+
+
+
+Definition at line 579 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ac5d65b5439fbcde7b0738e41b27de928}\label{structjpeg__decompress__struct_ac5d65b5439fbcde7b0738e41b27de928}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!JFIF\_major\_version@{JFIF\_major\_version}}
+\index{JFIF\_major\_version@{JFIF\_major\_version}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{JFIF\_major\_version}{JFIF\_major\_version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::\+J\+F\+I\+F\+\_\+major\+\_\+version}
+
+
+
+Definition at line 594 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a75a27a410717002a2ec2f339a9142824}\label{structjpeg__decompress__struct_a75a27a410717002a2ec2f339a9142824}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!JFIF\_minor\_version@{JFIF\_minor\_version}}
+\index{JFIF\_minor\_version@{JFIF\_minor\_version}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{JFIF\_minor\_version}{JFIF\_minor\_version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_adfb9a8ea1dd59f151065f763e1e9acd6}{U\+I\+N\+T8}} jpeg\+\_\+decompress\+\_\+struct\+::\+J\+F\+I\+F\+\_\+minor\+\_\+version}
+
+
+
+Definition at line 595 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a980b92cd751cbc72cc7edd1f9ef2c3e4}\label{structjpeg__decompress__struct_a980b92cd751cbc72cc7edd1f9ef2c3e4}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!jpeg\_color\_space@{jpeg\_color\_space}}
+\index{jpeg\_color\_space@{jpeg\_color\_space}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{jpeg\_color\_space}{jpeg\_color\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+CE}} jpeg\+\_\+decompress\+\_\+struct\+::jpeg\+\_\+color\+\_\+space}
+
+
+
+Definition at line 464 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a62d872add9f188d06908d327da2a24fd}\label{structjpeg__decompress__struct_a62d872add9f188d06908d327da2a24fd}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!jpeg\_common\_fields@{jpeg\_common\_fields}}
+\index{jpeg\_common\_fields@{jpeg\_common\_fields}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{jpeg\_common\_fields}{jpeg\_common\_fields}}
+{\footnotesize\ttfamily jpeg\+\_\+decompress\+\_\+struct\+::jpeg\+\_\+common\+\_\+fields}
+
+
+
+Definition at line 453 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_acd2e6ff14b5a6109ae04baf754dd5965}\label{structjpeg__decompress__struct_acd2e6ff14b5a6109ae04baf754dd5965}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!lim\_Se@{lim\_Se}}
+\index{lim\_Se@{lim\_Se}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{lim\_Se}{lim\_Se}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::lim\+\_\+\+Se}
+
+
+
+Definition at line 660 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aab13271d039318135ee5ca434e96c34d}\label{structjpeg__decompress__struct_aab13271d039318135ee5ca434e96c34d}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!main@{main}}
+\index{main@{main}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{main}{main}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__d__main__controller}{jpeg\+\_\+d\+\_\+main\+\_\+controller}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::main}
+
+
+
+Definition at line 672 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a59a6ada58d57b412fe89e1a531323b50}\label{structjpeg__decompress__struct_a59a6ada58d57b412fe89e1a531323b50}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!marker@{marker}}
+\index{marker@{marker}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{marker}{marker}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__marker__reader}{jpeg\+\_\+marker\+\_\+reader}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::marker}
+
+
+
+Definition at line 676 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a28761988a8f06e80619169e09412b27a}\label{structjpeg__decompress__struct_a28761988a8f06e80619169e09412b27a}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!marker\_list@{marker\_list}}
+\index{marker\_list@{marker\_list}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{marker\_list}{marker\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_a2efb5205b3e81589f2dc133f1a412bb0}{jpeg\+\_\+saved\+\_\+marker\+\_\+ptr}} jpeg\+\_\+decompress\+\_\+struct\+::marker\+\_\+list}
+
+
+
+Definition at line 611 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ace69c5c5534a5de5b54d9c4dcd224fe6}\label{structjpeg__decompress__struct_ace69c5c5534a5de5b54d9c4dcd224fe6}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!master@{master}}
+\index{master@{master}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__decomp__master}{jpeg\+\_\+decomp\+\_\+master}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::master}
+
+
+
+Definition at line 671 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a3c7351d6faa7604cfc60ce3346aa64fa}\label{structjpeg__decompress__struct_a3c7351d6faa7604cfc60ce3346aa64fa}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!max\_h\_samp\_factor@{max\_h\_samp\_factor}}
+\index{max\_h\_samp\_factor@{max\_h\_samp\_factor}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{max\_h\_samp\_factor}{max\_h\_samp\_factor}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::max\+\_\+h\+\_\+samp\+\_\+factor}
+
+
+
+Definition at line 620 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ac502831dd72cbe2663eb06f98cf0a489}\label{structjpeg__decompress__struct_ac502831dd72cbe2663eb06f98cf0a489}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!max\_v\_samp\_factor@{max\_v\_samp\_factor}}
+\index{max\_v\_samp\_factor@{max\_v\_samp\_factor}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{max\_v\_samp\_factor}{max\_v\_samp\_factor}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::max\+\_\+v\+\_\+samp\+\_\+factor}
+
+
+
+Definition at line 621 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_abcd46ef2fd7c068bdbdcde43efbd786e}\label{structjpeg__decompress__struct_abcd46ef2fd7c068bdbdcde43efbd786e}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!MCU\_membership@{MCU\_membership}}
+\index{MCU\_membership@{MCU\_membership}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{MCU\_membership}{MCU\_membership}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::\+M\+C\+U\+\_\+membership\mbox{[}\mbox{\hyperlink{jpeglib_8h_af974a668decc270fb4d00587618dd110}{D\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+I\+N\+\_\+\+M\+CU}}\mbox{]}}
+
+
+
+Definition at line 650 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a6d1110064a4f2fbc46a8831fd148bca6}\label{structjpeg__decompress__struct_a6d1110064a4f2fbc46a8831fd148bca6}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!MCU\_rows\_in\_scan@{MCU\_rows\_in\_scan}}
+\index{MCU\_rows\_in\_scan@{MCU\_rows\_in\_scan}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{MCU\_rows\_in\_scan}{MCU\_rows\_in\_scan}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::\+M\+C\+U\+\_\+rows\+\_\+in\+\_\+scan}
+
+
+
+Definition at line 647 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aafebfaa0046cc8b449ce2401c174697f}\label{structjpeg__decompress__struct_aafebfaa0046cc8b449ce2401c174697f}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!MCUs\_per\_row@{MCUs\_per\_row}}
+\index{MCUs\_per\_row@{MCUs\_per\_row}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{MCUs\_per\_row}{MCUs\_per\_row}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::\+M\+C\+Us\+\_\+per\+\_\+row}
+
+
+
+Definition at line 646 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a8a89345d171d3f17315c9778cb634e6e}\label{structjpeg__decompress__struct_a8a89345d171d3f17315c9778cb634e6e}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!min\_DCT\_h\_scaled\_size@{min\_DCT\_h\_scaled\_size}}
+\index{min\_DCT\_h\_scaled\_size@{min\_DCT\_h\_scaled\_size}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{min\_DCT\_h\_scaled\_size}{min\_DCT\_h\_scaled\_size}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::min\+\_\+\+D\+C\+T\+\_\+h\+\_\+scaled\+\_\+size}
+
+
+
+Definition at line 623 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a91ac3f0ca9c554b1690a0d18bc351762}\label{structjpeg__decompress__struct_a91ac3f0ca9c554b1690a0d18bc351762}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!min\_DCT\_v\_scaled\_size@{min\_DCT\_v\_scaled\_size}}
+\index{min\_DCT\_v\_scaled\_size@{min\_DCT\_v\_scaled\_size}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{min\_DCT\_v\_scaled\_size}{min\_DCT\_v\_scaled\_size}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::min\+\_\+\+D\+C\+T\+\_\+v\+\_\+scaled\+\_\+size}
+
+
+
+Definition at line 624 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a45b7a03343d61800942cee3001f73bdb}\label{structjpeg__decompress__struct_a45b7a03343d61800942cee3001f73bdb}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!natural\_order@{natural\_order}}
+\index{natural\_order@{natural\_order}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{natural\_order}{natural\_order}}
+{\footnotesize\ttfamily const int$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::natural\+\_\+order}
+
+
+
+Definition at line 659 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a15d5e8c34e5c66983eda5c0070f0be95}\label{structjpeg__decompress__struct_a15d5e8c34e5c66983eda5c0070f0be95}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!num\_components@{num\_components}}
+\index{num\_components@{num\_components}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{num\_components}{num\_components}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::num\+\_\+components}
+
+
+
+Definition at line 463 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a49f88d9a18339713870a0b82e577f565}\label{structjpeg__decompress__struct_a49f88d9a18339713870a0b82e577f565}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!out\_color\_components@{out\_color\_components}}
+\index{out\_color\_components@{out\_color\_components}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{out\_color\_components}{out\_color\_components}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::out\+\_\+color\+\_\+components}
+
+
+
+Definition at line 502 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a4e69e870df7b81671043374d01efc14f}\label{structjpeg__decompress__struct_a4e69e870df7b81671043374d01efc14f}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!out\_color\_space@{out\_color\_space}}
+\index{out\_color\_space@{out\_color\_space}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{out\_color\_space}{out\_color\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpeglib_8h_a6ea40239360b06efe6377f125f1134f3}{J\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+P\+A\+CE}} jpeg\+\_\+decompress\+\_\+struct\+::out\+\_\+color\+\_\+space}
+
+
+
+Definition at line 471 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a14c48e241334198e627418ed69a205ac}\label{structjpeg__decompress__struct_a14c48e241334198e627418ed69a205ac}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_components@{output\_components}}
+\index{output\_components@{output\_components}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_components}{output\_components}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+components}
+
+
+
+Definition at line 503 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a51cf33a1189952f9e2e8afd9d3b03f31}\label{structjpeg__decompress__struct_a51cf33a1189952f9e2e8afd9d3b03f31}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_gamma@{output\_gamma}}
+\index{output\_gamma@{output\_gamma}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_gamma}{output\_gamma}}
+{\footnotesize\ttfamily double jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+gamma}
+
+
+
+Definition at line 475 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a08cec87658d1eb0f9f2d313cc4e56816}\label{structjpeg__decompress__struct_a08cec87658d1eb0f9f2d313cc4e56816}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_height@{output\_height}}
+\index{output\_height@{output\_height}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_height}{output\_height}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+height}
+
+
+
+Definition at line 501 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a8bc74336c804741b32fea874f8410c88}\label{structjpeg__decompress__struct_a8bc74336c804741b32fea874f8410c88}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_iMCU\_row@{output\_iMCU\_row}}
+\index{output\_iMCU\_row@{output\_iMCU\_row}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_iMCU\_row}{output\_iMCU\_row}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+i\+M\+C\+U\+\_\+row}
+
+
+
+Definition at line 543 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_abd7d01c79e679a8c8203bc494bc43fb4}\label{structjpeg__decompress__struct_abd7d01c79e679a8c8203bc494bc43fb4}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_scan\_number@{output\_scan\_number}}
+\index{output\_scan\_number@{output\_scan\_number}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_scan\_number}{output\_scan\_number}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+scan\+\_\+number}
+
+
+
+Definition at line 542 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_abbf81679b1802936032f618dd90f8291}\label{structjpeg__decompress__struct_abbf81679b1802936032f618dd90f8291}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_scanline@{output\_scanline}}
+\index{output\_scanline@{output\_scanline}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_scanline}{output\_scanline}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+scanline}
+
+
+
+Definition at line 530 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a9a297d905de58707af17f12d05e392fb}\label{structjpeg__decompress__struct_a9a297d905de58707af17f12d05e392fb}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!output\_width@{output\_width}}
+\index{output\_width@{output\_width}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{output\_width}{output\_width}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::output\+\_\+width}
+
+
+
+Definition at line 500 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aa23ccd90094cf7cf11f8f688eb28988e}\label{structjpeg__decompress__struct_aa23ccd90094cf7cf11f8f688eb28988e}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!post@{post}}
+\index{post@{post}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{post}{post}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__d__post__controller}{jpeg\+\_\+d\+\_\+post\+\_\+controller}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::post}
+
+
+
+Definition at line 674 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a6e2f9fd1cba287dc632070f3c8390d1c}\label{structjpeg__decompress__struct_a6e2f9fd1cba287dc632070f3c8390d1c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!progressive\_mode@{progressive\_mode}}
+\index{progressive\_mode@{progressive\_mode}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{progressive\_mode}{progressive\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::progressive\+\_\+mode}
+
+
+
+Definition at line 580 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a42be2e7197a38cf83e6cebbaac006ca6}\label{structjpeg__decompress__struct_a42be2e7197a38cf83e6cebbaac006ca6}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!quant\_tbl\_ptrs@{quant\_tbl\_ptrs}}
+\index{quant\_tbl\_ptrs@{quant\_tbl\_ptrs}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{quant\_tbl\_ptrs}{quant\_tbl\_ptrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJQUANT__TBL}{J\+Q\+U\+A\+N\+T\+\_\+\+T\+BL}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::quant\+\_\+tbl\+\_\+ptrs\mbox{[}\mbox{\hyperlink{jpeglib_8h_ab3254a23612ea48615001fffc0c9f691}{N\+U\+M\+\_\+\+Q\+U\+A\+N\+T\+\_\+\+T\+B\+LS}}\mbox{]}}
+
+
+
+Definition at line 563 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a2eeeeb3b3dafd9aeaafd8fe6709763c8}\label{structjpeg__decompress__struct_a2eeeeb3b3dafd9aeaafd8fe6709763c8}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!quantize\_colors@{quantize\_colors}}
+\index{quantize\_colors@{quantize\_colors}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{quantize\_colors}{quantize\_colors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::quantize\+\_\+colors}
+
+
+
+Definition at line 484 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a5f2c59e52598e7ef8dd2cd76dd99f9cf}\label{structjpeg__decompress__struct_a5f2c59e52598e7ef8dd2cd76dd99f9cf}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!raw\_data\_out@{raw\_data\_out}}
+\index{raw\_data\_out@{raw\_data\_out}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{raw\_data\_out}{raw\_data\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::raw\+\_\+data\+\_\+out}
+
+
+
+Definition at line 478 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a52eb371c52e4dc30e27f399c8ed01740}\label{structjpeg__decompress__struct_a52eb371c52e4dc30e27f399c8ed01740}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!rec\_outbuf\_height@{rec\_outbuf\_height}}
+\index{rec\_outbuf\_height@{rec\_outbuf\_height}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{rec\_outbuf\_height}{rec\_outbuf\_height}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::rec\+\_\+outbuf\+\_\+height}
+
+
+
+Definition at line 507 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a7b3dea6fc8f77278bafd041059ecd16c}\label{structjpeg__decompress__struct_a7b3dea6fc8f77278bafd041059ecd16c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!restart\_interval@{restart\_interval}}
+\index{restart\_interval@{restart\_interval}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{restart\_interval}{restart\_interval}}
+{\footnotesize\ttfamily unsigned int jpeg\+\_\+decompress\+\_\+struct\+::restart\+\_\+interval}
+
+
+
+Definition at line 587 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a7208357f11ec6db26e55d7b01d8c7a1b}\label{structjpeg__decompress__struct_a7208357f11ec6db26e55d7b01d8c7a1b}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!sample\_range\_limit@{sample\_range\_limit}}
+\index{sample\_range\_limit@{sample\_range\_limit}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{sample\_range\_limit}{sample\_range\_limit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a552ee7787d3fd8b5f5f5cc3e2145a647}{J\+S\+A\+M\+P\+LE}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::sample\+\_\+range\+\_\+limit}
+
+
+
+Definition at line 635 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aa117f97eb92feac14f6f91b599f1928c}\label{structjpeg__decompress__struct_aa117f97eb92feac14f6f91b599f1928c}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!saw\_Adobe\_marker@{saw\_Adobe\_marker}}
+\index{saw\_Adobe\_marker@{saw\_Adobe\_marker}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{saw\_Adobe\_marker}{saw\_Adobe\_marker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::saw\+\_\+\+Adobe\+\_\+marker}
+
+
+
+Definition at line 599 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a1420a33f2921426c798d85104527fd85}\label{structjpeg__decompress__struct_a1420a33f2921426c798d85104527fd85}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!saw\_JFIF\_marker@{saw\_JFIF\_marker}}
+\index{saw\_JFIF\_marker@{saw\_JFIF\_marker}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{saw\_JFIF\_marker}{saw\_JFIF\_marker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::saw\+\_\+\+J\+F\+I\+F\+\_\+marker}
+
+
+
+Definition at line 592 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ab2621a1694c2b2ea6cfb8618639e5995}\label{structjpeg__decompress__struct_ab2621a1694c2b2ea6cfb8618639e5995}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!scale\_denom@{scale\_denom}}
+\index{scale\_denom@{scale\_denom}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{scale\_denom}{scale\_denom}}
+{\footnotesize\ttfamily unsigned int jpeg\+\_\+decompress\+\_\+struct\+::scale\+\_\+denom}
+
+
+
+Definition at line 473 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a6c87b02686e69267d26e28c5d3775469}\label{structjpeg__decompress__struct_a6c87b02686e69267d26e28c5d3775469}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!scale\_num@{scale\_num}}
+\index{scale\_num@{scale\_num}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{scale\_num}{scale\_num}}
+{\footnotesize\ttfamily unsigned int jpeg\+\_\+decompress\+\_\+struct\+::scale\+\_\+num}
+
+
+
+Definition at line 473 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a978242a8eb6c75dbb86e8382470b2290}\label{structjpeg__decompress__struct_a978242a8eb6c75dbb86e8382470b2290}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Se@{Se}}
+\index{Se@{Se}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Se}{Se}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::\+Se}
+
+
+
+Definition at line 654 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_aa0f9a673100231cfd81f17b789784785}\label{structjpeg__decompress__struct_aa0f9a673100231cfd81f17b789784785}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!src@{src}}
+\index{src@{src}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{src}{src}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__source__mgr}{jpeg\+\_\+source\+\_\+mgr}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::src}
+
+
+
+Definition at line 456 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a61133b3e8959b3ab4ead2b6e12761176}\label{structjpeg__decompress__struct_a61133b3e8959b3ab4ead2b6e12761176}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Ss@{Ss}}
+\index{Ss@{Ss}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Ss}{Ss}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::\+Ss}
+
+
+
+Definition at line 654 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_ab210038772e2c74c35b6c0a36db9c6a9}\label{structjpeg__decompress__struct_ab210038772e2c74c35b6c0a36db9c6a9}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!total\_iMCU\_rows@{total\_iMCU\_rows}}
+\index{total\_iMCU\_rows@{total\_iMCU\_rows}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{total\_iMCU\_rows}{total\_iMCU\_rows}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} jpeg\+\_\+decompress\+\_\+struct\+::total\+\_\+i\+M\+C\+U\+\_\+rows}
+
+
+
+Definition at line 626 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a0e1f895273de22a3ef9ab5d0de92a0d8}\label{structjpeg__decompress__struct_a0e1f895273de22a3ef9ab5d0de92a0d8}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!two\_pass\_quantize@{two\_pass\_quantize}}
+\index{two\_pass\_quantize@{two\_pass\_quantize}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{two\_pass\_quantize}{two\_pass\_quantize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} jpeg\+\_\+decompress\+\_\+struct\+::two\+\_\+pass\+\_\+quantize}
+
+
+
+Definition at line 487 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a9a030e86e1bfd0a72c520e1d18b5eef9}\label{structjpeg__decompress__struct_a9a030e86e1bfd0a72c520e1d18b5eef9}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!unread\_marker@{unread\_marker}}
+\index{unread\_marker@{unread\_marker}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{unread\_marker}{unread\_marker}}
+{\footnotesize\ttfamily int jpeg\+\_\+decompress\+\_\+struct\+::unread\+\_\+marker}
+
+
+
+Definition at line 666 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a80ad7e1c14488a065697b09679479c5d}\label{structjpeg__decompress__struct_a80ad7e1c14488a065697b09679479c5d}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!upsample@{upsample}}
+\index{upsample@{upsample}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{upsample}{upsample}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjpeg__upsampler}{jpeg\+\_\+upsampler}}$\ast$ jpeg\+\_\+decompress\+\_\+struct\+::upsample}
+
+
+
+Definition at line 679 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a69f0da1031f16c621438d123921ba745}\label{structjpeg__decompress__struct_a69f0da1031f16c621438d123921ba745}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!X\_density@{X\_density}}
+\index{X\_density@{X\_density}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{X\_density}{X\_density}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16}} jpeg\+\_\+decompress\+\_\+struct\+::\+X\+\_\+density}
+
+
+
+Definition at line 597 of file jpeglib.\+h.
+
+\mbox{\Hypertarget{structjpeg__decompress__struct_a2bfa78f638ae718f6601fd64a3b9f7aa}\label{structjpeg__decompress__struct_a2bfa78f638ae718f6601fd64a3b9f7aa}} 
+\index{jpeg\_decompress\_struct@{jpeg\_decompress\_struct}!Y\_density@{Y\_density}}
+\index{Y\_density@{Y\_density}!jpeg\_decompress\_struct@{jpeg\_decompress\_struct}}
+\subsubsection{\texorpdfstring{Y\_density}{Y\_density}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmorecfg_8h_a805c2c164bdd38d72a30c46e84fb568b}{U\+I\+N\+T16}} jpeg\+\_\+decompress\+\_\+struct\+::\+Y\+\_\+density}
+
+
+
+Definition at line 598 of file jpeglib.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib\+Jpeg/\mbox{\hyperlink{jpeglib_8h}{jpeglib.\+h}}\end{DoxyCompactItemize}

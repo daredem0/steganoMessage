@@ -1,0 +1,14 @@
+<map id="Jpeg" name="Jpeg">
+<area shape="rect" id="node1" title=" " alt="" coords="426,1329,543,1465"/>
+<area shape="rect" id="node2" href="$classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="401,953,568,1280"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="119,601,274,854"/>
+<area shape="rect" id="node4" title=" " alt="" coords="97,343,243,435"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="740,292,885,487"/>
+<area shape="rect" id="node9" href="$classBitmapHeader.html" title=" " alt="" coords="497,564,651,891"/>
+<area shape="rect" id="node6" title=" " alt="" coords="744,5,881,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="51,5,126,83"/>
+<area shape="rect" id="node11" href="$structHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="370,343,501,435"/>
+<area shape="rect" id="node8" title=" " alt="" coords="287,351,346,428"/>
+<area shape="rect" id="node10" title=" " alt="" coords="545,5,595,83"/>
+<area shape="rect" id="node12" title=" " alt="" coords="374,5,449,83"/>
+</map>

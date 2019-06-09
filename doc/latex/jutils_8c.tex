@@ -1,0 +1,273 @@
+\hypertarget{jutils_8c}{}\section{Lib\+Jpeg/jutils.c File Reference}
+\label{jutils_8c}\index{LibJpeg/jutils.c@{LibJpeg/jutils.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+Include dependency graph for jutils.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}{F\+M\+E\+M\+C\+O\+PY}}(dest,  src,  size)~\mbox{\hyperlink{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}{M\+E\+M\+C\+O\+PY}}(dest,src,size)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}{jdiv\+\_\+round\+\_\+up}} (long a, long \mbox{\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}})
+\item 
+\mbox{\hyperlink{jutils_8c_a9f91b295901b3868694a217759d073c4}{jround\+\_\+up}} (long a, long \mbox{\hyperlink{jpegint_8h_af320905358fa78701e4cc60b6135601f}{b}})
+\item 
+\mbox{\hyperlink{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}{jcopy\+\_\+sample\+\_\+rows}} (\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+array, int \mbox{\hyperlink{jpegint_8h_ad84abcd48f39ce30a878dc2e900eb9f7}{source\+\_\+row}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} \mbox{\hyperlink{jpegint_8h_ad8327cda75d2d423f92ba7da5304b772}{output\+\_\+array}}, int \mbox{\hyperlink{jpegint_8h_afae011342ef411f39c22dfbe9509373e}{dest\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_acca252572c592a6643dbe8151f363412}{num\+\_\+cols}})
+\item 
+\mbox{\hyperlink{jutils_8c_a6aad126647ba708534f3be1676d29efb}{jcopy\+\_\+block\+\_\+row}} (\mbox{\hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+OW}} input\+\_\+row, \mbox{\hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+OW}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_ac794c67860ca56fc95e4f0f34632bdeb}{num\+\_\+blocks}})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{jutils_8c_a1ad5512a487bb993817e9755933fb751}{jpeg\+\_\+natural\+\_\+order}} \mbox{[}\mbox{\hyperlink{jpeglib_8h_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}}+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}{jpeg\+\_\+natural\+\_\+order7}} \mbox{[}7 $\ast$7+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_acaf9872a6cd88101644fa2de48149685}{jpeg\+\_\+natural\+\_\+order6}} \mbox{[}6 $\ast$6+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}{jpeg\+\_\+natural\+\_\+order5}} \mbox{[}5 $\ast$5+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_a111a0f136408080ed8825637f88f4de6}{jpeg\+\_\+natural\+\_\+order4}} \mbox{[}4 $\ast$4+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}{jpeg\+\_\+natural\+\_\+order3}} \mbox{[}3 $\ast$3+16\mbox{]}
+\item 
+const int \mbox{\hyperlink{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}{jpeg\+\_\+natural\+\_\+order2}} \mbox{[}2 $\ast$2+16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}\label{jutils_8c_a086eb1567ada82ad0a5fd1aba51de759}} 
+\index{jutils.c@{jutils.c}!FMEMCOPY@{FMEMCOPY}}
+\index{FMEMCOPY@{FMEMCOPY}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{FMEMCOPY}{FMEMCOPY}}
+{\footnotesize\ttfamily \#define F\+M\+E\+M\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src,  }\item[{}]{size }\end{DoxyParamCaption})~\mbox{\hyperlink{jinclude_8h_a7667d1f5e2470cb2a98c26e1d61cf35a}{M\+E\+M\+C\+O\+PY}}(dest,src,size)}
+
+
+
+Definition at line 152 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jutils_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jutils.c@{jutils.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 15 of file jutils.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jutils_8c_a6aad126647ba708534f3be1676d29efb}\label{jutils_8c_a6aad126647ba708534f3be1676d29efb}} 
+\index{jutils.c@{jutils.c}!jcopy\_block\_row@{jcopy\_block\_row}}
+\index{jcopy\_block\_row@{jcopy\_block\_row}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jcopy\_block\_row()}{jcopy\_block\_row()}}
+{\footnotesize\ttfamily jcopy\+\_\+block\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+OW}}}]{input\+\_\+row,  }\item[{\mbox{\hyperlink{jpeglib_8h_a04dea0959d9bd9e8ddad83597161453b}{J\+B\+L\+O\+C\+K\+R\+OW}}}]{output\+\_\+row,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{num\+\_\+blocks }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file jutils.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}\label{jutils_8c_ae2a8a73df80d5302a5b524d048fa9fb5}} 
+\index{jutils.c@{jutils.c}!jcopy\_sample\_rows@{jcopy\_sample\_rows}}
+\index{jcopy\_sample\_rows@{jcopy\_sample\_rows}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jcopy\_sample\_rows()}{jcopy\_sample\_rows()}}
+{\footnotesize\ttfamily jcopy\+\_\+sample\+\_\+rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+array,  }\item[{int}]{source\+\_\+row,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+array,  }\item[{int}]{dest\+\_\+row,  }\item[{int}]{num\+\_\+rows,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{num\+\_\+cols }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file jutils.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}\label{jutils_8c_a0c5aa3b56cb24dd9ed819c8252c61b80}} 
+\index{jutils.c@{jutils.c}!jdiv\_round\_up@{jdiv\_round\_up}}
+\index{jdiv\_round\_up@{jdiv\_round\_up}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jdiv\_round\_up()}{jdiv\_round\_up()}}
+{\footnotesize\ttfamily jdiv\+\_\+round\+\_\+up (\begin{DoxyParamCaption}\item[{long}]{a,  }\item[{long}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 124 of file jutils.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{jutils_8c_a9f91b295901b3868694a217759d073c4}\label{jutils_8c_a9f91b295901b3868694a217759d073c4}} 
+\index{jutils.c@{jutils.c}!jround\_up@{jround\_up}}
+\index{jround\_up@{jround\_up}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jround\_up()}{jround\_up()}}
+{\footnotesize\ttfamily jround\+\_\+up (\begin{DoxyParamCaption}\item[{long}]{a,  }\item[{long}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file jutils.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{jutils_8c_a1ad5512a487bb993817e9755933fb751}\label{jutils_8c_a1ad5512a487bb993817e9755933fb751}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order@{jpeg\_natural\_order}}
+\index{jpeg\_natural\_order@{jpeg\_natural\_order}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order}{jpeg\_natural\_order}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order\mbox{[}\mbox{\hyperlink{jpeglib_8h_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}}+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2,  3, 10,}
+\DoxyCodeLine{ 17, 24, 32, 25, 18, 11,  4,  5,}
+\DoxyCodeLine{ 12, 19, 26, 33, 40, 48, 41, 34,}
+\DoxyCodeLine{ 27, 20, 13,  6,  7, 14, 21, 28,}
+\DoxyCodeLine{ 35, 42, 49, 56, 57, 50, 43, 36,}
+\DoxyCodeLine{ 29, 22, 15, 23, 30, 37, 44, 51,}
+\DoxyCodeLine{ 58, 59, 52, 45, 38, 31, 39, 46,}
+\DoxyCodeLine{ 53, 60, 61, 54, 47, 55, 62, 63,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 54 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}\label{jutils_8c_a5421fa0fa95c875a59d54c022edb508b}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order2@{jpeg\_natural\_order2}}
+\index{jpeg\_natural\_order2@{jpeg\_natural\_order2}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order2}{jpeg\_natural\_order2}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order2\mbox{[}2 $\ast$2+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8,  9,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 112 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}\label{jutils_8c_adb2718503280e6a1ae3a1ba02ead6d78}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order3@{jpeg\_natural\_order3}}
+\index{jpeg\_natural\_order3@{jpeg\_natural\_order3}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order3}{jpeg\_natural\_order3}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order3\mbox{[}3 $\ast$3+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2, 10, 17,}
+\DoxyCodeLine{ 18,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 105 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_a111a0f136408080ed8825637f88f4de6}\label{jutils_8c_a111a0f136408080ed8825637f88f4de6}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order4@{jpeg\_natural\_order4}}
+\index{jpeg\_natural\_order4@{jpeg\_natural\_order4}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order4}{jpeg\_natural\_order4}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order4\mbox{[}4 $\ast$4+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2,  3, 10,}
+\DoxyCodeLine{ 17, 24, 25, 18, 11, 19, 26, 27,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 98 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}\label{jutils_8c_a5adbdc98a0058aaff6820cbb0a9161b2}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order5@{jpeg\_natural\_order5}}
+\index{jpeg\_natural\_order5@{jpeg\_natural\_order5}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order5}{jpeg\_natural\_order5}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order5\mbox{[}5 $\ast$5+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2,  3, 10,}
+\DoxyCodeLine{ 17, 24, 32, 25, 18, 11,  4, 12,}
+\DoxyCodeLine{ 19, 26, 33, 34, 27, 20, 28, 35,}
+\DoxyCodeLine{ 36,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 89 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_acaf9872a6cd88101644fa2de48149685}\label{jutils_8c_acaf9872a6cd88101644fa2de48149685}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order6@{jpeg\_natural\_order6}}
+\index{jpeg\_natural\_order6@{jpeg\_natural\_order6}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order6}{jpeg\_natural\_order6}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order6\mbox{[}6 $\ast$6+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2,  3, 10,}
+\DoxyCodeLine{ 17, 24, 32, 25, 18, 11,  4,  5,}
+\DoxyCodeLine{ 12, 19, 26, 33, 40, 41, 34, 27,}
+\DoxyCodeLine{ 20, 13, 21, 28, 35, 42, 43, 36,}
+\DoxyCodeLine{ 29, 37, 44, 45,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 79 of file jutils.\+c.
+
+\mbox{\Hypertarget{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}\label{jutils_8c_a82d22a6134c174b16ca39757aed2f4f4}} 
+\index{jutils.c@{jutils.c}!jpeg\_natural\_order7@{jpeg\_natural\_order7}}
+\index{jpeg\_natural\_order7@{jpeg\_natural\_order7}!jutils.c@{jutils.c}}
+\subsubsection{\texorpdfstring{jpeg\_natural\_order7}{jpeg\_natural\_order7}}
+{\footnotesize\ttfamily const int jpeg\+\_\+natural\+\_\+order7\mbox{[}7 $\ast$7+16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0,  1,  8, 16,  9,  2,  3, 10,}
+\DoxyCodeLine{ 17, 24, 32, 25, 18, 11,  4,  5,}
+\DoxyCodeLine{ 12, 19, 26, 33, 40, 48, 41, 34,}
+\DoxyCodeLine{ 27, 20, 13,  6, 14, 21, 28, 35,}
+\DoxyCodeLine{ 42, 49, 50, 43, 36, 29, 22, 30,}
+\DoxyCodeLine{ 37, 44, 51, 52, 45, 38, 46, 53,}
+\DoxyCodeLine{ 54,}
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63, }
+\DoxyCodeLine{ 63, 63, 63, 63, 63, 63, 63, 63}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 67 of file jutils.\+c.
+

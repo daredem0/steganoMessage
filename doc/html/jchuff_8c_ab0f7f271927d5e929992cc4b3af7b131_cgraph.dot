@@ -1,0 +1,26 @@
+digraph "finish_pass_huff"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node213 [label="finish_pass_huff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node213 -> Node214 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 [label="emit_eobrun",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#abc3f63e0a0443dabc0b9a520f8e50292",tooltip=" "];
+  Node214 -> Node215 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node215 [label="emit_ac_symbol",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a07823ab39ef8578973b1bd8e09384350",tooltip=" "];
+  Node215 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 [label="emit_bits_e",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a944ee3875180fbb90badf7c2be7f369d",tooltip=" "];
+  Node214 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 -> Node217 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="emit_buffered_bits",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#ab4ebe43b6d989c78ef8f216f31c03abf",tooltip=" "];
+  Node217 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node213 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="flush_bits_e",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#abdbb7e0ce2efb140d6616e2d75d81fa8",tooltip=" "];
+  Node218 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node213 -> Node219 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="flush_bits_s",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a9ebdfb0237e6c84aaa1f545d17fd7b9a",tooltip=" "];
+  Node219 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="emit_bits_s",height=0.2,width=0.4,color="black",URL="$jchuff_8c.html#a983ea6fc417f30e6f14df9c9401aa7d9",tooltip=" "];
+}

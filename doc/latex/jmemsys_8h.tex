@@ -1,0 +1,193 @@
+\hypertarget{jmemsys_8h}{}\section{Lib\+Jpeg/jmemsys.h File Reference}
+\label{jmemsys_8h}\index{LibJpeg/jmemsys.h@{LibJpeg/jmemsys.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}{M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+NK}}~1000000000L
+\item 
+\#define \mbox{\hyperlink{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}{T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}}~64	/$\ast$ max length of a temporary file\textquotesingle{}s name $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}} $\ast$ \mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}}
+\item 
+typedef struct \mbox{\hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}} \mbox{\hyperlink{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}{backing\+\_\+store\+\_\+info}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}{E\+X\+T\+E\+RN}} (void $\ast$) \mbox{\hyperlink{jmemnobs_8c_a730c29846e689116d824522dd4f3c429}{jpeg\+\_\+get\+\_\+small}} \mbox{\hyperlink{jpeglib_8h_a23b024b75224315b901cd9ade03b4cab}{J\+PP}}((\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo
+\item 
+\mbox{\hyperlink{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}{E\+X\+T\+E\+RN}} (void) \mbox{\hyperlink{jmemnobs_8c_a4f3f527a71c36ac0222d86d706de3dc5}{jpeg\+\_\+free\+\_\+small}} \mbox{\hyperlink{jpeglib_8h_a23b024b75224315b901cd9ade03b4cab}{J\+PP}}((\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo
+\item 
+\mbox{\hyperlink{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}{E\+X\+T\+E\+RN}} (void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$) \mbox{\hyperlink{jmemnobs_8c_a4df9a647504008ad16a930efbb0c5390}{jpeg\+\_\+get\+\_\+large}} \mbox{\hyperlink{jpeglib_8h_a23b024b75224315b901cd9ade03b4cab}{J\+PP}}((\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo
+\item 
+\mbox{\hyperlink{jmemsys_8h_a8283064f1787f992670efe23865be625}{E\+X\+T\+E\+RN}} (long) \mbox{\hyperlink{jmemnobs_8c_ada0a0bae122bf1311fa1f43fe2974d16}{jpeg\+\_\+mem\+\_\+available}} \mbox{\hyperlink{jpeglib_8h_a23b024b75224315b901cd9ade03b4cab}{J\+PP}}((\mbox{\hyperlink{jpeglib_8h_a1a177ab705cefea8f30ec31a48e62650}{j\+\_\+common\+\_\+ptr}} cinfo
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}{sizeofobject}}
+\item 
+void $\ast$ \mbox{\hyperlink{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}{object}}
+\item 
+long \mbox{\hyperlink{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}{min\+\_\+bytes\+\_\+needed}}
+\item 
+long long \mbox{\hyperlink{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}{max\+\_\+bytes\+\_\+needed}}
+\item 
+long long long \mbox{\hyperlink{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}{already\+\_\+allocated}}
+\item 
+\mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}} \mbox{\hyperlink{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}{info}}
+\item 
+\mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}} long \mbox{\hyperlink{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}{total\+\_\+bytes\+\_\+needed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}\label{jmemsys_8h_a7b31776a5d7d5be0ab44c4993a174434}} 
+\index{jmemsys.h@{jmemsys.h}!MAX\_ALLOC\_CHUNK@{MAX\_ALLOC\_CHUNK}}
+\index{MAX\_ALLOC\_CHUNK@{MAX\_ALLOC\_CHUNK}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{MAX\_ALLOC\_CHUNK}{MAX\_ALLOC\_CHUNK}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+A\+L\+L\+O\+C\+\_\+\+C\+H\+U\+NK~1000000000L}
+
+
+
+Definition at line 78 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}\label{jmemsys_8h_a83c496c242b727d7c2def22f79f75d1a}} 
+\index{jmemsys.h@{jmemsys.h}!TEMP\_NAME\_LENGTH@{TEMP\_NAME\_LENGTH}}
+\index{TEMP\_NAME\_LENGTH@{TEMP\_NAME\_LENGTH}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{TEMP\_NAME\_LENGTH}{TEMP\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \#define T\+E\+M\+P\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH~64	/$\ast$ max length of a temporary file\textquotesingle{}s name $\ast$/}
+
+
+
+Definition at line 116 of file jmemsys.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}\label{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}} 
+\index{jmemsys.h@{jmemsys.h}!backing\_store\_info@{backing\_store\_info}}
+\index{backing\_store\_info@{backing\_store\_info}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{backing\_store\_info}{backing\_store\_info}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}}  \mbox{\hyperlink{jmemsys_8h_a053e143ffd76dfe3b362c09f7019ea93}{backing\+\_\+store\+\_\+info}}}
+
+\mbox{\Hypertarget{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}\label{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}} 
+\index{jmemsys.h@{jmemsys.h}!backing\_store\_ptr@{backing\_store\_ptr}}
+\index{backing\_store\_ptr@{backing\_store\_ptr}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{backing\_store\_ptr}{backing\_store\_ptr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structbacking__store__struct}{backing\+\_\+store\+\_\+struct}}$\ast$ \mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}}}
+
+
+
+Definition at line 137 of file jmemsys.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}\label{jmemsys_8h_a5ce30fec80b14fafc7f90fa5acb79d96}} 
+\index{jmemsys.h@{jmemsys.h}!EXTERN@{EXTERN}}
+\index{EXTERN@{EXTERN}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{EXTERN()}{EXTERN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily E\+X\+T\+E\+RN (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}\label{jmemsys_8h_a0b8bf618fbcb2fd4f0ce2f463bb38fbd}} 
+\index{jmemsys.h@{jmemsys.h}!EXTERN@{EXTERN}}
+\index{EXTERN@{EXTERN}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{EXTERN()}{EXTERN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily E\+X\+T\+E\+RN (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}\label{jmemsys_8h_adb63338e2bdebe2829ac4f66de214491}} 
+\index{jmemsys.h@{jmemsys.h}!EXTERN@{EXTERN}}
+\index{EXTERN@{EXTERN}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{EXTERN()}{EXTERN()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily E\+X\+T\+E\+RN (\begin{DoxyParamCaption}\item[{void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jmemsys_8h_a8283064f1787f992670efe23865be625}\label{jmemsys_8h_a8283064f1787f992670efe23865be625}} 
+\index{jmemsys.h@{jmemsys.h}!EXTERN@{EXTERN}}
+\index{EXTERN@{EXTERN}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{EXTERN()}{EXTERN()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily E\+X\+T\+E\+RN (\begin{DoxyParamCaption}\item[{long}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}\label{jmemsys_8h_abf337f36c1da5074de7a5b3fa344212c}} 
+\index{jmemsys.h@{jmemsys.h}!already\_allocated@{already\_allocated}}
+\index{already\_allocated@{already\_allocated}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{already\_allocated}{already\_allocated}}
+{\footnotesize\ttfamily long long long already\+\_\+allocated}
+
+
+
+Definition at line 104 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}\label{jmemsys_8h_aae47c0f1d689d6cba5eb7077ca1299fa}} 
+\index{jmemsys.h@{jmemsys.h}!info@{info}}
+\index{info@{info}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}} info}
+
+
+
+Definition at line 181 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}\label{jmemsys_8h_a27c130987dc2e043e80499a6762399ab}} 
+\index{jmemsys.h@{jmemsys.h}!max\_bytes\_needed@{max\_bytes\_needed}}
+\index{max\_bytes\_needed@{max\_bytes\_needed}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{max\_bytes\_needed}{max\_bytes\_needed}}
+{\footnotesize\ttfamily long long max\+\_\+bytes\+\_\+needed}
+
+
+
+Definition at line 104 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}\label{jmemsys_8h_a6b948d2a79c75828279ae218c7628576}} 
+\index{jmemsys.h@{jmemsys.h}!min\_bytes\_needed@{min\_bytes\_needed}}
+\index{min\_bytes\_needed@{min\_bytes\_needed}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{min\_bytes\_needed}{min\_bytes\_needed}}
+{\footnotesize\ttfamily long min\+\_\+bytes\+\_\+needed}
+
+
+
+Definition at line 104 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}\label{jmemsys_8h_a77e1d3f325098324c3925e8faf6ae5cf}} 
+\index{jmemsys.h@{jmemsys.h}!object@{object}}
+\index{object@{object}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{object}{object}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} $\ast$ object}
+
+
+
+Definition at line 48 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}\label{jmemsys_8h_a473c898cf03a1563dc17fdafd08ddc30}} 
+\index{jmemsys.h@{jmemsys.h}!sizeofobject@{sizeofobject}}
+\index{sizeofobject@{sizeofobject}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{sizeofobject}{sizeofobject}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{jmorecfg_8h_aef060b3456fdcc093a7210a762d5f2ed}{F\+AR}} size\+\_\+t sizeofobject}
+
+
+
+Definition at line 47 of file jmemsys.\+h.
+
+\mbox{\Hypertarget{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}\label{jmemsys_8h_ae07241ef5ed2b62b6e6e927656433953}} 
+\index{jmemsys.h@{jmemsys.h}!total\_bytes\_needed@{total\_bytes\_needed}}
+\index{total\_bytes\_needed@{total\_bytes\_needed}!jmemsys.h@{jmemsys.h}}
+\subsubsection{\texorpdfstring{total\_bytes\_needed}{total\_bytes\_needed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jmemsys_8h_a2e08364903e928910fa9b65ea16c19f9}{backing\+\_\+store\+\_\+ptr}} long total\+\_\+bytes\+\_\+needed}
+
+
+
+Definition at line 181 of file jmemsys.\+h.
+

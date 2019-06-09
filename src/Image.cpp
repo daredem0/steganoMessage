@@ -21,7 +21,7 @@
 #elif defined (__APPLE__)
     #define MAC 1
     #define LINUX 0
-    //#define PATHMAC /*your job*/
+    //#define PATHMAC /*************TOBI HIER ***************/
 #endif
 
 Image::Image() {

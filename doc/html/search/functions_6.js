@@ -11,6 +11,7 @@ var searchData=
   ['getbitmapheader',['getBitmapHeader',['../classImage.html#a8c824ffac0c866a94752a2c1047932af',1,'Image']]],
   ['geterrhandle',['getErrHandle',['../classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef',1,'SteganoMessage']]],
   ['getheader',['getHeader',['../classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04',1,'BitmapHeader']]],
+  ['getheaderstruct',['getHeaderStruct',['../classBitmapHeader.html#a7ac69b70fce7b54c9cd3134a0e68ea58',1,'BitmapHeader']]],
   ['getheight',['getHeight',['../classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1',1,'BitmapHeader']]],
   ['getimage',['getImage',['../classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c',1,'SteganoMessage']]],
   ['getmessage',['getMessage',['../classMessage.html#a8d2e67a8732ecaeca309df6ac5dda156',1,'Message::getMessage()'],['../classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb',1,'SteganoMessage::getMessage()']]],

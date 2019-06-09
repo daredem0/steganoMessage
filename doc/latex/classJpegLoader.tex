@@ -1,0 +1,189 @@
+\hypertarget{classJpegLoader}{}\section{Jpeg\+Loader Class Reference}
+\label{classJpegLoader}\index{JpegLoader@{JpegLoader}}
+
+
+{\ttfamily \#include $<$Jpeg\+Loader.\+h$>$}
+
+
+
+Collaboration diagram for Jpeg\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classJpegLoader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structJpegLoader_1_1ErrorManager}{Error\+Manager}}
+\item 
+struct \mbox{\hyperlink{structJpegLoader_1_1ImageInfo}{Image\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJpegLoader_a9e61b80045d706af41e80fd28732b2b1}{Jpeg\+Loader}} ()
+\item 
+\mbox{\hyperlink{classJpegLoader_a7c0a277d94089e1750efa7516fbeb503}{$\sim$\+Jpeg\+Loader}} ()
+\item 
+const \mbox{\hyperlink{structJpegLoader_1_1ImageInfo}{Image\+Info}} $\ast$ \mbox{\hyperlink{classJpegLoader_a094609a59107dfbd1cca84fa2467c926}{Load}} (const char $\ast$sz\+File\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJpegLoader_a77791c29f6eda95770c36399be96822b}{Cleanup}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classJpegLoader_a689be6001605f12b808d82d49eaaba4e}{Error\+Exit}} (j\+\_\+common\+\_\+ptr cinfo)
+\item 
+static void \mbox{\hyperlink{classJpegLoader_ae23a077fd30b90b04edeb13f89b36a3e}{Output\+Message}} (j\+\_\+common\+\_\+ptr cinfo)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structJpegLoader_1_1ImageInfo}{Image\+Info}} $\ast$ \mbox{\hyperlink{classJpegLoader_ac5483c3fe2fb14ec56fb2bdda4ba1b50}{m\+\_\+p\+Image\+Info}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Jpeg\+Loader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJpegLoader_a9e61b80045d706af41e80fd28732b2b1}\label{classJpegLoader_a9e61b80045d706af41e80fd28732b2b1}} 
+\index{JpegLoader@{JpegLoader}!JpegLoader@{JpegLoader}}
+\index{JpegLoader@{JpegLoader}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{JpegLoader()}{JpegLoader()}}
+{\footnotesize\ttfamily Jpeg\+Loader\+::\+Jpeg\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Jpeg\+Loader.\+cpp.
+
+\mbox{\Hypertarget{classJpegLoader_a7c0a277d94089e1750efa7516fbeb503}\label{classJpegLoader_a7c0a277d94089e1750efa7516fbeb503}} 
+\index{JpegLoader@{JpegLoader}!````~JpegLoader@{$\sim$JpegLoader}}
+\index{````~JpegLoader@{$\sim$JpegLoader}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{$\sim$JpegLoader()}{~JpegLoader()}}
+{\footnotesize\ttfamily Jpeg\+Loader\+::$\sim$\+Jpeg\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Jpeg\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJpegLoader_a7c0a277d94089e1750efa7516fbeb503_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJpegLoader_a77791c29f6eda95770c36399be96822b}\label{classJpegLoader_a77791c29f6eda95770c36399be96822b}} 
+\index{JpegLoader@{JpegLoader}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily void Jpeg\+Loader\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 61 of file Jpeg\+Loader.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJpegLoader_a77791c29f6eda95770c36399be96822b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classJpegLoader_a689be6001605f12b808d82d49eaaba4e}\label{classJpegLoader_a689be6001605f12b808d82d49eaaba4e}} 
+\index{JpegLoader@{JpegLoader}!ErrorExit@{ErrorExit}}
+\index{ErrorExit@{ErrorExit}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{ErrorExit()}{ErrorExit()}}
+{\footnotesize\ttfamily void Jpeg\+Loader\+::\+Error\+Exit (\begin{DoxyParamCaption}\item[{j\+\_\+common\+\_\+ptr}]{cinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 71 of file Jpeg\+Loader.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJpegLoader_a689be6001605f12b808d82d49eaaba4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classJpegLoader_a094609a59107dfbd1cca84fa2467c926}\label{classJpegLoader_a094609a59107dfbd1cca84fa2467c926}} 
+\index{JpegLoader@{JpegLoader}!Load@{Load}}
+\index{Load@{Load}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structJpegLoader_1_1ImageInfo}{Jpeg\+Loader\+::\+Image\+Info}} $\ast$ Jpeg\+Loader\+::\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sz\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Jpeg\+Loader.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJpegLoader_a094609a59107dfbd1cca84fa2467c926_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classJpegLoader_a094609a59107dfbd1cca84fa2467c926_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classJpegLoader_ae23a077fd30b90b04edeb13f89b36a3e}\label{classJpegLoader_ae23a077fd30b90b04edeb13f89b36a3e}} 
+\index{JpegLoader@{JpegLoader}!OutputMessage@{OutputMessage}}
+\index{OutputMessage@{OutputMessage}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{OutputMessage()}{OutputMessage()}}
+{\footnotesize\ttfamily void Jpeg\+Loader\+::\+Output\+Message (\begin{DoxyParamCaption}\item[{j\+\_\+common\+\_\+ptr}]{cinfo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 81 of file Jpeg\+Loader.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classJpegLoader_ae23a077fd30b90b04edeb13f89b36a3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classJpegLoader_ac5483c3fe2fb14ec56fb2bdda4ba1b50}\label{classJpegLoader_ac5483c3fe2fb14ec56fb2bdda4ba1b50}} 
+\index{JpegLoader@{JpegLoader}!m\_pImageInfo@{m\_pImageInfo}}
+\index{m\_pImageInfo@{m\_pImageInfo}!JpegLoader@{JpegLoader}}
+\subsubsection{\texorpdfstring{m\_pImageInfo}{m\_pImageInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJpegLoader_1_1ImageInfo}{Image\+Info}}$\ast$ Jpeg\+Loader\+::m\+\_\+p\+Image\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file Jpeg\+Loader.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+misc/\+Libjpeg/\mbox{\hyperlink{JpegLoader_8h}{Jpeg\+Loader.\+h}}\item 
+misc/\+Libjpeg/\mbox{\hyperlink{JpegLoader_8cpp}{Jpeg\+Loader.\+cpp}}\end{DoxyCompactItemize}

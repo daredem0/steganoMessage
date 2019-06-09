@@ -1,0 +1,363 @@
+\hypertarget{jccolor_8c}{}\section{Lib\+Jpeg/jccolor.c File Reference}
+\label{jccolor_8c}\index{LibJpeg/jccolor.c@{LibJpeg/jccolor.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+Include dependency graph for jccolor.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmy__color__converter}{my\+\_\+color\+\_\+converter}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+TS}}~16	/$\ast$ speediest right-\/shift on some machines $\ast$/
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a6d068520c3e2956e085d142b3c86a951}{C\+B\+C\+R\+\_\+\+O\+F\+F\+S\+ET}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) \mbox{\hyperlink{jmorecfg_8h_ae719b006fc65f4dc86451b9d24eb56e5}{C\+E\+N\+T\+E\+R\+J\+S\+A\+M\+P\+LE}} $<$$<$ \mbox{\hyperlink{jdmerge_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+TS}})
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_ab912dc6f2915fe1226a30465776e2015}{O\+N\+E\+\_\+\+H\+A\+LF}}~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) 1 $<$$<$ (\mbox{\hyperlink{jdmerge_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+TS}}-\/1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a740431a9a1d25e39e670cd5f48454ce4}{F\+IX}}(x)~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) ((x) $\ast$ (1\+L$<$$<$\+S\+C\+A\+L\+E\+B\+I\+T\+S) + 0.\+5))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}{R\+\_\+\+Y\+\_\+\+O\+FF}}~0			/$\ast$ offset to R =$>$ Y section $\ast$/
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a646e8035b3ff387bc70de7e610d21da1}{G\+\_\+\+Y\+\_\+\+O\+FF}}~(1$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))	/$\ast$ offset to G =$>$ Y section $\ast$/
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_ad67993d1a8073b128fcc003df9808377}{B\+\_\+\+Y\+\_\+\+O\+FF}}~(2$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))	/$\ast$ etc. $\ast$/
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a434afb89a3c75c7a55d5d53cd03007aa}{R\+\_\+\+C\+B\+\_\+\+O\+FF}}~(3$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a4778bec91ebc1872f0608d59a1bb2e2a}{G\+\_\+\+C\+B\+\_\+\+O\+FF}}~(4$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a228b164e0da74f7600743e7f644155f5}{B\+\_\+\+C\+B\+\_\+\+O\+FF}}~(5$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a59935a68ff56641c3d0946d63f707cbf}{R\+\_\+\+C\+R\+\_\+\+O\+FF}}~\mbox{\hyperlink{jccolor_8c_a228b164e0da74f7600743e7f644155f5}{B\+\_\+\+C\+B\+\_\+\+O\+FF}}		/$\ast$ B=$>$Cb, R=$>$Cr are the same $\ast$/
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a4a5474e40e9b957cbfa28bb49b69c873}{G\+\_\+\+C\+R\+\_\+\+O\+FF}}~(6$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_ad619eb70a29691643bba7cb947522f83}{B\+\_\+\+C\+R\+\_\+\+O\+FF}}~(7$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\item 
+\#define \mbox{\hyperlink{jccolor_8c_a032503e76d6f69bc67e99e909c8125da}{T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}}~(8$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmy__color__converter}{my\+\_\+color\+\_\+converter}} $\ast$ \mbox{\hyperlink{jccolor_8c_ae1a52cc3b15b415bcb92925b6658b1bc}{my\+\_\+cconvert\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jccolor_8c_a00e6170e937fe4dc7d743a699bbcd04e}{rgb\+\_\+ycc\+\_\+start}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jccolor_8c_af5c5cd65e5b5f7c8e10c00d82ed47af3}{rgb\+\_\+ycc\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_aacb9fa25753b50726a6b7b085d366260}{rgb\+\_\+gray\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_a07e9f4291a8c8cd2aa78fdd1e04f0599}{cmyk\+\_\+ycck\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_a88e6c16c818775ff1d536f9632c6adbf}{rgb\+\_\+rgb1\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_a05363c93af8fe7bbd461ceadff2e662c}{grayscale\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_a8c3af65a752be5ad26213a5e665fd480}{rgb\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_a3bc254942cca696f1604636abe897d59}{null\+\_\+convert}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} input\+\_\+buf, \mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jpegint_8h_a58518ef80cb2e9d15ba1837bef666ec6}{output\+\_\+row}}, int \mbox{\hyperlink{jpegint_8h_ac5f8b57092da0f421713ba171c4c9f87}{num\+\_\+rows}})
+\item 
+\mbox{\hyperlink{jccolor_8c_ab019c7b1b84016eba778b6882bb3cf40}{null\+\_\+method}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\item 
+\mbox{\hyperlink{jccolor_8c_a3c3f43d8034fa9e59f2a0dfd1912b334}{jinit\+\_\+color\+\_\+converter}} (\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}} cinfo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jccolor_8c_a228b164e0da74f7600743e7f644155f5}\label{jccolor_8c_a228b164e0da74f7600743e7f644155f5}} 
+\index{jccolor.c@{jccolor.c}!B\_CB\_OFF@{B\_CB\_OFF}}
+\index{B\_CB\_OFF@{B\_CB\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{B\_CB\_OFF}{B\_CB\_OFF}}
+{\footnotesize\ttfamily \#define B\+\_\+\+C\+B\+\_\+\+O\+FF~(5$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 75 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_ad619eb70a29691643bba7cb947522f83}\label{jccolor_8c_ad619eb70a29691643bba7cb947522f83}} 
+\index{jccolor.c@{jccolor.c}!B\_CR\_OFF@{B\_CR\_OFF}}
+\index{B\_CR\_OFF@{B\_CR\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{B\_CR\_OFF}{B\_CR\_OFF}}
+{\footnotesize\ttfamily \#define B\+\_\+\+C\+R\+\_\+\+O\+FF~(7$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 78 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_ad67993d1a8073b128fcc003df9808377}\label{jccolor_8c_ad67993d1a8073b128fcc003df9808377}} 
+\index{jccolor.c@{jccolor.c}!B\_Y\_OFF@{B\_Y\_OFF}}
+\index{B\_Y\_OFF@{B\_Y\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{B\_Y\_OFF}{B\_Y\_OFF}}
+{\footnotesize\ttfamily \#define B\+\_\+\+Y\+\_\+\+O\+FF~(2$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))	/$\ast$ etc. $\ast$/}
+
+
+
+Definition at line 72 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a6d068520c3e2956e085d142b3c86a951}\label{jccolor_8c_a6d068520c3e2956e085d142b3c86a951}} 
+\index{jccolor.c@{jccolor.c}!CBCR\_OFFSET@{CBCR\_OFFSET}}
+\index{CBCR\_OFFSET@{CBCR\_OFFSET}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{CBCR\_OFFSET}{CBCR\_OFFSET}}
+{\footnotesize\ttfamily \#define C\+B\+C\+R\+\_\+\+O\+F\+F\+S\+ET~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) \mbox{\hyperlink{jmorecfg_8h_ae719b006fc65f4dc86451b9d24eb56e5}{C\+E\+N\+T\+E\+R\+J\+S\+A\+M\+P\+LE}} $<$$<$ \mbox{\hyperlink{jdmerge_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+TS}})}
+
+
+
+Definition at line 60 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a740431a9a1d25e39e670cd5f48454ce4}\label{jccolor_8c_a740431a9a1d25e39e670cd5f48454ce4}} 
+\index{jccolor.c@{jccolor.c}!FIX@{FIX}}
+\index{FIX@{FIX}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{FIX}{FIX}}
+{\footnotesize\ttfamily \#define F\+IX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) ((x) $\ast$ (1\+L$<$$<$\+S\+C\+A\+L\+E\+B\+I\+T\+S) + 0.\+5))}
+
+
+
+Definition at line 62 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a4778bec91ebc1872f0608d59a1bb2e2a}\label{jccolor_8c_a4778bec91ebc1872f0608d59a1bb2e2a}} 
+\index{jccolor.c@{jccolor.c}!G\_CB\_OFF@{G\_CB\_OFF}}
+\index{G\_CB\_OFF@{G\_CB\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{G\_CB\_OFF}{G\_CB\_OFF}}
+{\footnotesize\ttfamily \#define G\+\_\+\+C\+B\+\_\+\+O\+FF~(4$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 74 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a4a5474e40e9b957cbfa28bb49b69c873}\label{jccolor_8c_a4a5474e40e9b957cbfa28bb49b69c873}} 
+\index{jccolor.c@{jccolor.c}!G\_CR\_OFF@{G\_CR\_OFF}}
+\index{G\_CR\_OFF@{G\_CR\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{G\_CR\_OFF}{G\_CR\_OFF}}
+{\footnotesize\ttfamily \#define G\+\_\+\+C\+R\+\_\+\+O\+FF~(6$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 77 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a646e8035b3ff387bc70de7e610d21da1}\label{jccolor_8c_a646e8035b3ff387bc70de7e610d21da1}} 
+\index{jccolor.c@{jccolor.c}!G\_Y\_OFF@{G\_Y\_OFF}}
+\index{G\_Y\_OFF@{G\_Y\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{G\_Y\_OFF}{G\_Y\_OFF}}
+{\footnotesize\ttfamily \#define G\+\_\+\+Y\+\_\+\+O\+FF~(1$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))	/$\ast$ offset to G =$>$ Y section $\ast$/}
+
+
+
+Definition at line 71 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jccolor_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jccolor.c@{jccolor.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 12 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_ab912dc6f2915fe1226a30465776e2015}\label{jccolor_8c_ab912dc6f2915fe1226a30465776e2015}} 
+\index{jccolor.c@{jccolor.c}!ONE\_HALF@{ONE\_HALF}}
+\index{ONE\_HALF@{ONE\_HALF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{ONE\_HALF}{ONE\_HALF}}
+{\footnotesize\ttfamily \#define O\+N\+E\+\_\+\+H\+A\+LF~((\mbox{\hyperlink{jmorecfg_8h_a0cb58e7e6f0bad369840a52e54a56ae0}{I\+N\+T32}}) 1 $<$$<$ (\mbox{\hyperlink{jdmerge_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}{S\+C\+A\+L\+E\+B\+I\+TS}}-\/1))}
+
+
+
+Definition at line 61 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a434afb89a3c75c7a55d5d53cd03007aa}\label{jccolor_8c_a434afb89a3c75c7a55d5d53cd03007aa}} 
+\index{jccolor.c@{jccolor.c}!R\_CB\_OFF@{R\_CB\_OFF}}
+\index{R\_CB\_OFF@{R\_CB\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{R\_CB\_OFF}{R\_CB\_OFF}}
+{\footnotesize\ttfamily \#define R\+\_\+\+C\+B\+\_\+\+O\+FF~(3$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 73 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a59935a68ff56641c3d0946d63f707cbf}\label{jccolor_8c_a59935a68ff56641c3d0946d63f707cbf}} 
+\index{jccolor.c@{jccolor.c}!R\_CR\_OFF@{R\_CR\_OFF}}
+\index{R\_CR\_OFF@{R\_CR\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{R\_CR\_OFF}{R\_CR\_OFF}}
+{\footnotesize\ttfamily \#define R\+\_\+\+C\+R\+\_\+\+O\+FF~\mbox{\hyperlink{jccolor_8c_a228b164e0da74f7600743e7f644155f5}{B\+\_\+\+C\+B\+\_\+\+O\+FF}}		/$\ast$ B=$>$Cb, R=$>$Cr are the same $\ast$/}
+
+
+
+Definition at line 76 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}\label{jccolor_8c_ab64f3c53a2f6aa67e2bd8cca753b2b23}} 
+\index{jccolor.c@{jccolor.c}!R\_Y\_OFF@{R\_Y\_OFF}}
+\index{R\_Y\_OFF@{R\_Y\_OFF}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{R\_Y\_OFF}{R\_Y\_OFF}}
+{\footnotesize\ttfamily \#define R\+\_\+\+Y\+\_\+\+O\+FF~0			/$\ast$ offset to R =$>$ Y section $\ast$/}
+
+
+
+Definition at line 70 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}\label{jccolor_8c_a61bda43ef3f3e965ecbb37f7cb34edb4}} 
+\index{jccolor.c@{jccolor.c}!SCALEBITS@{SCALEBITS}}
+\index{SCALEBITS@{SCALEBITS}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{SCALEBITS}{SCALEBITS}}
+{\footnotesize\ttfamily \#define S\+C\+A\+L\+E\+B\+I\+TS~16	/$\ast$ speediest right-\/shift on some machines $\ast$/}
+
+
+
+Definition at line 59 of file jccolor.\+c.
+
+\mbox{\Hypertarget{jccolor_8c_a032503e76d6f69bc67e99e909c8125da}\label{jccolor_8c_a032503e76d6f69bc67e99e909c8125da}} 
+\index{jccolor.c@{jccolor.c}!TABLE\_SIZE@{TABLE\_SIZE}}
+\index{TABLE\_SIZE@{TABLE\_SIZE}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{TABLE\_SIZE}{TABLE\_SIZE}}
+{\footnotesize\ttfamily \#define T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE~(8$\ast$(\mbox{\hyperlink{jmorecfg_8h_a0fb470420dd6b2a794c589071c8705c8}{M\+A\+X\+J\+S\+A\+M\+P\+LE}}+1))}
+
+
+
+Definition at line 79 of file jccolor.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{jccolor_8c_ae1a52cc3b15b415bcb92925b6658b1bc}\label{jccolor_8c_ae1a52cc3b15b415bcb92925b6658b1bc}} 
+\index{jccolor.c@{jccolor.c}!my\_cconvert\_ptr@{my\_cconvert\_ptr}}
+\index{my\_cconvert\_ptr@{my\_cconvert\_ptr}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{my\_cconvert\_ptr}{my\_cconvert\_ptr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structmy__color__converter}{my\+\_\+color\+\_\+converter}}$\ast$ \mbox{\hyperlink{jccolor_8c_ae1a52cc3b15b415bcb92925b6658b1bc}{my\+\_\+cconvert\+\_\+ptr}}}
+
+
+
+Definition at line 26 of file jccolor.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jccolor_8c_a07e9f4291a8c8cd2aa78fdd1e04f0599}\label{jccolor_8c_a07e9f4291a8c8cd2aa78fdd1e04f0599}} 
+\index{jccolor.c@{jccolor.c}!cmyk\_ycck\_convert@{cmyk\_ycck\_convert}}
+\index{cmyk\_ycck\_convert@{cmyk\_ycck\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{cmyk\_ycck\_convert()}{cmyk\_ycck\_convert()}}
+{\footnotesize\ttfamily cmyk\+\_\+ycck\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 225 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{jccolor_8c_a05363c93af8fe7bbd461ceadff2e662c}\label{jccolor_8c_a05363c93af8fe7bbd461ceadff2e662c}} 
+\index{jccolor.c@{jccolor.c}!grayscale\_convert@{grayscale\_convert}}
+\index{grayscale\_convert@{grayscale\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{grayscale\_convert()}{grayscale\_convert()}}
+{\footnotesize\ttfamily grayscale\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 319 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{jccolor_8c_a3c3f43d8034fa9e59f2a0dfd1912b334}\label{jccolor_8c_a3c3f43d8034fa9e59f2a0dfd1912b334}} 
+\index{jccolor.c@{jccolor.c}!jinit\_color\_converter@{jinit\_color\_converter}}
+\index{jinit\_color\_converter@{jinit\_color\_converter}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{jinit\_color\_converter()}{jinit\_color\_converter()}}
+{\footnotesize\ttfamily jinit\+\_\+color\+\_\+converter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file jccolor.\+c.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{jccolor_8c_a3bc254942cca696f1604636abe897d59}\label{jccolor_8c_a3bc254942cca696f1604636abe897d59}} 
+\index{jccolor.c@{jccolor.c}!null\_convert@{null\_convert}}
+\index{null\_convert@{null\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{null\_convert()}{null\_convert()}}
+{\footnotesize\ttfamily null\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 380 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{jccolor_8c_ab019c7b1b84016eba778b6882bb3cf40}\label{jccolor_8c_ab019c7b1b84016eba778b6882bb3cf40}} 
+\index{jccolor.c@{jccolor.c}!null\_method@{null\_method}}
+\index{null\_method@{null\_method}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{null\_method()}{null\_method()}}
+{\footnotesize\ttfamily null\+\_\+method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 412 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{jccolor_8c_a8c3af65a752be5ad26213a5e665fd480}\label{jccolor_8c_a8c3af65a752be5ad26213a5e665fd480}} 
+\index{jccolor.c@{jccolor.c}!rgb\_convert@{rgb\_convert}}
+\index{rgb\_convert@{rgb\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{rgb\_convert()}{rgb\_convert()}}
+{\footnotesize\ttfamily rgb\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 347 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{jccolor_8c_aacb9fa25753b50726a6b7b085d366260}\label{jccolor_8c_aacb9fa25753b50726a6b7b085d366260}} 
+\index{jccolor.c@{jccolor.c}!rgb\_gray\_convert@{rgb\_gray\_convert}}
+\index{rgb\_gray\_convert@{rgb\_gray\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{rgb\_gray\_convert()}{rgb\_gray\_convert()}}
+{\footnotesize\ttfamily rgb\+\_\+gray\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 187 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{jccolor_8c_a88e6c16c818775ff1d536f9632c6adbf}\label{jccolor_8c_a88e6c16c818775ff1d536f9632c6adbf}} 
+\index{jccolor.c@{jccolor.c}!rgb\_rgb1\_convert@{rgb\_rgb1\_convert}}
+\index{rgb\_rgb1\_convert@{rgb\_rgb1\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{rgb\_rgb1\_convert()}{rgb\_rgb1\_convert()}}
+{\footnotesize\ttfamily rgb\+\_\+rgb1\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 280 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{jccolor_8c_af5c5cd65e5b5f7c8e10c00d82ed47af3}\label{jccolor_8c_af5c5cd65e5b5f7c8e10c00d82ed47af3}} 
+\index{jccolor.c@{jccolor.c}!rgb\_ycc\_convert@{rgb\_ycc\_convert}}
+\index{rgb\_ycc\_convert@{rgb\_ycc\_convert}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{rgb\_ycc\_convert()}{rgb\_ycc\_convert()}}
+{\footnotesize\ttfamily rgb\+\_\+ycc\+\_\+convert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{input\+\_\+buf,  }\item[{\mbox{\hyperlink{jpeglib_8h_a4bf858e4d42202287e786bdec2f3b62b}{J\+S\+A\+M\+P\+I\+M\+A\+GE}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+row,  }\item[{int}]{num\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+Definition at line 131 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{jccolor_8c_a00e6170e937fe4dc7d743a699bbcd04e}\label{jccolor_8c_a00e6170e937fe4dc7d743a699bbcd04e}} 
+\index{jccolor.c@{jccolor.c}!rgb\_ycc\_start@{rgb\_ycc\_start}}
+\index{rgb\_ycc\_start@{rgb\_ycc\_start}!jccolor.c@{jccolor.c}}
+\subsubsection{\texorpdfstring{rgb\_ycc\_start()}{rgb\_ycc\_start()}}
+{\footnotesize\ttfamily rgb\+\_\+ycc\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_add2a072c54e3a51550f4975f7ddb91e7}{j\+\_\+compress\+\_\+ptr}}}]{cinfo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file jccolor.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 11

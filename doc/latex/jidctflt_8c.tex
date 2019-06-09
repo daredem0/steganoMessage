@@ -1,0 +1,57 @@
+\hypertarget{jidctflt_8c}{}\section{Lib\+Jpeg/jidctflt.c File Reference}
+\label{jidctflt_8c}\index{LibJpeg/jidctflt.c@{LibJpeg/jidctflt.c}}
+{\ttfamily \#include \char`\"{}jinclude.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jpeglib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jdct.\+h\char`\"{}}\newline
+Include dependency graph for jidctflt.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jidctflt_8c_ad5c3cdfae3019b8223973041a2a1304b}{J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}}
+\item 
+\#define \mbox{\hyperlink{jidctflt_8c_a37697e1838dc75e1e69368bff4c60cea}{D\+E\+Q\+U\+A\+N\+T\+I\+ZE}}(coef,  quantval)~(((F\+A\+S\+T\+\_\+\+F\+L\+O\+AT) (coef)) $\ast$ (quantval))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jidctflt_8c_a38adfd755f3c9aa80b84fe0f62306229}{jpeg\+\_\+idct\+\_\+float}} (\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}} cinfo, \mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$\mbox{\hyperlink{jdct_8h_ab5cf547b55e97e8dd207d5dad37cb9fc}{compptr}}, \mbox{\hyperlink{jpeglib_8h_a7cffaee4be349c90c1d541f480aa62e3}{J\+C\+O\+E\+F\+P\+TR}} \mbox{\hyperlink{jdct_8h_a17b8d6b81a334819558a865f13b9d062}{coef\+\_\+block}}, \mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}} \mbox{\hyperlink{jdct_8h_ad7e4660a191b1a791748dd44d5a7a0ec}{output\+\_\+buf}}, \mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}} \mbox{\hyperlink{jdct_8h_a55430fe3b344cb676b3da8f1f46c0279}{output\+\_\+col}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jidctflt_8c_a37697e1838dc75e1e69368bff4c60cea}\label{jidctflt_8c_a37697e1838dc75e1e69368bff4c60cea}} 
+\index{jidctflt.c@{jidctflt.c}!DEQUANTIZE@{DEQUANTIZE}}
+\index{DEQUANTIZE@{DEQUANTIZE}!jidctflt.c@{jidctflt.c}}
+\subsubsection{\texorpdfstring{DEQUANTIZE}{DEQUANTIZE}}
+{\footnotesize\ttfamily \#define D\+E\+Q\+U\+A\+N\+T\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{coef,  }\item[{}]{quantval }\end{DoxyParamCaption})~(((F\+A\+S\+T\+\_\+\+F\+L\+O\+AT) (coef)) $\ast$ (quantval))}
+
+
+
+Definition at line 61 of file jidctflt.\+c.
+
+\mbox{\Hypertarget{jidctflt_8c_ad5c3cdfae3019b8223973041a2a1304b}\label{jidctflt_8c_ad5c3cdfae3019b8223973041a2a1304b}} 
+\index{jidctflt.c@{jidctflt.c}!JPEG\_INTERNALS@{JPEG\_INTERNALS}}
+\index{JPEG\_INTERNALS@{JPEG\_INTERNALS}!jidctflt.c@{jidctflt.c}}
+\subsubsection{\texorpdfstring{JPEG\_INTERNALS}{JPEG\_INTERNALS}}
+{\footnotesize\ttfamily \#define J\+P\+E\+G\+\_\+\+I\+N\+T\+E\+R\+N\+A\+LS}
+
+
+
+Definition at line 40 of file jidctflt.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{jidctflt_8c_a38adfd755f3c9aa80b84fe0f62306229}\label{jidctflt_8c_a38adfd755f3c9aa80b84fe0f62306229}} 
+\index{jidctflt.c@{jidctflt.c}!jpeg\_idct\_float@{jpeg\_idct\_float}}
+\index{jpeg\_idct\_float@{jpeg\_idct\_float}!jidctflt.c@{jidctflt.c}}
+\subsubsection{\texorpdfstring{jpeg\_idct\_float()}{jpeg\_idct\_float()}}
+{\footnotesize\ttfamily jpeg\+\_\+idct\+\_\+float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeglib_8h_a00c7d78af44bd26a901c791ccfc1e178}{j\+\_\+decompress\+\_\+ptr}}}]{cinfo,  }\item[{\mbox{\hyperlink{structjpeg__component__info}{jpeg\+\_\+component\+\_\+info}} $\ast$}]{compptr,  }\item[{\mbox{\hyperlink{jpeglib_8h_a7cffaee4be349c90c1d541f480aa62e3}{J\+C\+O\+E\+F\+P\+TR}}}]{coef\+\_\+block,  }\item[{\mbox{\hyperlink{jpeglib_8h_ac9d5d1b829ed51769db69a37271a7e91}{J\+S\+A\+M\+P\+A\+R\+R\+AY}}}]{output\+\_\+buf,  }\item[{\mbox{\hyperlink{jmorecfg_8h_a04ed4674f6f1d0d50ec241531e38274f}{J\+D\+I\+M\+E\+N\+S\+I\+ON}}}]{output\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file jidctflt.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 1

@@ -1,0 +1,13 @@
+digraph "jpeg_calc_output_dimensions"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node153 [label="jpeg_calc_output_dimensions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node153 -> Node154 [color="midnightblue",fontsize="10",style="solid"];
+  Node154 [label="jdiv_round_up",height=0.2,width=0.4,color="black",URL="$jutils_8c.html#a0c5aa3b56cb24dd9ed819c8252c61b80",tooltip=" "];
+  Node153 -> Node155 [color="midnightblue",fontsize="10",style="solid"];
+  Node155 [label="use_merged_upsample",height=0.2,width=0.4,color="black",URL="$jdmaster_8c.html#a9cfe492206e2b676273882eef47e2f32",tooltip=" "];
+}
