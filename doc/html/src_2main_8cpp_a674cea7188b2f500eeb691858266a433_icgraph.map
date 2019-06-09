@@ -1,4 +1,0 @@
-<map id="terminate" name="terminate">
-<area shape="rect" id="node1" title="Terminates the program without an error." alt="" coords="108,5,195,32"/>
-<area shape="rect" id="node2" href="$src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
-</map>

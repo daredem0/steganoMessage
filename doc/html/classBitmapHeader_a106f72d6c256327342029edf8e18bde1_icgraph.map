@@ -7,6 +7,6 @@
 <area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
 <area shape="rect" id="node6" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
 <area shape="rect" id="node8" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,107,852,133"/>
-<area shape="rect" id="node9" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,107,327,133"/>
+<area shape="rect" id="node9" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Sets the mode for the after reading filter." alt="" coords="117,107,327,133"/>
 <area shape="rect" id="node10" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,157,607,184"/>
 </map>

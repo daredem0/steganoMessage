@@ -1,22 +1,24 @@
 <map id="SteganoMessage::modeHandler" name="SteganoMessage::modeHandler">
-<area shape="rect" id="node1" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="5,157,233,184"/>
+<area shape="rect" id="node1" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="5,208,233,235"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#a7dc660e6d2c8f162636f789cfedde67e" title="Getter for stored mode." alt="" coords="298,5,494,32"/>
 <area shape="rect" id="node3" href="$classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65" title="Builds new Message type object." alt="" coords="281,56,511,83"/>
 <area shape="rect" id="node4" href="$classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb" title="Getter for pointer to message object." alt="" coords="287,107,505,133"/>
 <area shape="rect" id="node5" href="$classMessage.html#a8d2e67a8732ecaeca309df6ac5dda156" title="getter for std::string mess" alt="" coords="313,157,479,184"/>
 <area shape="rect" id="node6" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="295,208,497,235"/>
-<area shape="rect" id="node7" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="308,259,484,285"/>
-<area shape="rect" id="node16" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="329,461,463,488"/>
-<area shape="rect" id="node8" href="$classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="577,411,742,437"/>
-<area shape="rect" id="node9" href="$classImage.html#a83d7183bfcd632649c36504d9ab07e36" title="Checks if a file already exists." alt="" coords="604,208,715,235"/>
-<area shape="rect" id="node10" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="808,150,981,191"/>
-<area shape="rect" id="node11" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="808,259,981,285"/>
-<area shape="rect" id="node12" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="563,157,755,184"/>
-<area shape="rect" id="node13" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="564,360,755,387"/>
-<area shape="rect" id="node14" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="573,56,746,83"/>
-<area shape="rect" id="node15" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="559,309,760,336"/>
-<area shape="rect" id="node17" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="565,613,753,640"/>
-<area shape="rect" id="node18" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="568,512,751,539"/>
-<area shape="rect" id="node19" href="$classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="589,664,729,691"/>
-<area shape="rect" id="node20" href="$classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="827,664,962,691"/>
+<area shape="rect" id="node7" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title="Getter for bitmapArray." alt="" coords="309,259,483,285"/>
+<area shape="rect" id="node8" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="320,360,472,387"/>
+<area shape="rect" id="node10" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="308,309,484,336"/>
+<area shape="rect" id="node18" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="329,512,463,539"/>
+<area shape="rect" id="node9" href="$classErrorHandler.html#adefe2e5f3401006300884dd85a7c88ce" title="Prints param to stdout or logfile." alt="" coords="577,360,742,387"/>
+<area shape="rect" id="node11" href="$classImage.html#a83d7183bfcd632649c36504d9ab07e36" title="Checks if a file already exists." alt="" coords="604,107,715,133"/>
+<area shape="rect" id="node12" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="808,201,981,242"/>
+<area shape="rect" id="node13" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="808,309,981,336"/>
+<area shape="rect" id="node14" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="563,208,755,235"/>
+<area shape="rect" id="node15" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="564,461,755,488"/>
+<area shape="rect" id="node16" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="573,259,746,285"/>
+<area shape="rect" id="node17" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="559,411,760,437"/>
+<area shape="rect" id="node19" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="565,563,753,589"/>
+<area shape="rect" id="node20" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="568,664,751,691"/>
+<area shape="rect" id="node21" href="$classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="589,715,729,741"/>
+<area shape="rect" id="node22" href="$classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="827,715,962,741"/>
 </map>

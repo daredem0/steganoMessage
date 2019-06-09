@@ -1,12 +1,14 @@
 <map id="ErrorHandler::printLog" name="ErrorHandler::printLog">
-<area shape="rect" id="node1" title="Prints param to stdout or logfile." alt="" coords="749,150,915,177"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,24,200,50"/>
-<area shape="rect" id="node3" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,49,450,76"/>
-<area shape="rect" id="node4" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="542,100,683,126"/>
-<area shape="rect" id="node5" href="$classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="524,150,701,177"/>
-<area shape="rect" id="node6" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="525,201,701,228"/>
-<area shape="rect" id="node9" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="545,252,680,278"/>
-<area shape="rect" id="node10" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,302,381,329"/>
-<area shape="rect" id="node7" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,252,476,278"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,277,130,304"/>
+<area shape="rect" id="node1" title="Prints param to stdout or logfile." alt="" coords="823,221,988,248"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,44,200,71"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,69,450,96"/>
+<area shape="rect" id="node4" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="579,120,720,147"/>
+<area shape="rect" id="node5" href="$classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="561,171,738,197"/>
+<area shape="rect" id="node6" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="573,221,725,248"/>
+<area shape="rect" id="node9" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="561,272,737,299"/>
+<area shape="rect" id="node10" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="582,323,717,349"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,360,381,387"/>
+<area shape="rect" id="node12" href="$classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="524,424,775,451"/>
+<area shape="rect" id="node7" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,284,476,311"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,321,130,348"/>
 </map>

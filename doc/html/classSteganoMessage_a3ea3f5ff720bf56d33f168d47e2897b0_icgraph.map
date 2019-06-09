@@ -1,4 +1,4 @@
 <map id="SteganoMessage::printValues" name="SteganoMessage::printValues">
-<area shape="rect" id="node1" title="Prints values stored for mode and path." alt="" coords="175,5,387,32"/>
+<area shape="rect" id="node1" title="Applies the filter stored in stegFilter." alt="" coords="175,5,387,32"/>
 <area shape="rect" id="node2" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,5,127,32"/>
 </map>

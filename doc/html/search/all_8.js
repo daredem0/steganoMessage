@@ -6,7 +6,6 @@ var searchData=
   ['image_2eh',['Image.h',['../Image_8h.html',1,'']]],
   ['image_2eo_2ed',['Image.o.d',['../Image_8o_8d.html',1,'']]],
   ['image_5fmacos_2ecpp',['Image_MacOS.cpp',['../Image__MacOS_8cpp.html',1,'']]],
-  ['imageinfo',['ImageInfo',['../structJpegLoader_1_1ImageInfo.html',1,'JpegLoader']]],
   ['img',['img',['../classSteganoMessage.html#acd7dba217d5df515d93ddf814734ecf4',1,'SteganoMessage']]],
   ['infuse',['infuse',['../classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a',1,'BitmapArray']]],
   ['initialize',['initialize',['../classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc',1,'SteganoMessage']]],

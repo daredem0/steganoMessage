@@ -24,5 +24,5 @@ var searchData=
   ['getsizeimage',['getSizeImage',['../classBitmapHeader.html#aa55f157d6852ce35add8c5db54ccadae',1,'BitmapHeader']]],
   ['getwidth',['getWidth',['../classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09',1,'BitmapHeader']]],
   ['gif',['GIF',['../constants_8h.html#a4e12acb36be046b6c760732da9f208f4',1,'constants.h']]],
-  ['grey',['grey',['../constants_8h.html#adccf6e8a392b0d35f185df12521c474bab04a7e12b0e8c41f7cbb6fcb5f6556c6',1,'grey():&#160;constants.h'],['../constants_8h.html#af73d5a526d203eb697a29a7665599254',1,'GREY():&#160;constants.h']]]
+  ['grey',['GREY',['../constants_8h.html#af73d5a526d203eb697a29a7665599254',1,'GREY():&#160;constants.h'],['../constants_8h.html#adccf6e8a392b0d35f185df12521c474bab04a7e12b0e8c41f7cbb6fcb5f6556c6',1,'grey():&#160;constants.h']]]
 ];

@@ -1,5 +1,5 @@
 <map id="SteganoMessage::printValues" name="SteganoMessage::printValues">
-<area shape="rect" id="node1" title="Prints values stored for mode and path." alt="" coords="5,31,217,57"/>
+<area shape="rect" id="node1" title="Applies the filter stored in stegFilter." alt="" coords="5,31,217,57"/>
 <area shape="rect" id="node2" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="291,5,413,32"/>
 <area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="265,56,439,83"/>
 </map>

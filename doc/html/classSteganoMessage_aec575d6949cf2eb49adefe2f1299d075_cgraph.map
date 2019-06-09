@@ -1,7 +1,7 @@
 <map id="SteganoMessage::applyFilter" name="SteganoMessage::applyFilter">
-<area shape="rect" id="node1" title="Applies the filter stored in stegFilter." alt="" coords="5,436,215,463"/>
+<area shape="rect" id="node1" title="Sets the mode for the after reading filter." alt="" coords="5,436,215,463"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="1101,157,1304,184"/>
-<area shape="rect" id="node3" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title=" " alt="" coords="293,233,468,260"/>
+<area shape="rect" id="node3" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title="Getter for bitmapArray." alt="" coords="293,233,468,260"/>
 <area shape="rect" id="node4" href="$classBitmapArray.html#ab914d6282460b386b2b5f936190487a2" title="Returns a pointer to the 2D std::vector containing image information." alt="" coords="271,284,490,311"/>
 <area shape="rect" id="node5" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="269,81,492,108"/>
 <area shape="rect" id="node6" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="556,81,753,108"/>

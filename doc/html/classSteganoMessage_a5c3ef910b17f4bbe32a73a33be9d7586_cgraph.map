@@ -1,5 +1,5 @@
 <map id="SteganoMessage::setFilterMode" name="SteganoMessage::setFilterMode">
-<area shape="rect" id="node1" title="Sets the mode for the after reading filter." alt="" coords="5,31,233,57"/>
+<area shape="rect" id="node1" title="Prints values stored for mode and path." alt="" coords="5,31,233,57"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="281,5,484,32"/>
 <area shape="rect" id="node3" href="$classImage.html#ac81078a3d6c364aada9afc3c8a668ef8" title="Sets flags for while reading/writing filters." alt="" coords="321,56,445,83"/>
 </map>

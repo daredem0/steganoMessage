@@ -1,12 +1,13 @@
 <map id="Image" name="Image">
-<area shape="rect" id="node1" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="345,939,512,1265"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="229,586,383,839"/>
-<area shape="rect" id="node3" title=" " alt="" coords="175,197,322,289"/>
-<area shape="rect" id="node4" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,151,340"/>
-<area shape="rect" id="node8" href="$classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="550,549,702,876"/>
-<area shape="rect" id="node5" title=" " alt="" coords="9,5,147,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="406,204,481,281"/>
-<area shape="rect" id="node7" title=" " alt="" coords="710,204,769,281"/>
-<area shape="rect" id="node9" title=" " alt="" coords="793,204,843,281"/>
-<area shape="rect" id="node10" title=" " alt="" coords="942,204,1017,281"/>
+<area shape="rect" id="node1" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="423,953,590,1280"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html" title="BitmapArray Class is supposed to contain image data of the bitmap file." alt="" coords="337,601,492,854"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,343,152,435"/>
+<area shape="rect" id="node4" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="177,292,322,487"/>
+<area shape="rect" id="node8" href="$classBitmapHeader.html" title=" " alt="" coords="677,564,830,891"/>
+<area shape="rect" id="node5" title=" " alt="" coords="181,5,318,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="401,5,476,83"/>
+<area shape="rect" id="node10" href="$structHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="839,343,969,435"/>
+<area shape="rect" id="node7" title=" " alt="" coords="581,351,640,428"/>
+<area shape="rect" id="node9" title=" " alt="" coords="721,5,772,83"/>
+<area shape="rect" id="node11" title=" " alt="" coords="867,5,941,83"/>
 </map>

@@ -1,5 +1,6 @@
 <map id="Image::identifyFileFormat" name="Image::identifyFileFormat">
-<area shape="rect" id="node1" title="Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; ...." alt="" coords="352,5,543,32"/>
+<area shape="rect" id="node1" title="Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; ...." alt="" coords="613,5,804,32"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="352,31,565,57"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>

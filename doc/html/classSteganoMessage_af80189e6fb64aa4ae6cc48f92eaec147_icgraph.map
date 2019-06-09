@@ -1,8 +1,8 @@
 <map id="SteganoMessage::swapBytes" name="SteganoMessage::swapBytes">
-<area shape="rect" id="node1" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="649,75,860,101"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,75,317,101"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#ad21d0b7dd149e81d9a199fb26a799da4" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="378,34,589,75"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#ab17fa1a4dc587ae268e400913cc5f0c8" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="378,99,589,141"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#a67f4f4c91ecddb89368c4b9cc42ac07e" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="365,165,601,192"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,75,60,101"/>
+<area shape="rect" id="node1" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="649,70,860,97"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Sets the mode for the after reading filter." alt="" coords="108,70,317,97"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#ad21d0b7dd149e81d9a199fb26a799da4" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="378,33,589,75"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#a67f4f4c91ecddb89368c4b9cc42ac07e" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="365,99,601,126"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#ab17fa1a4dc587ae268e400913cc5f0c8" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="378,151,589,192"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,70,60,97"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['terminate',['terminate',['../src_2main_8cpp.html#a674cea7188b2f500eeb691858266a433',1,'main.cpp']]]
+  ['writetextfile',['writeTextFile',['../classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c',1,'Image']]]
 ];

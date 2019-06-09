@@ -1,6 +1,6 @@
 <map id="SteganoMessage::substB" name="SteganoMessage::substB">
 <area shape="rect" id="node1" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="636,5,820,32"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,5,317,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Sets the mode for the after reading filter." alt="" coords="108,5,317,32"/>
 <area shape="rect" id="node4" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="365,31,588,57"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
