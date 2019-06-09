@@ -48,12 +48,8 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             if(tempPath == NOPATH)
                 throw errPath; //throw error if we didnt get a path
             std::cout << "Found Path: " << tempPath << std::endl; 
-            if(Image::identifyFileFormat(tempPath) != BITMAP){
-                std::cout << "shit" << std::endl;
-                exit(1);
-            }
-            int i;
             this->buildImage(tempPath); //Call constructor for image type object and set path
+            int i;
             std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
             //set filters if activated
             if(argc > 3){
@@ -68,7 +64,10 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             }
             else
                 this->setFilterMode("");
-            this->getImage()->readImage(); //extract the image information
+            if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
+                this->getImage()->readImage(); //extract the image information
+            else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
+                ((Jpeg*)(img))->readImage();
             //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
             return 0;
     }
@@ -96,11 +95,22 @@ int SteganoMessage::buildMessage(std::string m){
 }
 
 int SteganoMessage::buildImage(std::string path){
-    if(img == NULL){
+    if(img != NULL)
+        return errImgExist;
+    if(Image::identifyFileFormat(path) == BITMAP){
+        std::cout << "Building bitmap" << std::endl;
         img = new Image(path, err);
         return errNoError;
+    }    
+    else if(Image::identifyFileFormat(path) == JPEG){
+        std::cout << "Building jpeg" << std::endl;
+        img = new Jpeg(path, err);
+        return errNoError;
+    }         
+    else{
+        std::cout << "shit" << std::endl;
+        exit(1);
     }
-    return errImgExist;
 }
 
 //GETTERS/************************************************************/
@@ -228,6 +238,7 @@ int SteganoMessage::modeHandler(){
     else if(this->getMode() == FILTER){
         this->getImage()->generateBitmap(); 
     }
+    return 0;
 }
 
 int SteganoMessage::applyFilter(){
@@ -344,6 +355,7 @@ uint32_t SteganoMessage::swapBytes(uint32_t d, size_t s){
         case 4:
             return ((d & 0xFF000000) >> 24 | (d & 0x000000FF) << 24) | ((d & 0xFF0000) >> 8 | (d & 0xFF00) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
@@ -358,6 +370,7 @@ uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
             return ((d & 0xFF000000) >> 4  | (d & 0x0F000000) << 4) | ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) 
                     | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){return swapBytes(swapOctets(d, s), s);}
@@ -379,6 +392,7 @@ uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
         case 4:
             return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
@@ -392,6 +406,7 @@ uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
         case 4:
             return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
@@ -405,6 +420,7 @@ uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
         case 4:
             return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substB(uint32_t d, size_t s){
@@ -418,6 +434,7 @@ uint32_t SteganoMessage::substB(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0xFF000000)) | ((d & 0x00FF0000) - (d & 0xFF000000 >> 8)) | ((d & 0x0000FF00) - (d & 0xFF000000 >> 16)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substR(uint32_t d, size_t s){
@@ -431,6 +448,7 @@ uint32_t SteganoMessage::substR(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0x0000FF00)) | ((d & 0x00FF0000) - (d & 0x0000FF00 << 8)) | ((d & 0xFF000000) - (d & 0x0000FF00 << 16)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 uint32_t SteganoMessage::substG(uint32_t d, size_t s){
@@ -444,6 +462,7 @@ uint32_t SteganoMessage::substG(uint32_t d, size_t s){
         case 4:
             return (d -(d & 0x00FF0000)) | ((d & 0xFF000000) - (d & 0x00FF0000 << 8)) | ((d & 0x0000FF00) - (d & 0x00FF0000 >> 8)) | (d & 0xFF); 
     }
+    return 0;
 }
 
 void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){

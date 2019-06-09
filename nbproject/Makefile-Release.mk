@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/BitmapHeader.o \
 	${OBJECTDIR}/src/ErrorHandler.o \
 	${OBJECTDIR}/src/Image.o \
+	${OBJECTDIR}/src/Jpeg.o \
 	${OBJECTDIR}/src/Message.o \
 	${OBJECTDIR}/src/SteganoMessage.o \
 	${OBJECTDIR}/src/main.o
@@ -87,6 +88,11 @@ ${OBJECTDIR}/src/Image.o: src/Image.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Image.o src/Image.cpp
+
+${OBJECTDIR}/src/Jpeg.o: src/Jpeg.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Jpeg.o src/Jpeg.cpp
 
 ${OBJECTDIR}/src/Message.o: src/Message.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

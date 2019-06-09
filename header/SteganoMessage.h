@@ -17,10 +17,11 @@
 #include "ErrorHandler.h"
 #include "constants.h"
 #include "Message.h"
-#include "Image.h"
+//#include "Image.h"
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include "Jpeg.h"
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 

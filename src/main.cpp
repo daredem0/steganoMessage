@@ -123,6 +123,7 @@ int ui(string argv, SteganoMessage *steg){
     catch (...){ //catch everything weird
         steg->getErrHandle()->printError(errUnknown);
     }
+    return 0;
 }
 
 int printHelp(){

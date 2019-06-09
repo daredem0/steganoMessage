@@ -160,7 +160,10 @@ std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
 
 std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
 
-int BitmapArray::setFilter(std::string fm){filterMode = fm;}
+int BitmapArray::setFilter(std::string fm){
+    filterMode = fm;
+    return 0;
+}
 
 int BitmapArray::infuse(std::string message){
     

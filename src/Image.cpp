@@ -91,6 +91,7 @@ int Image::writeTextFile(std::string t, std::string n){
 }
 
 int Image::readImage(){
+    std::cout << "In bitmap read image" << std::endl;
     if(path == "")
         return 3;
     header = new BitmapHeader(path, errHandle);
@@ -318,6 +319,7 @@ std::string Image::decToHex(uint8_t v){
 int Image::setFilter(std::string gr, std::string col){
     filterModeGrey = gr;
     filterModeCol = col;
+    return 0;
 }
 
 std::string Image::identifyFileFormat(std::string p){
