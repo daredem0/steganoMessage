@@ -22,6 +22,7 @@
     #define MAC 1
     #define LINUX 0
     //#define PATHMAC /*************TOBI HIER ***************/
+#define PATHLINUX NULL;
 #endif
 
 Image::Image() {
