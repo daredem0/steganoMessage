@@ -16,7 +16,11 @@
 
 
 #include <stdio.h>
-#include "jpeglib.h"   //For MacOS -> "/usr/local/Cellar/jpeg/9c/include/jpeglib.h"
+#if defined (__linux__)
+#include "jpeglib.h"
+#elif defined (__APPLE__)
+#include "/usr/local/Cellar/jpeg/9c/include/jpeglib.h"
+#endif
 #include <setjmp.h>
 #include <stdint.h>
 #include "Image.h"
