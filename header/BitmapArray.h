@@ -18,6 +18,7 @@
 #include <fstream>
 #include <iterator>
 #include <iostream>
+#include <cstring>
 #include "./ErrorHandler.h"
 
 /**
@@ -76,6 +77,11 @@ public:
      * @return std::vector<std::vector<uint32_t>>* Pointer image data
      */
     std::vector<std::vector<uint32_t>> *getBDataPointer();
+    /**
+     * @brief Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after infusement and after decompressing of jpeg/png/gif files
+     * @return char* pointer to allocated image data
+     */
+    char* getBDataStream();
     
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////
@@ -107,6 +113,7 @@ public:
     
 private:
     std::vector<std::vector<uint32_t>> bData; /**< 2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. */
+    char* dataStream; /**< Pointer to char array containing the complete data; should be deleted after calling getBDatastream */
     std::string path; /**< path to original file*/
     uint32_t width; /**< width of original file*/
     uint32_t height;    /**< height of original file*/

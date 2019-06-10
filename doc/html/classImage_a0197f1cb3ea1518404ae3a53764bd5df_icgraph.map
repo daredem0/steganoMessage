@@ -1,0 +1,6 @@
+<map id="Image::setLogMode" name="Image::setLogMode">
+<area shape="rect" id="node1" title="Sets mode and path for text generation." alt="" coords="583,5,732,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a438e9d5189a8e3b83021fada4a6a469c" title="Sets flag to create logfile." alt="" coords="352,5,535,32"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>

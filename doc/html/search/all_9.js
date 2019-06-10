@@ -10,5 +10,5 @@ var searchData=
   ['infuse',['infuse',['../classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a',1,'BitmapArray']]],
   ['initialize',['initialize',['../classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc',1,'SteganoMessage']]],
   ['invert',['invert',['../classFilter.html#a55f792b3f87991db5a5e666827d6214c',1,'Filter']]],
-  ['invertbit',['invertBit',['../constants_8h.html#a36bd51b89b9e0e6e4dbbe565b9155083a4259b5aee9a7d07825447344f7f2041d',1,'invertBit():&#160;constants.h'],['../constants_8h.html#a0a949ca8030e1af1036f67e5f552b8aa',1,'INVERTBIT():&#160;constants.h']]]
+  ['invertbit',['INVERTBIT',['../constants_8h.html#a0a949ca8030e1af1036f67e5f552b8aa',1,'INVERTBIT():&#160;constants.h'],['../constants_8h.html#a36bd51b89b9e0e6e4dbbe565b9155083a4259b5aee9a7d07825447344f7f2041d',1,'invertBit():&#160;constants.h']]]
 ];

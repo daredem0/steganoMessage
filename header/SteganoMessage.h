@@ -101,13 +101,15 @@ public:
      * @return bool - true for verified, false for not verified. 
      */
     bool getPathVerified();
-    
     /**
      * @brief Generates a time string
      * @return std::string - y-m-d_h-m-s
      */
     static std::string getTimeString();
-    
+    /**
+     * @brief Generates a string containing only one time date information. t=Y -> year; t=M -> month; t=D -> day; t=h -> hour; t=m -> minute; t=s -> second
+     * @return std::string - containing year, month, day, hour, minute or second extracted from system_clock
+     */
     static std::string getTimeDate(char t, std::time_t system_clock);
     /**
      * @brief Getter for log flag

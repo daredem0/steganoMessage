@@ -1,6 +1,8 @@
 <map id="Message" name="Message">
-<area shape="rect" id="node1" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ..." alt="" coords="79,403,205,553"/>
-<area shape="rect" id="node2" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,151,340"/>
-<area shape="rect" id="node3" title=" " alt="" coords="9,5,147,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="175,204,234,281"/>
+<area shape="rect" id="node1" title="Message class is supposed to contain the message that the user enters via terminal and wants to hide ..." alt="" coords="5,1019,131,1169"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="171,292,323,956"/>
+<area shape="rect" id="node3" title=" " alt="" coords="302,5,439,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="463,5,582,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="21,5,80,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="227,5,277,83"/>
 </map>

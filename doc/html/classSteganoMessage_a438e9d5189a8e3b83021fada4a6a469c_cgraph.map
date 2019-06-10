@@ -1,0 +1,7 @@
+<map id="SteganoMessage::setLog" name="SteganoMessage::setLog">
+<area shape="rect" id="node1" title="Sets flag to create logfile." alt="" coords="5,56,188,83"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a9771a4abc2d7a5a2a8cfb1684f7f313f" title="Generates a time string." alt="" coords="236,5,468,32"/>
+<area shape="rect" id="node4" href="$classErrorHandler.html#aa79cfd994939c238b85ad021ea6bbe05" title=" " alt="" coords="275,56,429,83"/>
+<area shape="rect" id="node5" href="$classImage.html#a0197f1cb3ea1518404ae3a53764bd5df" title="Sets mode and path for text generation." alt="" coords="277,107,427,133"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a9aaa5e476220c95e1a68b4d722de43b1" title="Generates a string containing only one time date information. t=Y &#45;&gt; year; t=M &#45;&gt; month; t=D &#45;&gt; day; ..." alt="" coords="516,5,741,32"/>
+</map>

@@ -8,7 +8,8 @@ Main Function of stegano\+Message. Mainly ochestrates the init and gui creation.
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include \char`\"{}../header/\+Stegano\+Message.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:\nopagebreak
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +23,7 @@ int \mbox{\hyperlink{main_8cpp_a29c1b1d213f5e4fe896101b215163caa}{ui}} (string a
 \begin{DoxyCompactList}\small\item\em Evaluates the terminal input. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_af03f7609a66def2e7fae02a477c38d97}{print\+Help}} ()
 \begin{DoxyCompactList}\small\item\em Prints help file stored in const string. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{main_8cpp_a674cea7188b2f500eeb691858266a433}{terminate}} (\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} $\ast$steg)
+int \mbox{\hyperlink{main_8cpp_a43ec6b73ba6ea9939554124e45b3d175}{terminate}} (\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} $\ast$steg, int err)
 \begin{DoxyCompactList}\small\item\em Terminates the program without an error. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_a8b14b9f3865042b7e6a83d3080e96e4c}{err\+Terminate}} (\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} $\ast$steg)
 \begin{DoxyCompactList}\small\item\em Terminates the program with an error. \end{DoxyCompactList}\item 
@@ -52,9 +53,10 @@ Florian Leuze (3308288) \href{mailto:st155013@stud.uni-stuttgart.de}{\texttt{ st
 
 
 
-Definition at line 146 of file main.\+cpp.
+Definition at line 150 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -76,7 +78,7 @@ always returns 1
 \end{DoxyReturn}
 
 
-Definition at line 140 of file main.\+cpp.
+Definition at line 144 of file main.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -109,11 +111,12 @@ int standard linux error codes
 
 Definition at line 44 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\includegraphics[height=550pt]{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{main_8cpp_af03f7609a66def2e7fae02a477c38d97}\label{main_8cpp_af03f7609a66def2e7fae02a477c38d97}} 
@@ -131,20 +134,21 @@ always returns -\/1 to surely execute the program
 \end{DoxyReturn}
 
 
-Definition at line 129 of file main.\+cpp.
+Definition at line 131 of file main.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=284pt]{main_8cpp_af03f7609a66def2e7fae02a477c38d97_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{main_8cpp_a674cea7188b2f500eeb691858266a433}\label{main_8cpp_a674cea7188b2f500eeb691858266a433}} 
+\mbox{\Hypertarget{main_8cpp_a43ec6b73ba6ea9939554124e45b3d175}\label{main_8cpp_a43ec6b73ba6ea9939554124e45b3d175}} 
 \index{main.cpp@{main.cpp}!terminate@{terminate}}
 \index{terminate@{terminate}!main.cpp@{main.cpp}}
 \subsubsection{\texorpdfstring{terminate()}{terminate()}}
-{\footnotesize\ttfamily int terminate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} $\ast$}]{steg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int terminate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} $\ast$}]{steg,  }\item[{int}]{err }\end{DoxyParamCaption})}
 
 
 
@@ -155,13 +159,14 @@ always returns 0
 \end{DoxyReturn}
 
 
-Definition at line 134 of file main.\+cpp.
+Definition at line 136 of file main.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=222pt]{main_8cpp_a674cea7188b2f500eeb691858266a433_icgraph}
+\includegraphics[width=222pt]{main_8cpp_a43ec6b73ba6ea9939554124e45b3d175_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{main_8cpp_a29c1b1d213f5e4fe896101b215163caa}\label{main_8cpp_a29c1b1d213f5e4fe896101b215163caa}} 
@@ -186,16 +191,18 @@ value $>$ 0 for all good, -\/1 for not so good.
 \end{DoxyReturn}
 
 
-Definition at line 88 of file main.\+cpp.
+Definition at line 91 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=314pt]{main_8cpp_a29c1b1d213f5e4fe896101b215163caa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

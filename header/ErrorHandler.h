@@ -49,7 +49,6 @@ public:
      * Sets flag for logfile output
      */
     void setLog(bool l, std::string p);
-    void setLog(bool l);
     
       ///////////////////////////////////************************************************************/
     /**OTHER METHODS**/////////////////

@@ -58,7 +58,6 @@ uint32_t BitmapHeader::getBitCount(){return header.biBitCount;}
 Header* BitmapHeader::getHeaderStruct(){return &header;}
 
 //OTHER METHODS/************************************************************/
-
 int BitmapHeader::readHeader(std::string p){
     try{
         std::ifstream file(p);

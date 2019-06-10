@@ -1,6 +1,6 @@
 <map id="BitmapHeader::read" name="BitmapHeader::read">
 <area shape="rect" id="node1" title="reads header information from ifstream" alt="" coords="5,64,159,91"/>
-<area shape="rect" id="node2" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title=" " alt="" coords="208,5,379,32"/>
+<area shape="rect" id="node2" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="208,5,379,32"/>
 <area shape="rect" id="node3" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="207,57,380,98"/>
 <area shape="rect" id="node4" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="207,123,380,149"/>
 </map>

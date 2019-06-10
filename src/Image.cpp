@@ -243,27 +243,27 @@ int Image::writeTextFile(std::string t, std::string n){
 
 int Image::bmpToTxt(){
     try{
+        if(this->logfileMode == std::ios::app){
+            if(OPENDIR_LINUX("./log") == NULL){
+                MKDIR_LINUX("./log", S_IRWXU);
+            }
+        }
         errHandle->printLog("Generate textfile\n");
-        std::ifstream inFile(path);
 
         //buffer header
-        char *head = new char[header->getOffBits()];
-        if(!inFile.good())
-            return 3;
-        inFile.seekg(0, std::ios::beg);
-        inFile.read(head, header->getOffBits());
-
+        char *head = header->getHeader();
         //buffer data
-        char *data = new char[(header->getHeight()*header->getWidth())*header->getBitCount()/8];
-        inFile.read(data, (header->getHeight()*header->getWidth())*header->getBitCount()/8);
-        
+        char *data = array->getBDataStream();
         std::string path = logfilePath;
-        std::ofstream outFile(path.c_str(), std::ios::app);
+        if(MAC == 1 && logfilePath[2] == 'l'){
+            logfilePath = logfilePath.erase(2,5);
+        }
+        std::ofstream outFile(path.c_str(), logfileMode);
 
         //write header
         int count;
         outFile << "Header Information:\n";
-        std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
+        //std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
         for(count = 0; count<= header->getOffBits()-1; ++count){
             //std::cout << byteToHex(*(head+count)) << " ";
             outFile << byteToHex(*(head+count));
@@ -291,9 +291,10 @@ int Image::bmpToTxt(){
         }
 
         //clean up
-        delete(head);
         delete(data);
-        inFile.close();
+        //delete(head);
+        //delete(data);
+        //inFile.close();
         outFile.close();
         errHandle->printLog("Generation successfull to " + logfilePath + "\n");
         return errNoError;

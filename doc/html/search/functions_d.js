@@ -2,6 +2,8 @@ var searchData=
 [
   ['setfilter',['setFilter',['../classBitmapArray.html#a432bda57a77788bfd54e3310c9e83c0c',1,'BitmapArray::setFilter()'],['../classImage.html#ac81078a3d6c364aada9afc3c8a668ef8',1,'Image::setFilter()']]],
   ['setfiltermode',['setFilterMode',['../classSteganoMessage.html#a5c3ef910b17f4bbe32a73a33be9d7586',1,'SteganoMessage']]],
+  ['setlog',['setLog',['../classErrorHandler.html#aa79cfd994939c238b85ad021ea6bbe05',1,'ErrorHandler::setLog()'],['../classSteganoMessage.html#a438e9d5189a8e3b83021fada4a6a469c',1,'SteganoMessage::setLog()']]],
+  ['setlogmode',['setLogMode',['../classImage.html#a0197f1cb3ea1518404ae3a53764bd5df',1,'Image']]],
   ['setmessage',['setMessage',['../classMessage.html#aa1e4c60f94308a9367ad3106c34b28f3',1,'Message']]],
   ['setmode',['setMode',['../classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458',1,'SteganoMessage']]],
   ['setpath',['setPath',['../classImage.html#aabb8cec47c25c0e3a36ba2a455c2aa6c',1,'Image']]],

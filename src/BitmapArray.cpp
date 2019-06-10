@@ -47,6 +47,42 @@ BitmapArray::~BitmapArray() {
 std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
 std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
 
+//lets go the C lifestyle and use a bit of memcpy... *_*
+char* BitmapArray::getBDataStream(){
+    dataStream = new char[height*width*bitCount/8];
+    int k = 0;
+    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
+            int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+            for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+                switch(bitCount){
+                    case 8:
+                    case 16:
+                        std::memcpy((dataStream+k), (void*)(&(*itInner)), (size_t)(bitCount/8));
+                        break;
+                    case 24:{
+                        if(padding == 0){
+                            std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
+                            break;
+                        }
+                        std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)padding);
+                    }
+                    break;
+                    case 32:{
+                        std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
+                        break;
+                    }
+                    default:{
+                        *(dataStream + k) = '\0';
+                    }
+                }
+                k += bitCount/8;
+            }
+       }
+    
+    return dataStream;
+}
+
+
 //SETTERS/************************************************************/
 int BitmapArray::setFilter(std::string fm){
     filterMode = fm;
@@ -268,6 +304,10 @@ int BitmapArray::read(std::ifstream& f){
     std::vector<uint32_t> temp;
     try{
         f.seekg(bitOffset);
+        //dataStream = new char[height*width*bitCount/8];
+        //f.read(dataStream, height*width*bitCount/8);
+        //f.seekg(bitOffset);
+        
         for(int i = 0; i < height; ++i){
             temp.clear();
             int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
@@ -284,12 +324,14 @@ int BitmapArray::read(std::ifstream& f){
                         char *tempo = new char[bitCount/8];
                         f.read(tempo, (size_t)(bitCount/8));
                         temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                        delete tempo;
                     }
                     break;
                     case 32:{
                         char *tempo = new char[bitCount/8];
                         f.read(tempo, sizeof(uint32_t));
                         temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                        delete tempo;
                     }
                         break;
                     default:
@@ -304,6 +346,7 @@ int BitmapArray::read(std::ifstream& f){
                     *(tempo+i) = 0;
                 }
                 temp.push_back(genInt(tempo, (size_t)(padding)));
+                delete tempo;
             }
             bData.push_back(temp);
             temp.clear();

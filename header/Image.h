@@ -25,12 +25,16 @@
 #include "./ErrorHandler.h"
 #include <sstream>
 #include <ios>
+#include <sys/stat.h>
+#include <dirent.h>
 
 /*detect OS and define constants which will be evaluated. Needs to be done because get currenct wcdir depends on os*/
 #if defined (__linux__)
     #define LINUX 1
     #define MAC 0
     #define PATHLINUX get_current_dir_name()
+    #define OPENDIR_LINUX(log) opendir(log) 
+#define MKDIR_LINUX(argA, argB) mkdir(argA, argB)
 #elif defined (__APPLE__)
     #define MAC 1
     #define LINUX 0
@@ -160,8 +164,8 @@ protected:
     std::string filterModeGrey;/**<Flag for while reading/writing filters*/
     std::string filterModeCol;/**<Flag for while reading/writing filters*/
     
-    std::string logfilePath;
-    std::ios_base::openmode logfileMode;
+    std::string logfilePath;/**<path to logfile*/
+    std::ios_base::openmode logfileMode;/**<mode of logfile, either std::ios::trunc or std::ios::app, dont fiddle with in/out!*/
     
     /**
      * @brief Checks if a file already exists

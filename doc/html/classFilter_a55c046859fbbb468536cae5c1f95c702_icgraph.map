@@ -1,5 +1,5 @@
 <map id="Filter::swapBytesOctets" name="Filter::swapBytesOctets">
 <area shape="rect" id="node1" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="365,5,541,32"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Sets the mode for the after reading filter." alt="" coords="108,5,317,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,5,317,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>

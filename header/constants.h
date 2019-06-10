@@ -136,6 +136,10 @@ const std::string HELPFILE =
 "   Sorry, no time yet to describe the filter effects. Just try.\n"
 "\n"
 "Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\n"
-"./steganoMessage -decrypt/-encrypt <path> -filter <type>";
+"./steganoMessage -decrypt/-encrypt <path> -filter <type>"
+"Output into a textfile is possible with the switch -log. Usage is possible with and without filters:\n"
+"   example a: ./steganoMessage -encrypt <path> -filter <type> -log\n"
+"   example b: ./steganoMessage -encrypt <path> -log\n"
+"Logfile will be generated in log folder in ./ and will be named with a timestamp\n";
 
 #endif /* CONSTANTS_H */

@@ -77,7 +77,7 @@ public:
     /**GETTERS**///////////////////////
     ///////////////////////////////////
     /**
-     * @brief Returns pointer to char array containing the complete fileheader extracted from original file
+     * @brief Returns pointer to char array containing the complete fileheader extracted/converted from original file
      * @return char* pointer to char
      */
     char* getHeader();

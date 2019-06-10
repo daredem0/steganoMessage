@@ -1,0 +1,7 @@
+<map id="SteganoMessage::getTimeDate" name="SteganoMessage::getTimeDate">
+<area shape="rect" id="node1" title="Generates a string containing only one time date information. t=Y &#45;&gt; year; t=M &#45;&gt; month; t=D &#45;&gt; day; ..." alt="" coords="863,5,1088,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a9771a4abc2d7a5a2a8cfb1684f7f313f" title="Generates a time string." alt="" coords="583,5,815,32"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a438e9d5189a8e3b83021fada4a6a469c" title="Sets flag to create logfile." alt="" coords="352,5,535,32"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>
