@@ -13,8 +13,16 @@
 
 #include "../header/BitmapHeader.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 BitmapHeader::BitmapHeader() {
-    //Header *header = new Header();
+}
+
+BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH):path(p), errHandle(errH){
+    readHeader(p);
+}
+
+BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH, bool read):path(p), errHandle(errH){
 }
 
 BitmapHeader::BitmapHeader(const BitmapHeader& orig) {
@@ -23,21 +31,54 @@ BitmapHeader::BitmapHeader(const BitmapHeader& orig) {
 BitmapHeader::~BitmapHeader() {
 }
 
-BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH):path(p), errHandle(errH){
-    //Header *header = new Header();
-    readHeader(p);
+//GETTERS/************************************************************/
+char* BitmapHeader::getHeader(){
+    try{
+        return (char*)&header;
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errBmHeadRead);
+        return (char*)'\0';
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errBmHeadRead);
+        return (char*)'\0';
+    }
 }
 
-BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH, bool read):path(p), errHandle(errH){
-}
+uint32_t BitmapHeader::getSize(){return header.bfSize;}
+uint32_t BitmapHeader::getOffBits(){return header.bfOffBits;}
+uint32_t BitmapHeader::getBiSize(){return header.biSize;}
+uint32_t BitmapHeader::getWidth(){return header.biWidth;}
+uint32_t BitmapHeader::getHeight(){return header.biHeight;}
+uint32_t BitmapHeader::getSizeImage(){return header.biSizeImage;}
+uint32_t BitmapHeader::getBitCount(){return header.biBitCount;}
+Header* BitmapHeader::getHeaderStruct(){return &header;}
+
+//OTHER METHODS/************************************************************/
 
 int BitmapHeader::readHeader(std::string p){
-    std::ifstream file(p);
-    if(!file.good())
-        return 3;
-    read(file);
-    file.close();
-    return 0;
+    try{
+        std::ifstream file(p);
+        if(!file.good())
+            return 3;
+        int returnValue = read(file);
+        file.close();
+        return returnValue;
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errBmHeadRead);
+        return errBmHeadRead;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errBmHeadRead);
+        return errBmHeadRead;
+    }
+    return errBmHeadRead;
 }
 
 int BitmapHeader::readHeader(){
@@ -62,12 +103,31 @@ int BitmapHeader::readHeader(){
     return errBmHeadRead;
 }
 
+void BitmapHeader::printHeader(){
+    std::cout << "Type: " << header.bfTypeA << header.bfTypeB << std::endl;
+    std::cout << "File-Size in byte kb: " << header.bfSize/1000 << std::endl;
+    std::cout << "Reserved: " << header.bfReserved << std::endl;
+    std::cout << "OffBits: " << header.bfOffBits << std::endl;
+    std::cout << "Info-Header-Size in byte kb: " << header.biSize<< std::endl;
+    std::cout << "Width in pixel: " << header.biWidth << std::endl;
+    std::cout << "Height in pixel: " << header.biHeight << std::endl;
+    std::cout << "Planes (outdated): " << header.biPlanes << std::endl;
+    std::cout << "Color Depth (bit count): " << header.biBitCount << std::endl;
+    std::cout << "Compression: " << header.biCompression << std::endl;
+    std::cout << "Size of image data: " << header.biSizeImage << std::endl;
+    std::cout << "biXPelsPerMeter: " << header.biXPelsPerMeter << std::endl;
+    std::cout << "biYPelsPerMeter: " << header.biYPelsPerMeter << std::endl;
+    std::cout << "biClrUsed: " << header.biClrUsed << std::endl;
+    std::cout << "biClrImportant: " << header.biClrImportant << std::endl;
+}
+
 int BitmapHeader::fixType(){
     header.bfTypeA = header.bfType & 0x00FF;
     header.bfTypeB = header.bfType >> 8;
     return 0;
 }
 
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
 int BitmapHeader::read(std::ifstream& f){
     try{
         f.seekg(0, std::ios::beg);
@@ -107,68 +167,4 @@ int BitmapHeader::read(std::ifstream& f){
         return errBmHeadRead;
     }
     return errBmHeadRead;
-}
-
-void BitmapHeader::printHeader(){
-    std::cout << "Type: " << header.bfTypeA << header.bfTypeB << std::endl;
-    std::cout << "File-Size in byte kb: " << header.bfSize/1000 << std::endl;
-    std::cout << "Reserved: " << header.bfReserved << std::endl;
-    std::cout << "OffBits: " << header.bfOffBits << std::endl;
-    std::cout << "Info-Header-Size in byte kb: " << header.biSize<< std::endl;
-    std::cout << "Width in pixel: " << header.biWidth << std::endl;
-    std::cout << "Height in pixel: " << header.biHeight << std::endl;
-    std::cout << "Planes (outdated): " << header.biPlanes << std::endl;
-    std::cout << "Color Depth (bit count): " << header.biBitCount << std::endl;
-    std::cout << "Compression: " << header.biCompression << std::endl;
-    std::cout << "Size of image data: " << header.biSizeImage << std::endl;
-    std::cout << "biXPelsPerMeter: " << header.biXPelsPerMeter << std::endl;
-    std::cout << "biYPelsPerMeter: " << header.biYPelsPerMeter << std::endl;
-    std::cout << "biClrUsed: " << header.biClrUsed << std::endl;
-    std::cout << "biClrImportant: " << header.biClrImportant << std::endl;
-}
-
-char* BitmapHeader::getHeader(){
-    try{
-    /*headerStream = new char[header.bfOffBits];
-    std::ifstream file(path);
-    if(!file.good())
-        exit(-1);
-    file.seekg(0, std::ios::beg);
-    file.read(headerStream, (size_t)header.bfOffBits);
-    file.close();
-    //following two lines to make 32 bit standard (easier for us) <- not working, brings incompatibility with compression rates
-    //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)) =  ;
-    //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)+1) =  0;
-    return headerStream;*/
-    return (char*)&header;
-}
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        errHandle->printError(errBmHeadRead);
-        return (char*)'\0';
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        errHandle->printError(errBmHeadRead);
-        return (char*)'\0';
-    }
-}
-
-uint32_t BitmapHeader::getSize(){return header.bfSize;}
-
-uint32_t BitmapHeader::getOffBits(){return header.bfOffBits;}
-
-uint32_t BitmapHeader::getBiSize(){return header.biSize;}
-
-uint32_t BitmapHeader::getWidth(){return header.biWidth;}
-
-uint32_t BitmapHeader::getHeight(){return header.biHeight;}
-
-uint32_t BitmapHeader::getSizeImage(){return header.biSizeImage;}
-
-uint32_t BitmapHeader::getBitCount(){return header.biBitCount;}
-
-
-Header* BitmapHeader::getHeaderStruct(){
-    return &header;
 }

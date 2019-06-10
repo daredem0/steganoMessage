@@ -13,6 +13,8 @@
 
 #include "../header/Message.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 Message::Message() {
     mess = "";
 }
@@ -25,7 +27,10 @@ Message::Message(const Message& orig) {
 
 Message::~Message() {
 }
+//GETTERS/************************************************************/
+std::string Message::getMessage(void){return mess;}
 
+//SETTERS/************************************************************/
 int Message::setMessage(std::string m){
     if(mess != "")
         return errMessExist;
@@ -33,6 +38,3 @@ int Message::setMessage(std::string m){
     return errNoError;
 }
 
-std::string Message::getMessage(void){
-    return mess;
-}

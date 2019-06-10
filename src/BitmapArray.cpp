@@ -13,6 +13,8 @@
 
 #include "../header/BitmapArray.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 BitmapArray::BitmapArray() {
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
         itOuter->clear();
@@ -22,19 +24,17 @@ BitmapArray::BitmapArray() {
 
 BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm) : path(p), bitOffset(b), width(w), 
         height(h), bitCount(bit), errHandle(errH), filterMode(fm){
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
+    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){ //clear all inner std::vectors
         itOuter->clear();
     }
-    bData.clear();
+    bData.clear(); //clear outer std::vector
     errHandle->printLog("All went well in the constructor\n");
     readArray();
 }
 
 BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm, std::vector<std::vector<uint32_t>> d) : path(p), bitOffset(b), width(w), 
         height(h), bitCount(bit), errHandle(errH), filterMode(fm), bData(d){
-    //bData.clear();
     errHandle->printLog("All went well in the constructor\n");
-    //readArray();
 }
 
 BitmapArray::BitmapArray(const BitmapArray& orig) {
@@ -43,6 +43,17 @@ BitmapArray::BitmapArray(const BitmapArray& orig) {
 BitmapArray::~BitmapArray() {
 }
 
+//GETTERS/************************************************************/
+std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
+std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
+
+//SETTERS/************************************************************/
+int BitmapArray::setFilter(std::string fm){
+    filterMode = fm;
+    return 0;
+}
+
+//OTHER METHODS/************************************************************/
 int BitmapArray::readArray(){
     try{
         errHandle->printLog("Opening stream\n");
@@ -67,74 +78,6 @@ int BitmapArray::readArray(){
     return errBmDataRead;
 }
 
-int BitmapArray::read(std::ifstream& f){
-    errHandle->printLog("Reading the image data\n");
-    std::vector<uint32_t> temp;
-    try{
-        f.seekg(bitOffset);
-        for(int i = 0; i < height; ++i){
-            temp.clear();
-            int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
-            for(int j = 0; j <width; ++j){
-                switch(bitCount){
-                    case 8:
-                        char s;
-                        f.read((char*) &s, sizeof(char));
-                        temp.push_back(s);
-                        break;
-                    case 16:
-                        break;
-                    case 24:{
-                        char *tempo = new char[bitCount/8];
-                        f.read(tempo, (size_t)(bitCount/8));
-                        temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
-                    }
-                    break;
-                    case 32:{
-                        char *tempo = new char[bitCount/8];
-                        f.read(tempo, sizeof(uint32_t));
-                        temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
-                    }
-                        break;
-                    default:
-                        return errBitCount;
-                }
-
-            }
-            if(bitCount == 24 && padding != 0)
-            {
-                char *tempo = new char[padding];
-                for(int i = 0; i < padding; ++i){
-                    *(tempo+i) = 0;
-                }
-                temp.push_back(genInt(tempo, (size_t)(padding)));
-            }
-            bData.push_back(temp);
-            temp.clear();
-       }
-        return errNoError;
-    }
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        errHandle->printError(errBmDataRead);
-        return errBmDataRead;
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        errHandle->printError(errBmDataRead);
-        return errBmDataRead;
-    }
-    return errBmDataRead;
-}
-
-void BitmapArray::printArray(char* c, size_t s){
-    errHandle->printLog("Found this :");
-    for(int i = 0; i<s; ++i){
-        errHandle->printLog(std::to_string(+((uint8_t)(*(c+s-1-i)))) + " / ");
-    }
-    errHandle->printLog("\n");
-}
-
 void BitmapArray::printArray(){
     int i = 0;
     for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
@@ -150,30 +93,7 @@ void BitmapArray::printArray(){
     }
 }
 
-
-uint32_t BitmapArray::genInt(char* c, size_t s){
-    uint32_t returnValue = 0;
-    //std::cout << filterMode << std::endl;
-    for(int i = 0; i<s; ++i){
-        if(filterMode == COLORA || filterMode == COLORB)
-           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
-        else
-            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
-    }
-    return returnValue;
-}
-
-std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
-
-std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
-
-int BitmapArray::setFilter(std::string fm){
-    filterMode = fm;
-    return 0;
-}
-
 int BitmapArray::infuse(std::string message){
-    
     uint32_t charmask32bit = 0x0;                           //Masks for Character Bits
     uint32_t charmask24bit = 0x0;
     uint32_t charmask16bit = 0x0;
@@ -338,6 +258,94 @@ int BitmapArray::infuse(std::string message){
             break;
     }
     errHandle->printLog("Bitmap successfully infused with Message");
-    return errInfused;
+    //return errInfused; /*is this intentional? This way infuse will always return an error message. Fixed it for you
+    return ErrorHandler::errNoError;
 }
+
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
+int BitmapArray::read(std::ifstream& f){
+    errHandle->printLog("Reading the image data\n");
+    std::vector<uint32_t> temp;
+    try{
+        f.seekg(bitOffset);
+        for(int i = 0; i < height; ++i){
+            temp.clear();
+            int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+            for(int j = 0; j <width; ++j){
+                switch(bitCount){
+                    case 8:
+                        char s;
+                        f.read((char*) &s, sizeof(char));
+                        temp.push_back(s);
+                        break;
+                    case 16:
+                        break;
+                    case 24:{
+                        char *tempo = new char[bitCount/8];
+                        f.read(tempo, (size_t)(bitCount/8));
+                        temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                    }
+                    break;
+                    case 32:{
+                        char *tempo = new char[bitCount/8];
+                        f.read(tempo, sizeof(uint32_t));
+                        temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                    }
+                        break;
+                    default:
+                        return errBitCount;
+                }
+
+            }
+            if(bitCount == 24 && padding != 0)
+            {
+                char *tempo = new char[padding];
+                for(int i = 0; i < padding; ++i){
+                    *(tempo+i) = 0;
+                }
+                temp.push_back(genInt(tempo, (size_t)(padding)));
+            }
+            bData.push_back(temp);
+            temp.clear();
+       }
+        return errNoError;
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        errHandle->printError(errBmDataRead);
+        return errBmDataRead;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        errHandle->printError(errBmDataRead);
+        return errBmDataRead;
+    }
+    return errBmDataRead;
+}
+
+uint32_t BitmapArray::genInt(char* c, size_t s){
+    uint32_t returnValue = 0;
+    //std::cout << filterMode << std::endl;
+    for(int i = 0; i<s; ++i){
+        if(filterMode == COLORA || filterMode == COLORB)
+           returnValue |= (uint32_t)((uint8_t)*(c+s-1-i)<<(i*8)); //this will make orange output file
+        else
+            returnValue |= (uint32_t)((uint8_t)*(c+i)<<(i*8)); //this will make blueish output file
+    }
+    return returnValue;
+}
+
+void BitmapArray::printArray(char* c, size_t s){
+    errHandle->printLog("Found this :");
+    for(int i = 0; i<s; ++i){
+        errHandle->printLog(std::to_string(+((uint8_t)(*(c+s-1-i)))) + " / ");
+    }
+    errHandle->printLog("\n");
+}
+
+/*I restructured the file. BitmapArray::infuse can be found in Private/Other Methods ~line 100*/
+
+
+
+
 

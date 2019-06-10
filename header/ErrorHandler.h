@@ -41,11 +41,19 @@ public:
      */
     virtual ~ErrorHandler(); //free list, implement!
     
+      ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
     /**
      * @brief Prints a single Error corresponding to the 
      * @param int err - expects a integer value between 0 and x that specifies the error received
      */
     int printError(int err);
+    /**
+     * @brief Prints a single Error message
+     * @param static std::string err - error message
+     */
+    const std::string printError(const std::string err);
     /**
      * @brief Prints all available errors (mainly for debugging)
      */
@@ -60,6 +68,75 @@ public:
      * @param std::string log - logmessage
      */
     static void printLog(std::string log);
+    
+    ///////////////////////////////////************************************************************/
+    /**ERROR CONSTANTS**///////////////
+    ///////////////////////////////////
+    static int const errNoError = 0;
+    static int const errUnknown = 1;
+    static int const errSwitch = 2;
+    static int const errPath = 3;
+    static int const errPathWrong = 4;
+    static int const errPathExist = 5;
+    static int const errMode = 6;
+    static int const errBitCount = 7;
+    static int const errStdExcept = 9;
+
+    static int const errMess = 10;
+    static int const errMessExist = 11;
+    static int const errInfused = 12;
+    static int const errMessEmpty = 13;
+
+    static int const errImg = 20;
+    static int const errImgExist = 21;
+    static int const errImgWD = 22;
+    static int const errImgWrHead = 23;
+    static int const errImgWrData = 23;
+
+    static int const errBmHead = 30;
+    static int const errBmHeadRead = 31;
+    static int const errBmHeadReadHead = 32;
+
+    static int const errBmData = 40;
+    static int const errBmDataRead = 41;
+    
+    static int const errFiletype = 50;
+    static int const errOsErr = 60;
+    static int const errOsErrMac = 61;
+
+    const static std::string ERRRESERVED;
+
+    const static std::string ERRNOERROR;
+    const static std::string ERRUNKNOWN;
+    const static std::string ERRSWITCH;
+    const static std::string ERRPATH;
+    const static std::string ERRPATHWRONG;
+    const static std::string ERRPATHEXIST;
+    const static std::string ERRMODE;
+    const static std::string ERRBITCOUNT;
+    const static std::string ERRSTDEXCEPT;
+
+    const static std::string ERRMESS;
+    const static std::string ERRMESSEXIST;
+    /*TOBI Infused ERror Message missing*/
+    const static std::string ERRMESSEMPTY;
+
+    const static std::string ERRIMG;
+    const static std::string ERRIMGEXIST;
+    const static std::string ERRIMGWD;
+    const static std::string ERRIMGWRHEAD;
+    const static std::string ERRIMGWRDATA;
+
+    const static std::string ERRBMHEAD;
+    const static std::string ERRBMHEADREAD;
+
+    const static std::string ERRBMDATA;
+    const static std::string ERRBMDATAREAD;
+    
+    const static std::string ERRFILETYPE;
+    
+    const static std::string ERROSERR;
+    const static std::string ERROSERRMAC;
 private:
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     

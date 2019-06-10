@@ -30,7 +30,6 @@ public:
     * @brief Standard constructor.
     */
     BitmapArray();
-    //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
     /**
     * @brief Non-Standard constructor.
      * @param std::string p - Path to original file
@@ -39,6 +38,7 @@ public:
      * @param uint32_t h - height of bitmap
      * @param uint32_t bit - color depth of bitmap
      * @param ErrorHandler *errH - Errorhandler 
+     * @param std::string fm - FilterMode
      */
     BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm);
     /**
@@ -49,6 +49,8 @@ public:
      * @param uint32_t h - height of bitmap
      * @param uint32_t bit - color depth of bitmap
      * @param ErrorHandler *errH - Errorhandler 
+     * @param std::string fm - FilterMode
+     * @param std::vector<std::vector<uint32_t>> d - 2d std::vector containing image data
      */
     BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm, std::vector<std::vector<uint32_t>> d);
     /**
@@ -60,15 +62,10 @@ public:
      * Standard deconstructor.
      */
     virtual ~BitmapArray();
-    /**
-     * @brief Opens original bitmap file and calls private read function. 
-     * @return Integer containing error codes
-     */
-    int readArray();
-    /**
-     * @brief Prints all image data
-     */
-    void printArray();
+    
+    ///////////////////////////////////************************************************************/
+    /**GETTERS**///////////////////////
+    ///////////////////////////////////
     /**
      * @brief Returns the 2D std::vector containing image information.
      * @return std::vector<std::vector<uint32_t>> containing image data
@@ -79,16 +76,34 @@ public:
      * @return std::vector<std::vector<uint32_t>>* Pointer image data
      */
     std::vector<std::vector<uint32_t>> *getBDataPointer();
-    /**
-     * @brief ***
-     * @return std::string ***
-     */
-    int infuse(std::string message);
+    
+    ///////////////////////////////////************************************************************/
+    /**SETTERS**///////////////////////
+    ///////////////////////////////////
     /**
      * @brief Sets filter mode for the application of filters that needs to be applied while reading the data
      * @return Integer containing error codes
      */
     int setFilter(std::string fm);
+    
+    ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
+    /**
+     * @brief Opens original bitmap file and calls private read function. 
+     * @return Integer containing error codes
+     */
+    int readArray();
+    /**
+     * @brief Prints all image data
+     */
+    void printArray();
+    /*******************TOBI still needs doc****************/
+    /**
+     * @brief ***
+     * @return std::string ***
+     */
+    int infuse(std::string message);
     
 private:
     std::vector<std::vector<uint32_t>> bData; /**< 2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. */
@@ -98,7 +113,6 @@ private:
     uint32_t bitOffset; /**< Headeroffest of original file*/
     uint32_t bitCount; /**< Color Depth of original file*/
     std::string filterMode;/**< Mode for while reading filter application*/
-    
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     
     /**

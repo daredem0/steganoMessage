@@ -13,6 +13,8 @@
 
 #include "../header/ErrorHandler.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 ErrorHandler::ErrorHandler() {
     std::cout << "Creating new ErrorHandler Object" << std::endl;
     
@@ -48,6 +50,39 @@ ErrorHandler::ErrorHandler() {
     //Data Errors
 }
 
+ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
+}
+
+ErrorHandler::~ErrorHandler() {
+}
+
+//OTHER METHODS/************************************************************/
+int ErrorHandler::printError(int err){
+    std::list<std::string>::iterator it = errorOut.begin();
+    std::advance(it, err);
+    std::cout << *it << std::endl;
+    return err;
+}
+const std::string ErrorHandler::printError(const std::string err){
+    std::cout << err << std::endl;
+}
+
+void ErrorHandler::printAllErrors(void){
+    std::cerr << "Start to print errors" << std::endl;
+    for(std::list<std::string>::iterator it = errorOut.begin(); it != errorOut.end(); ++it){
+       std::cout << *it << std::endl;
+    }
+}
+
+void ErrorHandler::printErrorStdEx(const std::exception& e){
+    std::cout << e.what() << std::endl;
+}
+
+void ErrorHandler::printLog(std::string log){
+    std::cout << log;
+}
+
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
 void ErrorHandler::fillList(std::string s, int am){
     for(int i = 0; i < am; ++i){
         errorOut.push_back(s);
@@ -59,31 +94,37 @@ void ErrorHandler::fillList(int am){
         errorOut.push_back(ERRRESERVED);
     }
 }
+//PUBLIC MEMBERS/************************************************************/
+const std::string ErrorHandler::ERRRESERVED = "";
 
-ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
-}
+const std::string ErrorHandler::ERRNOERROR = "No Error Occured";
+const std::string ErrorHandler::ERRUNKNOWN = "Error: Unknown Error";
+const std::string ErrorHandler::ERRSWITCH = "Error: Wrong/No switch set";
+const std::string ErrorHandler::ERRPATH = "Error: No path set";
+const std::string ErrorHandler::ERRPATHWRONG = "Error: Not a valid path entered";
+const std::string ErrorHandler::ERRPATHEXIST = "Error: Path does not exist";
+const std::string ErrorHandler::ERRMODE = "Error: Mode Error";
+const std::string ErrorHandler::ERRBITCOUNT = "Error: Bit Count Error";
+const std::string ErrorHandler::ERRSTDEXCEPT = "Error: Exception";
 
-ErrorHandler::~ErrorHandler() {
-}
+const std::string ErrorHandler::ERRMESS = "Error: Message Error";
+const std::string ErrorHandler::ERRMESSEXIST = "Error: Message exists already";
 
-int ErrorHandler::printError(int err){
-    std::list<std::string>::iterator it = errorOut.begin();
-    std::advance(it, err);
-    std::cout << *it << std::endl;
-    return err;
-}
+const std::string ErrorHandler::ERRMESSEMPTY = "Error: Message is empty";
 
-void ErrorHandler::printErrorStdEx(const std::exception& e){
-    std::cout << e.what() << std::endl;
-}
+const std::string ErrorHandler::ERRIMG = "Error: Image Error";
+const std::string ErrorHandler::ERRIMGEXIST = "Error: Image exists already";
+const std::string ErrorHandler::ERRIMGWD = "Error: Can't get working directory";
+const std::string ErrorHandler::ERRIMGWRHEAD = "Error: Can't write header";
+const std::string ErrorHandler::ERRIMGWRDATA = "Error: Can't write image data";
 
-void ErrorHandler::printAllErrors(void){
-    std::cerr << "Start to print errors" << std::endl;
-    for(std::list<std::string>::iterator it = errorOut.begin(); it != errorOut.end(); ++it){
-       std::cout << *it << std::endl;
-    }
-}
+const std::string ErrorHandler::ERRBMHEAD = "Error: Bitmap Header Error";
+const std::string ErrorHandler::ERRBMHEADREAD = "Error: Can't read bitmap header";
 
-void ErrorHandler::printLog(std::string log){
-    std::cout << log;
-}
+const std::string ErrorHandler::ERRBMDATA = "Error: Bitmap Data Error";
+const std::string ErrorHandler::ERRBMDATAREAD = "Error: Can't read bitmap data";
+
+const std::string ErrorHandler::ERRFILETYPE = "Error: Filetype not supported";
+
+const std::string ErrorHandler::ERROSERR = "Error: Os not supported";
+const std::string ErrorHandler::ERROSERRMAC = "Error: MAC not supported";

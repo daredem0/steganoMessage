@@ -72,28 +72,15 @@ public:
      * Standard deconstructor.
      */
     virtual ~BitmapHeader();
-    /**
-     * @brief Overloaded readHeader, opens ifstream to path and calls read private method
-     * @param std::string p - Path to bmp file
-     * @return Integer containing error codes
-     */
-    int readHeader(std::string p);
-    /**
-     * @brief Opens ifstream to path and calls read private method
-     * @return Integer containing error codes
-     */
-    int readHeader();
-    /**
-     * @brief Prints all stored values, attention, values not initialized, should be fixed in constructor
-     */
-    void printHeader();
     
+    ///////////////////////////////////************************************************************/
+    /**GETTERS**///////////////////////
+    ///////////////////////////////////
     /**
      * @brief Returns pointer to char array containing the complete fileheader extracted from original file
      * @return char* pointer to char
      */
     char* getHeader();
-    
     /**
      * @brief Getter for bfSize
      * @return uint32_t bfSize
@@ -129,18 +116,40 @@ public:
      * @return uint32_t BiBitCount
      */
     uint32_t getBitCount();
-    
+    /**
+     * @brief Returns Header type Pointer to header struct to access members.
+     * @return Header* type pointer to struct
+     */
     Header* getHeaderStruct();
+    
+    ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
+    /**
+     * @brief Overloaded readHeader, opens ifstream to path and calls read private method
+     * @param std::string p - Path to bmp file
+     * @return Integer containing error codes
+     */
+    int readHeader(std::string p);
+    /**
+     * @brief Opens ifstream to path and calls read private method
+     * @return Integer containing error codes
+     */
+    int readHeader();
+    /**
+     * @brief Prints all stored values, attention, values not initialized, should be fixed in constructor
+     */
+    void printHeader();
+    /**
+     * @brief Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_t Header.bfTypeB. Should always be done after reading of header
+     * @return Integer containing error codes
+     */
     int fixType();
     
 private:
-    //file header
     Header header;/**< Struct containing 54byte header information + bitOffSet - 54 byte leftover */
-    
     char *headerStream; /**< Pointer to char array containing the complete header */
-    
     std::string path;/**< Imagepath*/
-    
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     
     /**
@@ -148,10 +157,6 @@ private:
      * @return Not yet implemented, should try catch for error handling + return error codes
      */
     int read(std::ifstream& f);
-    /**
-     * @brief Small helper to extrac characters of bfType 
-    * @return Integer containing error codes
-     */
 };
 
 #endif /* BITMAPHEADER_H */

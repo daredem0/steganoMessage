@@ -40,17 +40,18 @@ SteganoMessage::~SteganoMessage() {
 
 //INIT/************************************************************/
 int SteganoMessage::initialize(int argc, char *argv[]){
+    int errTemp;
     try{
         //initialization stuff, especially read the header info, else everything will go horribly wrong in all possible ways
-        std::cout << "Trying to get path" << std::endl;
+        err->printLog("Trying to get path\n");
         std::string tempPath;
             argv[2] == NULL ? tempPath = NOPATH : tempPath = (std::string)argv[2]; //if there was a path given store it in tempPath
             if(tempPath == NOPATH)
                 throw errPath; //throw error if we didnt get a path
-            std::cout << "Found Path: " << tempPath << std::endl; 
-            this->buildImage(tempPath); //Call constructor for image type object and set path
-            int i;
-            std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
+            err->printLog("Found Path: " + tempPath + "\n");
+            errTemp = this->buildImage(tempPath); //Call constructor for image type object and set path
+            if(errTemp != 0) throw errTemp;
+            err->printLog("Built path: " + this->getImage()->getPath() + "\n");
             //set filters if activated
             if(argc > 3){
                 if(argv[3] == FILTER){
@@ -64,15 +65,17 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             }
             else
                 this->setFilterMode("");
+            err->printLog("Filter mode: " + std::to_string(stegFilter) + "\n");
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
-                this->getImage()->readImage(); //extract the image information
+                errTemp = this->getImage()->readImage(); //extract the image information
             else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
-                ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
-            return 0;
+                errTemp = ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
+            return ErrorHandler::errNoError;
+            if(errTemp != 0) throw errTemp;
     }
     catch(int i){
         err->printError(i);
-        return errPath;
+        return i;
     }
     catch(const std::exception& e){
         err->printErrorStdEx(e);
@@ -86,29 +89,30 @@ int SteganoMessage::initialize(int argc, char *argv[]){
 
 //BUILDERS/************************************************************/
 int SteganoMessage::buildMessage(std::string m){
-    if(mess == NULL){
+    if(mess == NULL && m != ""){
         mess = new Message(m, err);
-        return errNoError;
+        return ErrorHandler::errNoError;
     }
-    return errMessExist;
+    else if(m == "")
+        return ErrorHandler::errMessEmpty;
+    return ErrorHandler::errMessExist;
 }
 
 int SteganoMessage::buildImage(std::string path){
     if(img != NULL)
         return errImgExist;
     if(Image::identifyFileFormat(path) == BITMAP){
-        std::cout << "Building bitmap" << std::endl;
+        err->printLog("Building bitmap\n");
         img = new Image(path, err);
         return errNoError;
     }    
     else if(Image::identifyFileFormat(path) == JPEG){
-        std::cout << "Building jpeg" << std::endl;
+        err->printLog("Building jpeg\n");
         img = new Jpeg(path, err);
         return errNoError;
     }         
     else{
-        std::cout << "shit" << std::endl;
-        exit(1);
+        return ErrorHandler::errFiletype;
     }
 }
 
@@ -215,35 +219,39 @@ bool SteganoMessage::exists(std::string p){
 
 //OTHER METHODS/************************************************************/
 int SteganoMessage::modeHandler(){
-    if(this->getMode() == ENCRYPT){
-        std::cout << "Please enter your message" << std::endl;
-        std::string mess;
-        std::getline(std::cin, mess);
-        this->buildMessage(mess);
-        this->buildMessage("ABD");
-        //check if message was read properly:
-        std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
-     
-        this->getImage()->getBitmapArray()->infuse("ABCD");                     /*this->getMessage()->getMessage()*/
-        std::cout << std::endl; //fix missing endl in infuse function
-        
-        
-        this->getImage()->generateBitmap(); 
+    try{
+        int errTemp = 0;
+        if(this->getMode() == ENCRYPT){
+            err->printLog("\nPlease enter your message\n");
+            std::string mess;
+            std::getline(std::cin, mess);
+            (errTemp = this->buildMessage(mess)) != 0 ? throw errTemp: errTemp = 0;
+            //check if message was read properly:
+            err->printLog("Found: " + this->getMessage()->getMessage() + "\n");
+
+            (errTemp = this->getImage()->getBitmapArray()->infuse("ABCD")) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
+            err->printLog("\n \n"); //fix missing endl in infuse function
+
+            (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0;
+        }
+        else if(this->getMode() == DECRYPT){
+            //do some decryption, print message to std::out, be nasty and destroy the image file 
+        }
+        else if(this->getMode() == BMPTOTXT){
+            (errTemp = this->getImage()->bmpToTxt()) != 0 ? throw errTemp : errTemp = 0;
+        }
+        else if(this->getMode() == FILTER){
+            (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0; 
+        }
+    return ErrorHandler::errNoError;
     }
-    else if(this->getMode() == DECRYPT){
-        //do some decryption, print message to std::out, be nasty and destroy the image file 
+    catch(int i){
+        return  err->printError(i);        
     }
-    else if(this->getMode() == BMPTOTXT){
-        this->getImage()->bmpToTxt();
-    }
-    else if(this->getMode() == FILTER){
-        this->getImage()->generateBitmap(); 
-    }
-    return 0;
 }
 
 int SteganoMessage::applyFilter(){
-    std::cout << "Successfully initialized filter handler" << std::endl;
+    err->printLog("Loading up filter handler\n");
     std::vector<std::vector<uint32_t>> *data = this->getImage()->getBitmapArray()->getBDataPointer();
     switch(stegFilter){
         case noFilter:
@@ -332,6 +340,7 @@ int SteganoMessage::getPixel(){return this->getImage()->getBitmapHeader()->getHe
 
 
 void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
+    try{
     int count = 0;
     int pixel = getPixel();
     for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
@@ -344,6 +353,15 @@ void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (
         }
     }
     displayProgress(0);
+    }
+    catch(const std::exception& e){
+        err->printErrorStdEx(e);
+        exit(1);
+    }
+    catch(...){
+        err->printError(ErrorHandler::ERRUNKNOWN);
+        exit(1);
+    }
 }
 
 void SteganoMessage::dummyFilter(std::vector<std::vector<uint32_t>> *d){

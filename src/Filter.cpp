@@ -13,6 +13,8 @@
 
 #include "../header/Filter.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 Filter::Filter() {
 }
 
@@ -72,8 +74,6 @@ uint32_t Filter::swapBytesOctets(uint32_t d, size_t s){return swapBytes(swapOcte
 uint32_t Filter::swapBytesBits(uint32_t d, size_t s){return revertUint(swapBytes(d,s),s);}
 
 uint32_t Filter::swapBytesOctetsBits(uint32_t d, size_t s){return revertUint(swapBytes(swapOctets(d, s), s),s);}
-
-
 
 uint32_t Filter::swapBR(uint32_t d, size_t s){
     switch(s){
@@ -158,9 +158,3 @@ uint32_t Filter::substG(uint32_t d, size_t s){
     }
     return 0;
 }
-
-/*uint32_t Filter::swap(uint32_t d, uint8_t posA, uint8_t posB){
-    if(posA == posB)
-        return d;
-    else if(posA == )
-}*/

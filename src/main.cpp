@@ -49,10 +49,11 @@ int main(int argc, char *argv[]) {
     //argv[1] = (char*)"-decrypt";
     //argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
     SteganoMessage *steg = new SteganoMessage(); /*Build ne SteganoMessage object first*/
-    cout << "argc: " << argc << endl;  //just for debugging
-    cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
+    steg->getErrHandle()->printLog("argc: " + std::to_string(argc) + "\n" + "argv: " + (argv[1] == NULL ? NOSWITCH : argv[1]) + "\n");
+    //cout << "argc: " << argc << endl;  //just for debugging
+    //cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
     int returnValue = ui(argv[1] == NULL ? NOSWITCH : (string)argv[1], steg); /*if there was no switch on terminal send NOSWITCH, otherwise send the switch from terminal*/
-    std::cout << "Set Filter" << std::endl;
+    steg->getErrHandle()->printLog("Startup init routine \n");
     if(returnValue == -1) /*Check for error in ui function*/
         return terminate(steg, -1);
     else{
@@ -62,24 +63,26 @@ int main(int argc, char *argv[]) {
             if(errTemp != 0) 
                 throw errTemp; 
         }
-    catch (int i){ //catch errTemp and send it to printError
-        exit(terminate(steg, -1));
-    }
-    catch (...){ //catch everything weird
-        steg->getErrHandle()->printError(errUnknown);
-        exit(errTerminate(steg));
-    }
-    if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0) /*Check path, print error if occured and exit clean*/
-        exit(terminate(steg, -1));
-    //debuggingStuff(steg);
+        catch (int i){ //catch errTemp and send it to printError
+            steg->getErrHandle()->printError(i);
+            exit(terminate(steg, -1));
+        }
+        catch (...){ //catch everything weird
+            steg->getErrHandle()->printError(errUnknown);
+            exit(errTerminate(steg));
+        }
+        if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0) /*Check path, print error if occured and exit clean*/
+            exit(terminate(steg, -1));
+        //debuggingStuff(steg);
 
+        steg->getErrHandle()->printLog("Successfully initialized bitmap steganoMessage\n");
 
-    //modestuff here
-    steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
-    
-    terminate(steg, 0); //cleanup
+        //modestuff here
+        steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
 
-    return 0;
+        terminate(steg, 0); //cleanup
+
+        return 0;
     }
 }
 
@@ -87,7 +90,6 @@ int main(int argc, char *argv[]) {
 int ui(string argv, SteganoMessage *steg){
     int returnValue = 0;
     try{
-        cout << "Found switch: " << argv << endl;
         if(argv == ENCRYPT){
             steg->getErrHandle()->printLog("Found " + ENCRYPT + "\n");
                 steg->setMode(ENCRYPT); 

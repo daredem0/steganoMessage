@@ -51,6 +51,10 @@ public:
      * Standard deconstructor. 
      */
     virtual ~Jpeg();
+    
+    ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
     /**
      * @brief Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the BitmapArray and BitmapHeader objects to store the data there
      * @return returns integer containing error code

@@ -13,18 +13,8 @@
 
 #include "../header/Image.h"
 
-
-#if defined (__linux__)
-    #define LINUX 1
-    #define MAC 0
-    #define PATHLINUX get_current_dir_name()
-#elif defined (__APPLE__)
-    #define MAC 1
-    #define LINUX 0
-    //#define PATHMAC /*************TOBI HIER ***************/
-    #define PATHLINUX NULL;
-#endif
-
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 Image::Image() {
     path == "";
     header = NULL;
@@ -47,72 +37,65 @@ Image::~Image() {
         delete array;
 }
 
-std::string Image::getPath(){
-    return path;
-}
+//GETTERS/************************************************************/
+std::string Image::getPath(){return path;}
+BitmapHeader *Image::getBitmapHeader(){return header;}
+BitmapArray *Image::getBitmapArray(){return array;}
 
+
+//SETTERS/************************************************************/
 void Image::setPath(std::string p){
     path = p;
 }
 
-int Image::printTextFile(std::string p){
-    try{
-        std::ifstream file(p.c_str());
-        std::string out;
-        while (getline(file,out)) {
-            std::cout << out << std::endl ;
-        }
-        file.close();
-        return errNoError;
-    }
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        return errStdExcept;
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        return errUnknown;
-    }
-    return errUnknown;
-}
-
-int Image::writeTextFile(std::string t, std::string n){
-    try{
-        std::string path = "./"+n;
-        std::ofstream file(path.c_str());
-        file << t << std::endl;
-        file.close();
-    }
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        return errStdExcept;
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        return errUnknown;
-    }
-    return errUnknown;
-}
-
-int Image::readImage(){
-    std::cout << "In bitmap read image" << std::endl;
-    if(path == "")
-        return 3;
-    header = new BitmapHeader(path, errHandle);
-    header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+int Image::setFilter(std::string gr, std::string col){
+    filterModeGrey = gr;
+    filterModeCol = col;
     return 0;
 }
 
-BitmapHeader *Image::getBitmapHeader(){return header;}
-BitmapArray *Image::getBitmapArray(){return array;}
+//EVALUATIONS/************************************************************/
+std::string Image::identifyFileFormat(std::string p){
+    std::ifstream file(p);
+    std::stringstream ss;
+    std::string returnValue;
+    if(!file.good())
+        return ERRUNKNOWN;
+    file.seekg(0, std::ios::beg);
+    unsigned char type[10];
+    std::fill(type, type + sizeof(type), 0);
+    file.read((char*)type, sizeof(type));
+    //check for bitmap
+    if(type[0] == 0x42 && type[1] == 0x4D)
+         ss << type[0] << type[1];
+    
+    //check for jpeg
+    if(type[0] == 0xFF && type[1] == 0xD8)
+        ss << JPEG;
+    //check for gif
+    if(type[0] == 0x47 && type[1] == 0x49 && type[2] == 0x46)
+        ss << type[0] << type[1] << type[2];
+    //check for png
+    if(type[0] == 0x89 && type[1] == 0x50 && type[2] == 0x4E && type[3] == 0x47 && type[4] == 0x0D && type[5] == 0x0A && type[6] == 0x1A && type[7] == 0x0A)
+        ss << PNG;
+    ss >> returnValue;
+    file.close();
+    return returnValue;
+}
 
-bool Image::exists(const std::string& name){
-    std::ifstream f(name.c_str()); 
-    return f.good();
+//OTHER METHODS/************************************************************/
+int Image::readImage(){
+    std::cout << "In bitmap read image" << std::endl;
+    if(path == "")
+        return ErrorHandler::errPath;
+    header = new BitmapHeader(path, errHandle);
+    header->printHeader();
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+    return ErrorHandler::errNoError;
 }
 
 int Image::generateBitmap(){
+    errHandle->printLog("Loading bitmap builder\n");
     errHandle->printLog("Opening ofstream\n");
     std::string sWD;
     std::ofstream file;
@@ -133,10 +116,11 @@ int Image::generateBitmap(){
         }
         else
         {
-            std::cout << "Not yet implemented, exiting" << std::endl;
-            /*************TOBI HIER ***************/
-            exit(1);
+            throw ErrorHandler::errOsErrMac;
         }
+    }
+    catch(int i){
+        return i;
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
@@ -153,7 +137,7 @@ int Image::generateBitmap(){
         file.open(sWD, std::ios::binary | std::ios::trunc);
         errHandle->printLog("Writing header\n");
         file.write(header->getHeader(), header->getOffBits());
-        errHandle->printLog("Header written and closing stream\n");
+        errHandle->printLog("Header written - closing stream\n");
         file.close();
     }
     catch(const std::exception& e){
@@ -167,9 +151,8 @@ int Image::generateBitmap(){
         return errImgWrHead;
     }
     try{
-        errHandle->printLog("Openning ofstream\n");
+        errHandle->printLog("Reopening ofstream\n");
         file.open(sWD, std::ios::binary | std::ios::app);
-        errHandle->printLog("reopened ofstream\n");
         long i = 0;
         std::vector<std::vector<uint32_t>> temp = array->getBData();
         for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
@@ -210,6 +193,45 @@ int Image::generateBitmap(){
         return errImgWrData;
     }
     return errNoError;
+}
+
+int Image::printTextFile(std::string p){
+    try{
+        std::ifstream file(p.c_str());
+        std::string out;
+        while (getline(file,out)) {
+            std::cout << out << std::endl ;
+        }
+        file.close();
+        return errNoError;
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
+}
+
+int Image::writeTextFile(std::string t, std::string n){
+    try{
+        std::string path = "./"+n;
+        std::ofstream file(path.c_str());
+        file << t << std::endl;
+        file.close();
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
 }
 
 int Image::bmpToTxt(){
@@ -279,7 +301,6 @@ int Image::bmpToTxt(){
     return errUnknown;
 }
 
-
 std::string Image::byteToHex(uint8_t v){
     std::string hex;
     for(int i = 0; i <= sizeof(v); ++i){
@@ -320,37 +341,8 @@ std::string Image::decToHex(uint8_t v){
     }
 }
 
-int Image::setFilter(std::string gr, std::string col){
-    filterModeGrey = gr;
-    filterModeCol = col;
-    return 0;
-}
-
-std::string Image::identifyFileFormat(std::string p){
-    std::ifstream file(p);
-    std::stringstream ss;
-    std::string returnValue;
-    if(!file.good())
-        return ERRUNKNOWN;
-    file.seekg(0, std::ios::beg);
-    unsigned char type[10];
-    std::fill(type, type + sizeof(type), 0);
-    file.read((char*)type, sizeof(type));
-    //check for bitmap
-    if(type[0] == 0x42 && type[1] == 0x4D)
-         ss << type[0] << type[1];
-    
-    //check for jpeg
-    if(type[0] == 0xFF && type[1] == 0xD8)
-        ss << JPEG;
-    //check for gif
-    if(type[0] == 0x47 && type[1] == 0x49 && type[2] == 0x46)
-        ss << type[0] << type[1] << type[2];
-    //check for png
-    if(type[0] == 0x89 && type[1] == 0x50 && type[2] == 0x4E && type[3] == 0x47 && type[4] == 0x0D && type[5] == 0x0A && type[6] == 0x1A && type[7] == 0x0A)
-        ss << PNG;
-    ss >> returnValue;
-    std::cout << returnValue << std::endl;
-    file.close();
-    return returnValue;
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
+bool Image::exists(const std::string& name){
+    std::ifstream f(name.c_str()); 
+    return f.good();
 }
