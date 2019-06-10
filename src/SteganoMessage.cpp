@@ -64,12 +64,14 @@ int SteganoMessage::initialize(int argc, char *argv[]){
                     crazy = true;
                     argc > 5 ? this->setLog(true) : this->setLog(false);
                 }
-                else if(argv[3] == LOG)
+                else if(argv[3] == LOG){
+                    this->setFilterMode("");
                     this->setLog(true);
+                }
             }
             else{
                 this->setFilterMode("");
-                    this->setLog(false);
+                this->setLog(false);
             }
             err->printLog("Filter mode: " + std::to_string(stegFilter) + "\n");
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
@@ -234,8 +236,10 @@ int SteganoMessage::setFilterMode(std::string mode){
 
 void SteganoMessage::setLog(bool l){
     log = l;
+    std::string outpath = "./log/"+ this->getTimeString() + ".txt";
+    err->setLog(l, outpath);
     if(l == true)
-        img->setLogMode("./log/"+ this->getTimeString() + ".txt", std::ios::app);
+        img->setLogMode(outpath , std::ios::app);
     else
         img->setLogMode("./outputText.txt", std::ios::trunc);     
 }

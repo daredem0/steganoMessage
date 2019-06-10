@@ -64,8 +64,10 @@ std::string Image::identifyFileFormat(std::string p){
     std::ifstream file(p);
     std::stringstream ss;
     std::string returnValue;
-    if(!file.good())
+    if(!file.good()){
+                    std::cout << 3 << std::endl;
         return ERRUNKNOWN;
+    }
     file.seekg(0, std::ios::beg);
     unsigned char type[10];
     std::fill(type, type + sizeof(type), 0);
@@ -256,7 +258,7 @@ int Image::bmpToTxt(){
         inFile.read(data, (header->getHeight()*header->getWidth())*header->getBitCount()/8);
         
         std::string path = logfilePath;
-        std::ofstream outFile(path.c_str(), logfileMode);
+        std::ofstream outFile(path.c_str(), std::ios::app);
 
         //write header
         int count;

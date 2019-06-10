@@ -16,8 +16,9 @@
 
 #include <list> 
 #include <iterator> 
-#include <iostream>
 #include <string>
+#include <fstream>
+#include <iostream>
 #include <exception>
 #include "constants.h"
 
@@ -47,6 +48,7 @@ public:
     /**
      * Sets flag for logfile output
      */
+    void setLog(bool l, std::string p);
     void setLog(bool l);
     
       ///////////////////////////////////************************************************************/
@@ -75,7 +77,7 @@ public:
      * @brief Prints param to stdout or logfile
      * @param std::string log - logmessage
      */
-    static void printLog(std::string log);
+    void printLog(std::string l);
     
     ///////////////////////////////////************************************************************/
     /**ERROR CONSTANTS**///////////////
@@ -147,6 +149,7 @@ public:
     const static std::string ERROSERRMAC;
 private:
     bool log;/**< flag for logfile*/
+    std::string path;
     
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     

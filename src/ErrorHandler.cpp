@@ -58,6 +58,11 @@ ErrorHandler::~ErrorHandler() {
 
 //SETTERS/************************************************************/
 
+void ErrorHandler::setLog(bool l, std::string p){
+    log = l;
+    path = p;
+}
+
 void ErrorHandler::setLog(bool l){
     log = l;
 }
@@ -84,8 +89,13 @@ void ErrorHandler::printErrorStdEx(const std::exception& e){
     std::cout << e.what() << std::endl;
 }
 
-void ErrorHandler::printLog(std::string log){
-    std::cout << log;
+void ErrorHandler::printLog(std::string l){
+    std::cout << l;
+    if(log == true){
+        std::ofstream outFile(path.c_str(), std::ios::app);
+        outFile << "$ "<< l;
+        outFile.close();
+    }
 }
 
 /********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
