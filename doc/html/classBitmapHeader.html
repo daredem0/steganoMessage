@@ -80,13 +80,14 @@ Collaboration diagram for BitmapHeader:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader__coll__graph.png" border="0" usemap="#BitmapHeader_coll__map" alt="Collaboration graph"/></div>
 <map name="BitmapHeader_coll__map" id="BitmapHeader_coll__map">
-<area shape="rect"  title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="253,549,405,876"/>
-<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="5,145,151,340"/>
-<area shape="rect"  title=" " alt="" coords="9,5,147,83"/>
-<area shape="rect"  title=" " alt="" coords="175,204,226,281"/>
-<area shape="rect"  title=" " alt="" coords="291,204,366,281"/>
-<area shape="rect"  title=" " alt="" coords="399,204,474,281"/>
-<area shape="rect"  title=" " alt="" coords="550,204,609,281"/>
+<area shape="rect"  title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="235,1019,389,1360"/>
+<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="155,292,307,956"/>
+<area shape="rect"  title=" " alt="" coords="286,5,423,83"/>
+<area shape="rect"  title=" " alt="" coords="447,5,566,83"/>
+<area shape="rect"  title=" " alt="" coords="5,5,64,83"/>
+<area shape="rect"  title=" " alt="" coords="211,5,261,83"/>
+<area shape="rect"  title=" " alt="" coords="331,585,400,663"/>
+<area shape="rect"  title=" " alt="" coords="424,585,485,663"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -98,22 +99,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cf57f049eae7d2ee93d5749d678aca5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a2cf57f049eae7d2ee93d5749d678aca5">BitmapHeader</a> (std::string p, <a class="el" href="classErrorHandler.html">ErrorHandler</a> *errH)</td></tr>
 <tr class="memdesc:a2cf57f049eae7d2ee93d5749d678aca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-Standard Constructor, stores p in path member and calls readHeader with p as argument.  <a href="#a2cf57f049eae7d2ee93d5749d678aca5">More...</a><br /></td></tr>
 <tr class="separator:a2cf57f049eae7d2ee93d5749d678aca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0bf5c2238f213b36d7b85d4b7f90be1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#aa0bf5c2238f213b36d7b85d4b7f90be1">BitmapHeader</a> (std::string p, <a class="el" href="classErrorHandler.html">ErrorHandler</a> *errH, bool <a class="el" href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8">read</a>)</td></tr>
+<tr class="memdesc:aa0bf5c2238f213b36d7b85d4b7f90be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-Standard Constructor, stores p in path member and calls readHeader with p as argument.  <a href="#aa0bf5c2238f213b36d7b85d4b7f90be1">More...</a><br /></td></tr>
+<tr class="separator:aa0bf5c2238f213b36d7b85d4b7f90be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a5481f49d70a8c42a9efc17f17fd48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a25a5481f49d70a8c42a9efc17f17fd48">BitmapHeader</a> (const <a class="el" href="classBitmapHeader.html">BitmapHeader</a> &amp;orig)</td></tr>
 <tr class="memdesc:a25a5481f49d70a8c42a9efc17f17fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-Standard Constructor, takes arguments for all members and stores them. Outdated, not used.  <a href="#a25a5481f49d70a8c42a9efc17f17fd48">More...</a><br /></td></tr>
 <tr class="separator:a25a5481f49d70a8c42a9efc17f17fd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e102d5fe9a8619fca7319b148ec23d1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a4e102d5fe9a8619fca7319b148ec23d1">~BitmapHeader</a> ()</td></tr>
 <tr class="separator:a4e102d5fe9a8619fca7319b148ec23d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de360d5111136167f5885bed561bc8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c">readHeader</a> (std::string p)</td></tr>
-<tr class="memdesc:a2de360d5111136167f5885bed561bc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded readHeader, opens ifstream to path and calls read private method.  <a href="#a2de360d5111136167f5885bed561bc8c">More...</a><br /></td></tr>
-<tr class="separator:a2de360d5111136167f5885bed561bc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66adc11592dc1d18edbd46bade1db242"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242">readHeader</a> ()</td></tr>
-<tr class="memdesc:a66adc11592dc1d18edbd46bade1db242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens ifstream to path and calls read private method.  <a href="#a66adc11592dc1d18edbd46bade1db242">More...</a><br /></td></tr>
-<tr class="separator:a66adc11592dc1d18edbd46bade1db242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa">printHeader</a> ()</td></tr>
-<tr class="memdesc:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all stored values, attention, values not initialized, should be fixed in constructor.  <a href="#a72e26bdf3269d382dfbdc76119c1a6aa">More...</a><br /></td></tr>
-<tr class="separator:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa29e1acc8a7a588867039d7c0bdcde04"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04">getHeader</a> ()</td></tr>
-<tr class="memdesc:aa29e1acc8a7a588867039d7c0bdcde04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to char array containing the complete fileheader extracted from original file.  <a href="#aa29e1acc8a7a588867039d7c0bdcde04">More...</a><br /></td></tr>
+<tr class="memdesc:aa29e1acc8a7a588867039d7c0bdcde04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointer to char array containing the complete fileheader extracted/converted from original file.  <a href="#aa29e1acc8a7a588867039d7c0bdcde04">More...</a><br /></td></tr>
 <tr class="separator:aa29e1acc8a7a588867039d7c0bdcde04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53309aa035484da90e8170f9950aa86b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a53309aa035484da90e8170f9950aa86b">getSize</a> ()</td></tr>
 <tr class="memdesc:a53309aa035484da90e8170f9950aa86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for bfSize.  <a href="#a53309aa035484da90e8170f9950aa86b">More...</a><br /></td></tr>
@@ -136,52 +131,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2660782990f1d9547e0aef501f666969"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969">getBitCount</a> ()</td></tr>
 <tr class="memdesc:a2660782990f1d9547e0aef501f666969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for BiBitCount.  <a href="#a2660782990f1d9547e0aef501f666969">More...</a><br /></td></tr>
 <tr class="separator:a2660782990f1d9547e0aef501f666969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="memItemLeft" align="right" valign="top">Header *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a7ac69b70fce7b54c9cd3134a0e68ea58">getHeaderStruct</a> ()</td></tr>
+<tr class="memdesc:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Header type Pointer to header struct to access members.  <a href="#a7ac69b70fce7b54c9cd3134a0e68ea58">More...</a><br /></td></tr>
+<tr class="separator:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de360d5111136167f5885bed561bc8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c">readHeader</a> (std::string p)</td></tr>
+<tr class="memdesc:a2de360d5111136167f5885bed561bc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded readHeader, opens ifstream to path and calls read private method.  <a href="#a2de360d5111136167f5885bed561bc8c">More...</a><br /></td></tr>
+<tr class="separator:a2de360d5111136167f5885bed561bc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66adc11592dc1d18edbd46bade1db242"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242">readHeader</a> ()</td></tr>
+<tr class="memdesc:a66adc11592dc1d18edbd46bade1db242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens ifstream to path and calls read private method.  <a href="#a66adc11592dc1d18edbd46bade1db242">More...</a><br /></td></tr>
+<tr class="separator:a66adc11592dc1d18edbd46bade1db242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa">printHeader</a> ()</td></tr>
+<tr class="memdesc:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all stored values, attention, values not initialized, should be fixed in constructor.  <a href="#a72e26bdf3269d382dfbdc76119c1a6aa">More...</a><br /></td></tr>
+<tr class="separator:a72e26bdf3269d382dfbdc76119c1a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02e59db95074c6a96a44dac03cee77b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b">fixType</a> ()</td></tr>
+<tr class="memdesc:aa02e59db95074c6a96a44dac03cee77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_t Header.bfTypeB. Should always be done after reading of header.  <a href="#aa02e59db95074c6a96a44dac03cee77b">More...</a><br /></td></tr>
+<tr class="separator:aa02e59db95074c6a96a44dac03cee77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aebc19bf8a908f1f7edfc5b10186c9db8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8">read</a> (std::ifstream &amp;f)</td></tr>
 <tr class="memdesc:aebc19bf8a908f1f7edfc5b10186c9db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads header information from ifstream  <a href="#aebc19bf8a908f1f7edfc5b10186c9db8">More...</a><br /></td></tr>
 <tr class="separator:aebc19bf8a908f1f7edfc5b10186c9db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa02e59db95074c6a96a44dac03cee77b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b">fixType</a> ()</td></tr>
-<tr class="memdesc:aa02e59db95074c6a96a44dac03cee77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small helper to extrac characters of bfType.  <a href="#aa02e59db95074c6a96a44dac03cee77b">More...</a><br /></td></tr>
-<tr class="separator:aa02e59db95074c6a96a44dac03cee77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a84fd6f0b94fd4f47ddfea7c3439e8531"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a84fd6f0b94fd4f47ddfea7c3439e8531">bfType</a></td></tr>
-<tr class="separator:a84fd6f0b94fd4f47ddfea7c3439e8531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27de047b18f59853f385b26b9fd74d20"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a27de047b18f59853f385b26b9fd74d20">bfTypeA</a></td></tr>
-<tr class="separator:a27de047b18f59853f385b26b9fd74d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fbb12d28c1be3095b72a5eebeaa4445"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a3fbb12d28c1be3095b72a5eebeaa4445">bfTypeB</a></td></tr>
-<tr class="separator:a3fbb12d28c1be3095b72a5eebeaa4445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27568af32658738302d20edab99bb4b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#ac27568af32658738302d20edab99bb4b">bfSize</a></td></tr>
-<tr class="separator:ac27568af32658738302d20edab99bb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb50b0ca8951540f0bec6fe21b0a7587"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#abb50b0ca8951540f0bec6fe21b0a7587">bfReserved</a></td></tr>
-<tr class="separator:abb50b0ca8951540f0bec6fe21b0a7587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b3470f079b95b2a6f053ad7d860ec06"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a0b3470f079b95b2a6f053ad7d860ec06">bfOffBits</a></td></tr>
-<tr class="separator:a0b3470f079b95b2a6f053ad7d860ec06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bbbb6a668069bd7e6cd16adedce38f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#ad9bbbb6a668069bd7e6cd16adedce38f">biSize</a></td></tr>
-<tr class="separator:ad9bbbb6a668069bd7e6cd16adedce38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6058b8b953cfe11ccb6992077e0353d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a6058b8b953cfe11ccb6992077e0353d0">biWidth</a></td></tr>
-<tr class="separator:a6058b8b953cfe11ccb6992077e0353d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76091025a4295933d3127ae41c6e6611"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a76091025a4295933d3127ae41c6e6611">biHeight</a></td></tr>
-<tr class="separator:a76091025a4295933d3127ae41c6e6611"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a65beab7af6e5dc8c9cda16bacc950"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#ae3a65beab7af6e5dc8c9cda16bacc950">biPlanes</a></td></tr>
-<tr class="separator:ae3a65beab7af6e5dc8c9cda16bacc950"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9156116cca1502fb3f49f3da3890c70d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a9156116cca1502fb3f49f3da3890c70d">biBitCount</a></td></tr>
-<tr class="separator:a9156116cca1502fb3f49f3da3890c70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07680e0e463506764ac69707bc51900c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a07680e0e463506764ac69707bc51900c">biCompression</a></td></tr>
-<tr class="separator:a07680e0e463506764ac69707bc51900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ca96d50917d71818b503ebbe854503f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a4ca96d50917d71818b503ebbe854503f">biSizeImage</a></td></tr>
-<tr class="separator:a4ca96d50917d71818b503ebbe854503f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1569e156f59c8a939c9d4b668ae41bcd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a1569e156f59c8a939c9d4b668ae41bcd">biXPelsPerMeter</a></td></tr>
-<tr class="separator:a1569e156f59c8a939c9d4b668ae41bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f029a3b36773c4da51c18e0453213c7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a9f029a3b36773c4da51c18e0453213c7">biYPelsPerMeter</a></td></tr>
-<tr class="separator:a9f029a3b36773c4da51c18e0453213c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a621822a0df6f18b2f5f6bbebed1de028"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a621822a0df6f18b2f5f6bbebed1de028">biClrUsed</a></td></tr>
-<tr class="separator:a621822a0df6f18b2f5f6bbebed1de028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad90b0f2883207798cdd26f69af5510ba"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#ad90b0f2883207798cdd26f69af5510ba">biClrImportant</a></td></tr>
-<tr class="separator:ad90b0f2883207798cdd26f69af5510ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e2a2c32e87d647977bbd3e700f2265"><td class="memItemLeft" align="right" valign="top">Header&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#ab1e2a2c32e87d647977bbd3e700f2265">header</a></td></tr>
+<tr class="separator:ab1e2a2c32e87d647977bbd3e700f2265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9109a897251733f77942008318482426"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a9109a897251733f77942008318482426">headerStream</a></td></tr>
 <tr class="separator:a9109a897251733f77942008318482426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928111fbaf59eebf24b750cbca11c5dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a928111fbaf59eebf24b750cbca11c5dd">path</a></td></tr>
@@ -192,10 +167,10 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> Class contains header information extracted from bitmap file. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00024">24</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00049">49</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a216e4a8485db7865be70c996f37e4c7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a216e4a8485db7865be70c996f37e4c7d">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a216e4a8485db7865be70c996f37e4c7d">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,12 +186,12 @@ Private Attributes</h2></td></tr>
 
 <p>Standard constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00016">16</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00018">18</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a2cf57f049eae7d2ee93d5749d678aca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf57f049eae7d2ee93d5749d678aca5">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf57f049eae7d2ee93d5749d678aca5">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +224,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00025">25</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00021">21</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -260,14 +235,58 @@ Here is the call graph for this function:</div>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="520,71,673,98"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="721,5,895,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="721,122,895,149"/>
-<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="723,71,893,98"/>
+<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="723,71,893,98"/>
 </map>
 </div>
 
 </div>
 </div>
+<a id="aa0bf5c2238f213b36d7b85d4b7f90be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bf5c2238f213b36d7b85d4b7f90be1">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BitmapHeader::BitmapHeader </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classErrorHandler.html">ErrorHandler</a> *&#160;</td>
+          <td class="paramname"><em>errH</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>read</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Non-Standard Constructor, stores p in path member and calls readHeader with p as argument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a></td><td>*errH - Errorhandler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00025">25</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a25a5481f49d70a8c42a9efc17f17fd48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25a5481f49d70a8c42a9efc17f17fd48">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a5481f49d70a8c42a9efc17f17fd48">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +309,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00019">19</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00028">28</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +337,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Standard deconstructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00022">22</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00031">31</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
@@ -328,9 +347,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int BitmapHeader::fixType </td>
@@ -339,24 +355,20 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Small helper to extrac characters of bfType. </p>
+<p>Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_t Header.bfTypeB. Should always be done after reading of header. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00060">60</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00123">123</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph.png" border="0" usemap="#classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph" alt=""/></div>
 <map name="classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph" id="classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph">
-<area shape="rect"  title="Small helper to extrac characters of bfType." alt="" coords="455,5,625,32"/>
+<area shape="rect"  title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="455,31,625,57"/>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,5,407,32"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="266,56,394,83"/>
 <area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,5,205,32"/>
 </map>
 </div>
@@ -381,7 +393,7 @@ Here is the caller graph for this function:</div>
 <p>Getter for BiSize. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t BiSize </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00151">151</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00053">53</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,18 +415,19 @@ Here is the caller graph for this function:</div>
 <p>Getter for BiBitCount. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t BiBitCount </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00159">159</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00057">57</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.png" border="0" usemap="#classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph" id="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph">
-<area shape="rect"  title="Getter for BiBitCount." alt="" coords="608,56,809,83"/>
+<area shape="rect"  title="Getter for BiBitCount." alt="" coords="608,81,809,108"/>
 <area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="401,5,543,32"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="384,56,560,83"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="405,107,539,133"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,56,560,83"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="405,107,539,133"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="408,157,536,184"/>
 <area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,5,320,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
 <area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
 </map>
 </div>
@@ -436,16 +449,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns pointer to char array containing the complete fileheader extracted from original file. </p>
-<dl class="section return"><dt>Returns</dt><dd>char* pointer to char </dd></dl>
+<p>Returns pointer to char array containing the complete fileheader extracted/converted from original file. </p>
+<p>GETTERS</p><dl class="section return"><dt>Returns</dt><dd>char* pointer to char </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00120">120</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00035">35</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph.png" border="0" usemap="#classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph" alt=""/></div>
 <map name="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph" id="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph">
-<area shape="rect"  title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="5,42,197,69"/>
+<area shape="rect"  title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="5,42,197,69"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="245,5,419,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="245,71,419,98"/>
 </map>
@@ -455,10 +468,42 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph.png" border="0" usemap="#classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph" alt=""/></div>
 <map name="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph" id="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_icgraph">
-<area shape="rect"  title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="608,5,800,32"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="384,5,560,32"/>
+<area shape="rect"  title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="608,31,800,57"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,5,560,32"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="405,56,539,83"/>
 <area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7ac69b70fce7b54c9cd3134a0e68ea58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac69b70fce7b54c9cd3134a0e68ea58">&#9670;&nbsp;</a></span>getHeaderStruct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Header * BitmapHeader::getHeaderStruct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns Header type Pointer to header struct to access members. </p>
+<dl class="section return"><dt>Returns</dt><dd>Header* type pointer to struct </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00058">58</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58_icgraph.png" border="0" usemap="#classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58_icgraph" alt=""/></div>
+<map name="classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58_icgraph" id="classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58_icgraph">
+<area shape="rect"  title="Returns Header type Pointer to header struct to access members." alt="" coords="181,5,412,32"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,133,32"/>
 </map>
 </div>
 
@@ -482,22 +527,23 @@ Here is the caller graph for this function:</div>
 <p>Getter for BiHeight. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t BiHeight </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00155">155</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00055">55</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.png" border="0" usemap="#classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph" id="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph">
-<area shape="rect"  title="Getter for BiHeight." alt="" coords="1141,56,1329,83"/>
+<area shape="rect"  title="Getter for BiHeight." alt="" coords="1141,81,1329,108"/>
 <area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,5,1067,32"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="686,56,821,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,107,1093,133"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="397,5,593,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,107,852,133"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,107,327,133"/>
-<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,157,607,184"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,56,563,83"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,107,1061,133"/>
+<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,157,1093,184"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,5,851,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,81,60,108"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,107,336,133"/>
+<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,157,852,184"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,157,327,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,183,607,209"/>
 </map>
 </div>
 
@@ -521,18 +567,19 @@ Here is the caller graph for this function:</div>
 <p>Getter for bfOffBits. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t bfOffBits </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00149">149</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00052">52</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph.png" border="0" usemap="#classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph" id="classBitmapHeader_a70702e4d8aba2a3502f776f73bfecde8_icgraph">
-<area shape="rect"  title="Getter for bfOffBits." alt="" coords="608,56,799,83"/>
+<area shape="rect"  title="Getter for bfOffBits." alt="" coords="608,81,799,108"/>
 <area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="401,5,543,32"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Generates new bitmap file." alt="" coords="384,56,560,83"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="405,107,539,133"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,56,560,83"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="405,107,539,133"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="408,157,536,184"/>
 <area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,5,320,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
 <area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
 </map>
 </div>
@@ -557,7 +604,7 @@ Here is the caller graph for this function:</div>
 <p>Getter for bfSize. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t bfSize </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00147">147</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00051">51</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
@@ -579,7 +626,7 @@ Here is the caller graph for this function:</div>
 <p>Getter for BiSizeImage. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t BiSizeImage </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00157">157</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00056">56</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 
 </div>
 </div>
@@ -601,22 +648,23 @@ Here is the caller graph for this function:</div>
 <p>Getter for BiWidth. </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t BiWidth </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00153">153</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00054">54</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.png" border="0" usemap="#classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph" alt=""/></div>
 <map name="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph" id="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph">
-<area shape="rect"  title="Getter for BiWidth." alt="" coords="1141,56,1324,83"/>
+<area shape="rect"  title="Getter for BiWidth." alt="" coords="1141,81,1324,108"/>
 <area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,5,1067,32"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates txt file containing bitmap information as hex values." alt="" coords="686,56,821,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,107,1093,133"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="397,5,593,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,107,852,133"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,107,327,133"/>
-<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,157,607,184"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,56,563,83"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,107,1061,133"/>
+<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,157,1093,184"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,5,851,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,81,60,108"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,107,336,133"/>
+<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,157,852,184"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,157,327,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,183,607,209"/>
 </map>
 </div>
 
@@ -639,14 +687,15 @@ Here is the caller graph for this function:</div>
 
 <p>Prints all stored values, attention, values not initialized, should be fixed in constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00102">102</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00105">105</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph.png" border="0" usemap="#classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph" id="classBitmapHeader_a72e26bdf3269d382dfbdc76119c1a6aa_icgraph">
-<area shape="rect"  title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="541,5,743,32"/>
+<area shape="rect"  title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="541,31,743,57"/>
 <area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="352,5,493,32"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="359,56,487,83"/>
 <area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
 <area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
@@ -681,14 +730,14 @@ Here is the caller graph for this function:</div>
 <p>reads header information from ifstream </p>
 <dl class="section return"><dt>Returns</dt><dd>Not yet implemented, should try catch for error handling + return error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00066">66</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00130">130</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8_cgraph.png" border="0" usemap="#classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8_cgraph" alt=""/></div>
 <map name="classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8_cgraph" id="classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8_cgraph">
 <area shape="rect"  title="reads header information from ifstream" alt="" coords="5,64,159,91"/>
-<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="208,5,379,32"/>
+<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="208,5,379,32"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="207,57,380,98"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="207,123,380,149"/>
 </map>
@@ -722,7 +771,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Overloaded readHeader, opens ifstream to path and calls read private method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>OTHER METHODS</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">std::string</td><td>p - Path to bmp file </td></tr>
   </table>
@@ -730,17 +779,17 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00029">29</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00061">61</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph.png" border="0" usemap="#classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph" alt=""/></div>
 <map name="classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph" id="classBitmapHeader_a2de360d5111136167f5885bed561bc8c_cgraph">
-<area shape="rect"  title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,64,205,91"/>
-<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,64,407,91"/>
-<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="456,5,627,32"/>
-<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="455,57,628,98"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="455,123,628,149"/>
+<area shape="rect"  title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,71,205,98"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,71,407,98"/>
+<area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="455,5,628,47"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="455,122,628,149"/>
+<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="456,71,627,98"/>
 </map>
 </div>
 
@@ -764,7 +813,7 @@ Here is the call graph for this function:</div>
 <p>Opens ifstream to path and calls read private method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00038">38</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00083">83</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -774,7 +823,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,71,407,98"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="455,5,628,47"/>
 <area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="455,122,628,149"/>
-<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="456,71,627,98"/>
+<area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="456,71,627,98"/>
 </map>
 </div>
 <div class="dynheader">
@@ -790,431 +839,6 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0b3470f079b95b2a6f053ad7d860ec06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3470f079b95b2a6f053ad7d860ec06">&#9670;&nbsp;</a></span>bfOffBits</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::bfOffBits</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Offset between image data and begin of file </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00109">109</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="abb50b0ca8951540f0bec6fe21b0a7587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb50b0ca8951540f0bec6fe21b0a7587">&#9670;&nbsp;</a></span>bfReserved</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::bfReserved</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Reserved, software dependend </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00108">108</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="ac27568af32658738302d20edab99bb4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac27568af32658738302d20edab99bb4b">&#9670;&nbsp;</a></span>bfSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::bfSize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>size of the file </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00107">107</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a84fd6f0b94fd4f47ddfea7c3439e8531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84fd6f0b94fd4f47ddfea7c3439e8531">&#9670;&nbsp;</a></span>bfType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t BitmapHeader::bfType</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>ASCII COde, usually contains BM </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00104">104</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a27de047b18f59853f385b26b9fd74d20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27de047b18f59853f385b26b9fd74d20">&#9670;&nbsp;</a></span>bfTypeA</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char BitmapHeader::bfTypeA</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>bfType first hex value </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00105">105</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a3fbb12d28c1be3095b72a5eebeaa4445"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fbb12d28c1be3095b72a5eebeaa4445">&#9670;&nbsp;</a></span>bfTypeB</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char BitmapHeader::bfTypeB</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>bfType second hex value </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00106">106</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a9156116cca1502fb3f49f3da3890c70d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9156116cca1502fb3f49f3da3890c70d">&#9670;&nbsp;</a></span>biBitCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t BitmapHeader::biBitCount</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Color Depth in bit </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00115">115</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="ad90b0f2883207798cdd26f69af5510ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad90b0f2883207798cdd26f69af5510ba">&#9670;&nbsp;</a></span>biClrImportant</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biClrImportant</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>biClrImportant </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00121">121</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a621822a0df6f18b2f5f6bbebed1de028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a621822a0df6f18b2f5f6bbebed1de028">&#9670;&nbsp;</a></span>biClrUsed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biClrUsed</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>biClrUsed </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00120">120</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a07680e0e463506764ac69707bc51900c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07680e0e463506764ac69707bc51900c">&#9670;&nbsp;</a></span>biCompression</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biCompression</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00116">116</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a76091025a4295933d3127ae41c6e6611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76091025a4295933d3127ae41c6e6611">&#9670;&nbsp;</a></span>biHeight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biHeight</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>height in pixel </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00113">113</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="ae3a65beab7af6e5dc8c9cda16bacc950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3a65beab7af6e5dc8c9cda16bacc950">&#9670;&nbsp;</a></span>biPlanes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t BitmapHeader::biPlanes</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>oputdated </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00114">114</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="ad9bbbb6a668069bd7e6cd16adedce38f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9bbbb6a668069bd7e6cd16adedce38f">&#9670;&nbsp;</a></span>biSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biSize</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>size of information header </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00111">111</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a4ca96d50917d71818b503ebbe854503f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ca96d50917d71818b503ebbe854503f">&#9670;&nbsp;</a></span>biSizeImage</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biSizeImage</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>biSizeImage </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00117">117</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a6058b8b953cfe11ccb6992077e0353d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6058b8b953cfe11ccb6992077e0353d0">&#9670;&nbsp;</a></span>biWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biWidth</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>width in pixel </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00112">112</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a1569e156f59c8a939c9d4b668ae41bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1569e156f59c8a939c9d4b668ae41bcd">&#9670;&nbsp;</a></span>biXPelsPerMeter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biXPelsPerMeter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>biXPelsPerMeter </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00118">118</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
-<a id="a9f029a3b36773c4da51c18e0453213c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f029a3b36773c4da51c18e0453213c7">&#9670;&nbsp;</a></span>biYPelsPerMeter</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BitmapHeader::biYPelsPerMeter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>biYPelsPerMeter </p>
-
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00119">119</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
-
-</div>
-</div>
 <a id="ab06f141245d592302dabe48571d12e32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab06f141245d592302dabe48571d12e32">&#9670;&nbsp;</a></span>errHandle</h2>
 
@@ -1236,7 +860,32 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00127">127</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00153">153</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+
+</div>
+</div>
+<a id="ab1e2a2c32e87d647977bbd3e700f2265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e2a2c32e87d647977bbd3e700f2265">&#9670;&nbsp;</a></span>header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Header BitmapHeader::header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Struct containing 54byte header information + bitOffSet - 54 byte leftover </p>
+
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00150">150</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>
@@ -1261,7 +910,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to char array containing the complete header </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00123">123</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00151">151</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>
@@ -1286,7 +935,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Imagepath </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00125">125</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00152">152</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>

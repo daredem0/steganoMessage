@@ -44,18 +44,24 @@ public:
      * Standard deconstructor.
      */
     virtual ~Message();
+    ///////////////////////////////////************************************************************/
+    /**GETTERS**///////////////////////
+    ///////////////////////////////////
+    /**
+     * @brief getter for std::string mess
+     * @return std::string mess
+     */
+    std::string getMessage(void);
     
+    ///////////////////////////////////************************************************************/
+    /**SETTERS**///////////////////////
+    ///////////////////////////////////
     /**
      * @brief setter for std::string mess
      * @param std::string m - Contains the message extracted from terminal.
      * @return value > 0 for all good, -1 for not so good.
      */
     int setMessage(std::string m); 
-    /**
-     * @brief getter for std::string mess
-     * @return std::string mess
-     */
-    std::string getMessage(void);
 private:
     std::string mess; /**< Stores the message extracted from terminal.*/
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/

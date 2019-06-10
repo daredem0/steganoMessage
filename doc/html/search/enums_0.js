@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filter',['Filter',['../constants_8h.html#adccf6e8a392b0d35f185df12521c474b',1,'constants.h']]]
+  ['filtermode',['FilterMode',['../constants_8h.html#a36bd51b89b9e0e6e4dbbe565b9155083',1,'constants.h']]]
 ];

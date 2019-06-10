@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['setfilter',['setFilter',['../classBitmapArray.html#a432bda57a77788bfd54e3310c9e83c0c',1,'BitmapArray::setFilter()'],['../classImage.html#ac81078a3d6c364aada9afc3c8a668ef8',1,'Image::setFilter()']]],
-  ['setfiltermode',['setFilterMode',['../classSteganoMessage.html#a5c3ef910b17f4bbe32a73a33be9d7586',1,'SteganoMessage']]],
-  ['setmessage',['setMessage',['../classMessage.html#aa1e4c60f94308a9367ad3106c34b28f3',1,'Message']]],
-  ['setmode',['setMode',['../classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458',1,'SteganoMessage']]],
-  ['setpath',['setPath',['../classImage.html#aabb8cec47c25c0e3a36ba2a455c2aa6c',1,'Image']]],
-  ['steganomessage',['SteganoMessage',['../classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697',1,'SteganoMessage::SteganoMessage()'],['../classSteganoMessage.html#a67a8a4a8aae12db32bb758e6cd44b16a',1,'SteganoMessage::SteganoMessage(const SteganoMessage &amp;orig)']]],
-  ['substb',['substB',['../classSteganoMessage.html#a7eb6fd157c777b2947603d018610ad0f',1,'SteganoMessage']]],
-  ['substg',['substG',['../classSteganoMessage.html#a4222a1b128b9b188c30ea99180f74111',1,'SteganoMessage']]],
-  ['substr',['substR',['../classSteganoMessage.html#a021f0126410e739bc89ac2458198ad0c',1,'SteganoMessage']]],
-  ['swapbg',['swapBG',['../classSteganoMessage.html#a06f64f5198cf180771dfe692125936be',1,'SteganoMessage']]],
-  ['swapbr',['swapBR',['../classSteganoMessage.html#a530e5ee67cf45ac56f8f3be4d2b44d2e',1,'SteganoMessage']]],
-  ['swapbytes',['swapBytes',['../classSteganoMessage.html#af80189e6fb64aa4ae6cc48f92eaec147',1,'SteganoMessage']]],
-  ['swapbytesbits',['swapBytesBits',['../classSteganoMessage.html#a67f4f4c91ecddb89368c4b9cc42ac07e',1,'SteganoMessage']]],
-  ['swapbytesoctets',['swapBytesOctets',['../classSteganoMessage.html#ad21d0b7dd149e81d9a199fb26a799da4',1,'SteganoMessage']]],
-  ['swapbytesoctetsbits',['swapBytesOctetsBits',['../classSteganoMessage.html#ab17fa1a4dc587ae268e400913cc5f0c8',1,'SteganoMessage']]],
-  ['swapgr',['swapGR',['../classSteganoMessage.html#a7e29a46073f2ef9c6e44bb1d46ad534f',1,'SteganoMessage']]],
-  ['swapoctets',['swapOctets',['../classSteganoMessage.html#a4751ad396485b5859b84970ddd20290d',1,'SteganoMessage']]]
+  ['printallerrors',['printAllErrors',['../classErrorHandler.html#a1108324c221544c928a2de3a2cf9ba98',1,'ErrorHandler']]],
+  ['printarray',['printArray',['../classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1',1,'BitmapArray::printArray()'],['../classBitmapArray.html#a99a8a164e51e29407f24dab4752232c1',1,'BitmapArray::printArray(char *c, size_t s)']]],
+  ['printerror',['printError',['../classErrorHandler.html#ab90b8248f24e3129df69d224585956dd',1,'ErrorHandler::printError(int err)'],['../classErrorHandler.html#ad1e6aa8018e2a22460a1431e6e7d8804',1,'ErrorHandler::printError(const std::string err)']]],
+  ['printerrorstdex',['printErrorStdEx',['../classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37',1,'ErrorHandler']]],
+  ['printheader',['printHeader',['../classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa',1,'BitmapHeader']]],
+  ['printhelp',['printHelp',['../main_8cpp.html#af03f7609a66def2e7fae02a477c38d97',1,'main.cpp']]],
+  ['printlog',['printLog',['../classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52',1,'ErrorHandler']]],
+  ['printtextfile',['printTextFile',['../classImage.html#ae5daf791502caefeae1b15360d354513',1,'Image']]],
+  ['printvalues',['printValues',['../classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0',1,'SteganoMessage']]]
 ];

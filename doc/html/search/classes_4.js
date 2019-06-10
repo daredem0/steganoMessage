@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['steganomessage',['SteganoMessage',['../classSteganoMessage.html',1,'']]]
+  ['jpeg',['Jpeg',['../classJpeg.html',1,'']]]
 ];

@@ -28,36 +28,47 @@ Collaboration diagram for Stegano\+Message\+:
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}{$\sim$\+Stegano\+Message}} ()
 \item 
-\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef}{get\+Err\+Handle}} ()
-\begin{DoxyCompactList}\small\item\em Gives pointer to the \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object stored in the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}{initialize}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fully initializes the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object into a operatable state to ensure that other methods can be called safely. This N\+E\+E\+DS to be called before everything else. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSteganoMessage_a43a7d1579509a4004a86ad70dad10f65}{build\+Message}} (std\+::string m)
 \begin{DoxyCompactList}\small\item\em Builds new \mbox{\hyperlink{classMessage}{Message}} type object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMessage}{Message}} $\ast$ \mbox{\hyperlink{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}{get\+Message}} ()
-\begin{DoxyCompactList}\small\item\em Getter for pointer to message object. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d}{build\+Image}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{path}})
 \begin{DoxyCompactList}\small\item\em Builds new \mbox{\hyperlink{classImage}{Image}} type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a0134757a8c79caa9dca9bcce0686d1ef}{get\+Err\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em Gives pointer to the \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object stored in the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMessage}{Message}} $\ast$ \mbox{\hyperlink{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}{get\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Getter for pointer to message object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c}{get\+Image}} ()
 \begin{DoxyCompactList}\small\item\em Getter for image object. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}{set\+Mode}} (std\+::string m)
-\begin{DoxyCompactList}\small\item\em Stores mode command in member, sets flag for modeset. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSteganoMessage_a7dc660e6d2c8f162636f789cfedde67e}{get\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Getter for stored mode. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}{print\+Values}} ()
-\begin{DoxyCompactList}\small\item\em Prints values stored for mode and path. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSteganoMessage_ace172144e49a4da69b890958b3b8089b}{get\+Path\+Verified}} ()
 \begin{DoxyCompactList}\small\item\em Getter for path verified flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSteganoMessage_ab560ec6c0d3e99c19822ca1119a68b92}{get\+Log\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Getter for log flag. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}{set\+Mode}} (std\+::string m)
+\begin{DoxyCompactList}\small\item\em Stores mode command in member, sets flag for modeset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSteganoMessage_a5c3ef910b17f4bbe32a73a33be9d7586}{set\+Filter\+Mode}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}{mode}})
+\begin{DoxyCompactList}\small\item\em Sets the mode for the after reading filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSteganoMessage_a438e9d5189a8e3b83021fada4a6a469c}{set\+Log}} (bool l)
+\begin{DoxyCompactList}\small\item\em Sets flag to create logfile. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSteganoMessage_a9d87adef1584cc184ccd4b5d86fba744}{check\+Path}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em static method to quickly check if a path possibly makes sense \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSteganoMessage_acc5a49a35b46d8bf4c40cca8b8c5a52b}{exists}} (std\+::string p)
 \begin{DoxyCompactList}\small\item\em Checks if a path exists. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}{initialize}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\begin{DoxyCompactList}\small\item\em Fully initializes the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object into a operatable state to ensure that other methods can be called safely. This N\+E\+E\+DS to be called before everything else. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSteganoMessage_a2649e515941e730520b759282d00dcd6}{mode\+Handler}} ()
 \begin{DoxyCompactList}\small\item\em Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classSteganoMessage_a5c3ef910b17f4bbe32a73a33be9d7586}{set\+Filter\+Mode}} (std\+::string \mbox{\hyperlink{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}{mode}})
-\begin{DoxyCompactList}\small\item\em Sets the mode for the after reading filter. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSteganoMessage_aec575d6949cf2eb49adefe2f1299d075}{apply\+Filter}} ()
-\begin{DoxyCompactList}\small\item\em Applies the filter stored in steg\+Filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Applies the filter stored in steg\+Filter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0}{print\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Prints values stored for mode and path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classSteganoMessage_a9771a4abc2d7a5a2a8cfb1684f7f313f}{get\+Time\+String}} ()
+\begin{DoxyCompactList}\small\item\em Generates a time string. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classSteganoMessage_a9aaa5e476220c95e1a68b4d722de43b1}{get\+Time\+Date}} (char t, std\+::time\+\_\+t system\+\_\+clock)
+\begin{DoxyCompactList}\small\item\em Generates a string containing only one time date information. t=Y -\/$>$ year; t=M -\/$>$ month; t=D -\/$>$ day; t=h -\/$>$ hour; t=m -\/$>$ minute; t=s -\/$>$ second. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,35 +82,6 @@ void \mbox{\hyperlink{classSteganoMessage_a1cb326688e9a054127396d198bd6f976}{gen
 \begin{DoxyCompactList}\small\item\em Generaically calls the previously defined filter functions. They are designed to fit second parameter and following filters should be designed accordingly. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSteganoMessage_a1a26242c2e6d146cba1ad6831ab60ba7}{dummy\+Filter}} (std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$$>$ $\ast$d)
 \begin{DoxyCompactList}\small\item\em For debugging to call new implemented filters not ready for release. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a28fdc9b9da4cbbffed718d351da65fd3}{revert\+Uint}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Turns the whole bit-\/pattern around. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_af46fa3a09a19fc73c146e22d6a32657a}{invert}} (uint8\+\_\+t w)
-\begin{DoxyCompactList}\small\item\em Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mode/yellow in crazy mode. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_af80189e6fb64aa4ae6cc48f92eaec147}{swap\+Bytes}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps the bytes as good as possible depending on value in s. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a4751ad396485b5859b84970ddd20290d}{swap\+Octets}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta in normal mode/yellow in crazy mode. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_ad21d0b7dd149e81d9a199fb26a799da4}{swap\+Bytes\+Octets}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps the bytes first and then each octets as good as possible depending on value in s. Very noisy filter. In normal mode shift into magenta, in crazy mode shift into yellow. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a67f4f4c91ecddb89368c4b9cc42ac07e}{swap\+Bytes\+Bits}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps the bytes first and then the bits as good as possible depending on value in s. Strong noise and psychodelig color effect. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_ab17fa1a4dc587ae268e400913cc5f0c8}{swap\+Bytes\+Octets\+Bits}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps the bytes first followed by the octets and bits as good as possible depending on value in s. Fluid like filter. In normal mode shift into magenta, in crazy mode shift into yellow. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a530e5ee67cf45ac56f8f3be4d2b44d2e}{swap\+BR}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps Blue with Red value if size $>$= 24bit. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a06f64f5198cf180771dfe692125936be}{swap\+BG}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps Blue with Green value if size $>$= 24bit. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a7e29a46073f2ef9c6e44bb1d46ad534f}{swap\+GR}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Swaps Green with Red value if size $>$= 24bit. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a7eb6fd157c777b2947603d018610ad0f}{substB}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Substracts blue value from each channel if size $>$= 24bit. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a4222a1b128b9b188c30ea99180f74111}{substG}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Substracts green value from each channel if size $>$= 24bit. \end{DoxyCompactList}\item 
-static uint32\+\_\+t \mbox{\hyperlink{classSteganoMessage_a021f0126410e739bc89ac2458198ad0c}{substR}} (uint32\+\_\+t d, size\+\_\+t s)
-\begin{DoxyCompactList}\small\item\em Substracts red value from each channel if size $>$= 24bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,14 +99,16 @@ bool \mbox{\hyperlink{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}{pat
 \item 
 bool \mbox{\hyperlink{classSteganoMessage_aa66c9e1d0367981d42ede819e1a51131}{crazy}}
 \item 
-\mbox{\hyperlink{constants_8h_adccf6e8a392b0d35f185df12521c474b}{Filter}} \mbox{\hyperlink{classSteganoMessage_ab0cca34d0f02f406733e62a477bb15be}{steg\+Filter}}
+bool \mbox{\hyperlink{classSteganoMessage_a687c455d3f09eb5349e0358cb07aa21c}{log}}
+\item 
+\mbox{\hyperlink{constants_8h_a36bd51b89b9e0e6e4dbbe565b9155083}{Filter\+Mode}} \mbox{\hyperlink{classSteganoMessage_af20fb772ae34deaccd23144b38f06320}{steg\+Filter}}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} class ist implemented to store values that are needed to be shared between all classes (for example error\+Handler). It shall be constructed in the beginning and terminated in the very end of the runtime. 
 
-Definition at line 29 of file Stegano\+Message.\+h.
+Definition at line 32 of file Stegano\+Message.\+h.
 
 
 
@@ -141,8 +125,16 @@ Standard constructor. Also creates new \mbox{\hyperlink{classErrorHandler}{Error
 
 
 
-Definition at line 16 of file Stegano\+Message.\+cpp.
+Definition at line 18 of file Stegano\+Message.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a7a14cbd03ebca6764f8b234f8dcd1697_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a67a8a4a8aae12db32bb758e6cd44b16a}\label{classSteganoMessage_a67a8a4a8aae12db32bb758e6cd44b16a}} 
 \index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
 \index{SteganoMessage@{SteganoMessage}!SteganoMessage@{SteganoMessage}}
@@ -160,7 +152,7 @@ Copy Constructor.
 \end{DoxyParams}
 
 
-Definition at line 26 of file Stegano\+Message.\+cpp.
+Definition at line 28 of file Stegano\+Message.\+cpp.
 
 \mbox{\Hypertarget{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}\label{classSteganoMessage_af60430fa53ebe9ee44e60d906b67059d}} 
 \index{SteganoMessage@{SteganoMessage}!````~SteganoMessage@{$\sim$SteganoMessage}}
@@ -170,7 +162,7 @@ Definition at line 26 of file Stegano\+Message.\+cpp.
 
 Standard deconstructor. Frees space allocated for int $\ast$err 
 
-Definition at line 30 of file Stegano\+Message.\+cpp.
+Definition at line 32 of file Stegano\+Message.\+cpp.
 
 
 
@@ -190,7 +182,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 246 of file Stegano\+Message.\+cpp.
+Definition at line 309 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -228,8 +220,16 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 56 of file Stegano\+Message.\+cpp.
+Definition at line 109 of file Stegano\+Message.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_ad90a4cf8cf03febfb4c3df955ccab13d_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -248,7 +248,7 @@ Here is the caller graph for this function\+:
 
 Builds new \mbox{\hyperlink{classMessage}{Message}} type object. 
 
-
+Builders
 \begin{DoxyParams}{Parameters}
 {\em std\+::sring} & containing message \\
 \hline
@@ -258,7 +258,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 44 of file Stegano\+Message.\+cpp.
+Definition at line 99 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -278,7 +278,7 @@ Here is the caller graph for this function\+:
 
 static method to quickly check if a path possibly makes sense 
 
-
+E\+V\+A\+L\+U\+A\+T\+I\+O\+NS
 \begin{DoxyParams}{Parameters}
 {\em std\+::string} & containing the path that shall be checked \\
 \hline
@@ -288,7 +288,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 95 of file Stegano\+Message.\+cpp.
+Definition at line 248 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -316,9 +316,9 @@ Here is the caller graph for this function\+:
 
 Displays progress in \% in stdout when c is a value between 0 and p. 
 
+Progress 
 
-
-Definition at line 455 of file Stegano\+Message.\+cpp.
+Definition at line 378 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -340,7 +340,7 @@ Displays 100\% progress for p = 0 or -\/1 for wrong value in p.
 
 
 
-Definition at line 462 of file Stegano\+Message.\+cpp.
+Definition at line 385 of file Stegano\+Message.\+cpp.
 
 \mbox{\Hypertarget{classSteganoMessage_a1a26242c2e6d146cba1ad6831ab60ba7}\label{classSteganoMessage_a1a26242c2e6d146cba1ad6831ab60ba7}} 
 \index{SteganoMessage@{SteganoMessage}!dummyFilter@{dummyFilter}}
@@ -359,7 +359,7 @@ For debugging to call new implemented filters not ready for release.
 \end{DoxyParams}
 
 
-Definition at line 317 of file Stegano\+Message.\+cpp.
+Definition at line 423 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -397,7 +397,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 105 of file Stegano\+Message.\+cpp.
+Definition at line 258 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -425,7 +425,7 @@ Here is the caller graph for this function\+:
 
 Generaically calls the previously defined filter functions. They are designed to fit second parameter and following filters should be designed accordingly. 
 
-
+F\+I\+L\+T\+E\+RS
 \begin{DoxyParams}{Parameters}
 {\em std\+::vector$<$std\+::vector$<$uint32\+\_\+t$>$$>$} & $\ast$d -\/ Pointer to array containing image information. \\
 \hline
@@ -434,7 +434,7 @@ Generaically calls the previously defined filter functions. They are designed to
 \end{DoxyParams}
 
 
-Definition at line 302 of file Stegano\+Message.\+cpp.
+Definition at line 398 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -462,12 +462,12 @@ Here is the caller graph for this function\+:
 
 Gives pointer to the \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} object stored in the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} type object. 
 
-\begin{DoxyReturn}{Returns}
+G\+E\+T\+T\+E\+RS\begin{DoxyReturn}{Returns}
 pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} 
 \end{DoxyReturn}
 
 
-Definition at line 39 of file Stegano\+Message.\+cpp.
+Definition at line 128 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -492,7 +492,7 @@ Pointer to \mbox{\hyperlink{classImage}{Image}}
 \end{DoxyReturn}
 
 
-Definition at line 64 of file Stegano\+Message.\+cpp.
+Definition at line 130 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -500,6 +500,31 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classSteganoMessage_a2e3ad705a0219edfd2150f3f7931979c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_ab560ec6c0d3e99c19822ca1119a68b92}\label{classSteganoMessage_ab560ec6c0d3e99c19822ca1119a68b92}} 
+\index{SteganoMessage@{SteganoMessage}!getLogMode@{getLogMode}}
+\index{getLogMode@{getLogMode}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getLogMode()}{getLogMode()}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::get\+Log\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for log flag. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true for log activated 
+\end{DoxyReturn}
+
+
+Definition at line 173 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classSteganoMessage_ab560ec6c0d3e99c19822ca1119a68b92_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}\label{classSteganoMessage_ad29978e925056ad70dc5c45b1e1681eb}} 
@@ -517,7 +542,7 @@ Pointer to \mbox{\hyperlink{classMessage}{Message}}
 \end{DoxyReturn}
 
 
-Definition at line 52 of file Stegano\+Message.\+cpp.
+Definition at line 129 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -542,7 +567,7 @@ std\+::string containing mode command or \char`\"{}\char`\"{}
 \end{DoxyReturn}
 
 
-Definition at line 78 of file Stegano\+Message.\+cpp.
+Definition at line 131 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -567,7 +592,7 @@ bool -\/ true for verified, false for not verified.
 \end{DoxyReturn}
 
 
-Definition at line 123 of file Stegano\+Message.\+cpp.
+Definition at line 137 of file Stegano\+Message.\+cpp.
 
 \mbox{\Hypertarget{classSteganoMessage_a12231d3596b90fe4c6d67bd694b27d07}\label{classSteganoMessage_a12231d3596b90fe4c6d67bd694b27d07}} 
 \index{SteganoMessage@{SteganoMessage}!getPixel@{getPixel}}
@@ -579,12 +604,12 @@ Definition at line 123 of file Stegano\+Message.\+cpp.
 
 Method to provide the amount of pixels in the data part of the image file. 
 
-\begin{DoxyReturn}{Returns}
+G\+E\+T\+T\+E\+RS\begin{DoxyReturn}{Returns}
 integer value containing amount of pixels 
 \end{DoxyReturn}
 
 
-Definition at line 469 of file Stegano\+Message.\+cpp.
+Definition at line 393 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -600,6 +625,64 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classSteganoMessage_a12231d3596b90fe4c6d67bd694b27d07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a9aaa5e476220c95e1a68b4d722de43b1}\label{classSteganoMessage_a9aaa5e476220c95e1a68b4d722de43b1}} 
+\index{SteganoMessage@{SteganoMessage}!getTimeDate@{getTimeDate}}
+\index{getTimeDate@{getTimeDate}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getTimeDate()}{getTimeDate()}}
+{\footnotesize\ttfamily std\+::string Stegano\+Message\+::get\+Time\+Date (\begin{DoxyParamCaption}\item[{char}]{t,  }\item[{std\+::time\+\_\+t}]{system\+\_\+clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a string containing only one time date information. t=Y -\/$>$ year; t=M -\/$>$ month; t=D -\/$>$ day; t=h -\/$>$ hour; t=m -\/$>$ minute; t=s -\/$>$ second. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ containing year, month, day, hour, minute or second extracted from system\+\_\+clock 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file Stegano\+Message.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a9aaa5e476220c95e1a68b4d722de43b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a9771a4abc2d7a5a2a8cfb1684f7f313f}\label{classSteganoMessage_a9771a4abc2d7a5a2a8cfb1684f7f313f}} 
+\index{SteganoMessage@{SteganoMessage}!getTimeString@{getTimeString}}
+\index{getTimeString@{getTimeString}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{getTimeString()}{getTimeString()}}
+{\footnotesize\ttfamily std\+::string Stegano\+Message\+::get\+Time\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a time string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string -\/ y-\/m-\/d\+\_\+h-\/m-\/s 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a9771a4abc2d7a5a2a8cfb1684f7f313f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a9771a4abc2d7a5a2a8cfb1684f7f313f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}\label{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc}} 
@@ -620,11 +703,11 @@ Fully initializes the \mbox{\hyperlink{classSteganoMessage}{Stegano\+Message}} t
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-integer with error code 
+integer with error code\+I\+N\+IT 
 \end{DoxyReturn}
 
 
-Definition at line 127 of file Stegano\+Message.\+cpp.
+Definition at line 42 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -642,38 +725,6 @@ Here is the caller graph for this function\+:
 \includegraphics[width=304pt]{classSteganoMessage_aeb4d2b69498c148508e2ca70194679cc_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSteganoMessage_af46fa3a09a19fc73c146e22d6a32657a}\label{classSteganoMessage_af46fa3a09a19fc73c146e22d6a32657a}} 
-\index{SteganoMessage@{SteganoMessage}!invert@{invert}}
-\index{invert@{invert}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{invert()}{invert()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::invert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mode/yellow in crazy mode. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern stored in first 2 bytes of the integer 
-\end{DoxyReturn}
-
-
-Definition at line 428 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_af46fa3a09a19fc73c146e22d6a32657a_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a2649e515941e730520b759282d00dcd6}\label{classSteganoMessage_a2649e515941e730520b759282d00dcd6}} 
 \index{SteganoMessage@{SteganoMessage}!modeHandler@{modeHandler}}
 \index{modeHandler@{modeHandler}!SteganoMessage@{SteganoMessage}}
@@ -684,12 +735,12 @@ Here is the caller graph for this function\+:
 
 Handles the calling of following methods depending on the set mode. initialize needs to be called before this, else the sun will explode. 
 
-\begin{DoxyReturn}{Returns}
+O\+T\+H\+ER M\+E\+T\+H\+O\+DS\begin{DoxyReturn}{Returns}
 integer with error code 
 \end{DoxyReturn}
 
 
-Definition at line 174 of file Stegano\+Message.\+cpp.
+Definition at line 277 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -719,7 +770,7 @@ Prints values stored for mode and path.
 
 
 
-Definition at line 84 of file Stegano\+Message.\+cpp.
+Definition at line 365 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -737,46 +788,6 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classSteganoMessage_a3ea3f5ff720bf56d33f168d47e2897b0_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a28fdc9b9da4cbbffed718d351da65fd3}\label{classSteganoMessage_a28fdc9b9da4cbbffed718d351da65fd3}} 
-\index{SteganoMessage@{SteganoMessage}!revertUint@{revertUint}}
-\index{revertUint@{revertUint}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{revertUint()}{revertUint()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::revert\+Uint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Turns the whole bit-\/pattern around. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 435 of file Stegano\+Message.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a28fdc9b9da4cbbffed718d351da65fd3_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a28fdc9b9da4cbbffed718d351da65fd3_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a5c3ef910b17f4bbe32a73a33be9d7586}\label{classSteganoMessage_a5c3ef910b17f4bbe32a73a33be9d7586}} 
 \index{SteganoMessage@{SteganoMessage}!setFilterMode@{setFilterMode}}
 \index{setFilterMode@{setFilterMode}!SteganoMessage@{SteganoMessage}}
@@ -792,7 +803,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 197 of file Stegano\+Message.\+cpp.
+Definition at line 188 of file Stegano\+Message.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -810,6 +821,41 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classSteganoMessage_a5c3ef910b17f4bbe32a73a33be9d7586_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classSteganoMessage_a438e9d5189a8e3b83021fada4a6a469c}\label{classSteganoMessage_a438e9d5189a8e3b83021fada4a6a469c}} 
+\index{SteganoMessage@{SteganoMessage}!setLog@{setLog}}
+\index{setLog@{setLog}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{setLog()}{setLog()}}
+{\footnotesize\ttfamily void Stegano\+Message\+::set\+Log (\begin{DoxyParamCaption}\item[{bool}]{l }\end{DoxyParamCaption})}
+
+
+
+Sets flag to create logfile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & -\/ true -\/$>$ logfile creation active \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 237 of file Stegano\+Message.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a438e9d5189a8e3b83021fada4a6a469c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSteganoMessage_a438e9d5189a8e3b83021fada4a6a469c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}\label{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458}} 
 \index{SteganoMessage@{SteganoMessage}!setMode@{setMode}}
 \index{setMode@{setMode}!SteganoMessage@{SteganoMessage}}
@@ -820,7 +866,7 @@ Here is the caller graph for this function\+:
 
 Stores mode command in member, sets flag for modeset. 
 
-
+S\+E\+T\+T\+E\+RS
 \begin{DoxyParams}{Parameters}
 {\em std\+::string} & containing mode command \\
 \hline
@@ -830,7 +876,7 @@ integer with error code
 \end{DoxyReturn}
 
 
-Definition at line 68 of file Stegano\+Message.\+cpp.
+Definition at line 178 of file Stegano\+Message.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -838,382 +884,6 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classSteganoMessage_a3e06a73baa5744b5eb9152f4ae65f458_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a7eb6fd157c777b2947603d018610ad0f}\label{classSteganoMessage_a7eb6fd157c777b2947603d018610ad0f}} 
-\index{SteganoMessage@{SteganoMessage}!substB@{substB}}
-\index{substB@{substB}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{substB()}{substB()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::substB (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Substracts blue value from each channel if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 389 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a7eb6fd157c777b2947603d018610ad0f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a4222a1b128b9b188c30ea99180f74111}\label{classSteganoMessage_a4222a1b128b9b188c30ea99180f74111}} 
-\index{SteganoMessage@{SteganoMessage}!substG@{substG}}
-\index{substG@{substG}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{substG()}{substG()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::substG (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Substracts green value from each channel if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 415 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a4222a1b128b9b188c30ea99180f74111_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a021f0126410e739bc89ac2458198ad0c}\label{classSteganoMessage_a021f0126410e739bc89ac2458198ad0c}} 
-\index{SteganoMessage@{SteganoMessage}!substR@{substR}}
-\index{substR@{substR}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{substR()}{substR()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::substR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Substracts red value from each channel if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 402 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a021f0126410e739bc89ac2458198ad0c_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a06f64f5198cf180771dfe692125936be}\label{classSteganoMessage_a06f64f5198cf180771dfe692125936be}} 
-\index{SteganoMessage@{SteganoMessage}!swapBG@{swapBG}}
-\index{swapBG@{swapBG}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBG()}{swapBG()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+BG (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps Blue with Green value if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 336 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a06f64f5198cf180771dfe692125936be_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a530e5ee67cf45ac56f8f3be4d2b44d2e}\label{classSteganoMessage_a530e5ee67cf45ac56f8f3be4d2b44d2e}} 
-\index{SteganoMessage@{SteganoMessage}!swapBR@{swapBR}}
-\index{swapBR@{swapBR}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBR()}{swapBR()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+BR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps Blue with Red value if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 323 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a530e5ee67cf45ac56f8f3be4d2b44d2e_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_af80189e6fb64aa4ae6cc48f92eaec147}\label{classSteganoMessage_af80189e6fb64aa4ae6cc48f92eaec147}} 
-\index{SteganoMessage@{SteganoMessage}!swapBytes@{swapBytes}}
-\index{swapBytes@{swapBytes}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBytes()}{swapBytes()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+Bytes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps the bytes as good as possible depending on value in s. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 376 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_af80189e6fb64aa4ae6cc48f92eaec147_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a67f4f4c91ecddb89368c4b9cc42ac07e}\label{classSteganoMessage_a67f4f4c91ecddb89368c4b9cc42ac07e}} 
-\index{SteganoMessage@{SteganoMessage}!swapBytesBits@{swapBytesBits}}
-\index{swapBytesBits@{swapBytesBits}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBytesBits()}{swapBytesBits()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+Bytes\+Bits (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps the bytes first and then the bits as good as possible depending on value in s. Strong noise and psychodelig color effect. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 451 of file Stegano\+Message.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a67f4f4c91ecddb89368c4b9cc42ac07e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a67f4f4c91ecddb89368c4b9cc42ac07e_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_ad21d0b7dd149e81d9a199fb26a799da4}\label{classSteganoMessage_ad21d0b7dd149e81d9a199fb26a799da4}} 
-\index{SteganoMessage@{SteganoMessage}!swapBytesOctets@{swapBytesOctets}}
-\index{swapBytesOctets@{swapBytesOctets}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBytesOctets()}{swapBytesOctets()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+Bytes\+Octets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps the bytes first and then each octets as good as possible depending on value in s. Very noisy filter. In normal mode shift into magenta, in crazy mode shift into yellow. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 443 of file Stegano\+Message.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_ad21d0b7dd149e81d9a199fb26a799da4_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_ad21d0b7dd149e81d9a199fb26a799da4_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_ab17fa1a4dc587ae268e400913cc5f0c8}\label{classSteganoMessage_ab17fa1a4dc587ae268e400913cc5f0c8}} 
-\index{SteganoMessage@{SteganoMessage}!swapBytesOctetsBits@{swapBytesOctetsBits}}
-\index{swapBytesOctetsBits@{swapBytesOctetsBits}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapBytesOctetsBits()}{swapBytesOctetsBits()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+Bytes\+Octets\+Bits (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps the bytes first followed by the octets and bits as good as possible depending on value in s. Fluid like filter. In normal mode shift into magenta, in crazy mode shift into yellow. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 447 of file Stegano\+Message.\+cpp.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_ab17fa1a4dc587ae268e400913cc5f0c8_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_ab17fa1a4dc587ae268e400913cc5f0c8_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a7e29a46073f2ef9c6e44bb1d46ad534f}\label{classSteganoMessage_a7e29a46073f2ef9c6e44bb1d46ad534f}} 
-\index{SteganoMessage@{SteganoMessage}!swapGR@{swapGR}}
-\index{swapGR@{swapGR}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapGR()}{swapGR()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+GR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps Green with Red value if size $>$= 24bit. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 349 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a7e29a46073f2ef9c6e44bb1d46ad534f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSteganoMessage_a4751ad396485b5859b84970ddd20290d}\label{classSteganoMessage_a4751ad396485b5859b84970ddd20290d}} 
-\index{SteganoMessage@{SteganoMessage}!swapOctets@{swapOctets}}
-\index{swapOctets@{swapOctets}!SteganoMessage@{SteganoMessage}}
-\subsubsection{\texorpdfstring{swapOctets()}{swapOctets()}}
-{\footnotesize\ttfamily uint32\+\_\+t Stegano\+Message\+::swap\+Octets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta in normal mode/yellow in crazy mode. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em uint32\+\_\+t} & d -\/ bit pattern \\
-\hline
-{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-uint32\+\_\+t generated new bit pattern 
-\end{DoxyReturn}
-
-
-Definition at line 362 of file Stegano\+Message.\+cpp.
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSteganoMessage_a4751ad396485b5859b84970ddd20290d_icgraph}
 \end{center}
 \end{figure}
 
@@ -1227,7 +897,7 @@ Here is the caller graph for this function\+:
 
 Crazy filter flag 
 
-Definition at line 135 of file Stegano\+Message.\+h.
+Definition at line 181 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a26b631e00716be7a89cbcf22cf0b7291}\label{classSteganoMessage_a26b631e00716be7a89cbcf22cf0b7291}} 
 \index{SteganoMessage@{SteganoMessage}!err@{err}}
@@ -1237,7 +907,7 @@ Definition at line 135 of file Stegano\+Message.\+h.
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 129 of file Stegano\+Message.\+h.
+Definition at line 175 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}\label{classSteganoMessage_acd7dba217d5df515d93ddf814734ecf4}} 
 \index{SteganoMessage@{SteganoMessage}!img@{img}}
@@ -1247,7 +917,17 @@ Definition at line 129 of file Stegano\+Message.\+h.
 
 \mbox{\hyperlink{classImage}{Image}} type object containing path, header and image data 
 
-Definition at line 131 of file Stegano\+Message.\+h.
+Definition at line 177 of file Stegano\+Message.\+h.
+
+\mbox{\Hypertarget{classSteganoMessage_a687c455d3f09eb5349e0358cb07aa21c}\label{classSteganoMessage_a687c455d3f09eb5349e0358cb07aa21c}} 
+\index{SteganoMessage@{SteganoMessage}!log@{log}}
+\index{log@{log}!SteganoMessage@{SteganoMessage}}
+\subsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily bool Stegano\+Message\+::log\hspace{0.3cm}{\ttfamily [private]}}
+
+flag for logfile creation 
+
+Definition at line 182 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}\label{classSteganoMessage_a64f70bbacb0662cebe764316658da35d}} 
 \index{SteganoMessage@{SteganoMessage}!mess@{mess}}
@@ -1257,7 +937,7 @@ Definition at line 131 of file Stegano\+Message.\+h.
 
 \mbox{\hyperlink{classMessage}{Message}} type objec to store message 
 
-Definition at line 130 of file Stegano\+Message.\+h.
+Definition at line 176 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}\label{classSteganoMessage_a8772194b7823da730648f8d4c06334a8}} 
 \index{SteganoMessage@{SteganoMessage}!mode@{mode}}
@@ -1267,7 +947,7 @@ Definition at line 130 of file Stegano\+Message.\+h.
 
 -\/encrypt or -\/decryptl, if not set \char`\"{}\char`\"{} 
 
-Definition at line 132 of file Stegano\+Message.\+h.
+Definition at line 178 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}\label{classSteganoMessage_ae1da17c621a8db71fa4eb3b148a82ceb}} 
 \index{SteganoMessage@{SteganoMessage}!modeSet@{modeSet}}
@@ -1277,7 +957,7 @@ Definition at line 132 of file Stegano\+Message.\+h.
 
 flag to check if mode is set 
 
-Definition at line 133 of file Stegano\+Message.\+h.
+Definition at line 179 of file Stegano\+Message.\+h.
 
 \mbox{\Hypertarget{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}\label{classSteganoMessage_a399f4c181d3b7b15ccdb5c925a7a1f51}} 
 \index{SteganoMessage@{SteganoMessage}!path@{path}}
@@ -1287,17 +967,17 @@ Definition at line 133 of file Stegano\+Message.\+h.
 
 flag to check if path is verified 
 
-Definition at line 134 of file Stegano\+Message.\+h.
+Definition at line 180 of file Stegano\+Message.\+h.
 
-\mbox{\Hypertarget{classSteganoMessage_ab0cca34d0f02f406733e62a477bb15be}\label{classSteganoMessage_ab0cca34d0f02f406733e62a477bb15be}} 
+\mbox{\Hypertarget{classSteganoMessage_af20fb772ae34deaccd23144b38f06320}\label{classSteganoMessage_af20fb772ae34deaccd23144b38f06320}} 
 \index{SteganoMessage@{SteganoMessage}!stegFilter@{stegFilter}}
 \index{stegFilter@{stegFilter}!SteganoMessage@{SteganoMessage}}
 \subsubsection{\texorpdfstring{stegFilter}{stegFilter}}
-{\footnotesize\ttfamily \mbox{\hyperlink{constants_8h_adccf6e8a392b0d35f185df12521c474b}{Filter}} Stegano\+Message\+::steg\+Filter\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{constants_8h_a36bd51b89b9e0e6e4dbbe565b9155083}{Filter\+Mode}} Stegano\+Message\+::steg\+Filter\hspace{0.3cm}{\ttfamily [private]}}
 
 enumeration to store set filter 
 
-Definition at line 136 of file Stegano\+Message.\+h.
+Definition at line 183 of file Stegano\+Message.\+h.
 
 
 

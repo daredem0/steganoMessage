@@ -27,7 +27,7 @@ int printHelp();
 * @brief Terminates the program without an error
 * @return always returns 0
 */
-int terminate(SteganoMessage *steg);
+int terminate(SteganoMessage *steg, int err);
 /**
 * @brief Terminates the program with an error
 * @return always returns 1
@@ -48,39 +48,42 @@ int main(int argc, char *argv[]) {
     //argv[1] = (char*)"-encrypt";
     //argv[1] = (char*)"-decrypt";
     //argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
-    int returnValue = 0;
-    SteganoMessage *steg = new SteganoMessage();
-    cout << "argc: " << argc << endl;  //just for debugging
-    cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
-    returnValue = ui(argv[1] == NULL ? NOSWITCH : (string)argv[1], steg); //if there was no switch on terminal send NOSWITCH, otherwise send the switch from terminal
-    std::cout << "Set Filter" << std::endl;
-    if(returnValue == -1)
-        return terminate(steg);
+    SteganoMessage *steg = new SteganoMessage(); /*Build ne SteganoMessage object first*/
+    steg->getErrHandle()->printLog("argc: " + std::to_string(argc) + "\n" + "argv: " + (argv[1] == NULL ? NOSWITCH : argv[1]) + "\n");
+    //cout << "argc: " << argc << endl;  //just for debugging
+    //cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
+    int returnValue = ui(argv[1] == NULL ? NOSWITCH : (string)argv[1], steg); /*if there was no switch on terminal send NOSWITCH, otherwise send the switch from terminal*/
+    steg->getErrHandle()->printLog("Startup init routine \n");
+    if(returnValue == -1) /*Check for error in ui function*/
+        return terminate(steg, -1);
     else{
         try{
-            int errTemp = steg->initialize(argc, argv);
-            steg->applyFilter();
-            if(errTemp != 0)
+            int errTemp = steg->initialize(argc, argv); /*initialize everything and check for error*/
+            steg->applyFilter(); /*If a filter was set apply it on the image data*/
+            if(errTemp != 0) 
                 throw errTemp; 
         }
-    catch (int i){ //catch errPath and send it to printError
-        exit(errTerminate(steg));
-    }
-    catch (...){ //catch everything weird
-        steg->getErrHandle()->printError(errUnknown);
-        exit(errTerminate(steg));
-    }
-        if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
+        catch (int i){ //catch errTemp and send it to printError
+            steg->getErrHandle()->printError(i);
+            exit(terminate(steg, -1));
+        }
+        catch (...){ //catch everything weird
+            steg->getErrHandle()->printError(errUnknown);
             exit(errTerminate(steg));
+        }
+        if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0) /*Check path, print error if occured and exit clean*/
+            exit(terminate(steg, -1));
         //debuggingStuff(steg);
-        
-        
+
+        steg->getErrHandle()->printLog("Successfully initialized bitmap steganoMessage\n");
+
         //modestuff here
-        steg->modeHandler();
-        
-    if(steg != NULL)
-        delete steg;
-    return 0;
+        steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
+        steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
+
+        terminate(steg, 0); //cleanup
+
+        return 0;
     }
 }
 
@@ -88,7 +91,6 @@ int main(int argc, char *argv[]) {
 int ui(string argv, SteganoMessage *steg){
     int returnValue = 0;
     try{
-        cout << "Found switch: " << argv << endl;
         if(argv == ENCRYPT){
             steg->getErrHandle()->printLog("Found " + ENCRYPT + "\n");
                 steg->setMode(ENCRYPT); 
@@ -123,20 +125,22 @@ int ui(string argv, SteganoMessage *steg){
     catch (...){ //catch everything weird
         steg->getErrHandle()->printError(errUnknown);
     }
-    return returnValue;
+    return 0;
 }
 
 int printHelp(){
     cout << HELPFILE << endl;
-	return -1;
+    exit(1);
 }
 
-int terminate(SteganoMessage *steg){
+int terminate(SteganoMessage *steg, int err){
     if(steg != NULL)
         delete steg;
-    return 0;
+    return err;
+            
 }
 
+//outdated, should not be used anymore
 int errTerminate(SteganoMessage *steg){
     if(steg != NULL)
         delete steg;

@@ -1,0 +1,6 @@
+<map id="BitmapArray::getBDataStream" name="BitmapArray::getBDataStream">
+<area shape="rect" id="node1" title="Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after inf..." alt="" coords="567,5,787,32"/>
+<area shape="rect" id="node2" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="384,5,519,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,31,336,57"/>
+</map>

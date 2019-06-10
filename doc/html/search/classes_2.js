@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image',['Image',['../classImage.html',1,'']]]
+  ['filter',['Filter',['../classFilter.html',1,'']]]
 ];

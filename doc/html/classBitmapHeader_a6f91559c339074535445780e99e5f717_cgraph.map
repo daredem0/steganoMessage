@@ -1,4 +1,0 @@
-<map id="BitmapHeader::read" name="BitmapHeader::read">
-<area shape="rect" id="node1" title="reads header information from ifstream" alt="" coords="5,5,159,32"/>
-<area shape="rect" id="node2" href="$classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Small helper to extrac characters of bfType." alt="" coords="207,5,377,32"/>
-</map>

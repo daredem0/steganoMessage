@@ -1,12 +1,13 @@
 <map id="header/BitmapArray.h" name="header/BitmapArray.h">
-<area shape="rect" id="node1" title=" " alt="" coords="122,5,285,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,68,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="92,80,165,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="119,155,189,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="214,155,294,181"/>
-<area shape="rect" id="node6" href="$ErrorHandler_8h.html" title=" " alt="" coords="306,80,429,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="551,155,594,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="470,229,529,256"/>
-<area shape="rect" id="node9" title=" " alt="" coords="440,155,527,181"/>
-<area shape="rect" id="node10" href="$constants_8h.html" title=" " alt="" coords="319,155,416,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="106,5,269,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="11,80,73,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,79,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="103,155,173,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="198,155,278,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="397,80,463,107"/>
+<area shape="rect" id="node7" href="$ErrorHandler_8h.html" title=" " alt="" coords="250,80,373,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="587,155,630,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="365,229,423,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="476,155,563,181"/>
+<area shape="rect" id="node11" href="$constants_8h.html" title=" " alt="" coords="303,155,400,181"/>
 </map>

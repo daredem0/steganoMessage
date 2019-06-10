@@ -14,6 +14,7 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 #include <string>
+
 /**
  *@brief Containing some globally used constants
  */
@@ -29,6 +30,7 @@ const int errStdExcept = 9;
 
 const int errMess = 10;
 const int errMessExist = 11;
+const int errInfused = 12;
 
 const int errImg = 20;
 const int errImgExist = 21;
@@ -82,8 +84,9 @@ const std::string ENCRYPT = "-encrypt";
 const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
 const std::string CRFILTER = "-filter_cr";
+const std::string LOG = "-log";
     
-enum Filter {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
+enum FilterMode {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
 color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, 
 swapByteOctetBit = 9, swapByteBit = 10, swapBtG = 11, swapBtR = 12, swapGtR = 13, substBl = 14, substRd = 15, substGr = 16};
 
@@ -133,6 +136,10 @@ const std::string HELPFILE =
 "   Sorry, no time yet to describe the filter effects. Just try.\n"
 "\n"
 "Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\n"
-"./steganoMessage -decrypt/-encrypt <path> -filter <type>";
+"./steganoMessage -decrypt/-encrypt <path> -filter <type>"
+"Output into a textfile is possible with the switch -log. Usage is possible with and without filters:\n"
+"   example a: ./steganoMessage -encrypt <path> -filter <type> -log\n"
+"   example b: ./steganoMessage -encrypt <path> -log\n"
+"Logfile will be generated in log folder in ./ and will be named with a timestamp\n";
 
 #endif /* CONSTANTS_H */

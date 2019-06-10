@@ -12,6 +12,7 @@
             <sourceRootList>
                 <sourceRootElem>src</sourceRootElem>
                 <sourceRootElem>header</sourceRootElem>
+                <sourceRootElem>LibJpeg</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

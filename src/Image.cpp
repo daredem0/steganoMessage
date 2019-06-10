@@ -13,6 +13,8 @@
 
 #include "../header/Image.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 Image::Image() {
     path == "";
     header = NULL;
@@ -28,91 +30,104 @@ Image::Image(const Image& orig) {
 }
 
 Image::~Image() {
-    if(header != NULL)
+    if(header != NULL){
         delete header;
+    }
     if(array != NULL)
         delete array;
 }
 
-std::string Image::getPath(){
-    return path;
-}
+//GETTERS/************************************************************/
+std::string Image::getPath(){return path;}
+BitmapHeader *Image::getBitmapHeader(){return header;}
+BitmapArray *Image::getBitmapArray(){return array;}
 
+
+//SETTERS/************************************************************/
 void Image::setPath(std::string p){
     path = p;
 }
 
-int Image::printTextFile(std::string p){
-    try{
-        std::ifstream file(p.c_str());
-        std::string out;
-        while (getline(file,out)) {
-            std::cout << out << std::endl ;
-        }
-        file.close();
-        return errNoError;
-    }
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        return errStdExcept;
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        return errUnknown;
-    }
-    return errUnknown;
-}
-
-int Image::writeTextFile(std::string t, std::string n){
-    try{
-        std::string path = "./"+n;
-        std::ofstream file(path.c_str());
-        file << t << std::endl;
-        file.close();
-    }
-    catch(const std::exception& e){
-        errHandle->printErrorStdEx(e);
-        return errStdExcept;
-    }
-    catch(...){
-        errHandle->printError(errUnknown);
-        return errUnknown;
-    }
-    return errUnknown;
-}
-
-int Image::readImage(){
-    if(path == "")
-        return 3;
-    header = new BitmapHeader(path, errHandle);
-    header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+int Image::setFilter(std::string gr, std::string col){
+    filterModeGrey = gr;
+    filterModeCol = col;
     return 0;
 }
 
-BitmapHeader *Image::getBitmapHeader(){return header;}
-BitmapArray *Image::getBitmapArray(){return array;}
+void Image::setLogMode(std::string path, std::ios_base::openmode mode){
+    logfilePath = path;
+    logfileMode = mode;
+}
 
-bool Image::exists(const std::string& name){
-    std::ifstream f(name.c_str()); 
-    return f.good();
+//EVALUATIONS/************************************************************/
+std::string Image::identifyFileFormat(std::string p){
+    std::ifstream file(p);
+    std::stringstream ss;
+    std::string returnValue;
+    if(!file.good()){
+                    std::cout << 3 << std::endl;
+        return ERRUNKNOWN;
+    }
+    file.seekg(0, std::ios::beg);
+    unsigned char type[10];
+    std::fill(type, type + sizeof(type), 0);
+    file.read((char*)type, sizeof(type));
+    //check for bitmap
+    if(type[0] == 0x42 && type[1] == 0x4D)
+         ss << type[0] << type[1];
+    
+    //check for jpeg
+    if(type[0] == 0xFF && type[1] == 0xD8)
+        ss << JPEG;
+    //check for gif
+    if(type[0] == 0x47 && type[1] == 0x49 && type[2] == 0x46)
+        ss << type[0] << type[1] << type[2];
+    //check for png
+    if(type[0] == 0x89 && type[1] == 0x50 && type[2] == 0x4E && type[3] == 0x47 && type[4] == 0x0D && type[5] == 0x0A && type[6] == 0x1A && type[7] == 0x0A)
+        ss << PNG;
+    ss >> returnValue;
+    file.close();
+    return returnValue;
+}
+
+//OTHER METHODS/************************************************************/
+int Image::readImage(){
+    std::cout << "In bitmap read image" << std::endl;
+    if(path == "")
+        return ErrorHandler::errPath;
+    header = new BitmapHeader(path, errHandle);
+    header->printHeader();
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+    return ErrorHandler::errNoError;
 }
 
 int Image::generateBitmap(){
+    errHandle->printLog("Loading bitmap builder\n");
     errHandle->printLog("Opening ofstream\n");
     std::string sWD;
     std::ofstream file;
     try{
-        char* wD;
-        //get current working dir and generate path
-        wD = get_current_dir_name(); //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
-        sWD = wD;
-        free(wD);//free malloced storage from get_current_dir_name()
-        int i = 0;
-        while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
-            ++i;
+        if(LINUX == 1 && MAC == 0)
+        {
+            char* wD;
+            //get current working dir and generate path
+            wD = PATHLINUX; //gives current dir (works only on linux, maybe switch to std::filesystem once c++17 is stable), mallocs automatically 
+            sWD = wD;
+            free(wD);//free malloced storage from get_current_dir_name()
+            int i = 0;
+            while(exists(sWD + "/output" + std::to_string(i) + ".bmp")){
+                ++i;
+            }
+            sWD = "./";
+            sWD += "output" + std::to_string(i) + ".bmp";
         }
-        sWD += "/output" + std::to_string(i) + ".bmp";
+        else
+        {
+            throw ErrorHandler::errOsErrMac;
+        }
+    }
+    catch(int i){
+        return i;
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
@@ -125,11 +140,11 @@ int Image::generateBitmap(){
         return errImgWD;
     }
     try{
-        errHandle->printLog("Output-path" + sWD + "\n");
+        errHandle->printLog("Output-path: " + sWD + "\n");
         file.open(sWD, std::ios::binary | std::ios::trunc);
         errHandle->printLog("Writing header\n");
         file.write(header->getHeader(), header->getOffBits());
-        errHandle->printLog("Header written and closing stream\n");
+        errHandle->printLog("Header written - closing stream\n");
         file.close();
     }
     catch(const std::exception& e){
@@ -143,9 +158,8 @@ int Image::generateBitmap(){
         return errImgWrHead;
     }
     try{
-        errHandle->printLog("Openning ofstream\n");
+        errHandle->printLog("Reopening ofstream\n");
         file.open(sWD, std::ios::binary | std::ios::app);
-        errHandle->printLog("reopened ofstream\n");
         long i = 0;
         std::vector<std::vector<uint32_t>> temp = array->getBData();
         for(auto itOuter = temp.begin(); itOuter != temp.end(); ++itOuter){
@@ -188,61 +202,15 @@ int Image::generateBitmap(){
     return errNoError;
 }
 
-int Image::bmpToTxt(){
+int Image::printTextFile(std::string p){
     try{
-        errHandle->printLog("Generate textfile\n");
-        std::ifstream inFile(path);
-
-        //buffer header
-        char *head = new char[header->getOffBits()];
-        if(!inFile.good())
-            return 3;
-        inFile.seekg(0, std::ios::beg);
-        inFile.read(head, header->getOffBits());
-
-        //buffer data
-        char *data = new char[(header->getHeight()*header->getWidth())*header->getBitCount()/8];
-        inFile.read(data, (header->getHeight()*header->getWidth())*header->getBitCount()/8);
-        
-        std::string path = "./txtOutput.txt";
-        std::ofstream outFile(path.c_str(), std::ios::trunc);
-
-        //write header
-        int count;
-        outFile << "Header Information:\n";
-        std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
-        for(count = 0; count<= header->getOffBits()-1; ++count){
-            std::cout << byteToHex(*(head+count)) << " ";
-            outFile << byteToHex(*(head+count));
-                if(count != 0 && (count+1)%16 == 0){
-                    outFile << std::endl;
-                    std::cout << std::endl;
-                }
-                else 
-                    outFile << " ";
+        std::ifstream file(p.c_str());
+        std::string out;
+        while (getline(file,out)) {
+            std::cout << out << std::endl ;
         }
-
-        //write data
-        outFile << "\nImage Data:\n";
-        count = 0;
-        for(int i = 0; i <= ((header->getHeight()*header->getWidth())*header->getBitCount()/8)-1; ++i){
-            std::cout << byteToHex(*(data+i)) << " ";
-            outFile << byteToHex(*(data + i));
-            if(count != 0 && (count+1)%16 == 0){
-                outFile << std::endl;
-                    std::cout << std::endl;
-            }
-            else
-                outFile << " ";
-            ++count;
-        }
-
-        //clean up
-        delete(head);
-        delete(data);
-        inFile.close();
-        outFile.close();
-        errHandle->printLog("Generation successfull\n");
+        file.close();
+        return errNoError;
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
@@ -255,6 +223,92 @@ int Image::bmpToTxt(){
     return errUnknown;
 }
 
+int Image::writeTextFile(std::string t, std::string n){
+    try{
+        std::string path = "./"+n;
+        std::ofstream file(path.c_str());
+        file << t << std::endl;
+        file.close();
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
+}
+
+int Image::bmpToTxt(){
+    try{
+        if(this->logfileMode == std::ios::app){
+            if(OPENDIR_LINUX("./log") == NULL){
+                MKDIR_LINUX("./log", S_IRWXU);
+            }
+        }
+        errHandle->printLog("Generate textfile\n");
+
+        //buffer header
+        char *head = header->getHeader();
+        //buffer data
+        char *data = array->getBDataStream();
+        std::string path = logfilePath;
+        if(MAC == 1 && logfilePath[2] == 'l'){
+            logfilePath = logfilePath.erase(2,5);
+        }
+        std::ofstream outFile(path.c_str(), logfileMode);
+
+        //write header
+        int count;
+        outFile << "Header Information:\n";
+        //std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
+        for(count = 0; count<= header->getOffBits()-1; ++count){
+            //std::cout << byteToHex(*(head+count)) << " ";
+            outFile << byteToHex(*(head+count));
+                if(count != 0 && (count+1)%16 == 0){
+                    outFile << std::endl;
+                    //std::cout << std::endl;
+                }
+                else 
+                    outFile << " ";
+        }
+
+        //write data
+        outFile << "\nImage Data:\n";
+        count = 0;
+        for(int i = 0; i <= ((header->getHeight()*header->getWidth())*header->getBitCount()/8)-1; ++i){
+            //std::cout << byteToHex(*(data+i)) << " ";
+            outFile << byteToHex(*(data + i));
+            if(count != 0 && (count+1)%16 == 0){
+                outFile << std::endl;
+                //std::cout << std::endl;
+            }
+            else
+                outFile << " ";
+            ++count;
+        }
+
+        //clean up
+        delete(data);
+        //delete(head);
+        //delete(data);
+        //inFile.close();
+        outFile.close();
+        errHandle->printLog("Generation successfull to " + logfilePath + "\n");
+        return errNoError;
+    }
+    catch(const std::exception& e){
+        errHandle->printErrorStdEx(e);
+        return errStdExcept;
+    }
+    catch(...){
+        errHandle->printError(errUnknown);
+        return errUnknown;
+    }
+    return errUnknown;
+}
 
 std::string Image::byteToHex(uint8_t v){
     std::string hex;
@@ -296,36 +350,8 @@ std::string Image::decToHex(uint8_t v){
     }
 }
 
-int Image::setFilter(std::string gr, std::string col){
-    filterModeGrey = gr;
-    filterModeCol = col;
-}
-
-std::string Image::identifyFileFormat(std::string p){
-    std::ifstream file(p);
-    std::stringstream ss;
-    std::string returnValue;
-    if(!file.good())
-        return ERRUNKNOWN;
-    file.seekg(0, std::ios::beg);
-    unsigned char type[10];
-    std::fill(type, type + sizeof(type), 0);
-    file.read((char*)type, sizeof(type));
-    //check for bitmap
-    if(type[0] == 0x42 && type[1] == 0x4D)
-         ss << type[0] << type[1];
-    
-    //check for jpeg
-    if(type[0] == 0xFF && type[1] == 0xD8)
-        ss << JPEG;
-    //check for gif
-    if(type[0] == 0x47 && type[1] == 0x49 && type[2] == 0x46)
-        ss << type[0] << type[1] << type[2];
-    //check for png
-    if(type[0] == 0x89 && type[1] == 0x50 && type[2] == 0x4E && type[3] == 0x47 && type[4] == 0x0D && type[5] == 0x0A && type[6] == 0x1A && type[7] == 0x0A)
-        ss << PNG;
-    ss >> returnValue;
-    std::cout << returnValue << std::endl;
-    file.close();
-    return returnValue;
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
+bool Image::exists(const std::string& name){
+    std::ifstream f(name.c_str()); 
+    return f.good();
 }

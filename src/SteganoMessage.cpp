@@ -13,12 +13,14 @@
 
 #include "../header/SteganoMessage.h"
 
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 SteganoMessage::SteganoMessage() {
     err = NULL;
     mess = NULL;
     img = NULL;
-    std::cout << "Creating new SteganoMessage object" << std::endl;
     err = new ErrorHandler();
+    err->printLog("Creating new SteganoMessage object\n");
     modeSet = false;
     path = false;
 }
@@ -36,130 +38,52 @@ SteganoMessage::~SteganoMessage() {
         delete img;
 }
 
-ErrorHandler* SteganoMessage::getErrHandle(){
-    return err;
-    
-}
-
-int SteganoMessage::buildMessage(std::string m){
-    if(mess == NULL){
-        mess = new Message(m, err);
-        return errNoError;
-    }
-    return errMessExist;
-}
-
-Message* SteganoMessage::getMessage(){
-    return mess;
-}
-
-int SteganoMessage::buildImage(std::string path){
-    if(img == NULL){
-        img = new Image(path, err);
-        return errNoError;
-    }
-    return errImgExist;
-}
-
-Image* SteganoMessage::getImage(){
-    return img;
-}
-
-int SteganoMessage::setMode(std::string m){
-    if(modeSet == false){
-        mode = m;
-        modeSet = true;
-        return errNoError;
-    }
-    else
-        return errMode;
-}
-
-std::string SteganoMessage::getMode(){
-    if(modeSet == false)
-        return "";
-    return mode;
-}
-
-void SteganoMessage::printValues(){
-    try{
-        std::cout << "Mode: " << mode << std::endl;
-        std::cout << "Path: " << img->getPath() << std::endl;
-    }
-    catch(...){
-        err->printError(errUnknown);
-    }
-}
-
-
-int SteganoMessage::checkPath(std::string p){
-    int returnValue = errNoError;
-    if(p[0] != '.' && p[0] != '/')
-        returnValue = 4;
-    if(exists(p) == false)
-        returnValue = errPathExist;
-    path = true;
-    return returnValue;
-}
-
-bool SteganoMessage::exists(std::string p){
-    try{
-        std::ifstream img(p.c_str());
-        bool returnValue = img.good();
-        img.close();
-        return returnValue;
-    }
-    catch(const std::exception& e){
-        err->printErrorStdEx(e);
-        return false;
-    }
-    catch(...){
-        err->printError(errUnknown);
-        return false;
-    }
-    return false;
-}
-
-bool SteganoMessage::getPathVerified(){
-    return path;
-}
-
+//INIT/************************************************************/
 int SteganoMessage::initialize(int argc, char *argv[]){
+    int errTemp;
     try{
         //initialization stuff, especially read the header info, else everything will go horribly wrong in all possible ways
-        std::cout << "Trying to get path" << std::endl;
+        err->printLog("Trying to get path\n");
         std::string tempPath;
             argv[2] == NULL ? tempPath = NOPATH : tempPath = (std::string)argv[2]; //if there was a path given store it in tempPath
             if(tempPath == NOPATH)
                 throw errPath; //throw error if we didnt get a path
-            std::cout << "Found Path: " << tempPath << std::endl; 
-            if(Image::identifyFileFormat(tempPath) != BITMAP){
-                std::cout << "shit" << std::endl;
-                exit(1);
-            }
-            int i;
-            this->buildImage(tempPath); //Call constructor for image type object and set path
-            std::cout << "Built path: " << this->getImage()->getPath() << std::endl;
+            err->printLog("Found Path: " + tempPath + "\n");
+            errTemp = this->buildImage(tempPath); //Call constructor for image type object and set path
+            if(errTemp != 0) throw errTemp;
+            err->printLog("Built path: " + this->getImage()->getPath() + "\n");
             //set filters if activated
             if(argc > 3){
                 if(argv[3] == FILTER){
                     this->setFilterMode(argv[4]);
                     crazy = false;
+                    argc > 5 ? this->setLog(true) : this->setLog(false);
                 }
                 else if(argv[3] == CRFILTER){
                     this->setFilterMode(argv[4]);
                     crazy = true;
+                    argc > 5 ? this->setLog(true) : this->setLog(false);
+                }
+                else if(argv[3] == LOG){
+                    this->setFilterMode("");
+                    this->setLog(true);
                 }
             }
-            else
+            else{
                 this->setFilterMode("");
-            this->getImage()->readImage(); //extract the image information
-            //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
-            return 0;
+                this->setLog(false);
+            }
+            err->printLog("Filter mode: " + std::to_string(stegFilter) + "\n");
+            if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
+                errTemp = this->getImage()->readImage(); //extract the image information
+            else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
+                errTemp = ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
+            return ErrorHandler::errNoError;
+            if(errTemp != 0) throw errTemp;
     }
     catch(int i){
         err->printError(i);
-        return errPath;
+        return i;
     }
     catch(const std::exception& e){
         err->printErrorStdEx(e);
@@ -171,28 +95,95 @@ int SteganoMessage::initialize(int argc, char *argv[]){
     }
 }
 
-int SteganoMessage::modeHandler(){
-    if(this->getMode() == ENCRYPT){
-        std::cout << "Please enter your message" << std::endl;
-        std::string mess;
-        std::getline(std::cin, mess);
-        this->buildMessage(mess);
-        //check if message was read properly:
-        std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
-        //call infusion stuff ********************TOBI********************
-        this->getImage()->generateBitmap(); 
+//BUILDERS/************************************************************/
+int SteganoMessage::buildMessage(std::string m){
+    if(mess == NULL && m != ""){
+        mess = new Message(m, err);
+        return ErrorHandler::errNoError;
     }
-    else if(this->getMode() == DECRYPT){
-        //do some decryption, print message to std::out, be nasty and destroy the image file 
-    }
-    else if(this->getMode() == BMPTOTXT){
-        this->getImage()->bmpToTxt();
-    }
-    else if(this->getMode() == FILTER){
-        this->getImage()->generateBitmap(); 
+    else if(m == "")
+        return ErrorHandler::errMessEmpty;
+    return ErrorHandler::errMessExist;
+}
+
+int SteganoMessage::buildImage(std::string path){
+    if(img != NULL)
+        return errImgExist;
+    if(Image::identifyFileFormat(path) == BITMAP){
+        err->printLog("Building bitmap\n");
+        img = new Image(path, err);
+        return errNoError;
+    }    
+    else if(Image::identifyFileFormat(path) == JPEG){
+        err->printLog("Building jpeg\n");
+        img = new Jpeg(path, err);
+        return errNoError;
+    }         
+    else{
+        return ErrorHandler::errFiletype;
     }
 }
 
+//GETTERS/************************************************************/
+ErrorHandler* SteganoMessage::getErrHandle(){return err;}
+Message* SteganoMessage::getMessage(){return mess;}
+Image* SteganoMessage::getImage(){return img;}
+std::string SteganoMessage::getMode(){
+    if(modeSet == false)
+        return "";
+    return mode;
+}
+
+bool SteganoMessage::getPathVerified(){return path;}
+
+std::string SteganoMessage::getTimeString(){
+    using namespace std::chrono;
+    std::time_t t = system_clock::to_time_t(system_clock::now());
+    return getTimeDate('Y', t) + "-" + getTimeDate('M', t) + "-" + getTimeDate('D', t) + "_" + getTimeDate('h', t) + "-" + getTimeDate('m', t) + "-" + getTimeDate('s', t);
+}
+
+std::string SteganoMessage::getTimeDate(char t, std::time_t system_clock){
+    using namespace std::chrono;
+    std::stringstream ss;
+    switch(t){
+        case 'Y':
+            ss << std::put_time(std::localtime(&system_clock), "%Y");
+            break;
+        case 'M':
+            ss << std::put_time(std::localtime(&system_clock), "%m");
+            break;
+        case 'D':
+            ss << std::put_time(std::localtime(&system_clock), "%d");
+            break;
+        case 'h':
+            ss << std::put_time(std::localtime(&system_clock), "%H");
+            break;
+        case 'm':
+            ss << std::put_time(std::localtime(&system_clock), "%M");
+            break;
+        case 's':
+            ss << std::put_time(std::localtime(&system_clock), "%S");
+            break;
+        default:
+            return NULL;
+    }
+    return ss.str();
+}
+
+bool SteganoMessage::getLogMode(){
+    return log;
+}
+
+//SETTERS/************************************************************/
+int SteganoMessage::setMode(std::string m){
+    if(modeSet == false){
+        mode = m;
+        modeSet = true;
+        return errNoError;
+    }
+    else
+        return errMode;
+}
 
 int SteganoMessage::setFilterMode(std::string mode){
     if (mode == ""){
@@ -243,8 +234,80 @@ int SteganoMessage::setFilterMode(std::string mode){
     return errNoError;
 }
 
+void SteganoMessage::setLog(bool l){
+    log = l;
+    std::string outpath = "./log/"+ this->getTimeString() + ".txt";
+    err->setLog(l, outpath);
+    if(l == true)
+        img->setLogMode(outpath , std::ios::app);
+    else
+        img->setLogMode("./outputText.txt", std::ios::trunc);     
+}
+
+//EVALUATIONS/************************************************************/
+int SteganoMessage::checkPath(std::string p){
+    int returnValue = errNoError;
+    if(p[0] != '.' && p[0] != '/')
+        returnValue = 4;
+    if(exists(p) == false)
+        returnValue = errPathExist;
+    path = true;
+    return returnValue;
+}
+
+bool SteganoMessage::exists(std::string p){
+    try{
+        std::ifstream img(p.c_str());
+        bool returnValue = img.good();
+        img.close();
+        return returnValue;
+    }
+    catch(const std::exception& e){
+        err->printErrorStdEx(e);
+        return false;
+    }
+    catch(...){
+        err->printError(errUnknown);
+        return false;
+    }
+    return false;
+}
+
+//OTHER METHODS/************************************************************/
+int SteganoMessage::modeHandler(){
+    try{
+        int errTemp = 0;
+        if(this->getMode() == ENCRYPT){
+            err->printLog("\nPlease enter your message\n");
+            std::string mess;
+            std::getline(std::cin, mess);
+            (errTemp = this->buildMessage(mess)) != 0 ? throw errTemp: errTemp = 0;
+            //check if message was read properly:
+            err->printLog("Found: " + this->getMessage()->getMessage() + "\n");
+
+            (errTemp = this->getImage()->getBitmapArray()->infuse("ABCD")) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
+            err->printLog("\n \n"); //fix missing endl in infuse function
+
+            (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0;
+        }
+        else if(this->getMode() == DECRYPT){
+            //do some decryption, print message to std::out, be nasty and destroy the image file 
+        }
+        else if(this->getMode() == BMPTOTXT){
+            (errTemp = this->getImage()->bmpToTxt()) != 0 ? throw errTemp : errTemp = 0;
+        }
+        else if(this->getMode() == FILTER){
+            (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0; 
+        }
+    return ErrorHandler::errNoError;
+    }
+    catch(int i){
+        return  err->printError(i);        
+    }
+}
+
 int SteganoMessage::applyFilter(){
-    std::cout << "Successfully filter application initialized" << std::endl;
+    err->printLog("Loading up filter handler\n");
     std::vector<std::vector<uint32_t>> *data = this->getImage()->getBitmapArray()->getBDataPointer();
     switch(stegFilter){
         case noFilter:
@@ -259,198 +322,58 @@ int SteganoMessage::applyFilter(){
             dummyFilter(data);
             return errNoError;
         case invertBit:
-            genFilter(data, revertUint);
+            genFilter(data, Filter::revertUint);
             return errNoError;
         case swapByte:
-            genFilter(data, swapBytes);
+            genFilter(data, Filter::swapBytes);
             return errNoError;
         case swapOctet:
-            genFilter(data, swapOctets);
+            genFilter(data, Filter::swapOctets);
             return errNoError;
         case swapByteOctet:
-            genFilter(data, swapBytesOctets);
+            genFilter(data, Filter::swapBytesOctets);
             return errNoError;
         case swapByteOctetBit:
-            genFilter(data, swapBytesOctetsBits);
+            genFilter(data, Filter::swapBytesOctetsBits);
             return errNoError;
         case swapByteBit:
-            genFilter(data, swapBytesBits);
+            genFilter(data, Filter::swapBytesBits);
             return errNoError;
         case swapBtG:
-            genFilter(data, swapBG);
+            genFilter(data, Filter::swapBG);
             return errNoError;
         case swapBtR:
-            genFilter(data, swapBR);
+            genFilter(data, Filter::swapBR);
             return errNoError;
         case swapGtR:
-            genFilter(data, swapGR);
+            genFilter(data, Filter::swapGR);
             return errNoError;
         case substBl:
-            genFilter(data, substB);
+            genFilter(data, Filter::substB);
             return errNoError;
         case substRd:
-            genFilter(data, substR);
+            genFilter(data, Filter::substR);
             return errNoError;
         case substGr:
-            genFilter(data, substG);
+            genFilter(data, Filter::substG);
             return errNoError;
         default:
             return errUnknown;
     }
 }
 
-void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
-    int count = 0;
-    int pixel = getPixel();
-    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
-        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-            if(crazy == true)
-                *itInner = f(*itInner, sizeof(*itInner));
-            else
-                *itInner = f(*itInner, this->getImage()->getBitmapHeader()->getBitCount()/8);
-            displayProgress(count, pixel);
-        }
+void SteganoMessage::printValues(){
+    try{
+        std::cout << "Mode: " << mode << std::endl;
+        std::cout << "Path: " << img->getPath() << std::endl;
     }
-    displayProgress(0);
-}
-
-void SteganoMessage::dummyFilter(std::vector<std::vector<uint32_t>> *d){
-    std::cout << "In dummy filter" << std::endl;
-    
-    genFilter(d, substB);
-}
-
-uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
+    catch(...){
+        err->printError(errUnknown);
     }
 }
 
-uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
-    }
-}
-
-uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
-    }
-}
-
-uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return (d & 0xF0) >> 4 | (d & 0x0F) << 4;
-        case 2:
-            return ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-        case 3:
-            return ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-        case 4:
-            return ((d & 0xFF000000) >> 4  | (d & 0x0F000000) << 4) | ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) 
-                    | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-    }
-}
-
-uint32_t SteganoMessage::swapBytes(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return ((d & 0xFF000000) >> 24 | (d & 0x000000FF) << 24) | ((d & 0xFF0000) >> 8 | (d & 0xFF00) << 8);
-    }
-}
-
-uint32_t SteganoMessage::substB(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0xFF0000)) | ((d & 0x00FF00) - (d & 0xFF0000 >> 8)) | ((d & 0x0000FF) - (d & 0xFF0000 >> 16)); 
-        case 4:
-            return (d -(d & 0xFF000000)) | ((d & 0x00FF0000) - (d & 0xFF000000 >> 8)) | ((d & 0x0000FF00) - (d & 0xFF000000 >> 16)) | (d & 0xFF); 
-    }
-}
-
-uint32_t SteganoMessage::substR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0x0000FF)) | ((d & 0x00FF00) - (d & 0x0000FF << 8)) | ((d & 0xFF0000) - (d & 0x0000FF << 16)); 
-        case 4:
-            return (d -(d & 0x0000FF00)) | ((d & 0x00FF0000) - (d & 0x0000FF00 << 8)) | ((d & 0xFF000000) - (d & 0x0000FF00 << 16)) | (d & 0xFF); 
-    }
-}
-
-uint32_t SteganoMessage::substG(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0x00FF00)) | ((d & 0xFF0000) - (d & 0x00FF00 << 8)) | ((d & 0x0000FF) - (d & 0x00FF00 >> 8)); 
-        case 4:
-            return (d -(d & 0x00FF0000)) | ((d & 0xFF000000) - (d & 0x00FF0000 << 8)) | ((d & 0x0000FF00) - (d & 0x00FF0000 >> 8)) | (d & 0xFF); 
-    }
-}
-
-uint32_t SteganoMessage::invert(uint8_t w){
-   w = (w & 0xF0) >> 4 | (w & 0x0F) << 4;
-   w = (w & 0xCC) >> 2 | (w & 0x33) << 2;
-   w = (w & 0xAA) >> 1 | (w & 0x55) << 1;
-   return w;
-}
-
-uint32_t SteganoMessage::revertUint(uint32_t d, size_t s){
-    uint32_t out = 0;
-    for(int i = 0; i < s; ++i){
-        out |= invert(d >> i*8)<<i*8;
-    }
-    return out;
-}
-
-uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){
-    return swapBytes(swapOctets(d, s), s);    
-}
-
-uint32_t SteganoMessage::swapBytesOctetsBits(uint32_t d, size_t s){
-    return revertUint(swapBytes(swapOctets(d, s), s),s);    
-}
-
-uint32_t SteganoMessage::swapBytesBits(uint32_t d, size_t s){
-    return revertUint(swapBytes(d,s),s);
-}
+/********PRIVATE**************PRIVATE*************PRIVATE**************PRIVATE************/
+//PROGRESS/*******************************************************************************/
 
 void SteganoMessage::displayProgress(int& c, int p){
     if((uint32_t)(((double)c/p)*100) - (uint32_t)(((double)(++c)/p)*100) > 1){
@@ -466,6 +389,38 @@ void SteganoMessage::displayProgress(int p){
         std::cout << (-1) << std::endl;
 }
 
-int SteganoMessage::getPixel(){
-   return this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();
+//GETTERS/*******************************************************************************/
+int SteganoMessage::getPixel(){return this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();}
+
+
+
+
+void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
+    try{
+    int count = 0;
+    int pixel = getPixel();
+    for(auto itOuter = d->begin(); itOuter != d->end(); ++itOuter){
+        for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+            if(crazy == true)
+                *itInner = f(*itInner, sizeof(*itInner));
+            else
+                *itInner = f(*itInner, this->getImage()->getBitmapHeader()->getBitCount()/8);
+            displayProgress(count, pixel);
+        }
+    }
+    displayProgress(0);
+    }
+    catch(const std::exception& e){
+        err->printErrorStdEx(e);
+        exit(1);
+    }
+    catch(...){
+        err->printError(ErrorHandler::ERRUNKNOWN);
+        exit(1);
+    }
+}
+
+void SteganoMessage::dummyFilter(std::vector<std::vector<uint32_t>> *d){
+    std::cout << "In dummy filter" << std::endl;
+    genFilter(d, Filter::substB);
 }

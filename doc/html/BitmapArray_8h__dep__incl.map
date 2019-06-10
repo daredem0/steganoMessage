@@ -1,9 +1,12 @@
 <map id="header/BitmapArray.h" name="header/BitmapArray.h">
-<area shape="rect" id="node1" title=" " alt="" coords="230,5,393,32"/>
-<area shape="rect" id="node2" href="$Image_8h.html" title=" " alt="" coords="168,80,292,107"/>
-<area shape="rect" id="node7" href="$BitmapArray_8cpp.html" title=" " alt="" coords="317,80,469,107"/>
-<area shape="rect" id="node3" href="$SteganoMessage_8h.html" title=" " alt="" coords="45,155,239,181"/>
-<area shape="rect" id="node6" href="$Image_8cpp.html" title=" " alt="" coords="263,155,376,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="5,229,111,256"/>
-<area shape="rect" id="node5" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="135,229,317,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,526,32"/>
+<area shape="rect" id="node2" href="$Image_8h.html" title=" " alt="" coords="301,80,425,107"/>
+<area shape="rect" id="node10" href="$BitmapArray_8cpp.html" title=" " alt="" coords="450,80,602,107"/>
+<area shape="rect" id="node3" href="$Jpeg_8h.html" title=" " alt="" coords="172,155,283,181"/>
+<area shape="rect" id="node8" href="$Image_8cpp.html" title=" " alt="" coords="307,155,420,181"/>
+<area shape="rect" id="node9" href="$Image__MacOS_8cpp.html" title=" " alt="" coords="444,155,608,181"/>
+<area shape="rect" id="node4" href="$SteganoMessage_8h.html" title=" " alt="" coords="45,229,239,256"/>
+<area shape="rect" id="node7" href="$Jpeg_8cpp.html" title=" " alt="" coords="263,229,363,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="5,304,111,331"/>
+<area shape="rect" id="node6" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="135,304,317,331"/>
 </map>

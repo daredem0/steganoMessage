@@ -1,26 +1,29 @@
 <map id="SteganoMessage::applyFilter" name="SteganoMessage::applyFilter">
 <area shape="rect" id="node1" title="Applies the filter stored in stegFilter." alt="" coords="5,436,215,463"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="1101,157,1304,184"/>
-<area shape="rect" id="node3" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title=" " alt="" coords="293,233,468,260"/>
-<area shape="rect" id="node4" href="$classBitmapArray.html#ab914d6282460b386b2b5f936190487a2" title="Returns a pointer to the 2D std::vector containing image information." alt="" coords="271,284,490,311"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="269,81,492,108"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="556,81,753,108"/>
-<area shape="rect" id="node12" href="$classSteganoMessage.html#a7eb6fd157c777b2947603d018610ad0f" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="563,132,747,159"/>
-<area shape="rect" id="node13" href="$classSteganoMessage.html#a28fdc9b9da4cbbffed718d351da65fd3" title="Turns the whole bit&#45;pattern around." alt="" coords="551,385,758,412"/>
-<area shape="rect" id="node15" href="$classSteganoMessage.html#af80189e6fb64aa4ae6cc48f92eaec147" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="549,465,760,492"/>
-<area shape="rect" id="node16" href="$classSteganoMessage.html#a4751ad396485b5859b84970ddd20290d" title="Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta i..." alt="" coords="547,560,763,587"/>
-<area shape="rect" id="node17" href="$classSteganoMessage.html#ad21d0b7dd149e81d9a199fb26a799da4" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="275,553,486,594"/>
-<area shape="rect" id="node18" href="$classSteganoMessage.html#ab17fa1a4dc587ae268e400913cc5f0c8" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="275,487,486,529"/>
-<area shape="rect" id="node19" href="$classSteganoMessage.html#a67f4f4c91ecddb89368c4b9cc42ac07e" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="263,385,499,412"/>
-<area shape="rect" id="node20" href="$classSteganoMessage.html#a06f64f5198cf180771dfe692125936be" title="Swaps Blue with Green value if size &gt;= 24bit." alt="" coords="284,669,477,696"/>
-<area shape="rect" id="node21" href="$classSteganoMessage.html#a530e5ee67cf45ac56f8f3be4d2b44d2e" title="Swaps Blue with Red value if size &gt;= 24bit." alt="" coords="285,720,477,747"/>
-<area shape="rect" id="node22" href="$classSteganoMessage.html#a7e29a46073f2ef9c6e44bb1d46ad534f" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="284,771,477,797"/>
-<area shape="rect" id="node23" href="$classSteganoMessage.html#a021f0126410e739bc89ac2458198ad0c" title="Substracts red value from each channel if size &gt;= 24bit." alt="" coords="289,821,473,848"/>
-<area shape="rect" id="node24" href="$classSteganoMessage.html#a4222a1b128b9b188c30ea99180f74111" title="Substracts green value from each channel if size &gt;= 24bit." alt="" coords="288,872,473,899"/>
-<area shape="rect" id="node7" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="835,81,1029,108"/>
-<area shape="rect" id="node11" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="811,31,1053,57"/>
-<area shape="rect" id="node8" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="1109,56,1296,83"/>
-<area shape="rect" id="node9" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="1109,107,1297,133"/>
-<area shape="rect" id="node10" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="1111,5,1294,32"/>
-<area shape="rect" id="node14" href="$classSteganoMessage.html#af46fa3a09a19fc73c146e22d6a32657a" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="843,385,1021,412"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="291,5,457,32"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="1069,107,1272,133"/>
+<area shape="rect" id="node4" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title="Getter for bitmapArray." alt="" coords="287,259,461,285"/>
+<area shape="rect" id="node5" href="$classBitmapArray.html#ab914d6282460b386b2b5f936190487a2" title="Returns a pointer to the 2D std::vector containing image information." alt="" coords="265,309,483,336"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="263,157,485,184"/>
+<area shape="rect" id="node7" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="533,157,731,184"/>
+<area shape="rect" id="node15" href="$classFilter.html#a3f2bbadc0138195cebf84bd8ce8d9892" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="579,208,685,235"/>
+<area shape="rect" id="node16" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="567,411,697,437"/>
+<area shape="rect" id="node18" href="$classFilter.html#a9d4f7bd12f0bfdf200abf53d166fd944" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="565,487,699,513"/>
+<area shape="rect" id="node19" href="$classFilter.html#aeb85c27a3d80540f2bd4b5f314543d4c" title="Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta i..." alt="" coords="563,563,701,589"/>
+<area shape="rect" id="node20" href="$classFilter.html#a55c046859fbbb468536cae5c1f95c702" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="286,563,462,589"/>
+<area shape="rect" id="node21" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="273,461,475,488"/>
+<area shape="rect" id="node22" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="295,411,453,437"/>
+<area shape="rect" id="node23" href="$classFilter.html#a68528a62dfbd9f78d6bd0703ca5bd828" title="Swaps Blue with Green value if size &gt;= 24bit." alt="" coords="316,664,432,691"/>
+<area shape="rect" id="node24" href="$classFilter.html#a51a2b1cce4671083d47530694d0e797e" title="Swaps Blue with Red value if size &gt;= 24bit." alt="" coords="317,715,431,741"/>
+<area shape="rect" id="node25" href="$classFilter.html#ad6f109289f21be75db0a1351c86d3143" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="316,765,432,792"/>
+<area shape="rect" id="node26" href="$classFilter.html#a773ee633720080079d6a17ac610d353d" title="Substracts red value from each channel if size &gt;= 24bit." alt="" coords="321,816,427,843"/>
+<area shape="rect" id="node27" href="$classFilter.html#afc6fee2bd138d157986ef3e2f2907186" title="Substracts green value from each channel if size &gt;= 24bit." alt="" coords="320,867,428,893"/>
+<area shape="rect" id="node8" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="803,208,997,235"/>
+<area shape="rect" id="node12" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="779,259,1021,285"/>
+<area shape="rect" id="node13" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="813,310,987,351"/>
+<area shape="rect" id="node14" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="813,157,987,184"/>
+<area shape="rect" id="node9" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="1077,208,1264,235"/>
+<area shape="rect" id="node10" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="1077,259,1265,285"/>
+<area shape="rect" id="node11" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="1079,157,1262,184"/>
+<area shape="rect" id="node17" href="$classFilter.html#a55f792b3f87991db5a5e666827d6214c" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="849,411,951,437"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="BitmapHeader::getHeader" name="BitmapHeader::getHeader">
-<area shape="rect" id="node1" title="Returns pointer to char array containing the complete fileheader extracted from original file." alt="" coords="5,42,197,69"/>
+<area shape="rect" id="node1" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="5,42,197,69"/>
 <area shape="rect" id="node2" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="245,5,419,47"/>
 <area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="245,71,419,98"/>
 </map>

@@ -19,6 +19,31 @@
 #include "./ErrorHandler.h"
 
 /**
+ *@brief Header struct contains BitmapHeader Information and leftover
+ */
+struct __attribute__((__packed__)) Header{ //packed to prevent compiler from implementing padding bytges. Careful, order of this struct is as per bitmap standard defined. Dont change it even for convenience
+    uint16_t bfType;/**< ASCII COde, usually contains BM*/
+    uint32_t bfSize;/**< size of the file*/
+    uint32_t bfReserved;/**< Reserved, software dependend*/
+    uint32_t bfOffBits;/**< Offset between image data and begin of file*/ //we need this one
+    //information header
+    uint32_t biSize;/**< size of information header*/
+    uint32_t biWidth;/**< width in pixel*/
+    uint32_t biHeight;/**< height in pixel*/
+    uint16_t biPlanes;/**< oputdated*/
+    uint16_t biBitCount;/**< Color Depth in bit*/
+    uint32_t biCompression;/**< Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded*/
+    uint32_t biSizeImage;/**< biSizeImage*/
+    uint32_t biXPelsPerMeter;/**< biXPelsPerMeter*/
+    uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
+    uint32_t biClrUsed;/**< biClrUsed*/
+    uint32_t biClrImportant;/**< biClrImportant*/
+    unsigned char leftover[5000];/**< leftover of header */
+    char bfTypeA;/**< bfType first hex value*/
+    char bfTypeB;/**< bfType second hex value*/
+};
+
+ /**
  *@brief BitmapHeader Class contains header information extracted from bitmap file
  */
 class BitmapHeader {
@@ -34,6 +59,11 @@ public:
     */
     BitmapHeader(std::string p, ErrorHandler *errH);
     /**
+    * @brief Non-Standard Constructor, stores p in path member and calls readHeader with p as argument
+    * @param ErrorHandler *errH - Errorhandler 
+    */
+    BitmapHeader(std::string p, ErrorHandler *errH, bool read);
+    /**
     * @brief Non-Standard Constructor, takes arguments for all members and stores them. Outdated, not used
     * @param ErrorHandler *errH - Errorhandler 
     */
@@ -42,28 +72,15 @@ public:
      * Standard deconstructor.
      */
     virtual ~BitmapHeader();
-    /**
-     * @brief Overloaded readHeader, opens ifstream to path and calls read private method
-     * @param std::string p - Path to bmp file
-     * @return Integer containing error codes
-     */
-    int readHeader(std::string p);
-    /**
-     * @brief Opens ifstream to path and calls read private method
-     * @return Integer containing error codes
-     */
-    int readHeader();
-    /**
-     * @brief Prints all stored values, attention, values not initialized, should be fixed in constructor
-     */
-    void printHeader();
     
+    ///////////////////////////////////************************************************************/
+    /**GETTERS**///////////////////////
+    ///////////////////////////////////
     /**
-     * @brief Returns pointer to char array containing the complete fileheader extracted from original file
+     * @brief Returns pointer to char array containing the complete fileheader extracted/converted from original file
      * @return char* pointer to char
      */
     char* getHeader();
-    
     /**
      * @brief Getter for bfSize
      * @return uint32_t bfSize
@@ -99,31 +116,40 @@ public:
      * @return uint32_t BiBitCount
      */
     uint32_t getBitCount();
+    /**
+     * @brief Returns Header type Pointer to header struct to access members.
+     * @return Header* type pointer to struct
+     */
+    Header* getHeaderStruct();
+    
+    ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
+    /**
+     * @brief Overloaded readHeader, opens ifstream to path and calls read private method
+     * @param std::string p - Path to bmp file
+     * @return Integer containing error codes
+     */
+    int readHeader(std::string p);
+    /**
+     * @brief Opens ifstream to path and calls read private method
+     * @return Integer containing error codes
+     */
+    int readHeader();
+    /**
+     * @brief Prints all stored values, attention, values not initialized, should be fixed in constructor
+     */
+    void printHeader();
+    /**
+     * @brief Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_t Header.bfTypeB. Should always be done after reading of header
+     * @return Integer containing error codes
+     */
+    int fixType();
+    
 private:
-    //file header
-    uint16_t bfType;/**< ASCII COde, usually contains BM*/
-    char bfTypeA;/**< bfType first hex value*/
-    char bfTypeB;/**< bfType second hex value*/
-    uint32_t bfSize;/**< size of the file*/
-    uint32_t bfReserved;/**< Reserved, software dependend*/
-    uint32_t bfOffBits;/**< Offset between image data and begin of file*/ //we need this one
-    //information header
-    uint32_t biSize;/**< size of information header*/
-    uint32_t biWidth;/**< width in pixel*/
-    uint32_t biHeight;/**< height in pixel*/
-    uint16_t biPlanes;/**< oputdated*/
-    uint16_t biBitCount;/**< Color Depth in bit*/
-    uint32_t biCompression;/**< Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded*/
-    uint32_t biSizeImage;/**< biSizeImage*/
-    uint32_t biXPelsPerMeter;/**< biXPelsPerMeter*/
-    uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
-    uint32_t biClrUsed;/**< biClrUsed*/
-    uint32_t biClrImportant;/**< biClrImportant*/
-    
+    Header header;/**< Struct containing 54byte header information + bitOffSet - 54 byte leftover */
     char *headerStream; /**< Pointer to char array containing the complete header */
-    
     std::string path;/**< Imagepath*/
-    
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     
     /**
@@ -131,11 +157,6 @@ private:
      * @return Not yet implemented, should try catch for error handling + return error codes
      */
     int read(std::ifstream& f);
-    /**
-     * @brief Small helper to extrac characters of bfType 
-    * @return Integer containing error codes
-     */
-    int fixType();
 };
 
 #endif /* BITMAPHEADER_H */

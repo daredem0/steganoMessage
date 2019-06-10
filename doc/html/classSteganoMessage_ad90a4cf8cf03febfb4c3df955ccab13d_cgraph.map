@@ -1,0 +1,5 @@
+<map id="SteganoMessage::buildImage" name="SteganoMessage::buildImage">
+<area shape="rect" id="node1" title="Builds new Image type object." alt="" coords="5,31,219,57"/>
+<area shape="rect" id="node2" href="$classImage.html#ac4e8db14cfd60a6a7085e6fcb83488a4" title="Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; ...." alt="" coords="267,5,457,32"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="279,56,445,83"/>
+</map>

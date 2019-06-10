@@ -24,6 +24,23 @@
 #include "../header/BitmapArray.h"
 #include "./ErrorHandler.h"
 #include <sstream>
+#include <ios>
+#include <sys/stat.h>
+#include <dirent.h>
+
+/*detect OS and define constants which will be evaluated. Needs to be done because get currenct wcdir depends on os*/
+#if defined (__linux__)
+    #define LINUX 1
+    #define MAC 0
+    #define PATHLINUX get_current_dir_name()
+    #define OPENDIR_LINUX(log) opendir(log) 
+#define MKDIR_LINUX(argA, argB) mkdir(argA, argB)
+#elif defined (__APPLE__)
+    #define MAC 1
+    #define LINUX 0
+    //#define PATHMAC /*************TOBI HIER ***************/
+    #define PATHLINUX NULL;
+#endif
 
 /**
  *@brief Image Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file
@@ -50,16 +67,58 @@ public:
      * Standard deconstructor.
      */
     virtual ~Image();
+    
+    ///////////////////////////////////************************************************************/
+    /**GETTERS**///////////////////////
+    ///////////////////////////////////
     /**
      * @brief Returns the path of the image.
      * @return std::string including stored path.
      */
     std::string getPath();
     /**
+     * @brief Getter for bitmapHeader
+     * @return BitmapHeader type pointer to BitmapHeader
+     */
+    BitmapHeader *getBitmapHeader();
+    /**
+     * @brief Getter for bitmapArray
+     * @return BitmapArray type pointer to BitmapArray
+     */
+    BitmapArray *getBitmapArray();
+    
+    ///////////////////////////////////************************************************************/
+    /**SETTERS**///////////////////////
+    ///////////////////////////////////
+    /**
      * @brief Stores path in this.
      * @param std::string p - Path to the image file.
      */
     void setPath(std::string p);
+    /**
+     * @brief Sets flags for while reading/writing filters
+     * @return returns integer containing error code
+     */
+    int setFilter(std::string gr, std::string col);
+    /**
+     * @brief Sets mode and path for text generation
+     * @param std::string path - path to output file
+     * @param std::ios mode - mode (trunc or app, dont fiddle with in/out!)
+     */
+    void setLogMode(std::string path, std::ios_base::openmode mode);
+    
+    ///////////////////////////////////************************************************************/
+    /**EVALUATIONS**///////////////////
+    ///////////////////////////////////
+    /**
+     * @brief Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png
+     * @return std::string containing format information (JPEG/BITMAP/PNG/GIF)
+     */
+    static std::string identifyFileFormat(std::string path);
+    
+    ///////////////////////////////////************************************************************/
+    /**OTHER METHODS**/////////////////
+    ///////////////////////////////////
     /**
      * @brief Calls Constructors for BitMapHeader and BitMapArray and reads information from image
      * @return returns integer containing error code
@@ -69,6 +128,11 @@ public:
      * @brief Prints text file to terminal (just for convenience and to check if ifstream works
      * @param std::string containing path to text file
      */
+    int generateBitmap();
+    /**
+     * @brief Generates txt file containing bitmap information as hex values
+     * @return returns integer containing error code
+     */
     int printTextFile(std::string p);
     /**
      * @brief Writes information to a text file !!Not debugged!! !!No Error Handling implemented!! !!Dont use!!
@@ -76,21 +140,9 @@ public:
      * @param std::string p - contains path to text file
      */
     int writeTextFile(std::string t, std::string p);
-    /**
-     * @brief Getter for bitmapHeader
-     * @return BitmapHeader type pointer to BitmapHeader
-     */
-    BitmapHeader *getBitmapHeader();
-    
-    BitmapArray *getBitmapArray();
     
     /**
      * @brief Generates new bitmap file
-     * @return returns integer containing error code
-     */
-    int generateBitmap();
-    /**
-     * @brief Generates txt file containing bitmap information as hex values
      * @return returns integer containing error code
      */
     int bmpToTxt();
@@ -104,23 +156,16 @@ public:
      * @return std:string containing hex value
      */
     static std::string decToHex(uint8_t v);
-    /**
-     * @brief Sets flags for while reading/writing filters
-     * @return returns integer containing error code
-     */
-    int setFilter(std::string gr, std::string col);
-    /**
-     * @brief Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; .png
-     * @return returns integer containing error code
-     */
-    static std::string identifyFileFormat(std::string path);
-private:
+protected:
     std::string path; /**< Imagepath*/
     BitmapHeader *header; /**< Pointer to BitmapHeader object containing header information*/
     BitmapArray *array; /**< Pointer to BitmapArray object containing imagedata*/
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     std::string filterModeGrey;/**<Flag for while reading/writing filters*/
     std::string filterModeCol;/**<Flag for while reading/writing filters*/
+    
+    std::string logfilePath;/**<path to logfile*/
+    std::ios_base::openmode logfileMode;/**<mode of logfile, either std::ios::trunc or std::ios::app, dont fiddle with in/out!*/
     
     /**
      * @brief Checks if a file already exists
