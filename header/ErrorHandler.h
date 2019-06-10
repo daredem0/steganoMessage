@@ -41,6 +41,14 @@ public:
      */
     virtual ~ErrorHandler(); //free list, implement!
     
+    ///////////////////////////////////************************************************************/
+    /**SETTERS**///////////////////////
+    ///////////////////////////////////
+    /**
+     * Sets flag for logfile output
+     */
+    void setLog(bool l);
+    
       ///////////////////////////////////************************************************************/
     /**OTHER METHODS**/////////////////
     ///////////////////////////////////
@@ -138,6 +146,8 @@ public:
     const static std::string ERROSERR;
     const static std::string ERROSERRMAC;
 private:
+    bool log;/**< flag for logfile*/
+    
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     
      /**

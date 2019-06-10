@@ -57,14 +57,20 @@ int SteganoMessage::initialize(int argc, char *argv[]){
                 if(argv[3] == FILTER){
                     this->setFilterMode(argv[4]);
                     crazy = false;
+                    argc > 5 ? this->setLog(true) : this->setLog(false);
                 }
                 else if(argv[3] == CRFILTER){
                     this->setFilterMode(argv[4]);
                     crazy = true;
+                    argc > 5 ? this->setLog(true) : this->setLog(false);
                 }
+                else if(argv[3] == LOG)
+                    this->setLog(true);
             }
-            else
+            else{
                 this->setFilterMode("");
+                    this->setLog(false);
+            }
             err->printLog("Filter mode: " + std::to_string(stegFilter) + "\n");
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
                 errTemp = this->getImage()->readImage(); //extract the image information
@@ -128,6 +134,44 @@ std::string SteganoMessage::getMode(){
 
 bool SteganoMessage::getPathVerified(){return path;}
 
+std::string SteganoMessage::getTimeString(){
+    using namespace std::chrono;
+    std::time_t t = system_clock::to_time_t(system_clock::now());
+    return getTimeDate('Y', t) + "-" + getTimeDate('M', t) + "-" + getTimeDate('D', t) + "_" + getTimeDate('h', t) + "-" + getTimeDate('m', t) + "-" + getTimeDate('s', t);
+}
+
+std::string SteganoMessage::getTimeDate(char t, std::time_t system_clock){
+    using namespace std::chrono;
+    std::stringstream ss;
+    switch(t){
+        case 'Y':
+            ss << std::put_time(std::localtime(&system_clock), "%Y");
+            break;
+        case 'M':
+            ss << std::put_time(std::localtime(&system_clock), "%m");
+            break;
+        case 'D':
+            ss << std::put_time(std::localtime(&system_clock), "%d");
+            break;
+        case 'h':
+            ss << std::put_time(std::localtime(&system_clock), "%H");
+            break;
+        case 'm':
+            ss << std::put_time(std::localtime(&system_clock), "%M");
+            break;
+        case 's':
+            ss << std::put_time(std::localtime(&system_clock), "%S");
+            break;
+        default:
+            return NULL;
+    }
+    return ss.str();
+}
+
+bool SteganoMessage::getLogMode(){
+    return log;
+}
+
 //SETTERS/************************************************************/
 int SteganoMessage::setMode(std::string m){
     if(modeSet == false){
@@ -186,6 +230,14 @@ int SteganoMessage::setFilterMode(std::string mode){
         stegFilter = noFilter;
     
     return errNoError;
+}
+
+void SteganoMessage::setLog(bool l){
+    log = l;
+    if(l == true)
+        img->setLogMode("./log/"+ this->getTimeString() + ".txt", std::ios::app);
+    else
+        img->setLogMode("./outputText.txt", std::ios::trunc);     
 }
 
 //EVALUATIONS/************************************************************/

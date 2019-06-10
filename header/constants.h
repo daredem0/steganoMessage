@@ -84,6 +84,7 @@ const std::string ENCRYPT = "-encrypt";
 const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
 const std::string CRFILTER = "-filter_cr";
+const std::string LOG = "-log";
     
 enum FilterMode {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
 color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, 

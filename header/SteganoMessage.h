@@ -21,6 +21,8 @@
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include <chrono>
+#include <ctime>
 #include "Jpeg.h"
 
 /**
@@ -100,6 +102,19 @@ public:
      */
     bool getPathVerified();
     
+    /**
+     * @brief Generates a time string
+     * @return std::string - y-m-d_h-m-s
+     */
+    static std::string getTimeString();
+    
+    static std::string getTimeDate(char t, std::time_t system_clock);
+    /**
+     * @brief Getter for log flag
+     * @return bool - true for log activated
+     */
+    bool getLogMode();
+    
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////
     ///////////////////////////////////
@@ -110,9 +125,15 @@ public:
      */
     int setMode(std::string m);
     /**
-     * @brief Prints values stored for mode and path
+     * @brief Sets the mode for the after reading filter
+     * @return integer with error code
      */
     int setFilterMode(std::string mode);
+    /**
+     * @brief Sets flag to create logfile
+     * @param bool - true -> logfile creation active
+     */
+    void setLog(bool l);
     
     ///////////////////////////////////************************************************************/
     /**EVALUATIONS**///////////////////
@@ -139,16 +160,14 @@ public:
      */
     int modeHandler();
     /**
-     * @brief Sets the mode for the after reading filter
+     * @brief Applies the filter stored in stegFilter
      * @return integer with error code
      */
     int applyFilter();
     /**
-     * @brief Applies the filter stored in stegFilter
-     * @return integer with error code
+     * @brief Prints values stored for mode and path
      */
     void printValues();
-    
     
 private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
@@ -158,6 +177,7 @@ private:
     bool modeSet; /**< flag to check if mode is set*/
     bool path; /**< flag to check if path is verified*/
     bool crazy;/**< Crazy filter flag*/
+    bool log; /**< flag for logfile creation*/
     FilterMode stegFilter; /**< enumeration to store set filter */
     
     ///////////////////////////////////************************************************************/

@@ -54,6 +54,11 @@ int Image::setFilter(std::string gr, std::string col){
     return 0;
 }
 
+void Image::setLogMode(std::string path, std::ios_base::openmode mode){
+    logfilePath = path;
+    logfileMode = mode;
+}
+
 //EVALUATIONS/************************************************************/
 std::string Image::identifyFileFormat(std::string p){
     std::ifstream file(p);
@@ -250,19 +255,19 @@ int Image::bmpToTxt(){
         char *data = new char[(header->getHeight()*header->getWidth())*header->getBitCount()/8];
         inFile.read(data, (header->getHeight()*header->getWidth())*header->getBitCount()/8);
         
-        std::string path = "./txtOutput.txt";
-        std::ofstream outFile(path.c_str(), std::ios::trunc);
+        std::string path = logfilePath;
+        std::ofstream outFile(path.c_str(), logfileMode);
 
         //write header
         int count;
         outFile << "Header Information:\n";
         std::cout << (header->getHeight()*header->getWidth())*header->getBitCount()/8 << std::endl;
         for(count = 0; count<= header->getOffBits()-1; ++count){
-            std::cout << byteToHex(*(head+count)) << " ";
+            //std::cout << byteToHex(*(head+count)) << " ";
             outFile << byteToHex(*(head+count));
                 if(count != 0 && (count+1)%16 == 0){
                     outFile << std::endl;
-                    std::cout << std::endl;
+                    //std::cout << std::endl;
                 }
                 else 
                     outFile << " ";
@@ -272,11 +277,11 @@ int Image::bmpToTxt(){
         outFile << "\nImage Data:\n";
         count = 0;
         for(int i = 0; i <= ((header->getHeight()*header->getWidth())*header->getBitCount()/8)-1; ++i){
-            std::cout << byteToHex(*(data+i)) << " ";
+            //std::cout << byteToHex(*(data+i)) << " ";
             outFile << byteToHex(*(data + i));
             if(count != 0 && (count+1)%16 == 0){
                 outFile << std::endl;
-                    std::cout << std::endl;
+                //std::cout << std::endl;
             }
             else
                 outFile << " ";
@@ -288,7 +293,8 @@ int Image::bmpToTxt(){
         delete(data);
         inFile.close();
         outFile.close();
-        errHandle->printLog("Generation successfull\n");
+        errHandle->printLog("Generation successfull to " + logfilePath + "\n");
+        return errNoError;
     }
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);

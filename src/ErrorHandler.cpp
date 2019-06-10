@@ -56,6 +56,12 @@ ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
 ErrorHandler::~ErrorHandler() {
 }
 
+//SETTERS/************************************************************/
+
+void ErrorHandler::setLog(bool l){
+    log = l;
+}
+
 //OTHER METHODS/************************************************************/
 int ErrorHandler::printError(int err){
     std::list<std::string>::iterator it = errorOut.begin();

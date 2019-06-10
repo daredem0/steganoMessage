@@ -24,6 +24,7 @@
 #include "../header/BitmapArray.h"
 #include "./ErrorHandler.h"
 #include <sstream>
+#include <ios>
 
 /*detect OS and define constants which will be evaluated. Needs to be done because get currenct wcdir depends on os*/
 #if defined (__linux__)
@@ -95,6 +96,12 @@ public:
      * @return returns integer containing error code
      */
     int setFilter(std::string gr, std::string col);
+    /**
+     * @brief Sets mode and path for text generation
+     * @param std::string path - path to output file
+     * @param std::ios mode - mode (trunc or app, dont fiddle with in/out!)
+     */
+    void setLogMode(std::string path, std::ios_base::openmode mode);
     
     ///////////////////////////////////************************************************************/
     /**EVALUATIONS**///////////////////
@@ -152,6 +159,9 @@ protected:
     ErrorHandler *errHandle;/**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     std::string filterModeGrey;/**<Flag for while reading/writing filters*/
     std::string filterModeCol;/**<Flag for while reading/writing filters*/
+    
+    std::string logfilePath;
+    std::ios_base::openmode logfileMode;
     
     /**
      * @brief Checks if a file already exists

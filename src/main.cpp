@@ -79,6 +79,7 @@ int main(int argc, char *argv[]) {
 
         //modestuff here
         steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
+        steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
 
         terminate(steg, 0); //cleanup
 
