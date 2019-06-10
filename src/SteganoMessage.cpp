@@ -67,8 +67,7 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
                 this->getImage()->readImage(); //extract the image information
             else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
-                ((Jpeg*)(img))->readImage();
-            //steg->getImage()->getBitmapHeader()->printHeader(); //only for debugging
+                ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
             return 0;
     }
     catch(int i){
@@ -244,7 +243,7 @@ int SteganoMessage::modeHandler(){
 }
 
 int SteganoMessage::applyFilter(){
-    std::cout << "Successfully filter application initialized" << std::endl;
+    std::cout << "Successfully initialized filter handler" << std::endl;
     std::vector<std::vector<uint32_t>> *data = this->getImage()->getBitmapArray()->getBDataPointer();
     switch(stegFilter){
         case noFilter:
