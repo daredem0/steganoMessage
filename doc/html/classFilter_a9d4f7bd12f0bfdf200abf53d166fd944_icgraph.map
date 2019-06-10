@@ -1,0 +1,8 @@
+<map id="Filter::swapBytes" name="Filter::swapBytes">
+<area shape="rect" id="node1" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="615,81,749,108"/>
+<area shape="rect" id="node2" href="$classFilter.html#a55c046859fbbb468536cae5c1f95c702" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="378,5,554,32"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Sets the mode for the after reading filter." alt="" coords="108,81,317,108"/>
+<area shape="rect" id="node5" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="387,107,545,133"/>
+<area shape="rect" id="node6" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="365,157,567,184"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,81,60,108"/>
+</map>

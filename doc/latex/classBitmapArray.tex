@@ -11,8 +11,7 @@
 
 
 
-Collaboration diagram for Bitmap\+Array\+:
-\nopagebreak
+Collaboration diagram for Bitmap\+Array\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,6 +24,8 @@ Collaboration diagram for Bitmap\+Array\+:
 \mbox{\hyperlink{classBitmapArray_a582e5e54ec078d30fde87ae7b4540f32}{Bitmap\+Array}} ()
 \begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapArray_ae11059a1f2f1af199d0a2cf6f316397d}{Bitmap\+Array}} (std\+::string p, uint32\+\_\+t b, uint32\+\_\+t w, uint32\+\_\+t h, uint32\+\_\+t bit, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$errH, std\+::string fm)
+\begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBitmapArray_afc98bc8debfd35e9ad09df5c126cdd7f}{Bitmap\+Array}} (std\+::string p, uint32\+\_\+t b, uint32\+\_\+t w, uint32\+\_\+t h, uint32\+\_\+t bit, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$errH, std\+::string fm, std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$$>$ d)
 \begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapArray_a07ce0273af824a8deff592ef1a43d7e5}{Bitmap\+Array}} (const \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} \&orig)
 \begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
@@ -83,7 +84,7 @@ Definition at line 26 of file Bitmap\+Array.\+h.
 \mbox{\Hypertarget{classBitmapArray_a582e5e54ec078d30fde87ae7b4540f32}\label{classBitmapArray_a582e5e54ec078d30fde87ae7b4540f32}} 
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
-\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Bitmap\+Array\+::\+Bitmap\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -97,7 +98,7 @@ Definition at line 16 of file Bitmap\+Array.\+cpp.
 \mbox{\Hypertarget{classBitmapArray_ae11059a1f2f1af199d0a2cf6f316397d}\label{classBitmapArray_ae11059a1f2f1af199d0a2cf6f316397d}} 
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
-\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily Bitmap\+Array\+::\+Bitmap\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{uint32\+\_\+t}]{b,  }\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{uint32\+\_\+t}]{bit,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{errH,  }\item[{std\+::string}]{fm }\end{DoxyParamCaption})}
 
 
@@ -123,18 +124,53 @@ Non-\/\+Standard constructor.
 
 Definition at line 23 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapArray_ae11059a1f2f1af199d0a2cf6f316397d_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classBitmapArray_afc98bc8debfd35e9ad09df5c126cdd7f}\label{classBitmapArray_afc98bc8debfd35e9ad09df5c126cdd7f}} 
+\index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
+\index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
+\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Bitmap\+Array\+::\+Bitmap\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{uint32\+\_\+t}]{b,  }\item[{uint32\+\_\+t}]{w,  }\item[{uint32\+\_\+t}]{h,  }\item[{uint32\+\_\+t}]{bit,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{errH,  }\item[{std\+::string}]{fm,  }\item[{std\+::vector$<$ std\+::vector$<$ uint32\+\_\+t $>$$>$}]{d }\end{DoxyParamCaption})}
+
+
+
+Non-\/\+Standard constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & p -\/ Path to original file \\
+\hline
+{\em uint32\+\_\+t} & b -\/ Offset of fileheader \\
+\hline
+{\em uint32\+\_\+t} & w -\/ width of bitmap \\
+\hline
+{\em uint32\+\_\+t} & h -\/ height of bitmap \\
+\hline
+{\em uint32\+\_\+t} & bit -\/ color depth of bitmap \\
+\hline
+{\em \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}} & $\ast$errH -\/ Errorhandler \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Bitmap\+Array.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBitmapArray_afc98bc8debfd35e9ad09df5c126cdd7f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classBitmapArray_a07ce0273af824a8deff592ef1a43d7e5}\label{classBitmapArray_a07ce0273af824a8deff592ef1a43d7e5}} 
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
 \index{BitmapArray@{BitmapArray}!BitmapArray@{BitmapArray}}
-\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{BitmapArray()}{BitmapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily Bitmap\+Array\+::\+Bitmap\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} \&}]{orig }\end{DoxyParamCaption})}
 
 
@@ -148,7 +184,7 @@ Copy Constructor.
 \end{DoxyParams}
 
 
-Definition at line 33 of file Bitmap\+Array.\+cpp.
+Definition at line 40 of file Bitmap\+Array.\+cpp.
 
 \mbox{\Hypertarget{classBitmapArray_acc21c3148de08fb85d2939821f9f2cf0}\label{classBitmapArray_acc21c3148de08fb85d2939821f9f2cf0}} 
 \index{BitmapArray@{BitmapArray}!````~BitmapArray@{$\sim$BitmapArray}}
@@ -158,7 +194,7 @@ Definition at line 33 of file Bitmap\+Array.\+cpp.
 
 Standard deconstructor. 
 
-Definition at line 36 of file Bitmap\+Array.\+cpp.
+Definition at line 43 of file Bitmap\+Array.\+cpp.
 
 
 
@@ -185,10 +221,9 @@ uint32\+\_\+t generated value
 \end{DoxyReturn}
 
 
-Definition at line 147 of file Bitmap\+Array.\+cpp.
+Definition at line 154 of file Bitmap\+Array.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,10 +245,9 @@ std\+::vector$<$std\+::vector$<$uint32\+\_\+t$>$$>$ containing image data
 \end{DoxyReturn}
 
 
-Definition at line 159 of file Bitmap\+Array.\+cpp.
+Definition at line 166 of file Bitmap\+Array.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,10 +269,9 @@ std\+::vector$<$std\+::vector$<$uint32\+\_\+t$>$$>$$\ast$ Pointer image data
 \end{DoxyReturn}
 
 
-Definition at line 161 of file Bitmap\+Array.\+cpp.
+Definition at line 168 of file Bitmap\+Array.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -260,18 +293,16 @@ std\+::string $\ast$$\ast$$\ast$
 \end{DoxyReturn}
 
 
-Definition at line 168 of file Bitmap\+Array.\+cpp.
+Definition at line 175 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapArray_afb549703b79c26499fc443f187bb3d6a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -290,10 +321,9 @@ Prints all image data.
 
 
 
-Definition at line 131 of file Bitmap\+Array.\+cpp.
+Definition at line 138 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -319,10 +349,9 @@ Loads and decrypts the image data to the 2D std\+::vector member.
 \end{DoxyParams}
 
 
-Definition at line 123 of file Bitmap\+Array.\+cpp.
+Definition at line 130 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,18 +378,16 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 63 of file Bitmap\+Array.\+cpp.
+Definition at line 70 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapArray_a3a5834d03cd095769b422d4d66b9435f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -382,18 +409,16 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 39 of file Bitmap\+Array.\+cpp.
+Definition at line 46 of file Bitmap\+Array.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapArray_a4ce4b5acc896040075be63a559799e7e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -415,7 +440,7 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 163 of file Bitmap\+Array.\+cpp.
+Definition at line 170 of file Bitmap\+Array.\+cpp.
 
 
 
@@ -428,7 +453,7 @@ Definition at line 163 of file Bitmap\+Array.\+cpp.
 
 2D std\+::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. 
 
-Definition at line 84 of file Bitmap\+Array.\+h.
+Definition at line 94 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_a18127e27d4b1477fd46ef0c0b3dbc110}\label{classBitmapArray_a18127e27d4b1477fd46ef0c0b3dbc110}} 
 \index{BitmapArray@{BitmapArray}!bitCount@{bitCount}}
@@ -438,7 +463,7 @@ Definition at line 84 of file Bitmap\+Array.\+h.
 
 Color Depth of original file 
 
-Definition at line 89 of file Bitmap\+Array.\+h.
+Definition at line 99 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_abcab200a1eb84331f7c79702e9199694}\label{classBitmapArray_abcab200a1eb84331f7c79702e9199694}} 
 \index{BitmapArray@{BitmapArray}!bitOffset@{bitOffset}}
@@ -448,7 +473,7 @@ Definition at line 89 of file Bitmap\+Array.\+h.
 
 Headeroffest of original file 
 
-Definition at line 88 of file Bitmap\+Array.\+h.
+Definition at line 98 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_a8d95e8cb2bf8c0f618465a389e8ffe4d}\label{classBitmapArray_a8d95e8cb2bf8c0f618465a389e8ffe4d}} 
 \index{BitmapArray@{BitmapArray}!errHandle@{errHandle}}
@@ -458,7 +483,7 @@ Definition at line 88 of file Bitmap\+Array.\+h.
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 92 of file Bitmap\+Array.\+h.
+Definition at line 102 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_adfd3e5a1eed42e37b22a4f2f2560ad67}\label{classBitmapArray_adfd3e5a1eed42e37b22a4f2f2560ad67}} 
 \index{BitmapArray@{BitmapArray}!filterMode@{filterMode}}
@@ -468,7 +493,7 @@ Definition at line 92 of file Bitmap\+Array.\+h.
 
 Mode for while reading filter application 
 
-Definition at line 90 of file Bitmap\+Array.\+h.
+Definition at line 100 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_adb8d1a8fcc55c3884ad3eea71c6042be}\label{classBitmapArray_adb8d1a8fcc55c3884ad3eea71c6042be}} 
 \index{BitmapArray@{BitmapArray}!height@{height}}
@@ -478,7 +503,7 @@ Definition at line 90 of file Bitmap\+Array.\+h.
 
 height of original file 
 
-Definition at line 87 of file Bitmap\+Array.\+h.
+Definition at line 97 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_a3a3e1fbdd198c6731c7f6e20fb492445}\label{classBitmapArray_a3a3e1fbdd198c6731c7f6e20fb492445}} 
 \index{BitmapArray@{BitmapArray}!path@{path}}
@@ -488,7 +513,7 @@ Definition at line 87 of file Bitmap\+Array.\+h.
 
 path to original file 
 
-Definition at line 85 of file Bitmap\+Array.\+h.
+Definition at line 95 of file Bitmap\+Array.\+h.
 
 \mbox{\Hypertarget{classBitmapArray_a44f51b2c1ecde3f9aa504df25d65b6c9}\label{classBitmapArray_a44f51b2c1ecde3f9aa504df25d65b6c9}} 
 \index{BitmapArray@{BitmapArray}!width@{width}}
@@ -498,7 +523,7 @@ Definition at line 85 of file Bitmap\+Array.\+h.
 
 width of original file 
 
-Definition at line 86 of file Bitmap\+Array.\+h.
+Definition at line 96 of file Bitmap\+Array.\+h.
 
 
 

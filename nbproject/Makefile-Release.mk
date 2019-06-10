@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/BitmapArray.o \
 	${OBJECTDIR}/src/BitmapHeader.o \
 	${OBJECTDIR}/src/ErrorHandler.o \
+	${OBJECTDIR}/src/Filter.o \
 	${OBJECTDIR}/src/Image.o \
 	${OBJECTDIR}/src/Jpeg.o \
 	${OBJECTDIR}/src/Message.o \
@@ -83,6 +84,11 @@ ${OBJECTDIR}/src/ErrorHandler.o: src/ErrorHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ErrorHandler.o src/ErrorHandler.cpp
+
+${OBJECTDIR}/src/Filter.o: src/Filter.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Filter.o src/Filter.cpp
 
 ${OBJECTDIR}/src/Image.o: src/Image.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

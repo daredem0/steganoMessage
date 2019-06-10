@@ -1,0 +1,4 @@
+<map id="Filter::revertUint" name="Filter::revertUint">
+<area shape="rect" id="node1" title="Turns the whole bit&#45;pattern around." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$classFilter.html#a55f792b3f87991db5a5e666827d6214c" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="183,5,284,32"/>
+</map>

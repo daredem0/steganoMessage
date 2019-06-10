@@ -221,10 +221,12 @@ int SteganoMessage::modeHandler(){
         std::string mess;
         std::getline(std::cin, mess);
         this->buildMessage(mess);
+        this->buildMessage("ABD");
         //check if message was read properly:
         std::cout << "I found: " << this->getMessage()->getMessage() << std::endl;
      
         this->getImage()->getBitmapArray()->infuse("ABCD");                     /*this->getMessage()->getMessage()*/
+        std::cout << std::endl; //fix missing endl in infuse function
         
         
         this->getImage()->generateBitmap(); 
@@ -257,40 +259,40 @@ int SteganoMessage::applyFilter(){
             dummyFilter(data);
             return errNoError;
         case invertBit:
-            genFilter(data, revertUint);
+            genFilter(data, Filter::revertUint);
             return errNoError;
         case swapByte:
-            genFilter(data, swapBytes);
+            genFilter(data, Filter::swapBytes);
             return errNoError;
         case swapOctet:
-            genFilter(data, swapOctets);
+            genFilter(data, Filter::swapOctets);
             return errNoError;
         case swapByteOctet:
-            genFilter(data, swapBytesOctets);
+            genFilter(data, Filter::swapBytesOctets);
             return errNoError;
         case swapByteOctetBit:
-            genFilter(data, swapBytesOctetsBits);
+            genFilter(data, Filter::swapBytesOctetsBits);
             return errNoError;
         case swapByteBit:
-            genFilter(data, swapBytesBits);
+            genFilter(data, Filter::swapBytesBits);
             return errNoError;
         case swapBtG:
-            genFilter(data, swapBG);
+            genFilter(data, Filter::swapBG);
             return errNoError;
         case swapBtR:
-            genFilter(data, swapBR);
+            genFilter(data, Filter::swapBR);
             return errNoError;
         case swapGtR:
-            genFilter(data, swapGR);
+            genFilter(data, Filter::swapGR);
             return errNoError;
         case substBl:
-            genFilter(data, substB);
+            genFilter(data, Filter::substB);
             return errNoError;
         case substRd:
-            genFilter(data, substR);
+            genFilter(data, Filter::substR);
             return errNoError;
         case substGr:
-            genFilter(data, substG);
+            genFilter(data, Filter::substG);
             return errNoError;
         default:
             return errUnknown;
@@ -328,142 +330,7 @@ void SteganoMessage::displayProgress(int p){
 int SteganoMessage::getPixel(){return this->getImage()->getBitmapHeader()->getHeight() * this->getImage()->getBitmapHeader()->getWidth();}
 
 
-//FILTERS/*******************************************************************************/
-uint32_t SteganoMessage::revertUint(uint32_t d, size_t s){
-    uint32_t out = 0;
-    for(int i = 0; i < s; ++i){
-        out |= invert(d >> i*8)<<i*8;
-    }
-    return out;
-}
 
-uint32_t SteganoMessage::invert(uint8_t w){
-   w = (w & 0xF0) >> 4 | (w & 0x0F) << 4;
-   w = (w & 0xCC) >> 2 | (w & 0x33) << 2;
-   w = (w & 0xAA) >> 1 | (w & 0x55) << 1;
-   return w;
-}
-
-uint32_t SteganoMessage::swapBytes(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return ((d & 0xFF000000) >> 24 | (d & 0x000000FF) << 24) | ((d & 0xFF0000) >> 8 | (d & 0xFF00) << 8);
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::swapOctets(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return (d & 0xF0) >> 4 | (d & 0x0F) << 4;
-        case 2:
-            return ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-        case 3:
-            return ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-        case 4:
-            return ((d & 0xFF000000) >> 4  | (d & 0x0F000000) << 4) | ((d & 0xF00000) >> 4 | (d & 0x0F0000) << 4) 
-                    | ((d & 0xF000) >> 4 | (d & 0x0F00) << 4) | ((d & 0xF0) >> 4 | (d & 0x0F) << 4);
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::swapBytesOctets(uint32_t d, size_t s){return swapBytes(swapOctets(d, s), s);}
-
-uint32_t SteganoMessage::swapBytesBits(uint32_t d, size_t s){return revertUint(swapBytes(d,s),s);}
-
-uint32_t SteganoMessage::swapBytesOctetsBits(uint32_t d, size_t s){return revertUint(swapBytes(swapOctets(d, s), s),s);}
-
-
-
-uint32_t SteganoMessage::swapBR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0x00FF00FF) | ((d & 0xFF000000) >> 16 | (d & 0x0000FF00) << 16);
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::swapBG(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0x0000FFFF) | ((d & 0xFF000000) >> 8 | (d & 0x00FF0000) << 8);
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::swapGR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d & 0xFF0000) >> 16 | (d & 0x0000FF) << 16;
-        case 4:
-            return (d & 0xFF0000FF) | ((d & 0x00FF0000) >> 8 | (d & 0x0000FF00) << 8);
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::substB(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0xFF0000)) | ((d & 0x00FF00) - (d & 0xFF0000 >> 8)) | ((d & 0x0000FF) - (d & 0xFF0000 >> 16)); 
-        case 4:
-            return (d -(d & 0xFF000000)) | ((d & 0x00FF0000) - (d & 0xFF000000 >> 8)) | ((d & 0x0000FF00) - (d & 0xFF000000 >> 16)) | (d & 0xFF); 
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::substR(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0x0000FF)) | ((d & 0x00FF00) - (d & 0x0000FF << 8)) | ((d & 0xFF0000) - (d & 0x0000FF << 16)); 
-        case 4:
-            return (d -(d & 0x0000FF00)) | ((d & 0x00FF0000) - (d & 0x0000FF00 << 8)) | ((d & 0xFF000000) - (d & 0x0000FF00 << 16)) | (d & 0xFF); 
-    }
-    return 0;
-}
-
-uint32_t SteganoMessage::substG(uint32_t d, size_t s){
-    switch(s){
-        case 1:
-            return d;
-        case 2:
-            return (d & 0xFF00) >> 8 | (d & 0x00FF) << 8;
-        case 3:
-            return (d -(d & 0x00FF00)) | ((d & 0xFF0000) - (d & 0x00FF00 << 8)) | ((d & 0x0000FF) - (d & 0x00FF00 >> 8)); 
-        case 4:
-            return (d -(d & 0x00FF0000)) | ((d & 0xFF000000) - (d & 0x00FF0000 << 8)) | ((d & 0x0000FF00) - (d & 0x00FF0000 >> 8)) | (d & 0xFF); 
-    }
-    return 0;
-}
 
 void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (*f)(uint32_t, size_t)){
     int count = 0;
@@ -482,5 +349,5 @@ void SteganoMessage::genFilter(std::vector<std::vector<uint32_t>> *d, uint32_t (
 
 void SteganoMessage::dummyFilter(std::vector<std::vector<uint32_t>> *d){
     std::cout << "In dummy filter" << std::endl;
-    genFilter(d, substB);
+    genFilter(d, Filter::substB);
 }

@@ -1,0 +1,551 @@
+\hypertarget{classFilter}{}\section{Filter Class Reference}
+\label{classFilter}\index{Filter@{Filter}}
+
+
+Provides constant filter methods.  
+
+
+
+
+{\ttfamily \#include $<$Filter.\+h$>$}
+
+
+
+Collaboration diagram for Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classFilter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFilter_ad15994c30d497afd567a6445446a249e}{Filter}} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFilter_a6ed476659596aa4bc61e69514960d95b}{Filter}} (const \mbox{\hyperlink{classFilter}{Filter}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFilter_a502ee334d42eac3edbaf32b599f9c35e}{$\sim$\+Filter}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_ae4a4b081886014742d083d9a2b285981}{revert\+Uint}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Turns the whole bit-\/pattern around. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a55f792b3f87991db5a5e666827d6214c}{invert}} (uint8\+\_\+t w)
+\begin{DoxyCompactList}\small\item\em Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mode/yellow in crazy mode. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a9d4f7bd12f0bfdf200abf53d166fd944}{swap\+Bytes}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps the bytes as good as possible depending on value in s. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_aeb85c27a3d80540f2bd4b5f314543d4c}{swap\+Octets}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta in normal mode/yellow in crazy mode. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a55c046859fbbb468536cae5c1f95c702}{swap\+Bytes\+Octets}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps the bytes first and then each octets as good as possible depending on value in s. Very noisy filter. In normal mode shift into magenta, in crazy mode shift into yellow. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a42c3e8f730c64a1bcdf187dc0a09082d}{swap\+Bytes\+Bits}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps the bytes first and then the bits as good as possible depending on value in s. Strong noise and psychodelig color effect. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a9c8e2eb790e7e9dff6493a12a1fefc4f}{swap\+Bytes\+Octets\+Bits}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps the bytes first followed by the octets and bits as good as possible depending on value in s. Fluid like filter. In normal mode shift into magenta, in crazy mode shift into yellow. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a51a2b1cce4671083d47530694d0e797e}{swap\+BR}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps Blue with Red value if size $>$= 24bit. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a68528a62dfbd9f78d6bd0703ca5bd828}{swap\+BG}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps Blue with Green value if size $>$= 24bit. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_ad6f109289f21be75db0a1351c86d3143}{swap\+GR}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Swaps Green with Red value if size $>$= 24bit. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a3f2bbadc0138195cebf84bd8ce8d9892}{substB}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Substracts blue value from each channel if size $>$= 24bit. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_afc6fee2bd138d157986ef3e2f2907186}{substG}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Substracts green value from each channel if size $>$= 24bit. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{classFilter_a773ee633720080079d6a17ac610d353d}{substR}} (uint32\+\_\+t d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Substracts red value from each channel if size $>$= 24bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides constant filter methods. 
+
+Definition at line 22 of file Filter.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFilter_ad15994c30d497afd567a6445446a249e}\label{classFilter_ad15994c30d497afd567a6445446a249e}} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{Filter()}{Filter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Standard constructor. 
+
+
+
+Definition at line 16 of file Filter.\+cpp.
+
+\mbox{\Hypertarget{classFilter_a6ed476659596aa4bc61e69514960d95b}\label{classFilter_a6ed476659596aa4bc61e69514960d95b}} 
+\index{Filter@{Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{Filter()}{Filter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Filter\+::\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFilter}{Filter}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Filter-\/type object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Filter.\+cpp.
+
+\mbox{\Hypertarget{classFilter_a502ee334d42eac3edbaf32b599f9c35e}\label{classFilter_a502ee334d42eac3edbaf32b599f9c35e}} 
+\index{Filter@{Filter}!````~Filter@{$\sim$Filter}}
+\index{````~Filter@{$\sim$Filter}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{$\sim$Filter()}{~Filter()}}
+{\footnotesize\ttfamily Filter\+::$\sim$\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Standard deconstructor. 
+
+Definition at line 22 of file Filter.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilter_a55f792b3f87991db5a5e666827d6214c}\label{classFilter_a55f792b3f87991db5a5e666827d6214c}} 
+\index{Filter@{Filter}!invert@{invert}}
+\index{invert@{invert}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::invert (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mode/yellow in crazy mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern stored in first 2 bytes of the integer 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a55f792b3f87991db5a5e666827d6214c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_ae4a4b081886014742d083d9a2b285981}\label{classFilter_ae4a4b081886014742d083d9a2b285981}} 
+\index{Filter@{Filter}!revertUint@{revertUint}}
+\index{revertUint@{revertUint}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{revertUint()}{revertUint()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::revert\+Uint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Turns the whole bit-\/pattern around. 
+
+F\+I\+L\+T\+E\+RS
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file Filter.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classFilter_ae4a4b081886014742d083d9a2b285981_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_ae4a4b081886014742d083d9a2b285981_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a3f2bbadc0138195cebf84bd8ce8d9892}\label{classFilter_a3f2bbadc0138195cebf84bd8ce8d9892}} 
+\index{Filter@{Filter}!substB@{substB}}
+\index{substB@{substB}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{substB()}{substB()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::substB (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Substracts blue value from each channel if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a3f2bbadc0138195cebf84bd8ce8d9892_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_afc6fee2bd138d157986ef3e2f2907186}\label{classFilter_afc6fee2bd138d157986ef3e2f2907186}} 
+\index{Filter@{Filter}!substG@{substG}}
+\index{substG@{substG}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{substG()}{substG()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::substG (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Substracts green value from each channel if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_afc6fee2bd138d157986ef3e2f2907186_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a773ee633720080079d6a17ac610d353d}\label{classFilter_a773ee633720080079d6a17ac610d353d}} 
+\index{Filter@{Filter}!substR@{substR}}
+\index{substR@{substR}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{substR()}{substR()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::substR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Substracts red value from each channel if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a773ee633720080079d6a17ac610d353d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a68528a62dfbd9f78d6bd0703ca5bd828}\label{classFilter_a68528a62dfbd9f78d6bd0703ca5bd828}} 
+\index{Filter@{Filter}!swapBG@{swapBG}}
+\index{swapBG@{swapBG}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBG()}{swapBG()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+BG (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps Blue with Green value if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a68528a62dfbd9f78d6bd0703ca5bd828_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a51a2b1cce4671083d47530694d0e797e}\label{classFilter_a51a2b1cce4671083d47530694d0e797e}} 
+\index{Filter@{Filter}!swapBR@{swapBR}}
+\index{swapBR@{swapBR}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBR()}{swapBR()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+BR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps Blue with Red value if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a51a2b1cce4671083d47530694d0e797e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a9d4f7bd12f0bfdf200abf53d166fd944}\label{classFilter_a9d4f7bd12f0bfdf200abf53d166fd944}} 
+\index{Filter@{Filter}!swapBytes@{swapBytes}}
+\index{swapBytes@{swapBytes}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBytes()}{swapBytes()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+Bytes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps the bytes as good as possible depending on value in s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a9d4f7bd12f0bfdf200abf53d166fd944_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a42c3e8f730c64a1bcdf187dc0a09082d}\label{classFilter_a42c3e8f730c64a1bcdf187dc0a09082d}} 
+\index{Filter@{Filter}!swapBytesBits@{swapBytesBits}}
+\index{swapBytesBits@{swapBytesBits}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBytesBits()}{swapBytesBits()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+Bytes\+Bits (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps the bytes first and then the bits as good as possible depending on value in s. Strong noise and psychodelig color effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Filter.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a42c3e8f730c64a1bcdf187dc0a09082d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a42c3e8f730c64a1bcdf187dc0a09082d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a55c046859fbbb468536cae5c1f95c702}\label{classFilter_a55c046859fbbb468536cae5c1f95c702}} 
+\index{Filter@{Filter}!swapBytesOctets@{swapBytesOctets}}
+\index{swapBytesOctets@{swapBytesOctets}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBytesOctets()}{swapBytesOctets()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+Bytes\+Octets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps the bytes first and then each octets as good as possible depending on value in s. Very noisy filter. In normal mode shift into magenta, in crazy mode shift into yellow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file Filter.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a55c046859fbbb468536cae5c1f95c702_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a55c046859fbbb468536cae5c1f95c702_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_a9c8e2eb790e7e9dff6493a12a1fefc4f}\label{classFilter_a9c8e2eb790e7e9dff6493a12a1fefc4f}} 
+\index{Filter@{Filter}!swapBytesOctetsBits@{swapBytesOctetsBits}}
+\index{swapBytesOctetsBits@{swapBytesOctetsBits}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapBytesOctetsBits()}{swapBytesOctetsBits()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+Bytes\+Octets\+Bits (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps the bytes first followed by the octets and bits as good as possible depending on value in s. Fluid like filter. In normal mode shift into magenta, in crazy mode shift into yellow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Filter.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a9c8e2eb790e7e9dff6493a12a1fefc4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_a9c8e2eb790e7e9dff6493a12a1fefc4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_ad6f109289f21be75db0a1351c86d3143}\label{classFilter_ad6f109289f21be75db0a1351c86d3143}} 
+\index{Filter@{Filter}!swapGR@{swapGR}}
+\index{swapGR@{swapGR}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapGR()}{swapGR()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+GR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps Green with Red value if size $>$= 24bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_ad6f109289f21be75db0a1351c86d3143_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFilter_aeb85c27a3d80540f2bd4b5f314543d4c}\label{classFilter_aeb85c27a3d80540f2bd4b5f314543d4c}} 
+\index{Filter@{Filter}!swapOctets@{swapOctets}}
+\index{swapOctets@{swapOctets}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{swapOctets()}{swapOctets()}}
+{\footnotesize\ttfamily uint32\+\_\+t Filter\+::swap\+Octets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta in normal mode/yellow in crazy mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & d -\/ bit pattern \\
+\hline
+{\em size\+\_\+t} & s -\/ size of the part of the pattern that needs to be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t generated new bit pattern 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Filter.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter_aeb85c27a3d80540f2bd4b5f314543d4c_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/\mbox{\hyperlink{Filter_8h}{Filter.\+h}}\item 
+src/\mbox{\hyperlink{Filter_8cpp}{Filter.\+cpp}}\end{DoxyCompactItemize}

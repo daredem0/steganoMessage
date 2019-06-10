@@ -85,7 +85,7 @@ const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
 const std::string CRFILTER = "-filter_cr";
     
-enum Filter {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
+enum FilterMode {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
 color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, 
 swapByteOctetBit = 9, swapByteBit = 10, swapBtG = 11, swapBtR = 12, swapGtR = 13, substBl = 14, substRd = 15, substGr = 16};
 

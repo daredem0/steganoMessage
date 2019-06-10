@@ -40,8 +40,9 @@ Image::Image(const Image& orig) {
 }
 
 Image::~Image() {
-    if(header != NULL)
+    if(header != NULL){
         delete header;
+    }
     if(array != NULL)
         delete array;
 }
@@ -128,7 +129,7 @@ int Image::generateBitmap(){
                 ++i;
             }
             sWD = "./";
-            sWD += "/output" + std::to_string(i) + ".bmp";
+            sWD += "output" + std::to_string(i) + ".bmp";
         }
         else
         {
@@ -148,7 +149,7 @@ int Image::generateBitmap(){
         return errImgWD;
     }
     try{
-        errHandle->printLog("Output-path" + sWD + "\n");
+        errHandle->printLog("Output-path: " + sWD + "\n");
         file.open(sWD, std::ios::binary | std::ios::trunc);
         errHandle->printLog("Writing header\n");
         file.write(header->getHeader(), header->getOffBits());

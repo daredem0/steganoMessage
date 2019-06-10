@@ -42,6 +42,16 @@ public:
      */
     BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm);
     /**
+    * @brief Non-Standard constructor.
+     * @param std::string p - Path to original file
+     * @param uint32_t b - Offset of fileheader
+     * @param uint32_t w - width of bitmap
+     * @param uint32_t h - height of bitmap
+     * @param uint32_t bit - color depth of bitmap
+     * @param ErrorHandler *errH - Errorhandler 
+     */
+    BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm, std::vector<std::vector<uint32_t>> d);
+    /**
      * @brief Copy Constructor. 
      * @param orig - Reference to original BitmapArray-type object
      */

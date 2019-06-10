@@ -17,25 +17,46 @@
 
 #include <stdio.h>
 #if defined (__linux__)
-#include "jpeglib.h"
+    #include "jpeglib.h"
 #elif defined (__APPLE__)
-#include "/usr/local/Cellar/jpeg/9c/include/jpeglib.h"
+    #include "/usr/local/Cellar/jpeg/9c/include/jpeglib.h"
 #endif
 #include <setjmp.h>
 #include <stdint.h>
 #include "Image.h"
+#include "Filter.h"
 
+/**
+ *@brief Jpeg class to load a jpeg image and autoatically convert it into a bitmap. Overloads readImage from Image class
+ */
 class Jpeg : public Image{
 public:
+    //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
+    /**
+    * @brief Standard constructor.
+    */
     Jpeg();
+    /**
+    * @brief Non-Standard constructor. Stores path and ErrorHandler object for usage.
+     * @param std::string p - path to file
+     * @param ErrorHandler* err - pointer to ErrorHandler type object
+    */
     Jpeg(std::string p, ErrorHandler* err);
+    /**
+     * @brief Copy Constructor. 
+     * @param orig - Reference to original Jpeg-type object
+     */
     Jpeg(const Jpeg& orig);
+    /**
+     * Standard deconstructor. 
+     */
     virtual ~Jpeg();
+    /**
+     * @brief Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the BitmapArray and BitmapHeader objects to store the data there
+     * @return returns integer containing error code
+     */
     int readImage();
 private:
-    BitmapHeader *bHeader;
-    BitmapArray *bData;
-    //std::string path;
 
 };
 

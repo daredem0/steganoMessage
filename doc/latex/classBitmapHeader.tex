@@ -2,6 +2,11 @@
 \label{classBitmapHeader}\index{BitmapHeader@{BitmapHeader}}
 
 
+\mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} Class contains header information extracted from bitmap file.  
+
+
+
+
 {\ttfamily \#include $<$Bitmap\+Header.\+h$>$}
 
 
@@ -20,6 +25,8 @@ Collaboration diagram for Bitmap\+Header\+:
 \mbox{\hyperlink{classBitmapHeader_a216e4a8485db7865be70c996f37e4c7d}{Bitmap\+Header}} ()
 \begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapHeader_a2cf57f049eae7d2ee93d5749d678aca5}{Bitmap\+Header}} (std\+::string p, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$errH)
+\begin{DoxyCompactList}\small\item\em Non-\/\+Standard Constructor, stores p in path member and calls read\+Header with p as argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBitmapHeader_aa0bf5c2238f213b36d7b85d4b7f90be1}{Bitmap\+Header}} (std\+::string p, \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$errH, bool \mbox{\hyperlink{classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8}{read}})
 \begin{DoxyCompactList}\small\item\em Non-\/\+Standard Constructor, stores p in path member and calls read\+Header with p as argument. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBitmapHeader_a25a5481f49d70a8c42a9efc17f17fd48}{Bitmap\+Header}} (const \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} \&orig)
 \begin{DoxyCompactList}\small\item\em Non-\/\+Standard Constructor, takes arguments for all members and stores them. Outdated, not used. \end{DoxyCompactList}\item 
@@ -47,7 +54,7 @@ uint32\+\_\+t \mbox{\hyperlink{classBitmapHeader_aa55f157d6852ce35add8c5db54ccad
 \begin{DoxyCompactList}\small\item\em Getter for Bi\+Size\+Image. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{classBitmapHeader_a2660782990f1d9547e0aef501f666969}{get\+Bit\+Count}} ()
 \begin{DoxyCompactList}\small\item\em Getter for Bi\+Bit\+Count. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structHeader}{Header}} $\ast$ \mbox{\hyperlink{classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58}{get\+Header\+Struct}} ()
+Header $\ast$ \mbox{\hyperlink{classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58}{get\+Header\+Struct}} ()
 \item 
 int \mbox{\hyperlink{classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b}{fix\+Type}} ()
 \end{DoxyCompactItemize}
@@ -59,7 +66,7 @@ int \mbox{\hyperlink{classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8}{read}}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structHeader}{Header}} \mbox{\hyperlink{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}{header}}
+Header \mbox{\hyperlink{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}{header}}
 \item 
 char $\ast$ \mbox{\hyperlink{classBitmapHeader_a9109a897251733f77942008318482426}{header\+Stream}}
 \item 
@@ -70,9 +77,9 @@ std\+::string \mbox{\hyperlink{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5
 
 
 \subsection{Detailed Description}
+\mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} Class contains header information extracted from bitmap file. 
 
-
-Definition at line 45 of file Bitmap\+Header.\+h.
+Definition at line 49 of file Bitmap\+Header.\+h.
 
 
 
@@ -80,7 +87,7 @@ Definition at line 45 of file Bitmap\+Header.\+h.
 \mbox{\Hypertarget{classBitmapHeader_a216e4a8485db7865be70c996f37e4c7d}\label{classBitmapHeader_a216e4a8485db7865be70c996f37e4c7d}} 
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
-\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Bitmap\+Header\+::\+Bitmap\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -94,7 +101,7 @@ Definition at line 16 of file Bitmap\+Header.\+cpp.
 \mbox{\Hypertarget{classBitmapHeader_a2cf57f049eae7d2ee93d5749d678aca5}\label{classBitmapHeader_a2cf57f049eae7d2ee93d5749d678aca5}} 
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
-\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily Bitmap\+Header\+::\+Bitmap\+Header (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{errH }\end{DoxyParamCaption})}
 
 
@@ -110,18 +117,36 @@ Non-\/\+Standard Constructor, stores p in path member and calls read\+Header wit
 
 Definition at line 26 of file Bitmap\+Header.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapHeader_a2cf57f049eae7d2ee93d5749d678aca5_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classBitmapHeader_aa0bf5c2238f213b36d7b85d4b7f90be1}\label{classBitmapHeader_aa0bf5c2238f213b36d7b85d4b7f90be1}} 
+\index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
+\index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
+\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Bitmap\+Header\+::\+Bitmap\+Header (\begin{DoxyParamCaption}\item[{std\+::string}]{p,  }\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{errH,  }\item[{bool}]{read }\end{DoxyParamCaption})}
+
+
+
+Non-\/\+Standard Constructor, stores p in path member and calls read\+Header with p as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}} & $\ast$errH -\/ Errorhandler \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Bitmap\+Header.\+cpp.
+
 \mbox{\Hypertarget{classBitmapHeader_a25a5481f49d70a8c42a9efc17f17fd48}\label{classBitmapHeader_a25a5481f49d70a8c42a9efc17f17fd48}} 
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
 \index{BitmapHeader@{BitmapHeader}!BitmapHeader@{BitmapHeader}}
-\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\subsubsection{\texorpdfstring{BitmapHeader()}{BitmapHeader()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily Bitmap\+Header\+::\+Bitmap\+Header (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} \&}]{orig }\end{DoxyParamCaption})}
 
 
@@ -158,10 +183,9 @@ Definition at line 23 of file Bitmap\+Header.\+cpp.
 
 
 
-Definition at line 62 of file Bitmap\+Header.\+cpp.
+Definition at line 65 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,7 +207,7 @@ uint32\+\_\+t Bi\+Size
 \end{DoxyReturn}
 
 
-Definition at line 153 of file Bitmap\+Header.\+cpp.
+Definition at line 161 of file Bitmap\+Header.\+cpp.
 
 \mbox{\Hypertarget{classBitmapHeader_a2660782990f1d9547e0aef501f666969}\label{classBitmapHeader_a2660782990f1d9547e0aef501f666969}} 
 \index{BitmapHeader@{BitmapHeader}!getBitCount@{getBitCount}}
@@ -200,10 +224,9 @@ uint32\+\_\+t Bi\+Bit\+Count
 \end{DoxyReturn}
 
 
-Definition at line 161 of file Bitmap\+Header.\+cpp.
+Definition at line 169 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -225,18 +248,16 @@ char$\ast$ pointer to char
 \end{DoxyReturn}
 
 
-Definition at line 122 of file Bitmap\+Header.\+cpp.
+Definition at line 130 of file Bitmap\+Header.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -247,14 +268,13 @@ Here is the caller graph for this function\+:
 \index{BitmapHeader@{BitmapHeader}!getHeaderStruct@{getHeaderStruct}}
 \index{getHeaderStruct@{getHeaderStruct}!BitmapHeader@{BitmapHeader}}
 \subsubsection{\texorpdfstring{getHeaderStruct()}{getHeaderStruct()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structHeader}{Header}} $\ast$ Bitmap\+Header\+::get\+Header\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Header $\ast$ Bitmap\+Header\+::get\+Header\+Struct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line 164 of file Bitmap\+Header.\+cpp.
+Definition at line 172 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -276,10 +296,9 @@ uint32\+\_\+t Bi\+Height
 \end{DoxyReturn}
 
 
-Definition at line 157 of file Bitmap\+Header.\+cpp.
+Definition at line 165 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -301,10 +320,9 @@ uint32\+\_\+t bf\+Off\+Bits
 \end{DoxyReturn}
 
 
-Definition at line 151 of file Bitmap\+Header.\+cpp.
+Definition at line 159 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -326,7 +344,7 @@ uint32\+\_\+t bf\+Size
 \end{DoxyReturn}
 
 
-Definition at line 149 of file Bitmap\+Header.\+cpp.
+Definition at line 157 of file Bitmap\+Header.\+cpp.
 
 \mbox{\Hypertarget{classBitmapHeader_aa55f157d6852ce35add8c5db54ccadae}\label{classBitmapHeader_aa55f157d6852ce35add8c5db54ccadae}} 
 \index{BitmapHeader@{BitmapHeader}!getSizeImage@{getSizeImage}}
@@ -343,7 +361,7 @@ uint32\+\_\+t Bi\+Size\+Image
 \end{DoxyReturn}
 
 
-Definition at line 159 of file Bitmap\+Header.\+cpp.
+Definition at line 167 of file Bitmap\+Header.\+cpp.
 
 \mbox{\Hypertarget{classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09}\label{classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09}} 
 \index{BitmapHeader@{BitmapHeader}!getWidth@{getWidth}}
@@ -360,10 +378,9 @@ uint32\+\_\+t Bi\+Width
 \end{DoxyReturn}
 
 
-Definition at line 155 of file Bitmap\+Header.\+cpp.
+Definition at line 163 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -382,10 +399,9 @@ Prints all stored values, attention, values not initialized, should be fixed in 
 
 
 
-Definition at line 104 of file Bitmap\+Header.\+cpp.
+Definition at line 112 of file Bitmap\+Header.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -407,18 +423,16 @@ Not yet implemented, should try catch for error handling + return error codes
 \end{DoxyReturn}
 
 
-Definition at line 68 of file Bitmap\+Header.\+cpp.
+Definition at line 71 of file Bitmap\+Header.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapHeader_aebc19bf8a908f1f7edfc5b10186c9db8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -445,10 +459,9 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 31 of file Bitmap\+Header.\+cpp.
+Definition at line 34 of file Bitmap\+Header.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -470,18 +483,16 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 40 of file Bitmap\+Header.\+cpp.
+Definition at line 43 of file Bitmap\+Header.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapHeader_a66adc11592dc1d18edbd46bade1db242_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -499,17 +510,17 @@ Here is the caller graph for this function\+:
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 135 of file Bitmap\+Header.\+h.
+Definition at line 144 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}\label{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}} 
 \index{BitmapHeader@{BitmapHeader}!header@{header}}
 \index{header@{header}!BitmapHeader@{BitmapHeader}}
 \subsubsection{\texorpdfstring{header}{header}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structHeader}{Header}} Bitmap\+Header\+::header\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Header Bitmap\+Header\+::header\hspace{0.3cm}{\ttfamily [private]}}
 
+Struct containing 54byte header information + bit\+Off\+Set -\/ 54 byte leftover 
 
-
-Definition at line 129 of file Bitmap\+Header.\+h.
+Definition at line 138 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_a9109a897251733f77942008318482426}\label{classBitmapHeader_a9109a897251733f77942008318482426}} 
 \index{BitmapHeader@{BitmapHeader}!headerStream@{headerStream}}
@@ -519,7 +530,7 @@ Definition at line 129 of file Bitmap\+Header.\+h.
 
 Pointer to char array containing the complete header 
 
-Definition at line 131 of file Bitmap\+Header.\+h.
+Definition at line 140 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5dd}\label{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5dd}} 
 \index{BitmapHeader@{BitmapHeader}!path@{path}}
@@ -529,7 +540,7 @@ Definition at line 131 of file Bitmap\+Header.\+h.
 
 Imagepath 
 
-Definition at line 133 of file Bitmap\+Header.\+h.
+Definition at line 142 of file Bitmap\+Header.\+h.
 
 
 

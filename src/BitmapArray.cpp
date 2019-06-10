@@ -30,6 +30,13 @@ BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint
     readArray();
 }
 
+BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint32_t bit, ErrorHandler *errH, std::string fm, std::vector<std::vector<uint32_t>> d) : path(p), bitOffset(b), width(w), 
+        height(h), bitCount(bit), errHandle(errH), filterMode(fm), bData(d){
+    //bData.clear();
+    errHandle->printLog("All went well in the constructor\n");
+    //readArray();
+}
+
 BitmapArray::BitmapArray(const BitmapArray& orig) {
 }
 
@@ -61,7 +68,7 @@ int BitmapArray::readArray(){
 }
 
 int BitmapArray::read(std::ifstream& f){
-    errHandle->printLog("And now reading the data\n");
+    errHandle->printLog("Reading the image data\n");
     std::vector<uint32_t> temp;
     try{
         f.seekg(bitOffset);

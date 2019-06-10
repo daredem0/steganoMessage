@@ -1,4 +1,4 @@
 <map id="BitmapHeader::getHeaderStruct" name="BitmapHeader::getHeaderStruct">
 <area shape="rect" id="node1" title=" " alt="" coords="181,5,412,32"/>
-<area shape="rect" id="node2" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,133,32"/>
 </map>

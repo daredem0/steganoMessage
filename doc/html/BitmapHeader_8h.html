@@ -66,7 +66,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BitmapHeader.h File Reference</div>  </div>
 </div><!--header-->
@@ -112,12 +113,57 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHeader.html">Header</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classBitmapHeader.html">BitmapHeader</a> Class contains header information extracted from bitmap file.  <a href="structHeader.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html">BitmapHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> Class contains header information extracted from bitmap file.  <a href="classBitmapHeader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3768a28d11b28bcd8f18d21d3c3c26c6"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BitmapHeader_8h.html#a3768a28d11b28bcd8f18d21d3c3c26c6">__attribute__</a> ((__packed__)) Header</td></tr>
+<tr class="memdesc:a3768a28d11b28bcd8f18d21d3c3c26c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header struct contains <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> Information and leftover.  <a href="#a3768a28d11b28bcd8f18d21d3c3c26c6">More...</a><br /></td></tr>
+<tr class="separator:a3768a28d11b28bcd8f18d21d3c3c26c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3768a28d11b28bcd8f18d21d3c3c26c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3768a28d11b28bcd8f18d21d3c3c26c6">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct __attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(__packed__)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Header struct contains <a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> Information and leftover. </p>
+<p>&lt; ASCII COde, usually contains BM</p>
+<p>&lt; size of the file</p>
+<p>&lt; Reserved, software dependend</p>
+<p>&lt; Offset between image data and begin of file</p>
+<p>&lt; size of information header</p>
+<p>&lt; width in pixel</p>
+<p>&lt; height in pixel</p>
+<p>&lt; oputdated</p>
+<p>&lt; Color Depth in bit</p>
+<p>&lt; Compression, 0=not compressed; 1=8bpp rle; 1=4bpp rle; 3=uncompressed and color coded</p>
+<p>&lt; biSizeImage</p>
+<p>&lt; biXPelsPerMeter</p>
+<p>&lt; biYPelsPerMeter</p>
+<p>&lt; biClrUsed</p>
+<p>&lt; biClrImportant</p>
+<p>&lt; leftover of header</p>
+<p>&lt; bfType first hex value</p>
+<p>&lt; bfType second hex value </p>
+
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00024">24</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,21 +1,23 @@
 <map id="src/Jpeg.cpp" name="src/Jpeg.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="298,5,398,32"/>
-<area shape="rect" id="node2" href="$Jpeg_8h.html" title=" " alt="" coords="287,80,409,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="168,155,235,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="259,155,338,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="362,155,433,181"/>
-<area shape="rect" id="node6" href="$Image_8h.html" title=" " alt="" coords="457,155,532,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,453,64,480"/>
-<area shape="rect" id="node8" title=" " alt="" coords="419,304,493,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="372,379,452,405"/>
-<area shape="rect" id="node10" title=" " alt="" coords="546,379,617,405"/>
-<area shape="rect" id="node11" title=" " alt="" coords="626,304,689,331"/>
-<area shape="rect" id="node12" title=" " alt="" coords="771,229,845,256"/>
-<area shape="rect" id="node13" href="$BitmapHeader_8h.html" title=" " alt="" coords="157,229,344,256"/>
-<area shape="rect" id="node14" href="$ErrorHandler_8h.html" title=" " alt="" coords="171,304,293,331"/>
-<area shape="rect" id="node18" href="$BitmapArray_8h.html" title=" " alt="" coords="470,229,645,256"/>
-<area shape="rect" id="node19" title=" " alt="" coords="869,229,944,256"/>
-<area shape="rect" id="node15" title=" " alt="" coords="305,379,348,405"/>
-<area shape="rect" id="node16" title=" " alt="" coords="73,379,159,405"/>
-<area shape="rect" id="node17" href="$constants_8h.html" title=" " alt="" coords="183,379,281,405"/>
+<area shape="rect" id="node1" title=" " alt="" coords="370,5,470,32"/>
+<area shape="rect" id="node2" href="$Jpeg_8h.html" title=" " alt="" coords="359,80,481,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="191,155,257,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="282,155,361,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="385,155,455,181"/>
+<area shape="rect" id="node6" href="$Image_8h.html" title=" " alt="" coords="480,155,555,181"/>
+<area shape="rect" id="node20" href="$Filter_8h.html" title=" " alt="" coords="759,155,825,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="469,453,528,480"/>
+<area shape="rect" id="node8" title=" " alt="" coords="105,304,178,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="45,379,125,405"/>
+<area shape="rect" id="node10" title=" " alt="" coords="537,379,607,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="481,304,543,331"/>
+<area shape="rect" id="node12" title=" " alt="" coords="755,229,829,256"/>
+<area shape="rect" id="node13" href="$BitmapHeader_8h.html" title=" " alt="" coords="43,229,229,256"/>
+<area shape="rect" id="node14" href="$ErrorHandler_8h.html" title=" " alt="" coords="253,304,376,331"/>
+<area shape="rect" id="node18" href="$BitmapArray_8h.html" title=" " alt="" coords="305,229,479,256"/>
+<area shape="rect" id="node19" title=" " alt="" coords="555,229,629,256"/>
+<area shape="rect" id="node15" title=" " alt="" coords="185,379,228,405"/>
+<area shape="rect" id="node16" title=" " alt="" coords="253,379,339,405"/>
+<area shape="rect" id="node17" href="$constants_8h.html" title=" " alt="" coords="363,379,461,405"/>
+<area shape="rect" id="node21" title=" " alt="" coords="853,229,920,256"/>
 </map>

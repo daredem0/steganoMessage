@@ -1,4 +1,4 @@
 <map id="Jpeg" name="Jpeg">
-<area shape="rect" id="node1" title=" " alt="" coords="30,453,147,604"/>
+<area shape="rect" id="node1" title="Jpeg class to load a jpeg image and autoatically convert it into a bitmap. Overloads readImage from I..." alt="" coords="30,453,147,589"/>
 <area shape="rect" id="node2" href="$classImage.html" title="Image Class is implemented to store the bitstream of the image file as well as the filepath and to of..." alt="" coords="5,5,172,405"/>
 </map>

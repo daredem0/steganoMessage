@@ -1,26 +1,8 @@
 var searchData=
 [
-  ['bdata',['bData',['../classBitmapArray.html#a4af158b9be17ce7ebeab8729c2b34ab2',1,'BitmapArray::bData()'],['../classJpeg.html#a3ea01fc26477aac0dbed3514e8f82874',1,'Jpeg::bData()']]],
-  ['bfoffbits',['bfOffBits',['../structHeader.html#a14ebd86ca12bd051ade0831f6dade02d',1,'Header']]],
-  ['bfreserved',['bfReserved',['../structHeader.html#a71d1ea38530c52d3bf8b278e673a9541',1,'Header']]],
-  ['bfsize',['bfSize',['../structHeader.html#a898252c4f5d633e46944b37ba145fca5',1,'Header']]],
-  ['bftype',['bfType',['../structHeader.html#a9d40c794c46d671f006974632a24834d',1,'Header']]],
-  ['bftypea',['bfTypeA',['../structHeader.html#a470bee676e10a55f7f65c04aa18d34c8',1,'Header']]],
-  ['bftypeb',['bfTypeB',['../structHeader.html#a9a949e94cf003232940b7d9b10b5c263',1,'Header']]],
-  ['bheader',['bHeader',['../classJpeg.html#aa082665a8e0eedfbb78e0a828198c0a0',1,'Jpeg']]],
-  ['bibitcount',['biBitCount',['../structHeader.html#a4e5d3f9ede3980246fe21698bd838158',1,'Header']]],
-  ['biclrimportant',['biClrImportant',['../structHeader.html#a935b0e4f146a944af7243154f99cbc99',1,'Header']]],
-  ['biclrused',['biClrUsed',['../structHeader.html#a1d847ba2e7caf89429c1fffdc54be1ea',1,'Header']]],
-  ['bicompression',['biCompression',['../structHeader.html#a18f90bd3b3aac03aadb4bfe9072795bd',1,'Header']]],
-  ['biheight',['biHeight',['../structHeader.html#a3b4e976dbf78cd5a03e37b6a42577dcd',1,'Header']]],
-  ['biplanes',['biPlanes',['../structHeader.html#ad6438b98bf17f799cc9cd1285da92426',1,'Header']]],
-  ['bisize',['biSize',['../structHeader.html#ad0177b2629281c20f349c0fa05d6871c',1,'Header']]],
-  ['bisizeimage',['biSizeImage',['../structHeader.html#a714d9d2941682d1b7ab0349dd2b7530f',1,'Header']]],
+  ['bdata',['bData',['../classBitmapArray.html#a4af158b9be17ce7ebeab8729c2b34ab2',1,'BitmapArray']]],
   ['bitcount',['bitCount',['../classBitmapArray.html#a18127e27d4b1477fd46ef0c0b3dbc110',1,'BitmapArray']]],
   ['bitmap',['BITMAP',['../constants_8h.html#a7dae3cdc3c61adbc5d9583a7434feab8',1,'constants.h']]],
   ['bitoffset',['bitOffset',['../classBitmapArray.html#abcab200a1eb84331f7c79702e9199694',1,'BitmapArray']]],
-  ['biwidth',['biWidth',['../structHeader.html#afb7f08c913da5d5a09af9ee77a2a03fb',1,'Header']]],
-  ['bixpelspermeter',['biXPelsPerMeter',['../structHeader.html#a63bb062f64b78846caf8399979a304ba',1,'Header']]],
-  ['biypelspermeter',['biYPelsPerMeter',['../structHeader.html#a2b3d87badc7563830106736beed76402',1,'Header']]],
   ['bmptotxt',['BMPTOTXT',['../constants_8h.html#ae9e16ed0d9b2603a4628fae0f1aa86eb',1,'constants.h']]]
 ];

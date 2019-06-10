@@ -19,12 +19,10 @@
 #include "./ErrorHandler.h"
 
 /**
- *@brief BitmapHeader Class contains header information extracted from bitmap file
+ *@brief Header struct contains BitmapHeader Information and leftover
  */
-struct Header{
+struct __attribute__((__packed__)) Header{ //packed to prevent compiler from implementing padding bytges. Careful, order of this struct is as per bitmap standard defined. Dont change it even for convenience
     uint16_t bfType;/**< ASCII COde, usually contains BM*/
-    char bfTypeA;/**< bfType first hex value*/
-    char bfTypeB;/**< bfType second hex value*/
     uint32_t bfSize;/**< size of the file*/
     uint32_t bfReserved;/**< Reserved, software dependend*/
     uint32_t bfOffBits;/**< Offset between image data and begin of file*/ //we need this one
@@ -40,8 +38,14 @@ struct Header{
     uint32_t biYPelsPerMeter;/**< biYPelsPerMeter*/
     uint32_t biClrUsed;/**< biClrUsed*/
     uint32_t biClrImportant;/**< biClrImportant*/
+    unsigned char leftover[5000];/**< leftover of header */
+    char bfTypeA;/**< bfType first hex value*/
+    char bfTypeB;/**< bfType second hex value*/
 };
-    
+
+ /**
+ *@brief BitmapHeader Class contains header information extracted from bitmap file
+ */
 class BitmapHeader {
 public:
     //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
@@ -54,6 +58,11 @@ public:
     * @param ErrorHandler *errH - Errorhandler 
     */
     BitmapHeader(std::string p, ErrorHandler *errH);
+    /**
+    * @brief Non-Standard Constructor, stores p in path member and calls readHeader with p as argument
+    * @param ErrorHandler *errH - Errorhandler 
+    */
+    BitmapHeader(std::string p, ErrorHandler *errH, bool read);
     /**
     * @brief Non-Standard Constructor, takes arguments for all members and stores them. Outdated, not used
     * @param ErrorHandler *errH - Errorhandler 
@@ -126,7 +135,7 @@ public:
     
 private:
     //file header
-    Header header;
+    Header header;/**< Struct containing 54byte header information + bitOffSet - 54 byte leftover */
     
     char *headerStream; /**< Pointer to char array containing the complete header */
     

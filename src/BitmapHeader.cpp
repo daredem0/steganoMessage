@@ -28,6 +28,9 @@ BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH):path(p), errHandle
     readHeader(p);
 }
 
+BitmapHeader::BitmapHeader(std::string p, ErrorHandler *errH, bool read):path(p), errHandle(errH){
+}
+
 int BitmapHeader::readHeader(std::string p){
     std::ifstream file(p);
     if(!file.good())
@@ -86,6 +89,11 @@ int BitmapHeader::read(std::ifstream& f){
         f.read((char*) &header.biYPelsPerMeter, sizeof(header.biYPelsPerMeter));
         f.read((char*) &header.biClrUsed, sizeof(header.biClrUsed));
         f.read((char*) &header.biClrImportant, sizeof(header.biClrImportant));
+        
+        if(header.bfOffBits > f.tellg()){
+            std::cout << "Building header leftover size: " << header.bfOffBits - f.tellg() << std::endl;
+            f.read((char*)&header.leftover, header.bfOffBits - f.tellg());
+        }
         return errNoError;
     }
     catch(const std::exception& e){
@@ -106,7 +114,7 @@ void BitmapHeader::printHeader(){
     std::cout << "File-Size in byte kb: " << header.bfSize/1000 << std::endl;
     std::cout << "Reserved: " << header.bfReserved << std::endl;
     std::cout << "OffBits: " << header.bfOffBits << std::endl;
-    std::cout << "Info-Header-Size in byte kb: " << header.biSize/1000 << std::endl;
+    std::cout << "Info-Header-Size in byte kb: " << header.biSize<< std::endl;
     std::cout << "Width in pixel: " << header.biWidth << std::endl;
     std::cout << "Height in pixel: " << header.biHeight << std::endl;
     std::cout << "Planes (outdated): " << header.biPlanes << std::endl;
@@ -121,7 +129,7 @@ void BitmapHeader::printHeader(){
 
 char* BitmapHeader::getHeader(){
     try{
-    headerStream = new char[header.bfOffBits];
+    /*headerStream = new char[header.bfOffBits];
     std::ifstream file(path);
     if(!file.good())
         exit(-1);
@@ -131,9 +139,9 @@ char* BitmapHeader::getHeader(){
     //following two lines to make 32 bit standard (easier for us) <- not working, brings incompatibility with compression rates
     //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)) =  ;
     //*(headerStream + 2*sizeof(bfType) + 6*sizeof(bfSize)+1) =  0;
-    
-    return headerStream;
-    }
+    return headerStream;*/
+    return (char*)&header;
+}
     catch(const std::exception& e){
         errHandle->printErrorStdEx(e);
         errHandle->printError(errBmHeadRead);

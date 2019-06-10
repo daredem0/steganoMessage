@@ -70,16 +70,16 @@ int main(int argc, char *argv[]) {
         steg->getErrHandle()->printError(errUnknown);
         exit(errTerminate(steg));
     }
-        if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
-            exit(errTerminate(steg));
-        //debuggingStuff(steg);
-        
-        
-        //modestuff here
-        steg->modeHandler();
-        
+    if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0)
+        exit(errTerminate(steg));
+    //debuggingStuff(steg);
+
+
+    //modestuff here
+    steg->modeHandler();
     if(steg != NULL)
         delete steg;
+
     return 0;
     }
 }

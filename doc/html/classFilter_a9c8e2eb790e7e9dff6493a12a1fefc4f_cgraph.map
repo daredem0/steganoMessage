@@ -1,0 +1,7 @@
+<map id="Filter::swapBytesOctetsBits" name="Filter::swapBytesOctetsBits">
+<area shape="rect" id="node1" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="5,56,207,83"/>
+<area shape="rect" id="node2" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="259,5,389,32"/>
+<area shape="rect" id="node4" href="$classFilter.html#a9d4f7bd12f0bfdf200abf53d166fd944" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="257,56,391,83"/>
+<area shape="rect" id="node5" href="$classFilter.html#aeb85c27a3d80540f2bd4b5f314543d4c" title="Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta i..." alt="" coords="255,107,393,133"/>
+<area shape="rect" id="node3" href="$classFilter.html#a55f792b3f87991db5a5e666827d6214c" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="441,5,543,32"/>
+</map>
