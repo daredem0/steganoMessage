@@ -14,8 +14,7 @@ g++-9 -o steganoMessage_MacOS ./src/main.cpp ./src/SteganoMessage.cpp ./header/S
 
 Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.
 
-Project can be built with cmake file. Do:
-$./$ cmake .
-$./$ make
-
+Project can be built with cmake file. Do:  
+$./$ cmake .  
+$./$ make  
 Tested on Linux, not tested on OSX/Windows
