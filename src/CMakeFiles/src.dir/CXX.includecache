@@ -160,6 +160,10 @@ string
 
 /home/florian/git/steganoMessage/header/steganoMessageConfig.h
 
+/home/florian/git/steganoMessage/src/Jpeg.cpp
+../header/Jpeg.h
+/home/florian/git/steganoMessage/header/Jpeg.h
+
 /home/florian/git/steganoMessage/src/Png.cpp
 ../header/Png.h
 /home/florian/git/steganoMessage/header/Png.h
