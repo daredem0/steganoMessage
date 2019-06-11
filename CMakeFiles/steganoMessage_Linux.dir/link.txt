@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o  -o steganoMessage_Linux lib/libsrc.a -ljpeg 
+/usr/bin/c++    -rdynamic CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o  -o steganoMessage_Linux lib/libsrc.a -ljpeg -lpng 

@@ -26,14 +26,21 @@ set (EXTRA_LIBS ${EXTRA_LIBS} src)
 find_package(JPEG)
 include_directories(${JPEG_INCLUDE_DIRS})
 
+find_package(PNG)
+include_directories(${PNG_INCLUDE_DIRS})
+
 message(${JPEG_INCLUDE_DIR})
 set (JPEG_LIBS ${JPEG_LIBS} ${JPEG_LIBRARY_RELEASE})
+
+message(${PNG_INCLUDE_DIR})
+set (PNG_LIBS ${PNG_LIBS} ${PNG_LIBRARY})
 
 if (UNIX AND NOT APPLE)
 	add_executable(steganoMessage_Linux ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 	target_link_libraries(steganoMessage_Linux ${EXTRA_LIBS}
 		${JPEG_LIBS}
+		${PNG_LIBS}
 		)
 endif (UNIX AND NOT APPLE)
 
@@ -42,5 +49,6 @@ if(APPLE)
 
 	target_link_libraries(steganoMessage_MAC ${EXTRA_LIBS}
 		${JPEG_LIBS}
+		${PNG_LIBS}
 		)
 endif(APPLE)

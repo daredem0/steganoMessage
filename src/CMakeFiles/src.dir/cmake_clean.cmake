@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Filter.cpp.o"
   "CMakeFiles/src.dir/Image.cpp.o"
   "CMakeFiles/src.dir/Jpeg.cpp.o"
+  "CMakeFiles/src.dir/Png.cpp.o"
   "CMakeFiles/src.dir/Message.cpp.o"
   "CMakeFiles/src.dir/SteganoMessage.cpp.o"
   "CMakeFiles/src.dir/main.cpp.o"

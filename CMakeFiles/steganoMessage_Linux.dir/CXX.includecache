@@ -122,6 +122,16 @@ string
 ./constants.h
 /home/florian/git/steganoMessage/header/./constants.h
 
+/home/florian/git/steganoMessage/header/Png.h
+Image.h
+/home/florian/git/steganoMessage/header/Image.h
+png.h
+/home/florian/git/steganoMessage/header/png.h
+ErrorHandler.h
+/home/florian/git/steganoMessage/header/ErrorHandler.h
+array
+-
+
 /home/florian/git/steganoMessage/header/SteganoMessage.h
 ErrorHandler.h
 /home/florian/git/steganoMessage/header/ErrorHandler.h
@@ -141,10 +151,14 @@ ctime
 -
 Jpeg.h
 /home/florian/git/steganoMessage/header/Jpeg.h
+Png.h
+/home/florian/git/steganoMessage/header/Png.h
 
 /home/florian/git/steganoMessage/header/constants.h
 string
 -
+
+/home/florian/git/steganoMessage/header/steganoMessageConfig.h
 
 /home/florian/git/steganoMessage/src/main.cpp
 iostream
@@ -153,4 +167,6 @@ fstream
 -
 ../header/SteganoMessage.h
 /home/florian/git/steganoMessage/header/SteganoMessage.h
+../header/steganoMessageConfig.h
+/home/florian/git/steganoMessage/header/steganoMessageConfig.h
 

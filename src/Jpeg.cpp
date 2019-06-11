@@ -51,7 +51,7 @@ int Jpeg::readImage(){
         jpeg_start_decompress(&cinfo);
         header->getHeaderStruct()->bfOffBits = bitmapHeaderLength;
         header->getHeaderStruct()->bfReserved = 0;
-        header->getHeaderStruct()->bfSize = 32 * cinfo.image_height * cinfo.image_width + bitmapHeaderLength;
+        header->getHeaderStruct()->bfSize = 32/8 * cinfo.image_height * cinfo.image_width + bitmapHeaderLength;
         header->getHeaderStruct()->bfType = 0x4D42;
         uint16_t test = 0x4D42;
         header->fixType();
@@ -96,9 +96,11 @@ int Jpeg::readImage(){
             }
         }
         catch(const std::exception& e){
+            delete buffer_a;
+            delete buffer_b;
             errHandle->printErrorStdEx(e);
         }
-        errHandle->printLog("Pasring data\n");
+        errHandle->printLog("Parsing data\n");
         std::vector<std::vector<uint32_t>> data;
         std::vector<uint32_t> innerData;
         uint32_t temp = 0;
@@ -115,7 +117,10 @@ int Jpeg::readImage(){
             }
         }
         array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol, data);
-
+        
+        delete buffer_a;
+        delete buffer_b;
+        
         jpeg_finish_decompress(&cinfo);
         jpeg_destroy_decompress(&cinfo);
         fclose(inFile);

@@ -77,12 +77,14 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
                 errTemp = this->getImage()->readImage(); //extract the image information
             else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
-                errTemp = ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
-            return ErrorHandler::errNoError;
+                errTemp = this->getImage()->readImage(); //extract the image information
+            else if(img->identifyFileFormat(this->getImage()->getPath()) == PNG){
+                //errTemp = ((Png*)this->getImage())->read_png_file(this->getImage()->getPath()); //extract the image information
+                errTemp = this->getImage()->readImage();
+            }
             if(errTemp != 0) throw errTemp;
     }
     catch(int i){
-        err->printError(i);
         return i;
     }
     catch(const std::exception& e){
@@ -90,9 +92,9 @@ int SteganoMessage::initialize(int argc, char *argv[]){
         return errStdExcept;
     }
     catch(...){
-        err->printError(errUnknown);
         return errUnknown;
     }
+    return ErrorHandler::errNoError;
 }
 
 //BUILDERS/************************************************************/
@@ -118,7 +120,12 @@ int SteganoMessage::buildImage(std::string path){
         err->printLog("Building jpeg\n");
         img = new Jpeg(path, err);
         return errNoError;
-    }         
+    }        
+    else if(Image::identifyFileFormat(path) == PNG){
+        err->printLog("Building png\n");
+        img = new Png(path, err);
+        return errNoError;
+    }       
     else{
         return ErrorHandler::errFiletype;
     }

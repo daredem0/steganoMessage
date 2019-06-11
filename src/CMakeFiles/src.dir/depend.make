@@ -39,6 +39,15 @@ src/CMakeFiles/src.dir/Message.cpp.o: header/./constants.h
 src/CMakeFiles/src.dir/Message.cpp.o: header/Message.h
 src/CMakeFiles/src.dir/Message.cpp.o: src/Message.cpp
 
+src/CMakeFiles/src.dir/Png.cpp.o: src/Png.cpp
+src/CMakeFiles/src.dir/Png.cpp.o: header/./ErrorHandler.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/BitmapArray.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/BitmapHeader.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/ErrorHandler.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/Image.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/Png.h
+src/CMakeFiles/src.dir/Png.cpp.o: header/constants.h
+
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/./ErrorHandler.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/./constants.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/BitmapArray.h
@@ -48,6 +57,7 @@ src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Filter.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Image.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Jpeg.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Message.h
+src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Png.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/SteganoMessage.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/constants.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: src/SteganoMessage.cpp
@@ -61,7 +71,9 @@ src/CMakeFiles/src.dir/main.cpp.o: header/Filter.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Image.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Jpeg.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Message.h
+src/CMakeFiles/src.dir/main.cpp.o: header/Png.h
 src/CMakeFiles/src.dir/main.cpp.o: header/SteganoMessage.h
 src/CMakeFiles/src.dir/main.cpp.o: header/constants.h
+src/CMakeFiles/src.dir/main.cpp.o: header/steganoMessageConfig.h
 src/CMakeFiles/src.dir/main.cpp.o: src/main.cpp
 

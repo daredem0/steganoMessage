@@ -314,6 +314,33 @@ Message.cpp.s:
 	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Message.cpp.s
 .PHONY : Message.cpp.s
 
+Png.o: Png.cpp.o
+
+.PHONY : Png.o
+
+# target to build an object file
+Png.cpp.o:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.o
+.PHONY : Png.cpp.o
+
+Png.i: Png.cpp.i
+
+.PHONY : Png.i
+
+# target to preprocess a source file
+Png.cpp.i:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.i
+.PHONY : Png.cpp.i
+
+Png.s: Png.cpp.s
+
+.PHONY : Png.s
+
+# target to generate assembly for a file
+Png.cpp.s:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.s
+.PHONY : Png.cpp.s
+
 SteganoMessage.o: SteganoMessage.cpp.o
 
 .PHONY : SteganoMessage.o
@@ -398,6 +425,9 @@ help:
 	@echo "... Message.o"
 	@echo "... Message.i"
 	@echo "... Message.s"
+	@echo "... Png.o"
+	@echo "... Png.i"
+	@echo "... Png.s"
 	@echo "... SteganoMessage.o"
 	@echo "... SteganoMessage.i"
 	@echo "... SteganoMessage.s"

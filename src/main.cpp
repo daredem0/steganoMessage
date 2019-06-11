@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include "../header/SteganoMessage.h"
+#include "../header/steganoMessageConfig.h"
 
 using namespace std;
 
@@ -49,6 +50,7 @@ int main(int argc, char *argv[]) {
     //argv[1] = (char*)"-decrypt";
     //argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
     SteganoMessage *steg = new SteganoMessage(); /*Build ne SteganoMessage object first*/
+    steg->getErrHandle()->printLog("steganoMessage command line tool version " + std::to_string(steganoMessage_VERSION_MAJOR) + "." + std::to_string(steganoMessage_VERSION_MINOR) + " loading.\n\n");
     steg->getErrHandle()->printLog("argc: " + std::to_string(argc) + "\n" + "argv: " + (argv[1] == NULL ? NOSWITCH : argv[1]) + "\n");
     //cout << "argc: " << argc << endl;  //just for debugging
     //cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
@@ -59,7 +61,9 @@ int main(int argc, char *argv[]) {
     else{
         try{
             int errTemp = steg->initialize(argc, argv); /*initialize everything and check for error*/
-            steg->applyFilter(); /*If a filter was set apply it on the image data*/
+            if(errTemp != 0) 
+                throw errTemp; 
+            errTemp = steg->applyFilter(); /*If a filter was set apply it on the image data*/
             if(errTemp != 0) 
                 throw errTemp; 
         }

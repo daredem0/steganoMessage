@@ -4,6 +4,7 @@ add_library(src BitmapArray.cpp
 	Filter.cpp
 	Image.cpp
 	Jpeg.cpp
+	Png.cpp
 	Message.cpp
 	SteganoMessage.cpp
 	main.cpp
