@@ -1,0 +1,2 @@
+#define steganoMessage_VERSION_MAJOR @steganoMessage_VERSION_MAJOR@
+#define steganoMessage_VERSION_MINOR @steganoMessage_VERSION_MINOR@
