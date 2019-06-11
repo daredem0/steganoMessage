@@ -11,7 +11,7 @@
  * Created on 11. Juni 2019, 13:32
  */
 
-#include "Png.h"
+#include "../header/Png.h"
 
 Png::Png() {
 }
