@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/florian/git/steganoMessage
 CMAKE_BINARY_DIR = /home/florian/git/steganoMessage
 
 #=============================================================================
-# Target rules for target CMakeFiles/steganoMessage.dir
+# Target rules for target CMakeFiles/steganoMessage_Linux.dir
 
 # All Build rule for target.
-CMakeFiles/steganoMessage.dir/all: src/CMakeFiles/src.dir/all
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/depend
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=11,12 "Built target steganoMessage"
-.PHONY : CMakeFiles/steganoMessage.dir/all
+CMakeFiles/steganoMessage_Linux.dir/all: src/CMakeFiles/src.dir/all
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/depend
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=11,12 "Built target steganoMessage_Linux"
+.PHONY : CMakeFiles/steganoMessage_Linux.dir/all
 
 # Include target in all.
-all: CMakeFiles/steganoMessage.dir/all
+all: CMakeFiles/steganoMessage_Linux.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/steganoMessage.dir/rule: cmake_check_build_system
+CMakeFiles/steganoMessage_Linux.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/florian/git/steganoMessage/CMakeFiles 12
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/steganoMessage.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/steganoMessage_Linux.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/florian/git/steganoMessage/CMakeFiles 0
-.PHONY : CMakeFiles/steganoMessage.dir/rule
+.PHONY : CMakeFiles/steganoMessage_Linux.dir/rule
 
 # Convenience name for target.
-steganoMessage: CMakeFiles/steganoMessage.dir/rule
+steganoMessage_Linux: CMakeFiles/steganoMessage_Linux.dir/rule
 
-.PHONY : steganoMessage
-
-# clean rule for target.
-CMakeFiles/steganoMessage.dir/clean:
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/clean
-.PHONY : CMakeFiles/steganoMessage.dir/clean
+.PHONY : steganoMessage_Linux
 
 # clean rule for target.
-clean: CMakeFiles/steganoMessage.dir/clean
+CMakeFiles/steganoMessage_Linux.dir/clean:
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/clean
+.PHONY : CMakeFiles/steganoMessage_Linux.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/steganoMessage_Linux.dir/clean
 
 .PHONY : clean
 

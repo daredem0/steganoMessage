@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named steganoMessage
+# Target rules for targets named steganoMessage_Linux
 
 # Build rule for target.
-steganoMessage: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 steganoMessage
-.PHONY : steganoMessage
+steganoMessage_Linux: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 steganoMessage_Linux
+.PHONY : steganoMessage_Linux
 
 # fast build rule for target.
-steganoMessage/fast:
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/build
-.PHONY : steganoMessage/fast
+steganoMessage_Linux/fast:
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/build
+.PHONY : steganoMessage_Linux/fast
 
 #=============================================================================
 # Target rules for targets named src
@@ -142,7 +142,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -151,7 +151,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -160,7 +160,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/steganoMessage.dir/build.make CMakeFiles/steganoMessage.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/steganoMessage_Linux.dir/build.make CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -170,7 +170,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... steganoMessage"
+	@echo "... steganoMessage_Linux"
 	@echo "... edit_cache"
 	@echo "... src"
 	@echo "... src/main.o"
