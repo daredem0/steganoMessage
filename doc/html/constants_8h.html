@@ -87,23 +87,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="constants_8h__dep__incl.png" border="0" usemap="#header_2constants_8hdep" alt=""/></div>
 <map name="header_2constants_8hdep" id="header_2constants_8hdep">
-<area shape="rect"  title=" " alt="" coords="743,5,889,32"/>
-<area shape="rect"  href="ErrorHandler_8h.html" title=" " alt="" coords="451,80,613,107"/>
-<area shape="rect"  href="SteganoMessage_8h.html" title=" " alt="" coords="493,379,686,405"/>
-<area shape="rect"  href="Message_8h.html" title=" " alt="" coords="746,155,886,181"/>
-<area shape="rect"  href="BitmapArray_8h.html" title=" " alt="" coords="81,155,244,181"/>
-<area shape="rect"  href="Image_8h.html" title=" " alt="" coords="182,229,306,256"/>
-<area shape="rect"  href="BitmapHeader_8h.html" title=" " alt="" coords="319,155,494,181"/>
-<area shape="rect"  href="ErrorHandler_8cpp.html" title=" " alt="" coords="569,155,721,181"/>
-<area shape="rect"  href="BitmapArray_8cpp.html" title=" " alt="" coords="5,229,157,256"/>
-<area shape="rect"  href="Jpeg_8h.html" title=" " alt="" coords="193,304,303,331"/>
-<area shape="rect"  href="Image_8cpp.html" title=" " alt="" coords="55,304,169,331"/>
-<area shape="rect"  href="Image__MacOS_8cpp.html" title=" " alt="" coords="327,304,491,331"/>
-<area shape="rect"  href="Jpeg_8cpp.html" title=" " alt="" coords="198,379,298,405"/>
-<area shape="rect"  href="main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="453,453,558,480"/>
-<area shape="rect"  href="SteganoMessage_8cpp.html" title=" " alt="" coords="582,453,765,480"/>
-<area shape="rect"  href="BitmapHeader_8cpp.html" title=" " alt="" coords="330,229,494,256"/>
-<area shape="rect"  href="Message_8cpp.html" title=" " alt="" coords="751,229,881,256"/>
+<area shape="rect"  title=" " alt="" coords="660,5,807,32"/>
+<area shape="rect"  href="ErrorHandler_8h.html" title=" " alt="" coords="480,80,643,107"/>
+<area shape="rect"  href="SteganoMessage_8h.html" title=" " alt="" coords="611,379,805,405"/>
+<area shape="rect"  href="Message_8h.html" title=" " alt="" coords="771,155,911,181"/>
+<area shape="rect"  href="BitmapArray_8h.html" title=" " alt="" coords="5,155,168,181"/>
+<area shape="rect"  href="Image_8h.html" title=" " alt="" coords="207,229,331,256"/>
+<area shape="rect"  href="Png_8h.html" title=" " alt="" coords="539,304,645,331"/>
+<area shape="rect"  href="BitmapHeader_8h.html" title=" " alt="" coords="419,155,594,181"/>
+<area shape="rect"  href="ErrorHandler_8cpp.html" title=" " alt="" coords="243,155,395,181"/>
+<area shape="rect"  href="BitmapArray_8cpp.html" title=" " alt="" coords="11,229,163,256"/>
+<area shape="rect"  href="Jpeg_8h.html" title=" " alt="" coords="78,304,189,331"/>
+<area shape="rect"  href="Image_8cpp.html" title=" " alt="" coords="213,304,326,331"/>
+<area shape="rect"  href="Image__MacOS_8cpp.html" title=" " alt="" coords="350,304,514,331"/>
+<area shape="rect"  href="Jpeg_8cpp.html" title=" " alt="" coords="83,379,183,405"/>
+<area shape="rect"  href="main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="571,453,677,480"/>
+<area shape="rect"  href="SteganoMessage_8cpp.html" title=" " alt="" coords="701,453,883,480"/>
+<area shape="rect"  href="Png_8cpp.html" title=" " alt="" coords="491,379,587,405"/>
+<area shape="rect"  href="BitmapHeader_8cpp.html" title=" " alt="" coords="425,229,589,256"/>
+<area shape="rect"  href="Message_8cpp.html" title=" " alt="" coords="822,229,951,256"/>
 </map>
 </div>
 </div>
@@ -1217,7 +1219,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div><div class="line"><span class="stringliteral">&quot;steganoMessage is a command line tool to hide a message somewhere in a bitmap file.\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;Use either of the following as first switch to decide if you want to encrypt a message or decrypt a message. Add path of image file after the switch.\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;-decrypt\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;-encrypt \n&quot;</span></div><div class="line"><span class="stringliteral">&quot;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;example:\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -encrypt &lt;path&gt;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;    This will start the routine to encrypt your message into example.bmp\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -decrypt &lt;path&gt;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;    This will start the routine to decrypt your message from example.bmp\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -h\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;   This will return the information contained in this help file. \n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -convert_txt &lt;path&gt;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;   This will convert the bitmap file into a readable text file containing all information as hex values.&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -filter &lt;path&gt; -filter &lt;type&gt;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;   Applies filter, possible values: grey/color_a/color_b &lt;- Filters that are going to be applied while reading/writing\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;color &lt;- Dummy filter\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;inv_n/swap_by/swap_oc/swap_by_oc/swap_by_bi/swap_by_oc_bi/swap_bg/swap_br/swap_gr/subst_bl/subst_rd/subst_gr &lt;- Filters that will be applied after reading before writing.\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -filter_cr &lt;path&gt; -filter &lt;type&gt;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;   Activates crazy mode for filters. Same filter codes, automatically shifts the color.&quot;</span></div><div class="line"><span class="stringliteral">&quot;   Sorry, no time yet to describe the filter effects. Just try.\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\n&quot;</span></div><div class="line"><span class="stringliteral">&quot;./steganoMessage -decrypt/-encrypt &lt;path&gt; -filter &lt;type&gt;&quot;</span></div></div><!-- fragment -->
+
 <p class="definition">Definition at line <a class="el" href="constants_8h_source.html#l00113">113</a> of file <a class="el" href="constants_8h_source.html">constants.h</a>.</p>
 
 </div>

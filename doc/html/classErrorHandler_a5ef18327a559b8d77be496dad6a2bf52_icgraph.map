@@ -1,18 +1,22 @@
 <map id="ErrorHandler::printLog" name="ErrorHandler::printLog">
-<area shape="rect" id="node1" title="Prints param to stdout or logfile." alt="" coords="823,396,988,423"/>
-<area shape="rect" id="node2" href="$classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,67,200,94"/>
-<area shape="rect" id="node3" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,92,450,119"/>
-<area shape="rect" id="node4" href="$classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1" title="Prints all image data." alt="" coords="561,143,738,170"/>
-<area shape="rect" id="node5" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="573,396,725,423"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,548,476,575"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,586,130,612"/>
-<area shape="rect" id="node8" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="579,92,720,119"/>
-<area shape="rect" id="node9" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="561,548,737,575"/>
-<area shape="rect" id="node10" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="582,650,717,676"/>
-<area shape="rect" id="node11" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="585,498,713,524"/>
-<area shape="rect" id="node12" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,751,381,778"/>
-<area shape="rect" id="node13" href="$classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="524,599,775,626"/>
-<area shape="rect" id="node14" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="264,295,460,322"/>
-<area shape="rect" id="node15" href="$classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="543,244,756,271"/>
-<area shape="rect" id="node16" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="257,422,467,448"/>
+<area shape="rect" id="node1" title="Prints param to stdout or logfile." alt="" coords="823,500,988,527"/>
+<area shape="rect" id="node2" href="$classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,69,200,96"/>
+<area shape="rect" id="node3" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,95,450,121"/>
+<area shape="rect" id="node4" href="$classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1" title="Prints all image data." alt="" coords="561,196,738,223"/>
+<area shape="rect" id="node5" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="573,348,725,375"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,399,476,425"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,475,130,501"/>
+<area shape="rect" id="node8" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="579,145,720,172"/>
+<area shape="rect" id="node9" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="561,399,737,425"/>
+<area shape="rect" id="node10" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="582,449,717,476"/>
+<area shape="rect" id="node11" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="585,703,713,729"/>
+<area shape="rect" id="node12" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,500,381,527"/>
+<area shape="rect" id="node13" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="300,804,424,831"/>
+<area shape="rect" id="node14" href="$classPng.html#a54cee101f15423f12d822cb369bcda42" title="initializes everything needed to read the png file" alt="" coords="582,804,717,831"/>
+<area shape="rect" id="node15" href="$classPng.html#a7cd46afd9214b5cd60e839cc480db9c0" title="Checks if backgroundcolor is set and writes it to argument addresses." alt="" coords="554,905,745,932"/>
+<area shape="rect" id="node16" href="$classPng.html#a2a1a70412369c257a8d56c54753d7d43" title="Reads the image header and data." alt="" coords="558,855,741,881"/>
+<area shape="rect" id="node17" href="$classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="524,956,775,983"/>
+<area shape="rect" id="node18" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="264,551,460,577"/>
+<area shape="rect" id="node19" href="$classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="543,601,756,628"/>
+<area shape="rect" id="node20" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="257,627,467,653"/>
 </map>

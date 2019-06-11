@@ -1,7 +1,8 @@
 <map id="BitmapHeader::printHeader" name="BitmapHeader::printHeader">
-<area shape="rect" id="node1" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="541,31,743,57"/>
+<area shape="rect" id="node1" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="541,56,743,83"/>
 <area shape="rect" id="node2" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="352,5,493,32"/>
 <area shape="rect" id="node5" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="359,56,487,83"/>
+<area shape="rect" id="node6" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="361,107,485,133"/>
 <area shape="rect" id="node3" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>

@@ -1,67 +1,67 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main Function orchestrating the program." alt="" coords="5,1083,60,1109"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="386,5,611,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="695,335,860,361"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,132,241,159"/>
-<area shape="rect" id="node7" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="976,588,1149,615"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#a43ec6b73ba6ea9939554124e45b3d175" title="Terminates the program without an error." alt="" coords="179,1981,265,2008"/>
-<area shape="rect" id="node9" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,1171,320,1197"/>
-<area shape="rect" id="node12" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="1232,1652,1435,1679"/>
-<area shape="rect" id="node27" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,1880,327,1907"/>
-<area shape="rect" id="node48" href="$main_8cpp.html#a8b14b9f3865042b7e6a83d3080e96e4c" title="Terminates the program with an error." alt="" coords="169,2032,275,2059"/>
-<area shape="rect" id="node49" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="119,1051,325,1077"/>
-<area shape="rect" id="node51" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="161,2083,283,2109"/>
-<area shape="rect" id="node52" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,613,336,640"/>
-<area shape="rect" id="node61" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="431,867,566,893"/>
-<area shape="rect" id="node65" href="$classSteganoMessage.html#ab560ec6c0d3e99c19822ca1119a68b92" title="Getter for log flag." alt="" coords="113,2133,331,2160"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458" title="Stores mode command in member, sets flag for modeset." alt="" coords="401,157,596,184"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#af03f7609a66def2e7fae02a477c38d97" title="Prints help file stored in const string." alt="" coords="457,107,540,133"/>
-<area shape="rect" id="node10" href="$classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="392,1095,605,1121"/>
-<area shape="rect" id="node11" href="$classImage.html#ac4e8db14cfd60a6a7085e6fcb83488a4" title="Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; ...." alt="" coords="682,1145,873,1172"/>
-<area shape="rect" id="node13" href="$classSteganoMessage.html#a5c3ef910b17f4bbe32a73a33be9d7586" title="Sets the mode for the after reading filter." alt="" coords="385,1601,613,1628"/>
-<area shape="rect" id="node15" href="$classSteganoMessage.html#a438e9d5189a8e3b83021fada4a6a469c" title="Sets flag to create logfile." alt="" coords="407,1348,590,1375"/>
-<area shape="rect" id="node20" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="428,1196,569,1223"/>
-<area shape="rect" id="node26" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="976,931,1149,973"/>
-<area shape="rect" id="node14" href="$classImage.html#ac81078a3d6c364aada9afc3c8a668ef8" title="Sets flags for while reading/writing filters." alt="" coords="715,1703,839,1729"/>
-<area shape="rect" id="node16" href="$classSteganoMessage.html#a9771a4abc2d7a5a2a8cfb1684f7f313f" title="Generates a time string." alt="" coords="661,1551,893,1577"/>
-<area shape="rect" id="node18" href="$classErrorHandler.html#aa79cfd994939c238b85ad021ea6bbe05" title=" " alt="" coords="700,1449,855,1476"/>
-<area shape="rect" id="node19" href="$classImage.html#a0197f1cb3ea1518404ae3a53764bd5df" title="Sets mode and path for text generation." alt="" coords="703,1399,852,1425"/>
-<area shape="rect" id="node17" href="$classSteganoMessage.html#a9aaa5e476220c95e1a68b4d722de43b1" title="Generates a string containing only one time date information. t=Y &#45;&gt; year; t=M &#45;&gt; month; t=D &#45;&gt; day; ..." alt="" coords="950,1551,1175,1577"/>
-<area shape="rect" id="node21" href="$classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="677,1247,878,1273"/>
-<area shape="rect" id="node22" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="682,943,873,969"/>
-<area shape="rect" id="node23" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="1242,1196,1425,1223"/>
-<area shape="rect" id="node24" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="1239,1297,1427,1324"/>
-<area shape="rect" id="node25" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="677,791,878,817"/>
-<area shape="rect" id="node28" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title="Getter for bitmapArray." alt="" coords="411,1500,586,1527"/>
-<area shape="rect" id="node29" href="$classBitmapArray.html#ab914d6282460b386b2b5f936190487a2" title="Returns a pointer to the 2D std::vector containing image information." alt="" coords="389,1804,608,1831"/>
-<area shape="rect" id="node30" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="387,1652,610,1679"/>
-<area shape="rect" id="node31" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="679,1500,876,1527"/>
-<area shape="rect" id="node35" href="$classFilter.html#a3f2bbadc0138195cebf84bd8ce8d9892" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="724,1829,831,1856"/>
-<area shape="rect" id="node36" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="713,1956,842,1983"/>
-<area shape="rect" id="node38" href="$classFilter.html#a9d4f7bd12f0bfdf200abf53d166fd944" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="710,2032,845,2059"/>
-<area shape="rect" id="node39" href="$classFilter.html#aeb85c27a3d80540f2bd4b5f314543d4c" title="Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta i..." alt="" coords="708,2108,847,2135"/>
-<area shape="rect" id="node40" href="$classFilter.html#a55c046859fbbb468536cae5c1f95c702" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="411,2108,587,2135"/>
-<area shape="rect" id="node41" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="398,2057,599,2084"/>
-<area shape="rect" id="node42" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="419,1956,578,1983"/>
-<area shape="rect" id="node43" href="$classFilter.html#a68528a62dfbd9f78d6bd0703ca5bd828" title="Swaps Blue with Green value if size &gt;= 24bit." alt="" coords="441,2361,557,2388"/>
-<area shape="rect" id="node44" href="$classFilter.html#a51a2b1cce4671083d47530694d0e797e" title="Swaps Blue with Red value if size &gt;= 24bit." alt="" coords="441,1703,556,1729"/>
-<area shape="rect" id="node45" href="$classFilter.html#ad6f109289f21be75db0a1351c86d3143" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="441,1753,557,1780"/>
-<area shape="rect" id="node46" href="$classFilter.html#a773ee633720080079d6a17ac610d353d" title="Substracts red value from each channel if size &gt;= 24bit." alt="" coords="445,2159,552,2185"/>
-<area shape="rect" id="node47" href="$classFilter.html#afc6fee2bd138d157986ef3e2f2907186" title="Substracts green value from each channel if size &gt;= 24bit." alt="" coords="445,2260,553,2287"/>
-<area shape="rect" id="node32" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="966,1373,1159,1400"/>
-<area shape="rect" id="node34" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="941,1449,1184,1476"/>
-<area shape="rect" id="node33" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="1240,1373,1427,1400"/>
-<area shape="rect" id="node37" href="$classFilter.html#a55f792b3f87991db5a5e666827d6214c" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="1012,1956,1113,1983"/>
-<area shape="rect" id="node50" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="688,993,867,1020"/>
-<area shape="rect" id="node53" href="$classSteganoMessage.html#a7dc660e6d2c8f162636f789cfedde67e" title="Getter for stored mode." alt="" coords="401,411,597,437"/>
-<area shape="rect" id="node54" href="$classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65" title="Builds new Message type object." alt="" coords="384,461,613,488"/>
-<area shape="rect" id="node55" href="$classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb" title="Getter for pointer to message object." alt="" coords="389,563,608,589"/>
-<area shape="rect" id="node56" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="423,512,575,539"/>
-<area shape="rect" id="node57" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="411,765,587,792"/>
-<area shape="rect" id="node58" href="$classImage.html#a83d7183bfcd632649c36504d9ab07e36" title="Checks if a file already exists." alt="" coords="722,385,833,412"/>
-<area shape="rect" id="node59" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="681,639,873,665"/>
-<area shape="rect" id="node60" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="691,436,864,463"/>
-<area shape="rect" id="node62" href="$classBitmapArray.html#a7fe807ebdb5c41d3196440fab1ae3621" title="Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after inf..." alt="" coords="667,841,887,868"/>
-<area shape="rect" id="node63" href="$classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="707,1095,847,1121"/>
-<area shape="rect" id="node64" href="$classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="995,1095,1130,1121"/>
+<area shape="rect" id="node1" title="Main Function orchestrating the program." alt="" coords="5,1198,60,1225"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="386,109,611,136"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="695,1528,860,1554"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,286,241,313"/>
+<area shape="rect" id="node7" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="976,1097,1149,1124"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a43ec6b73ba6ea9939554124e45b3d175" title="Terminates the program without an error." alt="" coords="179,2034,265,2061"/>
+<area shape="rect" id="node9" href="$classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,920,320,946"/>
+<area shape="rect" id="node12" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="1232,666,1435,693"/>
+<area shape="rect" id="node27" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,1984,327,2010"/>
+<area shape="rect" id="node48" href="$main_8cpp.html#a8b14b9f3865042b7e6a83d3080e96e4c" title="Terminates the program with an error." alt="" coords="169,2085,275,2112"/>
+<area shape="rect" id="node49" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="119,1109,325,1136"/>
+<area shape="rect" id="node51" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="161,2136,283,2162"/>
+<area shape="rect" id="node52" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,1376,336,1402"/>
+<area shape="rect" id="node61" href="$classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="431,869,566,896"/>
+<area shape="rect" id="node65" href="$classSteganoMessage.html#ab560ec6c0d3e99c19822ca1119a68b92" title="Getter for log flag." alt="" coords="113,2186,331,2213"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458" title="Stores mode command in member, sets flag for modeset." alt="" coords="401,210,596,237"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#af03f7609a66def2e7fae02a477c38d97" title="Prints help file stored in const string." alt="" coords="457,160,540,186"/>
+<area shape="rect" id="node10" href="$classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="392,970,605,997"/>
+<area shape="rect" id="node11" href="$classImage.html#ac4e8db14cfd60a6a7085e6fcb83488a4" title="Identifies the file format of the loaded image. Possible so far: .bmp; .jpg,; .gif; ...." alt="" coords="682,1021,873,1048"/>
+<area shape="rect" id="node13" href="$classSteganoMessage.html#a5c3ef910b17f4bbe32a73a33be9d7586" title="Sets the mode for the after reading filter." alt="" coords="385,666,613,693"/>
+<area shape="rect" id="node15" href="$classSteganoMessage.html#a438e9d5189a8e3b83021fada4a6a469c" title="Sets flag to create logfile." alt="" coords="407,312,590,338"/>
+<area shape="rect" id="node20" href="$classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="428,261,569,288"/>
+<area shape="rect" id="node26" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="976,1292,1149,1334"/>
+<area shape="rect" id="node14" href="$classImage.html#ac81078a3d6c364aada9afc3c8a668ef8" title="Sets flags for while reading/writing filters." alt="" coords="715,565,839,592"/>
+<area shape="rect" id="node16" href="$classSteganoMessage.html#a9771a4abc2d7a5a2a8cfb1684f7f313f" title="Generates a time string." alt="" coords="661,210,893,237"/>
+<area shape="rect" id="node18" href="$classErrorHandler.html#aa79cfd994939c238b85ad021ea6bbe05" title=" " alt="" coords="700,261,855,288"/>
+<area shape="rect" id="node19" href="$classImage.html#a0197f1cb3ea1518404ae3a53764bd5df" title="Sets mode and path for text generation." alt="" coords="703,312,852,338"/>
+<area shape="rect" id="node17" href="$classSteganoMessage.html#a9aaa5e476220c95e1a68b4d722de43b1" title="Generates a string containing only one time date information. t=Y &#45;&gt; year; t=M &#45;&gt; month; t=D &#45;&gt; day; ..." alt="" coords="950,210,1175,237"/>
+<area shape="rect" id="node21" href="$classBitmapHeader.html#a72e26bdf3269d382dfbdc76119c1a6aa" title="Prints all stored values, attention, values not initialized, should be fixed in constructor." alt="" coords="677,160,878,186"/>
+<area shape="rect" id="node22" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="682,869,873,896"/>
+<area shape="rect" id="node23" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="1242,413,1425,440"/>
+<area shape="rect" id="node24" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="1239,464,1427,490"/>
+<area shape="rect" id="node25" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="677,717,878,744"/>
+<area shape="rect" id="node28" href="$classImage.html#a75b5051c6cc39a5e3f86d287f5cc7f9c" title="Getter for bitmapArray." alt="" coords="411,1680,586,1706"/>
+<area shape="rect" id="node29" href="$classBitmapArray.html#ab914d6282460b386b2b5f936190487a2" title="Returns a pointer to the 2D std::vector containing image information." alt="" coords="389,2338,608,2365"/>
+<area shape="rect" id="node30" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="387,1832,610,1858"/>
+<area shape="rect" id="node31" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="679,1578,876,1605"/>
+<area shape="rect" id="node35" href="$classFilter.html#a3f2bbadc0138195cebf84bd8ce8d9892" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="724,1958,831,1985"/>
+<area shape="rect" id="node36" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="713,2440,842,2466"/>
+<area shape="rect" id="node38" href="$classFilter.html#a9d4f7bd12f0bfdf200abf53d166fd944" title="Swaps the bytes as good as possible depending on value in s." alt="" coords="710,2338,845,2365"/>
+<area shape="rect" id="node39" href="$classFilter.html#aeb85c27a3d80540f2bd4b5f314543d4c" title="Swaps each octet pairs as good as possible depending on value in s. Strong color shift into magenta i..." alt="" coords="708,2237,847,2264"/>
+<area shape="rect" id="node40" href="$classFilter.html#a55c046859fbbb468536cae5c1f95c702" title="Swaps the bytes first and then each octets as good as possible depending on value in s...." alt="" coords="411,2237,587,2264"/>
+<area shape="rect" id="node41" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="398,2288,599,2314"/>
+<area shape="rect" id="node42" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="419,2440,578,2466"/>
+<area shape="rect" id="node43" href="$classFilter.html#a68528a62dfbd9f78d6bd0703ca5bd828" title="Swaps Blue with Green value if size &gt;= 24bit." alt="" coords="441,1933,557,1960"/>
+<area shape="rect" id="node44" href="$classFilter.html#a51a2b1cce4671083d47530694d0e797e" title="Swaps Blue with Red value if size &gt;= 24bit." alt="" coords="441,1984,556,2010"/>
+<area shape="rect" id="node45" href="$classFilter.html#ad6f109289f21be75db0a1351c86d3143" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="441,2034,557,2061"/>
+<area shape="rect" id="node46" href="$classFilter.html#a773ee633720080079d6a17ac610d353d" title="Substracts red value from each channel if size &gt;= 24bit." alt="" coords="445,2136,552,2162"/>
+<area shape="rect" id="node47" href="$classFilter.html#afc6fee2bd138d157986ef3e2f2907186" title="Substracts green value from each channel if size &gt;= 24bit." alt="" coords="445,1882,553,1909"/>
+<area shape="rect" id="node32" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="966,514,1159,541"/>
+<area shape="rect" id="node34" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="941,1578,1184,1605"/>
+<area shape="rect" id="node33" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="1240,514,1427,541"/>
+<area shape="rect" id="node37" href="$classFilter.html#a55f792b3f87991db5a5e666827d6214c" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="1012,2440,1113,2466"/>
+<area shape="rect" id="node50" href="$classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="688,1072,867,1098"/>
+<area shape="rect" id="node53" href="$classSteganoMessage.html#a7dc660e6d2c8f162636f789cfedde67e" title="Getter for stored mode." alt="" coords="401,1477,597,1504"/>
+<area shape="rect" id="node54" href="$classSteganoMessage.html#a43a7d1579509a4004a86ad70dad10f65" title="Builds new Message type object." alt="" coords="384,1376,613,1402"/>
+<area shape="rect" id="node55" href="$classSteganoMessage.html#ad29978e925056ad70dc5c45b1e1681eb" title="Getter for pointer to message object." alt="" coords="389,1426,608,1453"/>
+<area shape="rect" id="node56" href="$classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="423,1325,575,1352"/>
+<area shape="rect" id="node57" href="$classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="411,1173,587,1200"/>
+<area shape="rect" id="node58" href="$classImage.html#a83d7183bfcd632649c36504d9ab07e36" title="Checks if a file already exists." alt="" coords="722,1426,833,1453"/>
+<area shape="rect" id="node59" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="681,1173,873,1200"/>
+<area shape="rect" id="node60" href="$classBitmapArray.html#a66bd389c357de601df924569a0b38429" title="Returns the 2D std::vector containing image information." alt="" coords="691,1477,864,1504"/>
+<area shape="rect" id="node62" href="$classBitmapArray.html#a7fe807ebdb5c41d3196440fab1ae3621" title="Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after inf..." alt="" coords="667,970,887,997"/>
+<area shape="rect" id="node63" href="$classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="707,818,847,845"/>
+<area shape="rect" id="node64" href="$classImage.html#a26f7e0b2649e2529df7e7aea46f2da4a" title="Helps bmpToTxt to do the conversion. Responsible to converting x &gt; 9 into A&#45;F." alt="" coords="995,818,1130,845"/>
 </map>

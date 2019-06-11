@@ -1,0 +1,4 @@
+<map id="Png::readpng_get_image" name="Png::readpng_get_image">
+<area shape="rect" id="node1" title="Reads the image header and data." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="236,5,401,32"/>
+</map>

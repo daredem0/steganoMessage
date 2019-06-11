@@ -65,7 +65,6 @@ std::string Image::identifyFileFormat(std::string p){
     std::stringstream ss;
     std::string returnValue;
     if(!file.good()){
-                    std::cout << 3 << std::endl;
         return ERRUNKNOWN;
     }
     file.seekg(0, std::ios::beg);

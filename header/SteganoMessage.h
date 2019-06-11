@@ -24,6 +24,7 @@
 #include <chrono>
 #include <ctime>
 #include "Jpeg.h"
+#include "Png.h"
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 

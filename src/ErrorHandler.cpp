@@ -33,7 +33,9 @@ ErrorHandler::ErrorHandler() {
     //Message Errors
     errorOut.push_back(ERRMESS);
     errorOut.push_back(ERRMESSEXIST);
-    fillList(8);
+    errorOut.push_back(ERRINFUSED);
+    errorOut.push_back(ERRMESSEMPTY);
+    fillList(6);
     
     //Image Errors
     errorOut.push_back(ERRIMG);
@@ -46,8 +48,33 @@ ErrorHandler::ErrorHandler() {
     errorOut.push_back(ERRBMHEAD);
     errorOut.push_back(ERRBMHEADREAD);
     errorOut.push_back(ERRBMHEADREAD);
+    fillList(7);
     
     //Data Errors
+    errorOut.push_back(ERRBMDATA);
+    errorOut.push_back(ERRBMDATAREAD);
+    fillList(8);
+    
+    //Filetype Errors
+    errorOut.push_back(ERRFILETYPE);
+    fillList(9);
+    
+    //OS Errors
+    errorOut.push_back(ERROSERR);
+    errorOut.push_back(ERROSERRMAC);
+    fillList(8);
+    
+    //Jpeg Errors
+    errorOut.push_back(ERRJPEG);
+    fillList(9);
+    
+    //PNG Errors
+    errorOut.push_back(ERRPNG);
+    errorOut.push_back(ERRPNGMEM);
+    errorOut.push_back(ERRPNGSIG);
+    errorOut.push_back(ERRPNGINT);
+    errorOut.push_back(ERRPNGKKGD);
+    fillList(5);
 }
 
 ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
@@ -121,7 +148,7 @@ const std::string ErrorHandler::ERRSTDEXCEPT = "Error: Exception";
 
 const std::string ErrorHandler::ERRMESS = "Error: Message Error";
 const std::string ErrorHandler::ERRMESSEXIST = "Error: Message exists already";
-
+const std::string ErrorHandler::ERRINFUSED = "Error: Infusion failed";
 const std::string ErrorHandler::ERRMESSEMPTY = "Error: Message is empty";
 
 const std::string ErrorHandler::ERRIMG = "Error: Image Error";
@@ -140,3 +167,11 @@ const std::string ErrorHandler::ERRFILETYPE = "Error: Filetype not supported";
 
 const std::string ErrorHandler::ERROSERR = "Error: Os not supported";
 const std::string ErrorHandler::ERROSERRMAC = "Error: MAC not supported";
+
+const std::string ErrorHandler::ERRJPEG = "Error: Jpeg Error";
+
+const std::string ErrorHandler::ERRPNG = "Error: Png Error";
+const std::string ErrorHandler::ERRPNGMEM = "Error: PNG Memory error";
+const std::string ErrorHandler::ERRPNGSIG = "Error: PNG Signature error";
+const std::string ErrorHandler::ERRPNGINT = "Error: PNG Internal error";
+const std::string ErrorHandler::ERRPNGKKGD = "PNG backgroundcolor missing";

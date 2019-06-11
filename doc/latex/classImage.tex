@@ -21,12 +21,11 @@ Inheritance diagram for Image\+:
 \end{figure}
 
 
-Collaboration diagram for Image\+:
-\nopagebreak
+Collaboration diagram for Image\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classImage__coll__graph}
+\includegraphics[height=550pt]{classImage__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -52,7 +51,7 @@ int \mbox{\hyperlink{classImage_ac81078a3d6c364aada9afc3c8a668ef8}{set\+Filter}}
 \begin{DoxyCompactList}\small\item\em Sets flags for while reading/writing filters. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classImage_a0197f1cb3ea1518404ae3a53764bd5df}{set\+Log\+Mode}} (std\+::string \mbox{\hyperlink{classImage_aec8a33f176362d146da8c058798ebbff}{path}}, std\+::ios\+\_\+base\+::openmode mode)
 \begin{DoxyCompactList}\small\item\em Sets mode and path for text generation. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classImage_ac0aa1f41cb368d87b20dd38839218d93}{read\+Image}} ()
+virtual int \mbox{\hyperlink{classImage_ac0aa1f41cb368d87b20dd38839218d93}{read\+Image}} ()
 \begin{DoxyCompactList}\small\item\em Calls Constructors for Bit\+Map\+Header and Bit\+Map\+Array and reads information from image. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1}{generate\+Bitmap}} ()
 \begin{DoxyCompactList}\small\item\em Prints text file to terminal (just for convenience and to check if ifstream works. \end{DoxyCompactList}\item 
@@ -100,7 +99,7 @@ std\+::ios\+\_\+base\+::openmode \mbox{\hyperlink{classImage_a992bf12c3ed95761bf
 \subsection{Detailed Description}
 \mbox{\hyperlink{classImage}{Image}} Class is implemented to store the bitstream of the image file as well as the filepath and to offer easy to use methods to extract information from the image file. 
 
-Definition at line 44 of file Image.\+h.
+Definition at line 48 of file Image.\+h.
 
 
 
@@ -187,18 +186,16 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 244 of file Image.\+cpp.
+Definition at line 243 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_aa16c9acd068079c676dec4186262b1b7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,18 +217,16 @@ std\+:string containing hex value
 \end{DoxyReturn}
 
 
-Definition at line 305 of file Image.\+cpp.
+Definition at line 312 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=322pt]{classImage_ac1c14eba8a20f8bb71c3c21eaba90ecb_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -253,10 +248,9 @@ std\+:string containing hex value
 \end{DoxyReturn}
 
 
-Definition at line 315 of file Image.\+cpp.
+Definition at line 322 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -278,10 +272,9 @@ boolean value -\/ true for exists already, false for not
 \end{DoxyReturn}
 
 
-Definition at line 346 of file Image.\+cpp.
+Definition at line 353 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -305,18 +298,16 @@ Prints text file to terminal (just for convenience and to check if ifstream work
 \end{DoxyParams}
 
 
-Definition at line 104 of file Image.\+cpp.
+Definition at line 103 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_a3ca1ae6c1eb2846bfba066b01e6020e1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -340,8 +331,7 @@ Getter for bitmap\+Array.
 
 Definition at line 43 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -365,8 +355,7 @@ Getter for bitmap\+Header.
 
 Definition at line 42 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -390,8 +379,7 @@ std\+::string including stored path.
 
 Definition at line 41 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -415,8 +403,7 @@ std\+::string containing format information (J\+P\+E\+G/\+B\+I\+T\+M\+A\+P/\+P\+
 
 Definition at line 63 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -438,10 +425,9 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 205 of file Image.\+cpp.
+Definition at line 204 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -452,7 +438,7 @@ Here is the call graph for this function\+:
 \index{Image@{Image}!readImage@{readImage}}
 \index{readImage@{readImage}!Image@{Image}}
 \subsubsection{\texorpdfstring{readImage()}{readImage()}}
-{\footnotesize\ttfamily int Image\+::read\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Image\+::read\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -463,18 +449,20 @@ returns integer containing error code
 \end{DoxyReturn}
 
 
-Definition at line 94 of file Image.\+cpp.
+Reimplemented in \mbox{\hyperlink{classJpeg_a80db9e22efc544e32145b6743b2b407c}{Jpeg}}, and \mbox{\hyperlink{classPng_aa38d2a6baa44bd0b3a932b93ee67e419}{Png}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Definition at line 93 of file Image.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classImage_ac0aa1f41cb368d87b20dd38839218d93_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -498,8 +486,7 @@ returns integer containing error code
 
 Definition at line 51 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -527,8 +514,7 @@ Sets mode and path for text generation.
 
 Definition at line 57 of file Image.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -573,10 +559,9 @@ Writes information to a text file !!\+Not debugged!! !!\+No Error Handling imple
 \end{DoxyParams}
 
 
-Definition at line 226 of file Image.\+cpp.
+Definition at line 225 of file Image.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -594,7 +579,7 @@ Here is the call graph for this function\+:
 
 Pointer to \mbox{\hyperlink{classBitmapArray}{Bitmap\+Array}} object containing imagedata 
 
-Definition at line 158 of file Image.\+h.
+Definition at line 162 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a560753c20e67a544be57bba971021375}\label{classImage_a560753c20e67a544be57bba971021375}} 
 \index{Image@{Image}!errHandle@{errHandle}}
@@ -604,7 +589,7 @@ Definition at line 158 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 159 of file Image.\+h.
+Definition at line 163 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a0b4e4d5994ff72c9f3c99913037c627f}\label{classImage_a0b4e4d5994ff72c9f3c99913037c627f}} 
 \index{Image@{Image}!filterModeCol@{filterModeCol}}
@@ -614,7 +599,7 @@ Definition at line 159 of file Image.\+h.
 
 Flag for while reading/writing filters 
 
-Definition at line 161 of file Image.\+h.
+Definition at line 165 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_aa05610d5ebee3b0fce0463d2a0b1323f}\label{classImage_aa05610d5ebee3b0fce0463d2a0b1323f}} 
 \index{Image@{Image}!filterModeGrey@{filterModeGrey}}
@@ -624,7 +609,7 @@ Definition at line 161 of file Image.\+h.
 
 Flag for while reading/writing filters 
 
-Definition at line 160 of file Image.\+h.
+Definition at line 164 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_adaf72c2df8979eafb4031dc0384dc49f}\label{classImage_adaf72c2df8979eafb4031dc0384dc49f}} 
 \index{Image@{Image}!header@{header}}
@@ -634,7 +619,7 @@ Definition at line 160 of file Image.\+h.
 
 Pointer to \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} object containing header information 
 
-Definition at line 157 of file Image.\+h.
+Definition at line 161 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a992bf12c3ed95761bf6854922f26226a}\label{classImage_a992bf12c3ed95761bf6854922f26226a}} 
 \index{Image@{Image}!logfileMode@{logfileMode}}
@@ -644,7 +629,7 @@ Definition at line 157 of file Image.\+h.
 
 mode of logfile, either std\+::ios\+::trunc or std\+::ios\+::app, dont fiddle with in/out! 
 
-Definition at line 164 of file Image.\+h.
+Definition at line 168 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_a6243d547194695512738b9606a9e081a}\label{classImage_a6243d547194695512738b9606a9e081a}} 
 \index{Image@{Image}!logfilePath@{logfilePath}}
@@ -654,7 +639,7 @@ Definition at line 164 of file Image.\+h.
 
 path to logfile 
 
-Definition at line 163 of file Image.\+h.
+Definition at line 167 of file Image.\+h.
 
 \mbox{\Hypertarget{classImage_aec8a33f176362d146da8c058798ebbff}\label{classImage_aec8a33f176362d146da8c058798ebbff}} 
 \index{Image@{Image}!path@{path}}
@@ -664,7 +649,7 @@ Definition at line 163 of file Image.\+h.
 
 Imagepath 
 
-Definition at line 156 of file Image.\+h.
+Definition at line 160 of file Image.\+h.
 
 
 

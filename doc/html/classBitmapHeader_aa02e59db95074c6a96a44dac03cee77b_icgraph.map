@@ -1,6 +1,7 @@
 <map id="BitmapHeader::fixType" name="BitmapHeader::fixType">
-<area shape="rect" id="node1" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="455,31,625,57"/>
+<area shape="rect" id="node1" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="455,56,625,83"/>
 <area shape="rect" id="node2" href="$classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,5,407,32"/>
 <area shape="rect" id="node4" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="266,56,394,83"/>
+<area shape="rect" id="node5" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="268,107,392,133"/>
 <area shape="rect" id="node3" href="$classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,5,205,32"/>
 </map>

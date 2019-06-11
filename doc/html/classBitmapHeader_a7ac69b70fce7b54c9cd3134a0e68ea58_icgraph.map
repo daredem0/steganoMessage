@@ -1,4 +1,5 @@
 <map id="BitmapHeader::getHeaderStruct" name="BitmapHeader::getHeaderStruct">
-<area shape="rect" id="node1" title="Returns Header type Pointer to header struct to access members." alt="" coords="181,5,412,32"/>
+<area shape="rect" id="node1" title="Returns Header type Pointer to header struct to access members." alt="" coords="181,31,412,57"/>
 <area shape="rect" id="node2" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node3" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="7,56,131,83"/>
 </map>
