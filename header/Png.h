@@ -19,6 +19,9 @@
 #include "ErrorHandler.h"
 #include <array>
 
+/**
+ *@brief Png class to load a png image and autoatically convert it into a bitmap. Overloads readImage from Image class
+ */
 class Png : public Image{
 public:
     //CONSTRUCTORS/DECONSTRUCTORS/************************************************************/

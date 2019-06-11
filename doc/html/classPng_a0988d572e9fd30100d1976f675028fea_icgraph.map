@@ -1,0 +1,4 @@
+<map id="Png::readpng_cleanup" name="Png::readpng_cleanup">
+<area shape="rect" id="node1" title="Frees all allocated memory except for image data." alt="" coords="177,5,343,32"/>
+<area shape="rect" id="node2" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,129,32"/>
+</map>

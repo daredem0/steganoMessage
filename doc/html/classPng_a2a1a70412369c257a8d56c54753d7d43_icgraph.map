@@ -1,0 +1,4 @@
+<map id="Png::readpng_get_image" name="Png::readpng_get_image">
+<area shape="rect" id="node1" title="Reads the image header and data." alt="" coords="177,5,360,32"/>
+<area shape="rect" id="node2" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,129,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Png::readpng_get_bgcolor" name="Png::readpng_get_bgcolor">
+<area shape="rect" id="node1" title="Checks if backgroundcolor is set and writes it to argument addresses." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="244,5,409,32"/>
+</map>

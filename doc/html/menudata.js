@@ -82,6 +82,7 @@ var menudata={children:[
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
+{text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
@@ -114,4 +115,5 @@ var menudata={children:[
 {text:"p",url:"globals_vars.html#index_p"},
 {text:"s",url:"globals_vars.html#index_s"}]},
 {text:"Enumerations",url:"globals_enum.html"},
-{text:"Enumerator",url:"globals_eval.html"}]}]}]}
+{text:"Enumerator",url:"globals_eval.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}

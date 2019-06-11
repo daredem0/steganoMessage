@@ -7,5 +7,6 @@ var searchData=
   ['_7eimage',['~Image',['../classImage.html#a0294f63700543e11c0f0da85601c7ae5',1,'Image']]],
   ['_7ejpeg',['~Jpeg',['../classJpeg.html#aa03b879cc5185f52c4c9e39faf03db85',1,'Jpeg']]],
   ['_7emessage',['~Message',['../classMessage.html#a3f7275462831f787a861271687bcad67',1,'Message']]],
+  ['_7epng',['~Png',['../classPng.html#ad26b67ca927b367d4bc294b07f16868d',1,'Png']]],
   ['_7esteganomessage',['~SteganoMessage',['../classSteganoMessage.html#af60430fa53ebe9ee44e60d906b67059d',1,'SteganoMessage']]]
 ];

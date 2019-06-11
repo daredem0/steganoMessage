@@ -837,37 +837,6 @@ Definition at line 112 of file constants.\+h.
 \subsubsection{\texorpdfstring{HELPFILE}{HELPFILE}}
 {\footnotesize\ttfamily const std\+::string H\+E\+L\+P\+F\+I\+LE}
 
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{= }
-\DoxyCodeLine{\textcolor{stringliteral}{"steganoMessage is a command line tool to hide a message somewhere in a bitmap file.\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"Use either of the following as first switch to decide if you want to encrypt a message or decrypt a message. Add path of image file after the switch.\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"-decrypt\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"-encrypt \(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"example:\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -encrypt <path>\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"    This will start the routine to encrypt your message into example.bmp\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -decrypt <path>\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"    This will start the routine to decrypt your message from example.bmp\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -h\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"   This will return the information contained in this help file. \(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -convert\_txt <path>\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"   This will convert the bitmap file into a readable text file containing all information as hex values."}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -filter <path> -filter <type>\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"   Applies filter, possible values: grey/color\_a/color\_b <- Filters that are going to be applied while reading/writing\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"color <- Dummy filter\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"inv\_n/swap\_by/swap\_oc/swap\_by\_oc/swap\_by\_bi/swap\_by\_oc\_bi/swap\_bg/swap\_br/swap\_gr/subst\_bl/subst\_rd/subst\_gr <- Filters that will be applied after reading before writing.\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -filter\_cr <path> -filter <type>\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"   Activates crazy mode for filters. Same filter codes, automatically shifts the color."}}
-\DoxyCodeLine{\textcolor{stringliteral}{"   Sorry, no time yet to describe the filter effects. Just try.\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\(\backslash\)n"}}
-\DoxyCodeLine{\textcolor{stringliteral}{"./steganoMessage -decrypt/-encrypt <path> -filter <type>"}}
-
-\end{DoxyCode}
 
 
 Definition at line 113 of file constants.\+h.

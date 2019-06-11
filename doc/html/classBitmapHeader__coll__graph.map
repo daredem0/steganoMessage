@@ -1,10 +1,10 @@
 <map id="BitmapHeader" name="BitmapHeader">
-<area shape="rect" id="node1" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="235,1019,389,1360"/>
-<area shape="rect" id="node2" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="155,292,307,956"/>
-<area shape="rect" id="node3" title=" " alt="" coords="286,5,423,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="447,5,566,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,5,64,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="211,5,261,83"/>
-<area shape="rect" id="node7" title=" " alt="" coords="331,585,400,663"/>
-<area shape="rect" id="node8" title=" " alt="" coords="424,585,485,663"/>
+<area shape="rect" id="node1" title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="233,1209,386,1551"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="147,292,303,1147"/>
+<area shape="rect" id="node3" title=" " alt="" coords="281,5,418,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="442,5,561,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="8,5,67,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="205,5,256,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="328,681,397,758"/>
+<area shape="rect" id="node8" title=" " alt="" coords="421,681,483,758"/>
 </map>
