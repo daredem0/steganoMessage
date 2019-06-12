@@ -54,7 +54,8 @@ uint32_t BitmapHeader::getBiSize(){return header.biSize;}
 uint32_t BitmapHeader::getWidth(){return header.biWidth;}
 uint32_t BitmapHeader::getHeight(){return header.biHeight;}
 uint32_t BitmapHeader::getSizeImage(){return header.biSizeImage;}
-uint32_t BitmapHeader::getBitCount(){return header.biBitCount;}
+uint32_t BitmapHeader::getBitCount(){return header.biBitCount;} 
+uint32_t BitmapHeader::geOldtBitCount(){return header.oldBitCount;}
 Header* BitmapHeader::getHeaderStruct(){return &header;}
 
 //OTHER METHODS/************************************************************/
@@ -152,6 +153,13 @@ int BitmapHeader::read(std::ifstream& f){
         if(header.bfOffBits > f.tellg()){
             std::cout << "Building header leftover size: " << header.bfOffBits - f.tellg() << std::endl;
             f.read((char*)&header.leftover, header.bfOffBits - f.tellg());
+        }
+        
+        //fix bitcount
+        std::cout << "Original Bitcount: " << header.biBitCount << std::endl;
+        header.oldBitCount = header.biBitCount;
+        if(header.biBitCount == 24){
+            header.biBitCount = 32;
         }
         return errNoError;
     }

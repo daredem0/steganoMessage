@@ -33,6 +33,7 @@ int Jpeg::readImage(){
     try{
         const uint32_t bitmapHeaderLength = 54;
         const uint32_t infoHeaderLength = 40;
+        const uint16_t bitmapType = 0x4D42;
         unsigned char alphaChannel;
         errHandle->printLog("Reading jpeg image\n");
          if(path == "")
@@ -52,8 +53,7 @@ int Jpeg::readImage(){
         header->getHeaderStruct()->bfOffBits = bitmapHeaderLength;
         header->getHeaderStruct()->bfReserved = 0;
         header->getHeaderStruct()->bfSize = 32/8 * cinfo.image_height * cinfo.image_width + bitmapHeaderLength;
-        header->getHeaderStruct()->bfType = 0x4D42;
-        uint16_t test = 0x4D42;
+        header->getHeaderStruct()->bfType = bitmapType;
         header->fixType();
         if(cinfo.data_precision * cinfo.num_components == 24){
             header->getHeaderStruct()->biBitCount = 32;

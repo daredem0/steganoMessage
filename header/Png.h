@@ -5,7 +5,7 @@
  * @brief
  */
 /* 
- * File:   PNGraphics.h
+ * File:   Png.h
  * Author: Florian Leuze
  *
  * Created on 11. Juni 2019, 13:32
@@ -17,7 +17,6 @@
 #include "Image.h"
 #include "png.h"
 #include "ErrorHandler.h"
-#include <array>
 
 /**
  *@brief Png class to load a png image and autoatically convert it into a bitmap. Overloads readImage from Image class
@@ -37,7 +36,7 @@ public:
     Png(std::string p, ErrorHandler* err);
     /**
      * @brief Copy Constructor. 
-     * @param orig - Reference to original Jpeg-type object
+     * @param orig - Reference to original Png-type object
      */
     Png(const Png& orig);
     /**

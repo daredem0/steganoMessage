@@ -29,6 +29,7 @@ BitmapArray::BitmapArray(std::string p, uint32_t b, uint32_t w, uint32_t h, uint
     }
     bData.clear(); //clear outer std::vector
     errHandle->printLog("All went well in the constructor\n");
+    std::cout << " wxh: " << width << "x" << height << std::endl;
     readArray();
 }
 
@@ -78,7 +79,6 @@ char* BitmapArray::getBDataStream(){
                 k += bitCount/8;
             }
        }
-    
     return dataStream;
 }
 
@@ -248,9 +248,10 @@ int BitmapArray::infuse(std::string message){
             }
             break;
         
-        case 24:
-            break;
-        
+        case 24: /*You dont have to implement 24 bits anymore. I changed the read bitmap method so that it converts a 24 bit bitmap to a 32 bit bitmap.
+                  We just need to comment out the break; (did that for you). Now incase bitCount is 24 the switch routine will jump to 24, but there is nothing to 
+                  do here and also no break so it will just move to case 32 and use the 32 bit routine which should work if I didnt mess up.*/
+            //break;
         case 32:
             std::cout << "32bit Bitmap to infuse with message" << std::endl;
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
@@ -310,7 +311,8 @@ int BitmapArray::read(std::ifstream& f){
         
         for(int i = 0; i < height; ++i){
             temp.clear();
-            int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+            //int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+            int padding = (width % 4 == 0) ? 0 : (width%4);
             for(int j = 0; j <width; ++j){
                 switch(bitCount){
                     case 8:
@@ -321,9 +323,10 @@ int BitmapArray::read(std::ifstream& f){
                     case 16:
                         break;
                     case 24:{
-                        char *tempo = new char[bitCount/8];
-                        f.read(tempo, (size_t)(bitCount/8));
-                        temp.push_back(genInt(tempo, (size_t)(bitCount/8)));
+                        char *tempo = new char[(bitCount)/8 + 1]; //+ one to scale up to 32 bits
+                        f.read(tempo, (size_t)((bitCount)/8));
+                        tempo[3] = 0xFF; //just fill the alpha channel with default value
+                        temp.push_back(genInt(tempo, (size_t)((bitCount)/8 + 1)));
                         delete tempo;
                     }
                     break;
@@ -342,10 +345,7 @@ int BitmapArray::read(std::ifstream& f){
             if(bitCount == 24 && padding != 0)
             {
                 char *tempo = new char[padding];
-                for(int i = 0; i < padding; ++i){
-                    *(tempo+i) = 0;
-                }
-                temp.push_back(genInt(tempo, (size_t)(padding)));
+                f.read(tempo, (size_t)(padding));
                 delete tempo;
             }
             bData.push_back(temp);

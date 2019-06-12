@@ -41,6 +41,7 @@ struct __attribute__((__packed__)) Header{ //packed to prevent compiler from imp
     unsigned char leftover[5000];/**< leftover of header */
     char bfTypeA;/**< bfType first hex value*/
     char bfTypeB;/**< bfType second hex value*/
+    uint16_t oldBitCount;
 };
 
  /**
@@ -116,6 +117,11 @@ public:
      * @return uint32_t BiBitCount
      */
     uint32_t getBitCount();
+    /**
+     * @brief Getter for OldBiBitCount
+     * @return uint32_t BiBitCount
+     */
+    uint32_t geOldtBitCount();
     /**
      * @brief Returns Header type Pointer to header struct to access members.
      * @return Header* type pointer to struct

@@ -96,7 +96,7 @@ int Image::readImage(){
         return ErrorHandler::errPath;
     header = new BitmapHeader(path, errHandle);
     header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->geOldtBitCount(), errHandle, filterModeCol);
     return ErrorHandler::errNoError;
 }
 
