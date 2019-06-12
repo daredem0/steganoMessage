@@ -99,6 +99,7 @@ int ErrorHandler::printError(int err){
 }
 const std::string ErrorHandler::printError(const std::string err){
     std::cout << err << std::endl;
+    return err;
 }
 
 void ErrorHandler::printAllErrors(void){

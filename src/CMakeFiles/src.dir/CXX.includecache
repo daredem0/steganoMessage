@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/florian/git/steganoMessage/header/./ErrorHandler.h
+/home/florian/git/steganoMessage/header/ErrorHandler.h
 list
 -
 iterator
@@ -20,27 +20,13 @@ iostream
 exception
 -
 constants.h
-/home/florian/git/steganoMessage/header/./constants.h
+/home/florian/git/steganoMessage/header/constants.h
 
-/home/florian/git/steganoMessage/header/./constants.h
+/home/florian/git/steganoMessage/header/constants.h
 string
 -
 
-/home/florian/git/steganoMessage/header/BitmapArray.h
-vector
--
-fstream
--
-iterator
--
-iostream
--
-cstring
--
-./ErrorHandler.h
-/home/florian/git/steganoMessage/header/./ErrorHandler.h
-
-/home/florian/git/steganoMessage/src/BitmapArray.cpp
-../header/BitmapArray.h
-/home/florian/git/steganoMessage/header/BitmapArray.h
+/home/florian/git/steganoMessage/src/ErrorHandler.cpp
+../header/ErrorHandler.h
+/home/florian/git/steganoMessage/header/ErrorHandler.h
 
