@@ -120,6 +120,10 @@ public:
     static int const errPngSig = 82;
     static int const errPngInt = 83;
     static int const errPngBkgd = 84;
+    
+    static int const errOgl = 90;
+    static int const errOglGlfw = 91;
+    static int const errOglShader = 92;
 
     const static std::string ERRRESERVED;
 
@@ -162,6 +166,10 @@ public:
     const static std::string ERRPNGSIG;
     const static std::string ERRPNGINT;
     const static std::string ERRPNGKKGD;
+    
+    const static std::string ERROGL;
+    const static std::string ERROGLGLFW;
+    const static std::string ERROGLSHADER;
 private:
     bool log;/**< flag for logfile*/
     std::string path;

@@ -82,6 +82,13 @@ steganoMessage_Linux: CMakeFiles/steganoMessage_Linux.dir/build.make
 steganoMessage_Linux: lib/libsrc.a
 steganoMessage_Linux: /usr/lib/libjpeg.so
 steganoMessage_Linux: /usr/lib/libpng.so
+steganoMessage_Linux: /usr/lib/libGL.so
+steganoMessage_Linux: /usr/lib/libGLU.so
+steganoMessage_Linux: /usr/lib/libsfml-graphics.so.2.5.1
+steganoMessage_Linux: /usr/lib/libGLEW.so
+steganoMessage_Linux: /usr/lib/libglfw.so.3.3
+steganoMessage_Linux: /usr/lib/libsfml-window.so.2.5.1
+steganoMessage_Linux: /usr/lib/libsfml-system.so.2.5.1
 steganoMessage_Linux: CMakeFiles/steganoMessage_Linux.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable steganoMessage_Linux"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/steganoMessage_Linux.dir/link.txt --verbose=$(VERBOSE)

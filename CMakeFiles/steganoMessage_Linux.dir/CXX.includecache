@@ -122,6 +122,26 @@ string
 ./constants.h
 /home/florian/git/steganoMessage/header/./constants.h
 
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
+GL/glew.h
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+SFML/Graphics.hpp
+-
+GLFW/glfw3.h
+-
+iostream
+-
+cmath
+-
+sstream
+-
+ErrorHandler.h
+/home/florian/git/steganoMessage/header/ErrorHandler.h
+
 /home/florian/git/steganoMessage/header/Png.h
 Image.h
 /home/florian/git/steganoMessage/header/Image.h
@@ -167,4 +187,6 @@ fstream
 /home/florian/git/steganoMessage/header/SteganoMessage.h
 ../header/steganoMessageConfig.h
 /home/florian/git/steganoMessage/header/steganoMessageConfig.h
+../header/OpenGLWrapper.h
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
 

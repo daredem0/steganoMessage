@@ -82,6 +82,7 @@ public:
      * @return char* pointer to allocated image data
      */
     char* getBDataStream();
+    char* getBDataStream(bool t);
     
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////

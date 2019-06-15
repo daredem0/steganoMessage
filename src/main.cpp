@@ -9,6 +9,7 @@
 #include <fstream>
 #include "../header/SteganoMessage.h"
 #include "../header/steganoMessageConfig.h"
+#include "../header/OpenGLWrapper.h"/*TEMPORARY TEST FOR IMG VIEWER*/
 
 using namespace std;
 
@@ -43,6 +44,9 @@ void debuggingStuff(SteganoMessage *steg);
 * @return int standard linux error codes
 */
 int main(int argc, char *argv[]) { 
+    /*std::cout << "argc: " << argc << " argv[argc]: " << argv[argc-1] << std::endl;
+    int a;
+    std::cin >> a;*/
     //For debugging
     //argc = 3;
     //argv[0] = (char*)'3';
@@ -83,8 +87,19 @@ int main(int argc, char *argv[]) {
 
         //modestuff here
         steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
+        
         steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
-
+        
+        if(argv[argc-1] == SHOW){
+            /*TEMPORARY TEST FOR IMG VIEWER*/
+            OpenGLWrapper *ogl = new OpenGLWrapper(steg->getErrHandle(), "FloToShop", (unsigned char*)steg->getImage()->getBitmapArray()->getBDataStream(true), 
+                    "RGB", steg->getImage()->getBitmapHeader()->getWidth(), steg->getImage()->getBitmapHeader()->getHeight());
+            ogl->run();
+            ogl->close();
+            /*******************************/
+        }
+            
+        
         terminate(steg, 0); //cleanup
 
         return 0;

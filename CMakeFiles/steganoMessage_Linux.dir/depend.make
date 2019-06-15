@@ -10,6 +10,7 @@ CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/Filter.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/Image.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/Jpeg.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/Message.h
+CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/OpenGLWrapper.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/Png.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/SteganoMessage.h
 CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o: header/constants.h

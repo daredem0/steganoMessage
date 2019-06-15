@@ -39,6 +39,11 @@ src/CMakeFiles/src.dir/Message.cpp.o
  /home/florian/git/steganoMessage/header/./constants.h
  /home/florian/git/steganoMessage/header/Message.h
  /home/florian/git/steganoMessage/src/Message.cpp
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o
+ /home/florian/git/steganoMessage/header/ErrorHandler.h
+ /home/florian/git/steganoMessage/header/OpenGLWrapper.h
+ /home/florian/git/steganoMessage/header/constants.h
+ /home/florian/git/steganoMessage/src/OpenGLWrapper.cpp
 src/CMakeFiles/src.dir/Png.cpp.o
  /home/florian/git/steganoMessage/header/./ErrorHandler.h
  /home/florian/git/steganoMessage/header/BitmapArray.h
@@ -72,6 +77,7 @@ src/CMakeFiles/src.dir/main.cpp.o
  /home/florian/git/steganoMessage/header/Image.h
  /home/florian/git/steganoMessage/header/Jpeg.h
  /home/florian/git/steganoMessage/header/Message.h
+ /home/florian/git/steganoMessage/header/OpenGLWrapper.h
  /home/florian/git/steganoMessage/header/Png.h
  /home/florian/git/steganoMessage/header/SteganoMessage.h
  /home/florian/git/steganoMessage/header/constants.h

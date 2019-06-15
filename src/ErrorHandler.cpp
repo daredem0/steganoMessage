@@ -176,3 +176,8 @@ const std::string ErrorHandler::ERRPNGMEM = "Error: PNG Memory error";
 const std::string ErrorHandler::ERRPNGSIG = "Error: PNG Signature error";
 const std::string ErrorHandler::ERRPNGINT = "Error: PNG Internal error";
 const std::string ErrorHandler::ERRPNGKKGD = "PNG backgroundcolor missing";
+
+//not yet in list
+const  std::string ErrorHandler::ERROGL = "Error: OpenGL Error";
+const  std::string ErrorHandler::ERROGLGLFW = "Error: OpenGL-GLFW Error";
+const  std::string ErrorHandler::ERROGLSHADER = "Error: OpenGL-Shader Error";

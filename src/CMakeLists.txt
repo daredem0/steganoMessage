@@ -7,5 +7,6 @@ add_library(src BitmapArray.cpp
 	Png.cpp
 	Message.cpp
 	SteganoMessage.cpp
+	OpenGLWrapper.cpp
 	main.cpp
 	)

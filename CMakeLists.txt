@@ -35,6 +35,21 @@ include_directories(${JPEG_INCLUDE_DIRS})
 find_package(PNG REQUIRED) 
 include_directories(${PNG_INCLUDE_DIRS})
 
+#get path for opengl stuff
+find_package(OpenGL)
+include_directories(${OPENGL_INCLUDE_DIR})
+set (OPENGL_LIBS ${OPENGL_LIBRARIES})
+
+find_package(SFML COMPONENTS graphics REQUIRED)
+
+find_package(GLEW)
+include_directories(${GLEW_INCLUDE_DIRS})
+set (GLED_LIBS ${GLEW_LIBRARIES})
+
+find_package(glfw3)
+
+
+
 #generate output messages for libjpeg
 message("libjpeg include path: " ${JPEG_INCLUDE_DIR})
 message("libjpeg version: " ${JPEG_VERSION})
@@ -57,6 +72,10 @@ if (UNIX AND NOT APPLE)
 	target_link_libraries(steganoMessage_Linux ${EXTRA_LIBS}
 		${JPEG_LIBS}
 		${PNG_LIBS}
+		${OPENGL_LIBS}
+		sfml-graphics
+		${GLEW_LIBRARIES}
+		glfw
 		)
 endif (UNIX AND NOT APPLE)
 
@@ -67,5 +86,9 @@ if(APPLE)
 	target_link_libraries(steganoMessage_MAC ${EXTRA_LIBS}
 		${JPEG_LIBS}
 		${PNG_LIBS}
+		${OPENGL_LIBS}
+		sfml-graphics
+		${GLEW_LIBRARIES}
+		glfw
 		)
 endif(APPLE)

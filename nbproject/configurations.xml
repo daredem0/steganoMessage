@@ -9,6 +9,7 @@
       <itemPath>header/Image.h</itemPath>
       <itemPath>header/Jpeg.h</itemPath>
       <itemPath>header/Message.h</itemPath>
+      <itemPath>header/OpenGLWrapper.h</itemPath>
       <itemPath>header/Png.h</itemPath>
       <itemPath>header/SteganoMessage.h</itemPath>
       <itemPath>header/constants.h</itemPath>
@@ -24,6 +25,7 @@
       <itemPath>src/Image.cpp</itemPath>
       <itemPath>src/Jpeg.cpp</itemPath>
       <itemPath>src/Message.cpp</itemPath>
+      <itemPath>src/OpenGLWrapper.cpp</itemPath>
       <itemPath>src/Png.cpp</itemPath>
       <itemPath>src/SteganoMessage.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
@@ -124,6 +126,8 @@
       </item>
       <item path="header/Message.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="header/OpenGLWrapper.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="header/Png.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/SteganoMessage.h" ex="false" tool="3" flavor2="0">
@@ -145,6 +149,8 @@
       <item path="src/Jpeg.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Message.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/OpenGLWrapper.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Png.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -187,6 +193,8 @@
       </item>
       <item path="header/Message.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="header/OpenGLWrapper.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="header/Png.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="header/SteganoMessage.h" ex="false" tool="3" flavor2="0">
@@ -208,6 +216,8 @@
       <item path="src/Jpeg.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Message.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/OpenGLWrapper.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Png.cpp" ex="false" tool="1" flavor2="0">
       </item>

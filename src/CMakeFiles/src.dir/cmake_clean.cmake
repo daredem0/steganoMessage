@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Png.cpp.o"
   "CMakeFiles/src.dir/Message.cpp.o"
   "CMakeFiles/src.dir/SteganoMessage.cpp.o"
+  "CMakeFiles/src.dir/OpenGLWrapper.cpp.o"
   "CMakeFiles/src.dir/main.cpp.o"
   "../lib/libsrc.pdb"
   "../lib/libsrc.a"

@@ -314,6 +314,33 @@ Message.cpp.s:
 	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Message.cpp.s
 .PHONY : Message.cpp.s
 
+OpenGLWrapper.o: OpenGLWrapper.cpp.o
+
+.PHONY : OpenGLWrapper.o
+
+# target to build an object file
+OpenGLWrapper.cpp.o:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o
+.PHONY : OpenGLWrapper.cpp.o
+
+OpenGLWrapper.i: OpenGLWrapper.cpp.i
+
+.PHONY : OpenGLWrapper.i
+
+# target to preprocess a source file
+OpenGLWrapper.cpp.i:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.i
+.PHONY : OpenGLWrapper.cpp.i
+
+OpenGLWrapper.s: OpenGLWrapper.cpp.s
+
+.PHONY : OpenGLWrapper.s
+
+# target to generate assembly for a file
+OpenGLWrapper.cpp.s:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.s
+.PHONY : OpenGLWrapper.cpp.s
+
 Png.o: Png.cpp.o
 
 .PHONY : Png.o
@@ -425,6 +452,9 @@ help:
 	@echo "... Message.o"
 	@echo "... Message.i"
 	@echo "... Message.s"
+	@echo "... OpenGLWrapper.o"
+	@echo "... OpenGLWrapper.i"
+	@echo "... OpenGLWrapper.s"
 	@echo "... Png.o"
 	@echo "... Png.i"
 	@echo "... Png.s"

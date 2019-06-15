@@ -49,36 +49,67 @@ std::vector<std::vector<uint32_t>> BitmapArray::getBData(){return bData;}
 std::vector<std::vector<uint32_t>> *BitmapArray::getBDataPointer(){return &bData;}
 
 //lets go the C lifestyle and use a bit of memcpy... *_*
-char* BitmapArray::getBDataStream(){
+char* BitmapArray::getBDataStream(bool t){
     dataStream = new char[height*width*bitCount/8];
     int k = 0;
-    for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
-            int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
-            for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
-                switch(bitCount){
-                    case 8:
-                    case 16:
-                        std::memcpy((dataStream+k), (void*)(&(*itInner)), (size_t)(bitCount/8));
-                        break;
-                    case 24:{
-                        if(padding == 0){
+    if(t == false){
+        for(auto itOuter = bData.begin(); itOuter != bData.end(); ++itOuter){
+                int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+                for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+                    switch(bitCount){
+                        case 8:
+                        case 16:
+                            std::memcpy((dataStream+k), (void*)(&(*itInner)), (size_t)(bitCount/8));
+                            break;
+                        case 24:/*{
+                            if(padding == 0){
+                                std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
+                                break;
+                            }
+                            std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)padding);
+                        }
+                        break;*/
+                        case 32:{
                             std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
                             break;
                         }
-                        std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)padding);
+                        default:{
+                            *(dataStream + k) = '\0';
+                        }
                     }
-                    break;
-                    case 32:{
-                        std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
-                        break;
-                    }
-                    default:{
-                        *(dataStream + k) = '\0';
-                    }
+                    k += bitCount/8;
                 }
-                k += bitCount/8;
-            }
-       }
+           }
+    }
+    else{
+        for(auto itOuter = bData.rbegin(); itOuter != bData.rend(); ++itOuter){
+                int padding = (4-(width%4)==4) ? 0 : 4-(width%4);
+                for(auto itInner = itOuter->begin(); itInner != itOuter->end(); ++itInner){
+                    switch(bitCount){
+                        case 8:
+                        case 16:
+                            std::memcpy((dataStream+k), (void*)(&(*itInner)), (size_t)(bitCount/8));
+                            break;
+                        case 24:/*{
+                            if(padding == 0){
+                                std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
+                                break;
+                            }
+                            std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)padding);
+                        }
+                        break;*/
+                        case 32:{
+                            std::memcpy(dataStream+k, (void*)(&(*itInner)), (size_t)(bitCount/8));
+                            break;
+                        }
+                        default:{
+                            *(dataStream + k) = '\0';
+                        }
+                    }
+                    k += bitCount/8;
+                }
+           }
+    }
     return dataStream;
 }
 

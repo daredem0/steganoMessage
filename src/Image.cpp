@@ -252,7 +252,7 @@ int Image::bmpToTxt(){
         //buffer header
         char *head = header->getHeader();
         //buffer data
-        char *data = array->getBDataStream();
+        char *data = array->getBDataStream(false);
         std::string path = logfilePath;
         if(MAC == 1 && logfilePath[2] == 'l'){
             logfilePath = logfilePath.erase(2,5);

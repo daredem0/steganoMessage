@@ -22,11 +22,31 @@ exception
 constants.h
 /home/florian/git/steganoMessage/header/constants.h
 
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
+GL/glew.h
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+SFML/Graphics.hpp
+-
+GLFW/glfw3.h
+-
+iostream
+-
+cmath
+-
+sstream
+-
+ErrorHandler.h
+/home/florian/git/steganoMessage/header/ErrorHandler.h
+
 /home/florian/git/steganoMessage/header/constants.h
 string
 -
 
-/home/florian/git/steganoMessage/src/ErrorHandler.cpp
-../header/ErrorHandler.h
-/home/florian/git/steganoMessage/header/ErrorHandler.h
+/home/florian/git/steganoMessage/src/OpenGLWrapper.cpp
+../header/OpenGLWrapper.h
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
 

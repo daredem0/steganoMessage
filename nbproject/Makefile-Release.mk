@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Image.o \
 	${OBJECTDIR}/src/Jpeg.o \
 	${OBJECTDIR}/src/Message.o \
+	${OBJECTDIR}/src/OpenGLWrapper.o \
 	${OBJECTDIR}/src/Png.o \
 	${OBJECTDIR}/src/SteganoMessage.o \
 	${OBJECTDIR}/src/main.o
@@ -105,6 +106,11 @@ ${OBJECTDIR}/src/Message.o: src/Message.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Message.o src/Message.cpp
+
+${OBJECTDIR}/src/OpenGLWrapper.o: src/OpenGLWrapper.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/OpenGLWrapper.o src/OpenGLWrapper.cpp
 
 ${OBJECTDIR}/src/Png.o: src/Png.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

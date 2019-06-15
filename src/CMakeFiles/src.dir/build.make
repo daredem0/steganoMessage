@@ -174,9 +174,22 @@ src/CMakeFiles/src.dir/SteganoMessage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/SteganoMessage.cpp.s"
 	cd /home/florian/git/steganoMessage/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/florian/git/steganoMessage/src/SteganoMessage.cpp -o CMakeFiles/src.dir/SteganoMessage.cpp.s
 
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: src/CMakeFiles/src.dir/flags.make
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: src/OpenGLWrapper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o"
+	cd /home/florian/git/steganoMessage/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/OpenGLWrapper.cpp.o -c /home/florian/git/steganoMessage/src/OpenGLWrapper.cpp
+
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/OpenGLWrapper.cpp.i"
+	cd /home/florian/git/steganoMessage/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/florian/git/steganoMessage/src/OpenGLWrapper.cpp > CMakeFiles/src.dir/OpenGLWrapper.cpp.i
+
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/OpenGLWrapper.cpp.s"
+	cd /home/florian/git/steganoMessage/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/florian/git/steganoMessage/src/OpenGLWrapper.cpp -o CMakeFiles/src.dir/OpenGLWrapper.cpp.s
+
 src/CMakeFiles/src.dir/main.cpp.o: src/CMakeFiles/src.dir/flags.make
 src/CMakeFiles/src.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/src.dir/main.cpp.o"
 	cd /home/florian/git/steganoMessage/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/main.cpp.o -c /home/florian/git/steganoMessage/src/main.cpp
 
 src/CMakeFiles/src.dir/main.cpp.i: cmake_force
@@ -198,6 +211,7 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/Png.cpp.o" \
 "CMakeFiles/src.dir/Message.cpp.o" \
 "CMakeFiles/src.dir/SteganoMessage.cpp.o" \
+"CMakeFiles/src.dir/OpenGLWrapper.cpp.o" \
 "CMakeFiles/src.dir/main.cpp.o"
 
 # External object files for target src
@@ -212,10 +226,11 @@ lib/libsrc.a: src/CMakeFiles/src.dir/Jpeg.cpp.o
 lib/libsrc.a: src/CMakeFiles/src.dir/Png.cpp.o
 lib/libsrc.a: src/CMakeFiles/src.dir/Message.cpp.o
 lib/libsrc.a: src/CMakeFiles/src.dir/SteganoMessage.cpp.o
+lib/libsrc.a: src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o
 lib/libsrc.a: src/CMakeFiles/src.dir/main.cpp.o
 lib/libsrc.a: src/CMakeFiles/src.dir/build.make
 lib/libsrc.a: src/CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library ../lib/libsrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/florian/git/steganoMessage/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library ../lib/libsrc.a"
 	cd /home/florian/git/steganoMessage/src && $(CMAKE_COMMAND) -P CMakeFiles/src.dir/cmake_clean_target.cmake
 	cd /home/florian/git/steganoMessage/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 

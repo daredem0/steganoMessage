@@ -39,6 +39,11 @@ src/CMakeFiles/src.dir/Message.cpp.o: header/./constants.h
 src/CMakeFiles/src.dir/Message.cpp.o: header/Message.h
 src/CMakeFiles/src.dir/Message.cpp.o: src/Message.cpp
 
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: header/ErrorHandler.h
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: header/OpenGLWrapper.h
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: header/constants.h
+src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o: src/OpenGLWrapper.cpp
+
 src/CMakeFiles/src.dir/Png.cpp.o: header/./ErrorHandler.h
 src/CMakeFiles/src.dir/Png.cpp.o: header/BitmapArray.h
 src/CMakeFiles/src.dir/Png.cpp.o: header/BitmapHeader.h
@@ -71,6 +76,7 @@ src/CMakeFiles/src.dir/main.cpp.o: header/Filter.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Image.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Jpeg.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Message.h
+src/CMakeFiles/src.dir/main.cpp.o: header/OpenGLWrapper.h
 src/CMakeFiles/src.dir/main.cpp.o: header/Png.h
 src/CMakeFiles/src.dir/main.cpp.o: header/SteganoMessage.h
 src/CMakeFiles/src.dir/main.cpp.o: header/constants.h

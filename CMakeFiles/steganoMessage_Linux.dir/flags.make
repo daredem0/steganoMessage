@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  
 
-CXX_DEFINES = 
+CXX_DEFINES = -DGLFW_DLL
 
 CXX_INCLUDES = -I/home/florian/git/steganoMessage -I/home/florian/git/steganoMessage/src -I/home/florian/git/steganoMessage/header 
 
