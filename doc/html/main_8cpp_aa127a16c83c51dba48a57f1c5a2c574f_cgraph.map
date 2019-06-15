@@ -1,7 +1,7 @@
 <map id="debuggingStuff" name="debuggingStuff">
 <area shape="rect" id="node1" title=" " alt="" coords="5,132,127,159"/>
 <area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="175,5,400,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="675,107,848,133"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="675,107,848,133"/>
 <area shape="rect" id="node4" href="$classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="184,259,391,285"/>
 <area shape="rect" id="node7" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="186,157,389,184"/>
 <area shape="rect" id="node8" href="$classImage.html#a885989eb723cb0a1fc0555c7e8de817e" title="Returns the path of the image." alt="" coords="477,169,598,196"/>

@@ -30,7 +30,7 @@ virtual \mbox{\hyperlink{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}{$\
 void \mbox{\hyperlink{classErrorHandler_aa79cfd994939c238b85ad021ea6bbe05}{set\+Log}} (bool l, std\+::string p)
 \item 
 int \mbox{\hyperlink{classErrorHandler_ab90b8248f24e3129df69d224585956dd}{print\+Error}} (int err)
-\begin{DoxyCompactList}\small\item\em Prints a single Error corresponding to the. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prints a single Error corresponding to the std\+::out. \end{DoxyCompactList}\item 
 const std\+::string \mbox{\hyperlink{classErrorHandler_ad1e6aa8018e2a22460a1431e6e7d8804}{print\+Error}} (const std\+::string err)
 \begin{DoxyCompactList}\small\item\em Prints a single Error message. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}{print\+All\+Errors}} (void)
@@ -106,6 +106,12 @@ static int const \mbox{\hyperlink{classErrorHandler_a6d977525061671cc3f510123163
 \item 
 static int const \mbox{\hyperlink{classErrorHandler_ab207964238bf9d2c00f623d6a045fa9f}{err\+Png\+Bkgd}} = 84
 \item 
+static int const \mbox{\hyperlink{classErrorHandler_aabb7a10334f0e7042faf095dbb185669}{err\+Ogl}} = 90
+\item 
+static int const \mbox{\hyperlink{classErrorHandler_abba2d4095016a9ef04ce4d9c6f5de268}{err\+Ogl\+Glfw}} = 91
+\item 
+static int const \mbox{\hyperlink{classErrorHandler_ac5a1e3e43604463aff7b8822450920bc}{err\+Ogl\+Shader}} = 92
+\item 
 static const std\+::string \mbox{\hyperlink{classErrorHandler_a737a712190c5e9dcbd11230bd3c2eaca}{E\+R\+R\+R\+E\+S\+E\+R\+V\+ED}} = \char`\"{}\char`\"{}
 \item 
 static const std\+::string \mbox{\hyperlink{classErrorHandler_ae805d5476c00a9687c15183268d4e2dd}{E\+R\+R\+N\+O\+E\+R\+R\+OR}} = \char`\"{}No Error Occured\char`\"{}
@@ -169,6 +175,12 @@ static const std\+::string \mbox{\hyperlink{classErrorHandler_ad7f59edda1a1c2895
 static const std\+::string \mbox{\hyperlink{classErrorHandler_a050e436624ffa1bf418075c4d20befe7}{E\+R\+R\+P\+N\+G\+I\+NT}} = \char`\"{}Error\+: \mbox{\hyperlink{constants_8h_afac9cfa577b92c66f46f7603f2f9fc14}{P\+NG}} Internal error\char`\"{}
 \item 
 static const std\+::string \mbox{\hyperlink{classErrorHandler_ad9b65ee3a71ddf4ef50a83035236a41b}{E\+R\+R\+P\+N\+G\+K\+K\+GD}} = \char`\"{}P\+NG backgroundcolor missing\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{classErrorHandler_ae3d9cd71ebd01927c4528c2d8bbc5229}{E\+R\+R\+O\+GL}} = \char`\"{}Error\+: Open\+GL Error\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{classErrorHandler_a6af88062525b88dbc5679665c07a95ce}{E\+R\+R\+O\+G\+L\+G\+L\+FW}} = \char`\"{}Error\+: Open\+GL-\/G\+L\+FW Error\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{classErrorHandler_a0b89fe8a09e799097bf2ac29e92b32a8}{E\+R\+R\+O\+G\+L\+S\+H\+A\+D\+ER}} = \char`\"{}Error\+: Open\+GL-\/Shader Error\char`\"{}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -234,7 +246,7 @@ Copy Constructor.
 \end{DoxyParams}
 
 
-Definition at line 80 of file Error\+Handler.\+cpp.
+Definition at line 86 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}\label{classErrorHandler_a73c7e690b864697e507aaeb537b3c3e5}} 
 \index{ErrorHandler@{ErrorHandler}!````~ErrorHandler@{$\sim$ErrorHandler}}
@@ -244,7 +256,7 @@ Definition at line 80 of file Error\+Handler.\+cpp.
 
 Standard deconstructor. Deletes the generated list !!not yet implementede!! 
 
-Definition at line 83 of file Error\+Handler.\+cpp.
+Definition at line 89 of file Error\+Handler.\+cpp.
 
 
 
@@ -268,7 +280,7 @@ Fills list with a specified amount of a specified message. Uses push\+\_\+back, 
 \end{DoxyParams}
 
 
-Definition at line 125 of file Error\+Handler.\+cpp.
+Definition at line 132 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -294,7 +306,7 @@ Fills list with R\+E\+S\+E\+R\+V\+ED constant std\+::string for a specified amou
 \end{DoxyParams}
 
 
-Definition at line 131 of file Error\+Handler.\+cpp.
+Definition at line 138 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}\label{classErrorHandler_a1108324c221544c928a2de3a2cf9ba98}} 
 \index{ErrorHandler@{ErrorHandler}!printAllErrors@{printAllErrors}}
@@ -308,7 +320,7 @@ Prints all available errors (mainly for debugging)
 
 
 
-Definition at line 104 of file Error\+Handler.\+cpp.
+Definition at line 111 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_ab90b8248f24e3129df69d224585956dd}\label{classErrorHandler_ab90b8248f24e3129df69d224585956dd}} 
 \index{ErrorHandler@{ErrorHandler}!printError@{printError}}
@@ -318,7 +330,7 @@ Definition at line 104 of file Error\+Handler.\+cpp.
 
 
 
-Prints a single Error corresponding to the. 
+Prints a single Error corresponding to the std\+::out. 
 
 O\+T\+H\+ER M\+E\+T\+H\+O\+DS
 \begin{DoxyParams}{Parameters}
@@ -327,7 +339,7 @@ O\+T\+H\+ER M\+E\+T\+H\+O\+DS
 \end{DoxyParams}
 
 
-Definition at line 94 of file Error\+Handler.\+cpp.
+Definition at line 100 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -353,7 +365,7 @@ Prints a single Error message.
 \end{DoxyParams}
 
 
-Definition at line 100 of file Error\+Handler.\+cpp.
+Definition at line 106 of file Error\+Handler.\+cpp.
 
 \mbox{\Hypertarget{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}\label{classErrorHandler_ac36e4dd6e488718e7e07b2d03adf9f37}} 
 \index{ErrorHandler@{ErrorHandler}!printErrorStdEx@{printErrorStdEx}}
@@ -372,7 +384,7 @@ Prints error from a std\+::exception.
 \end{DoxyParams}
 
 
-Definition at line 111 of file Error\+Handler.\+cpp.
+Definition at line 118 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -398,7 +410,7 @@ Prints param to stdout or logfile.
 \end{DoxyParams}
 
 
-Definition at line 115 of file Error\+Handler.\+cpp.
+Definition at line 122 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -415,7 +427,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 S\+E\+T\+T\+E\+RS Sets flag for logfile output 
 
-Definition at line 88 of file Error\+Handler.\+cpp.
+Definition at line 94 of file Error\+Handler.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -445,7 +457,7 @@ Definition at line 91 of file Error\+Handler.\+h.
 
 
 
-Definition at line 133 of file Error\+Handler.\+h.
+Definition at line 137 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a0669b576bba1701445fc5e030cc23121}\label{classErrorHandler_a0669b576bba1701445fc5e030cc23121}} 
 \index{ErrorHandler@{ErrorHandler}!errBmData@{errBmData}}
@@ -465,7 +477,7 @@ Definition at line 109 of file Error\+Handler.\+h.
 
 
 
-Definition at line 150 of file Error\+Handler.\+h.
+Definition at line 154 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aa4d84bd14f132bc85fd7bccd9849b084}\label{classErrorHandler_aa4d84bd14f132bc85fd7bccd9849b084}} 
 \index{ErrorHandler@{ErrorHandler}!errBmDataRead@{errBmDataRead}}
@@ -485,7 +497,7 @@ Definition at line 110 of file Error\+Handler.\+h.
 
 
 
-Definition at line 151 of file Error\+Handler.\+h.
+Definition at line 155 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a9387c79594c780b28b71ec7a6adc5f8c}\label{classErrorHandler_a9387c79594c780b28b71ec7a6adc5f8c}} 
 \index{ErrorHandler@{ErrorHandler}!errBmHead@{errBmHead}}
@@ -505,7 +517,7 @@ Definition at line 105 of file Error\+Handler.\+h.
 
 
 
-Definition at line 147 of file Error\+Handler.\+h.
+Definition at line 151 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a8d71033ce6652f30c0ca4f0aa045a0dd}\label{classErrorHandler_a8d71033ce6652f30c0ca4f0aa045a0dd}} 
 \index{ErrorHandler@{ErrorHandler}!errBmHeadRead@{errBmHeadRead}}
@@ -525,7 +537,7 @@ Definition at line 106 of file Error\+Handler.\+h.
 
 
 
-Definition at line 148 of file Error\+Handler.\+h.
+Definition at line 152 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a9af29b3a10176d3e75342926bebc51bc}\label{classErrorHandler_a9af29b3a10176d3e75342926bebc51bc}} 
 \index{ErrorHandler@{ErrorHandler}!errBmHeadReadHead@{errBmHeadReadHead}}
@@ -555,7 +567,7 @@ Definition at line 112 of file Error\+Handler.\+h.
 
 
 
-Definition at line 153 of file Error\+Handler.\+h.
+Definition at line 157 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ad0d235ee5e68a371b7369ab80513d4ec}\label{classErrorHandler_ad0d235ee5e68a371b7369ab80513d4ec}} 
 \index{ErrorHandler@{ErrorHandler}!errImg@{errImg}}
@@ -575,7 +587,7 @@ Definition at line 99 of file Error\+Handler.\+h.
 
 
 
-Definition at line 141 of file Error\+Handler.\+h.
+Definition at line 145 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a53571f96a023b3af97618425aaf169a6}\label{classErrorHandler_a53571f96a023b3af97618425aaf169a6}} 
 \index{ErrorHandler@{ErrorHandler}!errImgExist@{errImgExist}}
@@ -595,7 +607,7 @@ Definition at line 100 of file Error\+Handler.\+h.
 
 
 
-Definition at line 142 of file Error\+Handler.\+h.
+Definition at line 146 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_afe6bbe690173284ff3f3adb889c036d8}\label{classErrorHandler_afe6bbe690173284ff3f3adb889c036d8}} 
 \index{ErrorHandler@{ErrorHandler}!errImgWD@{errImgWD}}
@@ -615,7 +627,7 @@ Definition at line 101 of file Error\+Handler.\+h.
 
 
 
-Definition at line 143 of file Error\+Handler.\+h.
+Definition at line 147 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a5f37588aedcbd44ec5b33f16dd35a01e}\label{classErrorHandler_a5f37588aedcbd44ec5b33f16dd35a01e}} 
 \index{ErrorHandler@{ErrorHandler}!errImgWrData@{errImgWrData}}
@@ -635,7 +647,7 @@ Definition at line 103 of file Error\+Handler.\+h.
 
 
 
-Definition at line 145 of file Error\+Handler.\+h.
+Definition at line 149 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a76194049ce9812eacb553724e5c1d78c}\label{classErrorHandler_a76194049ce9812eacb553724e5c1d78c}} 
 \index{ErrorHandler@{ErrorHandler}!errImgWrHead@{errImgWrHead}}
@@ -655,7 +667,7 @@ Definition at line 102 of file Error\+Handler.\+h.
 
 
 
-Definition at line 144 of file Error\+Handler.\+h.
+Definition at line 148 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a6b02e9a761607b206e3b6f724d03ac29}\label{classErrorHandler_a6b02e9a761607b206e3b6f724d03ac29}} 
 \index{ErrorHandler@{ErrorHandler}!errInfused@{errInfused}}
@@ -675,7 +687,7 @@ Definition at line 96 of file Error\+Handler.\+h.
 
 
 
-Definition at line 138 of file Error\+Handler.\+h.
+Definition at line 142 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_af7135a739c7124dd8e90330d664f576d}\label{classErrorHandler_af7135a739c7124dd8e90330d664f576d}} 
 \index{ErrorHandler@{ErrorHandler}!errJpeg@{errJpeg}}
@@ -695,7 +707,7 @@ Definition at line 116 of file Error\+Handler.\+h.
 
 
 
-Definition at line 158 of file Error\+Handler.\+h.
+Definition at line 162 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ad90d36769306a3eb3539eeb3ea2f77b5}\label{classErrorHandler_ad90d36769306a3eb3539eeb3ea2f77b5}} 
 \index{ErrorHandler@{ErrorHandler}!errMess@{errMess}}
@@ -715,7 +727,7 @@ Definition at line 94 of file Error\+Handler.\+h.
 
 
 
-Definition at line 136 of file Error\+Handler.\+h.
+Definition at line 140 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_add483ce97592710530c6f746c99c598d}\label{classErrorHandler_add483ce97592710530c6f746c99c598d}} 
 \index{ErrorHandler@{ErrorHandler}!errMessEmpty@{errMessEmpty}}
@@ -735,7 +747,7 @@ Definition at line 97 of file Error\+Handler.\+h.
 
 
 
-Definition at line 139 of file Error\+Handler.\+h.
+Definition at line 143 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a94d4ea423c97ff7a4784ff0043731783}\label{classErrorHandler_a94d4ea423c97ff7a4784ff0043731783}} 
 \index{ErrorHandler@{ErrorHandler}!errMessExist@{errMessExist}}
@@ -755,7 +767,7 @@ Definition at line 95 of file Error\+Handler.\+h.
 
 
 
-Definition at line 137 of file Error\+Handler.\+h.
+Definition at line 141 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a1ec0cf275df16d2fe2641cc29c0f2ff0}\label{classErrorHandler_a1ec0cf275df16d2fe2641cc29c0f2ff0}} 
 \index{ErrorHandler@{ErrorHandler}!errMode@{errMode}}
@@ -775,7 +787,7 @@ Definition at line 90 of file Error\+Handler.\+h.
 
 
 
-Definition at line 132 of file Error\+Handler.\+h.
+Definition at line 136 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aeb08094d2754a72bdaf44a80c77d4189}\label{classErrorHandler_aeb08094d2754a72bdaf44a80c77d4189}} 
 \index{ErrorHandler@{ErrorHandler}!errNoError@{errNoError}}
@@ -795,7 +807,67 @@ Definition at line 84 of file Error\+Handler.\+h.
 
 
 
+Definition at line 130 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_aabb7a10334f0e7042faf095dbb185669}\label{classErrorHandler_aabb7a10334f0e7042faf095dbb185669}} 
+\index{ErrorHandler@{ErrorHandler}!errOgl@{errOgl}}
+\index{errOgl@{errOgl}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{errOgl}{errOgl}}
+{\footnotesize\ttfamily int const Error\+Handler\+::err\+Ogl = 90\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 124 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_ae3d9cd71ebd01927c4528c2d8bbc5229}\label{classErrorHandler_ae3d9cd71ebd01927c4528c2d8bbc5229}} 
+\index{ErrorHandler@{ErrorHandler}!ERROGL@{ERROGL}}
+\index{ERROGL@{ERROGL}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{ERROGL}{ERROGL}}
+{\footnotesize\ttfamily const std\+::string Error\+Handler\+::\+E\+R\+R\+O\+GL = \char`\"{}Error\+: Open\+GL Error\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 170 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_abba2d4095016a9ef04ce4d9c6f5de268}\label{classErrorHandler_abba2d4095016a9ef04ce4d9c6f5de268}} 
+\index{ErrorHandler@{ErrorHandler}!errOglGlfw@{errOglGlfw}}
+\index{errOglGlfw@{errOglGlfw}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{errOglGlfw}{errOglGlfw}}
+{\footnotesize\ttfamily int const Error\+Handler\+::err\+Ogl\+Glfw = 91\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 125 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_a6af88062525b88dbc5679665c07a95ce}\label{classErrorHandler_a6af88062525b88dbc5679665c07a95ce}} 
+\index{ErrorHandler@{ErrorHandler}!ERROGLGLFW@{ERROGLGLFW}}
+\index{ERROGLGLFW@{ERROGLGLFW}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{ERROGLGLFW}{ERROGLGLFW}}
+{\footnotesize\ttfamily const std\+::string Error\+Handler\+::\+E\+R\+R\+O\+G\+L\+G\+L\+FW = \char`\"{}Error\+: Open\+GL-\/G\+L\+FW Error\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 171 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_ac5a1e3e43604463aff7b8822450920bc}\label{classErrorHandler_ac5a1e3e43604463aff7b8822450920bc}} 
+\index{ErrorHandler@{ErrorHandler}!errOglShader@{errOglShader}}
+\index{errOglShader@{errOglShader}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{errOglShader}{errOglShader}}
+{\footnotesize\ttfamily int const Error\+Handler\+::err\+Ogl\+Shader = 92\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
 Definition at line 126 of file Error\+Handler.\+h.
+
+\mbox{\Hypertarget{classErrorHandler_a0b89fe8a09e799097bf2ac29e92b32a8}\label{classErrorHandler_a0b89fe8a09e799097bf2ac29e92b32a8}} 
+\index{ErrorHandler@{ErrorHandler}!ERROGLSHADER@{ERROGLSHADER}}
+\index{ERROGLSHADER@{ERROGLSHADER}!ErrorHandler@{ErrorHandler}}
+\subsubsection{\texorpdfstring{ERROGLSHADER}{ERROGLSHADER}}
+{\footnotesize\ttfamily const std\+::string Error\+Handler\+::\+E\+R\+R\+O\+G\+L\+S\+H\+A\+D\+ER = \char`\"{}Error\+: Open\+GL-\/Shader Error\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 172 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aeb3bff116fcb83a58defbef8e8111f0e}\label{classErrorHandler_aeb3bff116fcb83a58defbef8e8111f0e}} 
 \index{ErrorHandler@{ErrorHandler}!errorOut@{errorOut}}
@@ -805,7 +877,7 @@ Definition at line 126 of file Error\+Handler.\+h.
 
 std\+::list that stores every standard error message as a std\+::string. 
 
-Definition at line 169 of file Error\+Handler.\+h.
+Definition at line 177 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ab216b4dc48424850bdf52da2f4273023}\label{classErrorHandler_ab216b4dc48424850bdf52da2f4273023}} 
 \index{ErrorHandler@{ErrorHandler}!errOsErr@{errOsErr}}
@@ -825,7 +897,7 @@ Definition at line 113 of file Error\+Handler.\+h.
 
 
 
-Definition at line 155 of file Error\+Handler.\+h.
+Definition at line 159 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a8a55f0e95e22d240e37739a851d2fe8d}\label{classErrorHandler_a8a55f0e95e22d240e37739a851d2fe8d}} 
 \index{ErrorHandler@{ErrorHandler}!errOsErrMac@{errOsErrMac}}
@@ -845,7 +917,7 @@ Definition at line 114 of file Error\+Handler.\+h.
 
 
 
-Definition at line 156 of file Error\+Handler.\+h.
+Definition at line 160 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a5a289392b663eab72a8eba3ca0a88329}\label{classErrorHandler_a5a289392b663eab72a8eba3ca0a88329}} 
 \index{ErrorHandler@{ErrorHandler}!errPath@{errPath}}
@@ -865,7 +937,7 @@ Definition at line 87 of file Error\+Handler.\+h.
 
 
 
-Definition at line 129 of file Error\+Handler.\+h.
+Definition at line 133 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aced178ea322067ec756e3d1714efc6e4}\label{classErrorHandler_aced178ea322067ec756e3d1714efc6e4}} 
 \index{ErrorHandler@{ErrorHandler}!errPathExist@{errPathExist}}
@@ -885,7 +957,7 @@ Definition at line 89 of file Error\+Handler.\+h.
 
 
 
-Definition at line 131 of file Error\+Handler.\+h.
+Definition at line 135 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aa25a9f5aef3ad844325d5fb3e0fa444d}\label{classErrorHandler_aa25a9f5aef3ad844325d5fb3e0fa444d}} 
 \index{ErrorHandler@{ErrorHandler}!errPathWrong@{errPathWrong}}
@@ -905,7 +977,7 @@ Definition at line 88 of file Error\+Handler.\+h.
 
 
 
-Definition at line 130 of file Error\+Handler.\+h.
+Definition at line 134 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a675f3fcaf9ff86df1e50aae59922f912}\label{classErrorHandler_a675f3fcaf9ff86df1e50aae59922f912}} 
 \index{ErrorHandler@{ErrorHandler}!errPng@{errPng}}
@@ -925,7 +997,7 @@ Definition at line 118 of file Error\+Handler.\+h.
 
 
 
-Definition at line 160 of file Error\+Handler.\+h.
+Definition at line 164 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ab207964238bf9d2c00f623d6a045fa9f}\label{classErrorHandler_ab207964238bf9d2c00f623d6a045fa9f}} 
 \index{ErrorHandler@{ErrorHandler}!errPngBkgd@{errPngBkgd}}
@@ -955,7 +1027,7 @@ Definition at line 121 of file Error\+Handler.\+h.
 
 
 
-Definition at line 163 of file Error\+Handler.\+h.
+Definition at line 167 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ad9b65ee3a71ddf4ef50a83035236a41b}\label{classErrorHandler_ad9b65ee3a71ddf4ef50a83035236a41b}} 
 \index{ErrorHandler@{ErrorHandler}!ERRPNGKKGD@{ERRPNGKKGD}}
@@ -965,7 +1037,7 @@ Definition at line 163 of file Error\+Handler.\+h.
 
 
 
-Definition at line 164 of file Error\+Handler.\+h.
+Definition at line 168 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a07cc422c69b1e7138800ec16524bd9e4}\label{classErrorHandler_a07cc422c69b1e7138800ec16524bd9e4}} 
 \index{ErrorHandler@{ErrorHandler}!errPngMem@{errPngMem}}
@@ -985,7 +1057,7 @@ Definition at line 119 of file Error\+Handler.\+h.
 
 
 
-Definition at line 161 of file Error\+Handler.\+h.
+Definition at line 165 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a1b8c14322c54e4789f9d29503f939b5b}\label{classErrorHandler_a1b8c14322c54e4789f9d29503f939b5b}} 
 \index{ErrorHandler@{ErrorHandler}!errPngSig@{errPngSig}}
@@ -1005,7 +1077,7 @@ Definition at line 120 of file Error\+Handler.\+h.
 
 
 
-Definition at line 162 of file Error\+Handler.\+h.
+Definition at line 166 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a737a712190c5e9dcbd11230bd3c2eaca}\label{classErrorHandler_a737a712190c5e9dcbd11230bd3c2eaca}} 
 \index{ErrorHandler@{ErrorHandler}!ERRRESERVED@{ERRRESERVED}}
@@ -1015,7 +1087,7 @@ Definition at line 162 of file Error\+Handler.\+h.
 
 
 
-Definition at line 124 of file Error\+Handler.\+h.
+Definition at line 128 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a6615c791920f871f02b017d415acf991}\label{classErrorHandler_a6615c791920f871f02b017d415acf991}} 
 \index{ErrorHandler@{ErrorHandler}!errStdExcept@{errStdExcept}}
@@ -1035,7 +1107,7 @@ Definition at line 92 of file Error\+Handler.\+h.
 
 
 
-Definition at line 134 of file Error\+Handler.\+h.
+Definition at line 138 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a348455e58aa6cbd002d7652da8b8c1bd}\label{classErrorHandler_a348455e58aa6cbd002d7652da8b8c1bd}} 
 \index{ErrorHandler@{ErrorHandler}!errSwitch@{errSwitch}}
@@ -1055,7 +1127,7 @@ Definition at line 86 of file Error\+Handler.\+h.
 
 
 
-Definition at line 128 of file Error\+Handler.\+h.
+Definition at line 132 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_a51e373250da346a49522dfdb99ddc1b3}\label{classErrorHandler_a51e373250da346a49522dfdb99ddc1b3}} 
 \index{ErrorHandler@{ErrorHandler}!errUnknown@{errUnknown}}
@@ -1075,7 +1147,7 @@ Definition at line 85 of file Error\+Handler.\+h.
 
 
 
-Definition at line 127 of file Error\+Handler.\+h.
+Definition at line 131 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_ad1dc2ca6c4b226730361cc8d7b786e30}\label{classErrorHandler_ad1dc2ca6c4b226730361cc8d7b786e30}} 
 \index{ErrorHandler@{ErrorHandler}!log@{log}}
@@ -1085,7 +1157,7 @@ Definition at line 127 of file Error\+Handler.\+h.
 
 flag for logfile 
 
-Definition at line 166 of file Error\+Handler.\+h.
+Definition at line 174 of file Error\+Handler.\+h.
 
 \mbox{\Hypertarget{classErrorHandler_aeabbc987b7eaa01b6d006b55b4e00574}\label{classErrorHandler_aeabbc987b7eaa01b6d006b55b4e00574}} 
 \index{ErrorHandler@{ErrorHandler}!path@{path}}
@@ -1093,9 +1165,9 @@ Definition at line 166 of file Error\+Handler.\+h.
 \subsubsection{\texorpdfstring{path}{path}}
 {\footnotesize\ttfamily std\+::string Error\+Handler\+::path\hspace{0.3cm}{\ttfamily [private]}}
 
+path to logfile 
 
-
-Definition at line 167 of file Error\+Handler.\+h.
+Definition at line 175 of file Error\+Handler.\+h.
 
 
 

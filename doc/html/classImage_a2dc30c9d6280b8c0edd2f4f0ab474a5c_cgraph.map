@@ -1,5 +1,5 @@
 <map id="Image::writeTextFile" name="Image::writeTextFile">
 <area shape="rect" id="node1" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="5,42,160,69"/>
 <area shape="rect" id="node2" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="208,5,381,47"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="208,71,381,98"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="208,71,381,98"/>
 </map>

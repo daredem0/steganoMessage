@@ -1,0 +1,74 @@
+\hypertarget{OpenGLWrapper_8cpp}{}\section{src/\+Open\+G\+L\+Wrapper.cpp File Reference}
+\label{OpenGLWrapper_8cpp}\index{src/OpenGLWrapper.cpp@{src/OpenGLWrapper.cpp}}
+{\ttfamily \#include \char`\"{}../header/\+Open\+G\+L\+Wrapper.\+h\char`\"{}}\newline
+Include dependency graph for Open\+G\+L\+Wrapper.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{OpenGLWrapper_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const G\+Lchar $\ast$ \mbox{\hyperlink{OpenGLWrapper_8cpp_ab0280afc9df04c422b3652d4e894a110}{vertex\+Source}}
+\item 
+const G\+Lchar $\ast$ \mbox{\hyperlink{OpenGLWrapper_8cpp_ad7fdc697f0b4f53e39e672abb0a3810b}{fragment\+Source}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{OpenGLWrapper_8cpp_ad7fdc697f0b4f53e39e672abb0a3810b}\label{OpenGLWrapper_8cpp_ad7fdc697f0b4f53e39e672abb0a3810b}} 
+\index{OpenGLWrapper.cpp@{OpenGLWrapper.cpp}!fragmentSource@{fragmentSource}}
+\index{fragmentSource@{fragmentSource}!OpenGLWrapper.cpp@{OpenGLWrapper.cpp}}
+\subsubsection{\texorpdfstring{fragmentSource}{fragmentSource}}
+{\footnotesize\ttfamily const G\+Lchar$\ast$ fragment\+Source}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= R\textcolor{stringliteral}{"glsl(}}
+\DoxyCodeLine{\textcolor{stringliteral}{\#version 150 core}}
+\DoxyCodeLine{\textcolor{stringliteral}{in vec3 Color;}}
+\DoxyCodeLine{\textcolor{stringliteral}{in vec2 Texcoord;}}
+\DoxyCodeLine{\textcolor{stringliteral}{out vec4 outColor;}}
+\DoxyCodeLine{\textcolor{stringliteral}{uniform sampler2D tex;}}
+\DoxyCodeLine{\textcolor{stringliteral}{void main()}}
+\DoxyCodeLine{\textcolor{stringliteral}{\{}}
+\DoxyCodeLine{\textcolor{stringliteral}{    outColor = texture(tex, Texcoord);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{)glsl"}}
+
+\end{DoxyCode}
+
+
+Definition at line 37 of file Open\+G\+L\+Wrapper.\+cpp.
+
+\mbox{\Hypertarget{OpenGLWrapper_8cpp_ab0280afc9df04c422b3652d4e894a110}\label{OpenGLWrapper_8cpp_ab0280afc9df04c422b3652d4e894a110}} 
+\index{OpenGLWrapper.cpp@{OpenGLWrapper.cpp}!vertexSource@{vertexSource}}
+\index{vertexSource@{vertexSource}!OpenGLWrapper.cpp@{OpenGLWrapper.cpp}}
+\subsubsection{\texorpdfstring{vertexSource}{vertexSource}}
+{\footnotesize\ttfamily const G\+Lchar$\ast$ vertex\+Source}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= R\textcolor{stringliteral}{"glsl(}}
+\DoxyCodeLine{\textcolor{stringliteral}{\#version 150 core}}
+\DoxyCodeLine{\textcolor{stringliteral}{in vec2 position;}}
+\DoxyCodeLine{\textcolor{stringliteral}{in vec3 color;}}
+\DoxyCodeLine{\textcolor{stringliteral}{in vec2 texcoord;}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{out vec3 Color;}}
+\DoxyCodeLine{\textcolor{stringliteral}{out vec2 Texcoord;}}
+\DoxyCodeLine{\textcolor{stringliteral}{void main()}}
+\DoxyCodeLine{\textcolor{stringliteral}{\{}}
+\DoxyCodeLine{\textcolor{stringliteral}{    Color = color;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    Texcoord = texcoord;}}
+\DoxyCodeLine{\textcolor{stringliteral}{    gl\_Position = vec4(position, 0.0, 1.0);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{)glsl"}}
+
+\end{DoxyCode}
+
+
+Definition at line 20 of file Open\+G\+L\+Wrapper.\+cpp.
+

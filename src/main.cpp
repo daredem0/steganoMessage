@@ -29,11 +29,7 @@ int printHelp();
 * @return always returns 0
 */
 int terminate(SteganoMessage *steg, int err);
-/**
-* @brief Terminates the program with an error
-* @return always returns 1
-*/
-int errTerminate(SteganoMessage *steg);
+
 void debuggingStuff(SteganoMessage *steg);
 
 /**
@@ -76,7 +72,7 @@ int main(int argc, char *argv[]) {
         }
         catch (...){ //catch everything weird
             steg->getErrHandle()->printError(errUnknown);
-            exit(errTerminate(steg));
+            exit(terminate(steg, -1));
         }
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0) /*Check path, print error if occured and exit clean*/
             exit(terminate(steg, -1));
@@ -89,15 +85,18 @@ int main(int argc, char *argv[]) {
         
         steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
         
-        if(argv[argc-1] == SHOW){
-            /*TEMPORARY TEST FOR IMG VIEWER*/
+        /*Now we have to check if the very last argument was show*/
+        if(argv[argc-1] == SHOW){ 
+            /*Call the OpenGL builder that is implemented in steg and let it do its magic. In Short: We need to check for OpenGL errors while initializing it.
+             There are surely more beautiful options, but for now we give the wrapper a pointer to a static function in steg which OpenGLWrapper will call if
+             the init routine goes wrong. For more check implementation. The builder will return the error message it gets from the callback*/
             int errTemp = steg->buildOpenGL("FloToShop", (unsigned char*)steg->getImage()->getBitmapArray()->getBDataStream(true), 
                     "RGB", steg->getImage()->getBitmapHeader()->getWidth(), steg->getImage()->getBitmapHeader()->getHeight());
-            if(errTemp != 0)
+            if(errTemp != 0) //if we got an error then lets cleanly terminate this. Printing of error happens in terminate
                 exit(terminate(steg, steg->naughtyEmergencyExit(0)));
+            /*If everything went well we can run the OpenGL window and close it after user input*/
             steg->getOpenGL()->run();
             steg->getOpenGL()->close();
-            /*******************************/
         }
         terminate(steg, 0); //cleanup
 
@@ -156,13 +155,6 @@ int terminate(SteganoMessage *steg, int err){
     if(steg != NULL)
         delete steg;
     return err;
-}
-
-//outdated, should not be used anymore
-int errTerminate(SteganoMessage *steg){
-    if(steg != NULL)
-        delete steg;
-    return 1;
 }
 
 void debuggingStuff(SteganoMessage *steg){

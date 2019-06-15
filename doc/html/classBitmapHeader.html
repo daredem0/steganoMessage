@@ -80,14 +80,14 @@ Collaboration diagram for BitmapHeader:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader__coll__graph.png" border="0" usemap="#BitmapHeader_coll__map" alt="Collaboration graph"/></div>
 <map name="BitmapHeader_coll__map" id="BitmapHeader_coll__map">
-<area shape="rect"  title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="233,1209,386,1551"/>
-<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="147,292,303,1147"/>
-<area shape="rect"  title=" " alt="" coords="281,5,418,83"/>
-<area shape="rect"  title=" " alt="" coords="442,5,561,83"/>
-<area shape="rect"  title=" " alt="" coords="8,5,67,83"/>
-<area shape="rect"  title=" " alt="" coords="205,5,256,83"/>
-<area shape="rect"  title=" " alt="" coords="328,681,397,758"/>
-<area shape="rect"  title=" " alt="" coords="421,681,483,758"/>
+<area shape="rect"  title="BitmapHeader Class contains header information extracted from bitmap file." alt="" coords="237,1297,391,1653"/>
+<area shape="rect"  href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="152,292,308,1235"/>
+<area shape="rect"  title=" " alt="" coords="285,5,423,83"/>
+<area shape="rect"  title=" " alt="" coords="447,5,565,83"/>
+<area shape="rect"  title=" " alt="" coords="13,5,71,83"/>
+<area shape="rect"  title=" " alt="" coords="210,5,261,83"/>
+<area shape="rect"  title=" " alt="" coords="333,725,402,802"/>
+<area shape="rect"  title=" " alt="" coords="426,725,487,802"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -131,6 +131,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2660782990f1d9547e0aef501f666969"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a2660782990f1d9547e0aef501f666969">getBitCount</a> ()</td></tr>
 <tr class="memdesc:a2660782990f1d9547e0aef501f666969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for BiBitCount.  <a href="#a2660782990f1d9547e0aef501f666969">More...</a><br /></td></tr>
 <tr class="separator:a2660782990f1d9547e0aef501f666969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ee7e201d7698c591d9ae3335515468"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a38ee7e201d7698c591d9ae3335515468">geOldtBitCount</a> ()</td></tr>
+<tr class="memdesc:a38ee7e201d7698c591d9ae3335515468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for OldBiBitCount.  <a href="#a38ee7e201d7698c591d9ae3335515468">More...</a><br /></td></tr>
+<tr class="separator:a38ee7e201d7698c591d9ae3335515468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="memItemLeft" align="right" valign="top">Header *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBitmapHeader.html#a7ac69b70fce7b54c9cd3134a0e68ea58">getHeaderStruct</a> ()</td></tr>
 <tr class="memdesc:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Header type Pointer to header struct to access members.  <a href="#a7ac69b70fce7b54c9cd3134a0e68ea58">More...</a><br /></td></tr>
 <tr class="separator:a7ac69b70fce7b54c9cd3134a0e68ea58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +170,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classBitmapHeader.html" title="BitmapHeader Class contains header information extracted from bitmap file.">BitmapHeader</a> Class contains header information extracted from bitmap file. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00049">49</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00050">50</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a216e4a8485db7865be70c996f37e4c7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a216e4a8485db7865be70c996f37e4c7d">&#9670;&nbsp;</a></span>BitmapHeader() <span class="overload">[1/4]</span></h2>
@@ -234,7 +237,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  href="classBitmapHeader.html#a66adc11592dc1d18edbd46bade1db242" title="Opens ifstream to path and calls read private method." alt="" coords="272,71,472,98"/>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="520,71,673,98"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="721,5,895,47"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="721,122,895,149"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="721,122,895,149"/>
 <area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="723,71,893,98"/>
 </map>
 </div>
@@ -360,7 +363,7 @@ Here is the call graph for this function:</div>
 <p>Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_t Header.bfTypeB. Should always be done after reading of header. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00123">123</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00124">124</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -371,6 +374,39 @@ Here is the caller graph for this function:</div>
 <area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="266,56,394,83"/>
 <area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="268,107,392,133"/>
 <area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,5,205,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38ee7e201d7698c591d9ae3335515468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ee7e201d7698c591d9ae3335515468">&#9670;&nbsp;</a></span>geOldtBitCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t BitmapHeader::geOldtBitCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for OldBiBitCount. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t BiBitCount </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00058">58</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBitmapHeader_a38ee7e201d7698c591d9ae3335515468_icgraph.png" border="0" usemap="#classBitmapHeader_a38ee7e201d7698c591d9ae3335515468_icgraph" alt=""/></div>
+<map name="classBitmapHeader_a38ee7e201d7698c591d9ae3335515468_icgraph" id="classBitmapHeader_a38ee7e201d7698c591d9ae3335515468_icgraph">
+<area shape="rect"  title="Getter for OldBiBitCount." alt="" coords="541,5,764,32"/>
+<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="352,5,493,32"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="108,5,304,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -422,15 +458,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph.png" border="0" usemap="#classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph" id="classBitmapHeader_a2660782990f1d9547e0aef501f666969_icgraph">
-<area shape="rect"  title="Getter for BiBitCount." alt="" coords="608,107,809,133"/>
-<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="401,5,543,32"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,56,560,83"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="405,107,539,133"/>
-<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="408,157,536,184"/>
-<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="410,208,534,235"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="124,5,320,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,56,336,83"/>
+<area shape="rect"  title="Getter for BiBitCount." alt="" coords="608,81,809,108"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,5,560,32"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="405,56,539,83"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="408,107,536,133"/>
+<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="410,157,534,184"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,31,60,57"/>
 </map>
 </div>
 
@@ -462,7 +496,7 @@ Here is the call graph for this function:</div>
 <map name="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph" id="classBitmapHeader_aa29e1acc8a7a588867039d7c0bdcde04_cgraph">
 <area shape="rect"  title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="5,42,197,69"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="245,5,419,47"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="245,71,419,98"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="245,71,419,98"/>
 </map>
 </div>
 <div class="dynheader">
@@ -498,7 +532,7 @@ Here is the caller graph for this function:</div>
 <p>Returns Header type Pointer to header struct to access members. </p>
 <dl class="section return"><dt>Returns</dt><dd>Header* type pointer to struct </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00058">58</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00059">59</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -536,18 +570,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph.png" border="0" usemap="#classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph" alt=""/></div>
 <map name="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph" id="classBitmapHeader_a106f72d6c256327342029edf8e18bde1_icgraph">
-<area shape="rect"  title="Getter for BiHeight." alt="" coords="1141,107,1329,133"/>
-<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,5,1067,32"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,56,563,83"/>
-<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,107,1061,133"/>
-<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="935,157,1059,184"/>
-<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,208,1093,235"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,5,851,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,81,60,108"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,107,336,133"/>
-<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,208,852,235"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,157,327,184"/>
-<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,208,607,235"/>
+<area shape="rect"  title="Getter for BiHeight." alt="" coords="1141,147,1329,173"/>
+<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,20,1067,47"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,121,60,148"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,121,563,148"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,172,1061,199"/>
+<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="935,223,1059,249"/>
+<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,273,1093,300"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,20,851,47"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,172,336,199"/>
+<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,273,852,300"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,223,327,249"/>
+<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,273,607,300"/>
 </map>
 </div>
 
@@ -659,18 +693,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph.png" border="0" usemap="#classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph" alt=""/></div>
 <map name="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph" id="classBitmapHeader_af1d36ee9f3315866f05c39c2f4871e09_icgraph">
-<area shape="rect"  title="Getter for BiWidth." alt="" coords="1141,107,1324,133"/>
-<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,5,1067,32"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,56,563,83"/>
-<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,107,1061,133"/>
-<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="935,157,1059,184"/>
-<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,208,1093,235"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,5,851,32"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,81,60,108"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,107,336,133"/>
-<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,208,852,235"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,157,327,184"/>
-<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,208,607,235"/>
+<area shape="rect"  title="Getter for BiWidth." alt="" coords="1141,147,1324,173"/>
+<area shape="rect"  href="classImage.html#ac0aa1f41cb368d87b20dd38839218d93" title="Calls Constructors for BitMapHeader and BitMapArray and reads information from image." alt="" coords="926,20,1067,47"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,121,60,148"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,121,563,148"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="933,172,1061,199"/>
+<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="935,223,1059,249"/>
+<area shape="rect"  href="classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="900,273,1093,300"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="655,20,851,47"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,172,336,199"/>
+<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,273,852,300"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,223,327,249"/>
+<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,273,607,300"/>
 </map>
 </div>
 
@@ -693,7 +727,7 @@ Here is the caller graph for this function:</div>
 
 <p>Prints all stored values, attention, values not initialized, should be fixed in constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00105">105</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00106">106</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -737,7 +771,7 @@ Here is the caller graph for this function:</div>
 <p>reads header information from ifstream </p>
 <dl class="section return"><dt>Returns</dt><dd>Not yet implemented, should try catch for error handling + return error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00130">130</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00131">131</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -746,7 +780,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  title="reads header information from ifstream" alt="" coords="5,64,159,91"/>
 <area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="208,5,379,32"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="207,57,380,98"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="207,123,380,149"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="207,123,380,149"/>
 </map>
 </div>
 <div class="dynheader">
@@ -786,7 +820,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00061">61</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00062">62</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -795,7 +829,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="5,71,205,98"/>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,71,407,98"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="455,5,628,47"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="455,122,628,149"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="455,122,628,149"/>
 <area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="456,71,627,98"/>
 </map>
 </div>
@@ -820,7 +854,7 @@ Here is the call graph for this function:</div>
 <p>Opens ifstream to path and calls read private method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Integer containing error codes </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00083">83</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8cpp_source.html#l00084">84</a> of file <a class="el" href="BitmapHeader_8cpp_source.html">BitmapHeader.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -829,7 +863,7 @@ Here is the call graph for this function:</div>
 <area shape="rect"  title="Opens ifstream to path and calls read private method." alt="" coords="5,71,205,98"/>
 <area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="253,71,407,98"/>
 <area shape="rect"  href="classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="455,5,628,47"/>
-<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="455,122,628,149"/>
+<area shape="rect"  href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="455,122,628,149"/>
 <area shape="rect"  href="classBitmapHeader.html#aa02e59db95074c6a96a44dac03cee77b" title="Takes uint16_t Header.bfType and writes lower bits to uint8_t Header.bfTypeA and upper bits to uint8_..." alt="" coords="456,71,627,98"/>
 </map>
 </div>
@@ -867,7 +901,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to <a class="el" href="classErrorHandler.html" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st...">ErrorHandler</a> type object that was constructed when this was constructed. </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00153">153</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00159">159</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>
@@ -892,7 +926,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Struct containing 54byte header information + bitOffSet - 54 byte leftover </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00150">150</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00156">156</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>
@@ -917,7 +951,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Pointer to char array containing the complete header </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00151">151</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00157">157</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>
@@ -942,7 +976,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Imagepath </p>
 
-<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00152">152</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BitmapHeader_8h_source.html#l00158">158</a> of file <a class="el" href="BitmapHeader_8h_source.html">BitmapHeader.h</a>.</p>
 
 </div>
 </div>

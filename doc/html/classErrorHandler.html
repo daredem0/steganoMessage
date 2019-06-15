@@ -81,7 +81,7 @@ Collaboration diagram for ErrorHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler__coll__graph.png" border="0" usemap="#ErrorHandler_coll__map" alt="Collaboration graph"/></div>
 <map name="ErrorHandler_coll__map" id="ErrorHandler_coll__map">
-<area shape="rect"  title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="332,292,488,1147"/>
+<area shape="rect"  title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="332,292,488,1235"/>
 <area shape="rect"  title=" " alt="" coords="5,5,143,83"/>
 <area shape="rect"  title=" " alt="" coords="167,5,285,83"/>
 <area shape="rect"  title=" " alt="" coords="415,5,474,83"/>
@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa79cfd994939c238b85ad021ea6bbe05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#aa79cfd994939c238b85ad021ea6bbe05">setLog</a> (bool l, std::string p)</td></tr>
 <tr class="separator:aa79cfd994939c238b85ad021ea6bbe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab90b8248f24e3129df69d224585956dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ab90b8248f24e3129df69d224585956dd">printError</a> (int err)</td></tr>
-<tr class="memdesc:ab90b8248f24e3129df69d224585956dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a single Error corresponding to the.  <a href="#ab90b8248f24e3129df69d224585956dd">More...</a><br /></td></tr>
+<tr class="memdesc:ab90b8248f24e3129df69d224585956dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a single Error corresponding to the std::out.  <a href="#ab90b8248f24e3129df69d224585956dd">More...</a><br /></td></tr>
 <tr class="separator:ab90b8248f24e3129df69d224585956dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e6aa8018e2a22460a1431e6e7d8804"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ad1e6aa8018e2a22460a1431e6e7d8804">printError</a> (const std::string err)</td></tr>
 <tr class="memdesc:ad1e6aa8018e2a22460a1431e6e7d8804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a single Error message.  <a href="#ad1e6aa8018e2a22460a1431e6e7d8804">More...</a><br /></td></tr>
@@ -183,6 +183,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a6d977525061671cc3f510123163e4ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab207964238bf9d2c00f623d6a045fa9f"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ab207964238bf9d2c00f623d6a045fa9f">errPngBkgd</a> = 84</td></tr>
 <tr class="separator:ab207964238bf9d2c00f623d6a045fa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb7a10334f0e7042faf095dbb185669"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#aabb7a10334f0e7042faf095dbb185669">errOgl</a> = 90</td></tr>
+<tr class="separator:aabb7a10334f0e7042faf095dbb185669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba2d4095016a9ef04ce4d9c6f5de268"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#abba2d4095016a9ef04ce4d9c6f5de268">errOglGlfw</a> = 91</td></tr>
+<tr class="separator:abba2d4095016a9ef04ce4d9c6f5de268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a1e3e43604463aff7b8822450920bc"><td class="memItemLeft" align="right" valign="top">static int const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ac5a1e3e43604463aff7b8822450920bc">errOglShader</a> = 92</td></tr>
+<tr class="separator:ac5a1e3e43604463aff7b8822450920bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737a712190c5e9dcbd11230bd3c2eaca"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a737a712190c5e9dcbd11230bd3c2eaca">ERRRESERVED</a> = &quot;&quot;</td></tr>
 <tr class="separator:a737a712190c5e9dcbd11230bd3c2eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae805d5476c00a9687c15183268d4e2dd"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ae805d5476c00a9687c15183268d4e2dd">ERRNOERROR</a> = &quot;No Error Occured&quot;</td></tr>
@@ -247,6 +253,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a050e436624ffa1bf418075c4d20befe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b65ee3a71ddf4ef50a83035236a41b"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ad9b65ee3a71ddf4ef50a83035236a41b">ERRPNGKKGD</a> = &quot;PNG backgroundcolor missing&quot;</td></tr>
 <tr class="separator:ad9b65ee3a71ddf4ef50a83035236a41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d9cd71ebd01927c4528c2d8bbc5229"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#ae3d9cd71ebd01927c4528c2d8bbc5229">ERROGL</a> = &quot;Error: OpenGL Error&quot;</td></tr>
+<tr class="separator:ae3d9cd71ebd01927c4528c2d8bbc5229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af88062525b88dbc5679665c07a95ce"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a6af88062525b88dbc5679665c07a95ce">ERROGLGLFW</a> = &quot;Error: OpenGL-GLFW Error&quot;</td></tr>
+<tr class="separator:a6af88062525b88dbc5679665c07a95ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b89fe8a09e799097bf2ac29e92b32a8"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classErrorHandler.html#a0b89fe8a09e799097bf2ac29e92b32a8">ERROGLSHADER</a> = &quot;Error: OpenGL-Shader Error&quot;</td></tr>
+<tr class="separator:a0b89fe8a09e799097bf2ac29e92b32a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -325,7 +337,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00080">80</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00086">86</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +365,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Standard deconstructor. Deletes the generated list !!not yet implementede!! </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00083">83</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00089">89</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +413,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00125">125</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00132">132</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -446,7 +458,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00131">131</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00138">138</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +480,7 @@ Here is the caller graph for this function:</div>
 
 <p>Prints all available errors (mainly for debugging) </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00104">104</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00111">111</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +500,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a single Error corresponding to the. </p>
+<p>Prints a single Error corresponding to the std::out. </p>
 <p>OTHER METHODS</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">int</td><td>err - expects a integer value between 0 and x that specifies the error received </td></tr>
@@ -496,33 +508,34 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00094">94</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00100">100</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph.png" border="0" usemap="#classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" alt=""/></div>
 <map name="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph" id="classErrorHandler_ab90b8248f24e3129df69d224585956dd_icgraph">
-<area shape="rect"  title="Prints a single Error corresponding to the." alt="" coords="900,387,1073,414"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="407,32,583,59"/>
-<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="683,58,824,84"/>
-<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="657,210,849,236"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="407,159,583,186"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,159,336,186"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,286,60,312"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,210,563,236"/>
-<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="395,640,595,667"/>
-<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="677,666,830,692"/>
-<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Generates txt file containing bitmap information as hex values." alt="" coords="678,716,829,743"/>
-<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="676,767,831,794"/>
-<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,260,241,287"/>
-<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,514,283,540"/>
-<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="664,463,843,490"/>
-<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="389,564,601,591"/>
-<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,362,852,388"/>
-<area shape="rect"  href="classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="125,32,319,59"/>
-<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="392,463,599,490"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,311,327,338"/>
-<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,362,607,388"/>
+<area shape="rect"  title="Prints a single Error corresponding to the std::out." alt="" coords="900,459,1073,486"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="407,54,583,80"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="683,54,824,80"/>
+<area shape="rect"  href="classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="657,408,849,435"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="407,358,583,384"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,358,336,384"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,358,60,384"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="428,408,563,435"/>
+<area shape="rect"  href="classBitmapHeader.html#a2de360d5111136167f5885bed561bc8c" title="Overloaded readHeader, opens ifstream to path and calls read private method." alt="" coords="395,738,595,764"/>
+<area shape="rect"  href="classBitmapHeader.html#aebc19bf8a908f1f7edfc5b10186c9db8" title="reads header information from ifstream" alt="" coords="677,763,830,790"/>
+<area shape="rect"  href="classImage.html#ae5daf791502caefeae1b15360d354513" title="Generates txt file containing bitmap information as hex values." alt="" coords="678,814,829,840"/>
+<area shape="rect"  href="classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c" title="Writes information to a text file !!Not debugged!! !!No Error Handling implemented!..." alt="" coords="676,864,831,891"/>
+<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="203,547,241,574"/>
+<area shape="rect"  href="main_8cpp.html#a43ec6b73ba6ea9939554124e45b3d175" title="Terminates the program without an error." alt="" coords="179,130,265,156"/>
+<area shape="rect"  href="main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="161,611,283,638"/>
+<area shape="rect"  href="classSteganoMessage.html#acc5a49a35b46d8bf4c40cca8b8c5a52b" title="Checks if a path exists." alt="" coords="664,510,843,536"/>
+<area shape="rect"  href="classSteganoMessage.html#a3ea3f5ff720bf56d33f168d47e2897b0" title="Prints values stored for mode and path." alt="" coords="389,662,601,688"/>
+<area shape="rect"  href="classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="655,206,852,232"/>
+<area shape="rect"  href="classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="125,54,319,80"/>
+<area shape="rect"  href="classSteganoMessage.html#a9d87adef1584cc184ccd4b5d86fba744" title="static method to quickly check if a path possibly makes sense" alt="" coords="392,510,599,536"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,206,327,232"/>
+<area shape="rect"  href="classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="384,206,607,232"/>
 </map>
 </div>
 
@@ -552,7 +565,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00100">100</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00106">106</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +593,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00111">111</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00118">118</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -636,32 +649,39 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00115">115</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00122">122</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classErrorHandler_a5ef18327a559b8d77be496dad6a2bf52_icgraph.png" border="0" usemap="#classErrorHandler_a5ef18327a559b8d77be496dad6a2bf52_icgraph" alt=""/></div>
 <map name="classErrorHandler_a5ef18327a559b8d77be496dad6a2bf52_icgraph" id="classErrorHandler_a5ef18327a559b8d77be496dad6a2bf52_icgraph">
-<area shape="rect"  title="Prints param to stdout or logfile." alt="" coords="823,500,988,527"/>
-<area shape="rect"  href="classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,69,200,96"/>
-<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="274,95,450,121"/>
-<area shape="rect"  href="classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1" title="Prints all image data." alt="" coords="561,196,738,223"/>
-<area shape="rect"  href="classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="573,348,725,375"/>
-<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="248,399,476,425"/>
-<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,475,130,501"/>
-<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="579,145,720,172"/>
-<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="561,399,737,425"/>
-<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="582,449,717,476"/>
-<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="585,703,713,729"/>
-<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="343,500,381,527"/>
-<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="300,804,424,831"/>
-<area shape="rect"  href="classPng.html#a54cee101f15423f12d822cb369bcda42" title="initializes everything needed to read the png file" alt="" coords="582,804,717,831"/>
-<area shape="rect"  href="classPng.html#a7cd46afd9214b5cd60e839cc480db9c0" title="Checks if backgroundcolor is set and writes it to argument addresses." alt="" coords="554,905,745,932"/>
-<area shape="rect"  href="classPng.html#a2a1a70412369c257a8d56c54753d7d43" title="Reads the image header and data." alt="" coords="558,855,741,881"/>
-<area shape="rect"  href="classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="524,956,775,983"/>
-<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="264,551,460,577"/>
-<area shape="rect"  href="classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="543,601,756,628"/>
-<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="257,627,467,653"/>
+<area shape="rect"  title="Prints param to stdout or logfile." alt="" coords="833,599,999,626"/>
+<area shape="rect"  href="classBitmapArray.html#ae11059a1f2f1af199d0a2cf6f316397d" title="Non&#45;Standard constructor." alt="" coords="5,67,200,94"/>
+<area shape="rect"  href="classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="279,93,455,119"/>
+<area shape="rect"  href="classBitmapArray.html#a0580ddeedca7f59fd8d43ec92e6bb4a1" title="Prints all image data." alt="" coords="571,194,749,221"/>
+<area shape="rect"  href="classBitmapArray.html#afb549703b79c26499fc443f187bb3d6a" title="***" alt="" coords="584,346,736,373"/>
+<area shape="rect"  href="classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="253,397,481,423"/>
+<area shape="rect"  href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="75,523,130,550"/>
+<area shape="rect"  href="classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="589,143,731,170"/>
+<area shape="rect"  href="classImage.html#a3ca1ae6c1eb2846bfba066b01e6020e1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="572,397,748,423"/>
+<area shape="rect"  href="classImage.html#aa16c9acd068079c676dec4186262b1b7" title="Generates new bitmap file." alt="" coords="593,447,727,474"/>
+<area shape="rect"  href="classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="596,802,724,829"/>
+<area shape="rect"  href="main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="348,498,387,525"/>
+<area shape="rect"  href="classOpenGLWrapper.html#af99a93ae1e6a5ed7b1422b4838065e42" title="Initializes the SFML Window and GLEW (which does the ugly job of finding out what OpenGL functions th..." alt="" coords="583,853,737,879"/>
+<area shape="rect"  href="classOpenGLWrapper.html#a122d3908139936926442385921967157" title="Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (..." alt="" coords="549,903,771,930"/>
+<area shape="rect"  href="classOpenGLWrapper.html#a9f2ce92894cb84914b73349c88bb6fef" title="Sets up the texture Configuration." alt="" coords="551,954,769,981"/>
+<area shape="rect"  href="classOpenGLWrapper.html#adfbe0218cff4daa4eb39cc6b53f7717f" title="Contains the OpenGL Runtime loop and the event handling for the open Window." alt="" coords="560,549,760,575"/>
+<area shape="rect"  href="classOpenGLWrapper.html#a0c878818b04f78dd90e44dfed481ccab" title="Deletes the shaderProgram, fragmentShader, vertexShader, ebo and vbo buffers as well as vao Array...." alt="" coords="567,599,753,626"/>
+<area shape="rect"  href="classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="305,1030,429,1057"/>
+<area shape="rect"  href="classPng.html#a7cd46afd9214b5cd60e839cc480db9c0" title="Checks if backgroundcolor is set and writes it to argument addresses." alt="" coords="565,1106,755,1133"/>
+<area shape="rect"  href="classPng.html#a2a1a70412369c257a8d56c54753d7d43" title="Reads the image header and data." alt="" coords="569,1055,751,1082"/>
+<area shape="rect"  href="classSteganoMessage.html#a7a14cbd03ebca6764f8b234f8dcd1697" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="535,1157,785,1183"/>
+<area shape="rect"  href="classSteganoMessage.html#aeb4d2b69498c148508e2ca70194679cc" title="Fully initializes the SteganoMessage type object into a operatable state to ensure that other methods..." alt="" coords="269,650,465,677"/>
+<area shape="rect"  href="classSteganoMessage.html#ad90a4cf8cf03febfb4c3df955ccab13d" title="Builds new Image type object." alt="" coords="553,701,767,727"/>
+<area shape="rect"  href="classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="263,726,472,753"/>
+<area shape="rect"  href="classOpenGLWrapper.html#acb09341d671225fbed6b11ec23aa095f" title="Non&#45;Standard constructor. Initializes the OpenGLWrapper object automatically. After calling this cons..." alt="" coords="248,903,487,930"/>
+<area shape="rect"  href="classOpenGLWrapper.html#aac166dc029379011ed0a29c8f6d74776" title="Calls the OpenGL Runtime. This will open the OpenGL window (call of overloaded Constructor is absolut..." alt="" coords="290,549,445,575"/>
+<area shape="rect"  href="classOpenGLWrapper.html#af7418fa6074f3c2044b042edf19326c8" title="Cleans up. Calling before init with constructor can do many many bad things. Dont do it." alt="" coords="283,599,451,626"/>
 </map>
 </div>
 
@@ -694,7 +714,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>SETTERS Sets flag for logfile output </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00088">88</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8cpp_source.html#l00094">94</a> of file <a class="el" href="ErrorHandler_8cpp_source.html">ErrorHandler.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -754,7 +774,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00133">133</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00137">137</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +822,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00150">150</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00154">154</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -850,7 +870,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00151">151</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00155">155</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -898,7 +918,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00147">147</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00151">151</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -946,7 +966,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00148">148</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00152">152</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1018,7 +1038,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00153">153</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00157">157</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1086,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00141">141</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00145">145</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1134,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00142">142</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00146">146</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1162,7 +1182,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00143">143</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00147">147</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1230,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00145">145</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00149">149</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1278,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00144">144</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00148">148</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1306,7 +1326,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00138">138</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00142">142</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1354,7 +1374,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00158">158</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00162">162</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1402,7 +1422,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00136">136</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00140">140</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1450,7 +1470,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00139">139</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00143">143</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1498,7 +1518,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00137">137</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00141">141</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1546,7 +1566,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00132">132</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00136">136</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1615,151 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00130">130</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="aabb7a10334f0e7042faf095dbb185669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb7a10334f0e7042faf095dbb185669">&#9670;&nbsp;</a></span>errOgl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int const ErrorHandler::errOgl = 90</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00124">124</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="ae3d9cd71ebd01927c4528c2d8bbc5229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d9cd71ebd01927c4528c2d8bbc5229">&#9670;&nbsp;</a></span>ERROGL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ErrorHandler::ERROGL = &quot;Error: OpenGL Error&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00170">170</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="abba2d4095016a9ef04ce4d9c6f5de268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba2d4095016a9ef04ce4d9c6f5de268">&#9670;&nbsp;</a></span>errOglGlfw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int const ErrorHandler::errOglGlfw = 91</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00125">125</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="a6af88062525b88dbc5679665c07a95ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af88062525b88dbc5679665c07a95ce">&#9670;&nbsp;</a></span>ERROGLGLFW</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ErrorHandler::ERROGLGLFW = &quot;Error: OpenGL-GLFW Error&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00171">171</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="ac5a1e3e43604463aff7b8822450920bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a1e3e43604463aff7b8822450920bc">&#9670;&nbsp;</a></span>errOglShader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int const ErrorHandler::errOglShader = 92</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00126">126</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+
+</div>
+</div>
+<a id="a0b89fe8a09e799097bf2ac29e92b32a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b89fe8a09e799097bf2ac29e92b32a8">&#9670;&nbsp;</a></span>ERROGLSHADER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string ErrorHandler::ERROGLSHADER = &quot;Error: OpenGL-Shader Error&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00172">172</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1620,7 +1784,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>std::list that stores every standard error message as a std::string. </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00169">169</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00177">177</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1668,7 +1832,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00155">155</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00159">159</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1716,7 +1880,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00156">156</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00160">160</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1764,7 +1928,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00129">129</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00133">133</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1812,7 +1976,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00131">131</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00135">135</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1860,7 +2024,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00130">130</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00134">134</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1908,7 +2072,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00160">160</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00164">164</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -1980,7 +2144,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00163">163</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00167">167</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2004,7 +2168,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00164">164</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00168">168</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2052,7 +2216,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00161">161</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00165">165</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2264,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00162">162</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00166">166</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2124,7 +2288,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00124">124</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00128">128</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2172,7 +2336,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00134">134</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00138">138</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2220,7 +2384,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00128">128</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00132">132</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2268,7 +2432,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00127">127</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00131">131</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2293,7 +2457,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>flag for logfile </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00166">166</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00174">174</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>
@@ -2316,8 +2480,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>path to logfile </p>
 
-<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00167">167</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ErrorHandler_8h_source.html#l00175">175</a> of file <a class="el" href="ErrorHandler_8h_source.html">ErrorHandler.h</a>.</p>
 
 </div>
 </div>

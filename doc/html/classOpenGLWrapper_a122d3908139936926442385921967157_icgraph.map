@@ -1,0 +1,4 @@
+<map id="OpenGLWrapper::setupShaders" name="OpenGLWrapper::setupShaders">
+<area shape="rect" id="node1" title="Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (..." alt="" coords="292,5,515,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#acb09341d671225fbed6b11ec23aa095f" title="Non&#45;Standard constructor. Initializes the OpenGLWrapper object automatically. After calling this cons..." alt="" coords="5,5,244,32"/>
+</map>

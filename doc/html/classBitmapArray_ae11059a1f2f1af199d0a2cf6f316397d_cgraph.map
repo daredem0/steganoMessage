@@ -4,6 +4,6 @@
 <area shape="rect" id="node3" href="$classBitmapArray.html#a4ce4b5acc896040075be63a559799e7e" title="Opens original bitmap file and calls private read function." alt="" coords="248,56,424,83"/>
 <area shape="rect" id="node4" href="$classBitmapArray.html#a3a5834d03cd095769b422d4d66b9435f" title="Loads and decrypts the image data to the 2D std::vector member." alt="" coords="472,107,613,133"/>
 <area shape="rect" id="node6" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="661,158,835,199"/>
-<area shape="rect" id="node7" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="661,56,835,83"/>
+<area shape="rect" id="node7" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="661,56,835,83"/>
 <area shape="rect" id="node5" href="$classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="671,107,825,133"/>
 </map>

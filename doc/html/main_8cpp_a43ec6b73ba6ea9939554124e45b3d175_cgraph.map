@@ -1,0 +1,5 @@
+<map id="terminate" name="terminate">
+<area shape="rect" id="node1" title="Terminates the program without an error." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="140,5,365,32"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="166,56,339,83"/>
+</map>

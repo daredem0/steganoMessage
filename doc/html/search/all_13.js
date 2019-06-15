@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../classBitmapArray.html#a44f51b2c1ecde3f9aa504df25d65b6c9',1,'BitmapArray::width()'],['../classPng.html#a30b6c073e17f2f0cde3eca9e31036f3c',1,'Png::width()']]],
-  ['writetextfile',['writeTextFile',['../classImage.html#a2dc30c9d6280b8c0edd2f4f0ab474a5c',1,'Image']]]
+  ['ui',['ui',['../main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa',1,'main.cpp']]]
 ];

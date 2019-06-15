@@ -13,6 +13,9 @@
 
 #include "../header/OpenGLWrapper.h"
 
+/*
+ *@brief Definition of shaders for the openGL Window
+ */
 //shader sources
 const GLchar* vertexSource = R"glsl(
 #version 150 core
@@ -43,6 +46,9 @@ void main()
 }
 )glsl";
 
+/****************************OPENGLWRAPPER************************************************/
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 OpenGLWrapper::OpenGLWrapper() {
     err = NULL;
     title = "";
@@ -61,6 +67,7 @@ OpenGLWrapper::OpenGLWrapper(const OpenGLWrapper& orig) {
 OpenGLWrapper::~OpenGLWrapper() {
 }
 
+//INTERFACE/************************************************************/
 int OpenGLWrapper::run(){
     return this->openGLRT();
 }
@@ -69,6 +76,8 @@ int OpenGLWrapper::close(){
     return this->cleanup();
 }
     
+/********PRIVATE**************PRIVATE*****************PRIVATE**************PRIVATE************/
+//INIT/***************************************************************************************/
 int OpenGLWrapper::init(){
     std::stringstream ss;
     err->printLog("Init started\n");
@@ -80,8 +89,8 @@ int OpenGLWrapper::init(){
     
     //init glfw (we need it to get screen dimensions
     if(!glfwInit())
-        return (error = ErrorHandler::errOglGlfw); //might be a problem
-
+        return ErrorHandler::errOglGlfw; 
+    
     //get resoultion of mains creen and store it
     const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     screen.setX(mode->width);
@@ -105,7 +114,7 @@ int OpenGLWrapper::init(){
     //finally build the opengl window with an epic title
     win = new sf::Window(sf::VideoMode(window.getX(), window.getY(), 32), title, sf::Style::Titlebar | sf::Style::Close, settings);
     Size pos(win->getPosition().x, win->getPosition().y);
-    ss << "Genearte Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
+    ss << "Generate Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
     err->printLog(ss.str());
     win->setPosition(sf::Vector2i(pos.getX()+screen.getX()/2 - window.getX()/2, pos.getY()-screen.getY()/2+window.getY()/2));
     // Initialize GLEW    
@@ -235,6 +244,7 @@ int OpenGLWrapper::setupTexture(){
     return ErrorHandler::errNoError;
 }
 
+//RUNTIME/***************************************************************************************/
 int OpenGLWrapper::openGLRT(){
     std::stringstream ss;
     ss << "Starting runtime loop" << std::endl;
@@ -270,6 +280,7 @@ int OpenGLWrapper::openGLRT(){
     return ErrorHandler::errNoError;
 }
 
+//CLEANUP/***************************************************************************************/
 int OpenGLWrapper::cleanup(){    
     err->printLog("Cleaning up\n");
 
@@ -290,6 +301,9 @@ int OpenGLWrapper::cleanup(){
     return ErrorHandler::errNoError;
 }
 
+/*************************************SIZE************************************************/
+/********PUBLIC**************PUBLIC*****************PUBLIC**************PUBLIC************/
+//CONSTRUCTORS/DECONSTRUCTORS/************************************************************/
 Size::Size() {
     
 }
@@ -305,5 +319,4 @@ int Size::getX(){return x;}
 int Size::getY(){return y;}
 void Size::setX(int X){x = X;}
 void Size::setY(int Y){y = Y;}
-
 double Size::getFactor(int x, int y){return (double)x / y;}

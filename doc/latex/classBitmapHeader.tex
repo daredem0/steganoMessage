@@ -47,6 +47,8 @@ uint32\+\_\+t \mbox{\hyperlink{classBitmapHeader_aa55f157d6852ce35add8c5db54ccad
 \begin{DoxyCompactList}\small\item\em Getter for Bi\+Size\+Image. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{classBitmapHeader_a2660782990f1d9547e0aef501f666969}{get\+Bit\+Count}} ()
 \begin{DoxyCompactList}\small\item\em Getter for Bi\+Bit\+Count. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classBitmapHeader_a38ee7e201d7698c591d9ae3335515468}{ge\+Oldt\+Bit\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Old\+Bi\+Bit\+Count. \end{DoxyCompactList}\item 
 Header $\ast$ \mbox{\hyperlink{classBitmapHeader_a7ac69b70fce7b54c9cd3134a0e68ea58}{get\+Header\+Struct}} ()
 \begin{DoxyCompactList}\small\item\em Returns Header type Pointer to header struct to access members. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classBitmapHeader_a2de360d5111136167f5885bed561bc8c}{read\+Header}} (std\+::string p)
@@ -78,7 +80,7 @@ std\+::string \mbox{\hyperlink{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5
 \subsection{Detailed Description}
 \mbox{\hyperlink{classBitmapHeader}{Bitmap\+Header}} Class contains header information extracted from bitmap file. 
 
-Definition at line 49 of file Bitmap\+Header.\+h.
+Definition at line 50 of file Bitmap\+Header.\+h.
 
 
 
@@ -189,13 +191,37 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 123 of file Bitmap\+Header.\+cpp.
+Definition at line 124 of file Bitmap\+Header.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classBitmapHeader_aa02e59db95074c6a96a44dac03cee77b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBitmapHeader_a38ee7e201d7698c591d9ae3335515468}\label{classBitmapHeader_a38ee7e201d7698c591d9ae3335515468}} 
+\index{BitmapHeader@{BitmapHeader}!geOldtBitCount@{geOldtBitCount}}
+\index{geOldtBitCount@{geOldtBitCount}!BitmapHeader@{BitmapHeader}}
+\subsubsection{\texorpdfstring{geOldtBitCount()}{geOldtBitCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t Bitmap\+Header\+::ge\+Oldt\+Bit\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for Old\+Bi\+Bit\+Count. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Bi\+Bit\+Count 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file Bitmap\+Header.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBitmapHeader_a38ee7e201d7698c591d9ae3335515468_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classBitmapHeader_acce4b6292e2aaf5dbd4bc10687c4fb65}\label{classBitmapHeader_acce4b6292e2aaf5dbd4bc10687c4fb65}} 
@@ -285,7 +311,7 @@ Header$\ast$ type pointer to struct
 \end{DoxyReturn}
 
 
-Definition at line 58 of file Bitmap\+Header.\+cpp.
+Definition at line 59 of file Bitmap\+Header.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -412,7 +438,7 @@ Prints all stored values, attention, values not initialized, should be fixed in 
 
 
 
-Definition at line 105 of file Bitmap\+Header.\+cpp.
+Definition at line 106 of file Bitmap\+Header.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -436,7 +462,7 @@ Not yet implemented, should try catch for error handling + return error codes
 \end{DoxyReturn}
 
 
-Definition at line 130 of file Bitmap\+Header.\+cpp.
+Definition at line 131 of file Bitmap\+Header.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -472,7 +498,7 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 61 of file Bitmap\+Header.\+cpp.
+Definition at line 62 of file Bitmap\+Header.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -496,7 +522,7 @@ Integer containing error codes
 \end{DoxyReturn}
 
 
-Definition at line 83 of file Bitmap\+Header.\+cpp.
+Definition at line 84 of file Bitmap\+Header.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -523,7 +549,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} type object that was constructed when this was constructed. 
 
-Definition at line 153 of file Bitmap\+Header.\+h.
+Definition at line 159 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}\label{classBitmapHeader_ab1e2a2c32e87d647977bbd3e700f2265}} 
 \index{BitmapHeader@{BitmapHeader}!header@{header}}
@@ -533,7 +559,7 @@ Definition at line 153 of file Bitmap\+Header.\+h.
 
 Struct containing 54byte header information + bit\+Off\+Set -\/ 54 byte leftover 
 
-Definition at line 150 of file Bitmap\+Header.\+h.
+Definition at line 156 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_a9109a897251733f77942008318482426}\label{classBitmapHeader_a9109a897251733f77942008318482426}} 
 \index{BitmapHeader@{BitmapHeader}!headerStream@{headerStream}}
@@ -543,7 +569,7 @@ Definition at line 150 of file Bitmap\+Header.\+h.
 
 Pointer to char array containing the complete header 
 
-Definition at line 151 of file Bitmap\+Header.\+h.
+Definition at line 157 of file Bitmap\+Header.\+h.
 
 \mbox{\Hypertarget{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5dd}\label{classBitmapHeader_a928111fbaf59eebf24b750cbca11c5dd}} 
 \index{BitmapHeader@{BitmapHeader}!path@{path}}
@@ -553,7 +579,7 @@ Definition at line 151 of file Bitmap\+Header.\+h.
 
 Imagepath 
 
-Definition at line 152 of file Bitmap\+Header.\+h.
+Definition at line 158 of file Bitmap\+Header.\+h.
 
 
 

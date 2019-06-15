@@ -17,5 +17,5 @@
 <area shape="rect" id="node15" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="546,450,737,477"/>
 <area shape="rect" id="node16" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="550,501,733,528"/>
 <area shape="rect" id="node17" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="547,552,735,578"/>
-<area shape="rect" id="node18" href="$classBitmapHeader.html#a2660782990f1d9547e0aef501f666969" title="Getter for BiBitCount." alt="" coords="541,602,742,629"/>
+<area shape="rect" id="node18" href="$classBitmapHeader.html#a38ee7e201d7698c591d9ae3335515468" title="Getter for OldBiBitCount." alt="" coords="530,602,753,629"/>
 </map>

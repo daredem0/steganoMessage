@@ -1,0 +1,9 @@
+<map id="OpenGLWrapper::init" name="OpenGLWrapper::init">
+<area shape="rect" id="node1" title="Initializes the SFML Window and GLEW (which does the ugly job of finding out what OpenGL functions th..." alt="" coords="5,132,160,159"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="208,5,373,32"/>
+<area shape="rect" id="node3" href="$classSize.html#a555a455ea033f7ec3173c9bda30a896d" title="Setter for x value of the coordinate/width of the plane." alt="" coords="247,56,334,83"/>
+<area shape="rect" id="node4" href="$classSize.html#a75d2ff298be7d32a4e2d37f05b5f8c92" title="Setter for y value of the coordinate/height of the plane." alt="" coords="248,107,333,133"/>
+<area shape="rect" id="node5" href="$classSize.html#ae9a207666c19954cae4b41174e1bb93d" title="Getter for x value of the coordinate/width of the plane." alt="" coords="247,157,334,184"/>
+<area shape="rect" id="node6" href="$classSize.html#aea85ae41eda5b85e61b72b3f9b1b4799" title="Getter for y value of the coordinate/height of the plane." alt="" coords="247,208,334,235"/>
+<area shape="rect" id="node7" href="$classSize.html#a1f0f20fa0d81274342165fce2355ab63" title="Static function that gives a resizing factor for the vertices. Basically just builds the quotient." alt="" coords="233,259,349,285"/>
+</map>

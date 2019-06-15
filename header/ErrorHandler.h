@@ -40,7 +40,7 @@ public:
     /**
      * Standard deconstructor. Deletes the generated list !!not yet implementede!!
      */
-    virtual ~ErrorHandler(); //free list, implement!
+    virtual ~ErrorHandler(); //free list, implement! (not needed, goes out of scope...)
     
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////
@@ -54,7 +54,7 @@ public:
     /**OTHER METHODS**/////////////////
     ///////////////////////////////////
     /**
-     * @brief Prints a single Error corresponding to the 
+     * @brief Prints a single Error corresponding to the std::out
      * @param int err - expects a integer value between 0 and x that specifies the error received
      */
     int printError(int err);
@@ -172,7 +172,7 @@ public:
     const static std::string ERROGLSHADER;
 private:
     bool log;/**< flag for logfile*/
-    std::string path;
+    std::string path; /**< path to logfile*/
     
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     

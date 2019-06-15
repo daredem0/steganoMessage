@@ -3,5 +3,5 @@
 <area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="199,5,364,32"/>
 <area shape="rect" id="node3" href="$classBitmapArray.html#a158fbbaa026332a732f644a8c368a2f0" title="Generates an uint32_t value from up to 4 Bytes." alt="" coords="205,56,358,83"/>
 <area shape="rect" id="node4" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="195,107,368,149"/>
-<area shape="rect" id="node5" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="195,173,368,200"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="195,173,368,200"/>
 </map>

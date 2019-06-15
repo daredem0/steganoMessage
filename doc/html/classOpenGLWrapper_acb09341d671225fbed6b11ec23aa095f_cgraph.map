@@ -1,0 +1,12 @@
+<map id="OpenGLWrapper::OpenGLWrapper" name="OpenGLWrapper::OpenGLWrapper">
+<area shape="rect" id="node1" title="Non&#45;Standard constructor. Initializes the OpenGLWrapper object automatically. After calling this cons..." alt="" coords="5,56,244,83"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#af99a93ae1e6a5ed7b1422b4838065e42" title="Initializes the SFML Window and GLEW (which does the ugly job of finding out what OpenGL functions th..." alt="" coords="326,107,481,133"/>
+<area shape="rect" id="node9" href="$classOpenGLWrapper.html#a122d3908139936926442385921967157" title="Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (..." alt="" coords="292,5,515,32"/>
+<area shape="rect" id="node10" href="$classOpenGLWrapper.html#a9f2ce92894cb84914b73349c88bb6fef" title="Sets up the texture Configuration." alt="" coords="294,56,513,83"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="563,5,728,32"/>
+<area shape="rect" id="node4" href="$classSize.html#a555a455ea033f7ec3173c9bda30a896d" title="Setter for x value of the coordinate/width of the plane." alt="" coords="602,157,689,184"/>
+<area shape="rect" id="node5" href="$classSize.html#a75d2ff298be7d32a4e2d37f05b5f8c92" title="Setter for y value of the coordinate/height of the plane." alt="" coords="603,208,688,235"/>
+<area shape="rect" id="node6" href="$classSize.html#ae9a207666c19954cae4b41174e1bb93d" title="Getter for x value of the coordinate/width of the plane." alt="" coords="602,56,689,83"/>
+<area shape="rect" id="node7" href="$classSize.html#aea85ae41eda5b85e61b72b3f9b1b4799" title="Getter for y value of the coordinate/height of the plane." alt="" coords="602,107,689,133"/>
+<area shape="rect" id="node8" href="$classSize.html#a1f0f20fa0d81274342165fce2355ab63" title="Static function that gives a resizing factor for the vertices. Basically just builds the quotient." alt="" coords="587,259,703,285"/>
+</map>

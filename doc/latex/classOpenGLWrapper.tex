@@ -1,0 +1,611 @@
+\hypertarget{classOpenGLWrapper}{}\section{Open\+G\+L\+Wrapper Class Reference}
+\label{classOpenGLWrapper}\index{OpenGLWrapper@{OpenGLWrapper}}
+
+
+\mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} gives a C++ like interface to easily build an Open\+GL Window. It takes a lot of freedom away but it offers a very easy to use interface. It depends on Open\+GL, S\+F\+ML, G\+L\+FW and G\+L\+EW (as u can see in the includes).  
+
+
+
+
+{\ttfamily \#include $<$Open\+G\+L\+Wrapper.\+h$>$}
+
+
+
+Collaboration diagram for Open\+G\+L\+Wrapper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOpenGLWrapper_a841f4d85a65a5614618a986c395e85a0}{Open\+G\+L\+Wrapper}} ()
+\begin{DoxyCompactList}\small\item\em Standard constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOpenGLWrapper_acb09341d671225fbed6b11ec23aa095f}{Open\+G\+L\+Wrapper}} (\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$err\+Handle, std\+::string t, unsigned char $\ast$d, std\+::string ft, int width, int height, int($\ast$f)(int))
+\begin{DoxyCompactList}\small\item\em Non-\/\+Standard constructor. Initializes the \mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} object automatically. After calling this constructor you only have to \mbox{\hyperlink{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776}{Open\+G\+L\+Wrapper\+::run()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOpenGLWrapper_a51c0cfb12574c51978de55b3a5c67362}{Open\+G\+L\+Wrapper}} (const \mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classOpenGLWrapper_aeb3efd8a1f2990c48a16ca85e203025e}{$\sim$\+Open\+G\+L\+Wrapper}} ()
+\item 
+int \mbox{\hyperlink{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776}{run}} ()
+\begin{DoxyCompactList}\small\item\em Calls the Open\+GL Runtime. This will open the Open\+GL window (call of overloaded Constructor is absolutely necassary before running!) and open it endlessly. Here is a endless loop that will only end when the window is closed or the user hits escape. No multithreading supported as of now (stegano\+Message 0.\+3) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOpenGLWrapper_af7418fa6074f3c2044b042edf19326c8}{close}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up. Calling before init with constructor can do many many bad things. Dont do it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classOpenGLWrapper_af99a93ae1e6a5ed7b1422b4838065e42}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the S\+F\+ML Window and G\+L\+EW (which does the ugly job of finding out what Open\+GL functions the local G\+PU offers for us) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOpenGLWrapper_a122d3908139936926442385921967157}{setup\+Shaders}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (0.\+3) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOpenGLWrapper_a9f2ce92894cb84914b73349c88bb6fef}{setup\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the texture Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOpenGLWrapper_adfbe0218cff4daa4eb39cc6b53f7717f}{open\+G\+L\+RT}} ()
+\begin{DoxyCompactList}\small\item\em Contains the Open\+GL Runtime loop and the event handling for the open Window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classOpenGLWrapper_a0c878818b04f78dd90e44dfed481ccab}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the shader\+Program, fragment\+Shader, vertex\+Shader, ebo and vbo buffers as well as vao Array. It terminates glfw, closes the sfml window object and finally delets the window pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSize}{Size}} \mbox{\hyperlink{classOpenGLWrapper_ae43805c83ddf7c554d85ca9941d440d1}{window}}
+\item 
+\mbox{\hyperlink{classSize}{Size}} \mbox{\hyperlink{classOpenGLWrapper_ab9d6bc93fd838a85c8bdb98224a9a54c}{screen}}
+\item 
+\mbox{\hyperlink{classSize}{Size}} \mbox{\hyperlink{classOpenGLWrapper_adef2a1ed2b3a9a9602b2cf2b82acc9dd}{image}}
+\item 
+G\+Lfloat \mbox{\hyperlink{classOpenGLWrapper_af7c784cd0a15f2330cde7f8279569fde}{facX}}
+\item 
+G\+Lfloat \mbox{\hyperlink{classOpenGLWrapper_ab409f53208ee8f7e7fc6c3cddf3febe7}{facY}}
+\item 
+std\+::string \mbox{\hyperlink{classOpenGLWrapper_a558d0311b7f0e3ebc543a20a0c874bcc}{title}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{classOpenGLWrapper_a4d2dbdf66c23f052c301b216f675f96e}{data}}
+\item 
+std\+::string \mbox{\hyperlink{classOpenGLWrapper_a57e78029e7ee9951ea961b414b0e64e4}{type}}
+\item 
+sf\+::\+Window $\ast$ \mbox{\hyperlink{classOpenGLWrapper_a021c9b98a096b8cffc78c7eac37a03c6}{win}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a87d3090b9ef2e52b7b7d0bbf8df184ab}{vao}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a3585a72247c149b07d7fb56f5a464646}{vbo}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a3344488b7f5b35d603563de9579673f6}{ebo}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a171549c356bdf33cef0e24bfdf1f2d25}{shader\+Program}}
+\item 
+G\+Lint \mbox{\hyperlink{classOpenGLWrapper_addd025216ff4986440d529dec28d9996}{pos\+Attrib}}
+\item 
+G\+Lint \mbox{\hyperlink{classOpenGLWrapper_ac280ce51d31dead83985ec09b1d40402}{col\+Attrib}}
+\item 
+G\+Lint \mbox{\hyperlink{classOpenGLWrapper_a4584c807d7a7fa892de4e30b7faad65a}{tex\+Attrib}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a1df1740f86a127eaa65fa4d2e767a86a}{vertex\+Shader}}
+\item 
+G\+Luint \mbox{\hyperlink{classOpenGLWrapper_a6cc429caf98d32f532ba97740fe1b3c8}{fragment\+Shader}}
+\item 
+\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$ \mbox{\hyperlink{classOpenGLWrapper_aecbe9ae2a0482fba4420a26c38d42e35}{err}}
+\item 
+sf\+::\+Context\+Settings \mbox{\hyperlink{classOpenGLWrapper_a7d4d65ea4174aad513c93a7e287c46d5}{settings}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} gives a C++ like interface to easily build an Open\+GL Window. It takes a lot of freedom away but it offers a very easy to use interface. It depends on Open\+GL, S\+F\+ML, G\+L\+FW and G\+L\+EW (as u can see in the includes). 
+
+Definition at line 95 of file Open\+G\+L\+Wrapper.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOpenGLWrapper_a841f4d85a65a5614618a986c395e85a0}\label{classOpenGLWrapper_a841f4d85a65a5614618a986c395e85a0}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{OpenGLWrapper()}{OpenGLWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+G\+L\+Wrapper\+::\+Open\+G\+L\+Wrapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Standard constructor. 
+
+
+
+Definition at line 52 of file Open\+G\+L\+Wrapper.\+cpp.
+
+\mbox{\Hypertarget{classOpenGLWrapper_acb09341d671225fbed6b11ec23aa095f}\label{classOpenGLWrapper_acb09341d671225fbed6b11ec23aa095f}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{OpenGLWrapper()}{OpenGLWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+G\+L\+Wrapper\+::\+Open\+G\+L\+Wrapper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classErrorHandler}{Error\+Handler}} $\ast$}]{err\+Handle,  }\item[{std\+::string}]{t,  }\item[{unsigned char $\ast$}]{d,  }\item[{std\+::string}]{ft,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int($\ast$)(int)}]{f }\end{DoxyParamCaption})}
+
+
+
+Non-\/\+Standard constructor. Initializes the \mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} object automatically. After calling this constructor you only have to \mbox{\hyperlink{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776}{Open\+G\+L\+Wrapper\+::run()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}} & $\ast$err\+Handle -\/ Pointer to error\+Handler or other objet that offers -\/$>$print\+Log(std\+::string log) functionality. \\
+\hline
+{\em std\+::string} & t -\/ Title of the window \\
+\hline
+{\em unsigned} & char$\ast$ d -\/ Pointer to the image data \\
+\hline
+{\em std\+:.\+string} & ft -\/ Type of \mbox{\hyperlink{classImage}{Image}} data. For possible values check S\+F\+ML documentation \\
+\hline
+{\em int} & width -\/ width of the image file \\
+\hline
+{\em int} & height -\/ height of the image file \\
+\hline
+{\em int} & ($\ast$f)(int) -\/ Callback function of type int f(int); constructor will call this function if something goes horribly wrong. Provide a callback that will deal with it. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_acb09341d671225fbed6b11ec23aa095f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_a51c0cfb12574c51978de55b3a5c67362}\label{classOpenGLWrapper_a51c0cfb12574c51978de55b3a5c67362}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\index{OpenGLWrapper@{OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{OpenGLWrapper()}{OpenGLWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+G\+L\+Wrapper\+::\+Open\+G\+L\+Wrapper (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOpenGLWrapper}{Open\+G\+L\+Wrapper}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & -\/ Reference to original Open\+G\+L\+Wrapper-\/type object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Open\+G\+L\+Wrapper.\+cpp.
+
+\mbox{\Hypertarget{classOpenGLWrapper_aeb3efd8a1f2990c48a16ca85e203025e}\label{classOpenGLWrapper_aeb3efd8a1f2990c48a16ca85e203025e}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!````~OpenGLWrapper@{$\sim$OpenGLWrapper}}
+\index{````~OpenGLWrapper@{$\sim$OpenGLWrapper}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{$\sim$OpenGLWrapper()}{~OpenGLWrapper()}}
+{\footnotesize\ttfamily Open\+G\+L\+Wrapper\+::$\sim$\+Open\+G\+L\+Wrapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Standard deconstructor. 
+
+Definition at line 67 of file Open\+G\+L\+Wrapper.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classOpenGLWrapper_a0c878818b04f78dd90e44dfed481ccab}\label{classOpenGLWrapper_a0c878818b04f78dd90e44dfed481ccab}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Deletes the shader\+Program, fragment\+Shader, vertex\+Shader, ebo and vbo buffers as well as vao Array. It terminates glfw, closes the sfml window object and finally delets the window pointer. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 284 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a0c878818b04f78dd90e44dfed481ccab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a0c878818b04f78dd90e44dfed481ccab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_af7418fa6074f3c2044b042edf19326c8}\label{classOpenGLWrapper_af7418fa6074f3c2044b042edf19326c8}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!close@{close}}
+\index{close@{close}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up. Calling before init with constructor can do many many bad things. Dont do it. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_af7418fa6074f3c2044b042edf19326c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classOpenGLWrapper_af7418fa6074f3c2044b042edf19326c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_af99a93ae1e6a5ed7b1422b4838065e42}\label{classOpenGLWrapper_af99a93ae1e6a5ed7b1422b4838065e42}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!init@{init}}
+\index{init@{init}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes the S\+F\+ML Window and G\+L\+EW (which does the ugly job of finding out what Open\+GL functions the local G\+PU offers for us) 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_af99a93ae1e6a5ed7b1422b4838065e42_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_af99a93ae1e6a5ed7b1422b4838065e42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_adfbe0218cff4daa4eb39cc6b53f7717f}\label{classOpenGLWrapper_adfbe0218cff4daa4eb39cc6b53f7717f}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!openGLRT@{openGLRT}}
+\index{openGLRT@{openGLRT}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{openGLRT()}{openGLRT()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::open\+G\+L\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contains the Open\+GL Runtime loop and the event handling for the open Window. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_adfbe0218cff4daa4eb39cc6b53f7717f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_adfbe0218cff4daa4eb39cc6b53f7717f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776}\label{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!run@{run}}
+\index{run@{run}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the Open\+GL Runtime. This will open the Open\+GL window (call of overloaded Constructor is absolutely necassary before running!) and open it endlessly. Here is a endless loop that will only end when the window is closed or the user hits escape. No multithreading supported as of now (stegano\+Message 0.\+3) 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classOpenGLWrapper_aac166dc029379011ed0a29c8f6d74776_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_a122d3908139936926442385921967157}\label{classOpenGLWrapper_a122d3908139936926442385921967157}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!setupShaders@{setupShaders}}
+\index{setupShaders@{setupShaders}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{setupShaders()}{setupShaders()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::setup\+Shaders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (0.\+3) 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a122d3908139936926442385921967157_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a122d3908139936926442385921967157_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOpenGLWrapper_a9f2ce92894cb84914b73349c88bb6fef}\label{classOpenGLWrapper_a9f2ce92894cb84914b73349c88bb6fef}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!setupTexture@{setupTexture}}
+\index{setupTexture@{setupTexture}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{setupTexture()}{setupTexture()}}
+{\footnotesize\ttfamily int Open\+G\+L\+Wrapper\+::setup\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the texture Configuration. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer containing error code 
+\end{DoxyReturn}
+
+
+Definition at line 224 of file Open\+G\+L\+Wrapper.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a9f2ce92894cb84914b73349c88bb6fef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOpenGLWrapper_a9f2ce92894cb84914b73349c88bb6fef_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classOpenGLWrapper_ac280ce51d31dead83985ec09b1d40402}\label{classOpenGLWrapper_ac280ce51d31dead83985ec09b1d40402}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!colAttrib@{colAttrib}}
+\index{colAttrib@{colAttrib}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{colAttrib}{colAttrib}}
+{\footnotesize\ttfamily G\+Lint Open\+G\+L\+Wrapper\+::col\+Attrib\hspace{0.3cm}{\ttfamily [private]}}
+
+Location of the color attribute in the vertice 
+
+Definition at line 148 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a4d2dbdf66c23f052c301b216f675f96e}\label{classOpenGLWrapper_a4d2dbdf66c23f052c301b216f675f96e}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!data@{data}}
+\index{data@{data}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily unsigned char$\ast$ Open\+G\+L\+Wrapper\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to image data 
+
+Definition at line 140 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a3344488b7f5b35d603563de9579673f6}\label{classOpenGLWrapper_a3344488b7f5b35d603563de9579673f6}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!ebo@{ebo}}
+\index{ebo@{ebo}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{ebo}{ebo}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::ebo\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to element Array. This is needed to Organize the structure of the vertice 
+
+Definition at line 145 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_aecbe9ae2a0482fba4420a26c38d42e35}\label{classOpenGLWrapper_aecbe9ae2a0482fba4420a26c38d42e35}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!err@{err}}
+\index{err@{err}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classErrorHandler}{Error\+Handler}}$\ast$ Open\+G\+L\+Wrapper\+::err\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to \mbox{\hyperlink{classErrorHandler}{Error\+Handler}} 
+
+Definition at line 153 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_af7c784cd0a15f2330cde7f8279569fde}\label{classOpenGLWrapper_af7c784cd0a15f2330cde7f8279569fde}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!facX@{facX}}
+\index{facX@{facX}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{facX}{facX}}
+{\footnotesize\ttfamily G\+Lfloat Open\+G\+L\+Wrapper\+::facX\hspace{0.3cm}{\ttfamily [private]}}
+
+Stretch factor for vertice 
+
+Definition at line 137 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_ab409f53208ee8f7e7fc6c3cddf3febe7}\label{classOpenGLWrapper_ab409f53208ee8f7e7fc6c3cddf3febe7}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!facY@{facY}}
+\index{facY@{facY}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{facY}{facY}}
+{\footnotesize\ttfamily G\+Lfloat Open\+G\+L\+Wrapper\+::facY\hspace{0.3cm}{\ttfamily [private]}}
+
+Stretch factor for vertice 
+
+Definition at line 138 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a6cc429caf98d32f532ba97740fe1b3c8}\label{classOpenGLWrapper_a6cc429caf98d32f532ba97740fe1b3c8}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!fragmentShader@{fragmentShader}}
+\index{fragmentShader@{fragmentShader}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{fragmentShader}{fragmentShader}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::fragment\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+Created Fragment Shader 
+
+Definition at line 151 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_adef2a1ed2b3a9a9602b2cf2b82acc9dd}\label{classOpenGLWrapper_adef2a1ed2b3a9a9602b2cf2b82acc9dd}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!image@{image}}
+\index{image@{image}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSize}{Size}} Open\+G\+L\+Wrapper\+::image\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the values of the image 
+
+Definition at line 136 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_addd025216ff4986440d529dec28d9996}\label{classOpenGLWrapper_addd025216ff4986440d529dec28d9996}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!posAttrib@{posAttrib}}
+\index{posAttrib@{posAttrib}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{posAttrib}{posAttrib}}
+{\footnotesize\ttfamily G\+Lint Open\+G\+L\+Wrapper\+::pos\+Attrib\hspace{0.3cm}{\ttfamily [private]}}
+
+Location of the position attribute in the vertice 
+
+Definition at line 147 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_ab9d6bc93fd838a85c8bdb98224a9a54c}\label{classOpenGLWrapper_ab9d6bc93fd838a85c8bdb98224a9a54c}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!screen@{screen}}
+\index{screen@{screen}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{screen}{screen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSize}{Size}} Open\+G\+L\+Wrapper\+::screen\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the values of the current screen 
+
+Definition at line 135 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a7d4d65ea4174aad513c93a7e287c46d5}\label{classOpenGLWrapper_a7d4d65ea4174aad513c93a7e287c46d5}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!settings@{settings}}
+\index{settings@{settings}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{settings}{settings}}
+{\footnotesize\ttfamily sf\+::\+Context\+Settings Open\+G\+L\+Wrapper\+::settings\hspace{0.3cm}{\ttfamily [private]}}
+
+S\+F\+ML Settings object 
+
+Definition at line 154 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a171549c356bdf33cef0e24bfdf1f2d25}\label{classOpenGLWrapper_a171549c356bdf33cef0e24bfdf1f2d25}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!shaderProgram@{shaderProgram}}
+\index{shaderProgram@{shaderProgram}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{shaderProgram}{shaderProgram}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::shader\+Program\hspace{0.3cm}{\ttfamily [private]}}
+
+linked shader Program 
+
+Definition at line 146 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a4584c807d7a7fa892de4e30b7faad65a}\label{classOpenGLWrapper_a4584c807d7a7fa892de4e30b7faad65a}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!texAttrib@{texAttrib}}
+\index{texAttrib@{texAttrib}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{texAttrib}{texAttrib}}
+{\footnotesize\ttfamily G\+Lint Open\+G\+L\+Wrapper\+::tex\+Attrib\hspace{0.3cm}{\ttfamily [private]}}
+
+Location of the Texture attribute in the vertice 
+
+Definition at line 149 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a558d0311b7f0e3ebc543a20a0c874bcc}\label{classOpenGLWrapper_a558d0311b7f0e3ebc543a20a0c874bcc}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!title@{title}}
+\index{title@{title}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily std\+::string Open\+G\+L\+Wrapper\+::title\hspace{0.3cm}{\ttfamily [private]}}
+
+Title of the Open\+GL Window 
+
+Definition at line 139 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a57e78029e7ee9951ea961b414b0e64e4}\label{classOpenGLWrapper_a57e78029e7ee9951ea961b414b0e64e4}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!type@{type}}
+\index{type@{type}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Open\+G\+L\+Wrapper\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+Type of image data 
+
+Definition at line 141 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a87d3090b9ef2e52b7b7d0bbf8df184ab}\label{classOpenGLWrapper_a87d3090b9ef2e52b7b7d0bbf8df184ab}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!vao@{vao}}
+\index{vao@{vao}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{vao}{vao}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::vao\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to Vertex Array. Needed for the vertex shader 
+
+Definition at line 143 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a3585a72247c149b07d7fb56f5a464646}\label{classOpenGLWrapper_a3585a72247c149b07d7fb56f5a464646}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!vbo@{vbo}}
+\index{vbo@{vbo}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{vbo}{vbo}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::vbo\hspace{0.3cm}{\ttfamily [private]}}
+
+Pointer to Vertex Buffer. Buffers data for the vertex shader 
+
+Definition at line 144 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a1df1740f86a127eaa65fa4d2e767a86a}\label{classOpenGLWrapper_a1df1740f86a127eaa65fa4d2e767a86a}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!vertexShader@{vertexShader}}
+\index{vertexShader@{vertexShader}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{vertexShader}{vertexShader}}
+{\footnotesize\ttfamily G\+Luint Open\+G\+L\+Wrapper\+::vertex\+Shader\hspace{0.3cm}{\ttfamily [private]}}
+
+Created Vertex Shader 
+
+Definition at line 150 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_a021c9b98a096b8cffc78c7eac37a03c6}\label{classOpenGLWrapper_a021c9b98a096b8cffc78c7eac37a03c6}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!win@{win}}
+\index{win@{win}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{win}{win}}
+{\footnotesize\ttfamily sf\+::\+Window$\ast$ Open\+G\+L\+Wrapper\+::win\hspace{0.3cm}{\ttfamily [private]}}
+
+S\+F\+ML Window object 
+
+Definition at line 142 of file Open\+G\+L\+Wrapper.\+h.
+
+\mbox{\Hypertarget{classOpenGLWrapper_ae43805c83ddf7c554d85ca9941d440d1}\label{classOpenGLWrapper_ae43805c83ddf7c554d85ca9941d440d1}} 
+\index{OpenGLWrapper@{OpenGLWrapper}!window@{window}}
+\index{window@{window}!OpenGLWrapper@{OpenGLWrapper}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSize}{Size}} Open\+G\+L\+Wrapper\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+Stores the values of the Open\+GL Window 
+
+Definition at line 134 of file Open\+G\+L\+Wrapper.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+header/\mbox{\hyperlink{OpenGLWrapper_8h}{Open\+G\+L\+Wrapper.\+h}}\item 
+src/\mbox{\hyperlink{OpenGLWrapper_8cpp}{Open\+G\+L\+Wrapper.\+cpp}}\end{DoxyCompactItemize}

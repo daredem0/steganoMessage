@@ -3,8 +3,8 @@
 <area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="215,5,381,32"/>
 <area shape="rect" id="node3" href="$classBitmapHeader.html#aa29e1acc8a7a588867039d7c0bdcde04" title="Returns pointer to char array containing the complete fileheader extracted/converted from original fi..." alt="" coords="202,107,394,133"/>
 <area shape="rect" id="node4" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="456,59,629,101"/>
-<area shape="rect" id="node5" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the." alt="" coords="456,147,629,173"/>
-<area shape="rect" id="node6" href="$classBitmapArray.html#a7fe807ebdb5c41d3196440fab1ae3621" title="Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after inf..." alt="" coords="188,208,408,235"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="456,147,629,173"/>
+<area shape="rect" id="node6" href="$classBitmapArray.html#aebf9b67e7f535bb7e6be62470fe6316e" title="Generates a binary stream inside a char array from the 2d std::vector. Therefor can be used after inf..." alt="" coords="188,208,408,235"/>
 <area shape="rect" id="node7" href="$classBitmapHeader.html#a70702e4d8aba2a3502f776f73bfecde8" title="Getter for bfOffBits." alt="" coords="203,259,393,285"/>
 <area shape="rect" id="node8" href="$classImage.html#ac1c14eba8a20f8bb71c3c21eaba90ecb" title="Converts a byte to hex string." alt="" coords="228,309,368,336"/>
 <area shape="rect" id="node10" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="204,360,392,387"/>

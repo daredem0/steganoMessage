@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['png_2ecpp',['Png.cpp',['../Png_8cpp.html',1,'']]],
-  ['png_2eh',['Png.h',['../Png_8h.html',1,'']]]
+  ['openglwrapper_2ecpp',['OpenGLWrapper.cpp',['../OpenGLWrapper_8cpp.html',1,'']]],
+  ['openglwrapper_2eh',['OpenGLWrapper.h',['../OpenGLWrapper_8h.html',1,'']]]
 ];

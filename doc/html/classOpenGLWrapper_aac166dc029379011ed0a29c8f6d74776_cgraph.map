@@ -1,0 +1,5 @@
+<map id="OpenGLWrapper::run" name="OpenGLWrapper::run">
+<area shape="rect" id="node1" title="Calls the OpenGL Runtime. This will open the OpenGL window (call of overloaded Constructor is absolut..." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#adfbe0218cff4daa4eb39cc6b53f7717f" title="Contains the OpenGL Runtime loop and the event handling for the open Window." alt="" coords="208,5,408,32"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="456,5,621,32"/>
+</map>

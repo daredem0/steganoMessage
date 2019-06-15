@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['png',['Png',['../classPng.html',1,'']]]
+  ['openglwrapper',['OpenGLWrapper',['../classOpenGLWrapper.html',1,'']]]
 ];

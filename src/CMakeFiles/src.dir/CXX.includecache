@@ -180,6 +180,14 @@ string
 
 /home/florian/git/steganoMessage/header/steganoMessageConfig.h
 
+/home/florian/git/steganoMessage/src/OpenGLWrapper.cpp
+../header/OpenGLWrapper.h
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
+
+/home/florian/git/steganoMessage/src/SteganoMessage.cpp
+../header/SteganoMessage.h
+/home/florian/git/steganoMessage/header/SteganoMessage.h
+
 /home/florian/git/steganoMessage/src/main.cpp
 iostream
 -
