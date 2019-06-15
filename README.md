@@ -13,11 +13,7 @@ Mainly as experiment to learn about steganography.
 
 ~~Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.~~
 
-<<<<<<< HEAD
-Compiling on terminal gets guly from here. To keep things os independet please use cmake:
-=======
 Debugging on terminal gets ugly from here on. To keep things os independet please use cmake:
->>>>>>> db62cb3da6c5a6aa979feacb38dbb6650fa633cb
 
 Project can be built with cmake file. Do:  
 $./$ cmake .  
