@@ -13,7 +13,7 @@ g++-9 -o steganoMessage ./src/main.cpp ./src/SteganoMessage.cpp ./header/Stegano
 
 ~~Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.~~
 
-Debugging on terminal gets guly from here. To keep things os independet please use cmake:
+Debugging on terminal gets ugly from here on. To keep things os independet please use cmake:
 
 Project can be built with cmake file. Do:  
 $./$ cmake .  
