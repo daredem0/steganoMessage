@@ -48,11 +48,11 @@ OpenGLWrapper::OpenGLWrapper() {
     title = "";
 }
 
-OpenGLWrapper::OpenGLWrapper(ErrorHandler *errHandle, std::string t, unsigned char* d, std::string ft, int width, int height) : err(errHandle), 
+OpenGLWrapper::OpenGLWrapper(ErrorHandler *errHandle, std::string t, unsigned char* d, std::string ft, int width, int height, int (*f)(int)) : err(errHandle), 
         title(t), data(d), type(ft), image(width, height){
-    this->init();
-    this->setupShaders();
-    this->setupTexture();
+    if(this->init() != ErrorHandler::errNoError ||  this->setupShaders() != ErrorHandler::errNoError || this->setupTexture() != ErrorHandler::errNoError){
+        f(ErrorHandler::errOgl);
+    }
 }
 
 OpenGLWrapper::OpenGLWrapper(const OpenGLWrapper& orig) {
@@ -70,7 +70,8 @@ int OpenGLWrapper::close(){
 }
     
 int OpenGLWrapper::init(){
-    std::cout << "Init started" << std::endl;
+    std::stringstream ss;
+    err->printLog("Init started\n");
     //Setup the open gl window
     settings.depthBits = 24;
     settings.stencilBits = 8;
@@ -86,14 +87,6 @@ int OpenGLWrapper::init(){
     screen.setX(mode->width);
     screen.setY(mode->height);
     
-    //now load the image
-    //sf::Image img;
-    //img.loadFromFile("PNG_B.png");
-    
-    //get dimensions from the image and store them
-    //image.setX(img.getSize().x);
-    //image.setY(img.getSize().y);
-    
     //generate the opengl window size we want
     if(image.getX() <= screen.getX()-300 && image.getX() <= screen.getX()-300){
         window.setX(image.getX() + 100);
@@ -107,22 +100,28 @@ int OpenGLWrapper::init(){
     //get scaling factor for the vertices and store them
     facX = Size::getFactor(image.getX(), window.getX());
     facY = Size::getFactor(image.getY(), window.getY());
-    std::cout << "Dimensions of window x,y: " << window.getX() << "," << window.getY() << std::endl;
+    
+    err->printLog(ss.str());
     //finally build the opengl window with an epic title
     win = new sf::Window(sf::VideoMode(window.getX(), window.getY(), 32), title, sf::Style::Titlebar | sf::Style::Close, settings);
     Size pos(win->getPosition().x, win->getPosition().y);
-    std::cout << "Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
+    ss << "Genearte Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
+    err->printLog(ss.str());
     win->setPosition(sf::Vector2i(pos.getX()+screen.getX()/2 - window.getX()/2, pos.getY()-screen.getY()/2+window.getY()/2));
     // Initialize GLEW    
     glewExperimental = GL_TRUE;
     glewInit();
     
-    std::cout << "Init ended" << std::endl;
+    ss << "Init finished" << std::endl;
+    err->printLog(ss.str());
+    
     return ErrorHandler::errNoError;
 }
 
 int OpenGLWrapper::setupShaders(){
-    std::cout << "Setup shaders" << std::endl;
+    std::stringstream ss;
+    ss << "Setting up shaders" << std::endl;
+    err->printLog(ss.str());
     // Create Vertex Array Object
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
@@ -160,14 +159,14 @@ int OpenGLWrapper::setupShaders(){
     //error handling vertexShader
     GLint status;
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &status);
-    
-    std::stringstream ss;
-    
+        
     //retrieve log vertex shader
     char buffer[512];
     glGetShaderInfoLog(vertexShader, 512, NULL, buffer);
-    ss << "Vertex buffer: " << buffer << std::endl;
-    //err->printLog(ss.str());
+        ss << "Vertex buffer: " << buffer << std::endl;
+    if(ss.str() != "Vertex buffer: "){
+        err->printLog(ss.str());
+    }
 
     //Create fragment shader
     fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -179,7 +178,9 @@ int OpenGLWrapper::setupShaders(){
     char bufferFrag[512];
     glGetShaderInfoLog(fragmentShader, 512, NULL, bufferFrag);
     ss << "Fragment buffer: " << bufferFrag << std::endl;
-    err->printLog(ss.str());
+    if(ss.str() != "Fragment buffer: "){
+        err->printLog(ss.str());
+    }
 
     if(status != GL_TRUE){
         return ErrorHandler::errOglShader;
@@ -206,12 +207,16 @@ int OpenGLWrapper::setupShaders(){
     texAttrib  = glGetAttribLocation(shaderProgram, "texcoord");
     glEnableVertexAttribArray(texAttrib);
     glVertexAttribPointer(texAttrib, 2, GL_FLOAT, GL_FALSE, 7*sizeof(float), (void*)(5*sizeof(float)));
-    std::cout << "Shaders done" << std::endl;
+    ss << "Shaders done" << std::endl;
+    err->printLog(ss.str());
     return ErrorHandler::errNoError;
 }
 
 int OpenGLWrapper::setupTexture(){
-    std::cout << "Setup texture" << std::endl;
+    std::stringstream ss;
+    ss << "Seting up texture" << std::endl;
+    err->printLog(ss.str());
+    
     //Generate Texture object
     GLuint tex;
     glGenTextures(1, &tex);
@@ -227,12 +232,13 @@ int OpenGLWrapper::setupTexture(){
     //Set up filter for up and downscaling of the texture (linear smooth, nearest would give pixelised result)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); /*TRY MINIMAPS*/
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    std::cout << "Texsture done" << std::endl;
     return ErrorHandler::errNoError;
 }
 
 int OpenGLWrapper::openGLRT(){
-    std::cout << "Start rt loop" << std::endl;
+    std::stringstream ss;
+    ss << "Starting runtime loop" << std::endl;
+    err->printLog(ss.str());
     //add event loop 
     bool running = true;
         
@@ -247,29 +253,25 @@ int OpenGLWrapper::openGLRT(){
         while(win->pollEvent(windowEvent)){
             switch(windowEvent.type){
                 case sf::Event::Closed:
-                    std::cout << "Closed event a fired" << std::endl;
                     running = false;
                     break;
                 case sf::Event::KeyPressed:
                     if(windowEvent.key.code == sf::Keyboard::Escape){    
-                        std::cout << "Closed event b fired" << std::endl;
                         running = false;
                     }
                     break;
             }
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
-            //glDrawArrays(GL_TRIANGLES, 0, 3);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
             win->display();
         }
     }    
-    std::cout << "Finished rt" << std::endl;
     return ErrorHandler::errNoError;
 }
 
 int OpenGLWrapper::cleanup(){    
-    std::cout << "Start cleanup" << std::endl;
+    err->printLog("Cleaning up\n");
 
     //cleanup
     glDeleteProgram(shaderProgram);
@@ -284,7 +286,6 @@ int OpenGLWrapper::cleanup(){
 
     win->close();
     delete win;    
-    std::cout << "finished cleanup" << std::endl;
 
     return ErrorHandler::errNoError;
 }

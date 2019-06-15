@@ -47,7 +47,7 @@ private:
 class OpenGLWrapper {
 public:
     OpenGLWrapper();
-    OpenGLWrapper(ErrorHandler *errHandle, std::string t, unsigned char* d, std::string ft, int width, int height);
+    OpenGLWrapper(ErrorHandler *errHandle, std::string t, unsigned char* d, std::string ft, int width, int height, int (*f)(int));
     OpenGLWrapper(const OpenGLWrapper& orig);
     virtual ~OpenGLWrapper();
     int run();

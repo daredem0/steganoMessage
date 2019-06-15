@@ -19,6 +19,7 @@ SteganoMessage::SteganoMessage() {
     err = NULL;
     mess = NULL;
     img = NULL;
+    ogl = NULL;    
     err = new ErrorHandler();
     err->printLog("Creating new SteganoMessage object\n");
     modeSet = false;
@@ -36,6 +37,8 @@ SteganoMessage::~SteganoMessage() {
         delete mess;
     if(img != NULL)
         delete img;
+    if(ogl != NULL)
+        delete ogl;
 }
 
 //INIT/************************************************************/
@@ -131,6 +134,11 @@ int SteganoMessage::buildImage(std::string path){
     }
 }
 
+int SteganoMessage::buildOpenGL(std::string t, unsigned char* d, std::string ft, int width, int height){
+    ogl = new OpenGLWrapper(this->getErrHandle(), t, d, ft, width, height, SteganoMessage::naughtyEmergencyExit);
+    return SteganoMessage::naughtyEmergencyExit(0);
+}
+
 //GETTERS/************************************************************/
 ErrorHandler* SteganoMessage::getErrHandle(){return err;}
 Message* SteganoMessage::getMessage(){return mess;}
@@ -140,6 +148,7 @@ std::string SteganoMessage::getMode(){
         return "";
     return mode;
 }
+OpenGLWrapper* SteganoMessage::getOpenGL(){return ogl;}
 
 bool SteganoMessage::getPathVerified(){return path;}
 
@@ -177,9 +186,7 @@ std::string SteganoMessage::getTimeDate(char t, std::time_t system_clock){
     return ss.str();
 }
 
-bool SteganoMessage::getLogMode(){
-    return log;
-}
+bool SteganoMessage::getLogMode(){return log;}
 
 //SETTERS/************************************************************/
 int SteganoMessage::setMode(std::string m){
@@ -377,6 +384,20 @@ void SteganoMessage::printValues(){
     catch(...){
         err->printError(errUnknown);
     }
+}
+
+int SteganoMessage::naughtyEmergencyExit(int err){
+    static int naugthyEmergencyExitValue = 0;
+    static int counter = 1;
+    if ((counter == 1 || (naugthyEmergencyExitValue == 0)) && err == 0){
+        counter = 1;
+        return (naugthyEmergencyExitValue = 0);
+    }
+    else if (err != 0){
+        ++counter;
+        return (naugthyEmergencyExitValue = err);
+    }
+    return naugthyEmergencyExitValue;
 }
 
 /********PRIVATE**************PRIVATE*************PRIVATE**************PRIVATE************/

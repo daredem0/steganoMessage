@@ -3,7 +3,7 @@ project (steganoMessage)
 
 #Version Number
 set (steganoMessage_VERSION_MAJOR 0)
-set (steganoMessage_VERSION_MINOR 1)
+set (steganoMessage_VERSION_MINOR 3)
 
 #set folders for garbage files
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")

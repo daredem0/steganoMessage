@@ -171,6 +171,8 @@ Jpeg.h
 /home/florian/git/steganoMessage/header/Jpeg.h
 Png.h
 /home/florian/git/steganoMessage/header/Png.h
+../header/OpenGLWrapper.h
+/home/florian/git/steganoMessage/header/OpenGLWrapper.h
 
 /home/florian/git/steganoMessage/header/constants.h
 string
@@ -187,6 +189,4 @@ fstream
 /home/florian/git/steganoMessage/header/SteganoMessage.h
 ../header/steganoMessageConfig.h
 /home/florian/git/steganoMessage/header/steganoMessageConfig.h
-../header/OpenGLWrapper.h
-/home/florian/git/steganoMessage/header/OpenGLWrapper.h
 

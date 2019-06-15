@@ -9,7 +9,6 @@
 #include <fstream>
 #include "../header/SteganoMessage.h"
 #include "../header/steganoMessageConfig.h"
-#include "../header/OpenGLWrapper.h"/*TEMPORARY TEST FOR IMG VIEWER*/
 
 using namespace std;
 
@@ -92,14 +91,14 @@ int main(int argc, char *argv[]) {
         
         if(argv[argc-1] == SHOW){
             /*TEMPORARY TEST FOR IMG VIEWER*/
-            OpenGLWrapper *ogl = new OpenGLWrapper(steg->getErrHandle(), "FloToShop", (unsigned char*)steg->getImage()->getBitmapArray()->getBDataStream(true), 
+            int errTemp = steg->buildOpenGL("FloToShop", (unsigned char*)steg->getImage()->getBitmapArray()->getBDataStream(true), 
                     "RGB", steg->getImage()->getBitmapHeader()->getWidth(), steg->getImage()->getBitmapHeader()->getHeight());
-            ogl->run();
-            ogl->close();
+            if(errTemp != 0)
+                exit(terminate(steg, steg->naughtyEmergencyExit(0)));
+            steg->getOpenGL()->run();
+            steg->getOpenGL()->close();
             /*******************************/
         }
-            
-        
         terminate(steg, 0); //cleanup
 
         return 0;
@@ -153,10 +152,10 @@ int printHelp(){
 }
 
 int terminate(SteganoMessage *steg, int err){
+    steg->getErrHandle()->printError(err);
     if(steg != NULL)
         delete steg;
     return err;
-            
 }
 
 //outdated, should not be used anymore

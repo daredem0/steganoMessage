@@ -62,6 +62,7 @@ src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Filter.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Image.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Jpeg.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Message.h
+src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/OpenGLWrapper.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/Png.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/SteganoMessage.h
 src/CMakeFiles/src.dir/SteganoMessage.cpp.o: header/constants.h

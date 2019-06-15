@@ -75,6 +75,12 @@ ErrorHandler::ErrorHandler() {
     errorOut.push_back(ERRPNGINT);
     errorOut.push_back(ERRPNGKKGD);
     fillList(5);
+    
+    //OpenGL Errors
+    errorOut.push_back(ERROGL);
+    errorOut.push_back(ERROGLGLFW);
+    errorOut.push_back(ERROGLSHADER);
+    fillList(7);
 }
 
 ErrorHandler::ErrorHandler(const ErrorHandler& orig) {
