@@ -20,6 +20,10 @@ $./$ cmake .
 $./$ make  
 Tested on Linux, not tested on OSX/Windows
 
+***
+
+***
+
 Usage:
 _steganoMessage_ is a command line tool to hide a message somewhere in a bitmap file.
 Use either of the following as first switch to decide if you want to encrypt a message or decrypt a message. Add path of image file after the switch.
