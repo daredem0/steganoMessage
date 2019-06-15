@@ -1,20 +1,20 @@
 Tool to encrypt and decrypt a message withing a random graphic file (for now bitmap, propably will support jpeg and png as well)
 
-Mainly as experiment to learn about steganography. $\sim$$\sim$\+Compiles on linux with\+:
+Mainly as experiment to learn about steganography. \sout{Compiles on linux with\+:}
 
-g++ -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/ljpeg -\/lpng$\sim$$\sim$
+\sout{g++ -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/ljpeg -\/lpng}
 
-$\sim$$\sim$for G\+DB debugging do\+:
+\sout{for G\+DB debugging do\+:}
 
-g++ -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/export-\/dynamic -\/g -\/ljpeg -\/lpng$\sim$$\sim$
+\sout{g++ -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/export-\/dynamic -\/g -\/ljpeg -\/lpng}
 
-$\sim$$\sim$\+Compiles with little to no changes on M\+AC as well for now\+:
+\sout{Compiles with little to no changes on M\+AC as well for now\+:}
 
-g++-\/9 -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/ljpeg -\/lpng$\sim$$\sim$
+\sout{g++-\/9 -\/o stegano\+Message ./src/main.cpp ./src/\+Stegano\+Message.cpp ./header/\+Stegano\+Message.h ./src/\+Message.cpp ./header/\+Message.h ./src/\+Image.cpp ./header/\+Image.h ./src/\+Bitmap\+Header.cpp ./header/\+Bitmap\+Header.h ./src/\+Bitmap\+Array.cpp ./header/\+Bitmap\+Array.h ./src/\+Error\+Handler.cpp ./header/\+Error\+Handler.h ./header/constants.h ./src/\+Jpeg.cpp ./header/\+Jpeg.h ./src/\+Filter.cpp ./header/\+Filter.h ./src/\+Png.cpp ./header/\+Png.h -\/ljpeg -\/lpng}
 
 \sout{Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.}
 
-Debugging on terminal gets guly from here. To keep things os independet please use cmake\+:
+Compiling on terminal gets guly from here. To keep things os independet please use cmake\+:
 
 Project can be built with cmake file. Do\+:
 
