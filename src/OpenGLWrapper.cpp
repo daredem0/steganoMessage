@@ -116,11 +116,11 @@ int OpenGLWrapper::init(){
     Size pos(win->getPosition().x, win->getPosition().y);
     ss << "Generate Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
     err->printLog(ss.str());
+    ss.str("");
     win->setPosition(sf::Vector2i(pos.getX()+screen.getX()/2 - window.getX()/2, pos.getY()-screen.getY()/2+window.getY()/2));
     // Initialize GLEW    
     glewExperimental = GL_TRUE;
     glewInit();
-    
     ss << "Init finished" << std::endl;
     err->printLog(ss.str());
     
@@ -131,6 +131,7 @@ int OpenGLWrapper::setupShaders(){
     std::stringstream ss;
     ss << "Setting up shaders" << std::endl;
     err->printLog(ss.str());
+    ss.str("");
     // Create Vertex Array Object
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
@@ -175,6 +176,7 @@ int OpenGLWrapper::setupShaders(){
         ss << "Vertex buffer: " << buffer << std::endl;
     if(ss.str() != "Vertex buffer: "){
         err->printLog(ss.str());
+        ss.str("");
     }
 
     //Create fragment shader
@@ -189,6 +191,7 @@ int OpenGLWrapper::setupShaders(){
     ss << "Fragment buffer: " << bufferFrag << std::endl;
     if(ss.str() != "Fragment buffer: "){
         err->printLog(ss.str());
+        ss.str("");
     }
 
     if(status != GL_TRUE){
@@ -223,8 +226,9 @@ int OpenGLWrapper::setupShaders(){
 
 int OpenGLWrapper::setupTexture(){
     std::stringstream ss;
-    ss << "Seting up texture" << std::endl;
+    ss << "Setting up texture" << std::endl;
     err->printLog(ss.str());
+    ss.str("");
     
     //Generate Texture object
     GLuint tex;
@@ -249,6 +253,7 @@ int OpenGLWrapper::openGLRT(){
     std::stringstream ss;
     ss << "Starting runtime loop" << std::endl;
     err->printLog(ss.str());
+    ss.str("");
     //add event loop 
     bool running = true;
         
