@@ -1,6 +1,7 @@
+# Maintainer: Florian Leuze <FlorianLeuze@aol.com>
 pkgname=stegmes
 pkgver=0.4
-pkgrel=2
+pkgrel=3
 pkgdesc="steganoMessage - commandline message hiding tool"
 arch=("x86_64")
 license=('MIT')
