@@ -25,7 +25,7 @@ include_directories(
 
 #add subdirectory for source files 
 add_subdirectory (src)
-set (EXTRA_LIBS ${EXTRA_LIBS} src)
+set (EXTRA_LIBS ${EXTRA_LIBS} stegmes)
 
 #get the path for libjpeg and include it
 find_package(JPEG REQUIRED)
@@ -77,11 +77,6 @@ if (UNIX AND NOT APPLE)
 		${GLEW_LIBRARIES}
 		glfw
 		)
-
-		install (TARGETS steganoMessage_Linux DESTINATION bin)
-		message("bin targets worked")
-		install (FILES "${PROJECT_BINARY_DIR}/header/steganoMessageConfig.h" DESTINATION include)
-		message("header targets worked")
 endif (UNIX AND NOT APPLE)
 
 if(APPLE)
@@ -98,4 +93,6 @@ if(APPLE)
 		)
 endif(APPLE)
 
+install (TARGETS steganoMessage_Linux DESTINATION bin)
+install (FILES "${PROJECT_BINARY_DIR}/header/steganoMessageConfig.h" DESTINATION include)
 
