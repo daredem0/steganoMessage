@@ -1,4 +1,4 @@
-add_library(src BitmapArray.cpp
+add_library(stegmes BitmapArray.cpp
 	BitmapHeader.cpp
 	ErrorHandler.cpp
 	Filter.cpp
@@ -11,8 +11,7 @@ add_library(src BitmapArray.cpp
 	main.cpp
 	)
 
-install(TARGETS src DESTINATION lib)
-message("src lib worked")
+install(TARGETS stegmes DESTINATION lib)
 install(FILES ../header/BitmapHeader.h
 	../header/ErrorHandler.h
 	../header/Filter.h
@@ -24,4 +23,3 @@ install(FILES ../header/BitmapHeader.h
 	../header/OpenGLWrapper.h
 	../header/constants.h
 	DESTINATION include)
-message("src header worked")
