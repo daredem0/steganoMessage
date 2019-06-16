@@ -56,6 +56,29 @@ CMAKE_BINARY_DIR = /home/florian/git/steganoMessage
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -67,16 +90,39 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,19 +157,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/src.dir/rule:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/src.dir/rule
-.PHONY : src/CMakeFiles/src.dir/rule
+src/CMakeFiles/stegmes.dir/rule:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/stegmes.dir/rule
+.PHONY : src/CMakeFiles/stegmes.dir/rule
 
 # Convenience name for target.
-src: src/CMakeFiles/src.dir/rule
+stegmes: src/CMakeFiles/stegmes.dir/rule
 
-.PHONY : src
+.PHONY : stegmes
 
 # fast build rule for target.
-src/fast:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/build
-.PHONY : src/fast
+stegmes/fast:
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/build
+.PHONY : stegmes/fast
 
 BitmapArray.o: BitmapArray.cpp.o
 
@@ -131,7 +177,7 @@ BitmapArray.o: BitmapArray.cpp.o
 
 # target to build an object file
 BitmapArray.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapArray.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapArray.cpp.o
 .PHONY : BitmapArray.cpp.o
 
 BitmapArray.i: BitmapArray.cpp.i
@@ -140,7 +186,7 @@ BitmapArray.i: BitmapArray.cpp.i
 
 # target to preprocess a source file
 BitmapArray.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapArray.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapArray.cpp.i
 .PHONY : BitmapArray.cpp.i
 
 BitmapArray.s: BitmapArray.cpp.s
@@ -149,7 +195,7 @@ BitmapArray.s: BitmapArray.cpp.s
 
 # target to generate assembly for a file
 BitmapArray.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapArray.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapArray.cpp.s
 .PHONY : BitmapArray.cpp.s
 
 BitmapHeader.o: BitmapHeader.cpp.o
@@ -158,7 +204,7 @@ BitmapHeader.o: BitmapHeader.cpp.o
 
 # target to build an object file
 BitmapHeader.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapHeader.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapHeader.cpp.o
 .PHONY : BitmapHeader.cpp.o
 
 BitmapHeader.i: BitmapHeader.cpp.i
@@ -167,7 +213,7 @@ BitmapHeader.i: BitmapHeader.cpp.i
 
 # target to preprocess a source file
 BitmapHeader.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapHeader.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapHeader.cpp.i
 .PHONY : BitmapHeader.cpp.i
 
 BitmapHeader.s: BitmapHeader.cpp.s
@@ -176,7 +222,7 @@ BitmapHeader.s: BitmapHeader.cpp.s
 
 # target to generate assembly for a file
 BitmapHeader.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/BitmapHeader.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/BitmapHeader.cpp.s
 .PHONY : BitmapHeader.cpp.s
 
 ErrorHandler.o: ErrorHandler.cpp.o
@@ -185,7 +231,7 @@ ErrorHandler.o: ErrorHandler.cpp.o
 
 # target to build an object file
 ErrorHandler.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ErrorHandler.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/ErrorHandler.cpp.o
 .PHONY : ErrorHandler.cpp.o
 
 ErrorHandler.i: ErrorHandler.cpp.i
@@ -194,7 +240,7 @@ ErrorHandler.i: ErrorHandler.cpp.i
 
 # target to preprocess a source file
 ErrorHandler.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ErrorHandler.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/ErrorHandler.cpp.i
 .PHONY : ErrorHandler.cpp.i
 
 ErrorHandler.s: ErrorHandler.cpp.s
@@ -203,7 +249,7 @@ ErrorHandler.s: ErrorHandler.cpp.s
 
 # target to generate assembly for a file
 ErrorHandler.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/ErrorHandler.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/ErrorHandler.cpp.s
 .PHONY : ErrorHandler.cpp.s
 
 Filter.o: Filter.cpp.o
@@ -212,7 +258,7 @@ Filter.o: Filter.cpp.o
 
 # target to build an object file
 Filter.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Filter.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Filter.cpp.o
 .PHONY : Filter.cpp.o
 
 Filter.i: Filter.cpp.i
@@ -221,7 +267,7 @@ Filter.i: Filter.cpp.i
 
 # target to preprocess a source file
 Filter.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Filter.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Filter.cpp.i
 .PHONY : Filter.cpp.i
 
 Filter.s: Filter.cpp.s
@@ -230,7 +276,7 @@ Filter.s: Filter.cpp.s
 
 # target to generate assembly for a file
 Filter.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Filter.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Filter.cpp.s
 .PHONY : Filter.cpp.s
 
 Image.o: Image.cpp.o
@@ -239,7 +285,7 @@ Image.o: Image.cpp.o
 
 # target to build an object file
 Image.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Image.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Image.cpp.o
 .PHONY : Image.cpp.o
 
 Image.i: Image.cpp.i
@@ -248,7 +294,7 @@ Image.i: Image.cpp.i
 
 # target to preprocess a source file
 Image.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Image.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Image.cpp.i
 .PHONY : Image.cpp.i
 
 Image.s: Image.cpp.s
@@ -257,7 +303,7 @@ Image.s: Image.cpp.s
 
 # target to generate assembly for a file
 Image.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Image.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Image.cpp.s
 .PHONY : Image.cpp.s
 
 Jpeg.o: Jpeg.cpp.o
@@ -266,7 +312,7 @@ Jpeg.o: Jpeg.cpp.o
 
 # target to build an object file
 Jpeg.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Jpeg.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Jpeg.cpp.o
 .PHONY : Jpeg.cpp.o
 
 Jpeg.i: Jpeg.cpp.i
@@ -275,7 +321,7 @@ Jpeg.i: Jpeg.cpp.i
 
 # target to preprocess a source file
 Jpeg.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Jpeg.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Jpeg.cpp.i
 .PHONY : Jpeg.cpp.i
 
 Jpeg.s: Jpeg.cpp.s
@@ -284,7 +330,7 @@ Jpeg.s: Jpeg.cpp.s
 
 # target to generate assembly for a file
 Jpeg.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Jpeg.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Jpeg.cpp.s
 .PHONY : Jpeg.cpp.s
 
 Message.o: Message.cpp.o
@@ -293,7 +339,7 @@ Message.o: Message.cpp.o
 
 # target to build an object file
 Message.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Message.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Message.cpp.o
 .PHONY : Message.cpp.o
 
 Message.i: Message.cpp.i
@@ -302,7 +348,7 @@ Message.i: Message.cpp.i
 
 # target to preprocess a source file
 Message.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Message.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Message.cpp.i
 .PHONY : Message.cpp.i
 
 Message.s: Message.cpp.s
@@ -311,7 +357,7 @@ Message.s: Message.cpp.s
 
 # target to generate assembly for a file
 Message.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Message.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Message.cpp.s
 .PHONY : Message.cpp.s
 
 OpenGLWrapper.o: OpenGLWrapper.cpp.o
@@ -320,7 +366,7 @@ OpenGLWrapper.o: OpenGLWrapper.cpp.o
 
 # target to build an object file
 OpenGLWrapper.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/OpenGLWrapper.cpp.o
 .PHONY : OpenGLWrapper.cpp.o
 
 OpenGLWrapper.i: OpenGLWrapper.cpp.i
@@ -329,7 +375,7 @@ OpenGLWrapper.i: OpenGLWrapper.cpp.i
 
 # target to preprocess a source file
 OpenGLWrapper.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/OpenGLWrapper.cpp.i
 .PHONY : OpenGLWrapper.cpp.i
 
 OpenGLWrapper.s: OpenGLWrapper.cpp.s
@@ -338,7 +384,7 @@ OpenGLWrapper.s: OpenGLWrapper.cpp.s
 
 # target to generate assembly for a file
 OpenGLWrapper.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/OpenGLWrapper.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/OpenGLWrapper.cpp.s
 .PHONY : OpenGLWrapper.cpp.s
 
 Png.o: Png.cpp.o
@@ -347,7 +393,7 @@ Png.o: Png.cpp.o
 
 # target to build an object file
 Png.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Png.cpp.o
 .PHONY : Png.cpp.o
 
 Png.i: Png.cpp.i
@@ -356,7 +402,7 @@ Png.i: Png.cpp.i
 
 # target to preprocess a source file
 Png.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Png.cpp.i
 .PHONY : Png.cpp.i
 
 Png.s: Png.cpp.s
@@ -365,7 +411,7 @@ Png.s: Png.cpp.s
 
 # target to generate assembly for a file
 Png.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Png.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/Png.cpp.s
 .PHONY : Png.cpp.s
 
 SteganoMessage.o: SteganoMessage.cpp.o
@@ -374,7 +420,7 @@ SteganoMessage.o: SteganoMessage.cpp.o
 
 # target to build an object file
 SteganoMessage.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SteganoMessage.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/SteganoMessage.cpp.o
 .PHONY : SteganoMessage.cpp.o
 
 SteganoMessage.i: SteganoMessage.cpp.i
@@ -383,7 +429,7 @@ SteganoMessage.i: SteganoMessage.cpp.i
 
 # target to preprocess a source file
 SteganoMessage.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SteganoMessage.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/SteganoMessage.cpp.i
 .PHONY : SteganoMessage.cpp.i
 
 SteganoMessage.s: SteganoMessage.cpp.s
@@ -392,7 +438,7 @@ SteganoMessage.s: SteganoMessage.cpp.s
 
 # target to generate assembly for a file
 SteganoMessage.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/SteganoMessage.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/SteganoMessage.cpp.s
 .PHONY : SteganoMessage.cpp.s
 
 main.o: main.cpp.o
@@ -401,7 +447,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.o
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -410,7 +456,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.i
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -419,7 +465,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/main.cpp.s
+	cd /home/florian/git/steganoMessage && $(MAKE) -f src/CMakeFiles/stegmes.dir/build.make src/CMakeFiles/stegmes.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -428,9 +474,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... src"
 	@echo "... edit_cache"
+	@echo "... install/strip"
+	@echo "... stegmes"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install/local"
+	@echo "... install"
 	@echo "... BitmapArray.o"
 	@echo "... BitmapArray.i"
 	@echo "... BitmapArray.s"

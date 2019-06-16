@@ -1,4 +1,4 @@
-add_library(src BitmapArray.cpp
+add_library(stegmes BitmapArray.cpp
 	BitmapHeader.cpp
 	ErrorHandler.cpp
 	Filter.cpp
