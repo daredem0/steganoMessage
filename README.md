@@ -1,5 +1,8 @@
 # steganoMessage
-Tool to encrypt and decrypt a message withing a random graphic file (we support bitmap (8,16,24,32bit), JPEG and PNG)
+Tool to encrypt and decrypt a message withing a random graphic file (we support bitmap (8,16,24,32bit), JPEG and PNG).
+The up to date version (currently feature-branch_opengl) relies heavily on the following external libs:
+libjpeg-turbo, libpng, glew, sfml, glfw-x11
+They are included as dependencies in PACKAGEBUILD. The cmake file will do the work for you and find the paths to include dirs and libs. 
 
 Mainly as experiment to learn about steganography.
 ~~Compiles on linux with:~~  
@@ -13,7 +16,7 @@ Mainly as experiment to learn about steganography.
 
 ~~Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.~~
 
-Debugging on terminal gets ugly from here on. To keep things os independet please use cmake:
+Compiling on terminal gets ugly from here on. To keep things os independet please use cmake:
 
 Project can be built with cmake file. Do:  
 $./$ cmake .  
