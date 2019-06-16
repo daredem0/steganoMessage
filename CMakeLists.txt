@@ -77,6 +77,11 @@ if (UNIX AND NOT APPLE)
 		${GLEW_LIBRARIES}
 		glfw
 		)
+
+		install (TARGETS steganoMessage_Linux DESTINATION bin)
+		message("bin targets worked")
+		install (FILES "${PROJECT_BINARY_DIR}/header/steganoMessageConfig.h" DESTINATION include)
+		message("header targets worked")
 endif (UNIX AND NOT APPLE)
 
 if(APPLE)
@@ -92,3 +97,5 @@ if(APPLE)
 		glfw
 		)
 endif(APPLE)
+
+
