@@ -1,0 +1,13 @@
+/usr/local/bin/steganoMessage_Linux
+/usr/local/include/steganoMessageConfig.h
+/usr/local/lib/libstegmes.a
+/usr/local/include/BitmapHeader.h
+/usr/local/include/ErrorHandler.h
+/usr/local/include/Filter.h
+/usr/local/include/Image.h
+/usr/local/include/Jpeg.h
+/usr/local/include/Png.h
+/usr/local/include/Message.h
+/usr/local/include/SteganoMessage.h
+/usr/local/include/OpenGLWrapper.h
+/usr/local/include/constants.h

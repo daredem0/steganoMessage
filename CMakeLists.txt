@@ -3,7 +3,7 @@ project (steganoMessage)
 
 #Version Number
 set (steganoMessage_VERSION_MAJOR 0)
-set (steganoMessage_VERSION_MINOR 3)
+set (steganoMessage_VERSION_MINOR 4)
 
 #set folders for garbage files
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
@@ -48,8 +48,6 @@ set (GLED_LIBS ${GLEW_LIBRARIES})
 
 find_package(glfw3)
 
-
-
 #generate output messages for libjpeg
 message("libjpeg include path: " ${JPEG_INCLUDE_DIR})
 message("libjpeg version: " ${JPEG_VERSION})
@@ -92,7 +90,9 @@ if(APPLE)
 		glfw
 		)
 endif(APPLE)
+message("before first cmake")
 
 install (TARGETS steganoMessage_Linux DESTINATION bin)
 install (FILES "${PROJECT_BINARY_DIR}/header/steganoMessageConfig.h" DESTINATION include)
+message("after first cmake")
 
