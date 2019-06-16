@@ -37,3 +37,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/florian/git/steganoMessage/lib/libsrc.a")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
+    "/home/florian/git/steganoMessage/src/../header/BitmapHeader.h"
+    "/home/florian/git/steganoMessage/src/../header/ErrorHandler.h"
+    "/home/florian/git/steganoMessage/src/../header/Filter.h"
+    "/home/florian/git/steganoMessage/src/../header/Image.h"
+    "/home/florian/git/steganoMessage/src/../header/Jpeg.h"
+    "/home/florian/git/steganoMessage/src/../header/Png.h"
+    "/home/florian/git/steganoMessage/src/../header/Message.h"
+    "/home/florian/git/steganoMessage/src/../header/SteganoMessage.h"
+    "/home/florian/git/steganoMessage/src/../header/OpenGLWrapper.h"
+    "/home/florian/git/steganoMessage/src/../header/constants.h"
+    )
+endif()
+
