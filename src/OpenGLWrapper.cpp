@@ -114,9 +114,9 @@ int OpenGLWrapper::init(){
     //finally build the opengl window with an epic title
     win = new sf::Window(sf::VideoMode(window.getX(), window.getY(), 32), title, sf::Style::Titlebar | sf::Style::Close, settings);
     
-    sf::Image ico;
-    ico.loadFromFile("./res/ico/icon_01.jpg");
-    win->setIcon(ico.getSize().x, ico.getSize().y, ico.getPixelsPtr());
+    //sf::Image ico;
+    //ico.loadFromFile("./res/ico/icon_01.jpg");
+    //win->setIcon(ico.getSize().x, ico.getSize().y, ico.getPixelsPtr());
     
     Size pos(win->getPosition().x, win->getPosition().y);
     ss << "Generate Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
