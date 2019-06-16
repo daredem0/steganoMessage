@@ -3,6 +3,10 @@ rm -r -f output*.bmp
 rm -r -f outputText.txt 
 cd ./src
 rm -r -f  CMakeCache.txt CMakeFiles cmake_install.cmake lib build steganoMessage-* libstegmes.a
+if [ -d "../log/" ]
+then
+echo "found log folder"
 cd ../log
 rm -r -f *
+fi
 echo "cleanup complete"
