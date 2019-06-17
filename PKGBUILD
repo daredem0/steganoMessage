@@ -1,7 +1,7 @@
 # Maintainer: Florian Leuze <FlorianLeuze@aol.com>
 pkgname=stegmes
 pkgver=0.4
-pkgrel=3
+pkgrel=4
 pkgdesc="steganoMessage - commandline tool for hiding messages inside a bmp/jpeg/png file"
 arch=("x86_64")
 license=('MIT')

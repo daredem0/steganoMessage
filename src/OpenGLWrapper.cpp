@@ -25,11 +25,14 @@ in vec2 texcoord;
 
 out vec3 Color;
 out vec2 Texcoord;
+
+uniform mat4 model;
+uniform mat4 proj;
 void main()
 {
     Color = color;
     Texcoord = texcoord;
-    gl_Position = vec4(position, 0.0, 1.0);
+    gl_Position = proj * model *  vec4(position, 0.0, 1.0);
 }
 )glsl";
 
@@ -40,6 +43,7 @@ in vec3 Color;
 in vec2 Texcoord;
 out vec4 outColor;
 uniform sampler2D tex;
+
 void main()
 {
     outColor = texture(tex, Texcoord);
@@ -95,24 +99,29 @@ int OpenGLWrapper::init(){
     const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     screen.setX(mode->width);
     screen.setY(mode->height);
-    
+    aspect = (float)image.getX()/image.getY();
+    std::cout << "Imageratio: " << aspect << std::endl;
     //generate the opengl window size we want
     if(image.getX() <= screen.getX()-300 && image.getX() <= screen.getX()-300){
         window.setX(image.getX() + 100);
         window.setY(image.getY() + 100);
-    }
-    else{
-        window.setX(screen.getX() - 200);
-        window.setY(screen.getY() - 200);
-    }
     
     //get scaling factor for the vertices and store them
     facX = Size::getFactor(image.getX(), window.getX());
     facY = Size::getFactor(image.getY(), window.getY());
+    }
+    else{
+        std::cout << "might be the prob" << std::endl;
+        window.setX(screen.getX() - 200);
+        window.setY(screen.getY() - 200);
     
+    //get scaling factor for the vertices and store them
+    facX = Size::getFactor(window.getX(), image.getX());
+    facY = Size::getFactor(window.getY(), image.getY());
+    }
     err->printLog(ss.str());
     //finally build the opengl window with an epic title
-    win = new sf::Window(sf::VideoMode(window.getX(), window.getY(), 32), title, sf::Style::Titlebar | sf::Style::Close, settings);
+    win = new sf::Window(sf::VideoMode(window.getX(), window.getY()), title, sf::Style::Titlebar | sf::Style::Close, settings);
     
     //sf::Image ico;
     //ico.loadFromFile("./res/ico/icon_01.jpg");
@@ -143,7 +152,30 @@ int OpenGLWrapper::setupShaders(){
     
     // Create a Vertex Buffer Object and copy the vertex data to it
     glGenBuffers(1, &vbo); 
-    
+    /*float height = image.getY();
+    float width = image.getX();
+    float ratio = width/height;
+    //generate vertice
+    if(height > width)
+    {
+        width = ratio;
+        height = 1.0f;
+    }
+    else if(width > height){
+        width = 1.0f;
+        height = 1/ratio;
+    }
+    else{
+        width = height = 1.0f;
+    }
+
+    GLfloat vertices[] = {
+        //Position    //Color          //Texcoords
+        -width/2,  height/2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, //top-left
+         width/2,  height/2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, //top-right
+         width/2, -height/2, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, //bottom-right
+        -width/2, -height/2, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f //bottom-left
+    }; */
     GLfloat vertices[] = {
         //Position                //Color          //Texcoords
         facX*(-1.0f), facY*( 1.0f), 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, //top-left
@@ -248,8 +280,31 @@ int OpenGLWrapper::setupTexture(){
     float color[] = {1.0f, 0.0f, 0.0f, 1.0f};
     glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, color);
     //Set up filter for up and downscaling of the texture (linear smooth, nearest would give pixelised result)
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); /*TRY MINIMAPS*/
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    uniTrans = glGetUniformLocation(shaderProgram, "model");
+    uniProj = glGetUniformLocation(shaderProgram, "proj");
+    
+    degree = 0;
+    model = glm::mat4(1.0f);
+    model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
+    //if(image.getX()<image.getY())
+    if(aspect < 1)        //aspect = 1-aspect;
+        aspect = 1-((float)facX * image.getX()/(facY * image.getY()));
+    else
+        aspect = (float)facX * image.getX()/(facY * image.getY());
+    std::cout << "x/y: " << win->getSize().x << "/" << win->getSize().y << std::endl;
+    //aspect = (float)image.getX()/image.getY();
+    std::cout << "asp: " << aspect << std::endl;
+    glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+    proj = glm::ortho(-1.f, 1.f, -1.0f, 1.0f, -1.0f, 1.0f);
+    //proj = glm::ortho(-1.0f+aspect, 1.0f-aspect, -facY*1.0f, facY*1.0f, 0.0f, 1.0f);
+    //proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
+    glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
+    //get the location of the uniform
+    //GLint uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
+    //trying some turning stuff 
     return ErrorHandler::errNoError;
 }
 
@@ -261,6 +316,18 @@ int OpenGLWrapper::openGLRT(){
     ss.str("");
     //add event loop 
     bool running = true;
+    float a = 1.0f;
+    float dFac = 5;
+    float rFac = 90;
+    float aFac;
+    //if(aspect > 1)
+       //aFac = dFac*(aspect - a)/rFac;
+   // else
+    aFac = dFac*(aspect-a)/rFac;
+        
+    std::cout << "aFac: " << aFac << std::endl;
+    float scaleFac = 0.1f;
+    float currentDeg = 0;
         
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -275,9 +342,99 @@ int OpenGLWrapper::openGLRT(){
                 case sf::Event::Closed:
                     running = false;
                     break;
+                case sf::Event::MouseWheelScrolled:
+                    if (windowEvent.mouseWheelScroll.delta < 0){
+                        model = glm::scale(model , glm::vec3(1.0f-scaleFac, 1.0f-scaleFac, 1.0f-scaleFac));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+                    }
+                    else if (windowEvent.mouseWheelScroll.delta > 0){
+                        model = glm::scale(model , glm::vec3(1.0f+scaleFac, 1.0f+scaleFac, 1.0f+scaleFac));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+                    }
+                    break;
                 case sf::Event::KeyPressed:
                     if(windowEvent.key.code == sf::Keyboard::Escape){    
                         running = false;
+                    }
+                    else if(windowEvent.key.code == sf::Keyboard::Left){
+                        degree = dFac;
+                        currentDeg += degree;
+                        if (currentDeg >= 360)
+                            currentDeg -= 360;
+                        else if (currentDeg <= -360)
+                            currentDeg += 360;
+                        
+                        if (-currentDeg > 0 && -currentDeg <= 90)
+                            a -= aFac;
+                        else if (-currentDeg > 90 && -currentDeg <= 180)
+                            a += aFac;
+                        else if (-currentDeg > 180 && -currentDeg <= 270)
+                            a -= aFac;
+                        else if (-currentDeg > 270 && -currentDeg <= 360)
+                            a += aFac;
+                        
+                        if (-currentDeg < 0 && -currentDeg >= -90)
+                            a += aFac;
+                        else if (-currentDeg < -90 && -currentDeg >= -180)
+                            a -= aFac;
+                        else if (-currentDeg < -180 && -currentDeg >= -270)
+                            a += aFac;
+                        else if (-currentDeg < -270 && -currentDeg >= -360)
+                            a -= aFac;
+                        
+                        if (abs(currentDeg) == 0 || currentDeg == 180)
+                            a = 1.0f;
+                        if (abs(currentDeg) == 90 || currentDeg == 270)
+                            a = aspect;
+                        std::cout << a << std::endl;
+                        model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+                        proj = glm::ortho(-a, a, -1.0f, 1.0f, -1.0f, 1.0f);
+                        glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
+                    }
+                    else if(windowEvent.key.code == sf::Keyboard::Right){
+                        degree = -dFac;
+                        currentDeg += degree;
+                        if (currentDeg >= 360)
+                            currentDeg -= 360;
+                        else if (currentDeg <= -360)
+                            currentDeg += 360;
+                       
+                        if (-currentDeg > 0 && -currentDeg <= 90)
+                            a += aFac;
+                        else if (-currentDeg > 90 && -currentDeg <= 180)
+                            a -= aFac;
+                        else if (-currentDeg > 180 && -currentDeg <= 270)
+                            a += aFac;
+                        else if (-currentDeg > 270 && -currentDeg <= 360)
+                            a -= aFac;
+                        
+                        if (-currentDeg < 0 && -currentDeg >= -90)
+                            a -= aFac;
+                        else if (-currentDeg < -90 && -currentDeg >= -180)
+                            a += aFac;
+                        else if (-currentDeg < -180 && -currentDeg >= -270)
+                            a -= aFac;
+                        else if (-currentDeg < -270 && -currentDeg >= -360)
+                            a += aFac;
+                        
+                        if (abs(currentDeg) == 0 || currentDeg == 180)
+                            a = 1.0f;
+                        if (abs(currentDeg) == 90 || currentDeg == 270)
+                            a = aspect;
+                        std::cout << a << std::endl;
+                        model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+                        proj = glm::ortho(-a, a, -1.0f, 1.0f, -1.0f, 1.0f);
+                        glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
+                    }
+                    else if(windowEvent.key.code == sf::Keyboard::Up){
+                        model = glm::scale(model , glm::vec3(1.0f+scaleFac, 1.0f+scaleFac, 1.0f+scaleFac));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
+                    }
+                    else if(windowEvent.key.code == sf::Keyboard::Down){
+                        model = glm::scale(model , glm::vec3(1.0f-scaleFac, 1.0f-scaleFac, 1.0f-scaleFac));
+                        glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
                     }
                     break;
             }

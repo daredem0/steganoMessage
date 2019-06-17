@@ -23,6 +23,10 @@
 #include <cmath>
 #include <sstream>
 #include "ErrorHandler.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <cmath>
 //#include <thread>
 
 
@@ -150,6 +154,16 @@ private:
     GLuint vertexShader; /**< Created Vertex Shader*/
     GLuint fragmentShader; /**< Created Fragment Shader*/
     
+    glm::mat4 model; /**< Transformation matrix*/
+    GLint uniTrans; /** Address of transformation uniform*/
+    GLint uniModel;
+    glm::mat4 view; /**< View matrix - not implemented as of now (0.43)*/
+    GLint uniView; /**< Address of view uniform*/
+    glm::mat4 proj; /**< Projection matrix*/
+    GLint uniProj; /**< Address of projection uniform*/
+    float degree; /**< Degree value for rotation*/
+    float aspect; /**< Aspect value needed to keep the proportions right*/
+     
     ErrorHandler *err; /**< Pointer to ErrorHandler*/
     sf::ContextSettings settings; /**< SFML Settings object*/
     
