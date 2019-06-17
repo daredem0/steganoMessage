@@ -2,7 +2,7 @@
 pkgname=stegmes
 pkgver=0.4
 pkgrel=3
-pkgdesc="steganoMessage - commandline message hiding tool"
+pkgdesc="steganoMessage - commandline tool for hiding messages inside a bmp/jpeg/png file"
 arch=("x86_64")
 license=('MIT')
 depends=('libjpeg-turbo'
