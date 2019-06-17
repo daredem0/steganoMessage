@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['c_5fdialect',['C_DIALECT',['../CMakeCCompilerId_8c.html#a07f8e5783674099cd7f5110e22a78cdb',1,'CMakeCCompilerId.c']]],
-  ['compiler_5fid',['COMPILER_ID',['../CMakeCCompilerId_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
-  ['cxx_5fstd',['CXX_STD',['../CMakeCXXCompilerId_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
+  ['steganomessage_5fversion_5fmajor',['steganoMessage_VERSION_MAJOR',['../steganoMessageConfig_8h.html#a2a9510b0070a3d2b8f5e1b3ca402a3af',1,'steganoMessageConfig.h']]],
+  ['steganomessage_5fversion_5fminor',['steganoMessage_VERSION_MINOR',['../steganoMessageConfig_8h.html#a03615d3570deb176fd53721b2d3496fb',1,'steganoMessageConfig.h']]]
 ];

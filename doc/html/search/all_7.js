@@ -34,5 +34,5 @@ var searchData=
   ['gety',['getY',['../classSize.html#aea85ae41eda5b85e61b72b3f9b1b4799',1,'Size']]],
   ['gif',['GIF',['../constants_8h.html#a4e12acb36be046b6c760732da9f208f4',1,'constants.h']]],
   ['glew_5fstatic',['GLEW_STATIC',['../OpenGLWrapper_8h.html#abcde84ea0ef5f934384e4620f092c85a',1,'OpenGLWrapper.h']]],
-  ['grey',['GREY',['../constants_8h.html#af73d5a526d203eb697a29a7665599254',1,'GREY():&#160;constants.h'],['../constants_8h.html#a36bd51b89b9e0e6e4dbbe565b9155083ab04a7e12b0e8c41f7cbb6fcb5f6556c6',1,'grey():&#160;constants.h']]]
+  ['grey',['grey',['../constants_8h.html#a36bd51b89b9e0e6e4dbbe565b9155083ab04a7e12b0e8c41f7cbb6fcb5f6556c6',1,'grey():&#160;constants.h'],['../constants_8h.html#af73d5a526d203eb697a29a7665599254',1,'GREY():&#160;constants.h']]]
 ];

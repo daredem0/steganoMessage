@@ -4,6 +4,5 @@ var searchData=
   ['headerstream',['headerStream',['../classBitmapHeader.html#a9109a897251733f77942008318482426',1,'BitmapHeader']]],
   ['height',['height',['../classBitmapArray.html#adb8d1a8fcc55c3884ad3eea71c6042be',1,'BitmapArray::height()'],['../classPng.html#a46412756311804d40e8e8bf62633e40f',1,'Png::height()']]],
   ['help',['HELP',['../constants_8h.html#a44bc41b3869f7d1b6eb3f1e052befcdc',1,'constants.h']]],
-  ['helpfile',['HELPFILE',['../constants_8h.html#ae4cc63b23b293f8a994080c451b47301',1,'constants.h']]],
-  ['hex',['HEX',['../CMakeCCompilerId_8c.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a46d5d95daa1bef867bd0179594310ed5',1,'HEX():&#160;CMakeCXXCompilerId.cpp']]]
+  ['helpfile',['HELPFILE',['../constants_8h.html#ae4cc63b23b293f8a994080c451b47301',1,'constants.h']]]
 ];
