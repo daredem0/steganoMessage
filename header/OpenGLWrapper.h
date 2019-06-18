@@ -18,6 +18,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/OpenGL.hpp>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <cmath>

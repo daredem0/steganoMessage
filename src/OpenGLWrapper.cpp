@@ -99,7 +99,7 @@ int OpenGLWrapper::init(){
     const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     screen.setX(mode->width);
     screen.setY(mode->height);
-    aspect = (float)image.getX()/image.getY();
+    //aspect = (float)image.getX()/image.getY();
     std::cout << "Imageratio: " << aspect << std::endl;
     //generate the opengl window size we want
     if(image.getX() <= screen.getX()-300 && image.getX() <= screen.getX()-300){
@@ -121,7 +121,9 @@ int OpenGLWrapper::init(){
     }
     err->printLog(ss.str());
     //finally build the opengl window with an epic title
-    win = new sf::Window(sf::VideoMode(window.getX(), window.getY()), title, sf::Style::Titlebar | sf::Style::Close, settings);
+    win = new sf::Window(sf::VideoMode(window.getX(), window.getY()), title, sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize, settings);
+    aspect = (float)win->getSize().x/win->getSize().y;
+    //win->setVerticalSyncEnabled(true);
     
     //sf::Image ico;
     //ico.loadFromFile("./res/ico/icon_01.jpg");
@@ -131,7 +133,7 @@ int OpenGLWrapper::init(){
     ss << "Generate Position: " << win->getPosition().x << "/" << win->getPosition().y << std::endl;
     err->printLog(ss.str());
     ss.str("");
-    win->setPosition(sf::Vector2i(pos.getX()+screen.getX()/2 - window.getX()/2, pos.getY()-screen.getY()/2+window.getY()/2));
+    //win->setPosition(sf::Vector2i(pos.getX()+screen.getX()/2 - window.getX()/2, pos.getY()-screen.getY()/2+window.getY()/2));
     // Initialize GLEW    
     glewExperimental = GL_TRUE;
     glewInit();
@@ -381,6 +383,14 @@ int OpenGLWrapper::openGLRT(){
                         model = glm::scale(model , glm::vec3(1.0f-scaleFac, 1.0f-scaleFac, 1.0f-scaleFac));
                         glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
                     }
+                    break;
+                case sf::Event::Resized:
+                    std::cout << "Resize event" << std::endl;
+                    glViewport(0, 0, windowEvent.size.width, windowEvent.size.height);
+                    aspect = (float)windowEvent.size.width/windowEvent.size.height;
+                    proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
+                    glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
+                    glFlush();
                     break;
             }
             glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
