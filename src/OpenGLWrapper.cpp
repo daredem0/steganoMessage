@@ -32,7 +32,7 @@ void main()
 {
     Color = color;
     Texcoord = texcoord;
-    gl_Position = proj * model *  vec4(position, 0.0, 1.0);
+    gl_Position =  model *  vec4(position, 0.0, 1.0);
 }
 )glsl";
 
@@ -152,21 +152,27 @@ int OpenGLWrapper::setupShaders(){
     
     // Create a Vertex Buffer Object and copy the vertex data to it
     glGenBuffers(1, &vbo); 
-    /*float height = image.getY();
+    float height = image.getY();
     float width = image.getX();
     float ratio = width/height;
     //generate vertice
     if(height > width)
     {
+        std::cout << "here" << std::endl;
         width = ratio;
         height = 1.0f;
+        std::cout << "Width: " << width << " Height: " << height << std::endl;
     }
     else if(width > height){
+        std::cout << " or here" << std::endl;
         width = 1.0f;
         height = 1/ratio;
+        std::cout << "Width: " << width << " Height: " << height << std::endl;
     }
     else{
+        std::cout << "or or here" << std::endl;
         width = height = 1.0f;
+        std::cout << "Width: " << width << " Height: " << height << std::endl;
     }
 
     GLfloat vertices[] = {
@@ -175,14 +181,14 @@ int OpenGLWrapper::setupShaders(){
          width/2,  height/2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, //top-right
          width/2, -height/2, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, //bottom-right
         -width/2, -height/2, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f //bottom-left
-    }; */
-    GLfloat vertices[] = {
+    }; 
+    /*GLfloat vertices[] = {
         //Position                //Color          //Texcoords
         facX*(-1.0f), facY*( 1.0f), 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, //top-left
         facX*( 1.0f), facY*( 1.0f), 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, //top-right
         facX*( 1.0f), facY*(-1.0f), 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, //bottom-right
         facX*(-1.0f), facY*(-1.0f), 1.0f, 1.0f, 1.0f, 0.0f, 1.0f //bottom-left
-    };
+    };*/
     
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
@@ -290,18 +296,19 @@ int OpenGLWrapper::setupTexture(){
     model = glm::mat4(1.0f);
     model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
     //if(image.getX()<image.getY())
-    if(aspect < 1)        //aspect = 1-aspect;
-        aspect = 1-((float)facX * image.getX()/(facY * image.getY()));
-    else
-        aspect = (float)facX * image.getX()/(facY * image.getY());
+    //if(aspect < 1)        //aspect = 1-aspect;
+        //aspect = 1-((float)facX * image.getX()/(facY * image.getY()));
+    //else
+        //aspect = (float)facX * image.getX()/(facY * image.getY());
     std::cout << "x/y: " << win->getSize().x << "/" << win->getSize().y << std::endl;
     //aspect = (float)image.getX()/image.getY();
     std::cout << "asp: " << aspect << std::endl;
     glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
-    proj = glm::ortho(-1.f, 1.f, -1.0f, 1.0f, -1.0f, 1.0f);
+    //proj = glm::ortho(-1.f, 1.f, -1.0f, 1.0f, -1.0f, 1.0f);
     //proj = glm::ortho(-1.0f+aspect, 1.0f-aspect, -facY*1.0f, facY*1.0f, 0.0f, 1.0f);
+    //proj = glm::ortho(1.0f, 1.0f, -1/aspect, 1/aspect);
     //proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
-    glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
+    //glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
     //get the location of the uniform
     //GLint uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
     //trying some turning stuff 

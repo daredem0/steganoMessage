@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libstegmes.a  CMakeFiles/stegmes.dir/BitmapArray.cpp.o CMakeFiles/stegmes.dir/BitmapHeader.cpp.o CMakeFiles/stegmes.dir/ErrorHandler.cpp.o CMakeFiles/stegmes.dir/Filter.cpp.o CMakeFiles/stegmes.dir/Image.cpp.o CMakeFiles/stegmes.dir/Jpeg.cpp.o CMakeFiles/stegmes.dir/Png.cpp.o CMakeFiles/stegmes.dir/Message.cpp.o CMakeFiles/stegmes.dir/SteganoMessage.cpp.o CMakeFiles/stegmes.dir/OpenGLWrapper.cpp.o CMakeFiles/stegmes.dir/main.cpp.o
+/usr/bin/ranlib ../lib/libstegmes.a
