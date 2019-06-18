@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/steganoMessage_Linux.dir/src/main.cpp.o  -o steganoMessage_Linux lib/libstegmes.a -ljpeg -lpng -lGL -lGLU /usr/lib/libsfml-graphics.so.2.5.1 -lGLEW /usr/lib/libglfw.so.3.3 /usr/lib/libsfml-window.so.2.5.1 /usr/lib/libsfml-system.so.2.5.1 

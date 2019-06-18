@@ -32,7 +32,7 @@ void main()
 {
     Color = color;
     Texcoord = texcoord;
-    gl_Position =  model *  vec4(position, 0.0, 1.0);
+    gl_Position =  proj * model *  vec4(position, 0.0, 1.0);
 }
 )glsl";
 
@@ -295,23 +295,9 @@ int OpenGLWrapper::setupTexture(){
     degree = 0;
     model = glm::mat4(1.0f);
     model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
-    //if(image.getX()<image.getY())
-    //if(aspect < 1)        //aspect = 1-aspect;
-        //aspect = 1-((float)facX * image.getX()/(facY * image.getY()));
-    //else
-        //aspect = (float)facX * image.getX()/(facY * image.getY());
-    std::cout << "x/y: " << win->getSize().x << "/" << win->getSize().y << std::endl;
-    //aspect = (float)image.getX()/image.getY();
-    std::cout << "asp: " << aspect << std::endl;
     glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
-    //proj = glm::ortho(-1.f, 1.f, -1.0f, 1.0f, -1.0f, 1.0f);
-    //proj = glm::ortho(-1.0f+aspect, 1.0f-aspect, -facY*1.0f, facY*1.0f, 0.0f, 1.0f);
-    //proj = glm::ortho(1.0f, 1.0f, -1/aspect, 1/aspect);
-    //proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
-    //glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
-    //get the location of the uniform
-    //GLint uniColor = glGetUniformLocation(shaderProgram, "triangleColor");
-    //trying some turning stuff 
+    proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
+    glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
     return ErrorHandler::errNoError;
 }
 
@@ -370,33 +356,9 @@ int OpenGLWrapper::openGLRT(){
                             currentDeg -= 360;
                         else if (currentDeg <= -360)
                             currentDeg += 360;
-                        
-                        if (-currentDeg > 0 && -currentDeg <= 90)
-                            a -= aFac;
-                        else if (-currentDeg > 90 && -currentDeg <= 180)
-                            a += aFac;
-                        else if (-currentDeg > 180 && -currentDeg <= 270)
-                            a -= aFac;
-                        else if (-currentDeg > 270 && -currentDeg <= 360)
-                            a += aFac;
-                        
-                        if (-currentDeg < 0 && -currentDeg >= -90)
-                            a += aFac;
-                        else if (-currentDeg < -90 && -currentDeg >= -180)
-                            a -= aFac;
-                        else if (-currentDeg < -180 && -currentDeg >= -270)
-                            a += aFac;
-                        else if (-currentDeg < -270 && -currentDeg >= -360)
-                            a -= aFac;
-                        
-                        if (abs(currentDeg) == 0 || currentDeg == 180)
-                            a = 1.0f;
-                        if (abs(currentDeg) == 90 || currentDeg == 270)
-                            a = aspect;
-                        std::cout << a << std::endl;
                         model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
                         glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
-                        proj = glm::ortho(-a, a, -1.0f, 1.0f, -1.0f, 1.0f);
+                        proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
                         glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
                     }
                     else if(windowEvent.key.code == sf::Keyboard::Right){
@@ -406,33 +368,9 @@ int OpenGLWrapper::openGLRT(){
                             currentDeg -= 360;
                         else if (currentDeg <= -360)
                             currentDeg += 360;
-                       
-                        if (-currentDeg > 0 && -currentDeg <= 90)
-                            a += aFac;
-                        else if (-currentDeg > 90 && -currentDeg <= 180)
-                            a -= aFac;
-                        else if (-currentDeg > 180 && -currentDeg <= 270)
-                            a += aFac;
-                        else if (-currentDeg > 270 && -currentDeg <= 360)
-                            a -= aFac;
-                        
-                        if (-currentDeg < 0 && -currentDeg >= -90)
-                            a -= aFac;
-                        else if (-currentDeg < -90 && -currentDeg >= -180)
-                            a += aFac;
-                        else if (-currentDeg < -180 && -currentDeg >= -270)
-                            a -= aFac;
-                        else if (-currentDeg < -270 && -currentDeg >= -360)
-                            a += aFac;
-                        
-                        if (abs(currentDeg) == 0 || currentDeg == 180)
-                            a = 1.0f;
-                        if (abs(currentDeg) == 90 || currentDeg == 270)
-                            a = aspect;
-                        std::cout << a << std::endl;
                         model = glm::rotate(model, glm::radians(degree), glm::vec3(0.0f, 0.0f, 1.0f));
                         glUniformMatrix4fv(uniTrans, 1, GL_FALSE, glm::value_ptr(model));
-                        proj = glm::ortho(-a, a, -1.0f, 1.0f, -1.0f, 1.0f);
+                        proj = glm::ortho(-aspect, aspect, -1.0f, 1.0f);
                         glUniformMatrix4fv(uniProj, 1, GL_FALSE, glm::value_ptr(proj));
                     }
                     else if(windowEvent.key.code == sf::Keyboard::Up){
