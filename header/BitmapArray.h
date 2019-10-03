@@ -111,6 +111,7 @@ public:
      * @return std::string ***
      */
     int infuse(std::string message);
+    
     std::string defuse(void);
     
 private:

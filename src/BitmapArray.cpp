@@ -161,6 +161,7 @@ void BitmapArray::printArray(){
 }
 
 int BitmapArray::infuse(std::string message){
+    
     uint32_t charmask32bit = 0x0;                           //Masks for Character Bits
     uint32_t charmask24bit = 0x0;
     uint32_t charmask16bit = 0x0;
@@ -330,24 +331,26 @@ int BitmapArray::infuse(std::string message){
 
 std::string BitmapArray::defuse(void){
     
+    const uint32_t charmask32bit = 0xFCFCFCFC;              //Masks for character bits in pixels
+    const uint32_t charmask16bit = 0xFCFC;
+    const uint32_t charmask8bit = 0xFC;
+
+    uint32_t charmask = 0xFF;                               //Mask for character bit for message
+
+    uint32_t character = 0xFF;                              //Character for message
+
+    int charcounter = 1;                                    //Helper variable 
+
+    std::string message;                                    //defuse returns this message
+
+    auto itOuter = bData.begin();                           //Outer iterator of 2D Array
+    auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
+
+    bool decoded = false;                                   //Flag to terminate for-loop
+    
+    //std::cout for debugging purposes
+
     switch(bitCount){
-        
-        /*uint32_t charmask32bit = 0x0;*/                       //Masks for character bits in pixels
-        uint32_t charmask16bit = 0xFCFC;
-        const uint32_t charmask8bit = 0xFC;
-        
-        uint32_t charmask = 0xFF;                               //Mask for character bit for message
-        
-        uint32_t character = 0xFF;                              //Character for message
-        
-        int charcounter = 1;
-        
-        std::string Message;
-        
-        auto itOuter = bData.begin();                           //Outer iterator of 2D Array
-        auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
-        
-        bool decoded = false;                                   //Flag to terminate for-loop
         
         case 8:
             std::cout << "8bit Bitmap to decrypt" << std::endl;
@@ -355,11 +358,11 @@ std::string BitmapArray::defuse(void){
                 for(itInner; itInner != itOuter->end() && decoded != true; ++itInner){
                     *itInner |= charmask8bit;
                     *itInner <<= (8-2*charcounter);
-                    character &= *itInner;
+                    character &= *itInner;                      //Probably needs typecase 
                     character |= charmask >>(2*charcounter); 
                     ++charcounter;
                     if(charcounter >= 5){
-                        Message += character;
+                        message += character;
                         character = 0xFF;
                         charmask = 0xFF;
                         charcounter = 1;
@@ -379,9 +382,9 @@ std::string BitmapArray::defuse(void){
             for(itOuter; itOuter != bData.end() && decoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && decoded != true; ++itInner){
                     *itInner |= charmask16bit;
-                    character &= *itInner;
+                    character &= *itInner;                      //Probably needs typecase 
                     *itInner >>= 6;
-                    character &= *itInner;
+                    character &= *itInner;                      //Probably needs typecase 
                     if(charcounter == 1){
                         character <<= 4;
                         character |= charmask;
@@ -391,7 +394,7 @@ std::string BitmapArray::defuse(void){
                         if(character == 0x0){
                             decoded = true;
                         }
-                        Message += character;
+                        message += character;
                         character = 0xFF;
                         charcounter = 1;
                     }
@@ -403,13 +406,23 @@ std::string BitmapArray::defuse(void){
             std::cout << "32bit Bitmap to decrypt" << std::endl;
             for(itOuter; itOuter != bData.end() && decoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && decoded != true; ++itInner){
-                    //Still needs implementation...                    
+                    *itInner |= charmask32bit;     
+                    for(charcounter; charcounter<=4; ++charcounter){
+                        *itInner >>= (6*(charcounter-1));
+                        character &= *itInner;                  //Probably needs typecase 
+                    }
+                    if(character == 0x0){
+                        decoded = true;
+                    }
+                    message += character;
+                    character = 0xFF;
+                    charcounter = 1;
                 }
             }
             break;
     }
     errHandle->printLog("Bitmap successfully decrypted");
-    return Message;
+    return message;
 }
 
 
