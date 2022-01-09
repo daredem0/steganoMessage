@@ -1,7 +1,8 @@
 <map id="ErrorHandler" name="ErrorHandler">
-<area shape="rect" id="node1" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="332,292,488,1235"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,143,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="167,5,285,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="415,5,474,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="607,5,658,83"/>
+<area shape="rect" id="node1" title="ErrorHandler Class is implemented to store a list of standard errors and offer a interface between st..." alt="" coords="337,292,485,1235"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,124,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="219,5,278,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="377,5,427,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="451,5,510,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="534,5,587,83"/>
 </map>

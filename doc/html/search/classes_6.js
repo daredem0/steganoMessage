@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openglwrapper',['OpenGLWrapper',['../classOpenGLWrapper.html',1,'']]]
+  ['openglwrapper_0',['OpenGLWrapper',['../classOpenGLWrapper.html',1,'']]]
 ];

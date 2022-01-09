@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['size',['Size',['../classSize.html',1,'']]],
-  ['steganomessage',['SteganoMessage',['../classSteganoMessage.html',1,'']]]
+  ['size_0',['Size',['../classSize.html',1,'']]],
+  ['steganomessage_1',['SteganoMessage',['../classSteganoMessage.html',1,'']]]
 ];

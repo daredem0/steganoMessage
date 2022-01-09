@@ -1,5 +1,5 @@
 <map id="OpenGLWrapper::close" name="OpenGLWrapper::close">
-<area shape="rect" id="node1" title="Cleans up. Calling before init with constructor can do many many bad things. Dont do it." alt="" coords="5,5,173,32"/>
-<area shape="rect" id="node2" href="$classOpenGLWrapper.html#a0c878818b04f78dd90e44dfed481ccab" title="Deletes the shaderProgram, fragmentShader, vertexShader, ebo and vbo buffers as well as vao Array...." alt="" coords="221,5,407,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="455,5,620,32"/>
+<area shape="rect" id="node1" title="Cleans up. Calling before init with constructor can do many many bad things. Dont do it." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#a0c878818b04f78dd90e44dfed481ccab" title="Deletes the shaderProgram, fragmentShader, vertexShader, ebo and vbo buffers as well as vao Array...." alt="" coords="223,5,409,32"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="457,5,623,32"/>
 </map>

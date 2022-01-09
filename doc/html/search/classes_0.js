@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bitmaparray',['BitmapArray',['../classBitmapArray.html',1,'']]],
-  ['bitmapheader',['BitmapHeader',['../classBitmapHeader.html',1,'']]]
+  ['bitmaparray_0',['BitmapArray',['../classBitmapArray.html',1,'']]],
+  ['bitmapheader_1',['BitmapHeader',['../classBitmapHeader.html',1,'']]]
 ];

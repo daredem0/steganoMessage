@@ -1,8 +1,8 @@
 <map id="Image::getBitmapHeader" name="Image::getBitmapHeader">
-<area shape="rect" id="node1" title="Getter for bitmapHeader." alt="" coords="1123,17,1309,44"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,17,60,44"/>
-<area shape="rect" id="node3" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="881,43,1075,69"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#a1cb326688e9a054127396d198bd6f976" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="636,43,833,69"/>
-<area shape="rect" id="node5" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,43,317,69"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#a1a26242c2e6d146cba1ad6831ab60ba7" title="For debugging to call new implemented filters not ready for release." alt="" coords="365,93,588,120"/>
+<area shape="rect" id="node1" title="Getter for bitmapHeader." alt="" coords="1127,49,1313,76"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="885,24,1079,50"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,49,60,76"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a718926de55a73ea9e49c4a5c2d8234a1" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="639,24,837,50"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,24,319,50"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#abfaace09fc2e8f7c7ae447cff8a5a3ba" title="For debugging to call new implemented filters not ready for release." alt="" coords="367,24,591,50"/>
 </map>

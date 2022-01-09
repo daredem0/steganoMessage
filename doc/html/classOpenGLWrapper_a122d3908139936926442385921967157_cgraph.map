@@ -1,4 +1,6 @@
 <map id="OpenGLWrapper::setupShaders" name="OpenGLWrapper::setupShaders">
-<area shape="rect" id="node1" title="Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (..." alt="" coords="5,5,228,32"/>
-<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="276,5,441,32"/>
+<area shape="rect" id="node1" title="Sets up the shader configuration. Usage of a color shader is prepared but turned off for the moment (..." alt="" coords="5,56,228,83"/>
+<area shape="rect" id="node2" href="$classSize.html#ae9a207666c19954cae4b41174e1bb93d" title="Getter for x value of the coordinate/width of the plane." alt="" coords="315,5,402,32"/>
+<area shape="rect" id="node3" href="$classSize.html#aea85ae41eda5b85e61b72b3f9b1b4799" title="Getter for y value of the coordinate/height of the plane." alt="" coords="315,56,402,83"/>
+<area shape="rect" id="node4" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="276,107,441,133"/>
 </map>

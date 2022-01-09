@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['filter_2ecpp',['Filter.cpp',['../Filter_8cpp.html',1,'']]],
-  ['filter_2eh',['Filter.h',['../Filter_8h.html',1,'']]]
+  ['errorhandler_2ecpp_0',['ErrorHandler.cpp',['../ErrorHandler_8cpp.html',1,'']]],
+  ['errorhandler_2eh_1',['ErrorHandler.h',['../ErrorHandler_8h.html',1,'']]]
 ];

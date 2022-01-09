@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errorhandler',['ErrorHandler',['../classErrorHandler.html',1,'']]]
+  ['errorhandler_0',['ErrorHandler',['../classErrorHandler.html',1,'']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['steganomessage_2ecpp',['SteganoMessage.cpp',['../SteganoMessage_8cpp.html',1,'']]],
-  ['steganomessage_2eh',['SteganoMessage.h',['../SteganoMessage_8h.html',1,'']]],
-  ['steganomessageconfig_2eh',['steganoMessageConfig.h',['../steganoMessageConfig_8h.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]]
 ];

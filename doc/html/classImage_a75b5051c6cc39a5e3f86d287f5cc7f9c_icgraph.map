@@ -1,6 +1,6 @@
 <map id="Image::getBitmapArray" name="Image::getBitmapArray">
-<area shape="rect" id="node1" title="Getter for bitmapArray." alt="" coords="384,27,559,54"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,27,60,54"/>
-<area shape="rect" id="node3" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,27,336,54"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,78,327,105"/>
+<area shape="rect" id="node1" title="Getter for bitmapArray." alt="" coords="385,56,560,83"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="117,5,328,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,107,337,133"/>
 </map>

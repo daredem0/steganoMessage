@@ -1,5 +1,5 @@
 <map id="SteganoMessage::buildOpenGL" name="SteganoMessage::buildOpenGL">
-<area shape="rect" id="node1" title="Builds new Image type object." alt="" coords="5,31,228,57"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="309,5,534,32"/>
-<area shape="rect" id="node3" href="$classSteganoMessage.html#a1fb7ba8950baa17684874ef931850a9c" title=" " alt="" coords="276,56,567,83"/>
+<area shape="rect" id="node1" title="Builds new Image type object." alt="" coords="5,31,229,57"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="310,5,537,32"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a1fb7ba8950baa17684874ef931850a9c" title=" " alt="" coords="277,56,569,83"/>
 </map>

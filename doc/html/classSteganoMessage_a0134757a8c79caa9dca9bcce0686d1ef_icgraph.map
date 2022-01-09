@@ -1,8 +1,8 @@
 <map id="SteganoMessage::getErrHandle" name="SteganoMessage::getErrHandle">
-<area shape="rect" id="node1" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="379,87,604,114"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,62,60,89"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="200,37,239,63"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a43ec6b73ba6ea9939554124e45b3d175" title="Terminates the program without an error." alt="" coords="176,87,263,114"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="159,138,280,165"/>
-<area shape="rect" id="node6" href="$classSteganoMessage.html#ae7b73b51fe38826625497a3bfef2bf42" title="Builds new Image type object." alt="" coords="108,189,331,215"/>
+<area shape="rect" id="node1" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="380,107,607,133"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#ae7b73b51fe38826625497a3bfef2bf42" title="Builds new Image type object." alt="" coords="108,5,332,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="160,107,280,133"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a43ec6b73ba6ea9939554124e45b3d175" title="Terminates the program without an error." alt="" coords="177,157,263,184"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a29c1b1d213f5e4fe896101b215163caa" title="Evaluates the terminal input." alt="" coords="201,208,239,235"/>
 </map>

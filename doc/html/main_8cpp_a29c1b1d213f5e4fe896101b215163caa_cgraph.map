@@ -1,8 +1,8 @@
 <map id="ui" name="ui">
 <area shape="rect" id="node1" title="Evaluates the terminal input." alt="" coords="5,107,44,133"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="92,5,317,32"/>
-<area shape="rect" id="node3" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="122,56,287,83"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458" title="Getter for this ugly hack (OpenGLWrapper needs a function pointer to call back from init if something..." alt="" coords="107,107,302,133"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#af03f7609a66def2e7fae02a477c38d97" title="Prints help file stored in const string." alt="" coords="163,157,246,184"/>
-<area shape="rect" id="node6" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="118,208,291,235"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a0134757a8c79caa9dca9bcce0686d1ef" title="Gives pointer to the ErrorHandler object stored in the SteganoMessage type object." alt="" coords="92,5,319,32"/>
+<area shape="rect" id="node3" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="119,56,292,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#af03f7609a66def2e7fae02a477c38d97" title="Prints help file stored in const string." alt="" coords="164,107,247,133"/>
+<area shape="rect" id="node5" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="123,157,288,184"/>
+<area shape="rect" id="node6" href="$classSteganoMessage.html#a3e06a73baa5744b5eb9152f4ae65f458" title="Getter for this ugly hack (OpenGLWrapper needs a function pointer to call back from init if something..." alt="" coords="107,208,304,235"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="header/Filter.h" name="header/Filter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="235,5,350,32"/>
-<area shape="rect" id="node2" href="$Jpeg_8h.html" title=" " alt="" coords="172,80,283,107"/>
-<area shape="rect" id="node7" href="$Filter_8cpp.html" title=" " alt="" coords="307,80,409,107"/>
-<area shape="rect" id="node3" href="$SteganoMessage_8h.html" title=" " alt="" coords="45,155,239,181"/>
-<area shape="rect" id="node6" href="$Jpeg_8cpp.html" title=" " alt="" coords="263,155,363,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="5,229,111,256"/>
-<area shape="rect" id="node5" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="135,229,317,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="274,5,389,32"/>
+<area shape="rect" id="node2" href="$Jpeg_8h.html" title=" " alt="" coords="211,80,321,107"/>
+<area shape="rect" id="node7" href="$Filter_8cpp.html" title=" " alt="" coords="346,80,450,107"/>
+<area shape="rect" id="node3" href="$SteganoMessage_8h.html" title=" " alt="" coords="83,155,278,181"/>
+<area shape="rect" id="node6" href="$Jpeg_8cpp.html" title=" " alt="" coords="303,155,403,181"/>
+<area shape="rect" id="node4" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="5,229,188,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="212,229,317,256"/>
 </map>

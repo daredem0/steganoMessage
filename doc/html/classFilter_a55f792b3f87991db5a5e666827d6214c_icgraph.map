@@ -1,8 +1,8 @@
 <map id="Filter::invert" name="Filter::invert">
-<area shape="rect" id="node1" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="792,56,893,83"/>
-<area shape="rect" id="node2" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="615,56,744,83"/>
-<area shape="rect" id="node3" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="387,5,545,32"/>
-<area shape="rect" id="node4" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,56,317,83"/>
-<area shape="rect" id="node6" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="365,107,567,133"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node1" title="Turns the bit pattern of a single byte around. Slight noise and color shift into magenta in normal mo..." alt="" coords="793,24,895,51"/>
+<area shape="rect" id="node2" href="$classFilter.html#ae4a4b081886014742d083d9a2b285981" title="Turns the whole bit&#45;pattern around." alt="" coords="616,24,745,51"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,24,319,51"/>
+<area shape="rect" id="node5" href="$classFilter.html#a42c3e8f730c64a1bcdf187dc0a09082d" title="Swaps the bytes first and then the bits as good as possible depending on value in s...." alt="" coords="388,24,547,51"/>
+<area shape="rect" id="node6" href="$classFilter.html#a9c8e2eb790e7e9dff6493a12a1fefc4f" title="Swaps the bytes first followed by the octets and bits as good as possible depending on value in s...." alt="" coords="367,75,568,102"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,24,60,51"/>
 </map>
