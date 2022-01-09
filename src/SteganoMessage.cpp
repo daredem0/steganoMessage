@@ -299,12 +299,15 @@ int SteganoMessage::modeHandler(){
             //check if message was read properly:
             err->printLog("Found: " + this->getMessage()->getMessage() + "\n");
 
-            (errTemp = this->getImage()->getBitmapArray()->infuse("ABCD")) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
+            (errTemp = this->getImage()->getBitmapArray()->infuse(mess)) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
             err->printLog("\n \n"); //fix missing endl in infuse function
 
             (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0;
         }
         else if(this->getMode() == DECRYPT){
+            err->printLog("\nTrying to decrypt\n");
+            auto mes =  this->getImage()->getBitmapArray()->defuse();
+            err->printLog("\nFound: " + mes + '\n');
             //do some decryption, print message to std::out, be nasty and destroy the image file 
         }
         else if(this->getMode() == BMPTOTXT){
