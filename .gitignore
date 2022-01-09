@@ -6,3 +6,6 @@ tags
 .DS_Store
 /nbproject/
 /dist/
+*.pkg.tar.xz
+steganoMessage_Linux
+*.h.in
