@@ -1,3 +1,8 @@
 .ctags
 .vscode/
 /Makefile
+tags
+.dep.inc
+.DS_Store
+/nbproject/
+/dist/
