@@ -184,6 +184,9 @@ int BitmapArray::infuse(std::string message){
     int messcharcounter = 1;                                //Counter for each character in messagestring
     
     //std::cout for debugging purposes
+    for (int i; i <= message.length(); ++i){
+        std::cout << message[i];
+    }
     
     switch(bitCount){
             
@@ -287,9 +290,9 @@ int BitmapArray::infuse(std::string message){
             std::cout << "32bit Bitmap to encrypt with message" << std::endl;
             for(itOuter; itOuter != bData.end() && encoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && encoded != true; ++itInner){
-                    //std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
+                    std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
                     *itInner &= pixelmask32bit;
-                    //std::cout << "Pixel value after mask: " << *itInner << std::endl;
+                    std::cout << "Pixel value after mask: " << *itInner << std::endl;
                     
                     if(chariterator != message.end()){
                         for(messcharcounter = 1; messcharcounter<=4; messcharcounter++){
@@ -301,9 +304,9 @@ int BitmapArray::infuse(std::string message){
                         }
                         *itInner |= charmask32bit;
                         charmask32bit = 0x0; 
-                        //std::cout << "New pixel value: " << *itInner << std::endl;
-                        //std::cout << "Infused character: " << *chariterator << std::endl;
-                        //std::cout << "------------------------------------" << std::endl;
+                        std::cout << "New pixel value: " << *itInner << std::endl;
+                        std::cout << "Infused character: " << *chariterator << std::endl;
+                        std::cout << "------------------------------------" << std::endl;
                         chariterator++;
                     }
                     
@@ -316,9 +319,9 @@ int BitmapArray::infuse(std::string message){
                         }
                         //std::cout << "This is the charmask: " << charmask32bit << std::endl;
                         *itInner |= charmask32bit;
-                        //std::cout << "New pixel value: " << *itInner << std::endl;
-                        //std::cout << "Infused character: " << *chariterator << std::endl;
-                        //std::cout << "Ended in infuse encoded = true" << std::endl;
+                        std::cout << "New pixel value: " << *itInner << std::endl;
+                        std::cout << "Infused character: " << *chariterator << std::endl;
+                        std::cout << "Ended in infuse encoded = true" << std::endl;
                         encoded = true; 
                     }
                 }
@@ -331,9 +334,15 @@ int BitmapArray::infuse(std::string message){
 
 std::string BitmapArray::defuse(void){
     
-    const uint32_t charmask32bit = 0xFCFCFCFC;              //Masks for character bits in pixels
-    const uint32_t charmask16bit = 0xFCFC;
-    const uint32_t charmask8bit = 0xFC;
+    uint32_t charmask32bit = 0x0;                           //Masks for Character Bits
+    uint32_t charmask24bit = 0x0;
+    uint32_t charmask16bit = 0x0;
+    const uint32_t charmask8bit  = 0x3;
+    
+    const uint32_t pixelmask32bit = 0xFCFCFCFC;             //Masks for Pixel Bits
+    const uint32_t pixelmask24bit = 0xFCFCFC;
+    const uint32_t pixelmask16bit = 0xFCFC;
+    const uint32_t pixelmask8bit  = 0xFC;
 
     uint32_t charmask = 0xFF;                               //Mask for character bit for message
 
@@ -404,12 +413,43 @@ std::string BitmapArray::defuse(void){
             
         case 32:
             std::cout << "32bit Bitmap to decrypt" << std::endl;
+            uint32_t val;
+            for(itOuter; itOuter != bData.end() && decoded != true; ++itOuter){
+                for(itInner; itInner != itOuter->end() && decoded != true; ++itInner){
+                    std::cout << "Pixel value: " << std::hex << *itInner << std::endl;
+                    //*itInner &= pixelmask32bit;
+                    std::cout << "Pixel value after mask: " << *itInner << std::endl;
+                    for(charcounter = 1, val=0; charcounter<=4; ++charcounter){
+                        auto tempVal = ((uint32_t)*itInner >> (8*(4-charcounter))) & charmask8bit; 
+                        //std::cout << "TempVal: [" << tempVal << "|" << std::hex << tempVal << "]" << std::endl;
+                        val |= ((uint32_t)*itInner >> (8*(4-charcounter))) & charmask8bit; 
+                        if(charcounter != 4){
+                            val <<= 2;   
+                        }
+                    }
+                    //std::cout << "Extracted character[dec|hex]: [" << val << "|" << std::hex << val << "]" << std::endl;
+                    if ((itOuter-bData.begin()) > 10){
+                        std::cout << "Aborting" << std::endl;
+                        break;
+                    }
+                    if(val == 0x0){
+                        decoded = true;
+                    }
+                    else{
+                        std::cout << "Appending " << (char)val << std::endl;
+                        message += (char)val;
+                    }
+                }
+            }
+        /*
+            std::cout << "32bit Bitmap to decrypt" << std::endl;
             for(itOuter; itOuter != bData.end() && decoded != true; ++itOuter){
                 for(itInner; itInner != itOuter->end() && decoded != true; ++itInner){
                     *itInner |= charmask32bit;     
                     for(charcounter; charcounter<=4; ++charcounter){
                         *itInner >>= (6*(charcounter-1));
-                        character &= *itInner;                  //Probably needs typecase 
+                        character &= *itInner; 
+                        std::cout << "Current character: " << std::to_string(character) << std::endl;                 //Probably needs typecase 
                     }
                     if(character == 0x0){
                         decoded = true;
@@ -418,8 +458,7 @@ std::string BitmapArray::defuse(void){
                     character = 0xFF;
                     charcounter = 1;
                 }
-            }
-            break;
+            }*/
     }
     errHandle->printLog("Bitmap successfully decrypted");
     return message;
