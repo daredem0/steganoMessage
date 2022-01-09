@@ -420,7 +420,7 @@ std::string BitmapArray::defuse(void){
                     //*itInner &= pixelmask32bit;
                     std::cout << "Pixel value after mask: " << *itInner << std::endl;
                     for(charcounter = 1, val=0; charcounter<=4; ++charcounter){
-                        auto tempVal = ((uint32_t)*itInner >> (8*(4-charcounter))) & charmask8bit; 
+                        //auto tempVal = ((uint32_t)*itInner >> (8*(4-charcounter))) & charmask8bit; 
                         //std::cout << "TempVal: [" << tempVal << "|" << std::hex << tempVal << "]" << std::endl;
                         val |= ((uint32_t)*itInner >> (8*(4-charcounter))) & charmask8bit; 
                         if(charcounter != 4){
@@ -428,7 +428,7 @@ std::string BitmapArray::defuse(void){
                         }
                     }
                     //std::cout << "Extracted character[dec|hex]: [" << val << "|" << std::hex << val << "]" << std::endl;
-                    if ((itOuter-bData.begin()) > 10){
+                    if ((itOuter-bData.begin()) >= (bData.end()-bData.begin())){
                         std::cout << "Aborting" << std::endl;
                         break;
                     }
