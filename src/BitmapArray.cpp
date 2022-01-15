@@ -174,10 +174,10 @@ int BitmapArray::infuse(std::string message){
     
     auto itOuter = bData.begin();                           //Outer iterator of 2D Array
     auto itInner = itOuter->begin();                        //Inner iterator of 2D Array
-    std::string::iterator chariterator = message.begin();   //Characteriterator for messagestring
 
     char termination = 0x0;                                 //Marks last character in message
-    message.push_back(termination);
+    message.push_back(termination);                         //This needs to be done before the iterator is initalized
+    std::string::iterator chariterator = message.begin();   //Characteriterator for messagestring
     
     bool encoded = false;                                   //Flag to terminate for-loop
     
