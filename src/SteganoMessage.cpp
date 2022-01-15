@@ -19,7 +19,9 @@ SteganoMessage::SteganoMessage() {
     err = NULL;
     mess = NULL;
     img = NULL;
+    #ifdef FULL
     ogl = NULL;    
+    #endif
     err = new ErrorHandler();
     err->printLog("Creating new SteganoMessage object\n");
     modeSet = false;
@@ -37,8 +39,10 @@ SteganoMessage::~SteganoMessage() {
         delete mess;
     if(img != NULL)
         delete img;
+    #ifdef FULL
     if(ogl != NULL)
         delete ogl;
+    #endif
 }
 
 //INIT/************************************************************/
@@ -134,10 +138,12 @@ int SteganoMessage::buildImage(std::string path){
     }
 }
 
+#ifdef FULL
 int SteganoMessage::buildOpenGL(std::string t, unsigned char* d, std::string ft, int width, int height){
     ogl = new OpenGLWrapper(this->getErrHandle(), t, d, ft, width, height, SteganoMessage::naughtyEmergencyExit);
     return SteganoMessage::naughtyEmergencyExit(0);
 }
+#endif
 
 //GETTERS/************************************************************/
 ErrorHandler* SteganoMessage::getErrHandle(){return err;}
@@ -148,7 +154,9 @@ std::string SteganoMessage::getMode(){
         return "";
     return mode;
 }
+#ifdef FULL
 OpenGLWrapper* SteganoMessage::getOpenGL(){return ogl;}
+#endif
 
 bool SteganoMessage::getPathVerified(){return path;}
 

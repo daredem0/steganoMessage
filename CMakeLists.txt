@@ -5,6 +5,19 @@ project (steganoMessage)
 set (steganoMessage_VERSION_MAJOR 0)
 set (steganoMessage_VERSION_MINOR 4)
 
+set (FULL_BUILD Full)
+
+if (CMAKE_BUILD_TYPE)
+    if (${CMAKE_BUILD_TYPE} STREQUAL ${FULL_BUILD})
+        message ("Setting complete Build")
+        set (FULL_BUILD True)
+        add_definitions("-DFULL")
+    endif()
+else()
+    message ("Normal Build")
+    set (FULL_BUILD False)
+endif()
+
 #set folders for garbage files
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
@@ -35,18 +48,21 @@ include_directories(${JPEG_INCLUDE_DIRS})
 find_package(PNG REQUIRED) 
 include_directories(${PNG_INCLUDE_DIRS})
 
+if (${FULL_BUILD} STREQUAL True)
 #get path for opengl stuff
-find_package(OpenGL)
-include_directories(${OPENGL_INCLUDE_DIR})
-set (OPENGL_LIBS ${OPENGL_LIBRARIES})
+    find_package(OpenGL)
+    include_directories(${OPENGL_INCLUDE_DIR})
+    set (OPENGL_LIBS ${OPENGL_LIBRARIES})
 
-find_package(SFML COMPONENTS graphics REQUIRED)
+    find_package(SFML COMPONENTS graphics REQUIRED)
 
-find_package(GLEW)
-include_directories(${GLEW_INCLUDE_DIRS})
-set (GLED_LIBS ${GLEW_LIBRARIES})
+    find_package(GLEW)
+    include_directories(${GLEW_INCLUDE_DIRS})
+    set (GLED_LIBS ${GLEW_LIBRARIES})
+    
+    find_package(glfw3)
+endif()
 
-find_package(glfw3)
 
 #generate output messages for libjpeg
 message("libjpeg include path: " ${JPEG_INCLUDE_DIR})
@@ -67,32 +83,43 @@ if (UNIX AND NOT APPLE)
 	message("Found Linux OS")
 	add_executable(steganoMessage_Linux ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
-	target_link_libraries(steganoMessage_Linux ${EXTRA_LIBS}
-		${JPEG_LIBS}
-		${PNG_LIBS}
-		${OPENGL_LIBS}
-		sfml-graphics
-		${GLEW_LIBRARIES}
-		glfw
-		)
+    if (${FULL_BUILD} STREQUAL True)
+        target_link_libraries(steganoMessage_Linux ${EXTRA_LIBS}
+            ${JPEG_LIBS}
+            ${PNG_LIBS}
+            ${OPENGL_LIBS}
+            sfml-graphics
+            ${GLEW_LIBRARIES}
+            glfw
+            )
+    else()
+        target_link_libraries(steganoMessage_Linux ${EXTRA_LIBS}
+            ${JPEG_LIBS}
+            ${PNG_LIBS}
+            )
+    endif()
 endif (UNIX AND NOT APPLE)
 
 if(APPLE)
 	message("Found MAC OS")
 	add_executable(steganoMessage_MAC ${PROJECT_SOURCE_DIR}/src/main.cpp)
-
-	target_link_libraries(steganoMessage_MAC ${EXTRA_LIBS}
-		${JPEG_LIBS}
-		${PNG_LIBS}
-		${OPENGL_LIBS}
-		sfml-graphics
-		${GLEW_LIBRARIES}
-		glfw
-		)
+    if (${FULL_BUILD} STREQUAL True)
+        target_link_libraries(steganoMessage_MAC ${EXTRA_LIBS}
+            ${JPEG_LIBS}
+            ${PNG_LIBS}
+            ${OPENGL_LIBS}
+            sfml-graphics
+            ${GLEW_LIBRARIES}
+            glfw
+            )
+    else()
+        target_link_libraries(steganoMessage_MAC ${EXTRA_LIBS}
+            ${JPEG_LIBS}
+            ${PNG_LIBS}
+            )
+    endif()
 endif(APPLE)
-message("before first cmake")
 
 install (TARGETS steganoMessage_Linux DESTINATION bin)
 install (FILES "${PROJECT_BINARY_DIR}/header/steganoMessageConfig.h" DESTINATION include)
-message("after first cmake")
 

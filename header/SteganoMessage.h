@@ -25,7 +25,9 @@
 #include <ctime>
 #include "Jpeg.h"
 #include "Png.h"
+#ifdef FULL
 #include "../header/OpenGLWrapper.h"/*TEMPORARY TEST FOR IMG VIEWER*/
+#endif
 
 /**
  *@brief SteganoMessage class ist implemented to store values that are needed to be shared between all classes (for example errorHandler). 
@@ -103,7 +105,9 @@ public:
      * @brief Getter for openglwrapper object
      * @return Pointer to openglwrapper
      */
+    #ifdef FULL
     OpenGLWrapper *getOpenGL();
+    #endif
     /**
      * @brief Getter for stored mode
      * @return std::string containing mode command or ""
@@ -196,7 +200,9 @@ private:
     ErrorHandler *err; /**< Pointer to ErrorHandler type object that was constructed when this was constructed.*/
     Message *mess; /**<Message type objec to store message */
     Image *img; /**<Image type object containing path, header and image data*/
+    #ifdef FULL
     OpenGLWrapper *ogl;
+    #endif
     std::string mode; /**< -encrypt or -decryptl, if not set ""*/
     bool modeSet; /**< flag to check if mode is set*/
     bool path; /**< flag to check if path is verified*/

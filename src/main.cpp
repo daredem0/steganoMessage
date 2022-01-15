@@ -85,6 +85,7 @@ int main(int argc, char *argv[]) {
         
         steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
         
+        #ifdef FULL
         /*Now we have to check if the very last argument was show*/
         if(argv[argc-1] == SHOW){ 
             /*Call the OpenGL builder that is implemented in steg and let it do its magic. In Short: We need to check for OpenGL errors while initializing it.
@@ -98,6 +99,7 @@ int main(int argc, char *argv[]) {
             steg->getOpenGL()->run();
             steg->getOpenGL()->close();
         }
+        #endif
         terminate(steg, 0); //cleanup
 
         return 0;
