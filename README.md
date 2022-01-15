@@ -5,21 +5,9 @@ libjpeg-turbo, libpng, glew, sfml, glfw-x11
 They are included as dependencies in PACKAGEBUILD. The cmake file will do the work for you and find the paths to include dirs and libs. 
 
 Mainly as experiment to learn about steganography.
-~~Compiles on linux with:~~  
-~~g++ -o steganoMessage ./src/main.cpp ./src/SteganoMessage.cpp ./header/SteganoMessage.h ./src/Message.cpp ./header/Message.h ./src/Image.cpp ./header/Image.h ./src/BitmapHeader.cpp ./header/BitmapHeader.h ./src/BitmapArray.cpp ./header/BitmapArray.h ./src/ErrorHandler.cpp ./header/ErrorHandler.h ./header/constants.h ./src/Jpeg.cpp ./header/Jpeg.h ./src/Filter.cpp ./header/Filter.h ./src/Png.cpp ./header/Png.h -ljpeg -lpng~~
-
-~~for GDB debugging do:~~  
-~~g++ -o steganoMessage ./src/main.cpp ./src/SteganoMessage.cpp ./header/SteganoMessage.h ./src/Message.cpp ./header/Message.h ./src/Image.cpp ./header/Image.h ./src/BitmapHeader.cpp ./header/BitmapHeader.h ./src/BitmapArray.cpp ./header/BitmapArray.h ./src/ErrorHandler.cpp ./header/ErrorHandler.h ./header/constants.h ./src/Jpeg.cpp ./header/Jpeg.h ./src/Filter.cpp ./header/Filter.h ./src/Png.cpp ./header/Png.h -export-dynamic -g -ljpeg -lpng~~
-  
-~~Compiles with little to no changes on MAC as well for now:~~  
-~~g++-9 -o steganoMessage ./src/main.cpp ./src/SteganoMessage.cpp ./header/SteganoMessage.h ./src/Message.cpp ./header/Message.h ./src/Image.cpp ./header/Image.h ./src/BitmapHeader.cpp ./header/BitmapHeader.h ./src/BitmapArray.cpp ./header/BitmapArray.h ./src/ErrorHandler.cpp ./header/ErrorHandler.h ./header/constants.h ./src/Jpeg.cpp ./header/Jpeg.h ./src/Filter.cpp ./header/Filter.h ./src/Png.cpp ./header/Png.h -ljpeg -lpng~~
-
-~~Should work under cygwin or mingw in windows as well if needed tools are installed. No promises though.~~
-
-Compiling on terminal gets ugly from here on. To keep things os independet please use cmake:
 
 Project can be built with cmake file. Do:  
-$./$ cmake .  
+$./$ cmake .  -DCMAKE_DEBUG_TYPE=Full   <-(Full will build including OpenGL Renderer. Any other value, including empty will build without OpenGL Renderer)
 $./$ make  
 Tested on Linux, not tested on OSX/Windows
 
