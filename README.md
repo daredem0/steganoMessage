@@ -7,7 +7,7 @@ They are included as dependencies in PACKAGEBUILD. The cmake file will do the wo
 Mainly as experiment to learn about steganography.
 
 Project can be built with cmake file. Do:  
-$./$ cmake .  -DCMAKE_DEBUG_TYPE=Full   <-(Full will build including OpenGL Renderer. Any other value, including empty will build without OpenGL Renderer)
+$./$ cmake .  -DCMAKE_DEBUG_TYPE=Full   <-(Full will build including OpenGL Renderer. Any other value, including empty will build without OpenGL Renderer)  
 $./$ make  
 Tested on Linux, not tested on OSX/Windows
 
