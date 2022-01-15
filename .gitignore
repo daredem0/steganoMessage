@@ -1,0 +1,10 @@
+.ctags
+.vscode/
+/Makefile
+tags
+.dep.inc
+.DS_Store
+/nbproject/
+/dist/
+*.pkg.tar.xz
+steganoMessage_Linux

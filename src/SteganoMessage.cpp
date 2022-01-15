@@ -19,6 +19,9 @@ SteganoMessage::SteganoMessage() {
     err = NULL;
     mess = NULL;
     img = NULL;
+    #ifdef FULL
+    ogl = NULL;    
+    #endif
     err = new ErrorHandler();
     err->printLog("Creating new SteganoMessage object\n");
     modeSet = false;
@@ -36,6 +39,10 @@ SteganoMessage::~SteganoMessage() {
         delete mess;
     if(img != NULL)
         delete img;
+    #ifdef FULL
+    if(ogl != NULL)
+        delete ogl;
+    #endif
 }
 
 //INIT/************************************************************/
@@ -77,12 +84,14 @@ int SteganoMessage::initialize(int argc, char *argv[]){
             if(img->identifyFileFormat(this->getImage()->getPath()) == BITMAP)
                 errTemp = this->getImage()->readImage(); //extract the image information
             else if(img->identifyFileFormat(this->getImage()->getPath()) == JPEG)
-                errTemp = ((Jpeg*)(img))->readImage(); //important, cast to Jpeg type pointer to call overloaded readImage metehod
-            return ErrorHandler::errNoError;
+                errTemp = this->getImage()->readImage(); //extract the image information
+            else if(img->identifyFileFormat(this->getImage()->getPath()) == PNG){
+                //errTemp = ((Png*)this->getImage())->read_png_file(this->getImage()->getPath()); //extract the image information
+                errTemp = this->getImage()->readImage();
+            }
             if(errTemp != 0) throw errTemp;
     }
     catch(int i){
-        err->printError(i);
         return i;
     }
     catch(const std::exception& e){
@@ -90,9 +99,9 @@ int SteganoMessage::initialize(int argc, char *argv[]){
         return errStdExcept;
     }
     catch(...){
-        err->printError(errUnknown);
         return errUnknown;
     }
+    return ErrorHandler::errNoError;
 }
 
 //BUILDERS/************************************************************/
@@ -118,11 +127,23 @@ int SteganoMessage::buildImage(std::string path){
         err->printLog("Building jpeg\n");
         img = new Jpeg(path, err);
         return errNoError;
-    }         
+    }        
+    else if(Image::identifyFileFormat(path) == PNG){
+        err->printLog("Building png\n");
+        img = new Png(path, err);
+        return errNoError;
+    }       
     else{
         return ErrorHandler::errFiletype;
     }
 }
+
+#ifdef FULL
+int SteganoMessage::buildOpenGL(std::string t, unsigned char* d, std::string ft, int width, int height){
+    ogl = new OpenGLWrapper(this->getErrHandle(), t, d, ft, width, height, SteganoMessage::naughtyEmergencyExit);
+    return SteganoMessage::naughtyEmergencyExit(0);
+}
+#endif
 
 //GETTERS/************************************************************/
 ErrorHandler* SteganoMessage::getErrHandle(){return err;}
@@ -133,6 +154,9 @@ std::string SteganoMessage::getMode(){
         return "";
     return mode;
 }
+#ifdef FULL
+OpenGLWrapper* SteganoMessage::getOpenGL(){return ogl;}
+#endif
 
 bool SteganoMessage::getPathVerified(){return path;}
 
@@ -170,9 +194,7 @@ std::string SteganoMessage::getTimeDate(char t, std::time_t system_clock){
     return ss.str();
 }
 
-bool SteganoMessage::getLogMode(){
-    return log;
-}
+bool SteganoMessage::getLogMode(){return log;}
 
 //SETTERS/************************************************************/
 int SteganoMessage::setMode(std::string m){
@@ -285,12 +307,15 @@ int SteganoMessage::modeHandler(){
             //check if message was read properly:
             err->printLog("Found: " + this->getMessage()->getMessage() + "\n");
 
-            (errTemp = this->getImage()->getBitmapArray()->infuse("ABCD")) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
+            (errTemp = this->getImage()->getBitmapArray()->infuse(mess)) != 0 ? throw errTemp : errTemp = 0;                     /*this->getMessage()->getMessage()*/
             err->printLog("\n \n"); //fix missing endl in infuse function
 
             (errTemp = this->getImage()->generateBitmap()) != 0 ? throw errTemp : errTemp = 0;
         }
         else if(this->getMode() == DECRYPT){
+            err->printLog("\nTrying to decrypt\n");
+            auto mes =  this->getImage()->getBitmapArray()->defuse();
+            err->printLog("\nFound: " + mes + '\n');
             //do some decryption, print message to std::out, be nasty and destroy the image file 
         }
         else if(this->getMode() == BMPTOTXT){
@@ -370,6 +395,20 @@ void SteganoMessage::printValues(){
     catch(...){
         err->printError(errUnknown);
     }
+}
+
+int SteganoMessage::naughtyEmergencyExit(int err){
+    static int naugthyEmergencyExitValue = 0;
+    static int counter = 1;
+    if ((counter == 1 || (naugthyEmergencyExitValue == 0)) && err == 0){
+        counter = 1;
+        return (naugthyEmergencyExitValue = 0);
+    }
+    else if (err != 0){
+        ++counter;
+        return (naugthyEmergencyExitValue = err);
+    }
+    return naugthyEmergencyExitValue;
 }
 
 /********PRIVATE**************PRIVATE*************PRIVATE**************PRIVATE************/

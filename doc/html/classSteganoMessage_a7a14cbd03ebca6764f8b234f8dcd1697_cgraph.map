@@ -1,4 +1,4 @@
 <map id="SteganoMessage::SteganoMessage" name="SteganoMessage::SteganoMessage">
-<area shape="rect" id="node1" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="5,5,256,32"/>
-<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="304,5,469,32"/>
+<area shape="rect" id="node1" title="Standard constructor. Also creates new ErrorHandler object." alt="" coords="5,5,257,32"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="305,5,471,32"/>
 </map>

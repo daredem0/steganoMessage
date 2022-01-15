@@ -40,7 +40,7 @@ public:
     /**
      * Standard deconstructor. Deletes the generated list !!not yet implementede!!
      */
-    virtual ~ErrorHandler(); //free list, implement!
+    virtual ~ErrorHandler(); //free list, implement! (not needed, goes out of scope...)
     
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////
@@ -54,7 +54,7 @@ public:
     /**OTHER METHODS**/////////////////
     ///////////////////////////////////
     /**
-     * @brief Prints a single Error corresponding to the 
+     * @brief Prints a single Error corresponding to the std::out
      * @param int err - expects a integer value between 0 and x that specifies the error received
      */
     int printError(int err);
@@ -112,6 +112,18 @@ public:
     static int const errFiletype = 50;
     static int const errOsErr = 60;
     static int const errOsErrMac = 61;
+	
+    static int const errJpeg = 70;
+
+    static int const errPng = 80;
+    static int const errPngMem = 81;
+    static int const errPngSig = 82;
+    static int const errPngInt = 83;
+    static int const errPngBkgd = 84;
+    
+    static int const errOgl = 90;
+    static int const errOglGlfw = 91;
+    static int const errOglShader = 92;
 
     const static std::string ERRRESERVED;
 
@@ -127,7 +139,7 @@ public:
 
     const static std::string ERRMESS;
     const static std::string ERRMESSEXIST;
-    /*TOBI Infused ERror Message missing*/
+    const static std::string ERRINFUSED;
     const static std::string ERRMESSEMPTY;
 
     const static std::string ERRIMG;
@@ -146,9 +158,21 @@ public:
     
     const static std::string ERROSERR;
     const static std::string ERROSERRMAC;
+
+    const static std::string ERRJPEG;
+
+    const static std::string ERRPNG;
+    const static std::string ERRPNGMEM;
+    const static std::string ERRPNGSIG;
+    const static std::string ERRPNGINT;
+    const static std::string ERRPNGKKGD;
+    
+    const static std::string ERROGL;
+    const static std::string ERROGLGLFW;
+    const static std::string ERROGLSHADER;
 private:
     bool log;/**< flag for logfile*/
-    std::string path;
+    std::string path; /**< path to logfile*/
     
     std::list<std::string> errorOut; /**< std::list that stores every standard error message as a std::string.*/
     

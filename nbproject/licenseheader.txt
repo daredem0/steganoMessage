@@ -1,6 +1,0 @@
-/**
- * @file ${file}
- * @author Florian Leuze (3308288) <st155013@stud.uni-stuttgart.de>
- * @date ${date?date?string("yyyy.MM.dd")}
- * @brief
- */

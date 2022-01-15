@@ -1,0 +1,4 @@
+<map id="Png::readPng_init" name="Png::readPng_init">
+<area shape="rect" id="node1" title="initializes everything needed to read the png file" alt="" coords="177,5,312,32"/>
+<area shape="rect" id="node2" href="$classPng.html#aa38d2a6baa44bd0b3a932b93ee67e419" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="5,5,129,32"/>
+</map>

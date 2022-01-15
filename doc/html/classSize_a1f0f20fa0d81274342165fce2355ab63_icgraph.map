@@ -1,0 +1,5 @@
+<map id="Size::getFactor" name="Size::getFactor">
+<area shape="rect" id="node1" title="Static function that gives a resizing factor for the vertices. Basically just builds the quotient." alt="" coords="497,5,615,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#af99a93ae1e6a5ed7b1422b4838065e42" title="Initializes the SFML Window and GLEW (which does the ugly job of finding out what OpenGL functions th..." alt="" coords="293,5,449,32"/>
+<area shape="rect" id="node3" href="$classOpenGLWrapper.html#acb09341d671225fbed6b11ec23aa095f" title="Non&#45;Standard constructor. Initializes the OpenGLWrapper object automatically. After calling this cons..." alt="" coords="5,5,245,32"/>
+</map>

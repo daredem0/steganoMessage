@@ -1,0 +1,13 @@
+<map id="SteganoMessage::dummyFilter" name="SteganoMessage::dummyFilter">
+<area shape="rect" id="node1" title="For debugging to call new implemented filters not ready for release." alt="" coords="5,132,229,159"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a718926de55a73ea9e49c4a5c2d8234a1" title="Generaically calls the previously defined filter functions. They are designed to fit second parameter..." alt="" coords="277,107,476,133"/>
+<area shape="rect" id="node11" href="$classFilter.html#a3f2bbadc0138195cebf84bd8ce8d9892" title="Substracts blue value from each channel if size &gt;= 24bit." alt="" coords="323,157,430,184"/>
+<area shape="rect" id="node3" href="$classSteganoMessage.html#a50936bb2352eaaa1112280c2ac3ca2d5" title="Displays progress in % in stdout when c is a value between 0 and p." alt="" coords="524,5,768,32"/>
+<area shape="rect" id="node4" href="$classSteganoMessage.html#a2e3ad705a0219edfd2150f3f7931979c" title="Getter for image object." alt="" coords="816,56,1019,83"/>
+<area shape="rect" id="node5" href="$classSteganoMessage.html#a12231d3596b90fe4c6d67bd694b27d07" title="Method to provide the amount of pixels in the data part of the image file." alt="" coords="549,107,743,133"/>
+<area shape="rect" id="node9" href="$classErrorHandler.html#ab90b8248f24e3129df69d224585956dd" title="Prints a single Error corresponding to the std::out." alt="" coords="559,157,733,184"/>
+<area shape="rect" id="node10" href="$classErrorHandler.html#ac36e4dd6e488718e7e07b2d03adf9f37" title="Prints error from a std::exception." alt="" coords="559,209,733,250"/>
+<area shape="rect" id="node6" href="$classImage.html#a8c824ffac0c866a94752a2c1047932af" title="Getter for bitmapHeader." alt="" coords="824,107,1011,133"/>
+<area shape="rect" id="node7" href="$classBitmapHeader.html#a106f72d6c256327342029edf8e18bde1" title="Getter for BiHeight." alt="" coords="823,157,1011,184"/>
+<area shape="rect" id="node8" href="$classBitmapHeader.html#af1d36ee9f3315866f05c39c2f4871e09" title="Getter for BiWidth." alt="" coords="826,208,1009,235"/>
+</map>

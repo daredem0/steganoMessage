@@ -1,5 +1,5 @@
 <map id="SteganoMessage::checkPath" name="SteganoMessage::checkPath">
-<area shape="rect" id="node1" title="static method to quickly check if a path possibly makes sense" alt="" coords="175,31,381,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="39,5,93,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node1" title="static method to quickly check if a path possibly makes sense" alt="" coords="173,31,380,57"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#aa127a16c83c51dba48a57f1c5a2c574f" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="38,56,93,83"/>
 </map>

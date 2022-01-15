@@ -1,6 +1,6 @@
 <map id="Filter::swapGR" name="Filter::swapGR">
-<area shape="rect" id="node1" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="365,31,481,57"/>
-<area shape="rect" id="node2" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="149,5,277,32"/>
-<area shape="rect" id="node3" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,56,317,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node1" title="Swaps Green with Red value if size &gt;= 24bit." alt="" coords="367,31,483,57"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#aec575d6949cf2eb49adefe2f1299d075" title="Applies the filter stored in stegFilter." alt="" coords="108,5,319,32"/>
+<area shape="rect" id="node4" href="$classJpeg.html#a80db9e22efc544e32145b6743b2b407c" title="Overloaded readImage method. Reads the jpeg file using jpeglib, decompresses it and builds the Bitmap..." alt="" coords="149,56,277,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>

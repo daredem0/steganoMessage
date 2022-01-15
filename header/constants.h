@@ -85,6 +85,7 @@ const std::string BMPTOTXT = "-convert_txt";
 const std::string FILTER = "-filter";
 const std::string CRFILTER = "-filter_cr";
 const std::string LOG = "-log";
+const std::string SHOW = "-show";
     
 enum FilterMode {noFilter = 0, grey = 1, colorA = 2, colorB = 3, 
 color = 4, invertBit = 5, swapByte = 6, swapOctet = 7, swapByteOctet = 8, 
@@ -136,10 +137,15 @@ const std::string HELPFILE =
 "   Sorry, no time yet to describe the filter effects. Just try.\n"
 "\n"
 "Filters can also be applied automatically while adding a steganoMessage. This will likely mess up everything. Do:\n"
-"./steganoMessage -decrypt/-encrypt <path> -filter <type>"
+"./steganoMessage -decrypt/-encrypt <path> -filter <type>\n"
 "Output into a textfile is possible with the switch -log. Usage is possible with and without filters:\n"
 "   example a: ./steganoMessage -encrypt <path> -filter <type> -log\n"
 "   example b: ./steganoMessage -encrypt <path> -log\n"
-"Logfile will be generated in log folder in ./ and will be named with a timestamp\n";
+"Logfile will be generated in log folder in ./ and will be named with a timestamp\n"
+"It is furthermore possible to view the processed image starting with version 0.3\n"
+"To view the image add -show at the end (this is important) of your call. Example:\n"
+"./steganoMessage -encrypt <path> -show\n"
+"./steganoMessage -encrypt <path> -filter <type> -show\n"
+"./steganoMessage -encrypt <path> -filter <type> -log -show\n";
 
 #endif /* CONSTANTS_H */

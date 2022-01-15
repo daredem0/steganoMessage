@@ -123,7 +123,7 @@ public:
      * @brief Calls Constructors for BitMapHeader and BitMapArray and reads information from image
      * @return returns integer containing error code
      */
-    int readImage();
+    virtual int readImage();
     /**
      * @brief Prints text file to terminal (just for convenience and to check if ifstream works
      * @param std::string containing path to text file

@@ -82,6 +82,7 @@ public:
      * @return char* pointer to allocated image data
      */
     char* getBDataStream();
+    char* getBDataStream(bool t);
     
     ///////////////////////////////////************************************************************/
     /**SETTERS**///////////////////////
@@ -110,6 +111,8 @@ public:
      * @return std::string ***
      */
     int infuse(std::string message);
+    
+    std::string defuse(void);
     
 private:
     std::vector<std::vector<uint32_t>> bData; /**< 2D std::vector that contains the image data. Careful, its upside down. Bitmap data starts from lower left to upper right. First vector member is lower left. */

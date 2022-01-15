@@ -1,5 +1,5 @@
 <map id="header/SteganoMessage.h" name="header/SteganoMessage.h">
-<area shape="rect" id="node1" title=" " alt="" coords="45,5,239,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="5,80,111,107"/>
-<area shape="rect" id="node3" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="135,80,317,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="83,5,278,32"/>
+<area shape="rect" id="node2" href="$SteganoMessage_8cpp.html" title=" " alt="" coords="5,80,188,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main Function of steganoMessage. Mainly ochestrates the init and gui creation." alt="" coords="212,80,317,107"/>
 </map>

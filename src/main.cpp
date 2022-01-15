@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include "../header/SteganoMessage.h"
+#include "../header/steganoMessageConfig.h"
 
 using namespace std;
 
@@ -28,11 +29,7 @@ int printHelp();
 * @return always returns 0
 */
 int terminate(SteganoMessage *steg, int err);
-/**
-* @brief Terminates the program with an error
-* @return always returns 1
-*/
-int errTerminate(SteganoMessage *steg);
+
 void debuggingStuff(SteganoMessage *steg);
 
 /**
@@ -42,6 +39,9 @@ void debuggingStuff(SteganoMessage *steg);
 * @return int standard linux error codes
 */
 int main(int argc, char *argv[]) { 
+    /*std::cout << "argc: " << argc << " argv[argc]: " << argv[argc-1] << std::endl;
+    int a;
+    std::cin >> a;*/
     //For debugging
     //argc = 3;
     //argv[0] = (char*)'3';
@@ -49,6 +49,7 @@ int main(int argc, char *argv[]) {
     //argv[1] = (char*)"-decrypt";
     //argv[2] = (char*)"./misc/examples/swirl_effect.bmp";
     SteganoMessage *steg = new SteganoMessage(); /*Build ne SteganoMessage object first*/
+    steg->getErrHandle()->printLog("steganoMessage command line tool version " + std::to_string(steganoMessage_VERSION_MAJOR) + "." + std::to_string(steganoMessage_VERSION_MINOR) + " loading.\n\n");
     steg->getErrHandle()->printLog("argc: " + std::to_string(argc) + "\n" + "argv: " + (argv[1] == NULL ? NOSWITCH : argv[1]) + "\n");
     //cout << "argc: " << argc << endl;  //just for debugging
     //cout << "argv: " << (argv[1] == NULL ? NOSWITCH : argv[1]) << endl; //just for debugging, first switch
@@ -59,7 +60,9 @@ int main(int argc, char *argv[]) {
     else{
         try{
             int errTemp = steg->initialize(argc, argv); /*initialize everything and check for error*/
-            steg->applyFilter(); /*If a filter was set apply it on the image data*/
+            if(errTemp != 0) 
+                throw errTemp; 
+            errTemp = steg->applyFilter(); /*If a filter was set apply it on the image data*/
             if(errTemp != 0) 
                 throw errTemp; 
         }
@@ -69,7 +72,7 @@ int main(int argc, char *argv[]) {
         }
         catch (...){ //catch everything weird
             steg->getErrHandle()->printError(errUnknown);
-            exit(errTerminate(steg));
+            exit(terminate(steg, -1));
         }
         if(steg->getErrHandle()->printError(steg->checkPath(steg->getImage()->getPath())) != 0) /*Check path, print error if occured and exit clean*/
             exit(terminate(steg, -1));
@@ -79,8 +82,24 @@ int main(int argc, char *argv[]) {
 
         //modestuff here
         steg->modeHandler(); /*Load modehandler which will organise the rest of the program*/
+        
         steg->getLogMode() == true ? steg->getImage()->bmpToTxt() : 1;
-
+        
+        #ifdef FULL
+        /*Now we have to check if the very last argument was show*/
+        if(argv[argc-1] == SHOW){ 
+            /*Call the OpenGL builder that is implemented in steg and let it do its magic. In Short: We need to check for OpenGL errors while initializing it.
+             There are surely more beautiful options, but for now we give the wrapper a pointer to a static function in steg which OpenGLWrapper will call if
+             the init routine goes wrong. For more check implementation. The builder will return the error message it gets from the callback*/
+            int errTemp = steg->buildOpenGL("FloToShop", (unsigned char*)steg->getImage()->getBitmapArray()->getBDataStream(true), 
+                    "RGB", steg->getImage()->getBitmapHeader()->getWidth(), steg->getImage()->getBitmapHeader()->getHeight());
+            if(errTemp != 0) //if we got an error then lets cleanly terminate this. Printing of error happens in terminate
+                exit(terminate(steg, steg->naughtyEmergencyExit(0)));
+            /*If everything went well we can run the OpenGL window and close it after user input*/
+            steg->getOpenGL()->run();
+            steg->getOpenGL()->close();
+        }
+        #endif
         terminate(steg, 0); //cleanup
 
         return 0;
@@ -134,17 +153,10 @@ int printHelp(){
 }
 
 int terminate(SteganoMessage *steg, int err){
+    steg->getErrHandle()->printError(err);
     if(steg != NULL)
         delete steg;
     return err;
-            
-}
-
-//outdated, should not be used anymore
-int errTerminate(SteganoMessage *steg){
-    if(steg != NULL)
-        delete steg;
-    return 1;
 }
 
 void debuggingStuff(SteganoMessage *steg){

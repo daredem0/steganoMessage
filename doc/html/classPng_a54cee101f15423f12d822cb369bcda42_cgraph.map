@@ -1,0 +1,4 @@
+<map id="Png::readPng_init" name="Png::readPng_init">
+<area shape="rect" id="node1" title="initializes everything needed to read the png file" alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$classErrorHandler.html#a5ef18327a559b8d77be496dad6a2bf52" title="Prints param to stdout or logfile." alt="" coords="188,5,353,32"/>
+</map>

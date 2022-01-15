@@ -1,5 +1,5 @@
 <map id="Image::generateBitmap" name="Image::generateBitmap">
-<area shape="rect" id="node1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="384,5,560,32"/>
-<area shape="rect" id="node2" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,336,32"/>
+<area shape="rect" id="node1" title="Prints text file to terminal (just for convenience and to check if ifstream works." alt="" coords="385,5,561,32"/>
+<area shape="rect" id="node2" href="$classSteganoMessage.html#a2649e515941e730520b759282d00dcd6" title="Handles the calling of following methods depending on the set mode. initialize needs to be called bef..." alt="" coords="108,5,337,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
 </map>

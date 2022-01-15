@@ -1,0 +1,5 @@
+<map id="OpenGLWrapper::openGLRT" name="OpenGLWrapper::openGLRT">
+<area shape="rect" id="node1" title="Contains the OpenGL Runtime loop and the event handling for the open Window." alt="" coords="312,5,512,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#aac166dc029379011ed0a29c8f6d74776" title="Calls the OpenGL Runtime. This will open the OpenGL window (call of overloaded Constructor is absolut..." alt="" coords="108,5,264,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main Function orchestrating the program." alt="" coords="5,5,60,32"/>
+</map>

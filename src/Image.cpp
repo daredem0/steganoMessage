@@ -65,7 +65,6 @@ std::string Image::identifyFileFormat(std::string p){
     std::stringstream ss;
     std::string returnValue;
     if(!file.good()){
-                    std::cout << 3 << std::endl;
         return ERRUNKNOWN;
     }
     file.seekg(0, std::ios::beg);
@@ -97,7 +96,7 @@ int Image::readImage(){
         return ErrorHandler::errPath;
     header = new BitmapHeader(path, errHandle);
     header->printHeader();
-    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->getBitCount(), errHandle, filterModeCol);
+    array = new BitmapArray(path, header->getOffBits(), header->getWidth(), header->getHeight(), header->geOldtBitCount(), errHandle, filterModeCol);
     return ErrorHandler::errNoError;
 }
 
@@ -253,7 +252,7 @@ int Image::bmpToTxt(){
         //buffer header
         char *head = header->getHeader();
         //buffer data
-        char *data = array->getBDataStream();
+        char *data = array->getBDataStream(false);
         std::string path = logfilePath;
         if(MAC == 1 && logfilePath[2] == 'l'){
             logfilePath = logfilePath.erase(2,5);

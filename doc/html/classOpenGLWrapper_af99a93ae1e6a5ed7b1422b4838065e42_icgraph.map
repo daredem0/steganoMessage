@@ -1,0 +1,4 @@
+<map id="OpenGLWrapper::init" name="OpenGLWrapper::init">
+<area shape="rect" id="node1" title="Initializes the SFML Window and GLEW (which does the ugly job of finding out what OpenGL functions th..." alt="" coords="293,5,449,32"/>
+<area shape="rect" id="node2" href="$classOpenGLWrapper.html#acb09341d671225fbed6b11ec23aa095f" title="Non&#45;Standard constructor. Initializes the OpenGLWrapper object automatically. After calling this cons..." alt="" coords="5,5,245,32"/>
+</map>
